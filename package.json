@@ -1,5 +1,5 @@
 {
-  "name": "robotlegs-utilities-macrobot",
+  "name": "robotlegs-macrobot",
   "version": "0.0.1",
   "description": "TypeScript port of Robotlegs Utilities Macrobot",
   "main": "lib/index.js",
@@ -27,9 +27,6 @@
   },
   "devDependencies": {
     "inversify-dts": "^1.5.0",
-    "pixi.js": "pixijs/pixi.js#dev",
-    "glslify": "^5.1.0",
-    "browserify-versionify": "^1.0.6",
     "awesome-typescript-loader": "^1.1.1",
     "chai": "^3.5.0",
     "karma": "^0.13.22",
@@ -50,8 +47,6 @@
   },
   "peerDependencies": {
     "reflect-metadata": "^0.1.3",
-    "inversify-dts": "^1.5.0",
-    "pixi.js": "*",
-    "eventemitter3": "*"
+    "inversify-dts": "^1.5.0"
   }
 }
