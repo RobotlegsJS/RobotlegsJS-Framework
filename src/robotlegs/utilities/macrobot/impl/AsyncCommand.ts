@@ -9,10 +9,9 @@
 
 import {
     inject,
-    injectable
-} from "inversify";
-
-import { IContext } from "robotlegs";
+    injectable,
+    IContext
+} from "robotlegs";
 
 import { IAsyncCommand } from "../api/IAsyncCommand";
 
