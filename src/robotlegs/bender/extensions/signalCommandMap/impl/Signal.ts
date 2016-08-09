@@ -1,6 +1,4 @@
-import { injectable } from "inversify";
-
-import { ICommand } from "robotlegs";
+import { injectable, ICommand } from "robotlegs";
 
 import {
   ISignal,

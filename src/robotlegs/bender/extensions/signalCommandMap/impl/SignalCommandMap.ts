@@ -7,10 +7,7 @@
 
 import {
     injectable,
-    inject
-} from "inversify";
-
-import {
+    inject,
     IInjector,
     IContext,
     ILogger,

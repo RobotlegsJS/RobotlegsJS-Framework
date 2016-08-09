@@ -6,7 +6,7 @@
   "typings": "lib/index.d.ts",
   "scripts": {
     "test": "mocha test/**.ts --require ts-node/register",
-    "build": "tsc -d",
+    "build": "cp node_modules/inversify-dts/inversify/inversify.d.ts . && tsc -d",
     "prepublish": "publish-please guard && rimraf ./lib && npm run build",
     "publish-please": "publish-please"
   },
@@ -21,11 +21,8 @@
   ],
   "author": "Goodgame Studios",
   "license": "MIT",
-  "dependencies": {
-    "inversify": "^2.0.0-rc.5",
-    "robotlegs": "*"
-  },
   "devDependencies": {
+    "robotlegs": "file:../typescript-robotlegs-framework",
     "inversify-dts": "^1.5.0",
     "awesome-typescript-loader": "^1.1.1",
     "chai": "^3.5.0",
@@ -46,6 +43,7 @@
     "webpack-dev-server": "^2.1.0-beta.0"
   },
   "peerDependencies": {
+    "robotlegs": "*",
     "reflect-metadata": "^0.1.3",
     "inversify-dts": "^1.5.0"
   }
