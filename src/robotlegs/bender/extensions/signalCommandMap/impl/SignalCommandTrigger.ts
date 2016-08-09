@@ -7,7 +7,6 @@
 
 import {
     IInjector,
-    IContext,
     ILogger,
     ICommandExecutor,
     ICommandTrigger,
