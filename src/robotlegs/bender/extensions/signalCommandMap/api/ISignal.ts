@@ -5,12 +5,12 @@ export interface IListener {
 }
 
 export interface ISignal {
-  numItems: number;
+    numItems: number;
 
-  add(commandOrCallback: any, context?: any): number;
-  addOnce(commandOrCallback: any, context?: any): void;
-  remove(commandOrCallback: any): boolean;
-  removeAll(): boolean;
-  dispatch(...args: any[]): void;
-  // run(listener: IListener, ...args: any[]): void;
+    add(commandOrCallback: any, context?: any): number;
+    addOnce(commandOrCallback: any, context?: any): void;
+    remove(commandOrCallback: any): boolean;
+    removeAll(): boolean;
+    dispatch(...args: any[]): void;
+    // run(listener: IListener, ...args: any[]): void;
 }
