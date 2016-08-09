@@ -17,7 +17,7 @@
     "not-ported-extensions"
   ],
   "rootDirs": [
-      "src/"
+    "src/"
   ],
   "filesGlob": [
     "src/*.ts",
