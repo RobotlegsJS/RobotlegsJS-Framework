@@ -28,13 +28,13 @@ export class SubCommandMappingList implements ISubCommandMappingList {
     }
 
     public removeMappingsFor(commandClass: any): void {
-        if (this._mappingByCommand[commandClass]) {
-            let list: ISubCommandMapping[] = this._mappingByCommand[commandClass];
+        if (this._mappingByCommand.get(commandClass)) {
+            let list: ISubCommandMapping[] = this._mappingByCommand.get(commandClass);
             let length: number = list.length;
             while (length--) {
                 this.deleteMapping(list[length]);
             }
-            delete this._mappingByCommand[commandClass];
+            this._mappingByCommand.delete(commandClass);
         }
     }
 
@@ -49,18 +49,21 @@ export class SubCommandMappingList implements ISubCommandMappingList {
     }
 
     private storeMapping(mapping: ISubCommandMapping): void {
-        if (!this._mappingByCommand[mapping.commandClass]) {
-            this._mappingByCommand[mapping.commandClass] = new Array<ISubCommandMapping>();
+        let mappingByCommand = this._mappingByCommand.get(mapping.commandClass);
+        if (!mappingByCommand) {
+            mappingByCommand = new Array<ISubCommandMapping>();
+            this._mappingByCommand.set(mapping.commandClass, mappingByCommand);
         }
-        this._mappingByCommand[mapping.commandClass].push(mapping);
+        mappingByCommand.push(mapping);
         this._mappings.push(mapping);
     }
 
     private deleteMapping(mapping: ISubCommandMapping): void {
-        if (this._mappingByCommand[mapping.commandClass]) {
-            this._mappingByCommand[mapping.commandClass].splice(this._mappings.indexOf(mapping), 1);
-            if (this._mappingByCommand[mapping.commandClass].length === 0) {
-                delete this._mappingByCommand[mapping.commandClass];
+        let mappingByCommand = this._mappingByCommand.get(mapping.commandClass);
+        if (mappingByCommand) {
+            mappingByCommand.splice(this._mappings.indexOf(mapping), 1);
+            if (mappingByCommand.length === 0) {
+                this._mappingByCommand.delete(mapping.commandClass);
             }
         }
         this._mappings.splice(this._mappings.indexOf(mapping), 1);
