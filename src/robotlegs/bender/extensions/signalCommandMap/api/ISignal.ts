@@ -6,6 +6,7 @@ export interface IListener {
 
 export interface ISignal {
     numItems: number;
+    valueTypes: any[];
 
     add(commandOrCallback: any, context?: any): number;
     addOnce(commandOrCallback: any, context?: any): void;

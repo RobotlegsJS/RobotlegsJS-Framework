@@ -10,7 +10,15 @@ import {
 
 @injectable()
 export class Signal implements ISignal {
+    public valueTypes: any[] = [];
+
     private listeners: IListener[] = [];
+
+    constructor (...valueTypes: any[]) {
+        if (valueTypes.length > 0) {
+            this.valueTypes = valueTypes;
+        }
+    }
 
     public add(commandOrCallback: any, context?: any): number {
         let isCommand = (commandOrCallback.prototype.execute !== undefined);
@@ -22,6 +30,8 @@ export class Signal implements ISignal {
         });
     }
 
+    // todo: rethink, currently this is implemented on
+    // CommandExecutor#executeCommand as well
     public addOnce(commandOrCallback: any, context?: any): void {
         let listener = (...args: any[]) => {
             commandOrCallback.apply(context, ...args);
