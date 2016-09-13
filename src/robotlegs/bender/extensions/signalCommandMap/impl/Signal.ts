@@ -21,7 +21,7 @@ export class Signal implements ISignal {
 
     private listeners: IListener[] = [];
 
-    constructor (...valueTypes: any[]) {
+    constructor(...valueTypes: any[]) {
         if (valueTypes.length > 0) {
             this.valueTypes = valueTypes;
         }
