@@ -1,27 +1,22 @@
 {
-  "baseUrl": "src",
   "compilerOptions": {
     "outDir": "lib",
     "target": "es5",
+    "lib": ["es6", "dom"],
+    "types": ["reflect-metadata"],
     "module": "commonjs",
+    "moduleResolution": "node",
     "declaration": false,
     "noImplicitAny": false,
     "sourceMap": true,
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true
   },
-  "exclude": [
-    "node_modules",
-    "bower_components",
-    "test",
-    "not-ported-extensions"
+  "include": [
+    "./src/**/*.ts",
+    "./test/**/*.ts"
   ],
-  "rootDirs": [
-      "src/"
-  ],
-  "filesGlob": [
-    "src/*.ts",
-    "src/**/*.ts",
-    "!node_modules/**"
+  "files": [
+    "./typings/index.d.ts"
   ]
 }

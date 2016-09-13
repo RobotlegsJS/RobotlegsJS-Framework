@@ -1,34 +1,79 @@
-const webpack = require("webpack")
-const path = require("path")
+process.env.TEST = true;
+process.env.NODE_ENV = 'test';
 
-const webpackConfig = require('./webpack.config.js')
+const webpack = require("webpack");
+const path = require("path");
+const webpackConfig = require('./webpack.config.js');
+
+delete webpackConfig.entry;
 
 module.exports = function(config) {
-  config.set({
+
+  var configuration = {
     basePath: "",
-    frameworks: ["mocha", "chai"],
+    frameworks: [
+      "mocha",
+      "chai",
+      "sinon",
+      "es6-shim"
+    ],
     files: [
-      "./test/**.test.ts"
+      "./test/entry.test.ts",
+      "./test/**/**/**.test.ts",
+      {
+        pattern: '**/*.map',
+        served: true,
+        included: false,
+        watched: true,
+      },
     ],
     preprocessors: {
-      "./test/**.test.ts": ["webpack"]
+      "./**/**/**/**.ts": ["sourcemap"],
+      "./test/**/**/**.test.ts": ["webpack"]
     },
     webpack: webpackConfig,
     webpackMiddleware: {
       noInfo: true
     },
     plugins: [
-      require("karma-webpack"),
-      require("karma-mocha"),
-      require("karma-chai"),
-      require("karma-chrome-launcher"),
+      "karma-webpack",
+      "karma-sourcemap-writer",
+      "karma-sourcemap-loader",
+      "karma-remap-istanbul",
+      "karma-mocha-reporter",
+      "karma-mocha",
+      "karma-chai",
+      "karma-sinon",
+      "karma-es6-shim",
+      "karma-coverage",
     ],
-    reporters: ["dots"],
+    reporters: (config.singleRun
+      ? ["dots", "mocha", "coverage"]
+      : ["dots", "mocha"]),
+    coverageReporter: {
+      dir: "coverage",
+      reporters: [
+        { type: 'html', subdir: 'report-html' },
+        { type: 'lcov', subdir: 'report-lcov' }
+      ],
+      instrumenterOptions: {
+        istanbul: { noCompact: true }
+      }
+    },
     port: 9876,
     colors: true,
     logLevel: config.LOG_INFO,
     autoWatch: true,
-    browsers: ["Chrome"],
-    singleRun: false
-  });
+    browsers: ['Chrome']
+  };
+
+  if (process.env.TRAVIS) {
+    configuration.browsers = ['PhantomJS'];
+    configuration.plugins.push("karma-phantomjs-launcher");
+  } else {
+    configuration.plugins.push("karma-chrome-launcher");
+    configuration.browsers = ['Chrome'];
+  }
+
+  config.set(configuration);
 };
