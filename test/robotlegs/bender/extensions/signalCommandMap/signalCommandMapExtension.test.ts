@@ -41,7 +41,7 @@ describe("SignalCommandMapExtension", () => {
         assert.instanceOf(actual, SignalCommandMap);
     });
 
-    it("chainedInjectionsPassThroughInjectionTargets", () => {
+    it("chained injections pass through injection targets", () => {
         context.install(SignalCommandMapExtension);
         context.initialize();
 
