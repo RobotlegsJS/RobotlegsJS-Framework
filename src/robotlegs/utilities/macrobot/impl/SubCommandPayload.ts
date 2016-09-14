@@ -15,11 +15,11 @@ export class SubCommandPayload implements ISubCommandPayload {
 
     constructor(data: any, type: any) {
         if (data == null || data === undefined) {
-            // throw new ArgumentError("Payload data can't be null");
+            throw new Error("Payload data can't be null");
         }
 
         if (type == null || type === undefined) {
-            // throw new ArgumentError("Payload type can't be null");
+            throw new Error("Payload type can't be null");
         }
 
         this._data = data;
