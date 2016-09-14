@@ -7,8 +7,8 @@
 
 import { assert } from "chai";
 
-import { ISubCommandPayload } from "../../../../../src/robotlegs/utilities/macrobot/api/ISubCommandPayload";
-import { SubCommandPayload } from "../../../../../src/robotlegs/utilities/macrobot/impl/SubCommandPayload";
+import { ISubCommandPayload } from "../../../../../../src/robotlegs/bender/utilities/macrobot/api/ISubCommandPayload";
+import { SubCommandPayload } from "../../../../../../src/robotlegs/bender/utilities/macrobot/impl/SubCommandPayload";
 
 describe("SubCommandPayload", () => {
 
