@@ -1,11 +1,9 @@
-/**
- * Author:  alessandro.bianco
- * Website: http://alessandrobianco.eu
- * Twitter: @alebianco
- * Created: 12/06/2013 11:24
- *
- * Copyright © 2013 Alessandro Bianco
- */
+// ------------------------------------------------------------------------------
+//  Copyright (c) 2016 Goodgame Studios. All Rights Reserved.
+//
+//  NOTICE: You are permitted to use, modify, and distribute this file
+//  in accordance with the terms of the license agreement accompanying it.
+// ------------------------------------------------------------------------------
 
 import { ISubCommandPayload } from "../api/ISubCommandPayload";
 
