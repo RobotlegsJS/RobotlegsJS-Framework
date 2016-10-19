@@ -1,3 +1,3 @@
-# GGS Core
+# SignalsJS
 
 TypeScript port of as3ClassicCore.
