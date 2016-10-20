@@ -7,3 +7,6 @@ typings
 coverage
 inversify.d.ts
 *.as
+src/**/*.js
+src/**/*.js.map
+*.iml
