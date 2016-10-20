@@ -1,6 +1,6 @@
 {
   "name": "robotlegs-macrobot",
-  "version": "1.0.0-alpha.2",
+  "version": "1.0.0-alpha.3",
   "description": "TypeScript port of Robotlegs Utilities Macrobot",
   "main": "lib/src/index.js",
   "typings": "lib/src/index.d.ts",
