@@ -23,7 +23,6 @@ describe("SlotTest", () => {
             setTimeout(checkGenericEvent, 10, event, done);
         }
 
-
     });
 
     it("addOnce_listener_pause_then_resume_on_slot_should_dispatch", (done) => {
