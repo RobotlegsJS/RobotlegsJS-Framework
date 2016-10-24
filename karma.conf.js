@@ -71,8 +71,8 @@ module.exports = function(config) {
     configuration.browsers = ['PhantomJS'];
     configuration.plugins.push("karma-phantomjs-launcher");
   } else {
-    configuration.plugins.push("karma-chrome-launcher");
-    configuration.browsers = ['Chrome'];
+    configuration.plugins.push("karma-phantomjs-launcher");
+    configuration.browsers = ['PhantomJS'];
   }
 
   config.set(configuration);
