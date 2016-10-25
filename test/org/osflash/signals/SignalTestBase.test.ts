@@ -4,10 +4,13 @@ import {ISignal} from "../../../../src/org/osflash/signals/ISignal";
 import {ISlot} from "../../../../src/org/osflash/signals/ISlot";
 import {Signal} from "../../../../src/org/osflash/signals/Signal";
 import {MockEvent} from "../../../mock/mock";
+import {AsyncUtil} from "../../../util/AsyncUtil";
+import {newEmptyHandler, failIfCalled} from "../../../util/TestBase";
 
 describe("SignalTestBase", () => {
 
     let signal: ISignal;
+    let async: AsyncUtil = new AsyncUtil();
 
     beforeEach(() => {
         signal = new Signal();
@@ -111,55 +114,21 @@ describe("SignalTestBase", () => {
     it("dispatch_2_listeners_1st_listener_removes_itself_then_2nd_listener_is_still_called", (done) => {
         signal.add(selfRemover);
 
-
-        function listener() {
-            setTimeout(function () {
-                done();
-            }, 10);
-        }
-
         // async.add verifies the second listener is called
-        signal.add(listener);
+        signal.add(async.add(newEmptyHandler(), 10, done));
         dispatchSignal();
     });
-
-    function selfRemover(e: any = null): void {
-        signal.remove(selfRemover);
-    }
 
     it("dispatch_2_listeners_1st_listener_removes_all_then_2nd_listener_is_still_called", (done) => {
-
-        function listener() {
-            setTimeout(function () {
-                allRemover();
-                done();
-            }, 10);
-        }
-
-        signal.add(listener);
-        signal.add(newEmptyHandler());
+        signal.add(async.add(allRemover, 10));
+        signal.add(async.add(newEmptyHandler(), 10, done));
         dispatchSignal();
     });
-
-    function allRemover(e: any = null): void {
-        signal.removeAll();
-    }
 
     it("adding_a_listener_during_dispatch_should_not_call_it", (done) => {
-        function listener() {
-            setTimeout(function () {
-                addListenerDuringDispatch();
-                done();
-            }, 10);
-        }
-
-        signal.add(listener);
+        signal.add(async.add(addListenerDuringDispatch, 10, done));
         dispatchSignal();
     });
-
-    function addListenerDuringDispatch(e: any = null): void {
-        signal.add(failIfCalled);
-    }
 
     // TODO: clarify test purpose through naming and/or implementation
     it("can_use_anonymous_listeners", () => {
@@ -203,19 +172,20 @@ describe("SignalTestBase", () => {
         assert.equal(slot, signal.remove(listener));
     });
 
+
+    function selfRemover(e: any = null): void {
+        signal.remove(selfRemover);
+    }
+
+    function allRemover(e: any = null): void {
+        signal.removeAll();
+    }
+
     function dispatchSignal(): void {
         signal.dispatch(new MockEvent("test"));
     }
 
-    ////// UTILITY METHODS //////
-
-    function newEmptyHandler(): Function {
-        return function (e: any = null, ...args): void {
-        };
+    function addListenerDuringDispatch(e: any = null): void {
+        signal.add(failIfCalled);
     }
-
-    function failIfCalled(e: any = null): void {
-        assert.fail("This function should not have been called.");
-    }
-
 });

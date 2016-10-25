@@ -4,6 +4,7 @@ import {ISignal} from "../../../../src/org/osflash/signals/ISignal";
 import {ISlot} from "../../../../src/org/osflash/signals/ISlot";
 import {Signal} from "../../../../src/org/osflash/signals/Signal";
 import {Sprite, MockMouseEvent, MockEvent} from "../../../mock/mock";
+import {newEmptyHandler, failIfCalled} from "../../../util/TestBase";
 
 describe("SlotListTest", () => {
 
@@ -405,16 +406,4 @@ describe("SlotListTest", () => {
 
         signal.dispatch(new MockMouseEvent("click"));
     });
-
-    ////// UTILITY METHODS //////
-
-    function newEmptyHandler(): Function {
-        return function (e: any = null, ...args): void {
-        };
-    }
-
-    function failIfCalled(e: any = null): void {
-        assert.fail("This function should not have been called.");
-    }
-
 });
