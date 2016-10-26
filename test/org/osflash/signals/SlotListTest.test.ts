@@ -4,7 +4,7 @@ import {Slot} from "../../../../src/org/osflash/signals/Slot";
 import {Signal} from "../../../../src/org/osflash/signals/Signal";
 import {ISlot} from "../../../../src/org/osflash/signals/ISlot";
 import {SlotList} from "../../../../src/org/osflash/signals/SlotList";
-import {PrioritySignal} from "../../../../lib/src/org/osflash/signals/PrioritySignal";
+import {PrioritySignal} from "../../../../src/org/osflash/signals/PrioritySignal";
 
 describe("SlotListTest", () => {
 
