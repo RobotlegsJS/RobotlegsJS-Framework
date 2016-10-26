@@ -10,3 +10,4 @@ inversify.d.ts
 src/**/*.js
 src/**/*.js.map
 *.iml
+npm-debug.log
