@@ -10,7 +10,7 @@
     "autoformat": "tsfmt -r",
     "prepublish": "tsc -d && publish-please guard",
     "publish-please": "publish-please",
-    "install": "typings install && tsc -d"
+    "install": "tsc -d"
   },
   "repository": {
     "type": "git",
