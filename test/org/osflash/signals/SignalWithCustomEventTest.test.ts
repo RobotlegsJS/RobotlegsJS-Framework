@@ -59,7 +59,7 @@ describe("SignalWithCustomEventTest", () => {
     });
 
     function onMessage(e: MessageEvent): void {
-        assert.equal("message value in the event", "ok", e.message);
+        assert.equal("ok", e.message, "message value in the event");
     }
 
 });
