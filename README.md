@@ -1,3 +1,3 @@
 # SignalsJS
 
-TypeScript port of as3ClassicCore.
+TypeScript port of [AS3 Signals](https://github.com/robertpenner/as3-signals).
