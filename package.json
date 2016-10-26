@@ -1,5 +1,5 @@
 {
-  "name": "signals",
+  "name": "signals.js",
   "version": "1.0.0-alpha.1",
   "description": "TypeScript port of AS3 Signals.",
   "main": "lib/src/index.js",
@@ -15,6 +15,9 @@
   "repository": {
     "type": "git",
     "url": "https://source.services.ggs-net.com/BigFarm-HTML5/SignalsJS.git"
+  },
+  "publishConfig": {
+    "registry": "http://10.18.193.72:3000"
   },
   "keywords": [
     "TypeScript"
