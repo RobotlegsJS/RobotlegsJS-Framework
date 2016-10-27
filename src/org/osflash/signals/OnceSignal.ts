@@ -107,7 +107,7 @@ export class OnceSignal implements IOnceSignal {
         }
 
         // TODO - find an alternative for type checking currently the problem is
-        // that it tries to typecheck on primiteves vs. Objects like number instanceof Number
+        // that it tries to typecheck on primitives vs. Objects like number instanceof Number
         // which does not work in TS
 
         // Cannot dispatch differently typed objects than declared classes.
