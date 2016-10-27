@@ -24,8 +24,8 @@ module.exports = function(config) {
                 pattern: '**/*.map',
                 served: true,
                 included: false,
-                watched: true,
-            },
+                watched: true
+            }
         ],
         preprocessors: {
             "./**/**/**/**.ts": ["sourcemap"],
@@ -45,7 +45,7 @@ module.exports = function(config) {
             "karma-chai",
             "karma-sinon",
             "karma-es6-shim",
-            "karma-coverage",
+            "karma-coverage"
         ],
         reporters: (config.singleRun
             ? ["dots", "mocha", "coverage"]

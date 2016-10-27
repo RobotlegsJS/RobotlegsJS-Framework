@@ -1,5 +1,5 @@
-const webpack = require('webpack')
-const path = require('path')
+const webpack = require('webpack');
+const path = require('path');
 
 module.exports = (function(options) {
 
@@ -18,16 +18,15 @@ module.exports = (function(options) {
         module: {
             rules: [
                 { test: /\.ts$/, loader: "awesome-typescript-loader" },
-
                 {
                     test: /^(.(?!\.test))*\.ts$/,
                     loader: "istanbul-instrumenter-loader",
                     query: {
-                        embedSource: true,
+                        embedSource: true
                     },
                     enforce: "post"
                 }
-            ],
+            ]
         },
 
         plugins: [
@@ -42,4 +41,4 @@ module.exports = (function(options) {
             }
         }
     }
-})()
+})();
