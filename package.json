@@ -14,7 +14,7 @@
     },
     "repository": {
         "type": "git",
-        "url": "https://github.com/GoodgameStudios/SignalJS.git"
+        "url": "https://github.com/GoodgameStudios/SignalsJS.git"
     },
     "keywords": [
         "Signals",
@@ -27,9 +27,9 @@
     ],
     "license": "MIT",
     "bugs": {
-        "url": "https://github.com/GoodgameStudios/SignalJS/issues"
+        "url": "https://github.com/GoodgameStudios/SignalsJS/issues"
     },
-    "homepage": "https://github.com/GoodgameStudios/SignalJS#readme",
+    "homepage": "https://github.com/GoodgameStudios/SignalsJS#readme",
     "devDependencies": {
         "@types/bluebird": "^3.0.35",
         "@types/chai": "^3.4.34",
