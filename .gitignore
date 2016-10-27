@@ -6,7 +6,9 @@ typings
 coverage
 inversify.d.ts
 *.as
+*.iml
 src/**/*.js
 src/**/*.js.map
-*.iml
+test/**/*.js
+test/**/*.js.map
 npm-debug.log
