@@ -1,6 +1,6 @@
 {
   "name": "signals.js",
-  "version": "1.0.0-alpha.1",
+  "version": "1.0.0-alpha.2",
   "description": "TypeScript port of AS3 Signals.",
   "main": "lib/src/index.js",
   "typings": "lib/src/index.d.ts",
@@ -14,12 +14,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://source.services.ggs-net.com/BigFarm-HTML5/SignalsJS.git"
-  },
-  "publishConfig": {
-    "registry": "http://10.18.193.72:3000"
+    "url": "https://github.com/GoodgameStudios/SignalJS.git"
   },
   "keywords": [
+    "Signals",
     "TypeScript"
   ],
   "author": "Goodgame Studios",
@@ -28,10 +26,10 @@
     "Tiago Schenkel <tschenkel@goodgamestudios.com>"
   ],
   "license": "MIT",
-  "homepage": "https://source.services.ggs-net.com/BigFarm-HTML5/SignalsJS#readme",
-  "dependencies": {
-    "typings": "^1.4.0"
+  "bugs": {
+    "url": "https://github.com/GoodgameStudios/SignalJS/issues"
   },
+  "homepage": "https://github.com/GoodgameStudios/SignalJS#readme",
   "devDependencies": {
     "@types/bluebird": "^3.0.35",
     "@types/chai": "^3.4.34",
