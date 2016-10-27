@@ -2,7 +2,6 @@
 build
 lib
 node_modules
-transpiled-code
 typings
 coverage
 inversify.d.ts
