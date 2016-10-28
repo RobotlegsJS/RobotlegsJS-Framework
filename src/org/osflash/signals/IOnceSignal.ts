@@ -2,6 +2,7 @@ import {ISlot} from "./ISlot";
 /**
  *
  */
+export let IOnceSignal = Symbol("IOnceSignal");
 export interface IOnceSignal {
     /**
      * An optional array of classes defining the types of parameters sent to listeners.

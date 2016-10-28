@@ -3,6 +3,7 @@ import {IOnceSignal} from "./IOnceSignal";
 /**
  *
  */
+export let ISignal = Symbol("ISignal");
 export interface ISignal extends IOnceSignal {
     /**
      * Subscribes a listener for the signal.
