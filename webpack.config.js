@@ -17,7 +17,7 @@ module.exports = (function(options) {
 
         module: {
             rules: [
-                { test: /\.ts$/, loader: "awesome-typescript-loader" },
+                { test: /\.ts$/, loader: "ts-loader" },
                 {
                     test: /^(.(?!\.test))*\.ts$/,
                     loader: "istanbul-instrumenter-loader",

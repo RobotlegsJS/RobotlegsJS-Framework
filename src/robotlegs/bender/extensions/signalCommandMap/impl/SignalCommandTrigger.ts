@@ -16,7 +16,7 @@ import {
     CommandPayload
 } from "robotlegs";
 
-import { ISignal } from "../api/ISignal";
+import { ISignal } from "signals.js";
 
 /**
  * @private
@@ -71,7 +71,7 @@ export class SignalCommandTrigger implements ICommandTrigger {
             // this._injector.map(this._signalClass).asSingleton();
         }
         this._signal = this._injector.get<ISignal>(this._signalClass);
-        this._signal.add(this.routePayloadToCommands, this);
+        this._signal.add(this.routePayloadToCommands);
     }
 
     /**
@@ -91,8 +91,8 @@ export class SignalCommandTrigger implements ICommandTrigger {
     /* Private Functions                                                          */
     /*============================================================================*/
 
-    private routePayloadToCommands(...valueObjects): void {
-        let payload: CommandPayload = new CommandPayload(valueObjects, this._signal.valueTypes);
+    private routePayloadToCommands = (...valueObjects): void => {
+        let payload: CommandPayload = new CommandPayload(valueObjects, this._signal.valueClasses);
         this._executor.executeCommands(this._mappings.getList(), payload);
     }
 }

@@ -6,6 +6,15 @@
 // ------------------------------------------------------------------------------
 
 import {
+    MonoSignal,
+    OnceSignal,
+    Signal,
+    DeluxeSignal,
+    PrioritySignal
+} from "signals.js";
+
+import {
+    injectable,
     IContext,
     IExtension,
     UID
@@ -13,6 +22,13 @@ import {
 
 import { ISignalCommandMap } from "./api/ISignalCommandMap";
 import { SignalCommandMap } from "./impl/SignalCommandMap";
+
+// allow signals to be injected
+injectable()(MonoSignal);
+injectable()(OnceSignal);
+injectable()(Signal);
+injectable()(DeluxeSignal);
+injectable()(PrioritySignal);
 
 export class SignalCommandMapExtension implements IExtension {
 

@@ -7,7 +7,7 @@
 
 import { injectable } from "inversify";
 
-import { Signal } from "./../../../../../../src/robotlegs/bender/extensions/signalCommandMap/impl/Signal";
+import { Signal } from "signals.js";
 
 import { Data } from "./Data";
 
