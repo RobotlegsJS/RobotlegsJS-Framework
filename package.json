@@ -1,6 +1,6 @@
 {
     "name": "signals.js",
-    "version": "1.0.0-alpha.3",
+    "version": "1.0.0-alpha.4",
     "description": "TypeScript port of AS3 Signals.",
     "main": "lib/src/index.js",
     "typings": "lib/src/index.d.ts",
