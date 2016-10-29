@@ -1,6 +1,6 @@
 {
     "name": "signals.js",
-    "version": "1.0.0-alpha.5",
+    "version": "1.0.0-alpha.6",
     "description": "TypeScript port of AS3 Signals.",
     "main": "lib/src/index.js",
     "typings": "lib/src/index.d.ts",
@@ -9,8 +9,7 @@
         "mocha": "mocha test/**/*.test.ts --require ts-node/register",
         "autoformat": "tsfmt -r",
         "prepublish": "tsc -d && publish-please guard",
-        "publish-please": "publish-please",
-        "install": "tsc -d"
+        "publish-please": "publish-please"
     },
     "repository": {
         "type": "git",
