@@ -46,8 +46,7 @@ describe("SignalDispatchArgsTest", () => {
         assert.isTrue(c instanceof Date, "a Date was dispatched");
     }
 
-    // TODO: Skipping because of valueClasses issue in OnceSignal
-    it.skip("dispatch_one_correct_and_one_incorrect_value_object_should_throw_ArgumentError()", () => {
+    it("dispatch_one_correct_and_one_incorrect_value_object_should_throw_ArgumentError()", () => {
         let signal: Signal = new Signal(Date, Array);
         assert.throws(() => signal.dispatch(new Date(), "wrong value type"), Error);
     });

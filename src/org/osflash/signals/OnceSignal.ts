@@ -106,19 +106,14 @@ export class OnceSignal implements IOnceSignal {
                 numValueObjects + '.');
         }
 
-        // TODO - find an alternative for type checking currently the problem is
-        // that it tries to typecheck on primitives vs. Objects like number instanceof Number
-        // which does not work in TS
-
-        // Cannot dispatch differently typed objects than declared classes.
-        /*for (var i: number = 0; i < numValueClasses; i++) {
+        for (var i: number = 0; i < numValueClasses; i++) {
             // Optimized for the optimistic case that values are correct.
-            if (valueObjects[i] instanceof this._valueClasses[i] || valueObjects[i] === null)
+            if (valueObjects[i] === null || valueObjects[i].constructor === this._valueClasses[i])
                 continue;
 
             throw new Error('Value object <' + valueObjects[i]
                 + '> is not an instance of <' + this._valueClasses[i] + '>.');
-        }*/
+        }
 
         // Broadcast to listeners.
         var slotsToProcess: SlotList = this.slots;
