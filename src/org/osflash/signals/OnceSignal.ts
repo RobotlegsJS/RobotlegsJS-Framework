@@ -105,7 +105,8 @@ export class OnceSignal implements IOnceSignal {
                 'Expected at least ' + numValueClasses + ' but received ' +
                 numValueObjects + '.');
         }
-
+        
+        // Cannot dispatch differently typed objects than declared classes.
         for (var i: number = 0; i < numValueClasses; i++) {
             // Optimized for the optimistic case that values are correct.
             if (valueObjects[i] === null || valueObjects[i].constructor === this._valueClasses[i])
