@@ -14,6 +14,7 @@ SignalsJS
 
 
 TypeScript port of [AS3 Signals](https://github.com/robertpenner/as3-signals).
+[13kb compressed](dist/signals.min.js).
 
 License
 ---
