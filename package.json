@@ -79,6 +79,6 @@
         "webpack-dev-server": "^2.1.0-beta.10"
     },
     "peerDependencies": {
-        "reflect-metadata": "^0.1.3"
+        "reflect-metadata": "^0.1.8"
     }
 }
