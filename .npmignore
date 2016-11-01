@@ -1,6 +1,7 @@
 /.idea
 /.vscode
 /coverage
+/dist
 /docs
 /lib/test
 /not-ported-extensions
