@@ -1,7 +1,7 @@
-import {PrioritySignal} from "./PrioritySignal";
-import {SlotList} from "./SlotList";
-import {IBubbleEventHandler} from "./events/IBubbleEventHandler";
-import {IEvent} from "./events/IEvent";
+import { PrioritySignal } from "./PrioritySignal";
+import { SlotList } from "./SlotList";
+import { IBubbleEventHandler } from "./events/IBubbleEventHandler";
+import { IEvent } from "./events/IEvent";
 
 /**
  * Allows the valueClasses to be set in MXML, e.g.
@@ -83,7 +83,7 @@ export class DeluxeSignal extends PrioritySignal {
         }
 
         // Extract and clone event object if necessary.
-        var event: IEvent = (<IEvent>valueObjects[0] );
+        var event: IEvent = (<IEvent>valueObjects[0]);
         if (event) {
             if (event.target) {
                 event = event.clone();

@@ -1,4 +1,4 @@
-import {ISlot} from "./ISlot";
+import { ISlot } from "./ISlot";
 /**
  *
  */

@@ -1,5 +1,5 @@
-import {ISlot} from "./ISlot";
-import {IOnceSignal} from "./IOnceSignal";
+import { ISlot } from "./ISlot";
+import { IOnceSignal } from "./IOnceSignal";
 
 /**
  * The Slot class represents a signal slot.

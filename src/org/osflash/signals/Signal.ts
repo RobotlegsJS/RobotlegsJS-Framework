@@ -1,6 +1,6 @@
-import {OnceSignal} from "./OnceSignal";
-import {ISignal} from "./ISignal";
-import {ISlot} from "./ISlot";
+import { OnceSignal } from "./OnceSignal";
+import { ISignal } from "./ISignal";
+import { ISlot } from "./ISlot";
 
 /**
  * Allows the valueClasses to be set in MXML, e.g.

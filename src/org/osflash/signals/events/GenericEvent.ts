@@ -1,5 +1,5 @@
-import {IEvent} from "./IEvent";
-import {IPrioritySignal} from "../IPrioritySignal";
+import { IEvent } from "./IEvent";
+import { IPrioritySignal } from "../IPrioritySignal";
 
 /**
  *

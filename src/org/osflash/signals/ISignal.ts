@@ -1,5 +1,5 @@
-import {ISlot} from "./ISlot";
-import {IOnceSignal} from "./IOnceSignal";
+import { ISlot } from "./ISlot";
+import { IOnceSignal } from "./IOnceSignal";
 /**
  *
  */

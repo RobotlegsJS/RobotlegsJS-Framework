@@ -1,7 +1,7 @@
-import {Signal} from "./Signal";
-import {IPrioritySignal} from "./IPrioritySignal";
-import {ISlot} from "./ISlot";
-import {Slot} from "./Slot";
+import { Signal } from "./Signal";
+import { IPrioritySignal } from "./IPrioritySignal";
+import { ISlot } from "./ISlot";
+import { Slot } from "./Slot";
 
 export class PrioritySignal extends Signal implements IPrioritySignal {
 

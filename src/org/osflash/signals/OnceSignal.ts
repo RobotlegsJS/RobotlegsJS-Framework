@@ -1,7 +1,7 @@
-import {IOnceSignal} from "./IOnceSignal";
-import {SlotList} from "./SlotList";
-import {ISlot} from "./ISlot";
-import {Slot} from "./Slot";
+import { IOnceSignal } from "./IOnceSignal";
+import { SlotList } from "./SlotList";
+import { ISlot } from "./ISlot";
+import { Slot } from "./Slot";
 
 /**
  * Allows the valueClasses to be set in MXML, e.g.
@@ -105,7 +105,7 @@ export class OnceSignal implements IOnceSignal {
                 'Expected at least ' + numValueClasses + ' but received ' +
                 numValueObjects + '.');
         }
-        
+
         // Cannot dispatch differently typed objects than declared classes.
         for (var i: number = 0; i < numValueClasses; i++) {
             // Optimized for the optimistic case that values are correct.

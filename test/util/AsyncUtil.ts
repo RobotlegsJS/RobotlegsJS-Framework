@@ -7,7 +7,7 @@ export class AsyncUtil {
     }
 
     private createTimeout(callback: Function, delay: number, doneCallback?: Function, ...args) {
-        setTimeout(function () {
+        setTimeout(function() {
             callback(...args);
 
             if (doneCallback) {

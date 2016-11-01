@@ -1,7 +1,7 @@
-import {assert} from "chai";
+import { assert } from "chai";
 
-import {Signal} from "../../../../src/org/osflash/signals/Signal";
-import {AsyncUtil} from "../../../util/AsyncUtil";
+import { Signal } from "../../../../src/org/osflash/signals/Signal";
+import { AsyncUtil } from "../../../util/AsyncUtil";
 
 describe("SignalDispatchExtraArgsTest", () => {
 

@@ -1,12 +1,12 @@
-import {assert} from "chai";
+import { assert } from "chai";
 
-import {ISignal} from "../../../../src/org/osflash/signals/ISignal";
-import {GenericEvent} from "../../../../src/org/osflash/signals/events/GenericEvent";
-import {Sprite} from "../../../mock/mock";
-import {ISlot} from "../../../../src/org/osflash/signals/ISlot";
-import {Signal} from "../../../../src/org/osflash/signals/Signal";
-import {AsyncUtil} from "../../../util/AsyncUtil";
-import {checkGenericEvent, checkSprite} from "../../../util/TestBase";
+import { ISignal } from "../../../../src/org/osflash/signals/ISignal";
+import { GenericEvent } from "../../../../src/org/osflash/signals/events/GenericEvent";
+import { Sprite } from "../../../mock/mock";
+import { ISlot } from "../../../../src/org/osflash/signals/ISlot";
+import { Signal } from "../../../../src/org/osflash/signals/Signal";
+import { AsyncUtil } from "../../../util/AsyncUtil";
+import { checkGenericEvent, checkSprite } from "../../../util/TestBase";
 
 
 describe("SignalTest", () => {
@@ -57,15 +57,15 @@ describe("SignalTest", () => {
         let slot: ISlot;
 
         function listener(num: number,
-                          str: string,
-                          sprite: Sprite,
-                          alpha0: string,
-                          alpha1: string,
-                          alpha2: string,
-                          alpha3: string,
-                          alpha4: string,
-                          alpha5: string,
-                          alpha6: string): void {
+            str: string,
+            sprite: Sprite,
+            alpha0: string,
+            alpha1: string,
+            alpha2: string,
+            alpha3: string,
+            alpha4: string,
+            alpha5: string,
+            alpha6: string): void {
             assert.equal(num, 12345);
             assert.equal(str, "text");
             assert.equal(sprite, slot.params[2]);

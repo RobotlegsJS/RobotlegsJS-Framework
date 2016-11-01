@@ -1,4 +1,4 @@
-import {ISlot} from "./ISlot";
+import { ISlot } from "./ISlot";
 /**
  * The SlotList class represents an immutable list of Slot objects.
  *

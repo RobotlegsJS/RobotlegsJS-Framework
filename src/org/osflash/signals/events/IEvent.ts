@@ -1,4 +1,4 @@
-import {IPrioritySignal} from "../IPrioritySignal";
+import { IPrioritySignal } from "../IPrioritySignal";
 
 export interface IEvent {
     /** The object that originally dispatched the event.

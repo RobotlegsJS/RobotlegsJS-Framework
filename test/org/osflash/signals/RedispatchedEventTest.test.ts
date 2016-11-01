@@ -1,8 +1,8 @@
-import {assert} from "chai";
+import { assert } from "chai";
 
-import {AsyncUtil} from "../../../util/AsyncUtil";
-import {DeluxeSignal} from "../../../../src/org/osflash/signals/DeluxeSignal";
-import {GenericEvent} from "../../../../src/org/osflash/signals/events/GenericEvent";
+import { AsyncUtil } from "../../../util/AsyncUtil";
+import { DeluxeSignal } from "../../../../src/org/osflash/signals/DeluxeSignal";
+import { GenericEvent } from "../../../../src/org/osflash/signals/events/GenericEvent";
 
 describe("RedispatchedEventTest", () => {
 

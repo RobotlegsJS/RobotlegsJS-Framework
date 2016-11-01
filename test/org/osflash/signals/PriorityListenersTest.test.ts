@@ -1,7 +1,7 @@
-import {assert} from "chai";
+import { assert } from "chai";
 
-import {AsyncUtil} from "../../../util/AsyncUtil";
-import {DeluxeSignal} from "../../../../src/org/osflash/signals/DeluxeSignal";
+import { AsyncUtil } from "../../../util/AsyncUtil";
+import { DeluxeSignal } from "../../../../src/org/osflash/signals/DeluxeSignal";
 describe("PriorityListenersTest", () => {
 
     let async: AsyncUtil = new AsyncUtil();

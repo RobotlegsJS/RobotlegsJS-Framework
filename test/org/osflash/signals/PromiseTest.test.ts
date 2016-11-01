@@ -1,6 +1,6 @@
-import {assert} from "chai";
+import { assert } from "chai";
 
-import {Promise} from "../../../../src/org/osflash/signals/Promise";
+import { Promise } from "../../../../src/org/osflash/signals/Promise";
 
 describe("PromiseTest", () => {
 
@@ -30,7 +30,7 @@ describe("PromiseTest", () => {
             received = data;
         }
 
-        let object: Object = {hello: "world"};
+        let object: Object = { hello: "world" };
         promise.addOnce(listener);
         promise.dispatch(object);
 
@@ -57,7 +57,7 @@ describe("PromiseTest", () => {
             received = data;
         }
 
-        let object: Object = {hello: "world"};
+        let object: Object = { hello: "world" };
         promise.dispatch(object);
         promise.addOnce(listener);
 

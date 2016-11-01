@@ -1,11 +1,11 @@
-import {assert} from "chai";
+import { assert } from "chai";
 
-import {ISignal} from "../../../../src/org/osflash/signals/ISignal";
-import {ISlot} from "../../../../src/org/osflash/signals/ISlot";
-import {Signal} from "../../../../src/org/osflash/signals/Signal";
-import {MockEvent} from "../../../mock/mock";
-import {AsyncUtil} from "../../../util/AsyncUtil";
-import {newEmptyHandler, failIfCalled} from "../../../util/TestBase";
+import { ISignal } from "../../../../src/org/osflash/signals/ISignal";
+import { ISlot } from "../../../../src/org/osflash/signals/ISlot";
+import { Signal } from "../../../../src/org/osflash/signals/Signal";
+import { MockEvent } from "../../../mock/mock";
+import { AsyncUtil } from "../../../util/AsyncUtil";
+import { newEmptyHandler, failIfCalled } from "../../../util/TestBase";
 
 describe("SignalTestBase", () => {
 
@@ -45,7 +45,7 @@ describe("SignalTestBase", () => {
 
     it("add_2_listeners_remove_2nd_then_dispatch_should_call_1st_not_2nd_listener", () => {
         let called = false;
-        signal.add(function (e: any = null): void {
+        signal.add(function(e: any = null): void {
             called = true;
         });
         signal.add(failIfCalled);
@@ -93,10 +93,10 @@ describe("SignalTestBase", () => {
     it("add_two_listeners_and_dispatch_should_call_both", () => {
         let calledA = false;
         let calledB = false;
-        signal.add(function (e: any = null): void {
+        signal.add(function(e: any = null): void {
             calledA = true;
         });
-        signal.add(function (e: any = null): void {
+        signal.add(function(e: any = null): void {
             calledB = true;
         });
         dispatchSignal();

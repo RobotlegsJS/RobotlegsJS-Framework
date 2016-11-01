@@ -1,9 +1,9 @@
-import {assert} from "chai";
+import { assert } from "chai";
 
-import {Signal} from "../../../../src/org/osflash/signals/Signal";
-import {AsyncUtil} from "../../../util/AsyncUtil";
-import {GenericEvent} from "../../../../src/org/osflash/signals/events/GenericEvent";
-import {IEvent} from "../../../../src/org/osflash/signals/events/IEvent";
+import { Signal } from "../../../../src/org/osflash/signals/Signal";
+import { AsyncUtil } from "../../../util/AsyncUtil";
+import { GenericEvent } from "../../../../src/org/osflash/signals/events/GenericEvent";
+import { IEvent } from "../../../../src/org/osflash/signals/events/IEvent";
 
 describe("SignalWithCustomEventTest", () => {
 

@@ -1,5 +1,5 @@
-import {ISlot} from "./ISlot";
-import {OnceSignal} from "./OnceSignal";
+import { ISlot } from "./ISlot";
+import { OnceSignal } from "./OnceSignal";
 
 export class Promise extends OnceSignal {
     private isDispatched: boolean;

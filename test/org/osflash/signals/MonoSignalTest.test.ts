@@ -1,11 +1,11 @@
-import {assert} from "chai";
+import { assert } from "chai";
 
-import {AsyncUtil} from "../../../util/AsyncUtil";
-import {MonoSignal} from "../../../../src/org/osflash/signals/MonoSignal";
-import {GenericEvent} from "../../../../src/org/osflash/signals/events/GenericEvent";
-import {ISlot} from "../../../../src/org/osflash/signals/ISlot";
-import {IEvent} from "../../../../src/org/osflash/signals/events/IEvent";
-import {Sprite} from "../../../mock/mock";
+import { AsyncUtil } from "../../../util/AsyncUtil";
+import { MonoSignal } from "../../../../src/org/osflash/signals/MonoSignal";
+import { GenericEvent } from "../../../../src/org/osflash/signals/events/GenericEvent";
+import { ISlot } from "../../../../src/org/osflash/signals/ISlot";
+import { IEvent } from "../../../../src/org/osflash/signals/events/IEvent";
+import { Sprite } from "../../../mock/mock";
 
 describe("MonoSignalTest", () => {
 
@@ -84,7 +84,7 @@ describe("MonoSignalTest", () => {
     });
 
     function newEmptyHandler(): Function {
-        return function (e: any): void {
+        return function(e: any): void {
         };
     }
 
@@ -122,7 +122,7 @@ describe("MonoSignalTest", () => {
     }
 
     it("removed_listener_should_return_slot()", () => {
-        let listener: Function = function (): void {
+        let listener: Function = function(): void {
         };
         let slot: ISlot = signal.add(listener);
 
@@ -130,7 +130,7 @@ describe("MonoSignalTest", () => {
     });
 
     it("removed_listener_should_be_returned()", () => {
-        let slot: ISlot = signal.add(function (): void {
+        let slot: ISlot = signal.add(function(): void {
         });
         let listener: Function = slot.listener;
 
@@ -153,7 +153,7 @@ describe("MonoSignalTest", () => {
     });
 
     it("slot_params_with_one_param_should_be_sent_through_to_listener()", () => {
-        let listener: Function = function (...args): void {
+        let listener: Function = function(...args): void {
             assert.isTrue(typeof args[0] === "number");
             assert.equal(args[0], 1234);
         };
@@ -167,7 +167,7 @@ describe("MonoSignalTest", () => {
     it("slot_params_with_multiple_params_should_be_sent_through_to_listener()", () => {
         let slot: ISlot;
 
-        let listener: Function = function (...args): void {
+        let listener: Function = function(...args): void {
             assert.isTrue(typeof args[0] === "number");
             assert.equal(args[0], 12345);
 
@@ -185,7 +185,7 @@ describe("MonoSignalTest", () => {
     });
 
     it("verify_chaining_of_slot_params()", () => {
-        let listener: Function = function (...args): void {
+        let listener: Function = function(...args): void {
             assert.equal(args.length, 1);
             assert.equal(args[0], 1234567);
         };
@@ -198,7 +198,7 @@ describe("MonoSignalTest", () => {
     it("verify_chaining_and_concat_of_slot_params()", () => {
         let params: any[] = [12345678];
 
-        let listener: Function = function (...args): void {
+        let listener: Function = function(...args): void {
             assert.equal(args.length, 2);
             assert.equal(args[0], 12345678);
             assert.equal(args[1], "text");
@@ -211,7 +211,7 @@ describe("MonoSignalTest", () => {
 
 
     it("verify_chaining_and_pushing_on_to_slot_params()", () => {
-        let listener: Function = function (...args): void {
+        let listener: Function = function(...args): void {
             assert.equal(args.length, 2);
             assert.equal(args[0], 123456789);
             assert.equal(args[1], "text");

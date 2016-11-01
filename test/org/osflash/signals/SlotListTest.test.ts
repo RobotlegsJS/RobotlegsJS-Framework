@@ -1,10 +1,10 @@
-import {assert} from "chai";
+import { assert } from "chai";
 
-import {Slot} from "../../../../src/org/osflash/signals/Slot";
-import {Signal} from "../../../../src/org/osflash/signals/Signal";
-import {ISlot} from "../../../../src/org/osflash/signals/ISlot";
-import {SlotList} from "../../../../src/org/osflash/signals/SlotList";
-import {PrioritySignal} from "../../../../src/org/osflash/signals/PrioritySignal";
+import { Slot } from "../../../../src/org/osflash/signals/Slot";
+import { Signal } from "../../../../src/org/osflash/signals/Signal";
+import { ISlot } from "../../../../src/org/osflash/signals/ISlot";
+import { SlotList } from "../../../../src/org/osflash/signals/SlotList";
+import { PrioritySignal } from "../../../../src/org/osflash/signals/PrioritySignal";
 
 describe("SlotListTest", () => {
 
@@ -21,11 +21,11 @@ describe("SlotListTest", () => {
 
     beforeEach(() => {
         signal = new Signal();
-        listenerA = function (e: any = null): void {
+        listenerA = function(e: any = null): void {
         };
-        listenerB = function (e: any = null): void {
+        listenerB = function(e: any = null): void {
         };
-        listenerC = function (e: any = null): void {
+        listenerC = function(e: any = null): void {
         };
         slotA = new Slot(listenerA, signal);
         slotB = new Slot(listenerB, signal);
