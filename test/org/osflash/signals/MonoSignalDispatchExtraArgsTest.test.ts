@@ -1,0 +1,29 @@
+import {assert} from "chai";
+import {AsyncUtil} from "../../../../lib/test/util/AsyncUtil";
+import {MonoSignal} from "../../../../lib/src/org/osflash/signals/MonoSignal";
+
+describe("MonoSignalDispatchExtraArgsTest", () => {
+    let async: AsyncUtil = new AsyncUtil();
+
+    let completed: MonoSignal;
+
+    beforeEach(() => {
+        completed = new MonoSignal();
+    });
+
+    afterEach(() => {
+        completed.removeAll();
+        completed = null;
+    });
+    it("dispatch_extra_args_should_call_listener_with_extra_args()", (done) => {
+        completed.add(async.add(onCompleted, 10, done));
+        completed.dispatch(22, "done", new Date());
+    });
+
+    function onCompleted(a: number, b: string, c: Date): void {
+        assert.equal(3, arguments.length);
+        assert.equal(22, a);
+        assert.equal("done", b);
+        assert.isTrue(c instanceof Date);
+    }
+});
