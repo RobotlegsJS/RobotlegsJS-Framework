@@ -8,8 +8,8 @@
         "test": "karma start --single-run",
         "mocha": "mocha test/**/*.test.ts --require ts-node/register",
         "autoformat": "tsfmt -r",
-        "prepublish": "tsc -d && npm run build && publish-please guard",
-        "publish-please": "publish-please",
+        "prepublish": "tsc -d && publish-please guard",
+        "publish-please": "npm run build && publish-please",
         "build": "webpack --env.production"
     },
     "repository": {
