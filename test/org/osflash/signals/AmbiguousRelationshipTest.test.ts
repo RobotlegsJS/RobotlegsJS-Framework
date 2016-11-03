@@ -1,7 +1,7 @@
-import {assert} from "chai";
+import { assert } from "chai";
 
-import {Signal} from "../../../../src/org/osflash/signals/Signal";
-import {failIfCalled} from "../../../util/TestBase";
+import { Signal } from "../../../../src/org/osflash/signals/Signal";
+import { failIfCalled } from "../../../util/TestBase";
 
 describe("AmbiguousRelationshipTest", () => {
 

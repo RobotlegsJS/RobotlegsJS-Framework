@@ -1,11 +1,11 @@
-import {assert} from "chai";
+import { assert } from "chai";
 
-import {AsyncUtil} from "../../../util/AsyncUtil";
-import {DeluxeSignal} from "../../../../src/org/osflash/signals/DeluxeSignal";
-import {GenericEvent} from "../../../../src/org/osflash/signals/events/GenericEvent";
-import {Sprite} from "../../../mock/mock";
-import {IEvent} from "../../../../src/org/osflash/signals/events/IEvent";
-import {newEmptyHandler, failIfCalled} from "../../../util/TestBase";
+import { AsyncUtil } from "../../../util/AsyncUtil";
+import { DeluxeSignal } from "../../../../src/org/osflash/signals/DeluxeSignal";
+import { GenericEvent } from "../../../../src/org/osflash/signals/events/GenericEvent";
+import { Sprite } from "../../../mock/mock";
+import { IEvent } from "../../../../src/org/osflash/signals/events/IEvent";
+import { newEmptyHandler, failIfCalled } from "../../../util/TestBase";
 
 describe("DeluxeSignalWithGenericEventTest", () => {
 
