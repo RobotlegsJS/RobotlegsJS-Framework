@@ -8,13 +8,16 @@
         "test": "karma start --single-run",
         "mocha": "mocha test/**/*.test.ts --require ts-node/register",
         "autoformat": "tsfmt -r",
-        "prepublish": "tsc -d && publish-please guard",
+        "prepublish": "tsc -d && npm run build && publish-please guard",
         "publish-please": "publish-please",
         "build": "webpack --env.production"
     },
     "repository": {
         "type": "git",
         "url": "https://github.com/GoodgameStudios/SignalsJS.git"
+    },
+    "publishConfig": {
+        "registry": "https://registry.npmjs.org"
     },
     "keywords": [
         "Signals",
