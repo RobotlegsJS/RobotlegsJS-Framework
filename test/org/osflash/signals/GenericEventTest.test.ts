@@ -1,9 +1,10 @@
-import { assert } from "chai";
+import {assert} from "chai";
 
 import {GenericEvent} from "../../../../src/org/osflash/signals/events/GenericEvent";
 import {IEvent} from "../../../../src/org/osflash/signals/events/IEvent";
 
 describe("GenericEventTest", () => {
+
     let instance: GenericEvent;
 
     beforeEach(() => {
