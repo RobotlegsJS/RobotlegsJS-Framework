@@ -1,6 +1,7 @@
 import {assert} from "chai";
-import {AsyncUtil} from "../../../../lib/test/util/AsyncUtil";
-import {MonoSignal} from "../../../../lib/src/org/osflash/signals/MonoSignal";
+
+import {AsyncUtil} from "../../../util/AsyncUtil";
+import {MonoSignal} from "../../../../src/org/osflash/signals/MonoSignal";
 
 describe("MonoSignalDispatchExtraArgsTest", () => {
     let async: AsyncUtil = new AsyncUtil();

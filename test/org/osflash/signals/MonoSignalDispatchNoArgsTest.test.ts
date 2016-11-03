@@ -1,7 +1,7 @@
 import { assert } from "chai";
 
-import {MonoSignal} from "../../../../lib/src/org/osflash/signals/MonoSignal";
-import {AsyncUtil} from "../../../../lib/test/util/AsyncUtil";
+import {AsyncUtil} from "../../../util/AsyncUtil";
+import {MonoSignal} from "../../../../src/org/osflash/signals/MonoSignal";
 
 describe("MonoSignalDispatchNoArgsTest", () => {
 

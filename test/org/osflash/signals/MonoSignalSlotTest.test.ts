@@ -1,11 +1,12 @@
 import {assert} from "chai";
 
-import {AsyncUtil} from "../../../../lib/test/util/AsyncUtil";
-import {MonoSignal} from "../../../../lib/src/org/osflash/signals/MonoSignal";
-import {GenericEvent} from "../../../../lib/src/org/osflash/signals/events/GenericEvent";
-import {newEmptyHandler, checkGenericEvent} from "../../../../lib/test/util/TestBase";
+import {AsyncUtil} from "../../../util/AsyncUtil";
+import {newEmptyHandler, checkGenericEvent} from "../../../util/TestBase";
 import {failIfCalled} from "../../../util/TestBase";
-import {ISlot} from "../../../../lib/src/org/osflash/signals/ISlot";
+
+import {MonoSignal} from "../../../../src/org/osflash/signals/MonoSignal";
+import {GenericEvent} from "../../../../src/org/osflash/signals/events/GenericEvent";
+import {ISlot} from "../../../../src/org/osflash/signals/ISlot";
 
 describe("MonoSignalSlotTest", () => {
 
