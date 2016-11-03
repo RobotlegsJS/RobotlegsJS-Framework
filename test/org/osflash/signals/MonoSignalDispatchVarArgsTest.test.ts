@@ -1,6 +1,6 @@
-import {assert} from "chai";
+import { assert } from "chai";
 
-import {MonoSignal} from "../../../../src/org/osflash/signals/MonoSignal";
+import { MonoSignal } from "../../../../src/org/osflash/signals/MonoSignal";
 
 describe("MonoSignalDispatchVarArgsTest", () => {
 
@@ -55,21 +55,21 @@ describe("MonoSignalDispatchVarArgsTest", () => {
     });
 
     function handlerArgsAt0(): Function {
-        return function (...args): void {
+        return function(...args): void {
             assert.deepEqual([0, 1, 2, 3], args, "Arguments should be [0,1,2,3]");
             assert.equal(4, args.length, "Number of var arguments should be 4");
         };
     }
 
     function handlerArgsAt1(): Function {
-        return function (a: number, ...args): void {
+        return function(a: number, ...args): void {
             assert.deepEqual([1, 2, 3], args, "Arguments should be [1,2,3]");
             assert.equal(3, args.length, "Number of var arguments should be 3");
         };
     }
 
     function handlerArgsAt2(): Function {
-        return function (a: number, b: number, ...args): void {
+        return function(a: number, b: number, ...args): void {
             assert.deepEqual([2, 3], args, "Arguments should be [2,3]");
             assert.equal(2, args.length, "Number of var arguments should be 2");
         };

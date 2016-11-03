@@ -1,12 +1,12 @@
-import {assert} from "chai";
+import { assert } from "chai";
 
-import {AsyncUtil} from "../../../util/AsyncUtil";
-import {newEmptyHandler, checkGenericEvent} from "../../../util/TestBase";
-import {failIfCalled} from "../../../util/TestBase";
+import { AsyncUtil } from "../../../util/AsyncUtil";
+import { newEmptyHandler, checkGenericEvent } from "../../../util/TestBase";
+import { failIfCalled } from "../../../util/TestBase";
 
-import {MonoSignal} from "../../../../src/org/osflash/signals/MonoSignal";
-import {GenericEvent} from "../../../../src/org/osflash/signals/events/GenericEvent";
-import {ISlot} from "../../../../src/org/osflash/signals/ISlot";
+import { MonoSignal } from "../../../../src/org/osflash/signals/MonoSignal";
+import { GenericEvent } from "../../../../src/org/osflash/signals/events/GenericEvent";
+import { ISlot } from "../../../../src/org/osflash/signals/ISlot";
 
 describe("MonoSignalSlotTest", () => {
 
@@ -219,7 +219,6 @@ describe("MonoSignalSlotTest", () => {
 
         completed.dispatch();
     });
-
 
     /*[Test(expects="ArgumentError")]*/
     it("addOnce_listener_then_set_listener_to_null_should_throw_ArgumentError()", () => {

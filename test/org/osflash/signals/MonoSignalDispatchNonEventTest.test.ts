@@ -1,7 +1,7 @@
 import { assert } from "chai";
 
-import {AsyncUtil} from "../../../util/AsyncUtil";
-import {MonoSignal} from "../../../../src/org/osflash/signals/MonoSignal";
+import { AsyncUtil } from "../../../util/AsyncUtil";
+import { MonoSignal } from "../../../../src/org/osflash/signals/MonoSignal";
 
 describe("MonoSignalDispatchNonEventTest", () => {
 
@@ -62,4 +62,3 @@ describe("MonoSignalDispatchNonEventTest", () => {
         assert.equal(0, intValue, "null was converted to 0");
     }
 });
-

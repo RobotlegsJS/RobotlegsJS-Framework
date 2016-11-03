@@ -1,7 +1,7 @@
 import { assert } from "chai";
 
-import {AsyncUtil} from "../../../util/AsyncUtil";
-import {MonoSignal} from "../../../../src/org/osflash/signals/MonoSignal";
+import { AsyncUtil } from "../../../util/AsyncUtil";
+import { MonoSignal } from "../../../../src/org/osflash/signals/MonoSignal";
 
 describe("MonoSignalDispatchNoArgsTest", () => {
 
@@ -40,4 +40,3 @@ describe("MonoSignalDispatchNoArgsTest", () => {
     function secondAddOnceListener(): void {
     }
 });
-
