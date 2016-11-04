@@ -1,7 +1,7 @@
-import {assert} from "chai";
+import { assert } from "chai";
 
-import {GenericEvent} from "../../../../src/org/osflash/signals/events/GenericEvent";
-import {IEvent} from "../../../../src/org/osflash/signals/events/IEvent";
+import { GenericEvent } from "../../../../src/org/osflash/signals/events/GenericEvent";
+import { IEvent } from "../../../../src/org/osflash/signals/events/IEvent";
 
 describe("GenericEventTest", () => {
 
@@ -32,7 +32,7 @@ describe("GenericEventTest", () => {
     });
 
     it("clone_non_bubbling_event_should_have_bubbles_false()", () => {
-        let theClone: GenericEvent = <GenericEvent> instance.clone();
+        let theClone: GenericEvent = <GenericEvent>instance.clone();
         assert.isFalse(theClone.bubbles);
     });
 

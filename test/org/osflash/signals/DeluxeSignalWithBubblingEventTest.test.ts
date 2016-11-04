@@ -1,10 +1,10 @@
-import {assert} from "chai";
+import { assert } from "chai";
 
-import {AsyncUtil} from "../../../util/AsyncUtil";
-import {GenericEvent} from "../../../../src/org/osflash/signals/events/GenericEvent";
-import {IBubbleEventHandler} from "../../../../src/org/osflash/signals/events/IBubbleEventHandler";
-import {DeluxeSignal} from "../../../../src/org/osflash/signals/DeluxeSignal";
-import {IEvent} from "../../../../src/org/osflash/signals/events/IEvent";
+import { AsyncUtil } from "../../../util/AsyncUtil";
+import { GenericEvent } from "../../../../src/org/osflash/signals/events/GenericEvent";
+import { IBubbleEventHandler } from "../../../../src/org/osflash/signals/events/IBubbleEventHandler";
+import { DeluxeSignal } from "../../../../src/org/osflash/signals/DeluxeSignal";
+import { IEvent } from "../../../../src/org/osflash/signals/events/IEvent";
 
 describe("DeluxeSignalWithBubblingEventTest", () => {
     let async: AsyncUtil = new AsyncUtil();
