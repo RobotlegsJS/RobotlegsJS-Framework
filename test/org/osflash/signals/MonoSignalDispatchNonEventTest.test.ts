@@ -50,15 +50,4 @@ describe("MonoSignalDispatchNonEventTest", () => {
     function checkNullDate(date: Date): void {
         assert.isNull(date);
     }
-
-    // TODO: skipped because it checks as3 specific functionality
-    it.skip("dispatch_null_through_int_Signal_should_be_autoconverted_to_zero()", (done) => {
-        completed = new MonoSignal(Number);
-        completed.addOnce(async.add(checkNullConvertedToZero, 10, done));
-        completed.dispatch(null);
-    });
-
-    function checkNullConvertedToZero(intValue: number): void {
-        assert.equal(0, intValue, "null was converted to 0");
-    }
 });
