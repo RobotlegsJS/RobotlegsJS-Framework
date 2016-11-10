@@ -9,7 +9,8 @@
     "mocha": "mocha test/**/*.test.ts --require ts-node/register",
     "autoformat": "tsfmt -r",
     "prepublish": "tsc -d && publish-please guard",
-    "publish-please": "npm run autoformat && npm run build && publish-please",
+    "clean-up": "rm -rf coverage && rm -rf lib",
+    "publish-please": "npm run autoformat && npm run clean-up && npm run build && publish-please",
     "build": "webpack --env.production"
   },
   "repository": {
