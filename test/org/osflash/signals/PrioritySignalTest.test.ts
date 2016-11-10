@@ -1,3 +1,5 @@
+import "../../../entry";
+
 import { assert } from "chai";
 
 import { IPrioritySignal } from "../../../../src/org/osflash/signals/IPrioritySignal";

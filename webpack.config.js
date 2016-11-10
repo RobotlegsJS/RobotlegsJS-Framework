@@ -1,46 +1,51 @@
 const webpack = require('webpack');
 const path = require('path');
 
-module.exports = function(options) {
-    return {
-        entry: {
-            main: path.join(__dirname, "src/index.ts")
-        },
+module.exports = (function(options) {
 
-        output: {
-            path: path.join(__dirname, "dist"),
-            filename: "signals.min.js",
+  if (!options) options = {isTest: false};
 
-            libraryTarget: "var",
-            library: "SignalsJS"
-        },
+  var tsconfig = options.isTest ? "tsconfig.test.json" : "tsconfig.json";
 
-        devtool: 'inline-source-map',
+  return {
+    entry: {
+      main: path.join(__dirname, "src/index.ts")
+    },
 
-        module: {
-            rules: [
-                { test: /\.ts$/, loader: "ts-loader" },
-                {
-                    test: ((options.production) /* disable this loader for production builds */
-                        ? /^$/
-                        : /^(.(?!\.test))*\.ts$/),
-                    loader: "istanbul-instrumenter-loader",
-                    query: {
-                        embedSource: true
-                    },
-                    enforce: "post"
-                }
-            ]
-        },
+    output: {
+      path: path.join(__dirname, "dist"),
+      filename: "signals.min.js",
 
-        plugins: (
-            (options.production)
-                ? [ new webpack.optimize.UglifyJsPlugin({ sourceMap: false }) ]
-                : [ new webpack.SourceMapDevToolPlugin({ test: /\.ts$/i }) ]
-        ),
+      libraryTarget: "var",
+      library: "SignalsJS"
+    },
 
-        resolve: {
-            extensions: ['.ts', '.js', '.json']
+    devtool: 'inline-source-map',
+
+    module: {
+      rules: [
+        { test: /\.ts$/, loader: "ts-loader?configFileName=" + tsconfig },
+        {
+          test: ((options.production) /* disable this loader for production builds */
+            ? /^$/
+            : /^(.(?!\.test))*\.ts$/),
+          loader: "istanbul-instrumenter-loader",
+          query: {
+            embedSource: true
+          },
+          enforce: "post"
         }
+      ]
+    },
+
+    plugins: (
+      (options.production)
+        ? [ new webpack.optimize.UglifyJsPlugin({ sourceMap: false }) ]
+        : [ new webpack.SourceMapDevToolPlugin({ test: /\.ts$/i }) ]
+    ),
+
+    resolve: {
+      extensions: ['.ts', '.js', '.json']
     }
-};
+  }
+});

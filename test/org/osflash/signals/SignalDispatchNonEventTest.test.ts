@@ -1,3 +1,5 @@
+import "../../../entry";
+
 import { assert } from "chai";
 
 import { Signal } from "../../../../src/org/osflash/signals/Signal";
@@ -49,16 +51,5 @@ describe("SignalDispatchNonEventTest", () => {
 
     function checkNullDate(date: Date): void {
         assert.isNull(date);
-    }
-
-    // TODO - probably has to be removed since it checks an AS3 specific functionality
-    it.skip("dispatch_null_through_int_Signal_should_be_autoconverted_to_zero()", (done) => {
-        completed = new Signal(Number);
-        completed.addOnce(async.add(checkNullConvertedToZero, 10, done));
-        completed.dispatch(null);
-    });
-
-    function checkNullConvertedToZero(intValue: number): void {
-        assert.equal(0, intValue, "null was converted to 0");
     }
 });

@@ -1,3 +1,5 @@
+import "../../../entry";
+
 import { assert } from "chai";
 
 import { GenericEvent } from "../../../../src/org/osflash/signals/events/GenericEvent";

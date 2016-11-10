@@ -1,3 +1,5 @@
+import "../../../entry";
+
 import { Signal } from "../../../../src/org/osflash/signals/Signal";
 import { GenericEvent } from "../../../../src/org/osflash/signals/events/GenericEvent";
 import { ISlot } from "../../../../src/org/osflash/signals/ISlot";
