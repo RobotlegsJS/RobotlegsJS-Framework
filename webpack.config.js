@@ -1,7 +1,12 @@
 const webpack = require('webpack');
 const path = require('path');
 
-module.exports = function(options) {
+module.exports = (function(options) {
+
+  if (!options) options = {isTest: false};
+
+  var tsconfig = options.isTest ? "tsconfig.test.json" : "tsconfig.json";
+
   return {
     entry: {
       main: path.join(__dirname, "src/index.ts")
@@ -19,7 +24,7 @@ module.exports = function(options) {
 
     module: {
       rules: [
-        { test: /\.ts$/, loader: "ts-loader" },
+        { test: /\.ts$/, loader: "ts-loader?configFileName=" + tsconfig },
         {
           test: ((options.production) /* disable this loader for production builds */
             ? /^$/
@@ -43,4 +48,4 @@ module.exports = function(options) {
       extensions: ['.ts', '.js', '.json']
     }
   }
-};
+});
