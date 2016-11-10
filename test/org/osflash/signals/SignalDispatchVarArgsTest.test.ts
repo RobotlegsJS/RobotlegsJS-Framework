@@ -1,3 +1,5 @@
+import "../../../entry";
+
 import { assert } from "chai";
 
 import { Signal } from "../../../../src/org/osflash/signals/Signal";

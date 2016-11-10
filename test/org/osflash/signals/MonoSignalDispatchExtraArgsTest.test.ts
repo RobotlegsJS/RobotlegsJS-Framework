@@ -1,3 +1,5 @@
+import "../../../entry";
+
 import { assert } from "chai";
 
 import { AsyncUtil } from "../../../util/AsyncUtil";
