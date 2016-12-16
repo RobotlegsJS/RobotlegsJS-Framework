@@ -59,6 +59,8 @@ export class SignalMap implements ISignalMap {
             (handlers, signal) => handlers.forEach((handler) => signal.remove(handler))
         );
 
+        this._handlersBySignal.clear();
+
         this._handlersBySignal = new Map();
     }
 

@@ -3,9 +3,7 @@ import {ISignal} from "signals.js";
 export declare class SignalMap implements ISignalMap {
     protected _handlersBySignal: Map<ISignal, Array<Function>>;
     constructor();
-
     addToSignal(signal: ISignal, handler: Function): void;
-
     addOnceToSignal(signal: ISignal, handler: Function): void;
     /**
      * @private
