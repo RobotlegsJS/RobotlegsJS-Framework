@@ -5,7 +5,7 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 import {injectable, inject} from "inversify";
-import {IEventMap, IEventDispatcher} from "robotlegs";
+import {IEventDispatcher} from "robotlegs";
 import {Mediator} from "robotlegs-pixi";
 import {ISignalMap} from "../api/ISignalMap";
 import {ISignal} from "signals.js";
@@ -22,7 +22,7 @@ export abstract class SignalMediator<T extends IEventDispatcher> extends Mediato
     /* Protected Properties                                                       */
     /*============================================================================*/
 
-    @inject(IEventMap)
+    @inject(ISignalMap)
     protected signalMap: ISignalMap;
 
     /*============================================================================*/
