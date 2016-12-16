@@ -69,10 +69,10 @@ export class SignalMap implements ISignalMap {
     /*============================================================================*/
 
     protected storeSignalHandler(signal: any, handler: Function): void {
-        if (this._handlersBySignal[signal] == null) {
-            this._handlersBySignal[signal] = [handler];
+        if (this._handlersBySignal.get(signal) == null) {
+            this._handlersBySignal.set(signal, [handler]);
         } else {
-            this._handlersBySignal[signal].push(handler);
+            this._handlersBySignal.get(signal).push(handler);
         }
     }
 }
