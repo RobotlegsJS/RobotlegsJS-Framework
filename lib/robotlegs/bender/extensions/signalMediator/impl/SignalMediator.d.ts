@@ -9,14 +9,11 @@ import {ISignal} from "signals.js";
  */
 export declare abstract class SignalMediator<T extends IEventDispatcher> extends Mediator<T> {
     protected signalMap: ISignalMap;
-
     /**
      * Runs after the mediator has been destroyed.
      * Cleans up listeners mapped through the local EventMap.
      */
     postDestroy(): void;
-
     protected addToSignal(signal: ISignal, handler: Function): void;
-
     protected addOnceToSignal(signal: ISignal, handler: Function): void;
 }
