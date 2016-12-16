@@ -6,6 +6,9 @@
       "es6",
       "dom"
     ],
+    "types": [
+      "reflect-metadata"
+    ],
     "module": "commonjs",
     "moduleResolution": "node",
     "declaration": true,
