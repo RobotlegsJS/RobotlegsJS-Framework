@@ -1,5 +1,6 @@
 import {injectable} from "robotlegs";
 import {ISignalMap} from "../api/ISignalMap";
+import {ISignal} from "signals.js";
 
 @injectable()
 export class SignalMap implements ISignalMap {
@@ -8,7 +9,7 @@ export class SignalMap implements ISignalMap {
     /* Protected Properties                                                       */
     /*============================================================================*/
 
-    protected _handlersBySignal: Map<any, Array<Function>>;
+    protected _handlersBySignal: Map<ISignal, Array<Function>>;
 
     /*============================================================================*/
     /* Constructor                                                                */
@@ -22,12 +23,12 @@ export class SignalMap implements ISignalMap {
     /* Public Functions                                                           */
     /*============================================================================*/
 
-    addToSignal(signal: any, handler: Function): void {
+    addToSignal(signal: ISignal, handler: Function): void {
         signal.add(handler);
         this.storeSignalHandler(signal, handler);
     }
 
-    addOnceToSignal(signal: any, handler: Function): void {
+    addOnceToSignal(signal: ISignal, handler: Function): void {
         signal.addOnce(handler);
         this.storeSignalHandler(signal, handler);
     }
@@ -54,9 +55,9 @@ export class SignalMap implements ISignalMap {
      * @private
      */
     removeAll(): void {
-        this._handlersBySignal.forEach((handlers, signal) => {
-            signal.removeAll();
-        });
+        this._handlersBySignal.forEach(
+            (handlers, signal) => handlers.forEach((handler) => signal.remove(handler))
+        );
 
         this._handlersBySignal = new Map();
     }

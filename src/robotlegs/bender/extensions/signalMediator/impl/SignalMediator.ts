@@ -33,7 +33,7 @@ export abstract class SignalMediator<T extends IEventDispatcher> extends Mediato
      * Runs after the mediator has been destroyed.
      * Cleans up listeners mapped through the local EventMap.
      */
-    public postDestroy(): void {
+    postDestroy(): void {
         this.signalMap.removeAll();
         super.postDestroy();
     }
