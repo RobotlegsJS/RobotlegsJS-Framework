@@ -1,9 +1,12 @@
 import {ISignalMap} from "../api/ISignalMap";
+import {ISignal} from "signals.js";
 export declare class SignalMap implements ISignalMap {
-    protected _handlersBySignal: Map<any, Array<Function>>;
+    protected _handlersBySignal: Map<ISignal, Array<Function>>;
     constructor();
-    addToSignal(signal: any, handler: Function): void;
-    addOnceToSignal(signal: any, handler: Function): void;
+
+    addToSignal(signal: ISignal, handler: Function): void;
+
+    addOnceToSignal(signal: ISignal, handler: Function): void;
     /**
      * @private
      */
