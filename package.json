@@ -1,16 +1,15 @@
 {
   "name": "robotlegs-signalmediator",
-  "version": "1.0.0-alpha.6",
+  "version": "1.0.0-alpha.7",
   "description": "TypeScript port of Robotlegs Extensions SignalMediator",
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
   "scripts": {
-    "test": "karma start --single-run",
+    "test": "karma start",
     "mocha": "mocha test/**/*.test.ts --require ts-node/register",
     "autoformat": "tsfmt -r",
-    "clean-up": "del /f coverage && del /f lib",
-    "prepublish": "tsc -d && publish-please guard",
-    "publish-please": "npm run autoformatnpm  && publish-please"
+    "clean-up": "rmdir coverage /s /q && rmdir lib /s /q",
+    "publish-please": "npm run autoformat && npm run clean-up && publish"
   },
   "repository": {
     "type": "git",
@@ -68,7 +67,6 @@
     "karma-sourcemap-writer": "^0.1.2",
     "karma-webpack": "^1.8.0",
     "mocha": "^3.1.2",
-    "publish-please": "^2.2.0",
     "reflect-metadata": "^0.1.8",
     "remap-istanbul": "^0.7.0",
     "rimraf": "^2.5.4",

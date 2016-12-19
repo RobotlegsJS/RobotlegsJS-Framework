@@ -8,7 +8,8 @@ import {ISignal} from "signals.js";
  * <p>Override initialize and destroy to hook into the mediator lifecycle.</p>
  */
 export declare abstract class SignalMediator<T extends IEventDispatcher> extends Mediator<T> {
-    protected signalMap: ISignalMap;
+    private _signalMap;
+    protected readonly signalMap: ISignalMap;
     /**
      * Runs after the mediator has been destroyed.
      * Cleans up listeners mapped through the local EventMap.
