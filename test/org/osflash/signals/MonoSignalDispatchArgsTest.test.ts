@@ -10,17 +10,6 @@ describe("MonoSignalDispatchArgsTest", () => {
 
     let async: AsyncUtil = new AsyncUtil();
 
-    let completed: MonoSignal;
-
-    beforeEach(() => {
-        completed = new MonoSignal();
-    });
-
-    afterEach(() => {
-        completed.removeAll();
-        completed = null;
-    });
-
     it("dispatch_two_correct_value_objects_should_succeed()", () => {
         let signal: Signal = new Signal(String, Number);
         signal.dispatch("the Answer", 42);
@@ -57,4 +46,17 @@ describe("MonoSignalDispatchArgsTest", () => {
             signal.dispatch(new Date(), "wrong value type");
         }, Error);
     });
+
+    it("dispatch_strict_type_checking_with_inheritance()", () => {
+        class Base {}
+        class Inherited1 extends Base {}
+        class Inherited2 extends Inherited1 {}
+
+        let signal: Signal = new Signal(Base);
+        assert.throws(() => signal.dispatch(5), Error);
+        signal.dispatch(new Base());
+        signal.dispatch(new Inherited1());
+        signal.dispatch(new Inherited2());
+    });
+
 });

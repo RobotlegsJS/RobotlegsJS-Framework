@@ -112,8 +112,12 @@ export class MonoSignal implements ISignal {
         // Cannot dispatch differently typed objects than declared classes.
         for (var i: number = 0; i < numValueClasses; i++) {
             // Optimized for the optimistic case that values are correct.
-            if (valueObjects[i] === null || valueObjects[i].constructor === this._valueClasses[i])
+            if (
+                valueObjects[i] === null ||
+                (valueObjects[i] instanceof this._valueClasses[i] || valueObjects[i].constructor === this._valueClasses[i])
+            ) {
                 continue;
+            }
 
             throw new Error('Value object <' + valueObjects[i]
                 + '> is not an instance of <' + this._valueClasses[i] + '>.');
