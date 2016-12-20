@@ -16,6 +16,20 @@ SignalsJS
 TypeScript port of [AS3 Signals](https://github.com/robertpenner/as3-signals).
 [13kb compressed](dist/signals.min.js).
 
+Usage
+---
+
+```ts
+import { Signal } from "signals.js";
+var signal = new Signal();
+
+signal.add(data => {
+  console.log(data.message);
+});
+
+signal.dispatch({ message: "hello signal!" });
+```
+
 License
 ---
 
