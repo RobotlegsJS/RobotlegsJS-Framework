@@ -1,6 +1,8 @@
 SignalsJS
 ===
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/GoodgameStudios/SignalsJS.svg)](https://greenkeeper.io/)
+
 [![Join the chat at https://gitter.im/GoodgameStudios/RobotlegsJS](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/GoodgameStudios/RobotlegsJS)
 [![Build Status](https://travis-ci.org/GoodgameStudios/SignalsJS.svg?branch=master)](https://travis-ci.org/GoodgameStudios/SignalsJS)
 [![Code Climate](https://codeclimate.com/github/GoodgameStudios/SignalsJS/badges/gpa.svg)](https://codeclimate.com/github/GoodgameStudios/SignalsJS)
