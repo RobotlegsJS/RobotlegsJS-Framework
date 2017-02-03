@@ -5,6 +5,8 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
+import "../../../../../entry.test";
+
 import { assert } from "chai";
 
 import { ISubCommandPayload } from "../../../../../../src/robotlegs/bender/utilities/macrobot/api/ISubCommandPayload";

@@ -18,7 +18,6 @@ module.exports = function(config) {
       "es6-shim"
     ],
     files: [
-      "./test/entry.test.ts",
       "./test/**/**/**.test.ts",
       {
         pattern: '**/*.map',
@@ -71,8 +70,8 @@ module.exports = function(config) {
     configuration.browsers = ['PhantomJS'];
     configuration.plugins.push("karma-phantomjs-launcher");
   } else {
-    configuration.browsers = ['Chrome'];
-    configuration.plugins.push("karma-chrome-launcher");
+    configuration.browsers = ['PhantomJS'];
+    configuration.plugins.push("karma-phantomjs-launcher");
   }
 
   config.set(configuration);
