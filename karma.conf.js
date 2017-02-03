@@ -18,7 +18,6 @@ module.exports = function(config) {
       "es6-shim"
     ],
     files: [
-      "./test/entry.test.ts",
       "./test/**/**/**.test.ts",
       {
         pattern: '**/*.map',
