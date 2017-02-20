@@ -48,9 +48,9 @@ describe("MonoSignalDispatchArgsTest", () => {
     });
 
     it("dispatch_strict_type_checking_with_inheritance()", () => {
-        class Base {}
-        class Inherited1 extends Base {}
-        class Inherited2 extends Inherited1 {}
+        class Base { }
+        class Inherited1 extends Base { }
+        class Inherited2 extends Inherited1 { }
 
         let signal: Signal = new Signal(Base);
         assert.throws(() => signal.dispatch(5), Error);
