@@ -8,7 +8,7 @@ before_install:
   - npm install -g codeclimate-test-reporter
 script: node_modules/karma/bin/karma start karma.conf.js --single-run
 after_success:
-  - codeclimate-test-reporter < coverage/report-lcov/lcov.info
+  - codeclimate-test-reporter < coverage/lcov.info
 addons:
   code_climate:
     repo_token: 2b9f60500ad06d7f0c2fb3f3bde921f8df131762dc45afa397ce298c2acf9b74
