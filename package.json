@@ -35,7 +35,7 @@
   },
   "homepage": "https://github.com/GoodgameStudios/RobotlegsJS-Macrobot#readme",
   "dependencies": {
-    "robotlegs": "^1.0.0-alpha.13"
+    "robotlegs": "^1.0.0-alpha.14"
   },
   "devDependencies": {
     "@types/bluebird": "^3.0.37",
