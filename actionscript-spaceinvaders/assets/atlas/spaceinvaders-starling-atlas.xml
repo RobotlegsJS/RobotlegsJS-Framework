@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with TexturePacker http://www.codeandweb.com/texturepacker-->
+<!-- $TexturePacker:SmartUpdate:b458fc10131c21814435a5b69b3c720c:3e1f08a5fbd92dd489b396d147d2c001:42ef540d3b1bc97dd2eb540321e11a20$ -->
+<TextureAtlas imagePath="spaceinvaders-starling-atlas.png" width="256" height="295">
+    <SubTexture name="bullet_frame_01" x="243" y="161" rotated="true" width="9" height="5"/>
+    <SubTexture name="button_cancel_over" x="206" y="90" width="37" height="37"/>
+    <SubTexture name="button_cancel_up" x="206" y="127" width="37" height="37"/>
+    <SubTexture name="button_config_over" x="0" y="89" width="132" height="37" frameX="0" frameY="0" frameWidth="132" frameHeight="38"/>
+    <SubTexture name="button_config_up" x="132" y="89" rotated="true" width="37" height="132" frameX="0" frameY="0" frameWidth="132" frameHeight="38"/>
+    <SubTexture name="button_confirm_over" x="206" y="164" width="37" height="37"/>
+    <SubTexture name="button_confirm_up" x="206" y="201" width="37" height="37"/>
+    <SubTexture name="button_home_over" x="132" y="221" width="37" height="37"/>
+    <SubTexture name="button_home_up" x="169" y="221" width="37" height="37"/>
+    <SubTexture name="button_pause_over" x="206" y="238" width="37" height="37"/>
+    <SubTexture name="button_pause_up" x="0" y="237" width="37" height="37"/>
+    <SubTexture name="button_reset_over" x="0" y="126" width="132" height="37" frameX="0" frameY="0" frameWidth="132" frameHeight="38"/>
+    <SubTexture name="button_reset_up" x="0" y="163" width="132" height="37" frameX="0" frameY="0" frameWidth="132" frameHeight="38"/>
+    <SubTexture name="button_resume_over" x="37" y="237" width="37" height="37"/>
+    <SubTexture name="button_resume_up" x="74" y="237" width="37" height="37"/>
+    <SubTexture name="button_retry_over" x="111" y="258" width="37" height="37"/>
+    <SubTexture name="button_retry_up" x="148" y="258" width="37" height="37"/>
+    <SubTexture name="button_start_over" x="0" y="200" width="132" height="37" frameX="0" frameY="0" frameWidth="132" frameHeight="38"/>
+    <SubTexture name="button_start_up" x="169" y="89" rotated="true" width="37" height="132" frameX="0" frameY="0" frameWidth="132" frameHeight="38"/>
+    <SubTexture name="cannon_frame_01" x="243" y="90" rotated="true" width="10" height="15"/>
+    <SubTexture name="enemy_01_frame_01" x="243" y="105" width="10" height="10"/>
+    <SubTexture name="enemy_01_frame_02" x="243" y="115" width="10" height="10"/>
+    <SubTexture name="enemy_02_frame_01" x="242" y="20" width="13" height="10"/>
+    <SubTexture name="enemy_02_frame_02" x="242" y="30" width="13" height="10"/>
+    <SubTexture name="enemy_03_frame_01" x="242" y="0" width="14" height="10"/>
+    <SubTexture name="enemy_03_frame_02" x="242" y="10" width="14" height="10"/>
+    <SubTexture name="enemy_bonus_frame_01" x="243" y="125" rotated="true" width="9" height="18" frameX="0" frameY="0" frameWidth="18" frameHeight="11"/>
+    <SubTexture name="enemy_bonus_frame_02" x="243" y="143" rotated="true" width="9" height="18" frameX="0" frameY="-2" frameWidth="18" frameHeight="11"/>
+    <SubTexture name="explosion_frame_01" x="242" y="60" rotated="true" width="11" height="15"/>
+    <SubTexture name="explosion_frame_02" x="242" y="75" rotated="true" width="11" height="15"/>
+    <SubTexture name="logo_setzer" x="242" y="40" width="12" height="20"/>
+    <SubTexture name="logo_spaceinvaders" x="0" y="0" width="242" height="89"/>
+</TextureAtlas>
