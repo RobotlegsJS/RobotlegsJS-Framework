@@ -2733,7 +2733,7 @@ karma-chrome-launcher@^2.0.0:
 
 karma-coverage-istanbul-reporter@^0.3.0:
   version "0.3.0"
-  resolved "http://10.18.193.72:3000/karma-coverage-istanbul-reporter/-/karma-coverage-istanbul-reporter-0.3.0/035b736612425106caab4c4c403db7fc034b2ffc.tgz#035b736612425106caab4c4c403db7fc034b2ffc"
+  resolved "https://registry.npmjs.org/karma-coverage-istanbul-reporter/-/karma-coverage-istanbul-reporter-0.3.0.tgz#035b736612425106caab4c4c403db7fc034b2ffc"
   dependencies:
     istanbul-api "^1.1.1"
 
