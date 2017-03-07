@@ -39,7 +39,7 @@
     "@types/chai": "^3.4.35",
     "@types/mocha": "^2.2.39",
     "@types/sinon": "^1.16.35",
-    "bluebird": "^3.4.7",
+    "bluebird": "^3.5.0",
     "browserify-versionify": "^1.0.6",
     "chai": "^3.5.0",
     "es6-map": "^0.1.4",
