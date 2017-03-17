@@ -35,7 +35,7 @@
   },
   "homepage": "https://github.com/GoodgameStudios/SignalsJS#readme",
   "devDependencies": {
-    "@types/bluebird": "^3.0.37",
+    "@types/bluebird": "^3.5.0",
     "@types/chai": "^3.4.35",
     "@types/mocha": "^2.2.39",
     "@types/sinon": "^1.16.35",
