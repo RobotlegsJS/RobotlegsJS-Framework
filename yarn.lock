@@ -4794,7 +4794,7 @@ typescript-formatter@^5.1.2:
     commandpost "^1.0.0"
     editorconfig "^0.13.2"
 
-typescript@2.1.6, typescript@^2.1.6:
+typescript@2.1.6, typescript@~2.1.6:
   version "2.1.6"
   resolved "https://registry.npmjs.org/typescript/-/typescript-2.1.6.tgz#40c7e6e9e5da7961b7718b55505f9cac9487a607"
 
