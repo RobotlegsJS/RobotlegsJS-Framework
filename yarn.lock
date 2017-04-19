@@ -4666,9 +4666,9 @@ typedoc@^0.5.7:
     typedoc-default-themes "^0.4.2"
     typescript "2.1.6"
 
-typescript-formatter@^5.1.2:
-  version "5.1.2"
-  resolved "https://registry.npmjs.org/typescript-formatter/-/typescript-formatter-5.1.2.tgz#dfb779839aa9357b2f3a941dfa006f2346e8d9db"
+typescript-formatter@^5.1.3:
+  version "5.1.3"
+  resolved "https://registry.npmjs.org/typescript-formatter/-/typescript-formatter-5.1.3.tgz#97cc9dc397ec20ba96effec24fb8b5676262e62b"
   dependencies:
     commandpost "^1.0.0"
     editorconfig "^0.13.2"
