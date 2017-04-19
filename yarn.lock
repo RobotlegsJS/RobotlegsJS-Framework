@@ -4645,9 +4645,9 @@ typedoc-default-themes@^0.4.2:
   version "0.4.2"
   resolved "https://registry.npmjs.org/typedoc-default-themes/-/typedoc-default-themes-0.4.2.tgz#640b854fd7ef19e6774496ea7741ec31a0dcaddc"
 
-typedoc@^0.5.7:
-  version "0.5.7"
-  resolved "https://registry.npmjs.org/typedoc/-/typedoc-0.5.7.tgz#f2998dbb5909cb3f02db5fecb85e2a4377189e2a"
+typedoc@^0.5.10:
+  version "0.5.10"
+  resolved "https://registry.npmjs.org/typedoc/-/typedoc-0.5.10.tgz#4bd60c53c423811931fc519ffb36e58338824335"
   dependencies:
     "@types/fs-extra" "0.0.33"
     "@types/handlebars" "^4.0.31"
@@ -4665,7 +4665,7 @@ typedoc@^0.5.7:
     progress "^1.1.8"
     shelljs "^0.7.0"
     typedoc-default-themes "^0.4.2"
-    typescript "2.1.6"
+    typescript "2.2.2"
 
 typescript-formatter@^5.1.3:
   version "5.1.3"
@@ -4674,13 +4674,13 @@ typescript-formatter@^5.1.3:
     commandpost "^1.0.0"
     editorconfig "^0.13.2"
 
-typescript@2.1.6:
-  version "2.1.6"
-  resolved "https://registry.npmjs.org/typescript/-/typescript-2.1.6.tgz#40c7e6e9e5da7961b7718b55505f9cac9487a607"
-
 typescript@2.2.0:
   version "2.2.0"
   resolved "https://registry.npmjs.org/typescript/-/typescript-2.2.0.tgz#626f2fc70087d2480f21ebb12c1888288c8614e3"
+
+typescript@2.2.2:
+  version "2.2.2"
+  resolved "https://registry.npmjs.org/typescript/-/typescript-2.2.2.tgz#606022508479b55ffa368b58fee963a03dfd7b0c"
 
 uglify-js@^2.6, uglify-js@^2.7.5:
   version "2.7.5"
