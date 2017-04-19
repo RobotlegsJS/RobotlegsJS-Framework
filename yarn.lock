@@ -4551,9 +4551,9 @@ trim-right@^1.0.1:
   version "1.0.1"
   resolved "https://registry.npmjs.org/trim-right/-/trim-right-1.0.1.tgz#cb2e1203067e0c8de1f614094b9fe45704ea6003"
 
-ts-loader@^2.0.2:
-  version "2.0.2"
-  resolved "https://registry.npmjs.org/ts-loader/-/ts-loader-2.0.2.tgz#74abc2f15a9f1d8432873dfa35eef8e513caa622"
+ts-loader@^2.0.3:
+  version "2.0.3"
+  resolved "https://registry.npmjs.org/ts-loader/-/ts-loader-2.0.3.tgz#89b8c87598f048df065766e07e1538f0eaeb1165"
   dependencies:
     colors "^1.0.3"
     enhanced-resolve "^3.0.0"
