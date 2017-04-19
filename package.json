@@ -69,7 +69,7 @@
     "remap-istanbul": "^0.9.5",
     "rimraf": "^2.6.1",
     "sinon": "^2.1.0",
-    "sinon-chai": "^2.8.0",
+    "sinon-chai": "^2.9.0",
     "ts-loader": "^2.0.2",
     "ts-node": "^3.0.2",
     "tslint": "^5.1.0",
