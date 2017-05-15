@@ -18,7 +18,7 @@ package setzer.spaceinvaders.mediators
 		override public function initialize():void
 		{
 			view.playAnimation();
-			setTimeout( onTimerOutHandler, 3000 );
+			setTimeout( onTimerOutHandler, 3500 );
 		}
 
 		private function onTimerOutHandler():void

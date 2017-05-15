@@ -1,6 +1,7 @@
 package setzer.spaceinvaders.views.components
 {
 	import setzer.spaceinvaders.assets.AssetsInfo;
+	import setzer.spaceinvaders.utils.Colors;
 	import setzer.spaceinvaders.utils.StarlingFactory;
 
 	import starling.display.DisplayObject;
@@ -26,6 +27,7 @@ package setzer.spaceinvaders.views.components
 				cannon.scaleY = 1.5;
 				cannon.x = i * (cannon.width + 3);
 				cannon.y = 3;
+				cannon.color = Colors.GAME_ITEMS;
 				addChild( cannon );
 				_cannons.push( cannon );
 			}

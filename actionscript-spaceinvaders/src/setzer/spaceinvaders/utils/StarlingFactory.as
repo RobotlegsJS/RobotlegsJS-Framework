@@ -44,7 +44,7 @@ package setzer.spaceinvaders.utils
 			return new Quad( width, height, color );
 		}
 
-		public static function getColorBackground( color:uint = Colors.BACKGROUND ):Quad
+		public static function getColorBackground( color:uint = Colors.BACKGROUND_DARK ):Quad
 		{
 			return new Quad( ViewPortSize.MAX_WIDTH, ViewPortSize.MAX_HEIGHT, color );
 		}

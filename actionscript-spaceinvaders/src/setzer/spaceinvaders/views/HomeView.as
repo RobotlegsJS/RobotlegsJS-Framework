@@ -41,6 +41,7 @@ package setzer.spaceinvaders.views
 			var logoSetzer:Image = StarlingFactory.getImage( AssetsInfo.LOGO_SETZER );
 			logoSetzer.x = MagicValues.BORDER_OFFSET;
 			logoSetzer.y = ViewPortSize.MAX_HEIGHT - MagicValues.BORDER_OFFSET - logoSetzer.height;
+			logoSetzer.color = Colors.GAME_ITEMS;
 			addChild( logoSetzer );
 		}
 

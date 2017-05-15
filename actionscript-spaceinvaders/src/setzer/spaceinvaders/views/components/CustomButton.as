@@ -48,6 +48,7 @@ package setzer.spaceinvaders.views.components
 		private var _triggerBounds:Rectangle;
 
 		private var _colorsTextures:Dictionary;
+		private var _colorsBGColor:Dictionary;
 
 		public function CustomButton( upState:Texture, text:String = "", downState:Texture = null, overState:Texture = null, disabledState:Texture = null )
 		{
@@ -63,6 +64,12 @@ package setzer.spaceinvaders.views.components
 			_colorsTextures[_downState] = Colors.DYNAMIC_TEXT;
 			_colorsTextures[_overState] = Colors.DYNAMIC_TEXT;
 			_colorsTextures[_disabledState] = Colors.BACKGROUND_DARK;
+
+			_colorsBGColor = new Dictionary();
+			_colorsBGColor[_upState] = Colors.BACKGROUND_DARK;
+			_colorsBGColor[_downState] = Colors.BACKGROUND;
+			_colorsBGColor[_overState] = Colors.BACKGROUND;
+			_colorsBGColor[_disabledState] = Colors.BACKGROUND_DARK;
 
 			_state = ButtonState.UP;
 			_body = new Image( upState );
@@ -214,6 +221,7 @@ package setzer.spaceinvaders.views.components
 		{
 			_body.texture = texture ? texture : _upState;
 			_body.color = _colorsTextures[_body.texture];
+			_bodyBackground.color = _colorsBGColor[_body.texture];
 		}
 
 		public function get scaleWhenDown():Number

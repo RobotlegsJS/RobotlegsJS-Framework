@@ -2,11 +2,11 @@ package setzer.spaceinvaders.views
 {
 	import setzer.spaceinvaders.assets.AssetsInfo;
 	import setzer.spaceinvaders.utils.Colors;
-	import setzer.spaceinvaders.views.components.CustomButton;
 	import setzer.spaceinvaders.utils.MagicValues;
 	import setzer.spaceinvaders.utils.StarlingFactory;
 	import setzer.spaceinvaders.utils.Texts;
 	import setzer.spaceinvaders.utils.ViewPortSize;
+	import setzer.spaceinvaders.views.components.CustomButton;
 
 	import starling.display.Sprite;
 	import starling.text.TextField;

@@ -1,5 +1,6 @@
 package setzer.spaceinvaders.views
 {
+	import setzer.spaceinvaders.utils.Colors;
 	import setzer.spaceinvaders.utils.StarlingFactory;
 	import setzer.spaceinvaders.utils.MagicValues;
 	import setzer.spaceinvaders.views.components.BattleFieldComponent;
@@ -19,7 +20,7 @@ package setzer.spaceinvaders.views
 
 		private function createBackground():void
 		{
-			addChild( StarlingFactory.getColorBackground() );
+			addChild( StarlingFactory.getColorBackground(Colors.BACKGROUND) );
 		}
 
 		public function destroy():void

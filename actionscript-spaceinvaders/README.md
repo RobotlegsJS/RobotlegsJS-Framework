@@ -1,15 +1,19 @@
-![cover](img_cover_space_invaders.png)
+![cover](img_cover_space_invaders_as.png)
 
-This is an Actionscript open-source game which was designed to shows how to implements Starling, Robotlegs, and Palidor.
+This is an ActionScript open-source game which was developed to shows how to integrate Starling, Robotlegs, and Palidor.
 
 + **Category:** Arcade.
 + **Platform:** Web.
-+ **Language:** Actionscript 3.
++ **Language:** ActionScript 3.
 + **Technologies:** StarlingFW, Robotlegs, Palidor.
-
 
 * * *
 
+### Gameplay
+
+![gif_as](gif_space_invaders_as_demo.gif)
+
+* * *
 
 ### Dependencies
 
@@ -22,7 +26,8 @@ This is an Actionscript open-source game which was designed to shows how to impl
 
 
 ### Demo
-+ **[Actionscript](https://ronaldosetzer.github.io/portfolio/open_source/space_invaders/)**
++ **[ActionScript](https://ronaldosetzer.github.io/portfolio/open_source/space_invaders_as/)**
++ **[TypeScript](https://ronaldosetzer.github.io/portfolio/open_source/space_invaders_ts/)**
 
 
 * * *
@@ -31,12 +36,12 @@ This is an Actionscript open-source game which was designed to shows how to impl
 
 #### Game Flow
 
-![screenshot01](img_ss_space_invaders_01.png)
+![screenshot01](img_ss_space_invaders_as_01.png)
 
 
 #### Views - Managers - Mediators - Commands
 
-![screenshot02](img_ss_space_invaders_02.png)
+![screenshot02](img_ss_space_invaders_as_02.png)
 
 
 ### Palidor Config
@@ -127,7 +132,7 @@ public class GameConfig implements IConfig
 
 
 ### Screenshots
-![screenshot01](img_game_space_invaders.png)
+![screenshot01](img_game_space_invaders_as.png)
 * * *
 
 **Ronaldo Santiago**  - Game Developer [ [portfolio](https://ronaldosetzer.github.io/portfolio/) ]
