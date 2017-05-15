@@ -4,6 +4,7 @@
 bin-debug/
 bin-release/
 temp/
+dist/
 
 # Project property files
 .actionScriptProperties
@@ -16,4 +17,5 @@ temp/
 *.iws
 *.DS_STORE
 .idea/
+node_modules/
 out/
