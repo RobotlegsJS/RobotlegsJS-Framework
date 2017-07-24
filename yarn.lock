@@ -2766,9 +2766,9 @@ karma-sourcemap-writer@^0.1.2:
   dependencies:
     graceful-fs "^4.1.3"
 
-karma-webpack@^2.0.3:
-  version "2.0.3"
-  resolved "https://registry.npmjs.org/karma-webpack/-/karma-webpack-2.0.3.tgz#39cebf5ca2580139b27f9ae69b78816b9c82fae6"
+karma-webpack@^2.0.4:
+  version "2.0.4"
+  resolved "https://registry.npmjs.org/karma-webpack/-/karma-webpack-2.0.4.tgz#3e2d4f48ba94a878e1c66bb8e1ae6128987a175b"
   dependencies:
     async "~0.9.0"
     loader-utils "^0.2.5"
