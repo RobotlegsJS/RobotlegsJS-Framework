@@ -4169,9 +4169,9 @@ signal-exit@^3.0.0:
   version "3.0.2"
   resolved "https://registry.npmjs.org/signal-exit/-/signal-exit-3.0.2.tgz#b5fdc08f1287ea1178628e415e25132b73646c6d"
 
-signals.js@^1.0.1-alpha.3:
-  version "1.0.1-alpha.3"
-  resolved "https://registry.npmjs.org/signals.js/-/signals.js-1.0.1-alpha.3.tgz#18f4eb1229c7c11efb7d05f9e2748afd9f1c042e"
+signals.js@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.npmjs.org/signals.js/-/signals.js-1.0.1.tgz#d19bc92d447d52b54dc718af6f8637f800052b92"
 
 sinon-chai@^2.8.0:
   version "2.8.0"
