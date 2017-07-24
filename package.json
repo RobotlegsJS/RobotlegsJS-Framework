@@ -38,7 +38,7 @@
     "@types/bluebird": "^3.5.8",
     "@types/chai": "^4.0.1",
     "@types/mocha": "^2.2.41",
-    "@types/sinon": "^2.1.2",
+    "@types/sinon": "^2.3.3",
     "bluebird": "^3.5.0",
     "browserify-versionify": "^1.0.6",
     "chai": "^3.5.0",
