@@ -76,6 +76,6 @@
     "typescript": "^2.4.2",
     "typescript-formatter": "^5.2.0",
     "webpack": "^3.3.0",
-    "webpack-dev-server": "^2.4.2"
+    "webpack-dev-server": "^2.6.1"
   }
 }
