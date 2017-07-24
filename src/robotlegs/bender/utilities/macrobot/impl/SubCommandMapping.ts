@@ -5,6 +5,7 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
+import { instantiateUnmapped } from "robotlegs";
 import { ISubCommandPayload } from "../api/ISubCommandPayload";
 import { ISubCommandMapping } from "../api/ISubCommandMapping";
 import { ISubCommandConfigurator } from "../dsl/ISubCommandConfigurator";
@@ -71,6 +72,6 @@ export class SubCommandMapping implements ISubCommandMapping, ISubCommandConfigu
     }
 
     public getOrCreateCommandInstance(injector: IInjector): ICommand {
-        return <ICommand>injector.instantiateUnmapped(this.commandClass);
+        return instantiateUnmapped<ICommand>(injector, this.commandClass);
     }
 }
