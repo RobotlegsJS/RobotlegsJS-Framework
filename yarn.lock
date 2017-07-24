@@ -4190,9 +4190,9 @@ sinon-chai@^2.9.0:
   version "2.9.0"
   resolved "https://registry.npmjs.org/sinon-chai/-/sinon-chai-2.9.0.tgz#34d820042bc9661a14527130d401eb462c49bb84"
 
-sinon@^2.1.0:
-  version "2.1.0"
-  resolved "https://registry.npmjs.org/sinon/-/sinon-2.1.0.tgz#e057a9d2bf1b32f5d6dd62628ca9ee3961b0cafb"
+sinon@^2.3.8:
+  version "2.3.8"
+  resolved "https://registry.npmjs.org/sinon/-/sinon-2.3.8.tgz#31de06fed8fba3a671e576dd96d0a5863796f25c"
   dependencies:
     diff "^3.1.0"
     formatio "1.2.0"
