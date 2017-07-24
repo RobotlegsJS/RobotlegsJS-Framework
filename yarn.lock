@@ -1959,9 +1959,9 @@ glslify-deps@^1.2.5:
     map-limit "0.0.1"
     resolve "^1.0.0"
 
-glslify@^6.0.2:
-  version "6.0.2"
-  resolved "https://registry.npmjs.org/glslify/-/glslify-6.0.2.tgz#9312362ff69ba2b818cf89eaf1618fa2a342cef8"
+glslify@^6.1.0:
+  version "6.1.0"
+  resolved "https://registry.npmjs.org/glslify/-/glslify-6.1.0.tgz#cdffcfd2a6571722128d3d13356c136de6ce9742"
   dependencies:
     bl "^1.0.0"
     concat-stream "^1.5.2"
