@@ -63,7 +63,7 @@
     "karma-sourcemap-loader": "^0.3.7",
     "karma-sourcemap-writer": "^0.1.2",
     "karma-webpack": "^2.0.4",
-    "mocha": "^3.2.0",
+    "mocha": "^3.4.2",
     "publish-please": "^2.3.1",
     "reflect-metadata": "0.1.8",
     "remap-istanbul": "^0.9.5",
