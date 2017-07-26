@@ -4380,9 +4380,9 @@ ripemd160@^2.0.0, ripemd160@^2.0.1:
     hash-base "^2.0.0"
     inherits "^2.0.1"
 
-robotlegs@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.npmjs.org/robotlegs/-/robotlegs-1.0.0.tgz#51f10c2686e2b8a464fa293ece84d4c2b4d8c596"
+robotlegs@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.npmjs.org/robotlegs/-/robotlegs-1.0.1.tgz#a451383d4d03596db97bef01798cb045c4878f58"
   dependencies:
     inversify "^4.3.0"
 
