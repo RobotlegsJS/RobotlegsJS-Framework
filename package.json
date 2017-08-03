@@ -33,9 +33,9 @@
   },
   "homepage": "https://github.com/cuongdd2/RobotlegsJS-SignalMediator#readme",
   "dependencies": {
-    "robotlegs": "^1.0.0-alpha.12",
-    "robotlegs-pixi": "^1.0.0-alpha.12",
-    "signals.js": "^1.0.0-alpha.13"
+    "robotlegs": "1.0.1",
+    "robotlegs-pixi": "1.0.0",
+    "signals.js": "1.0.2"
   },
   "devDependencies": {
     "@types/bluebird": "^3.0.35",
