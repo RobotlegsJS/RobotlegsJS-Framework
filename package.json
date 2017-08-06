@@ -1,6 +1,6 @@
 {
-  "name": "signals.js",
-  "version": "1.0.2",
+  "name": "@robotlegsjs/signals",
+  "version": "0.0.1",
   "description": "TypeScript port of AS3 Signals.",
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
@@ -15,7 +15,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/GoodgameStudios/SignalsJS.git"
+    "url": "git@github.com:RobotlegsJS/SignalsJS.git"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org"
@@ -24,16 +24,16 @@
     "Signals",
     "TypeScript"
   ],
-  "author": "Goodgame Studios",
+  "author": "RobotlegsJS",
   "contributors": [
     "Bartosz Oczujda <boczujda@goodgamestudios.com>",
-    "Tiago Schenkel <tschenkel@goodgamestudios.com>"
+    "Tiago Schenkel <tiago.schenkel@gmail.com>"
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/GoodgameStudios/SignalsJS/issues"
+    "url": "https://github.com/RobotlegsJS/SignalsJS/issues"
   },
-  "homepage": "https://github.com/GoodgameStudios/SignalsJS#readme",
+  "homepage": "https://github.com/RobotlegsJS/SignalsJS#readme",
   "devDependencies": {
     "@types/bluebird": "^3.5.8",
     "@types/chai": "^4.0.1",
