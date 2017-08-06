@@ -7,10 +7,6 @@ SignalsJS
 [![npm version](https://badge.fury.io/js/%40robotlegsjs%2Fsignals.svg)](https://badge.fury.io/js/%40robotlegsjs%2Fsignals)
 [![Greenkeeper badge](https://badges.greenkeeper.io/RobotlegsJS/SignalsJS.svg)](https://greenkeeper.io/)
 
-[![NPM](https://nodei.co/npm/@robotlegsjs/signals.png?downloads=true&downloadRank=true)](https://nodei.co/npm/@robotlegsjs/signals/)
-[![NPM](https://nodei.co/npm-dl/@robotlegsjs/signals.png?months=9&height=3)](https://nodei.co/npm/@robotlegsjs/signals/)
-
-
 TypeScript port of [AS3 Signals](https://github.com/robertpenner/as3-signals).
 [13kb compressed](dist/signals.min.js).
 
