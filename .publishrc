@@ -9,6 +9,6 @@
   },
   "confirm": true,
   "publishTag": "--access public",
-  "prePublishScript": "npm test && npm run autoformat && npm run clean-up && npm run build",
+  "prePublishScript": "npm test",
   "postPublishScript": false
 }

@@ -10,7 +10,7 @@
     "autoformat": "tsfmt -r",
     "prepublish": "tsc -d && publish-please guard",
     "clean-up": "rm -rf coverage && rm -rf lib",
-    "publish-please": "publish-please",
+    "publish-please": "npm run autoformat && npm run clean-up && npm run build && publish-please",
     "build": "webpack --env.production"
   },
   "repository": {
