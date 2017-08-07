@@ -13,7 +13,7 @@ import {
     IContext,
     applyHooks,
     guardsApprove
-} from "robotlegs";
+} from "@robotlegsjs/core";
 
 import { IAsyncCommand } from "../api/IAsyncCommand";
 import { IMacro } from "../api/IMacro";

@@ -9,7 +9,7 @@ import {
     inject,
     injectable,
     IContext
-} from "robotlegs";
+} from "@robotlegsjs/core";
 
 import { IAsyncCommand } from "../api/IAsyncCommand";
 

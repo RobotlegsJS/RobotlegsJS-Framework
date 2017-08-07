@@ -8,7 +8,7 @@
 import {
     IInjector,
     ICommand
-} from "robotlegs";
+} from "@robotlegsjs/core";
 
 import { ISubCommandPayload } from "./ISubCommandPayload";
 

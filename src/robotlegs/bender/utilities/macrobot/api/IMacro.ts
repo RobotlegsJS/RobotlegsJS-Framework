@@ -5,7 +5,7 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import { ICommand } from "robotlegs";
+import { ICommand } from "@robotlegsjs/core";
 
 import { ISubCommandMapper } from "../dsl/ISubCommandMapper";
 import { ISubCommandUnMapper } from "../dsl/ISubCommandUnMapper";

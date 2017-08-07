@@ -5,7 +5,7 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import { ICommand } from "robotlegs";
+import { ICommand } from "@robotlegsjs/core";
 
 export interface IAsyncCommand extends ICommand {
     registerCompleteCallback(callback: Function): void;
