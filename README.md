@@ -6,6 +6,6 @@ RobotlegsJS SignalCommandMap Extension
 [![Code Climate](https://codeclimate.com/github/RobotlegsJS/RobotlegsJS-SignalCommandMap/badges/gpa.svg)](https://codeclimate.com/github/RobotlegsJS/RobotlegsJS-SignalCommandMap)
 [![Test Coverage](https://codeclimate.com/github/RobotlegsJS/RobotlegsJS-SignalCommandMap/badges/coverage.svg)](https://codeclimate.com/github/RobotlegsJS/RobotlegsJS-SignalCommandMap/coverage)
 [![npm version](https://badge.fury.io/js/%40robotlegsjs%2Fsignalcommandmap.svg)](https://badge.fury.io/js/%40robotlegsjs%2Fsignalcommandmap)
-[![Greenkeeper badge](https://badges.greenkeeper.io/GoodgameStudios/RobotlegsJS-SignalCommandMap.svg)](https://greenkeeper.io/)
+[![Greenkeeper badge](https://badges.greenkeeper.io/RobotlegsJS/RobotlegsJS-SignalCommandMap.svg)](https://greenkeeper.io/)
 
 A port of Robotlegs Extensions SignalCommandMap to TypeScript.
