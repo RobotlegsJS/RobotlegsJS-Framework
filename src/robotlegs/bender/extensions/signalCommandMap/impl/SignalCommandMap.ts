@@ -15,7 +15,7 @@ import {
     ICommandMapper,
     ICommandUnmapper,
     CommandTriggerMap
-} from "robotlegs";
+} from "@robotlegsjs/core";
 
 import { ISignalCommandMap } from "../api/ISignalCommandMap";
 import { SignalCommandTrigger } from "./SignalCommandTrigger";

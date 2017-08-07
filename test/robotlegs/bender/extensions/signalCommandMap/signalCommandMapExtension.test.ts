@@ -9,7 +9,7 @@ import "../../../../entry.ts";
 
 import { assert } from "chai";
 
-import { Context } from "robotlegs";
+import { Context } from "@robotlegsjs/core";
 
 import { ISignalCommandMap } from "../../../../../src/robotlegs/bender/extensions/signalCommandMap/api/ISignalCommandMap";
 import { SignalCommandMap } from "../../../../../src/robotlegs/bender/extensions/signalCommandMap/impl/SignalCommandMap";

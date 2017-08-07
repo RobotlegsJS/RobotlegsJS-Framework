@@ -14,7 +14,7 @@ import {
     CommandMapper,
     CommandMappingList,
     CommandPayload
-} from "robotlegs";
+} from "@robotlegsjs/core";
 
 import { ISignal } from "signals.js";
 

@@ -18,7 +18,7 @@ import {
     IContext,
     IExtension,
     UID
-} from "robotlegs";
+} from "@robotlegsjs/core";
 
 import { ISignalCommandMap } from "./api/ISignalCommandMap";
 import { SignalCommandMap } from "./impl/SignalCommandMap";

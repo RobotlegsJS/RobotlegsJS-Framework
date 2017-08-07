@@ -7,7 +7,7 @@
 
 import { injectable, inject } from "inversify";
 
-import { ICommand } from "robotlegs";
+import { ICommand } from "@robotlegsjs/core";
 
 import { Data } from "./Data";
 import { TargetSignal } from "./TargetSignal";

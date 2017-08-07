@@ -8,7 +8,7 @@
 import {
     ICommandMapper,
     ICommandUnmapper
-} from "robotlegs";
+} from "@robotlegsjs/core";
 
 /**
  * The Signal Command Map allows you to bind Signals to Commands
