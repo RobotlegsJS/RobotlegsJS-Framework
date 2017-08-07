@@ -8,7 +8,4 @@ RobotlegsJS Macrobot Utility
 [![npm version](https://badge.fury.io/js/%40robotlegsjs%2Fmacrobot.svg)](https://badge.fury.io/js/%40robotlegsjs%2Fmacrobot)
 [![Greenkeeper badge](https://badges.greenkeeper.io/RobotlegsJS/RobotlegsJS-Macrobot.svg)](https://greenkeeper.io/)
 
-[![NPM](https://nodei.co/npm/robotlegs-macrobot.png?downloads=true&downloadRank=true)](https://nodei.co/npm/robotlegs-macrobot/)
-[![NPM](https://nodei.co/npm-dl/robotlegs-macrobot.png?months=9&height=3)](https://nodei.co/npm/robotlegs-macrobot/)
-
 A port of Robotlegs Utilities Macrobot to TypeScript.
