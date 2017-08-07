@@ -8,6 +8,10 @@
   dependencies:
     inversify "^4.3.0"
 
+"@robotlegsjs/signals@^0.0.3":
+  version "0.0.3"
+  resolved "https://registry.npmjs.org/@robotlegsjs/signals/-/signals-0.0.3.tgz#b886159ea048c564739d907466e40af6cdd93325"
+
 "@types/bluebird@^3.5.8":
   version "3.5.8"
   resolved "https://registry.npmjs.org/@types/bluebird/-/bluebird-3.5.8.tgz#242a83379f06c90f96acf6d1aeab3af6faebdb98"
@@ -4529,10 +4533,6 @@ sigmund@^1.0.1:
 signal-exit@^3.0.0:
   version "3.0.2"
   resolved "https://registry.npmjs.org/signal-exit/-/signal-exit-3.0.2.tgz#b5fdc08f1287ea1178628e415e25132b73646c6d"
-
-signals.js@^1.0.2:
-  version "1.0.2"
-  resolved "https://registry.npmjs.org/signals.js/-/signals.js-1.0.2.tgz#e6f80afcf6a96692e0cb1275a73bc6e4effcb1b9"
 
 sinon-chai@^2.12.0:
   version "2.12.0"

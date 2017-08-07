@@ -11,7 +11,7 @@ import {
     Signal,
     DeluxeSignal,
     PrioritySignal
-} from "signals.js";
+} from "@robotlegsjs/signals";
 
 import {
     injectable,

@@ -16,7 +16,7 @@ import {
     CommandPayload
 } from "@robotlegsjs/core";
 
-import { ISignal } from "signals.js";
+import { ISignal } from "@robotlegsjs/signals";
 
 /**
  * @private
