@@ -1,6 +1,6 @@
 {
-  "name": "robotlegs-signalcommandmap",
-  "version": "1.0.1",
+  "name": "@robotlegsjs/signalcommandmap",
+  "version": "0.0.1",
   "description": "TypeScript port of Robotlegs Extensions SignalCommandMap",
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
@@ -14,7 +14,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/GoodgameStudios/RobotlegsJS-SignalCommandMap.git"
+    "url": "git@github.com:RobotlegsJS/RobotlegsJS-SignalCommandMap.git"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org"
@@ -24,16 +24,16 @@
     "Robotlegs",
     "IoC"
   ],
-  "author": "Goodgame Studios",
+  "author": "RobotlegsJS",
   "contributors": [
     "Endel Dreyer <endel.dreyer@gmail.com>",
-    "Tiago Schenkel <tiago.tche@gmail.com>"
+    "Tiago Schenkel <tiago.schenkel@gmail.com>"
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/GoodgameStudios/RobotlegsJS-SignalCommandMap/issues"
+    "url": "https://github.com/RobotlegsJS/RobotlegsJS-SignalCommandMap/issues"
   },
-  "homepage": "https://github.com/GoodgameStudios/RobotlegsJS-SignalCommandMap#readme",
+  "homepage": "https://github.com/RobotlegsJS/RobotlegsJS-SignalCommandMap#readme",
   "dependencies": {
     "robotlegs": "^1.0.1",
     "signals.js": "^1.0.2"
