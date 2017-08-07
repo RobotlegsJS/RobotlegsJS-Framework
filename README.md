@@ -8,7 +8,4 @@ RobotlegsJS SignalCommandMap Extension
 [![npm version](https://badge.fury.io/js/%40robotlegsjs%2Fsignalcommandmap.svg)](https://badge.fury.io/js/%40robotlegsjs%2Fsignalcommandmap)
 [![Greenkeeper badge](https://badges.greenkeeper.io/GoodgameStudios/RobotlegsJS-SignalCommandMap.svg)](https://greenkeeper.io/)
 
-[![NPM](https://nodei.co/npm/robotlegs-signalcommandmap.png?downloads=true&downloadRank=true)](https://nodei.co/npm/robotlegs-signalcommandmap/)
-[![NPM](https://nodei.co/npm-dl/robotlegs-signalcommandmap.png?months=9&height=3)](https://nodei.co/npm/robotlegs-signalcommandmap/)
-
 A port of Robotlegs Extensions SignalCommandMap to TypeScript.
