@@ -18,6 +18,7 @@ tsfmt.json
 tslint.json
 typings.json
 webpack.config.js
+yarn.lock
 .codeclimate.yml
 .editorconfig
 .eslintignore
