@@ -1,6 +1,7 @@
 SignalsJS
 ===
 
+[![Gitter chat](https://badges.gitter.im/RobotlegsJS/RobotlegsJS.svg)](https://gitter.im/RobotlegsJS/RobotlegsJS)
 [![Build Status](https://travis-ci.org/RobotlegsJS/SignalsJS.svg?branch=master)](https://travis-ci.org/RobotlegsJS/SignalsJS)
 [![Code Climate](https://codeclimate.com/github/RobotlegsJS/SignalsJS/badges/gpa.svg)](https://codeclimate.com/github/RobotlegsJS/SignalsJS)
 [![Test Coverage](https://codeclimate.com/github/RobotlegsJS/SignalsJS/badges/coverage.svg)](https://codeclimate.com/github/RobotlegsJS/SignalsJS/coverage)
