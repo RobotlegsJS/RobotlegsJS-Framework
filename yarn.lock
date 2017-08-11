@@ -8,9 +8,9 @@
   dependencies:
     inversify "^4.3.0"
 
-"@robotlegsjs/signals@^0.0.3":
-  version "0.0.3"
-  resolved "https://registry.npmjs.org/@robotlegsjs/signals/-/signals-0.0.3.tgz#b886159ea048c564739d907466e40af6cdd93325"
+"@robotlegsjs/signals@^0.0.5":
+  version "0.0.5"
+  resolved "https://registry.npmjs.org/@robotlegsjs/signals/-/signals-0.0.5.tgz#14fa44bb5d289d9e2060b95e1e4cf10187f0ad02"
 
 "@types/bluebird@^3.5.8":
   version "3.5.8"
