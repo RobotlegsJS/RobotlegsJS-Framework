@@ -35,7 +35,7 @@
   },
   "homepage": "https://github.com/RobotlegsJS/RobotlegsJS-Macrobot#readme",
   "dependencies": {
-    "@robotlegsjs/core": "^0.0.1"
+    "@robotlegsjs/core": "^0.0.3"
   },
   "devDependencies": {
     "@types/bluebird": "^3.5.8",
