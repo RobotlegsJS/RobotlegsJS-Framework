@@ -1,0 +1,26 @@
+// ------------------------------------------------------------------------------
+//  Copyright (c) 2017 RobotlegsJS. All Rights Reserved.
+//
+//  NOTICE: You are permitted to use, modify, and distribute this file
+//  in accordance with the terms of the license agreement accompanying it.
+// ------------------------------------------------------------------------------
+
+import { injectable, inject } from "inversify";
+
+import { ICommand } from "@robotlegsjs/core";
+
+import { TargetSignal } from "./TargetSignal";
+
+@injectable()
+export class RelayCommand implements ICommand {
+
+    @inject(Object)
+    private _data: Object;
+
+    @inject(TargetSignal)
+    private _targetSignal: TargetSignal;
+
+    public execute(): void {
+        this._targetSignal.dispatch(this._data);
+    }
+}

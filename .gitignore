@@ -1,0 +1,14 @@
+.idea
+build
+lib
+node_modules
+typings
+coverage
+inversify.d.ts
+*.as
+*.iml
+src/**/*.js
+src/**/*.js.map
+test/**/*.js
+test/**/*.js.map
+npm-debug.log
