@@ -11,11 +11,13 @@ import { ICommand } from "@robotlegsjs/core";
 
 import { TargetSignal } from "./TargetSignal";
 
+import { Data } from "./Data";
+
 @injectable()
 export class RelayCommand implements ICommand {
 
-    @inject(Object)
-    private _data: Object;
+    @inject(Data)
+    private _data: Data;
 
     @inject(TargetSignal)
     private _targetSignal: TargetSignal;

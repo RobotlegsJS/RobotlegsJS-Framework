@@ -9,15 +9,17 @@ import { injectable, inject } from "inversify";
 
 import { ICommand } from "@robotlegsjs/core";
 
+import { Data } from "./Data";
+
 @injectable()
 export class TargetCommand implements ICommand {
 
     public static TARGET_VALUE: number;
 
-    @inject(Object)
-    private _data: Object;
+    @inject(Data)
+    private _data: Data;
 
     public execute(): void {
-        TargetCommand.TARGET_VALUE = (<any>this._data).value;
+        TargetCommand.TARGET_VALUE = this._data.value;
     }
 }
