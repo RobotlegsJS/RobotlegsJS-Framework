@@ -1,0 +1,61 @@
+{
+  "name": "typescript-minesweeper",
+  "version": "1.0.0",
+  "description": "OpenSource Game",
+  "main": "src/index.ts",
+  "scripts": {
+    "start": "webpack-dev-server --config ./webpack.dev.config.js",
+    "test": "karma start --single-run || true",
+    "karma": "karma start || true"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RonaldoSetzer/GAME-Minesweeper.git"
+  },
+  "keywords": [
+    "Game",
+    "Minesweeper"
+  ],
+  "author": "Ronaldo Santiago",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/RonaldoSetzer/GAME-Minesweeper/issues"
+  },
+  "homepage": "https://github.com/RonaldoSetzer/GAME-Minesweeper#readme",
+  "dependencies": {
+    "@robotlegsjs/core": "0.0.3",
+    "@robotlegsjs/pixi": "0.0.1",
+    "pixi.js": "^4.5.4",
+    "reflect-metadata": "^0.1.10",
+    "typescript": "^2.4.2"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.0.3",
+    "@types/mocha": "^2.2.41",
+    "@types/pixi.js": "^4.5.2",
+    "@types/sinon": "^2.3.3",
+    "chai": "^4.1.1",
+    "html-webpack-plugin": "^2.30.1",
+    "istanbul": "^0.4.5",
+    "istanbul-instrumenter-loader": "^3.0.0",
+    "jasmine-core": "^2.7.0",
+    "karma": "^1.7.0",
+    "karma-chai": "^0.1.0",
+    "karma-coverage-istanbul-reporter": "^1.3.0",
+    "karma-mocha": "^1.3.0",
+    "karma-mocha-reporter": "^2.2.3",
+    "karma-phantomjs-launcher": "^1.0.4",
+    "karma-remap-istanbul": "^0.6.0",
+    "karma-sinon": "^1.0.5",
+    "karma-sourcemap-loader": "^0.3.7",
+    "karma-sourcemap-writer": "^0.1.2",
+    "karma-webpack": "^2.0.4",
+    "mocha": "^3.5.0",
+    "sinon": "^3.2.0",
+    "ts-loader": "^2.3.2",
+    "ts-node": "^3.3.0",
+    "tslint": "^5.6.0",
+    "webpack": "^3.5.3",
+    "webpack-dev-server": "^2.7.1"
+  }
+}
