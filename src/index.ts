@@ -2,7 +2,13 @@
 import "reflect-metadata";
 import PIXI = require("pixi.js");
 
-import { HelloWorld } from "./HelloWorld";
+import { AtlasKeys } from "./minesweeper/utils/AtlasKeys";
+import { GameConfig } from "./minesweeper/configs/GameConfig";
+import { PalidorConfig } from "./minesweeper/configs/PalidorConfig";
+import { ViewsConfig } from "./minesweeper/configs/ViewsConfig";
+
+import { PixiContainer } from "./robotlegs/bender/extensions/palidorFlowManager/impl/PixiContainer";
+import { PalidorFlowManagerExtension } from "./robotlegs/bender/extensions/palidorFlowManager/PalidorFlowManagerExtension";
 
 import { Container, Graphics, Text } from "pixi.js";
 import { Context, MVCSBundle, LogLevel } from "@robotlegsjs/core";
@@ -20,43 +26,27 @@ class Main {
         // this.context.logLevel = LogLevel.DEBUG;
         this.context.install(MVCSBundle, PixiBundle)
             .configure(new ContextView((<any>this.renderer).plugins.interaction))
+            .configure(ViewsConfig, GameConfig, PalidorConfig)
+            .install(PalidorFlowManagerExtension)
             .initialize();
-
-        this.stage.addChild(this.getMainContainer());
+        let loader = PIXI.loader
+            .add(AtlasKeys.ATLAS_PNG)
+            .add(AtlasKeys.ATLAS_XML)
+            .add(AtlasKeys.FONT_FNT)
+            .load(this.onLoad);
+        this.stage.addChild(new PixiContainer());
 
         document.body.appendChild(this.renderer.view);
+    }
+
+    public onLoad(): void {
+        AtlasKeys.update(PIXI.utils.TextureCache);
     }
 
     public render = () => {
         this.renderer.render(this.stage);
         window.requestAnimationFrame(this.render);
         window.addEventListener("contextmenu", event => event.preventDefault());
-    }
-
-    private getMainContainer(): Container {
-        let background: Graphics = new Graphics();
-        background.beginFill(0x204d63);
-        background.drawRect(0, 0, 400, 600);
-        background.endFill();
-
-        let container: Container = new Container();
-        container.addChild(background);
-
-        let helloWorld: HelloWorld = new HelloWorld();
-
-        let style = new PIXI.TextStyle({
-            fill: 0xb5d6e6,
-            fontFamily: "Arial",
-            fontSize: 28,
-            fontWeight: "bold"
-        });
-        let hello: Text = new Text(helloWorld.text, style);
-        hello.anchor.set(0.5);
-        hello.x = 200;
-        hello.y = 300;
-        container.addChild(hello);
-
-        return container;
     }
 }
 

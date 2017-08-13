@@ -4,13 +4,23 @@ import { GridData } from "../models/GridData";
 import { LevelModel } from "./../models/LevelModel";
 
 export class LevelUtils {
-    public static generateBeginnerLevel(): LevelModel {
-        let level = new LevelModel();
-        level.setNumMines(10);
+    public static generateBeginnerLevel(level: LevelModel): void {
+        level.numMines = 10;
+        level.numFlags = 10;
         level.setGrid(new GridData(9, 9));
         this.generateMines(level, level.numMines);
-
-        return level;
+    }
+    public static generateNormalLevel(level: LevelModel): void {
+        level.numMines = 13;
+        level.numFlags = 13;
+        level.setGrid(new GridData(12, 12));
+        this.generateMines(level, level.numMines);
+    }
+    public static generateHardLevel(level: LevelModel): void {
+        level.numMines = 16;
+        level.numFlags = 16;
+        level.setGrid(new GridData(13, 16));
+        this.generateMines(level, level.numMines);
     }
 
     public static generateMines(level: LevelModel, numMines: number): void {

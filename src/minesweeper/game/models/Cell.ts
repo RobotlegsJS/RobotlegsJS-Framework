@@ -1,4 +1,5 @@
 export class Cell {
+    public isFlag: boolean;
     private _value: number;
     private _isMine: boolean;
 
@@ -20,6 +21,7 @@ export class Cell {
     constructor(col: number, row: number) {
         this._value = 0;
         this._isMine = false;
+        this.isFlag = false;
 
         this._col = col;
         this._row = row;

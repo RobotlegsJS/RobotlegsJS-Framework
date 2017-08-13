@@ -1,11 +1,14 @@
 import { GridData } from "./GridData";
 import { Cell } from "./Cell";
 
+import { injectable } from "@robotlegsjs/core";
+
+@injectable()
 export class LevelModel {
-    private _numMines: number;
-    public get numMines(): number {
-        return this._numMines;
-    }
+
+    public levelId: string;
+    public numFlags: number;
+    public numMines: number;
 
     private _grid: GridData;
     public get grid(): GridData {
@@ -17,21 +20,24 @@ export class LevelModel {
         return this._mines;
     }
 
-    private _open: Array<Cell>;
-    public get open(): Array<Cell> {
-        return this._open;
+    private _update: Array<Cell>;
+    public get update(): Array<Cell> {
+        return this._update;
     }
 
     constructor() {
         this._mines = new Array<Cell>();
-        this._open = new Array<Cell>();
-    }
-
-    public setNumMines(value: number) {
-        this._numMines = value;
+        this._update = new Array<Cell>();
     }
 
     public setGrid(grid: GridData) {
         this._grid = grid;
+    }
+
+    public reset(): void {
+        this._mines = new Array<Cell>();
+        this._update = new Array<Cell>();
+        this.numFlags = 0;
+        this.numMines = 0;
     }
 }
