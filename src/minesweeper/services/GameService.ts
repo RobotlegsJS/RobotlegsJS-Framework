@@ -27,6 +27,10 @@ export class GameService {
         this.dispatchEventWith(GameEvent.GAME_OVER_COMMAND);
     }
 
+    public exportLevelDataCommand(): void {
+        this.dispatchEventWith(GameEvent.EXPORT_LEVEL_DATA_COMMAND);
+    }
+
     // Game
     public start(): void {
         this.gameStatus.start();

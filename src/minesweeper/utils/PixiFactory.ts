@@ -28,7 +28,7 @@ export class PixiFactory {
         title.y = 50;
         title.pivot.x = title.width * .5;
         title.pivot.y = title.height * .5;
-        title.tint = Colors.STATIC_TEXT;
+        title.tint = Colors.DYNAMIC_TEXT;
         return title;
     }
 
@@ -73,8 +73,14 @@ export class PixiFactory {
         return background;
     }
 
-    public static getShadowBackground(alpha = .8): Graphics {
+    public static getShadowBackground(alpha = .6): Graphics {
         let bg: Graphics = PixiFactory.getColorBackground(0x000000);
+        bg.alpha = alpha;
+        return bg;
+    }
+
+    public static getShadowHeader(alpha = .8): Graphics {
+        let bg: Graphics = PixiFactory.getColorBox(ViewPortSize.MAX_WIDTH, 100);
         bg.alpha = alpha;
         return bg;
     }
@@ -87,6 +93,7 @@ export class PixiFactory {
         background.pivot.y = background.height * .5;
         return background;
     }
+
     public static getTileText(text: string, color: number): Container {
         let style = {
             align: "center",

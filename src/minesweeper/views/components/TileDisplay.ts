@@ -56,25 +56,17 @@ export class TileDisplay extends Container {
     }
 
     private createMine(): void {
-        this._container.addChild(PixiFactory.getTileBackground(0xFF7777));
-        let mine = new Graphics();
-        mine.beginFill(0x000000);
-        mine.drawCircle(0, 0, MagicValues.TILE_WIDTH * .5);
+        let mine = PixiFactory.getImage("icon_mine.png");
         mine.pivot.x = mine.width * .5;
         mine.pivot.y = mine.height * .5;
-        mine.x = this.width * .5;
-        mine.y = this.height * .5;
         this._container.addChild(mine);
     }
 
     private createFlag(): void {
         this._container.addChild(PixiFactory.getTileBackground(0xFF7777));
-        let flag = new Graphics();
-        flag.beginFill(0x000000);
-        flag.drawRect(0, 0, MagicValues.TILE_WIDTH * .3, MagicValues.TILE_HEIGHT * .8);
+        let flag = PixiFactory.getImage("icon_flag.png");
         flag.pivot.x = flag.width * .5;
         flag.pivot.y = flag.height * .5;
-
         this._flagContainer.addChild(flag);
     }
 

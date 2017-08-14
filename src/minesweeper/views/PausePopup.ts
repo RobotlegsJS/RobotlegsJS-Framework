@@ -10,6 +10,11 @@ import { Container, Text } from "pixi.js";
 
 export class PausePopup extends Container {
 
+    private _downloadButton: CustomButton;
+    public get downloadButton(): CustomButton {
+        return this._downloadButton;
+    }
+
     private _homeButton: CustomButton;
     public get homeButton(): CustomButton {
         return this._homeButton;
@@ -37,6 +42,7 @@ export class PausePopup extends Container {
 
     private setupBackgrounds(): void {
         this.addChild(PixiFactory.getShadowBackground());
+        this.addChild(PixiFactory.getShadowHeader());
     }
 
     private setupButtons(): void {
@@ -54,6 +60,11 @@ export class PausePopup extends Container {
         this._retryButton.x = ViewPortSize.HALF_WIDTH - this._retryButton.width * .5 - 4;
         this._retryButton.y = ViewPortSize.MAX_HEIGHT * .8;
         this.addChild(this._retryButton);
+
+        this._downloadButton = PixiFactory.getTextButton("EXPORT\nLEVEL");
+        this._downloadButton.x = ViewPortSize.HALF_WIDTH + 120;
+        this._downloadButton.y = ViewPortSize.MAX_HEIGHT * .8;
+        this.addChild(this._downloadButton);
     }
 
     private setupText(): void {

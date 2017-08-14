@@ -1,3 +1,5 @@
+import { LevelCustomOptionsPopupMediator } from "./../mediators/LevelCustomOptionsPopupMediator";
+import { LevelCustomOptionsPopup } from "../views/LevelCustomOptionsPopup";
 import { TileDisplayMediator } from "../mediators/TileDisplayMediator";
 import { TileDisplay } from "./../views/components/TileDisplay";
 
@@ -47,6 +49,7 @@ export class ViewsConfig implements IConfig {
         this.mediatorMap.map(GameView).toMediator(GameViewMediator);
         this.mediatorMap.map(HomeView).toMediator(HomeViewMediator);
         this.mediatorMap.map(LevelSelectView).toMediator(LevelSelectViewMediator);
+        this.mediatorMap.map(LevelCustomOptionsPopup).toMediator(LevelCustomOptionsPopupMediator);
 
         this.mediatorMap.map(GridFieldComponent).toMediator(GridFieldComponentMediator);
         this.mediatorMap.map(HUDGameComponent).toMediator(HUDGameComponentMediator);

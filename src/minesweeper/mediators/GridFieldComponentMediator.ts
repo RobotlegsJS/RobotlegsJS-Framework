@@ -32,6 +32,7 @@ export class GridFieldComponentMediator extends Mediator<GridFieldComponent> {
         this.generateGrid();
         this.eventMap.mapListener(this.eventDispatcher, GameEvent.UPDATE_GRID, this.onUpdate, this);
         this.eventMap.mapListener(this.eventDispatcher, GameEvent.CLEAR_GRID, this.onClear, this);
+        this.eventMap.mapListener(this.eventDispatcher, GameEvent.GAME_OVER_COMMAND, this.onGameOver, this);
     }
 
     public onClear(e: any): void {
@@ -41,6 +42,14 @@ export class GridFieldComponentMediator extends Mediator<GridFieldComponent> {
     public onUpdate(e: any): void {
         for (let i = 0; i < this.levelModel.update.length; i++) {
             let cell = this.levelModel.update[i];
+            let display = this._displays.get(cell);
+            display.show();
+        }
+    }
+
+    public onGameOver(e: any): void {
+        for (let i = 0; i < this.levelModel.mines.length; i++) {
+            let cell = this.levelModel.mines[i];
             let display = this._displays.get(cell);
             display.show();
         }

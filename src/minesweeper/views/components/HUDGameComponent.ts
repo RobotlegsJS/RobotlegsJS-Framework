@@ -12,10 +12,13 @@ export class HUDGameComponent extends Container {
 
     private _levelTextField: any;
     private _numFlagsTextField: any;
+    private _clockTextField: any;
+
     private _pauseButton: CustomButton;
     public get pauseButton(): CustomButton {
         return this._pauseButton;
     }
+
     constructor() {
         super();
 
@@ -26,6 +29,7 @@ export class HUDGameComponent extends Container {
     public updateValues(model: LevelModel): void {
         this._levelTextField.text = model.levelId;
         this._numFlagsTextField.text = model.numFlags;
+        this._clockTextField.text = MagicValues.convertTime(model.clock);
     }
 
     private createTextFields(): void {
@@ -34,10 +38,10 @@ export class HUDGameComponent extends Container {
         this._levelTextField.y = 10;
         this.addChild(this._levelTextField);
 
-        let time: Container = PixiFactory.getText("0:30", 42);
-        time.x = 10;
-        time.y = 50;
-        this.addChild(time);
+        this._clockTextField = PixiFactory.getText("0:00", 42);
+        this._clockTextField.x = 10;
+        this._clockTextField.y = 50;
+        this.addChild(this._clockTextField);
 
         this._numFlagsTextField = PixiFactory.getText("10", 42);
         this._numFlagsTextField.x = 245;

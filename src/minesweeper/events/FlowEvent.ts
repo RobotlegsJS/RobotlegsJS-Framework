@@ -11,6 +11,7 @@ export class FlowEvent extends Event {
     public static SHOW_PAUSE_POPUP = "showPausePopup";
     public static SHOW_STARTING_POPUP = "showStartingPopup";
     public static SHOW_YOU_WIN_POPUP = "showYouWinPopup";
+    public static SHOW_LEVEL_CUSTOM_OPTIONS_POPUP = "showLevelCustomOptionsPopup";
 
     public static CLOSE_POPUP = "closePopup";
 

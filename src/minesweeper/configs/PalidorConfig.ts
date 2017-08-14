@@ -1,3 +1,4 @@
+import { LevelCustomOptionsPopup } from "./../views/LevelCustomOptionsPopup";
 import { FlowEvent } from "./../events/FlowEvent";
 import { FlowService } from "./../services/FlowService";
 
@@ -38,9 +39,9 @@ export class PalidorConfig implements IConfig {
         this.flowManager.map(FlowEvent.SHOW_INTRO_VIEW).toView(IntroView);
         this.flowManager.map(FlowEvent.SHOW_LEVEL_SELECT_VIEW).toView(LevelSelectView);
 
+        this.flowManager.map(FlowEvent.SHOW_LEVEL_CUSTOM_OPTIONS_POPUP).toFloatingView(LevelCustomOptionsPopup);
         this.flowManager.map(FlowEvent.SHOW_GAME_OVER_POPUP).toFloatingView(GameOverPopup);
         this.flowManager.map(FlowEvent.SHOW_PAUSE_POPUP).toFloatingView(PausePopup);
-
         this.flowManager.map(FlowEvent.SHOW_STARTING_POPUP).toFloatingView(StartingPopup);
         this.flowManager.map(FlowEvent.SHOW_YOU_WIN_POPUP).toFloatingView(YouWinPopup);
 

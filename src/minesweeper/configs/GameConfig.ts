@@ -1,3 +1,5 @@
+import { ExportLevelDataCommand } from "./../game/commands/ExportLevelDataCommand";
+import { CustomLevelModel } from "../game/models/CustomLevelModel";
 import { GameEvent } from "./../events/GameEvent";
 import { CreateLevelCommand } from "./../game/commands/CreateLevelCommand";
 import { GameOverCommand } from "./../game/commands/GameOverCommand";
@@ -31,6 +33,7 @@ export class GameConfig implements IConfig {
         this.commandMap.map(GameEvent.CREATE_LEVEL_COMMAND).toCommand(CreateLevelCommand);
         this.commandMap.map(GameEvent.GAME_OVER_COMMAND).toCommand(GameOverCommand);
         this.commandMap.map(GameEvent.RETRY_GAME_COMMAND).toCommand(RetryGameCommand);
+        this.commandMap.map(GameEvent.EXPORT_LEVEL_DATA_COMMAND).toCommand(ExportLevelDataCommand);
     }
 
     private mapServices(): void {
@@ -44,5 +47,6 @@ export class GameConfig implements IConfig {
     private mapModels(): void {
         this.context.injector.bind(GameStatus).to(GameStatus).inSingletonScope();
         this.context.injector.bind(LevelModel).to(LevelModel).inSingletonScope();
+        this.context.injector.bind(CustomLevelModel).to(CustomLevelModel).inSingletonScope();
     }
 }

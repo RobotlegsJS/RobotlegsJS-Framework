@@ -8,21 +8,13 @@
 	"spriteSourceSize": {"x":0,"y":0,"w":75,"h":75},
 	"sourceSize": {"w":75,"h":75}
 },
-"button_background_small.png":
+"icon_flag.png":
 {
-	"frame": {"x":369,"y":45,"w":40,"h":40},
+	"frame": {"x":117,"y":97,"w":19,"h":23},
 	"rotated": false,
 	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":40,"h":40},
-	"sourceSize": {"w":40,"h":40}
-},
-"grid_background_item.png":
-{
-	"frame": {"x":322,"y":45,"w":45,"h":45},
-	"rotated": false,
-	"trimmed": false,
-	"spriteSourceSize": {"x":0,"y":0,"w":45,"h":45},
-	"sourceSize": {"w":45,"h":45}
+	"spriteSourceSize": {"x":0,"y":0,"w":19,"h":23},
+	"sourceSize": {"w":19,"h":23}
 },
 "icon_home.png":
 {
@@ -31,6 +23,14 @@
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":55,"h":48},
 	"sourceSize": {"w":55,"h":48}
+},
+"icon_mine.png":
+{
+	"frame": {"x":322,"y":45,"w":25,"h":26},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":25,"h":26},
+	"sourceSize": {"w":25,"h":26}
 },
 "icon_pause.png":
 {
@@ -77,8 +77,8 @@
 	"version": "1.0",
 	"image": "minesweeper-pixijs.png",
 	"format": "RGBA8888",
-	"size": {"w":410,"h":121},
+	"size": {"w":378,"h":121},
 	"scale": "1",
-	"smartupdate": "$TexturePacker:SmartUpdate:1fd8c4e5ea40026729488e19bb03afb1:c33413ea20f68eb561d656a246ccb172:7b688720ff4f0e9a75b2d4893cd226eb$"
+	"smartupdate": "$TexturePacker:SmartUpdate:a9416862d9ba5cbf2b71ecdf15b0f458:b636306e51e2821426f794d7663779cd:7b688720ff4f0e9a75b2d4893cd226eb$"
 }
 }

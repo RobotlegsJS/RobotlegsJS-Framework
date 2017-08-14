@@ -30,8 +30,22 @@ export class YouWinPopup extends Container {
         this.setupText();
     }
 
+    public showInfo(time: number, numClick: number): void {
+        let clock = Texts.GAME_TIME + MagicValues.convertTime(time);
+        let maxRowsText = PixiFactory.getText(clock, 12);
+        maxRowsText.x = 20;
+        maxRowsText.y = 220;
+        this.addChild(maxRowsText);
+
+        let maxMinesText = PixiFactory.getText(Texts.NUM_CLICKS + numClick, 12);
+        maxMinesText.x = 20;
+        maxMinesText.y = 290;
+        this.addChild(maxMinesText);
+    }
+
     private setupBackgrounds(): void {
-        this.addChild(PixiFactory.getShadowBackground());
+        this.addChild(PixiFactory.getShadowBackground(.8));
+        this.addChild(PixiFactory.getShadowHeader());
     }
 
     private setupButtons(): void {
@@ -48,5 +62,20 @@ export class YouWinPopup extends Container {
 
     private setupText(): void {
         this.addChild(PixiFactory.getTitle(Texts.YOU_WIN));
+        let msg = PixiFactory.getText(Texts.WIN_MSG, 12);
+        msg.x = 20;
+        msg.y = 150;
+        this.addChild(msg);
+
+        let maxRowsText = PixiFactory.getText(Texts.GAME_TIME, 12);
+        maxRowsText.x = 20;
+        maxRowsText.y = 220;
+        this.addChild(maxRowsText);
+
+        let maxMinesText = PixiFactory.getText(Texts.NUM_CLICKS, 12);
+        maxMinesText.x = 20;
+        maxMinesText.y = 290;
+        this.addChild(maxMinesText);
     }
+
 }

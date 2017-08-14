@@ -1,3 +1,4 @@
+import { LevelModel } from "./../game/models/LevelModel";
 import { FlowService } from "./../services/FlowService";
 import { GameService } from "./../services/GameService";
 import { YouWinPopup } from "./../views/YouWinPopup";
@@ -14,7 +15,11 @@ export class YouWinPopupMediator extends Mediator<YouWinPopup> {
     @inject(GameService)
     public gameService: GameService;
 
+    @inject(LevelModel)
+    public levelModel: LevelModel;
+
     public initialize(): void {
+        this.view.showInfo(this.levelModel.clock, this.levelModel.numClicks);
         this.eventMap.mapListener(this.view.homeButton, "click", this.homeButton_onClick, this);
         this.eventMap.mapListener(this.view.retryButton, "click", this.retryButton_onClick, this);
     }

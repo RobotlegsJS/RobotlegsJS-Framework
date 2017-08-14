@@ -9,6 +9,8 @@ export class LevelModel {
     public levelId: string;
     public numFlags: number;
     public numMines: number;
+    public numClicks: number;
+    public clock: number;
 
     private _grid: GridData;
     public get grid(): GridData {
@@ -28,6 +30,8 @@ export class LevelModel {
     constructor() {
         this._mines = new Array<Cell>();
         this._update = new Array<Cell>();
+        this.clock = 0;
+        this.numClicks = 0;
     }
 
     public setGrid(grid: GridData) {
@@ -39,5 +43,7 @@ export class LevelModel {
         this._update = new Array<Cell>();
         this.numFlags = 0;
         this.numMines = 0;
+        this.clock = 0;
+        this.numClicks = 0;
     }
 }

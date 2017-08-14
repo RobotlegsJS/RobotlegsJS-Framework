@@ -29,6 +29,8 @@ export class HUDGameComponentMediator extends Mediator<HUDGameComponent> {
         this.view.updateValues(this.levelModel);
         this.eventMap.mapListener(this.view.pauseButton, "click", this.pauseButton_onTriggeredHandler, this);
         this.eventMap.mapListener(this.eventDispatcher, GameEvent.UPDATE_HUD_DATA, this.game_onUpdateHandler, this);
+        this.eventMap.mapListener(this.eventDispatcher, GameEvent.RESUME, this.game_onResumeHandler, this);
+        this.eventMap.mapListener(this.eventDispatcher, GameEvent.PAUSE, this.game_onPauseHandler, this);
     }
 
     public destroy(): void {
@@ -41,8 +43,18 @@ export class HUDGameComponentMediator extends Mediator<HUDGameComponent> {
         this.tick(this);
     }
 
+    private game_onPauseHandler(e: any): void {
+        this._paused = true;
+    }
+
     private tick(obThis: any = this): void {
-/*  */
+        if (obThis._paused === true) {
+            return;
+        }
+        obThis.levelModel.clock++;
+        obThis.view.updateValues(obThis.levelModel);
+
+        setTimeout(obThis.tick, 1000, obThis);
     }
 
     private game_onUpdateHandler(e: any): void {

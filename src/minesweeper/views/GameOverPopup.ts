@@ -31,7 +31,8 @@ export class GameOverPopup extends Container {
     }
 
     private setupBackgrounds(): void {
-        this.addChild(PixiFactory.getShadowBackground());
+        this.addChild(PixiFactory.getShadowBackground(.6));
+        this.addChild(PixiFactory.getShadowHeader());
     }
 
     private setupButtons(): void {

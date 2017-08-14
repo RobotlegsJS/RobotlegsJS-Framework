@@ -22,6 +22,10 @@ export class FlowService {
     }
 
     // Floating Views
+    public showLevelCustomOptionsPopup(): void {
+        this.dispatchEventWith(FlowEvent.SHOW_LEVEL_CUSTOM_OPTIONS_POPUP);
+    }
+
     public showPausePopup(): void {
         this.dispatchEventWith(FlowEvent.SHOW_PAUSE_POPUP);
     }

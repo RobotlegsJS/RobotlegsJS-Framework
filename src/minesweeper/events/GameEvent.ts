@@ -5,6 +5,7 @@ export class GameEvent extends Event {
     public static CREATE_LEVEL_COMMAND = "createLevelCommand";
     public static GAME_OVER_COMMAND = "gameOverCommand";
     public static RETRY_GAME_COMMAND = "retryGameCommand";
+    public static EXPORT_LEVEL_DATA_COMMAND = "exportLevelDataCommand";
 
     public static RESUME = "resume";
     public static PAUSE = "pause";

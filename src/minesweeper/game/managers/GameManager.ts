@@ -1,3 +1,4 @@
+import { CustomLevelModel } from "../models/CustomLevelModel";
 import { GridUtils } from "../utils/GridUtils";
 import { Texts } from "../../utils/Texts";
 import { Cell } from "../models/Cell";
@@ -13,6 +14,9 @@ export class GameManager {
     @inject(LevelModel)
     public level: LevelModel;
 
+    @inject(CustomLevelModel)
+    public customLevel: CustomLevelModel;
+
     @inject(GameService)
     public gameService: GameService;
 
@@ -23,6 +27,8 @@ export class GameManager {
             LevelUtils.generateNormalLevel(this.level);
         } else if (levelId === Texts.HARD) {
             LevelUtils.generateHardLevel(this.level);
+        } else if (levelId === Texts.CUSTOM) {
+            LevelUtils.generateCustomLevel(this.level, this.customLevel);
         }
     }
 

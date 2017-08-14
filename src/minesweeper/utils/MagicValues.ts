@@ -19,6 +19,6 @@ export class MagicValues {
     public static convertTime(secs: number): string {
         let m = Math.floor((secs % 3600) / 60);
         let s = Math.max(Math.floor((secs % 3600) % 60), 0);
-        return (m.toString() + ": " + (s < 10 ? "0" + s.toString() : s.toString()));
+        return (m.toString() + ":" + (s < 10 ? "0" + s.toString() : s.toString()));
     }
 }
