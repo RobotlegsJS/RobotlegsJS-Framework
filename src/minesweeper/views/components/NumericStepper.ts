@@ -1,6 +1,7 @@
 import { CustomButton } from "./CustomButton";
 import { MagicValues } from "../../utils/MagicValues";
 import { PixiFactory } from "../../utils/PixiFactory";
+
 import { Container } from "pixi.js";
 
 export class NumericStepper extends Container {

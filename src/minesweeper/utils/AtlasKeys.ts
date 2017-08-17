@@ -7,20 +7,17 @@ export class AtlasKeys {
     public static FONT_FNT = "./assets/fonts/SimpleSmallPixel7.fnt";
 
     /* BUTTONS */
-    public static BUTTON_SMALL = "button_small";
-    public static BUTTON_SMALL_DANGER = "button_small_danger";
-    public static BUTTON_MEDIUM = "button_medium";
+    public static BUTTON = "button_background.png";
 
     /* ICONS */
+    public static ICON_MINE = "icon_mine.png";
+    public static ICON_FLAG = "icon_flag.png";
+    public static ICON_FLAG_LARGE = "icon_flag_large.png";
+
     public static ICON_PAUSE = "icon_pause.png";
     public static ICON_RESUME = "icon_resume.png";
-    public static ICON_DELETE = "icon_delete.png";
     public static ICON_RETRY = "icon_retry.png";
-    public static ICON_CONFIG = "icon_config.png";
     public static ICON_HOME = "icon_home.png";
-
-    public static ICON_CONFIRM = "icon_confirm.png";
-    public static ICON_CLOSE = "icon_close.png";
 
     /* Others */
     public static LOGO_MINESWEEPER = "logo_minesweeper.png";

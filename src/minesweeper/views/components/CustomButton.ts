@@ -1,6 +1,7 @@
-import { PixiFactory } from "./../../utils/PixiFactory";
-import { Colors } from "./../../utils/Colors";
 import { AtlasKeys } from "./../../utils/AtlasKeys";
+import { Colors } from "./../../utils/Colors";
+import { PixiFactory } from "./../../utils/PixiFactory";
+
 import { Sprite, Texture, Container } from "pixi.js";
 
 export class CustomButton extends Sprite {
@@ -13,25 +14,25 @@ export class CustomButton extends Sprite {
     private _isOver: boolean;
 
     private _ico: Sprite;
-    private _textField: Container;
-    private _text: string;
+    private _labelText: Container;
+    private _textValue: string;
 
     public get text(): string {
-        return this._text;
+        return this._textValue;
     }
 
     constructor() {
-        super(AtlasKeys.getTexture("button_background_large.png"));
+        super(AtlasKeys.getTexture(AtlasKeys.BUTTON));
 
-        let downStateTexture: Texture = AtlasKeys.getTexture("button_background_large.png");
-        let upStateTexture: Texture = AtlasKeys.getTexture("button_background_large.png");
+        let downStateTexture: Texture = AtlasKeys.getTexture(AtlasKeys.BUTTON);
+        let upStateTexture: Texture = AtlasKeys.getTexture(AtlasKeys.BUTTON);
 
         this._downState = downStateTexture;
         this._overState = downStateTexture;
         this._upState = upStateTexture;
 
         this.setInitialValues();
-        this.setupInteractions();
+        this.createInteractions();
     }
 
     public setIco(name: string): void {
@@ -41,18 +42,18 @@ export class CustomButton extends Sprite {
 
         this._ico = new Sprite(AtlasKeys.getTexture(name));
         this._ico.anchor.set(.5);
-        this._ico.tint = Colors.BACKGROUND_DARK;
+        this._ico.tint = Colors.BUTTON_ICON;
         this.addChild(this._ico);
     }
 
     public setText(text: string): void {
-        this._text = text;
-        if (this._textField) {
-            this.removeChild(this._textField);
+        this._textValue = text;
+        if (this._labelText) {
+            this.removeChild(this._labelText);
         }
 
-        this._textField = PixiFactory.getButtonText(text);
-        this.addChild(this._textField);
+        this._labelText = PixiFactory.getButtonLabel(text);
+        this.addChild(this._labelText);
     }
 
     private setInitialValues(): void {
@@ -61,7 +62,7 @@ export class CustomButton extends Sprite {
         this.buttonMode = true;
     }
 
-    private setupInteractions(): void {
+    private createInteractions(): void {
         this.on("pointerup", this.onButtonUp);
         this.on("pointerupoutside", this.onButtonUp);
         this.on("pointerdown", this.onButtonDown);

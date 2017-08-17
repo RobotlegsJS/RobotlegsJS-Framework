@@ -1,3 +1,4 @@
+import { Texts } from "../../utils/Texts";
 import { CustomLevelModel } from "./../models/CustomLevelModel";
 import { GridUtils } from "./GridUtils";
 import { Cell } from "./../models/Cell";
@@ -5,7 +6,9 @@ import { GridData } from "../models/GridData";
 import { LevelModel } from "./../models/LevelModel";
 
 export class LevelUtils {
+
     public static generateBeginnerLevel(level: LevelModel): void {
+        level.levelId = Texts.EASY;
         level.numMines = 10;
         level.numFlags = 10;
         level.setGrid(new GridData(9, 9));
@@ -13,20 +16,23 @@ export class LevelUtils {
     }
 
     public static generateNormalLevel(level: LevelModel): void {
-        level.numMines = 13;
-        level.numFlags = 13;
+        level.levelId = Texts.NORMAL;
+        level.numMines = 15;
+        level.numFlags = 15;
         level.setGrid(new GridData(12, 12));
         this.generateMines(level, level.numMines);
     }
 
     public static generateHardLevel(level: LevelModel): void {
-        level.numMines = 16;
-        level.numFlags = 16;
+        level.levelId = Texts.HARD;
+        level.numMines = 18;
+        level.numFlags = 18;
         level.setGrid(new GridData(13, 16));
         this.generateMines(level, level.numMines);
     }
 
     public static generateCustomLevel(level: LevelModel, customLevel: CustomLevelModel): void {
+        level.levelId = Texts.CUSTOM;
         level.numMines = customLevel.numMines;
         level.numFlags = customLevel.numMines;
         level.setGrid(new GridData(customLevel.maxCols, customLevel.maxRows));

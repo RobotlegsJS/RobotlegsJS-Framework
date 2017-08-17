@@ -21,31 +21,40 @@ export class GameManager {
     public gameService: GameService;
 
     public generateGrid(levelId) {
-        if (levelId === Texts.EASY) {
-            LevelUtils.generateBeginnerLevel(this.level);
-        } else if (levelId === Texts.NORMAL) {
-            LevelUtils.generateNormalLevel(this.level);
+        if (levelId === Texts.CUSTOM) {
+            LevelUtils.generateCustomLevel(this.level, this.customLevel);
         } else if (levelId === Texts.HARD) {
             LevelUtils.generateHardLevel(this.level);
-        } else if (levelId === Texts.CUSTOM) {
-            LevelUtils.generateCustomLevel(this.level, this.customLevel);
+        } else if (levelId === Texts.NORMAL) {
+            LevelUtils.generateNormalLevel(this.level);
+        } else {
+            LevelUtils.generateBeginnerLevel(this.level);
         }
     }
 
     public reveal(cell: Cell): void {
-        if (cell.isMine()) {
+        if (cell.isMine() === true) {
             this.level.update.push(cell);
-            this.gameService.updateGridField();
-            this.gameService.gameOver();
-            this.gameService.gameOverCommand();
+            this.invokeGameOver();
         } else {
+            this.level.numClicks += 1;
             this.floodFill(cell);
             this.gameService.updateGridField();
 
-            if (this.isFinished()) {
-                this.gameService.gameOverCommand();
+            if (this.isFinished() === true) {
+                this.invokeYouWin();
             }
         }
+    }
+
+    public invokeGameOver(): void {
+        this.gameService.updateGridField();
+        this.gameService.gameOver();
+        this.gameService.gameOverCommand();
+    }
+
+    public invokeYouWin(): void {
+        this.gameService.gameOverCommand();
     }
 
     public isFinished(): boolean {
@@ -57,10 +66,10 @@ export class GameManager {
     public floodFill(cell: Cell): void {
         if (this.level.update.indexOf(cell) === -1) {
             this.level.update.push(cell);
-            if (cell.value === 0 && !cell.isMine()) {
+            if (cell.value === 0 && cell.isMine() === false) {
                 let neighbour: Array<Cell> = GridUtils.getNeighbors(this.level.grid, cell);
                 for (let i = 0; i < neighbour.length; i++) {
-                    if (!neighbour[i].isMine()) {
+                    if (neighbour[i].isMine() === false) {
                         this.floodFill(neighbour[i]);
                     }
                 }
@@ -70,10 +79,10 @@ export class GameManager {
 
     public flag(cell: Cell): void {
         if (!cell.isFlag) {
-            cell.isFlag = true;
             this.level.numFlags -= 1;
-            this.gameService.updateGridField();
-            this.gameService.updateHUDData();
         }
+        cell.isFlag = true;
+        this.gameService.updateGridField();
+        this.gameService.updateHUDData();
     }
 }

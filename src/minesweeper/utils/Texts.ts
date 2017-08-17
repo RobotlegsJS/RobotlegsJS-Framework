@@ -8,6 +8,8 @@ export class Texts {
     public static HARD = "HARD";
     public static CUSTOM = "CUSTOM";
     public static BACK = "BACK";
+    public static EXPORT_LEVEL = "EXPORT\nLEVEL";
+    public static LEVEL_SELECT_BUTTON = "LEVEL\nSELECT";
 
     /* Texts */
     public static MAX_COLS = "Cols:";
@@ -22,8 +24,9 @@ export class Texts {
     public static GAME_OVER = "Game Over";
     public static PAUSED = "Paused";
     public static YOU_WIN = "You Win !!";
-    public static WIN_MSG = "Congratulations on Winning MineSweeper!";
+    public static WIN_MSG = "Congratulations\non Winning\nMineSweeper!";
 
-    public static GAME_TIME = "Game time: ";
-    public static NUM_CLICKS = "Number of Clicks: ";
+    public static GAME_TIME = "Time: ";
+    public static GAME_BEST_TIME = "BEST: ";
+    public static NUM_CLICKS = "Clicks: ";
 }

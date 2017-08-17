@@ -1,9 +1,3 @@
-import { LevelCustomOptionsPopupMediator } from "./../mediators/LevelCustomOptionsPopupMediator";
-import { LevelCustomOptionsPopup } from "../views/LevelCustomOptionsPopup";
-import { TileDisplayMediator } from "../mediators/TileDisplayMediator";
-import { TileDisplay } from "./../views/components/TileDisplay";
-
-
 import { GameOverPopupMediator } from "./../mediators/GameOverPopupMediator";
 import { GameViewMediator } from "./../mediators/GameViewMediator";
 import { GridFieldComponentMediator } from "./../mediators/GridFieldComponentMediator";
@@ -11,9 +5,11 @@ import { HUDGameComponentMediator } from "./../mediators/HUDGameComponentMediato
 import { HomeViewMediator } from "./../mediators/HomeViewMediator";
 import { IntroViewMediator } from "./../mediators/IntroViewMediator";
 import { LevelSelectViewMediator } from "./../mediators/LevelSelectViewMediator";
+import { LevelCustomOptionsViewMediator } from "./../mediators/LevelCustomOptionsViewMediator";
 import { PausePopupMediator } from "./../mediators/PausePopupMediator";
 import { PixiContainerMediator } from "./../mediators/PixiContainerMediator";
 import { StartingPopupMediator } from "./../mediators/StartingPopupMediator";
+import { TileDisplayMediator } from "../mediators/TileDisplayMediator";
 import { YouWinPopupMediator } from ".././mediators/YouWinPopupMediator";
 
 import { GameOverPopup } from "./../views/GameOverPopup";
@@ -22,13 +18,17 @@ import { GridFieldComponent } from "./../views/components/GridFieldComponent";
 import { HomeView } from "./../views/HomeView";
 import { HUDGameComponent } from "./../views/components/HUDGameComponent";
 import { IntroView } from "./../views/IntroView";
+import { LevelCustomOptionsView } from "../views/LevelCustomOptionsView";
 import { LevelSelectView } from "./../views/LevelSelectView";
+
+import { TileDisplay } from "./../views/components/TileDisplay";
 
 import { PausePopup } from "./../views/PausePopup";
 import { StartingPopup } from "./../views/StartingPopup";
 import { YouWinPopup } from "./../views/YouWinPopup";
 
 import { PixiContainer } from "./../../robotlegs/bender/extensions/palidorFlowManager/impl/PixiContainer";
+
 import { injectable, IConfig, inject } from "@robotlegsjs/core";
 import { IMediatorMap } from "@robotlegsjs/pixi";
 
@@ -49,7 +49,7 @@ export class ViewsConfig implements IConfig {
         this.mediatorMap.map(GameView).toMediator(GameViewMediator);
         this.mediatorMap.map(HomeView).toMediator(HomeViewMediator);
         this.mediatorMap.map(LevelSelectView).toMediator(LevelSelectViewMediator);
-        this.mediatorMap.map(LevelCustomOptionsPopup).toMediator(LevelCustomOptionsPopupMediator);
+        this.mediatorMap.map(LevelCustomOptionsView).toMediator(LevelCustomOptionsViewMediator);
 
         this.mediatorMap.map(GridFieldComponent).toMediator(GridFieldComponentMediator);
         this.mediatorMap.map(HUDGameComponent).toMediator(HUDGameComponentMediator);

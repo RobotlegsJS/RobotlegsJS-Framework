@@ -20,10 +20,10 @@ export class ExportLevelDataCommand implements ICommand {
             }
         };
         let fileName = level.levelId + "_" + level.maxCols + "_" + level.maxRows + "_" + this.levelModel.numMines + ".json";
-        this.download(JSON.stringify(level), fileName, "text/plain");
+        this.export(JSON.stringify(level), fileName, "text/plain");
     }
 
-    public download(text, name, type) {
+    public export(text, name, type) {
         let a = document.createElement("a");
         let file = new Blob([text], { type: type });
         a.href = URL.createObjectURL(file);

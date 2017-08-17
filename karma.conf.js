@@ -42,7 +42,8 @@ module.exports = function (config) {
       "karma-mocha-reporter",
       "karma-mocha",
       "karma-chai",
-      "karma-sinon" ,
+      "karma-sinon",
+      "karma-es6-shim",
       "karma-coverage-istanbul-reporter"
     ],
     reporters: (

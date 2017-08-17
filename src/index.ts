@@ -3,6 +3,7 @@ import "reflect-metadata";
 import PIXI = require("pixi.js");
 
 import { AtlasKeys } from "./minesweeper/utils/AtlasKeys";
+
 import { GameConfig } from "./minesweeper/configs/GameConfig";
 import { PalidorConfig } from "./minesweeper/configs/PalidorConfig";
 import { ViewsConfig } from "./minesweeper/configs/ViewsConfig";
@@ -10,7 +11,7 @@ import { ViewsConfig } from "./minesweeper/configs/ViewsConfig";
 import { PixiContainer } from "./robotlegs/bender/extensions/palidorFlowManager/impl/PixiContainer";
 import { PalidorFlowManagerExtension } from "./robotlegs/bender/extensions/palidorFlowManager/PalidorFlowManagerExtension";
 
-import { Container, Graphics, Text } from "pixi.js";
+import { Container } from "pixi.js";
 import { Context, MVCSBundle, LogLevel } from "@robotlegsjs/core";
 import { PixiBundle, ContextView } from "@robotlegsjs/pixi";
 

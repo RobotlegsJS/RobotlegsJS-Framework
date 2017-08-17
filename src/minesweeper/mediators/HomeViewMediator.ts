@@ -13,6 +13,7 @@ export class HomeViewMediator extends Mediator<HomeView> {
     public initialize(): void {
         this.view.interactive = true;
         this.view.buttonMode = true;
+        this.view.animationIn();
         this.eventMap.mapListener(this.view, "click", this.playButton_onClick, this);
     }
 
@@ -21,6 +22,11 @@ export class HomeViewMediator extends Mediator<HomeView> {
     }
 
     private playButton_onClick(e: any): void {
-        this.flowService.setLevelSelectView();
+        this.view.animationOut(this.animationComplete);
     }
+
+    private animationComplete = (ob: any = this) => {
+        ob.flowService.setLevelSelectView();
+    }
+
 }

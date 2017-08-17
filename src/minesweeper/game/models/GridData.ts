@@ -1,6 +1,7 @@
 import { Cell } from "./Cell";
 
 export class GridData {
+
     private _maxCols: number;
     private _maxRows: number;
 

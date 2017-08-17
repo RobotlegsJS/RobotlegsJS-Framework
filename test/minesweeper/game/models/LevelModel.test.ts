@@ -1,4 +1,4 @@
-/* import { GridData } from "../../../../src/minesweeper/game/models/GridData";
+import { GridData } from "../../../../src/minesweeper/game/models/GridData";
 import { LevelModel } from "./../../../../src/minesweeper/game/models/LevelModel";
 import { assert } from "chai";
 
@@ -20,4 +20,4 @@ describe("LevelModel", () => {
         assert.notEqual(undefined, level.grid);
     });
 });
- */
+

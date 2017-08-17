@@ -42,8 +42,4 @@ export class Cell {
     public isMine(): boolean {
         return this._isMine;
     }
-
-    public toString(): string {
-        return this.value + "";
-    }
 }

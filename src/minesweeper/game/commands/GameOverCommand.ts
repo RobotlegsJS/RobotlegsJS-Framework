@@ -1,3 +1,4 @@
+import { HighScoreManager } from "./../managers/HighScoreManager";
 import { GameStatus } from "./../models/GameStatus";
 import { LevelModel } from "./../models/LevelModel";
 import { GameService } from "./../../services/GameService";
@@ -20,12 +21,16 @@ export class GameOverCommand implements ICommand {
     @inject(GameStatus)
     public gameStatus: GameStatus;
 
+    @inject(HighScoreManager)
+    public highScoreManager: HighScoreManager;
+
     public execute(): void {
         this.gameService.pause();
 
         if (this.gameStatus.isGameOver) {
             this.flowService.showGameOverPopup();
         } else {
+            this.highScoreManager.save(this.levelModel.levelId, this.levelModel.clock);
             this.flowService.showYouWinPopup();
         }
     }

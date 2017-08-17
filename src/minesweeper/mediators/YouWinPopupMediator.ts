@@ -19,6 +19,7 @@ export class YouWinPopupMediator extends Mediator<YouWinPopup> {
     public levelModel: LevelModel;
 
     public initialize(): void {
+        this.view.animationIn();
         this.view.showInfo(this.levelModel.clock, this.levelModel.numClicks);
         this.eventMap.mapListener(this.view.homeButton, "click", this.homeButton_onClick, this);
         this.eventMap.mapListener(this.view.retryButton, "click", this.retryButton_onClick, this);

@@ -15,6 +15,7 @@ export class GameOverPopupMediator extends Mediator<GameOverPopup> {
     public gameService: GameService;
 
     public initialize(): void {
+        this.view.animationIn();
         this.eventMap.mapListener(this.view.homeButton, "click", this.homeButton_onClick, this);
         this.eventMap.mapListener(this.view.retryButton, "click", this.retryButton_onClick, this);
     }

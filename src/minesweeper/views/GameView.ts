@@ -1,6 +1,7 @@
-import { HUDGameComponent } from "./components/HUDGameComponent";
 import { GridFieldComponent } from "./components/GridFieldComponent";
+import { HUDGameComponent } from "./components/HUDGameComponent";
 import { PixiFactory } from "./../utils/PixiFactory";
+
 import { Container } from "pixi.js";
 
 export class GameView extends Container {
@@ -11,6 +12,7 @@ export class GameView extends Container {
     public get gridField(): GridFieldComponent {
         return this._gridField;
     }
+
     constructor() {
         super();
         this.createBackground();

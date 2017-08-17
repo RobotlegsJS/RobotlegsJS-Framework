@@ -10,24 +10,24 @@ export class IntroView extends Container {
     constructor() {
         super();
 
-        this.setupBackground();
-        this.setupImages();
-        this.setupText();
+        this.createBackground();
+        this.createImages();
+        this.createText();
     }
 
-    private setupBackground(): void {
+    private createBackground(): void {
         this.addChild(PixiFactory.getColorBackground(0x204d63));
     }
 
-    private setupImages(): void {
-        let logo: Sprite = PIXI.Sprite.fromImage(AtlasKeys.LOGO_TYPESCRIPT);
-        logo.anchor.x = .5;
-        logo.x = ViewPortSize.HALF_WIDTH;
-        logo.y = ViewPortSize.MAX_HEIGHT - 64;
-        this.addChild(logo);
+    private createImages(): void {
+        let logoImg: Sprite = PIXI.Sprite.fromImage(AtlasKeys.LOGO_TYPESCRIPT);
+        logoImg.anchor.x = .5;
+        logoImg.x = ViewPortSize.HALF_WIDTH;
+        logoImg.y = ViewPortSize.MAX_HEIGHT - 64;
+        this.addChild(logoImg);
     }
 
-    private setupText(): void {
+    private createText(): void {
         let style = new PIXI.TextStyle({
             align: "center",
             fill: 0xb5d6e6,
@@ -35,10 +35,10 @@ export class IntroView extends Container {
             fontSize: 28,
             fontWeight: "bold"
         });
-        let title: Text = new PIXI.Text(Texts.DEVELOPER, style);
-        title.anchor.set(0.5);
-        title.x = ViewPortSize.HALF_WIDTH;
-        title.y = ViewPortSize.HALF_HEIGHT;
-        this.addChild(title);
+        let titleText: Text = new PIXI.Text(Texts.DEVELOPER, style);
+        titleText.anchor.set(0.5);
+        titleText.x = ViewPortSize.HALF_WIDTH;
+        titleText.y = ViewPortSize.HALF_HEIGHT;
+        this.addChild(titleText);
     }
 }

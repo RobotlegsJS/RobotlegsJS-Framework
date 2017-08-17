@@ -1,3 +1,4 @@
+import { HighScoreManager } from "../game/managers/HighScoreManager";
 import { LevelSelectView } from "../views/LevelSelectView";
 import { GameService } from "./../services/GameService";
 import { FlowService } from "./../services/FlowService";
@@ -15,9 +16,12 @@ export class LevelSelectViewMediator extends Mediator<LevelSelectView> {
     @inject(GameService)
     public gameService: GameService;
 
+    @inject(HighScoreManager)
+    public highScoreManager: HighScoreManager;
 
     public initialize(): void {
-
+        this.view.updateHighscore(this.highScoreManager.getAllHighScore());
+        this.view.animationIn();
         this.eventMap.mapListener(this.view.easyButton, "click", this.levelButton_onTriggeredHandler, this);
         this.eventMap.mapListener(this.view.normalButton, "click", this.levelButton_onTriggeredHandler, this);
         this.eventMap.mapListener(this.view.hardButton, "click", this.levelButton_onTriggeredHandler, this);
@@ -29,7 +33,7 @@ export class LevelSelectViewMediator extends Mediator<LevelSelectView> {
     }
 
     private levelCustomButton_onTriggeredHandler(e: any): void {
-        this.flowService.showLevelCustomOptionsPopup();
+        this.flowService.showLevelCustomOptionsView();
     }
 
     private levelButton_onTriggeredHandler(e: any): void {

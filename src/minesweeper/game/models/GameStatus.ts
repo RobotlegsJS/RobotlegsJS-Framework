@@ -11,15 +11,15 @@ export class GameStatus {
         this._isGameOver = false;
     }
 
-    public gameOver(): void {
+    public activeGameOver(): void {
         this._isGameOver = true;
     }
 
-    public pause(): void {
+    public pauseGame(): void {
         this._isPaused = true;
     }
 
-    public resume(): void {
+    public resumeGame(): void {
         this._isPaused = false;
     }
 

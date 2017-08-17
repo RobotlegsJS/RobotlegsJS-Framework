@@ -1,11 +1,11 @@
-import { ExportLevelDataCommand } from "./../game/commands/ExportLevelDataCommand";
-import { CustomLevelModel } from "../game/models/CustomLevelModel";
 import { GameEvent } from "./../events/GameEvent";
 import { CreateLevelCommand } from "./../game/commands/CreateLevelCommand";
+import { ExportLevelDataCommand } from "./../game/commands/ExportLevelDataCommand";
 import { GameOverCommand } from "./../game/commands/GameOverCommand";
-
 import { RetryGameCommand } from "./../game/commands/RetryGameCommand";
+import { HighScoreManager } from "./../game/managers/HighScoreManager";
 import { GameManager } from "./../game/managers/GameManager";
+import { CustomLevelModel } from "./../game/models/CustomLevelModel";
 import { GameStatus } from "./../game/models/GameStatus";
 import { LevelModel } from "./../game/models/LevelModel";
 import { GameService } from "./../services/GameService";
@@ -42,6 +42,7 @@ export class GameConfig implements IConfig {
 
     private mapManager(): void {
         this.context.injector.bind(GameManager).to(GameManager).inSingletonScope();
+        this.context.injector.bind(HighScoreManager).to(HighScoreManager).inSingletonScope();
     }
 
     private mapModels(): void {

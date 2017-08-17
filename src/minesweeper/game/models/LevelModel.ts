@@ -28,10 +28,7 @@ export class LevelModel {
     }
 
     constructor() {
-        this._mines = new Array<Cell>();
-        this._update = new Array<Cell>();
-        this.clock = 0;
-        this.numClicks = 0;
+        this.reset();
     }
 
     public setGrid(grid: GridData) {

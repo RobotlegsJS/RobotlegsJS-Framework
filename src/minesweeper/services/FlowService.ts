@@ -21,11 +21,11 @@ export class FlowService {
         this.dispatchEventWith(FlowEvent.SHOW_LEVEL_SELECT_VIEW);
     }
 
-    // Floating Views
-    public showLevelCustomOptionsPopup(): void {
-        this.dispatchEventWith(FlowEvent.SHOW_LEVEL_CUSTOM_OPTIONS_POPUP);
+    public showLevelCustomOptionsView(): void {
+        this.dispatchEventWith(FlowEvent.SHOW_LEVEL_CUSTOM_OPTIONS_VIEW);
     }
 
+    // Floating Views
     public showPausePopup(): void {
         this.dispatchEventWith(FlowEvent.SHOW_PAUSE_POPUP);
     }

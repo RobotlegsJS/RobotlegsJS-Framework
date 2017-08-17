@@ -10,6 +10,7 @@ import { GridFieldComponent } from "./../views/components/GridFieldComponent";
 
 import { injectable, inject } from "@robotlegsjs/core";
 import { Mediator } from "@robotlegsjs/pixi";
+import { TweenLite } from "gsap";
 
 @injectable()
 export class GridFieldComponentMediator extends Mediator<GridFieldComponent> {
@@ -56,7 +57,8 @@ export class GridFieldComponentMediator extends Mediator<GridFieldComponent> {
     }
 
     public generateGrid(): void {
-        this.view.setupGrid(this.levelModel.grid);
+        this.view.setupGridPosition(this.levelModel.grid);
+        this.view.alpha = 0;
 
         for (let row = 0; row < this.levelModel.grid.maxRows; row++) {
             for (let col = 0; col < this.levelModel.grid.maxCols; col++) {
@@ -68,6 +70,8 @@ export class GridFieldComponentMediator extends Mediator<GridFieldComponent> {
                 this._displays.set(cell, display);
             }
         }
+
+        let tweenView = new TweenLite(this.view, .3, { alpha: 1 });
     }
 
     public destroy(): void {

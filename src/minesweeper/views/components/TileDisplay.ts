@@ -1,12 +1,15 @@
+import { AtlasKeys } from "./../../utils/AtlasKeys";
 import { Cell } from "./../../game/models/Cell";
-import { PixiFactory } from "./../../utils/PixiFactory";
-import { MagicValues } from "./../../utils/MagicValues";
 import { Colors } from "./../../utils/Colors";
+import { MagicValues } from "./../../utils/MagicValues";
+import { PixiFactory } from "./../../utils/PixiFactory";
+
 import { Graphics, Container } from "pixi.js";
 
 export class TileDisplay extends Container {
 
     public cell: Cell;
+
     private _background: Graphics;
     private _container: Container;
     private _flagContainer: Container;
@@ -22,9 +25,35 @@ export class TileDisplay extends Container {
         this.setValue();
     }
 
-    public createBackground(): void {
-        this._background = PixiFactory.getTileBackground();
+    public show(): void {
+        if (this._container.visible === false) {
+            let color: number = Colors.TILE_BACKGROUND_OPEN;
+            if (this.cell.isMine() === true) {
+                color = Colors.TILE_BACKGROUND_MINE_2;
+            }
+            this.drawBackground(color);
+        }
+        this._container.visible = true;
+    }
+
+    public reveal(): void {
+        this.show();
+        if (this.cell.isMine() === true) {
+            this.drawBackground(Colors.TILE_BACKGROUND_MINE);
+        } else {
+            this.drawBackground(Colors.TILE_BACKGROUND_OPEN);
+        }
+    }
+
+    public flag(): void {
+        this._flagContainer.visible = true;
+        this.createFlag();
+    }
+
+    private createBackground(): void {
+        this._background = new Graphics();
         this.addChild(this._background);
+        this.drawBackground(Colors.TILE_BACKGROUND);
 
         this._container = new Container();
         this._container.visible = false;
@@ -33,16 +62,6 @@ export class TileDisplay extends Container {
         this._flagContainer = new Container();
         this._flagContainer.visible = false;
         this.addChild(this._flagContainer);
-        this.createFlag();
-    }
-
-    public show(): void {
-        this._background.visible = false;
-        this._container.visible = true;
-    }
-
-    public flag(value: boolean): void {
-        this._flagContainer.visible = value;
     }
 
     private setValue(): void {
@@ -50,21 +69,18 @@ export class TileDisplay extends Container {
             this.createMine();
         } else if (this.cell.value > 0) {
             this.createText();
-        } else {
-            this._container.addChild(PixiFactory.getTileBackground(Colors.TILE_BACKGROUND_OPEN));
         }
     }
 
     private createMine(): void {
-        let mine = PixiFactory.getImage("icon_mine.png");
+        let mine = PixiFactory.getImage(AtlasKeys.ICON_MINE);
         mine.pivot.x = mine.width * .5;
         mine.pivot.y = mine.height * .5;
         this._container.addChild(mine);
     }
 
     private createFlag(): void {
-        this._container.addChild(PixiFactory.getTileBackground(0xFF7777));
-        let flag = PixiFactory.getImage("icon_flag.png");
+        let flag = PixiFactory.getImage(AtlasKeys.ICON_FLAG);
         flag.pivot.x = flag.width * .5;
         flag.pivot.y = flag.height * .5;
         this._flagContainer.addChild(flag);
@@ -78,7 +94,14 @@ export class TileDisplay extends Container {
             Colors.TILE_TEXT_3,
             Colors.TILE_TEXT_4,
         ];
-        this._container.addChild(PixiFactory.getTileBackground(Colors.TILE_BACKGROUND_OPEN));
-        this._container.addChild(PixiFactory.getTileText(this.cell.value.toString(), colors[this.cell.value]));
+        this._container.addChild(PixiFactory.getTileLabel(this.cell.value.toString(), colors[this.cell.value]));
+    }
+
+    private drawBackground(color: number): void {
+        this._background.clear();
+        this._background.beginFill(color);
+        this._background.drawRoundedRect(0, 0, MagicValues.TILE_WIDTH - 1, MagicValues.TILE_HEIGHT - 1, 5);
+        this._background.pivot.x = this._background.width * .5;
+        this._background.pivot.y = this._background.height * .5;
     }
 }

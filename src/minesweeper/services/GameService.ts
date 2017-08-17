@@ -37,17 +37,17 @@ export class GameService {
     }
 
     public pause(): void {
-        this.gameStatus.pause();
+        this.gameStatus.pauseGame();
         this.dispatchEventWith(GameEvent.PAUSE);
     }
 
     public resume(): void {
-        this.gameStatus.resume();
+        this.gameStatus.resumeGame();
         this.dispatchEventWith(GameEvent.RESUME);
     }
 
     public gameOver(): void {
-        this.gameStatus.gameOver();
+        this.gameStatus.activeGameOver();
     }
 
     // UPDATE_GRID

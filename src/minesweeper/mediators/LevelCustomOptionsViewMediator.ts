@@ -2,14 +2,14 @@ import { Texts } from "./../utils/Texts";
 import { CustomLevelModel } from "./../game/models/CustomLevelModel";
 import { GameService } from "./../services/GameService";
 import { FlowService } from "../services/FlowService";
-import { LevelCustomOptionsPopup } from "./../views/LevelCustomOptionsPopup";
+import { LevelCustomOptionsView } from "./../views/LevelCustomOptionsView";
 import { LevelSelectView } from "../views/LevelSelectView";
 
 import { injectable, inject } from "@robotlegsjs/core";
 import { Mediator } from "@robotlegsjs/pixi";
 
 @injectable()
-export class LevelCustomOptionsPopupMediator extends Mediator<LevelCustomOptionsPopup> {
+export class LevelCustomOptionsViewMediator extends Mediator<LevelCustomOptionsView> {
 
     @inject(FlowService)
     public flowService: FlowService;
@@ -21,6 +21,7 @@ export class LevelCustomOptionsPopupMediator extends Mediator<LevelCustomOptions
     public customLevelModel: CustomLevelModel;
 
     public initialize(): void {
+        this.view.animationIn();
         this.eventMap.mapListener(this.view.backButton, "click", this.onBackClick, this);
         this.eventMap.mapListener(this.view.playButton, "click", this.onPlayClick, this);
     }
@@ -38,6 +39,6 @@ export class LevelCustomOptionsPopupMediator extends Mediator<LevelCustomOptions
     }
 
     private onBackClick(e: any): void {
-        this.flowService.closePopup();
+        this.flowService.setLevelSelectView();
     }
 }

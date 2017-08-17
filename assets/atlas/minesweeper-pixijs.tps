@@ -188,15 +188,16 @@
         </struct>
         <key>individualSpriteSettings</key>
         <map type="IndividualSpriteSettingsMap">
-            <key type="filename">buttons/button_background_large.png</key>
+            <key type="filename">buttons/button_background.png</key>
             <key type="filename">buttons/icon_home.png</key>
             <key type="filename">buttons/icon_pause.png</key>
             <key type="filename">buttons/icon_resume.png</key>
             <key type="filename">buttons/icon_retry.png</key>
-            <key type="filename">buttons/icon_setzer.png</key>
             <key type="filename">others/icon_flag.png</key>
+            <key type="filename">others/icon_flag_large.png</key>
             <key type="filename">others/icon_mine.png</key>
             <key type="filename">others/logo_minesweeper.png</key>
+            <key type="filename">others/logo_setzer.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0.5</point_f>

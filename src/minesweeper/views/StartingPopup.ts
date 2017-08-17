@@ -15,8 +15,8 @@ export class StartingPopup extends Container {
 
         this.interactive = true;
 
-        this.setupBackgrounds();
-        this.setupTexts();
+        this.createBackgrounds();
+        this.createTexts();
     }
 
     public changeNumber(n: number): void {
@@ -24,13 +24,13 @@ export class StartingPopup extends Container {
         this._decreasingNumber.text = String(n);
     }
 
-    private setupBackgrounds(): void {
+    private createBackgrounds(): void {
         this._background = PixiFactory.getShadowBackground();
         this.addChild(this._background);
     }
 
-    private setupTexts(): void {
-        this._decreasingNumber = PixiFactory.getText("3", MagicValues.SIZE_DEFAULT + 6);
+    private createTexts(): void {
+        this._decreasingNumber = PixiFactory.getText("3");
         this._decreasingNumber.anchor.set(.5);
         this._decreasingNumber.scale.set(1.2);
         this._decreasingNumber.x = ViewPortSize.HALF_WIDTH;
