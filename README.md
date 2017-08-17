@@ -1,9 +1,53 @@
-# GAME-Minesweeper
+![cover](img_cover_minesweeper_ts.png)
 
-Installation
-===
+This is a TypeScript open-source game.
+
++ **Category:** Puzzle.
++ **Platform:** Web.
++ **Language:** TypeScript.
++ **Technologies:** PixiJs, RobotlegsJs, RobotlegsJs-Pixi, Palidor.
+
+* * *
+
+### Gameplay
+
+![gif_ts](gif_minesweeper_ts_demo.gif)
+
+* * *
+
+### Installation
 
 ```
 npm install
 npm run start
 ```
+
+* * *
+
+### Dependencies
+
++ [PixiJs](http://www.pixijs.com/)
++ [RobotlegsJs](https://github.com/RobotlegsJS/RobotlegsJS)
++ [Robotlegs-Pixi](https://github.com/RobotlegsJS/RobotlegsJS-Pixi)
+
+* * *
+
+### Demo
++ **[TypeScript](https://ronaldosetzer.github.io/portfolio/open_source/minesweeper_ts/)**
+
+* * *
+
+### Game
+
+![screenshot01](img_ss_minesweeper_ts_01.png)
+
+![screenshot02](img_ss_minesweeper_ts_02.png)
+
+
+* * *
+
+### Screenshots
+![screenshot01](img_game_minesweeper_ts.png)
+* * *
+
+**Ronaldo Santiago**  - Game Developer [ [portfolio](https://ronaldosetzer.github.io/portfolio/) ]

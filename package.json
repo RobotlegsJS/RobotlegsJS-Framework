@@ -14,7 +14,11 @@
   },
   "keywords": [
     "Game",
-    "Minesweeper"
+    "Minesweeper",
+    "TypeScript",
+    "Robotlegs",
+    "IoC",
+    "PIXI"
   ],
   "author": "Ronaldo Santiago",
   "license": "MIT",
