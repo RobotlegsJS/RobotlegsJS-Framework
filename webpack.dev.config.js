@@ -2,14 +2,14 @@ const webpack = require('webpack');
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
-module.exports = (function (options) {
+module.exports = function (options) {
   return {
     entry: {
       main: path.resolve("src/index.ts")
     },
 
     output: {
-      path: __dirname + "/dist",
+      path: path.join(__dirname, "dist"),
       filename: "bundle.js"
     },
 
@@ -30,4 +30,4 @@ module.exports = (function (options) {
     }
 
   }
-})();
+};
