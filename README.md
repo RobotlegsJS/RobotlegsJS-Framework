@@ -1,3 +1,12 @@
+# GAME-Minesweeper
+
+
+[![Build Status](https://travis-ci.org/RonaldoSetzer/GAME-Minesweeper.svg?branch=master)](https://travis-ci.org/RonaldoSetzer/GAME-Minesweeper)
+[![Code Climate](https://codeclimate.com/github/RonaldoSetzer/GAME-Minesweeper/badges/gpa.svg)](https://codeclimate.com/github/RonaldoSetzer/GAME-Minesweeper)
+[![Test Coverage](https://codeclimate.com/github/RonaldoSetzer/GAME-Minesweeper/badges/coverage.svg)](https://codeclimate.com/github/RonaldoSetzer/GAME-Minesweeper/coverage)
+
+---
+
 ![cover](img_cover_minesweeper_ts.png)
 
 This is a TypeScript open-source game.
