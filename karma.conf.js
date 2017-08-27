@@ -47,9 +47,7 @@ module.exports = function (config) {
       "karma-coverage-istanbul-reporter"
     ],
     reporters: (
-      config.singleRun ?
-      ["dots", "mocha" , "coverage-istanbul" ] :
-      ["dots", "mocha"]
+      config.singleRun ? ["mocha", "coverage-istanbul"] : ["dots"]
     ),
     coverageIstanbulReporter: {
       reports: ["html", "lcov", "lcovonly", "text-summary"],

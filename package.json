@@ -5,7 +5,7 @@
   "main": "src/index.ts",
   "scripts": {
     "start": "webpack-dev-server --config ./webpack.dev.config.js",
-    "test": "karma start --single-run || true",
+    "test": "./node_modules/.bin/karma start --single-run --browsers PhantomJS",
     "karma": "karma start || true"
   },
   "repository": {
