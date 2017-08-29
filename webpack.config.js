@@ -24,7 +24,7 @@ module.exports = (function(options) {
 
     module: {
       rules: [
-        { test: /\.ts$/, loader: "ts-loader?configFileName=" + tsconfig },
+        { test: /\.ts$/, loader: "ts-loader?configFile=" + tsconfig },
         {
           test: ((options.production) /* disable this loader for production builds */
             ? /^$/
