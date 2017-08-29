@@ -5039,9 +5039,9 @@ trim-right@^1.0.1:
   version "1.0.1"
   resolved "https://registry.npmjs.org/trim-right/-/trim-right-1.0.1.tgz#cb2e1203067e0c8de1f614094b9fe45704ea6003"
 
-ts-loader@^2.3.2:
-  version "2.3.2"
-  resolved "https://registry.npmjs.org/ts-loader/-/ts-loader-2.3.2.tgz#b71b9f0d0062c791a654d462140718f9f7817665"
+ts-loader@^2.3.4:
+  version "2.3.4"
+  resolved "https://registry.yarnpkg.com/ts-loader/-/ts-loader-2.3.4.tgz#904f82f6812406f3f073c1c114eea2759e27f80a"
   dependencies:
     chalk "^2.0.1"
     enhanced-resolve "^3.0.0"
