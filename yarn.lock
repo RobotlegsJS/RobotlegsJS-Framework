@@ -6,9 +6,9 @@
   version "3.5.8"
   resolved "https://registry.npmjs.org/@types/bluebird/-/bluebird-3.5.8.tgz#242a83379f06c90f96acf6d1aeab3af6faebdb98"
 
-"@types/chai@^4.0.3":
-  version "4.0.3"
-  resolved "https://registry.npmjs.org/@types/chai/-/chai-4.0.3.tgz#6c2264b195cd2bb4c95c108487e13df0c8567c3e"
+"@types/chai@^4.0.4":
+  version "4.0.4"
+  resolved "https://registry.yarnpkg.com/@types/chai/-/chai-4.0.4.tgz#fe86315d9a66827feeb16f73bc954688ec950e18"
 
 "@types/mocha@^2.2.41":
   version "2.2.41"
