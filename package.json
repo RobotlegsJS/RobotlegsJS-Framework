@@ -5,7 +5,8 @@
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
   "scripts": {
-    "test": "karma start --single-run",
+    "test": "./node_modules/.bin/karma start --single-run",
+    "test:tdd": "./node_modules/.bin/karma start",
     "mocha": "mocha test/**/*.test.ts --require ts-node/register",
     "autoformat": "tsfmt -r --useTsconfig tsconfig.test.json",
     "clean-up": "rm -rf coverage && rm -rf lib",
@@ -27,7 +28,7 @@
   ],
   "author": "RobotlegsJS",
   "contributors": [
-    "Ronaldo Santiago <setzerwolf@gmail.com>"
+    "Ronaldo Santiago <ronaldo.setzers@gmail.com>"
   ],
   "license": "MIT",
   "bugs": {

@@ -50,7 +50,7 @@ module.exports = function(config) {
     reporters: (
       config.singleRun ?
         ["dots", "mocha", "coverage-istanbul"] :
-        ["dots", "mocha"]
+        ["mocha"]
     ),
     coverageIstanbulReporter: {
       reports: ["html", "lcov", "lcovonly", "text-summary"],
