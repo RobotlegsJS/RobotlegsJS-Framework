@@ -6,6 +6,6 @@
 // ------------------------------------------------------------------------------
 
 /**
- * PalidorFlowManagerExtension Extension
+ * PalidorPixiExtension Extension
  */
-export { PalidorFlowManagerExtension } from "./robotlegs/bender/extensions/palidorFlowManager/PalidorFlowManagerExtension";
+export { PalidorPixiExtension } from "./robotlegs/bender/extensions/palidorPixi/PalidorPixiExtension";
