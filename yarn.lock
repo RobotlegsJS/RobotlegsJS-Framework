@@ -3432,8 +3432,8 @@ mute-stream@0.0.5:
   resolved "https://registry.npmjs.org/mute-stream/-/mute-stream-0.0.5.tgz#8fbfabb0a98a253d3184331f9e8deb7372fac6c0"
 
 nan@^2.3.0:
-  version "2.6.2"
-  resolved "https://registry.npmjs.org/nan/-/nan-2.6.2.tgz#e4ff34e6c95fdfb5aecc08de6596f43605a7db45"
+  version "2.7.0"
+  resolved "https://registry.npmjs.org/nan/-/nan-2.7.0.tgz#d95bf721ec877e08db276ed3fc6eb78f9083ad46"
 
 native-promise-only@^0.8.1:
   version "0.8.1"
@@ -5020,8 +5020,8 @@ tslint@^5.7.0:
     tsutils "^2.8.1"
 
 tsutils@^2.8.1:
-  version "2.8.1"
-  resolved "https://registry.npmjs.org/tsutils/-/tsutils-2.8.1.tgz#3771404e7ca9f0bedf5d919a47a4b1890a68efff"
+  version "2.8.2"
+  resolved "https://registry.npmjs.org/tsutils/-/tsutils-2.8.2.tgz#2c1486ba431260845b0ac6f902afd9d708a8ea6a"
   dependencies:
     tslib "^1.7.1"
 
