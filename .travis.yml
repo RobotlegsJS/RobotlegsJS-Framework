@@ -7,9 +7,12 @@ before_install:
   - sh -e /etc/init.d/xvfb start
   - yarn global add greenkeeper-lockfile@1
   - yarn global add codeclimate-test-reporter
-before_script: greenkeeper-lockfile-update
-script: node_modules/karma/bin/karma start karma.conf.js --single-run
-after_script: greenkeeper-lockfile-upload
+before_script:
+  - greenkeeper-lockfile-update
+script:
+  - node_modules/karma/bin/karma start karma.conf.js --single-run
+after_script:
+  - greenkeeper-lockfile-upload
 after_success:
   - codeclimate-test-reporter < coverage/lcov.info
 addons:
