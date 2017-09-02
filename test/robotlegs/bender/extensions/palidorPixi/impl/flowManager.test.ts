@@ -1,12 +1,17 @@
 import "./../../../../../entry";
-import { assert } from "chai";
 
-import { EventMap } from "./../support/EventMap";
-import { Context, MVCSBundle, EventDispatcher } from "@robotlegsjs/core";
-import { IFlowManager } from "./../../../../../../src/robotlegs/bender/extensions/palidorPixi/api/IFlowManager";
-import { FlowManager } from "./../../../../../../src/robotlegs/bender/extensions/palidorPixi/impl/FlowManager";
+import sinon = require("sinon");
+
+import { Utils } from "./../support/Utils";
+
 import { IFlowViewMapping } from "./../../../../../../src/robotlegs/bender/extensions/palidorPixi/api/IFlowViewMapping";
+import { PalidorEvent } from "./../../../../../../src/robotlegs/bender/extensions/palidorPixi/events/PalidorEvent";
+import { FlowManager } from "./../../../../../../src/robotlegs/bender/extensions/palidorPixi/impl/FlowManager";
 import { FlowViewMapping } from "./../../../../../../src/robotlegs/bender/extensions/palidorPixi/impl/FlowViewMapping";
+
+import { assert } from "chai";
+import { Container } from "pixi.js";
+import { Context, MVCSBundle } from "@robotlegsjs/core";
 
 describe("FlowManager", () => {
 
@@ -14,10 +19,8 @@ describe("FlowManager", () => {
     let view: any;
 
     beforeEach(() => {
-        flowManager = new FlowManager();
-        flowManager.eventDispatcher = new EventDispatcher();
-        flowManager.eventMap = new EventMap();
-        view = { name: "view" };
+        flowManager = Utils.getInstanceOfFlowManager();
+        view = Container;
     });
 
     afterEach(() => {
@@ -28,33 +31,6 @@ describe("FlowManager", () => {
     context("constructor", () => {
         it("should create a map of views", () => {
             assert.instanceOf(flowManager.views, Map);
-        });
-    });
-
-    context("inject values", () => {
-        it("should inject an instance of IEventMap", () => {
-            let hasEventDispatcher: Boolean = false;
-            let context: Context = new Context();
-            context.install(MVCSBundle);
-            context.whenInitializing(function (): void {
-                context.injector.bind(IFlowManager).to(FlowManager).inSingletonScope();
-                flowManager = context.injector.get(IFlowManager);
-                hasEventDispatcher = (flowManager.eventMap !== undefined);
-            });
-            context.initialize();
-            assert.isTrue(hasEventDispatcher);
-        });
-        it("should inject an instance of IEventDispatcher", () => {
-            let hasEventDispatcher: Boolean = false;
-            let context: Context = new Context();
-            context.install(MVCSBundle);
-            context.whenInitializing(function (): void {
-                context.injector.bind(IFlowManager).to(FlowManager).inSingletonScope();
-                flowManager = context.injector.get(IFlowManager);
-                hasEventDispatcher = (flowManager.eventDispatcher !== undefined);
-            });
-            context.initialize();
-            assert.isTrue(hasEventDispatcher);
         });
     });
 
@@ -80,6 +56,52 @@ describe("FlowManager", () => {
             flowManager.mapView("mapView", view);
             assert.isDefined(flowManager.views.get("mapView"));
             assert.equal(flowManager.views.get("mapView"), view);
+        });
+    });
+
+    context("listeners mapped", () => {
+        it("should invoke the method changeView from the controller when a mapped event toView is dispatched", () => {
+            let eventString = "showView";
+            let spy = sinon.spy(flowManager.controller, "changeView");
+
+            flowManager.mapView(eventString, view);
+            flowManager.dispatcher.dispatchEvent(new PalidorEvent(eventString));
+
+            assert.isTrue(spy.calledOnce);
+        });
+
+        it("should invoke the method addView from the controller when a mapped event toFloatingView is dispatched", () => {
+            let eventString = "showView";
+            let spy = sinon.spy(flowManager.controller, "addView");
+
+            flowManager.mapFloatingView(eventString, view);
+            flowManager.dispatcher.dispatchEvent(new PalidorEvent(eventString));
+
+            assert.isTrue(spy.calledOnce);
+        });
+
+        it("should invoke the method removeCurrentView from the controller when the PalidorEvent.REMOVE_CURRENT_VIEW is dispatched", () => {
+            let spy = sinon.spy(flowManager.controller, "removeCurrentView");
+
+            flowManager.dispatcher.dispatchEvent(new PalidorEvent(PalidorEvent.REMOVE_CURRENT_VIEW));
+
+            assert.isTrue(spy.calledOnce);
+        });
+
+        it("should invoke the method removeLastFloatingViewAdded when the REMOVE_LAST_FLOATING_VIEW_ADDED is dispatched", () => {
+            let spy = sinon.spy(flowManager.controller, "removeLastFloatingViewAdded");
+
+            flowManager.dispatcher.dispatchEvent(new PalidorEvent(PalidorEvent.REMOVE_LAST_FLOATING_VIEW_ADDED));
+
+            assert.isTrue(spy.calledOnce);
+        });
+
+        it("should invoke the method removeAllFloatingViews from the controller when the REMOVE_ALL_FLOATING_VIEWS is dispatched", () => {
+            let spy = sinon.spy(flowManager.controller, "removeAllFloatingViews");
+
+            flowManager.dispatcher.dispatchEvent(new PalidorEvent(PalidorEvent.REMOVE_ALL_FLOATING_VIEWS));
+
+            assert.isTrue(spy.calledOnce);
         });
     });
 

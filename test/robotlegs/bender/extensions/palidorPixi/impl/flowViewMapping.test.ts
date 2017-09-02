@@ -2,7 +2,7 @@ import "./../../../../../entry";
 
 import sinon = require("sinon");
 import { assert } from "chai";
-import { EventMap } from "../support/EventMap";
+import { Utils } from "./../support/Utils";
 
 import { FlowViewMapping } from "./../../../../../../src/robotlegs/bender/extensions/palidorPixi/impl/FlowViewMapping";
 import { FlowManager } from "./../../../../../../src/robotlegs/bender/extensions/palidorPixi/impl/FlowManager";
@@ -17,16 +17,16 @@ describe("FlowViwMapping", () => {
     beforeEach(() => {
         event = "Event";
         view = { name: "view" };
-        flowManager = new FlowManager();
-        flowManager.eventMap = new EventMap();
+
+        flowManager = Utils.getInstanceOfFlowManager();
         flowViewMapping = new FlowViewMapping("event", flowManager);
     });
 
     afterEach(() => {
         event = "";
         view = {};
-        flowManager = new FlowManager();
-        flowViewMapping = new FlowViewMapping("event", flowManager);
+        flowManager = null;
+        flowViewMapping = null;
     });
 
     context("constructor", () => {
