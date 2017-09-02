@@ -45,7 +45,7 @@ export class MonoSignal implements ISignal {
         // Clone so the Array cannot be affected from outside.
         this._valueClasses = value ? value.slice() : [];
         for (var i: number = this._valueClasses.length; i--;) {
-            if (!(this._valueClasses[i] instanceof Object)) {
+            if (typeof this._valueClasses[i] !== "function") {
                 throw new Error('Invalid valueClasses argument: ' +
                     'item at index ' + i + ' should be a Class but was:<' +
                     this._valueClasses[i] + '>.' + this._valueClasses[i]); //@CHANGED - temp replacement for getQualifiedClassByName()
