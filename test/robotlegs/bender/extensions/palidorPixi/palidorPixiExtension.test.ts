@@ -6,11 +6,11 @@
 // ------------------------------------------------------------------------------
 import "../../../../entry";
 
-import { IContainerController } from "../../../../../src/robotlegs/bender/extensions/palidorPixi/api/IContainerController";
-import { IFlowManager } from "../../../../../src/robotlegs/bender/extensions/palidorPixi/api/IFlowManager";
-import { IPixiRootContainer } from "../../../../../src/robotlegs/bender/extensions/palidorPixi/api/IPixiRootContainer";
-import { PalidorPixiExtension } from "../../../../../src/robotlegs/bender/extensions/palidorPixi/PalidorPixiExtension";
-import { PixiRootContainer } from "./../../../../../src/robotlegs/bender/extensions/palidorPixi/impl/PixiRootContainer";
+import { IContainerController } from "../../../../../src";
+import { IFlowManager } from "../../../../../src";
+import { IPixiRootContainer } from "../../../../../src";
+import { PalidorPixiExtension } from "../../../../../src";
+import { PixiRootContainer } from "./../../../../../src";
 
 import { assert } from "chai";
 import { Container } from "pixi.js";

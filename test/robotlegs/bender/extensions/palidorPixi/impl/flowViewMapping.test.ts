@@ -4,8 +4,8 @@ import sinon = require("sinon");
 import { assert } from "chai";
 import { Utils } from "./../support/Utils";
 
-import { FlowViewMapping } from "./../../../../../../src/robotlegs/bender/extensions/palidorPixi/impl/FlowViewMapping";
-import { FlowManager } from "./../../../../../../src/robotlegs/bender/extensions/palidorPixi/impl/FlowManager";
+import { FlowViewMapping } from "./../../../../../../src";
+import { FlowManager } from "./../../../../../../src";
 
 describe("FlowViwMapping", () => {
 

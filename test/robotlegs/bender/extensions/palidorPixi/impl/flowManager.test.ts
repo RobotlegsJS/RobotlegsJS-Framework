@@ -4,10 +4,10 @@ import sinon = require("sinon");
 
 import { Utils } from "./../support/Utils";
 
-import { IFlowViewMapping } from "./../../../../../../src/robotlegs/bender/extensions/palidorPixi/api/IFlowViewMapping";
-import { PalidorEvent } from "./../../../../../../src/robotlegs/bender/extensions/palidorPixi/events/PalidorEvent";
-import { FlowManager } from "./../../../../../../src/robotlegs/bender/extensions/palidorPixi/impl/FlowManager";
-import { FlowViewMapping } from "./../../../../../../src/robotlegs/bender/extensions/palidorPixi/impl/FlowViewMapping";
+import { IFlowViewMapping } from "./../../../../../../src";
+import { PalidorEvent } from "./../../../../../../src";
+import { FlowManager } from "./../../../../../../src";
+import { FlowViewMapping } from "./../../../../../../src";
 
 import { assert } from "chai";
 import { Container } from "pixi.js";

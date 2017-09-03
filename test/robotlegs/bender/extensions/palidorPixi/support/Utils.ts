@@ -1,12 +1,12 @@
-import { IContainerController } from "./../../../../../../src/robotlegs/bender/extensions/palidorPixi/api/IContainerController";
-import { PixiContainerContoller } from "./../../../../../../src/robotlegs/bender/extensions/palidorPixi/impl/PixiContainerContoller";
-import { IFlowManager } from "./../../../../../../src/robotlegs/bender/extensions/palidorPixi/api/IFlowManager";
-import { FlowManager } from "../../../../../../src/robotlegs/bender/extensions/palidorPixi/impl/FlowManager";
+import { IContainerController } from "./../../../../../../src";
+import { PixiContainerContoller } from "./../../../../../../src";
+import { IFlowManager } from "./../../../../../../src";
+import { FlowManager } from "../../../../../../src";
 import { Container } from "pixi.js";
-import { PixiRootContainer } from "../../../../../../src/robotlegs/bender/extensions/palidorPixi/impl/PixiRootContainer";
-import { PalidorPixiExtension } from "./../../../../../../src/robotlegs/bender/extensions/palidorPixi/PalidorPixiExtension";
+import { PixiRootContainer } from "../../../../../../src";
+import { PalidorPixiExtension } from "./../../../../../../src";
 import { MVCSBundle } from "@robotlegsjs/core";
-import { Context } from "@robotlegsjs/core/lib/robotlegs/bender/framework/impl/Context";
+import { Context } from "@robotlegsjs/core";
 
 export class Utils {
     public static getInstanceOfFlowManager(): FlowManager {

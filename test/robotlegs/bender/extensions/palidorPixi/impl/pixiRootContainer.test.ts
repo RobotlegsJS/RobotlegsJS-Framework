@@ -1,6 +1,6 @@
 import "./../../../../../entry";
 
-import { PixiRootContainer } from "./../../../../../../src/robotlegs/bender/extensions/palidorPixi/impl/PixiRootContainer";
+import { PixiRootContainer } from "./../../../../../../src";
 
 import { assert } from "chai";
 import { Container } from "pixi.js";

@@ -2,7 +2,7 @@ import "./../../../../../entry";
 
 import { Utils } from "./../support/Utils";
 
-import { PixiContainerContoller } from "../../../../../../src/robotlegs/bender/extensions/palidorPixi/impl/PixiContainerContoller";
+import { PixiContainerContoller } from "../../../../../../src";
 
 import { assert } from "chai";
 import { Container } from "pixi.js";
