@@ -32,7 +32,7 @@ describe("PalidorPixiExtension", () => {
 
     it("PalidorPixiExtension is mapped into injector", () => {
         let initialized: boolean = false;
-        context.whenInitializing(function (): void {
+        context.whenInitializing(function(): void {
             initialized = true;
         });
         context.initialize();
@@ -40,19 +40,19 @@ describe("PalidorPixiExtension", () => {
     });
 
     it("FlowManager is mapped into injector", () => {
-        context.whenInitializing(function (): void {
+        context.whenInitializing(function(): void {
             assert.isDefined(context.injector.get(IFlowManager));
         });
     });
 
     it("PixiRootContainer is mapped into injector", () => {
-        context.whenInitializing(function (): void {
+        context.whenInitializing(function(): void {
             assert.isDefined(context.injector.get(IPixiRootContainer));
         });
     });
 
     it("PixiContainerController is mapped into injector", () => {
-        context.whenInitializing(function (): void {
+        context.whenInitializing(function(): void {
             assert.isDefined(context.injector.get(IContainerController));
         });
     });
