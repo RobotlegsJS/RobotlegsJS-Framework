@@ -11,14 +11,23 @@ import { IEvent } from "../../../../src/org/osflash/signals/events/IEvent";
 describe("DeluxeSignalWithBubblingEventTest", () => {
     let async: AsyncUtil = new AsyncUtil();
 
-    let theParent: IBubbleEventHandler;
+    let theParent: Child;
     let theChild: Child;
     let theGrandChild: Child;
     let cancelTimeout: Function;
+    let doneFunc: Function;
+
+    function onEventBubbled(e: IEvent): boolean {
+        cancelTimeout();
+        assert.equal(theGrandChild, e.target, "e.target should be the object that originally dispatched event");
+        assert.equal(this, e.currentTarget, "e.currentTarget should be the object receiving the bubbled event");
+        doneFunc();
+        return false;
+    }
 
     beforeEach(() => {
-        theParent = this;
-        theChild = new Child(this, "theChild");
+        theParent = new Child(null, "theParent", onEventBubbled);
+        theChild = new Child(theParent, "theChild");
         theGrandChild = new Child(theChild, "theGrandChild");
     });
 
@@ -26,29 +35,27 @@ describe("DeluxeSignalWithBubblingEventTest", () => {
         theChild = null;
         theGrandChild = null;
         cancelTimeout = null;
+        doneFunc = null;
     });
 
     it("parent_child_relationships()", () => {
-        assert.equal(this, theChild.parent, "theChild's parent is this");
-        // TODO: find a way to typecheck for interfaces
-        // assert.isTrue(this instanceof IBubbleEventHandler, "this can handle bubbling events");
+        assert.equal(theParent, theChild.parent, "theChild's parent is this");
     });
 
-    it.skip("dispatch_bubbling_event_from_theGrandChild_should_bubble_to_parent_IBubbleHandler()", (done) => {
+    it("dispatch_bubbling_event_from_theGrandChild_should_bubble_to_parent_IBubbleHandler()", (done) => {
         // If cancelTimeout() isn"t called, this test will fail.
-        cancelTimeout = async.add(null, 10);
+        cancelTimeout = async.add(null, 1000);
+
+        // keep reference for done function
+        doneFunc = done;
+
+        // prepare event
         let event: IEvent = new GenericEvent();
         event.bubbles = true;
 
+        // dispatch event from grand child, expecting that it will arrive on parent
         theGrandChild.completed.dispatch(event);
     });
-
-    function onEventBubbled(e: IEvent): boolean {
-        cancelTimeout();
-        assert.equal(theGrandChild, e.target, "e.target should be the object that originally dispatched event");
-        assert.equal(this, e.currentTarget, "e.currentTarget should be the object receiving the bubbled event");
-        return false;
-    }
 
     // TODO: returning after throwing an error is not possible in TS
     it.skip("returning_false_from_onEventBubbled_should_stop_bubbling()", () => {
@@ -82,11 +89,13 @@ class Child implements IBubbleEventHandler {
     public parent: Object;
     public completed: DeluxeSignal;
     public name: string;
+    public listener: Function = null;
     public popsBubbles: boolean = false;
 
-    constructor(parent: Object = null, name = "") {
+    constructor(parent: Object = null, name = "", listener = null) {
         this.parent = parent;
         this.name = name;
+        this.listener = listener;
         this.completed = new DeluxeSignal(this);
     }
 
@@ -95,7 +104,11 @@ class Child implements IBubbleEventHandler {
     }
 
     public onEventBubbled(event: IEvent): boolean {
-        return !this.popsBubbles;
+        if (this.listener !== null) {
+            return this.listener(event);
+        } else {
+            return !this.popsBubbles;
+        }
     }
 }
 
