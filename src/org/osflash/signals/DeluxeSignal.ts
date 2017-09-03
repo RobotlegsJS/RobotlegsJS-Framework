@@ -35,12 +35,12 @@ export class DeluxeSignal extends PrioritySignal {
      */
     constructor(target: Object = null, ...valueClasses) {
         // Cannot use super.apply(null, valueClasses), so allow the subclass to call super(valueClasses).
-        valueClasses = (valueClasses.length == 1 && valueClasses[0] instanceof Array) ? valueClasses[0] : valueClasses;
+        valueClasses = (valueClasses.length === 1 && valueClasses[0] instanceof Array) ? valueClasses[0] : valueClasses;
 
         super(valueClasses);
 
-        //@CHANGED - this was the first call in the constructor
-        //Typescript does not allow "this" to be called before super
+        // @CHANGED - this was the first call in the constructor
+        // Typescript does not allow "this" to be called before super
         this._target = target;
     }
 
@@ -50,7 +50,9 @@ export class DeluxeSignal extends PrioritySignal {
     }
 
     public set target(value: Object) {
-        if (value == this._target) return;
+        if (value === this._target) {
+            return;
+        }
         this.removeAll();
         this._target = value;
     }
@@ -63,27 +65,32 @@ export class DeluxeSignal extends PrioritySignal {
     /*override*/
     public dispatch(...valueObjects): void {
         // Validate value objects against pre-defined value classes.
-        var numValueClasses: number = this._valueClasses.length;
-        var numValueObjects: number = valueObjects.length;
+        let numValueClasses: number = this._valueClasses.length;
+        let numValueObjects: number = valueObjects.length;
 
         if (numValueObjects < numValueClasses) {
-            throw new Error('Incorrect number of arguments. ' +
-                'Expected at least ' + numValueClasses + ' but received ' +
-                numValueObjects + '.');
+            throw new Error(
+                "Incorrect number of arguments. " +
+                "Expected at least " + numValueClasses + " but received " +
+                numValueObjects + "."
+            );
         }
 
         // Cannot dispatch differently typed objects than declared classes.
-        for (var i: number = 0; i < numValueClasses; i++) {
+        for (let i: number = 0; i < numValueClasses; i++) {
             // Optimized for the optimistic case that values are correct.
-            if (valueObjects[i] === null || valueObjects[i].constructor === this._valueClasses[i])
+            if (valueObjects[i] === null || valueObjects[i].constructor === this._valueClasses[i]) {
                 continue;
+            }
 
-            throw new Error('Value object <' + valueObjects[i]
-                + '> is not an instance of <' + this._valueClasses[i] + '>.');
+            throw new Error(
+                "Value object <" + valueObjects[i] +
+                "> is not an instance of <" + this._valueClasses[i] + ">."
+            );
         }
 
         // Extract and clone event object if necessary.
-        var event: IEvent = (<IEvent>valueObjects[0]);
+        let event: IEvent = (<IEvent>valueObjects[0]);
         if (event) {
             if (event.target) {
                 event = event.clone();
@@ -96,29 +103,34 @@ export class DeluxeSignal extends PrioritySignal {
         }
 
         // Broadcast to listeners.
-        var slotsToProcess: SlotList = this.slots;
+        let slotsToProcess: SlotList = this.slots;
         while (slotsToProcess.nonEmpty) {
             slotsToProcess.head.execute(valueObjects);
             slotsToProcess = slotsToProcess.tail;
         }
 
         // Bubble the event as far as possible.
-        if (!event || !event.bubbles) return;
+        if (!event || !event.bubbles) {
+            return;
+        }
 
-        var currentTarget: Object = this.target;
+        let currentTarget: Object = this.target;
 
         while (currentTarget && currentTarget.hasOwnProperty("parent")) {
-            currentTarget = currentTarget["parent"];
-            if (!currentTarget) break;
+            currentTarget = (<any>currentTarget).parent;
 
-            if ((<IBubbleEventHandler>currentTarget).onEventBubbled !== undefined) {
+            if (!currentTarget) {
+                break;
+            }
+
+            if ((<any>currentTarget).onEventBubbled !== null) {
                 event.currentTarget = currentTarget;
+
                 // onEventBubbled() can stop the bubbling by returning false.
-                if ((<IBubbleEventHandler>currentTarget).onEventBubbled(event))
+                if (!(<any>currentTarget).onEventBubbled(event)) {
                     break;
+                }
             }
         }
     }
-
 }
-
