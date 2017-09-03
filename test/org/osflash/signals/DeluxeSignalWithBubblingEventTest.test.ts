@@ -32,6 +32,7 @@ describe("DeluxeSignalWithBubblingEventTest", () => {
     });
 
     afterEach(() => {
+        theParent = null;
         theChild = null;
         theGrandChild = null;
         cancelTimeout = null;
@@ -57,13 +58,11 @@ describe("DeluxeSignalWithBubblingEventTest", () => {
         theGrandChild.completed.dispatch(event);
     });
 
-    // TODO: returning after throwing an error is not possible in TS
-    it.skip("returning_false_from_onEventBubbled_should_stop_bubbling()", () => {
+    it("returning_false_from_onEventBubbled_should_stop_bubbling()", () => {
         let bubbleHater: BubbleHater = new BubbleHater();
         theChild = new Child(bubbleHater, "bubblePopper");
         theChild.popsBubbles = true;
         theGrandChild = new Child(theChild, "bubbleBlower");
-
         let bubblingEvent: IEvent = new GenericEvent(true);
         // Will only complete without error if theChild pops the bubble.
         theGrandChild.completed.dispatch(bubblingEvent);
@@ -77,7 +76,6 @@ describe("DeluxeSignalWithBubblingEventTest", () => {
             // Changing popsBubbles to false will fail the test nicely.
             theChild.popsBubbles = false;
             theGrandChild = new Child(this.theChild, "bubbleBlower");
-
             let bubblingEvent: IEvent = new GenericEvent(true);
             // Because theChild didn"t pop the bubble, this causes bubbleHater to throw an error.
             theGrandChild.completed.dispatch(bubblingEvent);
