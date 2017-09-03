@@ -6,7 +6,7 @@ import { ISlot } from "../../../../src/org/osflash/signals/ISlot";
 import { AsyncUtil } from "../../../util/AsyncUtil";
 import { checkGenericEvent } from "../../../util/TestBase";
 
-describe("SlotTest", () => {
+describe("SlotPauseResumeTest", () => {
 
     let signal: Signal;
     let async: AsyncUtil = new AsyncUtil();
