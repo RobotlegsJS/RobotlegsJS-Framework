@@ -172,7 +172,6 @@ describe("SlotTest", () => {
     it("toString_should_return_string", () => {
         slot = new Slot(listener0, signal);
         assert.isString(slot.toString());
-        console.log(slot.toString());
     });
 
     function listener0(): void {
