@@ -119,10 +119,6 @@ export class DeluxeSignal extends PrioritySignal {
         while (currentTarget && currentTarget.hasOwnProperty("parent")) {
             currentTarget = (<any>currentTarget).parent;
 
-            if (!currentTarget) {
-                break;
-            }
-
             if ((<any>currentTarget).onEventBubbled !== null) {
                 event.currentTarget = currentTarget;
 
