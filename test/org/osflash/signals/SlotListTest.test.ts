@@ -55,6 +55,10 @@ describe("SlotListTest", () => {
         assert.throws(() => new SlotList(null, listOfA), Error);
     });
 
+    it("constructing_with_null_head_and_null_tail_throws_error", () => {
+        assert.throws(() => new SlotList(null, null), Error);
+    });
+
     it("list_with_one_listener_contains_it", () => {
         assert.isTrue(listOfA.contains(listenerA));
     });
