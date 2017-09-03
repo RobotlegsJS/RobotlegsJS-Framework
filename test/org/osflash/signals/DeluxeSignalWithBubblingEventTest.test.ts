@@ -68,14 +68,13 @@ describe("DeluxeSignalWithBubblingEventTest", () => {
         theGrandChild.completed.dispatch(bubblingEvent);
     });
 
-    // TODO: Check why the error is not thrown
-    it.skip("returning_true_from_onEventBubbled_should_continue_bubbling()", () => {
+    it("returning_true_from_onEventBubbled_should_continue_bubbling()", () => {
         assert.throws(() => {
             let bubbleHater: BubbleHater = new BubbleHater();
             theChild = new Child(bubbleHater, "bubblePopper");
             // Changing popsBubbles to false will fail the test nicely.
             theChild.popsBubbles = false;
-            theGrandChild = new Child(this.theChild, "bubbleBlower");
+            theGrandChild = new Child(theChild, "bubbleBlower");
             let bubblingEvent: IEvent = new GenericEvent(true);
             // Because theChild didn"t pop the bubble, this causes bubbleHater to throw an error.
             theGrandChild.completed.dispatch(bubblingEvent);
