@@ -44,6 +44,14 @@ describe("SlotListTest", () => {
         assert.equal(0, SlotList.NIL.length);
     });
 
+    it("NIL_can_not_append_a_new_slot", () => {
+        let list: SlotList = SlotList.NIL.append(slotA);
+        // list should be a new SlotList with only one element
+        assert.equal(1, list.length);
+        // append a element to NIL should not change it's length
+        assert.equal(0, SlotList.NIL.length);
+    });
+
     it("tail_defaults_to_NIL_if_omitted_in_constructor", () => {
         const noTail: SlotList = new SlotList(slotA);
         assert.equal(SlotList.NIL, noTail.tail);
