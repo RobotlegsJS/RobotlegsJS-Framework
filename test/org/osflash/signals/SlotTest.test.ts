@@ -69,6 +69,13 @@ describe("SlotTest", () => {
         assert.deepEqual(received, expected);
     });
 
+    it("execute0_with_once_enabled_should_remove_listener", () => {
+        expected = [];
+        slot = new Slot(listener0, signal, true);
+        slot.execute0();
+        assert.deepEqual(received, expected);
+    });
+
     it("execute1_should_not_call_listener_when_disabled", () => {
         slot = new Slot(listener1, signal);
         slot.enabled = false;
@@ -96,6 +103,13 @@ describe("SlotTest", () => {
         expected = ["The answer is", 42, "not anymore?"];
         slot = new Slot(listener3, signal);
         slot.params = [expected[1], expected[2]];
+        slot.execute1(expected[0]);
+        assert.deepEqual(received, expected);
+    });
+
+    it("execute1_with_once_enabled_should_remove_listener", () => {
+        expected = [42];
+        slot = new Slot(listener1, signal, true);
         slot.execute1(expected[0]);
         assert.deepEqual(received, expected);
     });
