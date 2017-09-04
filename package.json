@@ -5,13 +5,33 @@
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
   "scripts": {
-    "test": "karma start --single-run",
-    "mocha": "mocha test/**/*.test.ts --require ts-node/register",
+    "test": "nyc mocha",
+    "karma": "karma start --single-run",
     "autoformat": "tsfmt -r --useTsconfig tsconfig.test.json",
     "prepublish": "tsc -d && publish-please guard",
     "clean-up": "rm -rf coverage && rm -rf lib",
     "publish-please": "npm run autoformat && npm run clean-up && npm run build && publish-please",
     "build": "webpack --env.production"
+  },
+  "nyc": {
+    "include": [
+      "src/**/*.ts"
+    ],
+    "exclude": [
+      "test"
+    ],
+    "extension": [
+      ".ts"
+    ],
+    "require": [
+      "ts-node/register"
+    ],
+    "reporter": [
+      "text-summary",
+      "lcov"
+    ],
+    "sourceMap": true,
+    "instrument": true
   },
   "repository": {
     "type": "git",
@@ -64,12 +84,14 @@
     "karma-sourcemap-writer": "^0.1.2",
     "karma-webpack": "^2.0.4",
     "mocha": "^3.5.0",
+    "nyc": "^11.1.0",
     "publish-please": "^2.3.1",
     "reflect-metadata": "^0.1.10",
     "remap-istanbul": "^0.9.5",
     "rimraf": "^2.6.1",
     "sinon": "^3.2.1",
     "sinon-chai": "^2.13.0",
+    "source-map-support": "^0.4.17",
     "ts-loader": "^2.3.4",
     "ts-node": "^3.3.0",
     "tslint": "^5.7.0",
