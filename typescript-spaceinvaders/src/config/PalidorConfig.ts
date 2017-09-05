@@ -20,13 +20,13 @@ import { injectable, IConfig, inject, IContext, IEventDispatcher } from "@robotl
 export class PalidorConfig implements IConfig {
 
     @inject(IContext)
-    public context: IContext;
+    private context: IContext;
 
     @inject(IFlowManager)
-    public flowManager: IFlowManager;
+    private flowManager: IFlowManager;
 
     @inject(IEventDispatcher)
-    public eventDispatcher: IEventDispatcher;
+    private eventDispatcher: IEventDispatcher;
 
     public configure(): void {
         this.mapPalidor();

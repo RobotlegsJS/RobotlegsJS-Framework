@@ -8,13 +8,13 @@ import { inject, injectable, ICommand } from "@robotlegsjs/core";
 export class StartGameCommand implements ICommand {
 
     @inject(GameModel)
-    public gameModel: GameModel;
+    private gameModel: GameModel;
 
     @inject(GameService)
-    public gameService: GameService;
+    private gameService: GameService;
 
     @inject(FlowService)
-    public flowService: FlowService;
+    private flowService: FlowService;
 
     // @inject(SharedObjectManager)
     // public sharedObjectManager:SharedObjectManager;

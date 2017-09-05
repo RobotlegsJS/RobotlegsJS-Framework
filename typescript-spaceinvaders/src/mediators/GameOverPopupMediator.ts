@@ -9,10 +9,10 @@ import { injectable, inject } from "@robotlegsjs/core";
 export class GameOverPopupMediator extends Mediator<GameOverPopup> {
 
     @inject(FlowService)
-    public flowService: FlowService;
+    private flowService: FlowService;
 
     @inject(GameService)
-    public gameService: GameService;
+    private gameService: GameService;
 
     public initialize(): void {
         this.eventMap.mapListener(this.view.homeButton, "click", this.homeButton_onClick, this);

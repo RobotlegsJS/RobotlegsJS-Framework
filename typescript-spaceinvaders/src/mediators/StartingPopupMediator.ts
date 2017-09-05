@@ -9,10 +9,10 @@ import { injectable, inject } from "@robotlegsjs/core";
 export class StartingPopupMediator extends Mediator<StartingPopup> {
 
     @inject(GameService)
-    public gameService: GameService;
+    private gameService: GameService;
 
     @inject(FlowService)
-    public flowService: FlowService;
+    private flowService: FlowService;
 
     private _count: number;
 

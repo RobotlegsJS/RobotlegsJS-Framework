@@ -7,10 +7,10 @@ import { ICommand, injectable, inject } from "@robotlegsjs/core";
 export class IncreaseLevelCommand implements ICommand {
 
     @inject(GameModel)
-    public model: GameModel;
+    private model: GameModel;
 
     @inject(GameService)
-    public gameService: GameService;
+    private gameService: GameService;
 
     public execute(): void {
         this.model.level += 1;

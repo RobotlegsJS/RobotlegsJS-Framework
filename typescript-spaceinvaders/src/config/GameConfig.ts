@@ -21,10 +21,10 @@ import { IConfig, injectable, inject, IEventCommandMap, IContext } from "@robotl
 export class GameConfig implements IConfig {
 
     @inject(IContext)
-    public context: IContext;
+    private context: IContext;
 
     @inject(IEventCommandMap)
-    public commandMap: IEventCommandMap;
+    private commandMap: IEventCommandMap;
 
     public configure(): void {
         EntityPool.init();

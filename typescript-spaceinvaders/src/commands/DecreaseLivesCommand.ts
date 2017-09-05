@@ -7,10 +7,10 @@ import { ICommand, inject, injectable } from "@robotlegsjs/core";
 export class DecreaseLivesCommand implements ICommand {
 
     @inject(GameModel)
-    public model: GameModel;
+    private model: GameModel;
 
     @inject(GameService)
-    public gameService: GameService;
+    private gameService: GameService;
 
     public execute(): void {
         this.model.lives -= 1;

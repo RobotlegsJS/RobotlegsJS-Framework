@@ -13,10 +13,10 @@ import { injectable, inject } from "@robotlegsjs/core";
 export class BattleFieldComponentMediator extends Mediator<BattleFieldComponent> {
 
     @inject(LevelModel)
-    public levelModel: LevelModel;
+    private levelModel: LevelModel;
 
     @inject(GameManager)
-    public gameManager: GameManager;
+    private gameManager: GameManager;
 
     private _displays: Map<Entity, Sprite>;
 
@@ -37,27 +37,27 @@ export class BattleFieldComponentMediator extends Mediator<BattleFieldComponent>
     }
 
     private game_onGameOver(e: any): void {
-        document.removeEventListener("keydown", this.onKeyDownOnMovement);
-        document.removeEventListener("keyup", this.onKeyUpOnMovement);
+        document.removeEventListener("keydown", this.onKeyDownOnMovement.bind(this));
+        document.removeEventListener("keyup", this.onKeyUpOnMovement.bind(this));
         this._paused = true;
     }
 
     private game_onPauseGame(e: any): void {
-        document.removeEventListener("keydown", this.onKeyDownOnMovement);
-        document.removeEventListener("keyup", this.onKeyUpOnMovement);
+        document.removeEventListener("keydown", this.onKeyDownOnMovement.bind(this));
+        document.removeEventListener("keyup", this.onKeyUpOnMovement.bind(this));
         this._paused = true;
     }
 
     private game_onResumeGame(e: any): void {
         this.gameManager.resume();
-        document.addEventListener("keydown", this.onKeyDownOnMovement);
-        document.addEventListener("keyup", this.onKeyUpOnMovement);
+        document.addEventListener("keydown", this.onKeyDownOnMovement.bind(this));
+        document.addEventListener("keyup", this.onKeyUpOnMovement.bind(this));
         this._paused = false;
 
-        window.requestAnimationFrame(this.onEnterFrame);
+        window.requestAnimationFrame(this.onEnterFrame.bind(this));
     }
 
-    private onKeyDownOnMovement = (e: KeyboardEvent, ob: any = this) => {
+    private onKeyDownOnMovement(e: KeyboardEvent) {
         if (e.keyCode === 37 || e.keyCode === 65) {
             this.gameManager.cannonMovement(-3);
         } else if (e.keyCode === 39 || e.keyCode === 68) {
@@ -67,7 +67,7 @@ export class BattleFieldComponentMediator extends Mediator<BattleFieldComponent>
         }
     }
 
-    private onKeyUpOnMovement = (e: KeyboardEvent, ob: any = this) => {
+    private onKeyUpOnMovement(e: KeyboardEvent) {
         if (e.keyCode === 37 || e.keyCode === 65 || e.keyCode === 39 || e.keyCode === 68) {
             this.gameManager.cannonMovement(0);
         } else if (e.keyCode === 32 || e.keyCode === 83) {
@@ -75,15 +75,15 @@ export class BattleFieldComponentMediator extends Mediator<BattleFieldComponent>
         }
     }
 
-    private onEnterFrame = (e: any, obThis: any = this) => {
-        if (obThis._paused === true) {
+    private onEnterFrame(e: any) {
+        if (this._paused === true) {
             return;
         }
-        obThis.gameManager.update();
-        if (obThis.levelModel.toAdd.length > 0 || obThis.levelModel.toRemove.length > 0) {
-            obThis.updateDisplays();
+        this.gameManager.update();
+        if (this.levelModel.toAdd.length > 0 || this.levelModel.toRemove.length > 0) {
+            this.updateDisplays();
         }
-        window.requestAnimationFrame(obThis.onEnterFrame);
+        window.requestAnimationFrame(this.onEnterFrame.bind(this));
     }
 
     private game_onUpdateBattleField(e: any): void {

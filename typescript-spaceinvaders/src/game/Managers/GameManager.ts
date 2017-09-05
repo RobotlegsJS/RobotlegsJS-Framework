@@ -16,13 +16,13 @@ import { injectable, inject } from "@robotlegsjs/core";
 export class GameManager {
 
     @inject(GameModel)
-    public gameModel: GameModel;
+    private gameModel: GameModel;
 
     @inject(LevelModel)
-    public model: LevelModel;
+    private model: LevelModel;
 
     @inject(GameService)
-    public service: GameService;
+    private service: GameService;
 
     private _cannonDirection: number;
 

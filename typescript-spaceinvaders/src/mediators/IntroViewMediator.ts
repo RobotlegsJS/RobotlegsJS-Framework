@@ -9,10 +9,10 @@ import { inject, injectable } from "@robotlegsjs/core";
 export class IntroViewMediator extends Mediator<IntroView> {
 
     @inject(FlowService)
-    public flowService: FlowService;
+    private flowService: FlowService;
 
     public initialize(): void {
-        setTimeout(this.onTimerOut, 3000, this);
+        setTimeout(this.onTimerOut.bind(this), 3000);
 
         let loader = PIXI.loader
             .add(AtlasKeys.SPPNG)
@@ -20,7 +20,7 @@ export class IntroViewMediator extends Mediator<IntroView> {
             .load(this.onLoad);
     }
 
-    public onLoad = (loader: any, resources: any, obThis: any = this) => {
+    public onLoad() {
         AtlasKeys.update();
     }
 
@@ -28,7 +28,7 @@ export class IntroViewMediator extends Mediator<IntroView> {
         this.eventMap.unmapListeners();
     }
 
-    private onTimerOut = (obThis: any) => {
-        obThis.flowService.setHomeView();
+    private onTimerOut() {
+        this.flowService.setHomeView();
     }
 }

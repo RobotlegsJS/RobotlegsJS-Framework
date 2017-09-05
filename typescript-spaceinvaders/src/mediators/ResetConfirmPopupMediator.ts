@@ -9,7 +9,7 @@ import { injectable, inject, EventDispatcher } from "@robotlegsjs/core";
 export class ResetConfirmPopupMediator extends Mediator<ResetConfirmPopup> {
 
     @inject(FlowService)
-    public flowService: FlowService;
+    private flowService: FlowService;
 
     public initialize(): void {
         this.eventMap.mapListener(this.view.confirmButton, "click", this.confirmButton_onClick, this);

@@ -8,10 +8,10 @@ import { ICommand, inject, injectable } from "@robotlegsjs/core";
 export class GameOverCommand implements ICommand {
 
     @inject(GameModel)
-    public model: GameModel;
+    private model: GameModel;
 
     @inject(FlowService)
-    public flowService: FlowService;
+    private flowService: FlowService;
 
     /*@inject(SharedObjectManager)
     public  sharedObjectManager:SharedObjectManager;*/

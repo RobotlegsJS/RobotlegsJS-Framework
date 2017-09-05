@@ -7,10 +7,10 @@ import { ICommand, injectable, inject } from "@robotlegsjs/core";
 export class RetryGameCommand implements ICommand {
 
     @inject(GameModel)
-    public gameModel: GameModel;
+    private gameModel: GameModel;
 
     @inject(GameService)
-    public gameService: GameService;
+    private gameService: GameService;
 
     public execute(): void {
         this.gameService.clearBattleField();

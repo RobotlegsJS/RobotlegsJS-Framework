@@ -11,13 +11,13 @@ import { injectable, inject } from "@robotlegsjs/core";
 export class HUDGameComponentMediator extends Mediator<HUDGameComponent> {
 
     @inject(GameModel)
-    public model: GameModel;
+    private model: GameModel;
 
     @inject(GameService)
-    public gameService: GameService;
+    private gameService: GameService;
 
     @inject(FlowService)
-    public flowService: FlowService;
+    private flowService: FlowService;
 
     public initialize(): void {
         this.eventMap.mapListener(this.view.pauseButton, "click", this.pauseButton_onClick, this);

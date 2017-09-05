@@ -8,7 +8,7 @@ import { inject, injectable } from "@robotlegsjs/core";
 export class InfoPopupMediator extends Mediator<InfoPopup> {
 
     @inject(FlowService)
-    public service: FlowService;
+    private service: FlowService;
 
     public initialize(): void {
         this.eventMap.mapListener(this.view.closeButton, "click", this.closeButton_onClick, this);

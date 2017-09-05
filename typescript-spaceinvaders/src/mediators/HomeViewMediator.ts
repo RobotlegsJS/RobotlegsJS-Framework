@@ -8,7 +8,7 @@ import { injectable, inject, EventDispatcher } from "@robotlegsjs/core";
 export class HomeViewMediator extends Mediator<HomeView> {
 
     @inject(FlowService)
-    public flowService: FlowService;
+    private flowService: FlowService;
 
     public initialize(): void {
         this.eventMap.mapListener(this.view.startButton, "click", this.startButton_onClick, this);

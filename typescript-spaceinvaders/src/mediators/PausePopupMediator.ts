@@ -9,10 +9,10 @@ import { Mediator } from "@robotlegsjs/pixi";
 export class PausePopupMediator extends Mediator<PausePopup> {
 
     @inject(FlowService)
-    public flowService: FlowService;
+    private flowService: FlowService;
 
     @inject(GameService)
-    public gameService: GameService;
+    private gameService: GameService;
 
     public initialize(): void {
         this.eventMap.mapListener(this.view.homeButton, "click", this.homeButton_onClick, this);

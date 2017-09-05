@@ -29,7 +29,7 @@ import { injectable, IConfig, inject } from "@robotlegsjs/core";
 export class ViewsConfig implements IConfig {
 
     @inject(IMediatorMap)
-    public mediatorMap: IMediatorMap;
+    private mediatorMap: IMediatorMap;
 
     public configure(): void {
         this.mapMediators();

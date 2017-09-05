@@ -7,10 +7,10 @@ import { ICommand, inject, injectable } from "@robotlegsjs/core";
 export class IncreasePointsCommand implements ICommand {
 
     @inject(GameModel)
-    public model: GameModel;
+    private model: GameModel;
 
     @inject(GameService)
-    public gameService: GameService;
+    private gameService: GameService;
 
     public execute(): void {
         this.model.score += 100;
