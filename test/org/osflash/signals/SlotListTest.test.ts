@@ -9,7 +9,6 @@ import { SlotList } from "../../../../src/org/osflash/signals/SlotList";
 import { PrioritySignal } from "../../../../src/org/osflash/signals/PrioritySignal";
 
 describe("SlotListTest", () => {
-
     let signal: Signal;
     let listenerA: Function;
     let listenerB: Function;
@@ -24,14 +23,10 @@ describe("SlotListTest", () => {
 
     beforeEach(() => {
         signal = new Signal();
-        listenerA = function(e: any = null): void {
-        };
-        listenerB = function(e: any = null): void {
-        };
-        listenerC = function(e: any = null): void {
-        };
-        listenerD = function(e: any = null): void {
-        };
+        listenerA = function(e: any = null): void {};
+        listenerB = function(e: any = null): void {};
+        listenerC = function(e: any = null): void {};
+        listenerD = function(e: any = null): void {};
         slotA = new Slot(listenerA, signal);
         slotB = new Slot(listenerB, signal);
         slotC = new Slot(listenerC, signal);

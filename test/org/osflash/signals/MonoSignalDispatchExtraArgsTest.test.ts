@@ -18,7 +18,7 @@ describe("MonoSignalDispatchExtraArgsTest", () => {
         completed.removeAll();
         completed = null;
     });
-    it("dispatch_extra_args_should_call_listener_with_extra_args()", (done) => {
+    it("dispatch_extra_args_should_call_listener_with_extra_args()", done => {
         completed.add(async.add(onCompleted, 10, done));
         completed.dispatch(22, "done", new Date());
     });

@@ -10,9 +10,7 @@ import { Signal } from "../../../../src/org/osflash/signals/Signal";
 import { AsyncUtil } from "../../../util/AsyncUtil";
 import { checkGenericEvent, checkSprite } from "../../../util/TestBase";
 
-
 describe("SignalTest", () => {
-
     let signal: ISignal;
     let async: AsyncUtil = new AsyncUtil();
 
@@ -20,7 +18,7 @@ describe("SignalTest", () => {
         signal = new Signal();
     });
 
-    it("dispatch_should_pass_event_to_listener_but_not_set_signal_or_target_properties", (done) => {
+    it("dispatch_should_pass_event_to_listener_but_not_set_signal_or_target_properties", done => {
         signal.add(async.add(checkGenericEvent, 10, done));
         signal.dispatch(new GenericEvent());
     });
@@ -39,7 +37,7 @@ describe("SignalTest", () => {
         signal.add(redispatchSignal.dispatch);
     });
 
-    it("slot_params_should_be_sent_through_to_listener", (done) => {
+    it("slot_params_should_be_sent_through_to_listener", done => {
         let slot: ISlot;
 
         function assertResults(num: number, str: string, sprite: Sprite): void {
@@ -54,11 +52,12 @@ describe("SignalTest", () => {
         signal.dispatch();
     });
 
-    it("slot_params_with_with_10_params_should_be_sent_through_to_listener", (done) => {
+    it("slot_params_with_with_10_params_should_be_sent_through_to_listener", done => {
         // Test the function.apply - maying sure we get everything we ask for.
         let slot: ISlot;
 
-        function listener(num: number,
+        function listener(
+            num: number,
             str: string,
             sprite: Sprite,
             alpha0: string,
@@ -67,7 +66,8 @@ describe("SignalTest", () => {
             alpha3: string,
             alpha4: string,
             alpha5: string,
-            alpha6: string): void {
+            alpha6: string
+        ): void {
             assert.equal(num, 12345);
             assert.equal(str, "text");
             assert.equal(sprite, slot.params[2]);
@@ -81,7 +81,18 @@ describe("SignalTest", () => {
         }
 
         slot = signal.add(async.add(listener, 10, done));
-        slot.params = [12345, "text", new Sprite(), "a", "b", "c", "d", "e", "f", "g"];
+        slot.params = [
+            12345,
+            "text",
+            new Sprite(),
+            "a",
+            "b",
+            "c",
+            "d",
+            "e",
+            "f",
+            "g"
+        ];
 
         signal.dispatch();
     });

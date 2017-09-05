@@ -1,6 +1,8 @@
 export { DeluxeSignal } from "./org/osflash/signals/DeluxeSignal";
 export { GenericEvent } from "./org/osflash/signals/events/GenericEvent";
-export { IBubbleEventHandler } from "./org/osflash/signals/events/IBubbleEventHandler";
+export {
+    IBubbleEventHandler
+} from "./org/osflash/signals/events/IBubbleEventHandler";
 export { IEvent } from "./org/osflash/signals/events/IEvent";
 export { IOnceSignal } from "./org/osflash/signals/IOnceSignal";
 export { IPrioritySignal } from "./org/osflash/signals/IPrioritySignal";

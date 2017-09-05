@@ -7,7 +7,6 @@ import { MonoSignal } from "../../../../src/org/osflash/signals/MonoSignal";
 import { Signal } from "../../../../src/org/osflash/signals/Signal";
 
 describe("MonoSignalDispatchArgsTest", () => {
-
     let async: AsyncUtil = new AsyncUtil();
 
     it("dispatch_two_correct_value_objects_should_succeed()", () => {
@@ -27,14 +26,18 @@ describe("MonoSignalDispatchArgsTest", () => {
         signal.dispatch(new Date(), [], "extra value object");
     });
 
-    it("dispatch_values_with_no_value_classes_defined_should_pass_to_listener()", (done) => {
+    it("dispatch_values_with_no_value_classes_defined_should_pass_to_listener()", done => {
         let signalNoValueClasses: Signal = new Signal();
         signalNoValueClasses.add(async.add(checkDispatchedValues, 10, done));
         signalNoValueClasses.dispatch(22, "done", new Date());
     });
 
     function checkDispatchedValues(a: number, b: string, c: Date): void {
-        assert.equal(3, arguments.length, "correct number of arguments were dispatched");
+        assert.equal(
+            3,
+            arguments.length,
+            "correct number of arguments were dispatched"
+        );
         assert.equal(22, a, "the uint was dispatched");
         assert.equal("done", b, "the String was dispatched");
         assert.isTrue(c instanceof Date, "a Date was dispatched");
@@ -48,9 +51,9 @@ describe("MonoSignalDispatchArgsTest", () => {
     });
 
     it("dispatch_strict_type_checking_with_inheritance()", () => {
-        class Base { }
-        class Inherited1 extends Base { }
-        class Inherited2 extends Inherited1 { }
+        class Base {}
+        class Inherited1 extends Base {}
+        class Inherited2 extends Inherited1 {}
 
         let signal: Signal = new Signal(Base);
         assert.throws(() => signal.dispatch(5), Error);

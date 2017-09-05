@@ -6,7 +6,6 @@ import { Signal } from "../../../../src/org/osflash/signals/Signal";
 import { AsyncUtil } from "../../../util/AsyncUtil";
 
 describe("SignalDispatchExtraArgsTest", () => {
-
     let async: AsyncUtil = new AsyncUtil();
 
     let completed: Signal;
@@ -20,7 +19,7 @@ describe("SignalDispatchExtraArgsTest", () => {
         completed = null;
     });
 
-    it("dispatch_extra_args_should_call_listener_with_extra_args", (done) => {
+    it("dispatch_extra_args_should_call_listener_with_extra_args", done => {
         completed.add(async.add(onCompleted, 10, done));
         completed.dispatch(22, "done", new Date());
     });

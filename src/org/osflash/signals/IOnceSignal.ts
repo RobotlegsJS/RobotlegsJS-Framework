@@ -9,9 +9,10 @@ export interface IOnceSignal {
      * An optional array of classes defining the types of parameters sent to listeners.
      */
     valueClasses: any[];
-    /*function set valueClasses(value:Array):void;*/
 
-    /** The current number of listeners for the signal. */
+    /**
+     * The current number of listeners for the signal.
+     */
     numListeners: number;
 
     /**

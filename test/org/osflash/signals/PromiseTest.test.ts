@@ -5,7 +5,6 @@ import { assert } from "chai";
 import { Promise } from "../../../../src/org/osflash/signals/Promise";
 
 describe("PromiseTest", () => {
-
     let promise: Promise;
 
     beforeEach(() => {
@@ -72,5 +71,4 @@ describe("PromiseTest", () => {
             promise.dispatch();
         }, Error);
     });
-
 });

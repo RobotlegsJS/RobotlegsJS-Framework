@@ -5,7 +5,6 @@ import { assert } from "chai";
 import { MonoSignal } from "../../../../src/org/osflash/signals/MonoSignal";
 
 describe("MonoSignalValueClassesTest", () => {
-
     let signal: MonoSignal;
 
     beforeEach(() => {

@@ -7,7 +7,8 @@
   "scripts": {
     "test": "nyc mocha",
     "karma": "karma start --single-run",
-    "autoformat": "tsfmt -r --useTsconfig tsconfig.test.json",
+    "autoformat": "prettier --config .prettierrc --write {src,test}/**/{*,*.test}.ts",
+    "tslint-check": "tslint-config-prettier-check ./tslint.json",
     "prepublish": "tsc -d && publish-please guard",
     "clean-up": "rm -rf coverage && rm -rf lib",
     "publish-please": "npm run autoformat && npm run clean-up && npm run build && publish-please",
@@ -85,6 +86,7 @@
     "karma-webpack": "^2.0.4",
     "mocha": "^3.5.0",
     "nyc": "^11.1.0",
+    "prettier": "^1.6.1",
     "publish-please": "^2.3.1",
     "reflect-metadata": "^0.1.10",
     "remap-istanbul": "^0.9.5",
@@ -95,8 +97,8 @@
     "ts-loader": "^2.3.4",
     "ts-node": "^3.3.0",
     "tslint": "^5.7.0",
+    "tslint-config-prettier": "^1.5.0",
     "typescript": "^2.5.2",
-    "typescript-formatter": "^6.0.0",
     "webpack": "^3.5.5",
     "webpack-dev-server": "^2.7.1"
   }

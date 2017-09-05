@@ -1,5 +1,4 @@
-export class Sprite {
-}
+export class Sprite {}
 
 export class MockEvent {
     constructor(public type: string) {
@@ -7,5 +6,4 @@ export class MockEvent {
     }
 }
 
-export class MockMouseEvent extends MockEvent {
-}
+export class MockMouseEvent extends MockEvent {}

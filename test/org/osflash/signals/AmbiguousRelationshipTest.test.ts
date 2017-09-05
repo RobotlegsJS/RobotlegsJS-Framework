@@ -6,7 +6,6 @@ import { Signal } from "../../../../src/org/osflash/signals/Signal";
 import { failIfCalled } from "../../../util/TestBase";
 
 describe("AmbiguousRelationshipTest", () => {
-
     let target: Object;
     let instance: Signal;
 

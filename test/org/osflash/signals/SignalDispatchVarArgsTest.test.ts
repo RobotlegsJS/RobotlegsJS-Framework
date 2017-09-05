@@ -6,7 +6,6 @@ import { Signal } from "../../../../src/org/osflash/signals/Signal";
 import { ISignal } from "../../../../src/org/osflash/signals/ISignal";
 
 describe("SignalDispatchVarArgsTest", () => {
-
     let signal: ISignal;
 
     beforeEach(() => {
@@ -17,7 +16,6 @@ describe("SignalDispatchVarArgsTest", () => {
         signal.removeAll();
         signal = null;
     });
-
 
     it("adding_vararg_at_0_should_not_throw_error()", () => {
         signal.add(handlerArgsAt0());
@@ -62,7 +60,11 @@ describe("SignalDispatchVarArgsTest", () => {
 
     function handlerArgsAt0(): Function {
         return function(...args): void {
-            assert.deepEqual([0, 1, 2, 3], args, "Arguments should be [0,1,2,3]");
+            assert.deepEqual(
+                [0, 1, 2, 3],
+                args,
+                "Arguments should be [0,1,2,3]"
+            );
             assert.equal(4, args.length, "Number of var arguments should be 4");
         };
     }
