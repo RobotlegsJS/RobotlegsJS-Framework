@@ -13,9 +13,9 @@ export class SlotList {
     public static NIL: SlotList = new SlotList(null, null);
 
     // Although those variables are not const, they would be if AS3 would handle it correctly.
-    private head: ISlot;
-    private tail: SlotList;
-    private nonEmpty: boolean = false;
+    public head: ISlot;
+    public tail: SlotList;
+    public nonEmpty: boolean = false;
 
     /**
      * Creates and returns a new SlotList object.
