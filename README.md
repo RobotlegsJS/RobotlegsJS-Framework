@@ -7,20 +7,20 @@
 [![Test Coverage](https://codeclimate.com/github/RonaldoSetzer/GAME-Minesweeper/badges/coverage.svg)](https://codeclimate.com/github/RonaldoSetzer/GAME-Minesweeper/coverage)
 ---
 
-![cover](img_cover_minesweeper_ts.png)
+![cover](media/img_cover_minesweeper_ts.png)
 
 This is a TypeScript open-source game.
 
 + **Category:** Puzzle.
 + **Platform:** Web.
 + **Language:** TypeScript.
-+ **Technologies:** PixiJs, RobotlegsJs, RobotlegsJs-Pixi, Palidor.
++ **Technologies:** PixiJs, RobotlegsJs, RobotlegsJs-Pixi, RobotlegsJs-Pisi-Palidor.
 
 * * *
 
 ### Gameplay
 
-![gif_ts](gif_minesweeper_ts_demo.gif)
+![gif_ts](media/gif_minesweeper_ts_demo.gif)
 
 * * *
 
@@ -38,6 +38,7 @@ npm run start
 + [PixiJs](http://www.pixijs.com/)
 + [RobotlegsJs](https://github.com/RobotlegsJS/RobotlegsJS)
 + [Robotlegs-Pixi](https://github.com/RobotlegsJS/RobotlegsJS-Pixi)
++ [Robotlegs-Pixi-Palidor](https://github.com/RobotlegsJS/RobotlegsJS-Pixi-Palidor)
 
 * * *
 
@@ -48,15 +49,15 @@ npm run start
 
 ### Game
 
-![screenshot01](img_ss_minesweeper_ts_01.png)
+![screenshot01](media/img_ss_minesweeper_ts_01.png)
 
-![screenshot02](img_ss_minesweeper_ts_02.png)
+![screenshot02](media/img_ss_minesweeper_ts_02.png)
 
 
 * * *
 
 ### Screenshots
-![screenshot01](img_game_minesweeper_ts.png)
+![screenshot01](media/img_game_minesweeper_ts.png)
 * * *
 
 **Ronaldo Santiago**  - Game Developer [ [portfolio](https://ronaldosetzer.github.io/portfolio/) ]
