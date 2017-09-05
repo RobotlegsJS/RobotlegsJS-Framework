@@ -44,5 +44,4 @@ describe("AmbiguousRelationshipTest", () => {
         instance.addOnce(failIfCalled);
         assert.equal(1, instance.numListeners);
     });
-
 });

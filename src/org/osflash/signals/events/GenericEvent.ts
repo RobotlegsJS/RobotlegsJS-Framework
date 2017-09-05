@@ -57,4 +57,3 @@ export class GenericEvent implements IEvent {
         return new GenericEvent(this._bubbles);
     }
 }
-

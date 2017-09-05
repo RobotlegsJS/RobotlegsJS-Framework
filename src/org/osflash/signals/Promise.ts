@@ -8,7 +8,7 @@ export class Promise extends OnceSignal {
     /** @inheritDoc */
     /*override*/
     public addOnce(listener: Function): ISlot {
-        var slot: ISlot = super.addOnce(listener);
+        let slot: ISlot = super.addOnce(listener);
         if (this.isDispatched) {
             slot.execute(this.valueObjects);
             slot.remove();
@@ -25,12 +25,10 @@ export class Promise extends OnceSignal {
     public dispatch(...valueObjects): void {
         if (this.isDispatched) {
             throw new Error("You cannot dispatch() a Promise more than once");
-        }
-        else {
+        } else {
             this.isDispatched = true;
             this.valueObjects = valueObjects;
             super.dispatch.apply(this, valueObjects);
         }
     }
 }
-

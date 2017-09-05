@@ -1,4 +1,5 @@
 import { ISlot } from "./ISlot";
+
 /**
  *
  */
@@ -41,6 +42,5 @@ export interface IOnceSignal {
     /**
      * Unsubscribes all listeners from the signal.
      */
-    removeAll(): void
+    removeAll(): void;
 }
-
