@@ -11,7 +11,6 @@ export interface ISlot {
      * The listener associated with this slot.
      */
     listener: Function;
-    /*function set listener(value:Function):void;*/
 
     /**
      * Allows the ISlot to inject parameters when dispatching. The params will be at
@@ -23,7 +22,6 @@ export interface ISlot {
      * function handler(name:String, num:int):void{}
      */
     params: any[];
-    /*function set params(value:Array):void;*/
 
     /**
      * Whether this slot is automatically removed after it has been used once.
@@ -41,7 +39,6 @@ export interface ISlot {
      * Whether the listener is called on execution. Defaults to true.
      */
     enabled: boolean;
-    /*function set enabled(value:Boolean):void;*/
 
     /**
      * Executes a listener without arguments.
