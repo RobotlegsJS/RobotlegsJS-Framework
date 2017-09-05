@@ -1,4 +1,4 @@
-///<reference types="mocha" />
+/// <reference types="mocha" />
 
 import "bluebird/js/browser/bluebird";
 import "es6-symbol/implement";

@@ -1,4 +1,5 @@
 import { ISlot } from "./ISlot";
+
 /**
  * The SlotList class represents an immutable list of Slot objects.
  *
@@ -10,6 +11,11 @@ export class SlotList {
      * Represents an empty list. Used as the list terminator.
      */
     public static NIL: SlotList = new SlotList(null, null);
+
+    // Although those variables are not const, they would be if AS3 would handle it correctly.
+    public head: ISlot;
+    public tail: SlotList;
+    public nonEmpty: boolean = false;
 
     /**
      * Creates and returns a new SlotList object.
@@ -26,40 +32,39 @@ export class SlotList {
      */
     constructor(head: ISlot, tail: SlotList = null) {
         if (!head && !tail) {
-            if (SlotList.NIL)
-                throw new Error('Parameters head and tail are null. Use the NIL element instead.');
+            if (SlotList.NIL) {
+                throw new Error("Parameters head and tail are null. Use the NIL element instead.");
+            }
 
-            //this is the NIL element as per definition
+            // this is the NIL element as per definition
             this.nonEmpty = false;
-        }
-        else if (!head) {
-            throw new Error('Parameter head cannot be null.');
-        }
-        else {
+        } else if (!head) {
+            throw new Error("Parameter head cannot be null.");
+        } else {
             this.head = head;
             this.tail = tail || SlotList.NIL;
             this.nonEmpty = true;
         }
     }
 
-    // Although those variables are not const, they would be if AS3 would handle it correctly.
-    public head: ISlot;
-    public tail: SlotList;
-    public nonEmpty: boolean = false;
-
     /**
      * The number of slots in the list.
      */
     public get length(): number {
-        if (!this.nonEmpty) return 0;
-        if (this.tail == SlotList.NIL) return 1;
+        if (!this.nonEmpty) {
+            return 0;
+        }
+
+        if (this.tail === SlotList.NIL) {
+            return 1;
+        }
 
         // We could cache the length, but it would make methods like filterNot unnecessarily complicated.
         // Instead we assume that O(n) is okay since the length property is used in rare cases.
         // We could also cache the length lazy, but that is a waste of another 8b per list node (at least).
 
-        var result: number = 0;
-        var p: SlotList = this;
+        let result: number = 0;
+        let p: SlotList = this;
 
         while (p.nonEmpty) {
             ++result;
@@ -89,22 +94,30 @@ export class SlotList {
      * @return    A list consisting of all elements of this list followed by slot.
      */
     public append(slot: ISlot): SlotList {
-        if (!slot) return this;
-        if (!this.nonEmpty) return new SlotList(slot);
+        if (!slot) {
+            return this;
+        }
+
+        if (!this.nonEmpty) {
+            return new SlotList(slot);
+        }
+
         // Special case: just one slot currently in the list.
-        if (this.tail == SlotList.NIL)
+        if (this.tail === SlotList.NIL) {
             return new SlotList(slot).prepend(this.head);
+        }
 
         // The list already has two or more slots.
         // We have to build a new list with cloned items because they are immutable.
-        var wholeClone: SlotList = new SlotList(this.head);
-        var subClone: SlotList = wholeClone;
-        var current: SlotList = this.tail;
+        let wholeClone: SlotList = new SlotList(this.head);
+        let subClone: SlotList = wholeClone;
+        let current: SlotList = this.tail;
 
         while (current.nonEmpty) {
             subClone = subClone.tail = new SlotList(current.head);
             current = current.tail;
         }
+
         // Append the new slot last.
         subClone.tail = new SlotList(slot);
         return wholeClone;
@@ -119,15 +132,20 @@ export class SlotList {
      * @throws ArgumentError <code>ArgumentError</code>: Parameter head cannot be null.
      */
     public insertWithPriority(slot: ISlot): SlotList {
-        if (!this.nonEmpty) return new SlotList(slot);
+        if (!this.nonEmpty) {
+            return new SlotList(slot);
+        }
 
-        var priority: number = slot.priority;
+        let priority: number = slot.priority;
+
         // Special case: new slot has the highest priority.
-        if (priority > this.head.priority) return this.prepend(slot);
+        if (priority > this.head.priority) {
+            return this.prepend(slot);
+        }
 
-        var wholeClone: SlotList = new SlotList(this.head);
-        var subClone: SlotList = wholeClone;
-        var current: SlotList = this.tail;
+        let wholeClone: SlotList = new SlotList(this.head);
+        let subClone: SlotList = wholeClone;
+        let current: SlotList = this.tail;
 
         // Find a slot with lower priority and go in front of it.
         while (current.nonEmpty) {
@@ -151,17 +169,21 @@ export class SlotList {
      * @return A list consisting of all elements of this list that do not have listener.
      */
     public filterNot(listener: Function): SlotList {
-        if (!this.nonEmpty || listener == null) return this;
+        if (!this.nonEmpty || listener == null) {
+            return this;
+        }
 
-        if (listener == this.head.listener) return this.tail;
+        if (listener === this.head.listener) {
+            return this.tail;
+        }
 
         // The first item wasn't a match so the filtered list will contain it.
-        var wholeClone: SlotList = new SlotList(this.head);
-        var subClone: SlotList = wholeClone;
-        var current: SlotList = this.tail;
+        let wholeClone: SlotList = new SlotList(this.head);
+        let subClone: SlotList = wholeClone;
+        let current: SlotList = this.tail;
 
         while (current.nonEmpty) {
-            if (current.head.listener == listener) {
+            if (current.head.listener === listener) {
                 // Splice out the current head.
                 subClone.tail = current.tail;
                 return wholeClone;
@@ -179,11 +201,17 @@ export class SlotList {
      * Determines whether the supplied listener Function is contained within this list
      */
     public contains(listener: Function): boolean {
-        if (!this.nonEmpty) return false;
+        if (!this.nonEmpty) {
+            return false;
+        }
 
-        var p: SlotList = this;
+        let p: SlotList = this;
+
         while (p.nonEmpty) {
-            if (p.head.listener == listener) return true;
+            if (p.head.listener === listener) {
+                return true;
+            }
+
             p = p.tail;
         }
 
@@ -197,11 +225,17 @@ export class SlotList {
      *          Returns null if no such ISlot instance exists or the list is empty.
      */
     public find(listener: Function): ISlot {
-        if (!this.nonEmpty) return null;
+        if (!this.nonEmpty) {
+            return null;
+        }
 
-        var p: SlotList = this;
+        let p: SlotList = this;
+
         while (p.nonEmpty) {
-            if (p.head.listener == listener) return p.head;
+            if (p.head.listener === listener) {
+                return p.head;
+            }
+
             p = p.tail;
         }
 
@@ -209,8 +243,8 @@ export class SlotList {
     }
 
     public toString(): string {
-        var buffer: string = '';
-        var p: SlotList = this;
+        let buffer: string = "";
+        let p: SlotList = this;
 
         while (p.nonEmpty) {
             buffer += p.head + " -> ";
@@ -222,4 +256,3 @@ export class SlotList {
         return "[List " + buffer + "]";
     }
 }
-

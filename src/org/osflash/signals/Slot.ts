@@ -39,8 +39,14 @@ export class Slot implements ISlot {
      * @inheritDoc
      */
     public execute0(): void {
-        if (!this._enabled) return;
-        if (this._once) this.remove();
+        if (!this._enabled) {
+            return;
+        }
+
+        if (this._once) {
+            this.remove();
+        }
+
         if (this._params && this._params.length) {
             this._listener.apply(null, this._params);
             return;
@@ -52,8 +58,14 @@ export class Slot implements ISlot {
      * @inheritDoc
      */
     public execute1(value: Object): void {
-        if (!this._enabled) return;
-        if (this._once) this.remove();
+        if (!this._enabled) {
+            return;
+        }
+
+        if (this._once) {
+            this.remove();
+        }
+
         if (this._params && this._params.length) {
             this._listener.apply(null, [value].concat(this._params));
             return;
@@ -65,8 +77,13 @@ export class Slot implements ISlot {
      * @inheritDoc
      */
     public execute(valueObjects: any[]): void {
-        if (!this._enabled) return;
-        if (this._once) this.remove();
+        if (!this._enabled) {
+            return;
+        }
+
+        if (this._once) {
+            this.remove();
+        }
 
         // If we have parameters, add them to the valueObject
         // Note: This could be expensive if we're after the fastest dispatch possible.
@@ -75,20 +92,16 @@ export class Slot implements ISlot {
         }
 
         // NOTE: simple ifs are faster than switch: http://jacksondunstan.com/articles/1007
-        var numValueObjects: number = valueObjects.length;
-        if (numValueObjects == 0) {
+        let numValueObjects: number = valueObjects.length;
+        if (numValueObjects === 0) {
             this._listener();
-        }
-        else if (numValueObjects == 1) {
+        } else if (numValueObjects === 1) {
             this._listener(valueObjects[0]);
-        }
-        else if (numValueObjects == 2) {
+        } else if (numValueObjects === 2) {
             this._listener(valueObjects[0], valueObjects[1]);
-        }
-        else if (numValueObjects == 3) {
+        } else if (numValueObjects === 3) {
             this._listener(valueObjects[0], valueObjects[1], valueObjects[2]);
-        }
-        else {
+        } else {
             this._listener.apply(null, valueObjects);
         }
     }
@@ -103,8 +116,9 @@ export class Slot implements ISlot {
     }
 
     public set listener(value: Function) {
-        if (null == value) throw new Error(
-            'Given listener is null.\nDid you want to set enabled to false instead?');
+        if (null == value) {
+            throw new Error("Given listener is null.\nDid you want to set enabled to false instead?");
+        }
 
         this.verifyListener(value);
         this._listener = value;
@@ -165,12 +179,11 @@ export class Slot implements ISlot {
 
     protected verifyListener(listener: Function): void {
         if (null == listener) {
-            throw new Error('Given listener is null.');
+            throw new Error("Given listener is null.");
         }
 
         if (null == this._signal) {
-            throw new Error('Internal signal reference has not been set yet.');
+            throw new Error("Internal signal reference has not been set yet.");
         }
-
     }
 }

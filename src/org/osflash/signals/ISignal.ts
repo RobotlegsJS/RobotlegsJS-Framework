@@ -1,5 +1,6 @@
 import { ISlot } from "./ISlot";
 import { IOnceSignal } from "./IOnceSignal";
+
 /**
  *
  */
@@ -14,4 +15,3 @@ export interface ISignal extends IOnceSignal {
      */
     add(listener: Function): ISlot;
 }
-

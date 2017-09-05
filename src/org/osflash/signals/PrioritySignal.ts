@@ -7,7 +7,7 @@ export class PrioritySignal extends Signal implements IPrioritySignal {
 
     constructor(...valueClasses) {
         // Cannot use super.apply(null, valueClasses), so allow the subclass to call super(valueClasses).
-        valueClasses = (valueClasses.length == 1 && valueClasses[0] instanceof Array) ? valueClasses[0] : valueClasses;
+        valueClasses = (valueClasses.length === 1 && valueClasses[0] instanceof Array) ? valueClasses[0] : valueClasses;
 
         super(valueClasses);
     }
@@ -37,13 +37,11 @@ export class PrioritySignal extends Signal implements IPrioritySignal {
 
     protected registerListenerWithPriority(listener: Function, once: boolean = false, priority: number = 0): ISlot {
         if (this.registrationPossible(listener, once)) {
-            var slot: ISlot = new Slot(listener, this, once, priority);
+            let slot: ISlot = new Slot(listener, this, once, priority);
             this.slots = this.slots.insertWithPriority(slot);
             return slot;
         }
 
         return this.slots.find(listener);
     }
-
 }
-

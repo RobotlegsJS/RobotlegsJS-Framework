@@ -58,5 +58,4 @@ describe("MonoSignalDispatchArgsTest", () => {
         signal.dispatch(new Inherited1());
         signal.dispatch(new Inherited2());
     });
-
 });

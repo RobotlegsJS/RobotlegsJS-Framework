@@ -69,4 +69,3 @@ export interface ISlot {
      */
     remove(): void;
 }
-

@@ -21,4 +21,3 @@ export interface IEvent {
     /** Returns a new copy of the instance. */
     clone(): IEvent;
 }
-
