@@ -1,6 +1,6 @@
 import { Entity } from "./../game/entities/Entity";
 
-import { injectable } from "robotlegs";
+import { injectable } from "@robotlegsjs/core";
 
 @injectable()
 export class LevelModel {

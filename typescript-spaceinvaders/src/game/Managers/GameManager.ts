@@ -10,7 +10,7 @@ import { GameService } from "./../../services/GameService";
 import { GameModel } from "./../../models/GameModel";
 import { LevelModel } from "./../../models/LevelModel";
 
-import { injectable, inject } from "robotlegs";
+import { injectable, inject } from "@robotlegsjs/core";
 
 @injectable()
 export class GameManager {

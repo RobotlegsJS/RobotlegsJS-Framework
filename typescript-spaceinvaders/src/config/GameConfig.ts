@@ -15,7 +15,7 @@ import { IncreaseLevelCommand } from "./../commands/IncreaaseLevelCommand";
 import { RetryGameCommand } from "./../commands/RetryGameCommand";
 import { StartGameCommand } from "./../commands/StartGameCommand";
 
-import { IConfig, injectable, inject, IEventCommandMap, IContext } from "robotlegs";
+import { IConfig, injectable, inject, IEventCommandMap, IContext } from "@robotlegsjs/core";
 
 @injectable()
 export class GameConfig implements IConfig {

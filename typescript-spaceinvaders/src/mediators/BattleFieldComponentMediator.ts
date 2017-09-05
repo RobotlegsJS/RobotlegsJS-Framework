@@ -6,8 +6,8 @@ import { LevelModel } from "./../models/LevelModel";
 import { BattleFieldComponent } from "./../views/components/BattleFieldComponent";
 
 import { Sprite } from "pixi.js";
-import { Mediator } from "robotlegs-pixi";
-import { injectable, inject } from "robotlegs";
+import { Mediator } from "@robotlegsjs/pixi";
+import { injectable, inject } from "@robotlegsjs/core";
 
 @injectable()
 export class BattleFieldComponentMediator extends Mediator<BattleFieldComponent> {

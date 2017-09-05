@@ -4,8 +4,8 @@ import { GameModel } from "./../models/GameModel";
 import { GameEvent } from "./../events/GameEvent";
 import { HUDGameComponent } from "./../views/components/HUDGameComponent";
 
-import { Mediator } from "robotlegs-pixi";
-import { injectable, inject } from "robotlegs";
+import { Mediator } from "@robotlegsjs/pixi";
+import { injectable, inject } from "@robotlegsjs/core";
 
 @injectable()
 export class HUDGameComponentMediator extends Mediator<HUDGameComponent> {

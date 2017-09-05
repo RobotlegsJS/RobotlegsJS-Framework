@@ -1,7 +1,7 @@
 import { GameService } from "./../services/GameService";
 import { GameModel } from "./../models/GameModel";
 
-import { ICommand, inject, injectable } from "robotlegs";
+import { ICommand, inject, injectable } from "@robotlegsjs/core";
 
 @injectable()
 export class DecreaseLivesCommand implements ICommand {

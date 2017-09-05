@@ -2,7 +2,7 @@ import { GameModel } from "./../models/GameModel";
 import { FlowService } from "./../services/FlowService";
 import { GameService } from "./../services/GameService";
 
-import { inject, injectable, ICommand } from "robotlegs";
+import { inject, injectable, ICommand } from "@robotlegsjs/core";
 
 @injectable()
 export class StartGameCommand implements ICommand {

@@ -1,4 +1,3 @@
-
 import { FlowEvent } from "./../events/FlowEvent";
 import { FlowService } from "./../services/FlowService";
 
@@ -14,10 +13,8 @@ import { PausePopup } from "./../views/PausePopup";
 import { ResetConfirmPopup } from "./../views/ResetConfirmPopup";
 import { StartingPopup } from "./../views/StartingPopup";
 
-import { IFlowManager } from "./../robotlegs/bender/extensions/palidorFlowManager/api/IFlowManager";
-import { PixiContainer } from "./../robotlegs/bender/extensions/palidorFlowManager/impl/PixiContainer";
-
-import { injectable, IConfig, inject, IContext } from "robotlegs";
+import { IFlowManager } from "@robotlegsjs/pixi-palidor";
+import { injectable, IConfig, inject, IContext, IEventDispatcher } from "@robotlegsjs/core";
 
 @injectable()
 export class PalidorConfig implements IConfig {
@@ -28,13 +25,18 @@ export class PalidorConfig implements IConfig {
     @inject(IFlowManager)
     public flowManager: IFlowManager;
 
+    @inject(IEventDispatcher)
+    public eventDispatcher: IEventDispatcher;
+
     public configure(): void {
         this.mapPalidor();
+        this.eventDispatcher.dispatchEvent(new FlowEvent(FlowEvent.SHOW_INTRO_VIEW));
     }
 
     private mapPalidor(): void {
         this.context.injector.bind(FlowService).to(FlowService).inSingletonScope();
 
+        this.flowManager.map(FlowEvent.SHOW_INTRO_VIEW).toView(IntroView);
         this.flowManager.map(FlowEvent.SHOW_GAME_VIEW).toView(GameView);
         this.flowManager.map(FlowEvent.SHOW_HOME_VIEW).toView(HomeView);
         this.flowManager.map(FlowEvent.SHOW_OPTIONS_VIEW).toView(OptionsView);
@@ -44,7 +46,5 @@ export class PalidorConfig implements IConfig {
         this.flowManager.map(FlowEvent.SHOW_PAUSE_POPUP).toFloatingView(PausePopup);
         this.flowManager.map(FlowEvent.SHOW_RESET_CONFIRM_POPUP).toFloatingView(ResetConfirmPopup);
         this.flowManager.map(FlowEvent.SHOW_STARTING_POPUP).toFloatingView(StartingPopup);
-
-        this.flowManager.map(FlowEvent.CLOSE_POPUP).toRemoveLastFloatingView();
     }
 }

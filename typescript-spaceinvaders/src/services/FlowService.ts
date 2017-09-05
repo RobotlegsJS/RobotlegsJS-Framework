@@ -1,6 +1,7 @@
 import { FlowEvent } from "./../events/FlowEvent";
 
-import { injectable, inject, IEventDispatcher, EventDispatcher } from "robotlegs";
+import { PalidorEvent } from "@robotlegsjs/pixi-palidor";
+import { injectable, inject, IEventDispatcher, EventDispatcher } from "@robotlegsjs/core";
 
 @injectable()
 export class FlowService {
@@ -44,7 +45,7 @@ export class FlowService {
 
     // extras
     public closePopup(): void {
-        this.dispatchEventWith(FlowEvent.CLOSE_POPUP);
+        this.dispatchEventWith(PalidorEvent.REMOVE_LAST_FLOATING_VIEW_ADDED);
     }
 
     public dispatchEventWith(type: string): void {
