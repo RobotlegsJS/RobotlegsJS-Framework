@@ -7,7 +7,7 @@
   "scripts": {
     "test": "nyc mocha",
     "karma": "karma start --single-run",
-    "autoformat": "prettier --config .prettierrc --write {src,test}/**/*.ts",
+    "autoformat": "prettier --config .prettierrc --write {src,test}/**/{*,*.test}.ts",
     "tslint-check": "tslint-config-prettier-check ./tslint.json",
     "prepublish": "tsc -d && publish-please guard",
     "clean-up": "rm -rf coverage && rm -rf lib",
