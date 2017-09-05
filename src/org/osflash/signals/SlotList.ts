@@ -33,7 +33,9 @@ export class SlotList {
     constructor(head: ISlot, tail: SlotList = null) {
         if (!head && !tail) {
             if (SlotList.NIL) {
-                throw new Error("Parameters head and tail are null. Use the NIL element instead.");
+                throw new Error(
+                    "Parameters head and tail are null. Use the NIL element instead."
+                );
             }
 
             // this is the NIL element as per definition

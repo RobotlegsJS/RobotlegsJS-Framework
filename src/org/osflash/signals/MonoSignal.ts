@@ -12,7 +12,7 @@ import { ISlot } from "./ISlot";
  * A MonoSignal can have only one listener.
  */
 export class MonoSignal implements ISignal {
-    protected _valueClasses: any[];		// of Class
+    protected _valueClasses: any[]; // of Class
 
     protected slot: Slot;
 
@@ -29,7 +29,10 @@ export class MonoSignal implements ISignal {
      */
     constructor(...valueClasses) {
         // Cannot use super.apply(null, valueClasses), so allow the subclass to call super(valueClasses).
-        this.valueClasses = (valueClasses.length === 1 && valueClasses[0] instanceof Array) ? valueClasses[0] : valueClasses;
+        this.valueClasses =
+            valueClasses.length === 1 && valueClasses[0] instanceof Array
+                ? valueClasses[0]
+                : valueClasses;
     }
 
     /**
@@ -44,11 +47,17 @@ export class MonoSignal implements ISignal {
     public set valueClasses(value: any[]) {
         // Clone so the Array cannot be affected from outside.
         this._valueClasses = value ? value.slice() : [];
-        for (let i: number = this._valueClasses.length; i--;) {
+        for (let i: number = this._valueClasses.length; i--; ) {
             if (typeof this._valueClasses[i] !== "function") {
-                throw new Error("Invalid valueClasses argument: " +
-                    "item at index " + i + " should be a Class but was:<" +
-                    this._valueClasses[i] + "'>." + this._valueClasses[i]); // @CHANGED - temp replacement for getQualifiedClassByName()
+                throw new Error(
+                    "Invalid valueClasses argument: " +
+                        "item at index " +
+                        i +
+                        " should be a Class but was:<" +
+                        this._valueClasses[i] +
+                        "'>." +
+                        this._valueClasses[i]
+                ); // @CHANGED - temp replacement for getQualifiedClassByName()
             }
         }
     }
@@ -106,9 +115,14 @@ export class MonoSignal implements ISignal {
 
         // Cannot dispatch fewer objects than declared classes.
         if (numValueObjects < numValueClasses) {
-            throw new Error("Incorrect number of arguments. " +
-                "Expected at least " + numValueClasses + " but received " +
-                numValueObjects + ".");
+            throw new Error(
+                "Incorrect number of arguments. " +
+                    "Expected at least " +
+                    numValueClasses +
+                    " but received " +
+                    numValueObjects +
+                    "."
+            );
         }
 
         // Cannot dispatch differently typed objects than declared classes.
@@ -116,13 +130,19 @@ export class MonoSignal implements ISignal {
             // Optimized for the optimistic case that values are correct.
             if (
                 valueObjects[i] === null ||
-                (valueObjects[i] instanceof this._valueClasses[i] || valueObjects[i].constructor === this._valueClasses[i])
+                (valueObjects[i] instanceof this._valueClasses[i] ||
+                    valueObjects[i].constructor === this._valueClasses[i])
             ) {
                 continue;
             }
 
-            throw new Error("Value object <" + valueObjects[i]
-                + "> is not an instance of <" + this._valueClasses[i] + ">.");
+            throw new Error(
+                "Value object <" +
+                    valueObjects[i] +
+                    "> is not an instance of <" +
+                    this._valueClasses[i] +
+                    ">."
+            );
         }
 
         // Broadcast to the one listener.
@@ -131,13 +151,17 @@ export class MonoSignal implements ISignal {
         }
     }
 
-    protected registerListener(listener: Function, once: boolean = false): ISlot {
+    protected registerListener(
+        listener: Function,
+        once: boolean = false
+    ): ISlot {
         if (this.slot) {
             // If the listener exits previously added, definitely don't add it.
-            throw new Error("You cannot add or addOnce with a listener already added, remove the current listener first.");
+            throw new Error(
+                "You cannot add or addOnce with a listener already added, remove the current listener first."
+            );
         }
 
         return (this.slot = new Slot(listener, this, once));
     }
-
 }

@@ -20,7 +20,7 @@ import { Slot } from "./Slot";
  * Project home: <a target="_top" href="http://github.com/robertpenner/as3-signals/">http://github.com/robertpenner/as3-signals/</a>
  */
 export class OnceSignal implements IOnceSignal {
-    protected _valueClasses: any[];		// of Class
+    protected _valueClasses: any[]; // of Class
     protected slots: SlotList = SlotList.NIL;
 
     /**
@@ -36,7 +36,10 @@ export class OnceSignal implements IOnceSignal {
      */
     constructor(...valueClasses) {
         // Cannot use super.apply(null, valueClasses), so allow the subclass to call super(valueClasses).
-        this.valueClasses = (valueClasses.length === 1 && valueClasses[0] instanceof Array) ? valueClasses[0] : valueClasses;
+        this.valueClasses =
+            valueClasses.length === 1 && valueClasses[0] instanceof Array
+                ? valueClasses[0]
+                : valueClasses;
     }
 
     /**
@@ -51,11 +54,17 @@ export class OnceSignal implements IOnceSignal {
     public set valueClasses(value: any[]) {
         // Clone so the Array cannot be affected from outside.
         this._valueClasses = value ? value.slice() : [];
-        for (let i: number = this._valueClasses.length; i--;) {
+        for (let i: number = this._valueClasses.length; i--; ) {
             if (!(this._valueClasses[i] instanceof Object)) {
-                throw new Error("Invalid valueClasses argument: " +
-                    "item at index " + i + " should be a Class but was:<" +
-                    this._valueClasses[i] + ">." + this._valueClasses[i]); // @CHANGED - temp replacement for getQualifiedClassByName()
+                throw new Error(
+                    "Invalid valueClasses argument: " +
+                        "item at index " +
+                        i +
+                        " should be a Class but was:<" +
+                        this._valueClasses[i] +
+                        ">." +
+                        this._valueClasses[i]
+                ); // @CHANGED - temp replacement for getQualifiedClassByName()
             }
         }
     }
@@ -96,16 +105,20 @@ export class OnceSignal implements IOnceSignal {
      * @throws ArgumentError <code>ArgumentError</code>: Value object is not an instance of the appropriate valueClasses Class.
      */
     public dispatch(...valueObjects): void {
-
         // If valueClasses is empty, value objects are not type-checked.
         let numValueClasses: number = this._valueClasses.length;
         let numValueObjects: number = valueObjects.length;
 
         // Cannot dispatch fewer objects than declared classes.
         if (numValueObjects < numValueClasses) {
-            throw new Error("Incorrect number of arguments. " +
-                "Expected at least " + numValueClasses + " but received " +
-                numValueObjects + ".");
+            throw new Error(
+                "Incorrect number of arguments. " +
+                    "Expected at least " +
+                    numValueClasses +
+                    " but received " +
+                    numValueObjects +
+                    "."
+            );
         }
 
         // Cannot dispatch differently typed objects than declared classes.
@@ -113,13 +126,19 @@ export class OnceSignal implements IOnceSignal {
             // Optimized for the optimistic case that values are correct.
             if (
                 valueObjects[i] === null ||
-                (valueObjects[i] instanceof this._valueClasses[i] || valueObjects[i].constructor === this._valueClasses[i])
+                (valueObjects[i] instanceof this._valueClasses[i] ||
+                    valueObjects[i].constructor === this._valueClasses[i])
             ) {
                 continue;
             }
 
-            throw new Error("Value object <" + valueObjects[i]
-                + "> is not an instance of <" + this._valueClasses[i] + ">.");
+            throw new Error(
+                "Value object <" +
+                    valueObjects[i] +
+                    "> is not an instance of <" +
+                    this._valueClasses[i] +
+                    ">."
+            );
         }
 
         // Broadcast to listeners.
@@ -132,7 +151,10 @@ export class OnceSignal implements IOnceSignal {
         }
     }
 
-    protected registerListener(listener: Function, once: boolean = false): ISlot {
+    protected registerListener(
+        listener: Function,
+        once: boolean = false
+    ): ISlot {
         if (this.registrationPossible(listener, once)) {
             let newSlot: ISlot = new Slot(listener, this, once);
             this.slots = this.slots.prepend(newSlot);
@@ -155,7 +177,9 @@ export class OnceSignal implements IOnceSignal {
         if (existingSlot.once !== once) {
             // If the listener was previously added, definitely don't add it again.
             // But throw an exception if their once values differ.
-            throw new Error("You cannot addOnce() then add() the same listener without removing the relationship first.");
+            throw new Error(
+                "You cannot addOnce() then add() the same listener without removing the relationship first."
+            );
         }
 
         return false; // Listener was already registered.

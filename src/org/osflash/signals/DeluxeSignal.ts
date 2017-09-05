@@ -35,7 +35,10 @@ export class DeluxeSignal extends PrioritySignal {
      */
     constructor(target: Object = null, ...valueClasses) {
         // Cannot use super.apply(null, valueClasses), so allow the subclass to call super(valueClasses).
-        valueClasses = (valueClasses.length === 1 && valueClasses[0] instanceof Array) ? valueClasses[0] : valueClasses;
+        valueClasses =
+            valueClasses.length === 1 && valueClasses[0] instanceof Array
+                ? valueClasses[0]
+                : valueClasses;
 
         super(valueClasses);
 
@@ -71,26 +74,35 @@ export class DeluxeSignal extends PrioritySignal {
         if (numValueObjects < numValueClasses) {
             throw new Error(
                 "Incorrect number of arguments. " +
-                "Expected at least " + numValueClasses + " but received " +
-                numValueObjects + "."
+                    "Expected at least " +
+                    numValueClasses +
+                    " but received " +
+                    numValueObjects +
+                    "."
             );
         }
 
         // Cannot dispatch differently typed objects than declared classes.
         for (let i: number = 0; i < numValueClasses; i++) {
             // Optimized for the optimistic case that values are correct.
-            if (valueObjects[i] === null || valueObjects[i].constructor === this._valueClasses[i]) {
+            if (
+                valueObjects[i] === null ||
+                valueObjects[i].constructor === this._valueClasses[i]
+            ) {
                 continue;
             }
 
             throw new Error(
-                "Value object <" + valueObjects[i] +
-                "> is not an instance of <" + this._valueClasses[i] + ">."
+                "Value object <" +
+                    valueObjects[i] +
+                    "> is not an instance of <" +
+                    this._valueClasses[i] +
+                    ">."
             );
         }
 
         // Extract and clone event object if necessary.
-        let event: IEvent = (<IEvent>valueObjects[0]);
+        let event: IEvent = <IEvent>valueObjects[0];
         if (event) {
             if (event.target) {
                 event = event.clone();
