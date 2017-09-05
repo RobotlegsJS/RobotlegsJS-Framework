@@ -5,7 +5,6 @@ import { assert } from "chai";
 import { DeluxeSignal } from "../../../../src/org/osflash/signals/DeluxeSignal";
 
 describe("DeluxeSignaltargetTest", () => {
-
     let signal: DeluxeSignal;
     let self = this;
 

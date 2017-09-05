@@ -10,7 +10,6 @@ import { IEvent } from "../../../../src/org/osflash/signals/events/IEvent";
 import { newEmptyHandler, failIfCalled } from "../../../util/TestBase";
 
 describe("DeluxeSignalWithGenericEventTest", () => {
-
     let async: AsyncUtil = new AsyncUtil();
 
     let completed: DeluxeSignal;
@@ -31,20 +30,31 @@ describe("DeluxeSignalWithGenericEventTest", () => {
         assert.equal(0, completed.numListeners);
     });
 
-
-    it("add_listener_and_dispatch_event_should_pass_event_to_listener()", (done) => {
+    it("add_listener_and_dispatch_event_should_pass_event_to_listener()", done => {
         completed.add(async.add(checkGenericEvent, 10, done));
         completed.dispatch(new GenericEvent());
     });
 
     function checkGenericEvent(e: IEvent): void {
         assert.isTrue(e instanceof GenericEvent, "instance of GenericEvent");
-        assert.equal(completed, e.signal, "event.signal points to the originating Signal");
-        assert.equal(e.target, self, "event.target points to object containing the Signal");
-        assert.equal(e.target, e.currentTarget, "event.target is e.currentTarget because event does not bubble");
+        assert.equal(
+            completed,
+            e.signal,
+            "event.signal points to the originating Signal"
+        );
+        assert.equal(
+            e.target,
+            self,
+            "event.target points to object containing the Signal"
+        );
+        assert.equal(
+            e.target,
+            e.currentTarget,
+            "event.target is e.currentTarget because event does not bubble"
+        );
     }
 
-    it("add_two_listeners_and_dispatch_should_call_both()", (done) => {
+    it("add_two_listeners_and_dispatch_should_call_both()", done => {
         completed.add(async.add(checkGenericEvent, 10));
         completed.add(async.add(checkGenericEvent, 10, done));
         completed.dispatch(new GenericEvent());
@@ -56,7 +66,7 @@ describe("DeluxeSignalWithGenericEventTest", () => {
         assert.equal(0, completed.numListeners, "there should be no listeners");
     });
 
-    it("add_one_listener_and_dispatch_then_listener_remove_itself_using_event_signal()", (done) => {
+    it("add_one_listener_and_dispatch_then_listener_remove_itself_using_event_signal()", done => {
         delegate = async.add(remove_myself_from_signal, 10, done);
         completed.add(delegate);
         completed.dispatch(new GenericEvent());
@@ -78,7 +88,7 @@ describe("DeluxeSignalWithGenericEventTest", () => {
         completed.dispatch(new GenericEvent());
     });
 
-    it("add_2_listeners_remove_2nd_then_dispatch_should_call_1st_not_2nd_listener()", (done) => {
+    it("add_2_listeners_remove_2nd_then_dispatch_should_call_1st_not_2nd_listener()", done => {
         completed.add(async.add(checkGenericEvent, 10, done));
         let delegateCallback: Function = failIfCalled;
         completed.add(delegateCallback);
@@ -129,5 +139,4 @@ describe("DeluxeSignalWithGenericEventTest", () => {
     function checkSprite(sprite: Sprite): void {
         assert.isTrue(sprite instanceof Sprite);
     }
-
 });

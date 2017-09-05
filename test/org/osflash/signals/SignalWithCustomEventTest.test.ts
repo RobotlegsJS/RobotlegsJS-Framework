@@ -8,7 +8,6 @@ import { GenericEvent } from "../../../../src/org/osflash/signals/events/Generic
 import { IEvent } from "../../../../src/org/osflash/signals/events/IEvent";
 
 describe("SignalWithCustomEventTest", () => {
-
     let async: AsyncUtil = new AsyncUtil();
     let messaged: Signal;
 
@@ -63,9 +62,7 @@ describe("SignalWithCustomEventTest", () => {
     function onMessage(e: MessageEvent): void {
         assert.equal("ok", e.message, "message value in the event");
     }
-
 });
-
 
 class MessageEvent extends GenericEvent implements IEvent {
     public message: string;
@@ -79,5 +76,4 @@ class MessageEvent extends GenericEvent implements IEvent {
     public clone(): IEvent {
         return new MessageEvent(this.message);
     }
-
 }

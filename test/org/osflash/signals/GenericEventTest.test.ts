@@ -6,7 +6,6 @@ import { GenericEvent } from "../../../../src/org/osflash/signals/events/Generic
 import { IEvent } from "../../../../src/org/osflash/signals/events/IEvent";
 
 describe("GenericEventTest", () => {
-
     let instance: GenericEvent;
 
     beforeEach(() => {
@@ -18,7 +17,10 @@ describe("GenericEventTest", () => {
     });
 
     it("testInstantiated()", () => {
-        assert.isTrue(instance instanceof GenericEvent, "GenericEvent instantiated");
+        assert.isTrue(
+            instance instanceof GenericEvent,
+            "GenericEvent instantiated"
+        );
         assert.isNotOk(instance.target, "target is null by default");
         assert.isFalse(instance.bubbles, "bubbles is false by default");
     });

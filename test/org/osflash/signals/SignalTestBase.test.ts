@@ -10,7 +10,6 @@ import { AsyncUtil } from "../../../util/AsyncUtil";
 import { newEmptyHandler, failIfCalled } from "../../../util/TestBase";
 
 describe("SignalTestBase", () => {
-
     let signal: ISignal;
     let async: AsyncUtil = new AsyncUtil();
 
@@ -106,14 +105,13 @@ describe("SignalTestBase", () => {
         assert.isTrue(calledB);
     });
 
-
     it("add_the_same_listener_twice_should_not_throw_error", () => {
         let listener: Function = newEmptyHandler();
         signal.add(listener);
         signal.add(listener);
     });
 
-    it("dispatch_2_listeners_1st_listener_removes_itself_then_2nd_listener_is_still_called", (done) => {
+    it("dispatch_2_listeners_1st_listener_removes_itself_then_2nd_listener_is_still_called", done => {
         signal.add(selfRemover);
 
         // async.add verifies the second listener is called
@@ -121,13 +119,13 @@ describe("SignalTestBase", () => {
         dispatchSignal();
     });
 
-    it("dispatch_2_listeners_1st_listener_removes_all_then_2nd_listener_is_still_called", (done) => {
+    it("dispatch_2_listeners_1st_listener_removes_all_then_2nd_listener_is_still_called", done => {
         signal.add(async.add(allRemover, 10));
         signal.add(async.add(newEmptyHandler(), 10, done));
         dispatchSignal();
     });
 
-    it("adding_a_listener_during_dispatch_should_not_call_it", (done) => {
+    it("adding_a_listener_during_dispatch_should_not_call_it", done => {
         signal.add(async.add(addListenerDuringDispatch, 10, done));
         dispatchSignal();
     });
@@ -173,7 +171,6 @@ describe("SignalTestBase", () => {
         let slot: ISlot = signal.add(listener);
         assert.equal(slot, signal.remove(listener));
     });
-
 
     function selfRemover(e: any = null): void {
         signal.remove(selfRemover);

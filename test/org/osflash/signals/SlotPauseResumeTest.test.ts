@@ -7,7 +7,6 @@ import { AsyncUtil } from "../../../util/AsyncUtil";
 import { checkGenericEvent } from "../../../util/TestBase";
 
 describe("SlotPauseResumeTest", () => {
-
     let signal: Signal;
     let async: AsyncUtil = new AsyncUtil();
 
@@ -15,7 +14,7 @@ describe("SlotPauseResumeTest", () => {
         signal = new Signal();
     });
 
-    it("add_listener_pause_then_resume_on_slot_should_dispatch", (done) => {
+    it("add_listener_pause_then_resume_on_slot_should_dispatch", done => {
         let slot: ISlot = signal.add(async.add(checkGenericEvent, 10, done));
         slot.enabled = false;
         slot.enabled = true;
@@ -23,13 +22,13 @@ describe("SlotPauseResumeTest", () => {
         signal.dispatch(new GenericEvent());
     });
 
-    it("addOnce_listener_pause_then_resume_on_slot_should_dispatch", (done) => {
-        let slot: ISlot = signal.addOnce(async.add(checkGenericEvent, 10, done));
+    it("addOnce_listener_pause_then_resume_on_slot_should_dispatch", done => {
+        let slot: ISlot = signal.addOnce(
+            async.add(checkGenericEvent, 10, done)
+        );
         slot.enabled = false;
         slot.enabled = true;
 
         signal.dispatch(new GenericEvent());
     });
-
 });
-
