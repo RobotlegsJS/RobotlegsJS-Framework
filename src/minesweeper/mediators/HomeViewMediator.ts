@@ -22,11 +22,11 @@ export class HomeViewMediator extends Mediator<HomeView> {
     }
 
     private playButton_onClick(e: any): void {
-        this.view.animationOut(this.animationComplete);
+        this.view.animationOut(this.animationComplete.bind(this));
     }
 
-    private animationComplete = (ob: any = this) => {
-        ob.flowService.setLevelSelectView();
+    private animationComplete() {
+        this.flowService.setLevelSelectView();
     }
 
 }

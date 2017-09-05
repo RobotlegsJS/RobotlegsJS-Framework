@@ -41,21 +41,21 @@ export class HUDGameComponentMediator extends Mediator<HUDGameComponent> {
 
     private game_onResumeHandler(e: any): void {
         this._paused = false;
-        this.tick(this);
+        this.tick();
     }
 
     private game_onPauseHandler(e: any): void {
         this._paused = true;
     }
 
-    private tick(obThis: any = this): void {
-        if (obThis._paused === true) {
+    private tick(): void {
+        if (this._paused === true) {
             return;
         }
-        obThis.levelModel.clock++;
-        obThis.view.updateValues(obThis.levelModel);
+        this.levelModel.clock++;
+        this.view.updateValues(this.levelModel);
 
-        setTimeout(obThis.tick, 1000, obThis);
+        setTimeout(this.tick.bind(this), 1000);
     }
 
     private game_onUpdateHandler(e: any): void {

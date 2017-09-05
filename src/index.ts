@@ -8,12 +8,10 @@ import { GameConfig } from "./minesweeper/configs/GameConfig";
 import { PalidorConfig } from "./minesweeper/configs/PalidorConfig";
 import { ViewsConfig } from "./minesweeper/configs/ViewsConfig";
 
-import { PixiContainer } from "./robotlegs/bender/extensions/palidorFlowManager/impl/PixiContainer";
-import { PalidorFlowManagerExtension } from "./robotlegs/bender/extensions/palidorFlowManager/PalidorFlowManagerExtension";
-
 import { Container } from "pixi.js";
 import { Context, MVCSBundle, LogLevel } from "@robotlegsjs/core";
 import { PixiBundle, ContextView } from "@robotlegsjs/pixi";
+import { PalidorPixiExtension, PixiRootContainer } from "@robotlegsjs/pixi-palidor";
 
 class Main {
     private stage: PIXI.Container;
@@ -26,17 +24,16 @@ class Main {
         this.context = new Context();
         // this.context.logLevel = LogLevel.DEBUG;
         this.context.install(MVCSBundle, PixiBundle)
+            .install(PalidorPixiExtension)
             .configure(new ContextView((<any>this.renderer).plugins.interaction))
-            .configure(ViewsConfig, GameConfig, PalidorConfig)
-            .install(PalidorFlowManagerExtension)
+            .configure(new PixiRootContainer(this.stage))
+            .configure(GameConfig, ViewsConfig, PalidorConfig)
             .initialize();
         let loader = PIXI.loader
             .add(AtlasKeys.ATLAS_PNG)
             .add(AtlasKeys.ATLAS_XML)
             .add(AtlasKeys.FONT_FNT)
             .load(this.onLoad);
-        this.stage.addChild(new PixiContainer());
-
         document.body.appendChild(this.renderer.view);
     }
 

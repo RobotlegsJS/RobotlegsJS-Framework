@@ -27,8 +27,9 @@
   },
   "homepage": "https://github.com/RonaldoSetzer/GAME-Minesweeper#readme",
   "dependencies": {
-    "@robotlegsjs/core": "0.0.3",
-    "@robotlegsjs/pixi": "0.0.1",
+    "@robotlegsjs/core": "^0.0.4",
+    "@robotlegsjs/pixi": "^0.0.2",
+    "@robotlegsjs/pixi-palidor": "^0.0.2",
     "pixi.js": "^4.5.4",
     "reflect-metadata": "^0.1.10",
     "typescript": "^2.4.2"

@@ -12,11 +12,8 @@ import { YouWinPopup } from "../views/YouWinPopup";
 import { LevelCustomOptionsView } from "./../views/LevelCustomOptionsView";
 import { LevelSelectView } from "./../views/LevelSelectView";
 
-import { IFlowManager } from "./../../robotlegs/bender/extensions/palidorFlowManager/api/IFlowManager";
-import { PixiContainer } from "./../../robotlegs/bender/extensions/palidorFlowManager/impl/PixiContainer";
-import { IFlowContainer } from "./../../robotlegs/bender/extensions/palidorFlowManager/api/IFlowContainer";
-
-import { injectable, IConfig, inject, IContext } from "@robotlegsjs/core";
+import { injectable, IConfig, inject, IContext, IEventDispatcher } from "@robotlegsjs/core";
+import { IFlowManager } from "@robotlegsjs/pixi-palidor";
 
 @injectable()
 export class PalidorConfig implements IConfig {
@@ -27,8 +24,13 @@ export class PalidorConfig implements IConfig {
     @inject(IFlowManager)
     public flowManager: IFlowManager;
 
+    @inject(IEventDispatcher)
+    public dispatcher: IEventDispatcher;
+
     public configure(): void {
         this.mapPalidor();
+
+        this.dispatcher.dispatchEvent(new FlowEvent(FlowEvent.SHOW_INTRO_VIEW));
     }
 
     private mapPalidor(): void {
@@ -44,7 +46,5 @@ export class PalidorConfig implements IConfig {
         this.flowManager.map(FlowEvent.SHOW_PAUSE_POPUP).toFloatingView(PausePopup);
         this.flowManager.map(FlowEvent.SHOW_STARTING_POPUP).toFloatingView(StartingPopup);
         this.flowManager.map(FlowEvent.SHOW_YOU_WIN_POPUP).toFloatingView(YouWinPopup);
-
-        this.flowManager.map(FlowEvent.CLOSE_POPUP).toRemoveLastFloatingView();
     }
 }

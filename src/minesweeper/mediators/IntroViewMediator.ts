@@ -12,14 +12,14 @@ export class IntroViewMediator extends Mediator<IntroView> {
     public flowService: FlowService;
 
     public initialize(): void {
-        setTimeout(this.onTimerOut, 3000, this);
+        setTimeout(this.onTimerOut.bind(this), 3000, this);
     }
 
     public destroy(): void {
         this.eventMap.unmapListeners();
     }
 
-    private onTimerOut = (obThis: any) => {
-        obThis.flowService.setHomeView();
+    private onTimerOut() {
+        this.flowService.setHomeView();
     }
 }

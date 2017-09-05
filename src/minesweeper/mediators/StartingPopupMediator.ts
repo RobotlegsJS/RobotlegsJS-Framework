@@ -19,20 +19,20 @@ export class StartingPopupMediator extends Mediator<StartingPopup> {
     public initialize(): void {
         this._count = 4;
 
-        this.tick(this);
+        this.tick();
     }
 
     public destroy(): void {
         this.eventMap.unmapListeners();
     }
 
-    private tick(obThis: any = this) {
-        obThis._count -= 1;
-        if (obThis._count > 0) {
-            obThis.view.changeNumber(obThis._count);
-            setTimeout(obThis.tick, 300, obThis);
+    private tick() {
+        this._count -= 1;
+        if (this._count > 0) {
+            this.view.changeNumber(this._count);
+            setTimeout(this.tick.bind(this), 300);
         } else {
-            obThis.tick_onComplete();
+            this.tick_onComplete();
         }
     }
 

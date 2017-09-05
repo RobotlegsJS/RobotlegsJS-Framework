@@ -7,7 +7,6 @@ import { IntroViewMediator } from "./../mediators/IntroViewMediator";
 import { LevelSelectViewMediator } from "./../mediators/LevelSelectViewMediator";
 import { LevelCustomOptionsViewMediator } from "./../mediators/LevelCustomOptionsViewMediator";
 import { PausePopupMediator } from "./../mediators/PausePopupMediator";
-import { PixiContainerMediator } from "./../mediators/PixiContainerMediator";
 import { StartingPopupMediator } from "./../mediators/StartingPopupMediator";
 import { TileDisplayMediator } from "../mediators/TileDisplayMediator";
 import { YouWinPopupMediator } from ".././mediators/YouWinPopupMediator";
@@ -26,8 +25,6 @@ import { TileDisplay } from "./../views/components/TileDisplay";
 import { PausePopup } from "./../views/PausePopup";
 import { StartingPopup } from "./../views/StartingPopup";
 import { YouWinPopup } from "./../views/YouWinPopup";
-
-import { PixiContainer } from "./../../robotlegs/bender/extensions/palidorFlowManager/impl/PixiContainer";
 
 import { injectable, IConfig, inject } from "@robotlegsjs/core";
 import { IMediatorMap } from "@robotlegsjs/pixi";
@@ -53,8 +50,6 @@ export class ViewsConfig implements IConfig {
 
         this.mediatorMap.map(GridFieldComponent).toMediator(GridFieldComponentMediator);
         this.mediatorMap.map(HUDGameComponent).toMediator(HUDGameComponentMediator);
-
-        this.mediatorMap.map(PixiContainer).toMediator(PixiContainerMediator);
 
         this.mediatorMap.map(GameOverPopup).toMediator(GameOverPopupMediator);
         this.mediatorMap.map(PausePopup).toMediator(PausePopupMediator);
