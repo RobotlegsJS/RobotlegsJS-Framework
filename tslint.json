@@ -19,8 +19,7 @@
     ],
     "member-access": true,
     "member-ordering": [
-      true,
-      {
+      true, {
         "order": [
           "static-field",
           "instance-field",
@@ -52,6 +51,8 @@
     "no-switch-case-fall-through": false,
     "no-trailing-whitespace": true,
     "no-unused-expression": true,
+    "no-unused-variable": true,
+    "no-unreachable": true,
     "no-use-before-declare": true,
     "no-var-keyword": true,
     "object-literal-sort-keys": true,
@@ -80,8 +81,7 @@
       "allow-null-check"
     ],
     "typedef-whitespace": [
-      true,
-      {
+      true, {
         "call-signature":"nospace",
         "index-signature":"nospace",
         "parameter":"nospace",
