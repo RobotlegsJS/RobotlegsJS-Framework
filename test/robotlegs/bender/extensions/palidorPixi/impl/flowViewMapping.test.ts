@@ -15,7 +15,6 @@ import { FlowViewMapping } from "./../../../../../../src";
 import { FlowManager } from "./../../../../../../src";
 
 describe("FlowViwMapping", () => {
-
     let flowManager: FlowManager;
     let flowViewMapping: FlowViewMapping;
     let event: string;
@@ -75,5 +74,4 @@ describe("FlowViwMapping", () => {
             assert.equal(spy.args[0][1], view);
         });
     });
-
 });

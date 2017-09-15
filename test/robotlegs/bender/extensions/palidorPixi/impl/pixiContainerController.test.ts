@@ -15,7 +15,6 @@ import { assert } from "chai";
 import { Container } from "pixi.js";
 
 describe("PixiContainerController", () => {
-
     let controller: PixiContainerContoller;
     let view: Container;
 

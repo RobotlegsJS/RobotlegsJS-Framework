@@ -7,7 +7,6 @@
 
 export let IContainerController = Symbol("IContainerController");
 export interface IContainerController {
-
     addView(view: any): void;
 
     changeView(view: any): void;
@@ -17,5 +16,4 @@ export interface IContainerController {
     removeLastFloatingViewAdded(): void;
 
     removeAllFloatingViews(): void;
-
 }

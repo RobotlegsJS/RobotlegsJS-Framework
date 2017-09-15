@@ -31,6 +31,8 @@ export class Utils {
         context.install(PalidorPixiExtension);
         context.configure(new PixiRootContainer(new Container()));
 
-        return <PixiContainerContoller>context.injector.get(IContainerController);
+        return <PixiContainerContoller>context.injector.get(
+            IContainerController
+        );
     }
 }

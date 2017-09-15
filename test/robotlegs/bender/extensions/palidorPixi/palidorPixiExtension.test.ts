@@ -18,7 +18,6 @@ import { Container } from "pixi.js";
 import { Context } from "@robotlegsjs/core";
 
 describe("PalidorPixiExtension", () => {
-
     let context: Context;
 
     beforeEach(() => {

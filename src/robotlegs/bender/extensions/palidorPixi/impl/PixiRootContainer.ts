@@ -12,7 +12,6 @@ import { injectable } from "@robotlegsjs/core";
 
 @injectable()
 export class PixiRootContainer implements IPixiRootContainer {
-
     private _root: Container;
 
     constructor(root: Container) {

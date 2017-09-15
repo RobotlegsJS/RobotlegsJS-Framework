@@ -13,7 +13,6 @@ import { injectable, inject } from "@robotlegsjs/core";
 
 @injectable()
 export class PixiContainerContoller implements IContainerController {
-
     private _root: Container;
 
     private _staticLayer: Container;
@@ -36,7 +35,7 @@ export class PixiContainerContoller implements IContainerController {
         return this._floatingViews;
     }
 
-    constructor( @inject(IPixiRootContainer) rootContainer: IPixiRootContainer) {
+    constructor(@inject(IPixiRootContainer) rootContainer: IPixiRootContainer) {
         this._floatingViews = new Array<Container>();
         this._root = rootContainer.getRootContainer();
         this.createLayers();
