@@ -1,6 +1,9 @@
 language: node_js
 node_js:
   - stable
+env:
+  - CODECLIMATE_REPO_TOKEN=c9c0ea099fb09410e0cb46004c201ca20003e10a2e962c0184b488f00a123694
+  - CODECLIMATE_API_HOST=https://codebeat.co/webhooks/code_coverage CODECLIMATE_REPO_TOKEN=412a0f0c-3e20-40a5-9543-3384e87e2730
 before_install:
   - export CHROME_BIN=chromium-browser
   - export DISPLAY=:99.0
@@ -16,6 +19,3 @@ after_script:
   - greenkeeper-lockfile-upload
 after_success:
   - codeclimate-test-reporter < coverage/lcov.info
-addons:
-  code_climate:
-    repo_token: c9c0ea099fb09410e0cb46004c201ca20003e10a2e962c0184b488f00a123694

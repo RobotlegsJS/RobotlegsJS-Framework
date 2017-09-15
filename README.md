@@ -3,7 +3,7 @@ RobotlegsJS Macrobot Utility
 
 [![Gitter chat](https://badges.gitter.im/RobotlegsJS/RobotlegsJS.svg)](https://gitter.im/RobotlegsJS/RobotlegsJS)
 [![Build Status](https://travis-ci.org/RobotlegsJS/RobotlegsJS-Macrobot.svg?branch=master)](https://travis-ci.org/RobotlegsJS/RobotlegsJS-Macrobot)
-[![Code Climate](https://codeclimate.com/github/RobotlegsJS/RobotlegsJS-Macrobot/badges/gpa.svg)](https://codeclimate.com/github/RobotlegsJS/RobotlegsJS-Macrobot)
+[![codebeat badge](https://codebeat.co/badges/412a0f0c-3e20-40a5-9543-3384e87e2730)](https://codebeat.co/projects/github-com-robotlegsjs-robotlegsjs-macrobot-master)
 [![Test Coverage](https://codeclimate.com/github/RobotlegsJS/RobotlegsJS-Macrobot/badges/coverage.svg)](https://codeclimate.com/github/RobotlegsJS/RobotlegsJS-Macrobot/coverage)
 [![npm version](https://badge.fury.io/js/%40robotlegsjs%2Fmacrobot.svg)](https://badge.fury.io/js/%40robotlegsjs%2Fmacrobot)
 [![Greenkeeper badge](https://badges.greenkeeper.io/RobotlegsJS/RobotlegsJS-Macrobot.svg)](https://greenkeeper.io/)
