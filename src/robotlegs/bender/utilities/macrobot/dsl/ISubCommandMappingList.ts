@@ -8,7 +8,6 @@
 import { ISubCommandMapping } from "../api/ISubCommandMapping";
 
 export interface ISubCommandMappingList {
-
     addMapping(mapping: ISubCommandMapping): void;
 
     removeMapping(mapping: ISubCommandMapping): void;

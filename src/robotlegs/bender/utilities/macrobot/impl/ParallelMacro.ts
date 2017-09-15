@@ -11,7 +11,6 @@ import { ISubCommandMapping } from "../api/ISubCommandMapping";
 import { AbstractMacro } from "./AbstractMacro";
 
 export abstract class ParallelMacro extends AbstractMacro implements IMacro {
-
     private _executionCount: number = 0;
 
     private _success: boolean = true;
@@ -48,7 +47,10 @@ export abstract class ParallelMacro extends AbstractMacro implements IMacro {
         this._executionCount++;
         this._success = this._success && success;
 
-        if (this._running && (!this._success || this._executionCount === this._commands.length)) {
+        if (
+            this._running &&
+            (!this._success || this._executionCount === this._commands.length)
+        ) {
             this.dispatchComplete(this._success);
         }
     }

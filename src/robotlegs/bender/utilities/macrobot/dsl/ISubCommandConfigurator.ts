@@ -8,7 +8,6 @@
 import { ISubCommandPayload } from "../api/ISubCommandPayload";
 
 export interface ISubCommandConfigurator {
-
     withGuards(...guards: any[]): ISubCommandConfigurator;
 
     withHooks(...hooks: any[]): ISubCommandConfigurator;
