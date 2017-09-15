@@ -13,12 +13,7 @@ import {
     PrioritySignal
 } from "@robotlegsjs/signals";
 
-import {
-    injectable,
-    IContext,
-    IExtension,
-    UID
-} from "@robotlegsjs/core";
+import { injectable, IContext, IExtension, UID } from "@robotlegsjs/core";
 
 import { ISignalCommandMap } from "./api/ISignalCommandMap";
 import { SignalCommandMap } from "./impl/SignalCommandMap";
@@ -31,7 +26,6 @@ injectable()(DeluxeSignal);
 injectable()(PrioritySignal);
 
 export class SignalCommandMapExtension implements IExtension {
-
     /*============================================================================*/
     /* Private Properties                                                         */
     /*============================================================================*/
@@ -43,7 +37,10 @@ export class SignalCommandMapExtension implements IExtension {
     /*============================================================================*/
 
     public extend(context: IContext): void {
-        context.injector.bind(ISignalCommandMap).to(SignalCommandMap).inSingletonScope();
+        context.injector
+            .bind(ISignalCommandMap)
+            .to(SignalCommandMap)
+            .inSingletonScope();
     }
 
     public toString(): string {

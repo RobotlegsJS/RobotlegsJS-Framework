@@ -1,4 +1,5 @@
 /.idea
+/.nyc_output
 /.vscode
 /coverage
 /dist
@@ -26,5 +27,6 @@ yarn.lock
 .gitignore
 .istanbul.yml
 .npmignore
+.prettierrc
 .publishrc
 .travis.yml
