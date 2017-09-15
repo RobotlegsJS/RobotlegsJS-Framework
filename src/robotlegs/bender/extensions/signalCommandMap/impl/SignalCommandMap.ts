@@ -25,7 +25,6 @@ import { SignalCommandTrigger } from "./SignalCommandTrigger";
  */
 @injectable()
 export class SignalCommandMap implements ISignalCommandMap {
-
     /*============================================================================*/
     /* Private Properties                                                         */
     /*============================================================================*/
@@ -45,12 +44,13 @@ export class SignalCommandMap implements ISignalCommandMap {
     /**
      * @private
      */
-    constructor(
-        @inject(IContext) context: IContext
-    ) {
+    constructor(@inject(IContext) context: IContext) {
         this._injector = context.injector;
         this._logger = context.getLogger(this);
-        this._triggerMap = new CommandTriggerMap(this.getKey, this.createTrigger.bind(this));
+        this._triggerMap = new CommandTriggerMap(
+            this.getKey,
+            this.createTrigger.bind(this)
+        );
     }
 
     /*============================================================================*/
@@ -83,7 +83,11 @@ export class SignalCommandMap implements ISignalCommandMap {
     /*============================================================================*/
 
     private createTrigger(signalClass: Object): ICommandTrigger {
-        return new SignalCommandTrigger(this._injector, signalClass, this._mappingProcessors);
+        return new SignalCommandTrigger(
+            this._injector,
+            signalClass,
+            this._mappingProcessors
+        );
     }
 
     private getTrigger(signalClass: Object): SignalCommandTrigger {

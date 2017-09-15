@@ -5,12 +5,7 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import {
-    injectable,
-    IContext,
-    IExtension,
-    UID
-} from "@robotlegsjs/core";
+import { injectable, IContext, IExtension, UID } from "@robotlegsjs/core";
 
 import { ISignalCommandMap } from "./api/ISignalCommandMap";
 import { SignalCommandMap } from "./impl/SignalCommandMap";
@@ -19,7 +14,6 @@ import { SignalCommandMap } from "./impl/SignalCommandMap";
 injectable()(Phaser.Signal);
 
 export class SignalCommandMapExtension implements IExtension {
-
     /*============================================================================*/
     /* Private Properties                                                         */
     /*============================================================================*/
@@ -31,7 +25,10 @@ export class SignalCommandMapExtension implements IExtension {
     /*============================================================================*/
 
     public extend(context: IContext): void {
-        context.injector.bind(ISignalCommandMap).to(SignalCommandMap).inSingletonScope();
+        context.injector
+            .bind(ISignalCommandMap)
+            .to(SignalCommandMap)
+            .inSingletonScope();
     }
 
     public toString(): string {

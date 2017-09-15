@@ -9,7 +9,6 @@ import { injectable } from "inversify";
 
 @injectable()
 export class RelaySignal extends Phaser.Signal {
-
     constructor() {
         super();
     }
