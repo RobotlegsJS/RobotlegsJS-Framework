@@ -68,7 +68,9 @@ export abstract class AbstractMacro extends AsyncCommand implements IMacro {
         let payloads: ISubCommandPayload[] = mapping.payloads;
         let hasPayloads: boolean = payloads.length > 0;
 
-        hasPayloads && this.mapPayloads(payloads);
+        if (hasPayloads) {
+            this.mapPayloads(payloads);
+        }
 
         if (mapping.guards.length === 0 || guardsApprove(mapping.guards, this._injector)) {
             command = mapping.getOrCreateCommandInstance(this._injector);
@@ -80,14 +82,23 @@ export abstract class AbstractMacro extends AsyncCommand implements IMacro {
             }
         }
 
-        hasPayloads && this.unmapPayloads(payloads);
+        if (hasPayloads) {
+            this.unmapPayloads(payloads);
+        }
 
         if (command && mapping.executeMethod) {
             let isAsync: boolean = command.constructor.prototype.registerCompleteCallback !== undefined;
-            isAsync && (<IAsyncCommand>command).registerCompleteCallback(this.commandCompleteHandler.bind(this));
+
+            if (isAsync) {
+                (<IAsyncCommand>command).registerCompleteCallback(this.commandCompleteHandler.bind(this));
+            }
+
             let executeMethod: Function = command[mapping.executeMethod];
             executeMethod.apply(command);
-            !isAsync && this.commandCompleteHandler(true);
+
+            if (!isAsync) {
+                this.commandCompleteHandler(true);
+            }
         } else {
             this.commandCompleteHandler(true);
         }
