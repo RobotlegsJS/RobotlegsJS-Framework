@@ -13,12 +13,9 @@ import { ISubCommandPayload } from "../../../../../../src/robotlegs/bender/utili
 import { SubCommandPayload } from "../../../../../../src/robotlegs/bender/utilities/macrobot/impl/SubCommandPayload";
 
 describe("SubCommandPayload", () => {
-
     let payload: ISubCommandPayload;
 
-    beforeEach(() => {
-        ;
-    });
+    beforeEach(() => {});
 
     afterEach(() => {
         payload = null;

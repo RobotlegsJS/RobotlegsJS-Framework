@@ -11,7 +11,6 @@ import { ISubCommandMapping } from "../api/ISubCommandMapping";
 import { AbstractMacro } from "./AbstractMacro";
 
 export abstract class SequenceMacro extends AbstractMacro implements IMacro {
-
     private _executionIndex: number = 0;
 
     private _success: boolean = true;
@@ -42,7 +41,9 @@ export abstract class SequenceMacro extends AbstractMacro implements IMacro {
 
     protected executeNext(): void {
         if (this.hasCommands) {
-            let mapping: ISubCommandMapping = this._commands[this._executionIndex++];
+            let mapping: ISubCommandMapping = this._commands[
+                this._executionIndex++
+            ];
             this.executeCommand(mapping);
         } else {
             this.dispatchComplete(this._success);

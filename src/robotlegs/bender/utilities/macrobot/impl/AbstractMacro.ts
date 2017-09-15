@@ -29,7 +29,6 @@ import { SubCommandMappingList } from "./SubCommandMappingList";
 
 @injectable()
 export abstract class AbstractMacro extends AsyncCommand implements IMacro {
-
     protected _injector: IInjector;
     protected _mappings: SubCommandMappingList;
 
@@ -72,7 +71,10 @@ export abstract class AbstractMacro extends AsyncCommand implements IMacro {
             this.mapPayloads(payloads);
         }
 
-        if (mapping.guards.length === 0 || guardsApprove(mapping.guards, this._injector)) {
+        if (
+            mapping.guards.length === 0 ||
+            guardsApprove(mapping.guards, this._injector)
+        ) {
             command = mapping.getOrCreateCommandInstance(this._injector);
 
             if (mapping.hooks.length > 0) {
@@ -87,10 +89,14 @@ export abstract class AbstractMacro extends AsyncCommand implements IMacro {
         }
 
         if (command && mapping.executeMethod) {
-            let isAsync: boolean = command.constructor.prototype.registerCompleteCallback !== undefined;
+            let isAsync: boolean =
+                command.constructor.prototype.registerCompleteCallback !==
+                undefined;
 
             if (isAsync) {
-                (<IAsyncCommand>command).registerCompleteCallback(this.commandCompleteHandler.bind(this));
+                (<IAsyncCommand>command).registerCompleteCallback(
+                    this.commandCompleteHandler.bind(this)
+                );
             }
 
             let executeMethod: Function = command[mapping.executeMethod];

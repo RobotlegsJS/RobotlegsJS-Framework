@@ -5,15 +5,11 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import {
-    IInjector,
-    ICommand
-} from "@robotlegsjs/core";
+import { IInjector, ICommand } from "@robotlegsjs/core";
 
 import { SubCommandMapping } from "./SubCommandMapping";
 
 export class SubCommandInstanceMapping extends SubCommandMapping {
-
     private _instance: ICommand;
 
     constructor(instance: ICommand) {

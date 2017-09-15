@@ -8,7 +8,6 @@
 import { ISubCommandPayload } from "../api/ISubCommandPayload";
 
 export class SubCommandPayload implements ISubCommandPayload {
-
     private _data: any;
     private _type: any;
     private _name: string;

@@ -5,23 +5,16 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import {
-    inject,
-    injectable,
-    IContext
-} from "@robotlegsjs/core";
+import { inject, injectable, IContext } from "@robotlegsjs/core";
 
 import { IAsyncCommand } from "../api/IAsyncCommand";
 
 @injectable()
 export class AsyncCommand implements IAsyncCommand {
-
     protected _context: IContext;
     protected _listeners: any[] = [];
 
-    constructor(
-        @inject(IContext) context: IContext
-    ) {
+    constructor(@inject(IContext) context: IContext) {
         this._context = context;
     }
 

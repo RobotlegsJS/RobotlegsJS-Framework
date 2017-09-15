@@ -9,7 +9,6 @@ import { ISubCommandMapping } from "../api/ISubCommandMapping";
 import { ISubCommandMappingList } from "../dsl/ISubCommandMappingList";
 
 export class SubCommandMappingList implements ISubCommandMappingList {
-
     private _mappings: ISubCommandMapping[] = [];
     private _mappingByCommand: Map<any, any> = new Map<any, any>();
 
@@ -27,7 +26,9 @@ export class SubCommandMappingList implements ISubCommandMappingList {
 
     public removeMappingsFor(commandClass: any): void {
         if (this._mappingByCommand.get(commandClass)) {
-            let list: ISubCommandMapping[] = this._mappingByCommand.get(commandClass);
+            let list: ISubCommandMapping[] = this._mappingByCommand.get(
+                commandClass
+            );
             let length: number = list.length;
             while (length--) {
                 this.deleteMapping(list[length]);
