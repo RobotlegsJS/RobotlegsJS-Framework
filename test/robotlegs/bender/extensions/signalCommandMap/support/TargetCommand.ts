@@ -13,11 +13,9 @@ import { Data } from "./Data";
 
 @injectable()
 export class TargetCommand implements ICommand {
-
     public static TARGET_VALUE: number;
 
-    @inject(Data)
-    private _data: Data;
+    @inject(Data) private _data: Data;
 
     public execute(): void {
         TargetCommand.TARGET_VALUE = this._data.value;
