@@ -29,10 +29,12 @@ export class EventMap implements IEventMap {
     }
     public unmapListener(
         dispatcher: IEventDispatcher | EventTarget,
-        type: string, listener: Function,
+        type: string,
+        listener: Function,
         thisObject?: any,
         eventClass?: Object,
-        useCapture?: Boolean): void {
+        useCapture?: Boolean
+    ): void {
         /*  */
     }
 

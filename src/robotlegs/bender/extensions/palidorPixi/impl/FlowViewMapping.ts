@@ -9,7 +9,6 @@ import { IFlowViewMapping } from "./../api/IFlowViewMapping";
 import { FlowManager } from "./FlowManager";
 
 export class FlowViewMapping implements IFlowViewMapping {
-
     private _event: string;
     public get event(): string {
         return this._event;
