@@ -22,7 +22,6 @@ import { ISignal } from "@robotlegsjs/signals";
  * @private
  */
 export class SignalCommandTrigger implements ICommandTrigger {
-
     /*============================================================================*/
     /* Private Properties                                                         */
     /*============================================================================*/
@@ -44,11 +43,19 @@ export class SignalCommandTrigger implements ICommandTrigger {
     /**
      * @private
      */
-    constructor(injector: IInjector, signalClass: any, processors?: Function[], logger?: ILogger) {
+    constructor(
+        injector: IInjector,
+        signalClass: any,
+        processors?: Function[],
+        logger?: ILogger
+    ) {
         this._injector = injector;
         this._signalClass = signalClass;
         this._mappings = new CommandMappingList(this, processors, logger);
-        this._executor = new CommandExecutor(injector, this._mappings.removeMapping);
+        this._executor = new CommandExecutor(
+            injector,
+            this._mappings.removeMapping
+        );
     }
 
     /*============================================================================*/
@@ -67,7 +74,10 @@ export class SignalCommandTrigger implements ICommandTrigger {
      */
     public activate(): void {
         if (!this._injector.isBound(this._signalClass)) {
-            this._injector.bind(this._signalClass).to(this._signalClass).inSingletonScope();
+            this._injector
+                .bind(this._signalClass)
+                .to(this._signalClass)
+                .inSingletonScope();
             // this._injector.map(this._signalClass).asSingleton();
         }
         this._signal = this._injector.get<ISignal>(this._signalClass);
@@ -92,7 +102,10 @@ export class SignalCommandTrigger implements ICommandTrigger {
     /*============================================================================*/
 
     private routePayloadToCommands = (...valueObjects): void => {
-        let payload: CommandPayload = new CommandPayload(valueObjects, this._signal.valueClasses);
+        let payload: CommandPayload = new CommandPayload(
+            valueObjects,
+            this._signal.valueClasses
+        );
         this._executor.executeCommands(this._mappings.getList(), payload);
-    }
+    };
 }

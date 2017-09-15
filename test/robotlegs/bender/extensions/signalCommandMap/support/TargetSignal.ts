@@ -13,7 +13,6 @@ import { Data } from "./Data";
 
 @injectable()
 export class TargetSignal extends Signal {
-
     constructor() {
         super(Data);
     }
