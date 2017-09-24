@@ -6,13 +6,12 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import {injectable} from "inversify";
-import {Signal} from "@robotlegsjs/signals";
-import {Data} from "./Data";
+import { injectable } from "inversify";
+import { Signal } from "@robotlegsjs/signals";
+import { Data } from "./Data";
 
 @injectable()
 export class RelaySignal extends Signal {
-
     constructor() {
         super(Data);
     }

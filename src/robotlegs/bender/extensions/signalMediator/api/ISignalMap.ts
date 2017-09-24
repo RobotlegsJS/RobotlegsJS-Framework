@@ -6,7 +6,7 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import {ISignal} from "@robotlegsjs/signals";
+import { ISignal } from "@robotlegsjs/signals";
 
 /**
  * The Signal Map allows you to bind Signals to functions
@@ -19,5 +19,5 @@ export interface ISignalMap {
 
     removeFromSignal(signal: ISignal, handler: Function): void;
 
-    removeAll(): void
+    removeAll(): void;
 }

@@ -6,13 +6,12 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import {injectable} from "@robotlegsjs/core";
-import {ISignalMap} from "../api/ISignalMap";
-import {ISignal} from "@robotlegsjs/signals";
+import { injectable } from "@robotlegsjs/core";
+import { ISignalMap } from "../api/ISignalMap";
+import { ISignal } from "@robotlegsjs/signals";
 
 @injectable()
 export class SignalMap implements ISignalMap {
-
     /*============================================================================*/
     /* Protected Properties                                                       */
     /*============================================================================*/
@@ -41,14 +40,16 @@ export class SignalMap implements ISignalMap {
         this.storeSignalHandler(signal, handler);
     }
 
-
     /**
      * @private
      */
     removeFromSignal(signal: any, handler: Function): void {
         signal.remove(handler);
 
-        if ((this._handlersBySignal[signal] == null) || (this._handlersBySignal[signal].length == 0)) {
+        if (
+            this._handlersBySignal[signal] == null ||
+            this._handlersBySignal[signal].length == 0
+        ) {
             return;
         }
 
@@ -63,8 +64,8 @@ export class SignalMap implements ISignalMap {
      * @private
      */
     removeAll(): void {
-        this._handlersBySignal.forEach(
-            (handlers, signal) => handlers.forEach((handler) => signal.remove(handler))
+        this._handlersBySignal.forEach((handlers, signal) =>
+            handlers.forEach(handler => signal.remove(handler))
         );
 
         this._handlersBySignal.clear();

@@ -6,12 +6,11 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import {IContext, IExtension, UID} from "@robotlegsjs/core";
-import {ISignalMap} from "./api/ISignalMap";
-import {SignalMap} from "./impl/SignalMap";
+import { IContext, IExtension, UID } from "@robotlegsjs/core";
+import { ISignalMap } from "./api/ISignalMap";
+import { SignalMap } from "./impl/SignalMap";
 
 export class SignalMediatorExtension implements IExtension {
-
     /*============================================================================*/
     /* Private Properties                                                         */
     /*============================================================================*/
@@ -23,7 +22,10 @@ export class SignalMediatorExtension implements IExtension {
     /*============================================================================*/
 
     public extend(context: IContext): void {
-        context.injector.bind(ISignalMap).to(SignalMap).inSingletonScope();
+        context.injector
+            .bind(ISignalMap)
+            .to(SignalMap)
+            .inSingletonScope();
     }
 
     public toString(): string {

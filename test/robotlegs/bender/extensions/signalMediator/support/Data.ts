@@ -6,11 +6,10 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import {injectable} from "inversify";
+import { injectable } from "inversify";
 
 @injectable()
 export class Data {
-
     protected _value: number;
 
     constructor(value: number) {
