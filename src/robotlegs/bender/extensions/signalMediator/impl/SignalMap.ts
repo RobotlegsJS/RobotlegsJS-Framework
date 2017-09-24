@@ -18,7 +18,7 @@ export class SignalMap implements ISignalMap {
     /* Protected Properties                                                       */
     /*============================================================================*/
 
-    protected _handlersBySignal: Map<ISignal, Array<Function>>;
+    protected _handlersBySignal: Map<ISignal, Function[]>;
 
     /*============================================================================*/
     /* Constructor                                                                */
@@ -47,7 +47,7 @@ export class SignalMap implements ISignalMap {
 
         if (
             this._handlersBySignal[signal] == null ||
-            this._handlersBySignal[signal].length == 0
+            this._handlersBySignal[signal].length === 0
         ) {
             return;
         }
