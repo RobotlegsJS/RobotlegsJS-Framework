@@ -9,7 +9,9 @@ RobotlegsJS Pixi SignalMediator Extension
 [![Greenkeeper badge](https://badges.greenkeeper.io/RobotlegsJS/RobotlegsJS-Pixi-SignalMediator.svg)](https://greenkeeper.io/)
 [![styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 
-A port of Robotlegs Extensions SignalMediator to TypeScript.
+A port of [Robotlegs SignalMediator Extension](https://github.com/MrDodson/robotlegs-extensions-SignalMediator) to TypeScript.
+
+Originally published on [RobotlegsJS-SignalMediator](https://github.com/cuongdd2/RobotlegsJS-SignalMediator).
 
 License
 ---
