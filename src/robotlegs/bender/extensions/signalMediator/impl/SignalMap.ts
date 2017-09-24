@@ -32,20 +32,17 @@ export class SignalMap implements ISignalMap {
     /* Public Functions                                                           */
     /*============================================================================*/
 
-    addToSignal(signal: ISignal, handler: Function): void {
+    public addToSignal(signal: ISignal, handler: Function): void {
         signal.add(handler);
         this.storeSignalHandler(signal, handler);
     }
 
-    addOnceToSignal(signal: ISignal, handler: Function): void {
+    public addOnceToSignal(signal: ISignal, handler: Function): void {
         signal.addOnce(handler);
         this.storeSignalHandler(signal, handler);
     }
 
-    /**
-     * @private
-     */
-    removeFromSignal(signal: any, handler: Function): void {
+    public removeFromSignal(signal: any, handler: Function): void {
         signal.remove(handler);
 
         if (
@@ -62,10 +59,7 @@ export class SignalMap implements ISignalMap {
         }
     }
 
-    /**
-     * @private
-     */
-    removeAll(): void {
+    public removeAll(): void {
         this._handlersBySignal.forEach((handlers, signal) =>
             handlers.forEach(handler => signal.remove(handler))
         );

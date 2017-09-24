@@ -42,7 +42,7 @@ export abstract class SignalMediator<
      * Runs after the mediator has been destroyed.
      * Cleans up listeners mapped through the local EventMap.
      */
-    postDestroy(): void {
+    public postDestroy(): void {
         this.signalMap.removeAll();
         super.postDestroy();
     }
