@@ -7,8 +7,11 @@
 // ------------------------------------------------------------------------------
 
 import "../../../../entry.ts";
+
 import { assert } from "chai";
+
 import { Context } from "@robotlegsjs/core";
+
 import { SignalMediatorExtension } from "../../../../../src/robotlegs/bender/extensions/signalMediator/SignalMediatorExtension";
 import { ISignalMap } from "../../../../../src/robotlegs/bender/extensions/signalMediator/api/ISignalMap";
 import { SignalMap } from "../../../../../src/robotlegs/bender/extensions/signalMediator/impl/SignalMap";
