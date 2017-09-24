@@ -5,10 +5,10 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 import {injectable} from "inversify";
-import {IEventDispatcher} from "robotlegs";
-import {Mediator} from "robotlegs-pixi";
+import {IEventDispatcher} from "@robotlegsjs/core";
+import {Mediator} from "@robotlegsjs/pixi";
 import {ISignalMap} from "../api/ISignalMap";
-import {ISignal} from "signals.js";
+import {ISignal} from "@robotlegsjs/signals";
 import {SignalMap} from "./SignalMap";
 
 /**

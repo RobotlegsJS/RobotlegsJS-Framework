@@ -4,7 +4,7 @@
 //  NOTICE: You are permitted to use, modify, and distribute this file
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
-import {IContext, IExtension, UID} from "robotlegs";
+import {IContext, IExtension, UID} from "@robotlegsjs/core";
 import {ISignalMap} from "./api/ISignalMap";
 import {SignalMap} from "./impl/SignalMap";
 
