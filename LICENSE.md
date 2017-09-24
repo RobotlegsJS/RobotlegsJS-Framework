@@ -1,6 +1,7 @@
 MIT License
 
 Copyright (c) 2017 RobotlegsJS http://robotlegsjs.io
+
 Copyright (c) 2016 San Dinh Studios https://www.sandinh.com
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
