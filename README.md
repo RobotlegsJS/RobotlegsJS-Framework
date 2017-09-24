@@ -1,4 +1,4 @@
-RobotlegsJS SignalMediator Extension
+RobotlegsJS Pixi SignalMediator Extension
 ===
 
 A port of Robotlegs Extensions SignalMediator to TypeScript.
