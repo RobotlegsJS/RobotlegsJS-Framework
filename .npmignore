@@ -1,7 +1,6 @@
 /.idea
 /.vscode
 /coverage
-/dist
 /docs
 /lib/test
 /not-ported-extensions
@@ -18,6 +17,7 @@ tsfmt.json
 tslint.json
 typings.json
 webpack.config.js
+yarn.lock
 .codeclimate.yml
 .editorconfig
 .eslintignore
@@ -25,5 +25,6 @@ webpack.config.js
 .gitignore
 .istanbul.yml
 .npmignore
+.prettierrc
 .publishrc
 .travis.yml
