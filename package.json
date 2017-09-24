@@ -1,7 +1,7 @@
 {
-  "name": "robotlegs-signalmediator",
-  "version": "1.0.0-alpha.7",
-  "description": "TypeScript port of Robotlegs Extensions SignalMediator",
+  "name": "@robotlegsjs/pixi-signalmediator",
+  "version": "0.0.1",
+  "description": "TypeScript port of Robotlegs Extension SignalMediator",
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
   "scripts": {
@@ -13,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/cuongdd2/RobotlegsJS-SignalMediator.git"
+    "url": "git@github.com:RobotlegsJS/RobotlegsJS-Pixi-SignalMediator.git"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org"
@@ -21,17 +21,19 @@
   "keywords": [
     "TypeScript",
     "Robotlegs",
-    "IoC"
+    "IoC",
+    "Pixi"
   ],
-  "author": "Do Duc Cuong",
+  "author": "RobotlegsJS",
   "contributors": [
-    "Do Duc Cuong <cuongdd2@gmail.com>"
+    "Do Duc Cuong <cuongdd2@gmail.com>",
+    "Pedro Antonio Souza Viegas <pedroasv@gmail.com>"
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/cuongdd2/RobotlegsJS-SignalMediator/issues"
+    "url": "https://github.com/RobotlegsJS/RobotlegsJS-Pixi-SignalMediator/issues"
   },
-  "homepage": "https://github.com/cuongdd2/RobotlegsJS-SignalMediator#readme",
+  "homepage": "https://github.com/RobotlegsJS/RobotlegsJS-Pixi-SignalMediator#readme",
   "dependencies": {
     "robotlegs": "1.0.1",
     "robotlegs-pixi": "1.0.0",
