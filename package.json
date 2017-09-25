@@ -13,7 +13,7 @@
     "build": "webpack --env.production",
     "prepare": "npm run clean-up && tsc -d",
     "prepublishOnly": "publish-please guard",
-    "publish-please": "npm run autoformat && npm run clean-up && npm run build && publish-please"
+    "publish-please": "npm run autoformat && npm run clean-up && npm run build && npm run test && publish-please"
   },
   "nyc": {
     "include": [
