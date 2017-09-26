@@ -37,7 +37,7 @@
   },
   "homepage": "https://github.com/RobotlegsJS/RobotlegsJS-Phaser-SignalCommandMap#readme",
   "dependencies": {
-    "@robotlegsjs/core": "^0.0.5",
+    "@robotlegsjs/core": "^0.0.6",
     "phaser-ce": "^2.8.7"
   },
   "devDependencies": {
