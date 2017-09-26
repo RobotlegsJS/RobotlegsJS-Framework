@@ -14,13 +14,19 @@
   dependencies:
     inversify "^4.3.0"
 
-"@robotlegsjs/pixi@^0.0.3":
-  version "0.0.3"
-  resolved "https://registry.npmjs.org/@robotlegsjs/pixi/-/pixi-0.0.3.tgz#cfa0210304edbf2ffc377448218e6ba1ef4d643d"
+"@robotlegsjs/core@^0.0.6":
+  version "0.0.6"
+  resolved "https://registry.npmjs.org/@robotlegsjs/core/-/core-0.0.6.tgz#fc056e713b0856cbc867bbcf5ea4c91bad52d4b5"
   dependencies:
-    "@robotlegsjs/core" "^0.0.5"
+    inversify "^4.3.0"
+
+"@robotlegsjs/pixi@0.0.4":
+  version "0.0.4"
+  resolved "https://registry.npmjs.org/@robotlegsjs/pixi/-/pixi-0.0.4.tgz#efbc0dc1bd77e5084b8d84031efab721e3bb175c"
+  dependencies:
+    "@robotlegsjs/core" "^0.0.6"
     eventemitter3 "^2.0.3"
-    pixi.js "^4.5.5"
+    pixi.js "^4.5.6"
 
 "@robotlegsjs/signals@0.0.11":
   version "0.0.11"
@@ -4167,7 +4173,7 @@ pixi-gl-core@^1.0.3:
   version "1.1.0"
   resolved "https://registry.npmjs.org/pixi-gl-core/-/pixi-gl-core-1.1.0.tgz#a52cb4dd3254f9c7857a0e9c2356b00e6ec0c761"
 
-pixi.js@^4.5.5:
+pixi.js@^4.5.6:
   version "4.5.6"
   resolved "https://registry.npmjs.org/pixi.js/-/pixi.js-4.5.6.tgz#54914e7935f9a9e346923b9f424e52fa417593cd"
   dependencies:
