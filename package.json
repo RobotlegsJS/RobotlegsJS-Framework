@@ -57,7 +57,7 @@
   },
   "homepage": "https://github.com/RobotlegsJS/SignalsJS#readme",
   "devDependencies": {
-    "@types/bluebird": "^3.5.11",
+    "@types/bluebird": "^3.5.12",
     "@types/chai": "^4.0.4",
     "@types/mocha": "^2.2.43",
     "@types/sinon": "^2.3.4",
