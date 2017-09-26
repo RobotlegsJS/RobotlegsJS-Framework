@@ -1,6 +1,6 @@
 {
   "name": "@robotlegsjs/signals",
-  "version": "0.0.10",
+  "version": "0.0.11",
   "description": "TypeScript port of AS3 Signals.",
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
