@@ -1,6 +1,6 @@
 {
   "name": "@robotlegsjs/phaser-signalcommandmap",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "SignalCommandMap RobotlegsJS Extension that maps Phaser.Signal class into commands",
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
