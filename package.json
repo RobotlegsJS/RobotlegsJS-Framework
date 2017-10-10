@@ -105,7 +105,6 @@
     "ts-node": "^3.3.0",
     "tslint": "^5.7.0",
     "tslint-config-prettier": "^1.5.0",
-    "typedoc": "^0.8.0",
     "typescript": "^2.5.2",
     "webpack": "^3.6.0",
     "webpack-dev-server": "^2.8.2"
