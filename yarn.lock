@@ -8,9 +8,9 @@
   dependencies:
     inversify "^4.3.0"
 
-"@robotlegsjs/pixi@^0.0.4":
-  version "0.0.4"
-  resolved "https://registry.npmjs.org/@robotlegsjs/pixi/-/pixi-0.0.4.tgz#efbc0dc1bd77e5084b8d84031efab721e3bb175c"
+"@robotlegsjs/pixi@0.0.5":
+  version "0.0.5"
+  resolved "https://registry.npmjs.org/@robotlegsjs/pixi/-/pixi-0.0.5.tgz#2debcf06bea9426633299936ac599d148f7fb194"
   dependencies:
     "@robotlegsjs/core" "^0.0.6"
     eventemitter3 "^2.0.3"
