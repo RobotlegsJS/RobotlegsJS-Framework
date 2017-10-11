@@ -28,9 +28,9 @@
   version "2.2.43"
   resolved "https://registry.npmjs.org/@types/mocha/-/mocha-2.2.43.tgz#03c54589c43ad048cbcbfd63999b55d0424eec27"
 
-"@types/pixi.js@^4.5.6":
-  version "4.5.6"
-  resolved "https://registry.npmjs.org/@types/pixi.js/-/pixi.js-4.5.6.tgz#030bc606a7968a1b4fa3f046aeab8400ac207f64"
+"@types/pixi.js@^4.5.7":
+  version "4.5.7"
+  resolved "https://registry.npmjs.org/@types/pixi.js/-/pixi.js-4.5.7.tgz#a17d6c3c164ccdabcc86d290ba28f2b3730f2e7d"
 
 "@types/sinon@^2.3.5":
   version "2.3.5"
