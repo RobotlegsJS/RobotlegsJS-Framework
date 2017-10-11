@@ -8,7 +8,7 @@
   dependencies:
     inversify "^4.3.0"
 
-"@robotlegsjs/pixi@0.0.5":
+"@robotlegsjs/pixi@^0.0.5":
   version "0.0.5"
   resolved "https://registry.npmjs.org/@robotlegsjs/pixi/-/pixi-0.0.5.tgz#2debcf06bea9426633299936ac599d148f7fb194"
   dependencies:
