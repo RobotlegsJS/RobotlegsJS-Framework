@@ -38,7 +38,6 @@
   },
   "homepage": "https://github.com/RobotlegsJS/RobotlegsJS-Pixi-Palidor#readme",
   "dependencies": {
-    "@robotlegsjs/core": "^0.0.6",
     "@robotlegsjs/pixi": "^0.0.6",
     "pixi.js": "^4.5.6"
   },
