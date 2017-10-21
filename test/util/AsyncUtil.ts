@@ -17,7 +17,9 @@ export class AsyncUtil {
         ...args
     ) {
         setTimeout(function() {
-            callback(...args);
+            if (callback) {
+                callback(...args);
+            }
 
             if (doneCallback) {
                 doneCallback();
