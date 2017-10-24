@@ -19,6 +19,16 @@ export class PixiFactory {
         return label;
     }
 
+    public static getTextHUDSmall(text: string): Container {
+        let style = {
+            align: "center",
+            font: { name: MagicValues.FONT_FAMILY, size: MagicValues.FONT_SIZE_HUD_SMALL }
+        };
+        let label = new PIXI.extras.BitmapText(text, style);
+        label.tint = Colors.TEXT;
+        return label;
+    }
+
 /*     public static getHUDText(text: string): Container {
         let style = {
             align: "center",

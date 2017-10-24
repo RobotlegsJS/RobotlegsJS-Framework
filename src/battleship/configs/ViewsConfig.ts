@@ -1,5 +1,5 @@
-import { BattleFieldComponentMediator } from "./../mediators/BattleFieldComponentMediator";
-import { BattleFieldComponent } from '../views/components/BattleFieldComponent';
+import { PlayerComponentMediator } from "./../mediators/PlayerComponentMediator";
+import { PlayerComponent } from "../views/components/PlayerComponent";
 import { GameViewMediator } from "../mediators/GameViewMediator";
 import { GameView } from "./../views/GameView";
 import { HomeViewMediator } from "./../mediators/HomeViewMediator";
@@ -21,6 +21,6 @@ export class ViewsConfig implements IConfig {
         this.mediatorMap.map(HomeView).toMediator(HomeViewMediator);
         this.mediatorMap.map(GameView).toMediator(GameViewMediator);
 
-        this.mediatorMap.map(BattleFieldComponent).toMediator(BattleFieldComponentMediator);
+        this.mediatorMap.map(PlayerComponent).toMediator(PlayerComponentMediator);
     }
 }

@@ -1,17 +1,13 @@
-import { BattleFieldComponent } from "./components/BattleFieldComponent";
-import { HUDGameComponent } from "./components/HUDGameComponent";
+import { Player } from "./../game/models/Player";
+import { MagicValues } from "../utils/MagicValues";
+import { PlayerComponent } from "./components/PlayerComponent";
 import { PixiFactory } from "./../utils/PixiFactory";
 
 import { Container } from "pixi.js";
 
 export class GameView extends Container {
-
-    private _battleField: BattleFieldComponent;
-    private _hudComponent: HUDGameComponent;
-
-    public get battleField(): BattleFieldComponent {
-        return this._battleField;
-    }
+    private _hero: PlayerComponent;
+    private _enemy: PlayerComponent;
 
     constructor() {
         super();
@@ -19,19 +15,20 @@ export class GameView extends Container {
     }
 
     public destroy(): void {
-        this.removeChild(this._battleField);
-        this.removeChild(this._hudComponent);
+        this.removeChild(this._hero);
+        this.removeChild(this._enemy);
 
-        this._battleField = null;
-        this._hudComponent = null;
+        this._hero = null;
+        this._enemy = null;
     }
 
     public createComponents(): void {
-        this._hudComponent = new HUDGameComponent();
-        this.addChild(this._hudComponent);
+        this._hero = new PlayerComponent(Player.HUMAN);
+        this.addChild(this._hero);
 
-        this._battleField = new BattleFieldComponent();
-        this.addChild(this._battleField);
+        this._enemy = new PlayerComponent(Player.BOT);
+        this._enemy.y = MagicValues.HALF_HEIGHT;
+        this.addChild(this._enemy);
     }
 
     private createBackground(): void {

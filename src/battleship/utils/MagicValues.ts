@@ -8,6 +8,7 @@ export class MagicValues {
     public static FONT_SIZE_TITLE = 38;
     public static FONT_SIZE_DEFAULT = 32;
     public static FONT_SIZE_HUD = 42;
+    public static FONT_SIZE_HUD_SMALL = 16;
     public static FONT_SIZE_BUTTON = 16;
 
     public static MAX_WIDTH = 400;
