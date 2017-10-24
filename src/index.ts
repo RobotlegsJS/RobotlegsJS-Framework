@@ -1,3 +1,6 @@
+import { AtlasKeys } from "./battleship/utils/AtlasKeys";
+// tslint:disable-next-line:no-reference
+/// <reference path="../node_modules/@robotlegsjs/pixi/definitions/pixi.d.ts" />
 import "reflect-metadata";
 import PIXI = require("pixi.js");
 
@@ -28,6 +31,16 @@ class Main {
             .configure(GameConfig, ViewsConfig, PalidorConfig)
             .initialize();
         document.body.appendChild(this.renderer.view);
+        let loader = PIXI.loader
+            .add(AtlasKeys.ATLAS_PNG)
+            .add(AtlasKeys.ATLAS_XML)
+            .add(AtlasKeys.FONT_FNT)
+            .load(this.onLoad);
+        document.body.appendChild(this.renderer.view);
+    }
+
+    public onLoad(): void {
+        AtlasKeys.update(PIXI.utils.TextureCache);
     }
 
     public render = () => {
