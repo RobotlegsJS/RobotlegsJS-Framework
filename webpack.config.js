@@ -1,10 +1,9 @@
-const webpack = require('webpack');
-const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+const webpack = require("webpack");
+const path = require("path");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 
-module.exports = (function(options) {
-
-  if (!options) options = {isTest: false};
+module.exports = function(options) {
+  if (!options) options = { isTest: false };
 
   var tsconfig = options.isTest ? "tsconfig.test.json" : "tsconfig.json";
 
@@ -18,7 +17,7 @@ module.exports = (function(options) {
       filename: "bundle.js"
     },
 
-    devtool: 'inline-source-map',
+    devtool: "inline-source-map",
 
     module: {
       rules: [
@@ -34,16 +33,13 @@ module.exports = (function(options) {
       ]
     },
 
-    plugins: [
-      new HtmlWebpackPlugin(),
-      new webpack.SourceMapDevToolPlugin({ test: /\.ts$/i })
-    ],
+    plugins: [new HtmlWebpackPlugin(), new webpack.SourceMapDevToolPlugin({ test: /\.ts$/i })],
 
     resolve: {
-      extensions: ['.ts', '.js', '.json'],
+      extensions: [".ts", ".js", ".json"],
       alias: {
         // sinon: 'sinon/pkg/sinon'
       }
     }
-  }
-});
+  };
+};

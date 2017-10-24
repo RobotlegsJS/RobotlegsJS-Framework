@@ -49,7 +49,7 @@ module.exports = function(config) {
     plugins: plugins,
     reporters: (
       config.singleRun ?
-        ["dots", "mocha", "coverage-istanbul"] :
+        ["mocha", "coverage-istanbul"] :
         ["mocha"]
     ),
     coverageIstanbulReporter: {
