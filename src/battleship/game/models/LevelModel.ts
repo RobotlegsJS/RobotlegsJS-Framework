@@ -1,5 +1,6 @@
 import { Player } from "./Player";
-
+import { injectable } from "@robotlegsjs/core";
+@injectable()
 export class LevelModel {
     private _hero: Player;
     private _enemy: Player;
