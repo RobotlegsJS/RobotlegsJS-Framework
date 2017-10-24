@@ -43,7 +43,7 @@ export class PlayerComponent extends Container {
         for (let i = 0; i < 5; i++) {
             let doubleText: DoubleText = new DoubleText("0", "0");
             doubleText.x = 220;
-            doubleText.y = i * 50+ 50;
+            doubleText.y = i * 50 + 50;
             this.addChild(doubleText);
             this._doubleTexts.push(doubleText);
         }

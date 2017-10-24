@@ -7,7 +7,6 @@ import { AtlasKeys } from "./AtlasKeys";
 import { Graphics, Text, Container, Sprite, Texture } from "pixi.js";
 
 export class PixiFactory {
-
     /* TEXTFIELDS */
     public static getText(text: string): Container {
         let style = {
@@ -29,7 +28,7 @@ export class PixiFactory {
         return label;
     }
 
-/*     public static getHUDText(text: string): Container {
+    /*     public static getHUDText(text: string): Container {
         let style = {
             align: "center",
             font: { name: MagicValues.FONT_FAMILY, size: MagicValues.FONT_SIZE_HUD }
@@ -48,8 +47,8 @@ export class PixiFactory {
         let title = new PIXI.extras.BitmapText(label, style);
         title.x = MagicValues.HALF_WIDTH;
         title.y = 50;
-        title.pivot.x = title.width * .5;
-        title.pivot.y = title.height * .5;
+        title.pivot.x = title.width * 0.5;
+        title.pivot.y = title.height * 0.5;
         title.tint = Colors.TITLE;
         return title;
     }
@@ -61,8 +60,8 @@ export class PixiFactory {
         };
 
         let title = new PIXI.extras.BitmapText(label, style);
-        title.pivot.x = title.width * .5;
-        title.pivot.y = title.height * .5;
+        title.pivot.x = title.width * 0.5;
+        title.pivot.y = title.height * 0.5;
         title.tint = Colors.BUTTON_ICON;
         return title;
     }
@@ -97,13 +96,13 @@ export class PixiFactory {
         return background;
     }
 
-    public static getShadowBackground(alpha = .6): Graphics {
+    public static getShadowBackground(alpha = 0.6): Graphics {
         let bg: Graphics = PixiFactory.getColorBackground(0x000000);
         bg.alpha = alpha;
         return bg;
     }
 
-    public static getShadowHeader(alpha = .8): Graphics {
+    public static getShadowHeader(alpha = 0.8): Graphics {
         let bg: Graphics = PixiFactory.getColorBox(MagicValues.MAX_WIDTH, 100);
         bg.alpha = alpha;
         return bg;
@@ -117,8 +116,8 @@ export class PixiFactory {
         };
         let bmpText = new PIXI.extras.BitmapText(text, style);
         bmpText.tint = color;
-        bmpText.pivot.x = bmpText.width * .5;
-        bmpText.pivot.y = bmpText.height * .5;
+        bmpText.pivot.x = bmpText.width * 0.5;
+        bmpText.pivot.y = bmpText.height * 0.5;
         return bmpText;
     }
 }

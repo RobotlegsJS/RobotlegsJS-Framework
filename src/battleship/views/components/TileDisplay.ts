@@ -1,3 +1,4 @@
+import { Tile } from "../../game/models/Tile";
 import { AtlasKeys } from "./../../utils/AtlasKeys";
 import { Colors } from "./../../utils/Colors";
 import { MagicValues } from "./../../utils/MagicValues";
@@ -7,77 +8,62 @@ import { Graphics, Container } from "pixi.js";
 
 export class TileDisplay extends Container {
     public tileId: number;
+    public tile: Tile;
 
     private _background: Graphics;
-    private _container: Container;
-    private _flagContainer: Container;
+    private _ship: Graphics;
+    private _enabled: boolean;
 
-    constructor(tileId: number) {
+    public set enabled(value) {
+        this.interactive = value;
+        this.buttonMode = value;
+        this._enabled = value;
+    }
+
+    public get enabled(): boolean {
+        return this._enabled;
+    }
+
+    constructor(tileId: number, col: number, row: number) {
         super();
 
         this.tileId = tileId;
-        this.interactive = true;
-        this.buttonMode = true;
-
+        this.tile = new Tile(col, row);
+        this.enabled = true;
         this.createBackground();
-        this.setValue();
-        this.show();
     }
 
     public show(): void {
-        if (this._container.visible === false) {
-            let color: number = Colors.TILE_BACKGROUND_OPEN;
-            /* if (this.tileId.isMine() === true) {
-                color = Colors.TILE_BACKGROUND_MINE_2;
-            } */
-            this.drawBackground(color);
+        if (this.tileId > 0) {
+            this._ship.visible = true;
         }
-        this._container.visible = true;
     }
 
-    public reveal(): void {
-        this.show();
-        /* if (this.tileId.isMine() === true) {
-            this.drawBackground(Colors.TILE_BACKGROUND_MINE);
+    public attack(): void {
+        if (this.tileId > 0) {
+            this.swichBackgroundColor(0xff0000, this._background);
         } else {
-            this.drawBackground(Colors.TILE_BACKGROUND_OPEN);
-        } */
+            this.swichBackgroundColor(0x66aaaa, this._background);
+        }
     }
 
     private createBackground(): void {
         this._background = new Graphics();
         this.addChild(this._background);
-        this.drawBackground(Colors.TILE_BACKGROUND);
+        this.swichBackgroundColor(Colors.TILE_BACKGROUND, this._background);
 
-        this._container = new Container();
-        this._container.visible = false;
-        this.addChild(this._container);
-
-        this._flagContainer = new Container();
-        this._flagContainer.visible = false;
-        this.addChild(this._flagContainer);
+        this._ship = new Graphics();
+        this._ship.visible = false;
+        this.addChild(this._ship);
+        this.swichBackgroundColor(0xff0000, this._ship);
+        this._ship.alpha = 0.5;
     }
 
-    private setValue(): void {
-        this.createText();
-    }
-
-    private createText(): void {
-        let colors: number[] = [
-            Colors.TILE_TEXT_1,
-            Colors.TILE_TEXT_1,
-            Colors.TILE_TEXT_2,
-            Colors.TILE_TEXT_3,
-            Colors.TILE_TEXT_4
-        ];
-        this._container.addChild(PixiFactory.getTileLabel(this.tileId.toString(), colors[this.tileId]));
-    }
-
-    private drawBackground(color: number): void {
-        this._background.clear();
-        this._background.beginFill(color);
-        this._background.drawRoundedRect(0, 0, MagicValues.TILE_WIDTH - 1, MagicValues.TILE_HEIGHT - 1, 5);
-        this._background.pivot.x = this._background.width * 0.5;
-        this._background.pivot.y = this._background.height * 0.5;
+    private swichBackgroundColor(color: number, graphic: Graphics): void {
+        graphic.clear();
+        graphic.beginFill(color);
+        graphic.drawRoundedRect(0, 0, MagicValues.TILE_WIDTH - 1, MagicValues.TILE_HEIGHT - 1, 5);
+        graphic.pivot.x = graphic.width * 0.5;
+        graphic.pivot.y = graphic.height * 0.5;
     }
 }

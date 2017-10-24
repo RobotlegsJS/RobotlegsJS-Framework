@@ -1,6 +1,6 @@
-import { GameService } from '../services/GameService';
+import { GameService } from "../services/GameService";
 import { GameEvent } from "./../events/GameEvent";
-import { CreateLevelCommand } from '../game/commands/CreateLevelCommand';
+import { CreateLevelCommand } from "../game/commands/CreateLevelCommand";
 import { GameManager } from "../game/managers/GameManager";
 import { LevelModel } from "./../game/models/LevelModel";
 import { IConfig, injectable, inject, IEventCommandMap, IContext } from "@robotlegsjs/core";

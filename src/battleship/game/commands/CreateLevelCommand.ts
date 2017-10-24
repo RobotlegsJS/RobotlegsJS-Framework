@@ -8,18 +8,13 @@ import { injectable, inject, ICommand } from "@robotlegsjs/core";
 
 @injectable()
 export class CreateLevelCommand implements ICommand {
+    @inject(LevelModel) public levelModel: LevelModel;
 
-    @inject(LevelModel)
-    public levelModel: LevelModel;
+    @inject(GameManager) public gameManager: GameManager;
 
-    @inject(GameManager)
-    public gameManager: GameManager;
+    @inject(GameService) public gameService: GameService;
 
-    @inject(GameService)
-    public gameService: GameService;
-
-    @inject(FlowService)
-    public flowService: FlowService;
+    @inject(FlowService) public flowService: FlowService;
 
     public execute(): void {
         this.flowService.setGameView();
@@ -29,7 +24,7 @@ export class CreateLevelCommand implements ICommand {
 
         this.gameService.clearBattleField();
         this.gameService.drawBattleField();
-       /*  this.levelModel.levelId = this.gameEvent.extra.levelId;
+        /*  this.levelModel.levelId = this.gameEvent.extra.levelId;
         this.levelModel.reset();
 
         this.gameManager.generateGrid(this.levelModel.levelId);

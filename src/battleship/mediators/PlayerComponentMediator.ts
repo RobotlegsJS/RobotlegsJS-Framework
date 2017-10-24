@@ -34,11 +34,16 @@ export class PlayerComponentMediator extends Mediator<PlayerComponent> {
         this.drawBattleGrid(battlefield.grid);
         this.setShipsHP(battlefield.ships);
     }
+
     private drawBattleGrid(grid: Grid): void {
         for (let row = 0; row < grid.maxRows; row++) {
             for (let col = 0; col < grid.maxCols; col++) {
                 let tileId = grid.getTileId(col, row);
-                let display: TileDisplay = new TileDisplay(tileId);
+                let display: TileDisplay = new TileDisplay(tileId, col, row);
+                if (this.view.type === Player.HUMAN) {
+                    display.show();
+                    display.enabled = false;
+                }
                 display.x = MagicValues.TILE_WIDTH * col;
                 display.y = MagicValues.TILE_HEIGHT * row;
                 this.view.field.addChild(display);

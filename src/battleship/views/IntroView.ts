@@ -6,7 +6,6 @@ import { MagicValues } from "./../utils/MagicValues";
 import { Container, Text, Sprite } from "pixi.js";
 
 export class IntroView extends Container {
-
     constructor() {
         super();
 
@@ -21,7 +20,7 @@ export class IntroView extends Container {
 
     private createImages(): void {
         let logoImg: Sprite = PIXI.Sprite.fromImage(AtlasKeys.LOGO_TYPESCRIPT);
-        logoImg.anchor.x = .5;
+        logoImg.anchor.x = 0.5;
         logoImg.x = MagicValues.HALF_WIDTH;
         logoImg.y = MagicValues.MAX_HEIGHT - 64;
         this.addChild(logoImg);

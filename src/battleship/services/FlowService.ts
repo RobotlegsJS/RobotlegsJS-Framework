@@ -5,9 +5,7 @@ import { injectable, inject, IEventDispatcher, EventDispatcher } from "@robotleg
 
 @injectable()
 export class FlowService {
-
-    @inject(IEventDispatcher)
-    public eventDispatcher: IEventDispatcher;
+    @inject(IEventDispatcher) public eventDispatcher: IEventDispatcher;
 
     // Views
     public setHomeView(): void {

@@ -1,3 +1,5 @@
+import { TileDisplayMediator } from "./../mediators/TileDisplayMediator";
+import { TileDisplay } from "../views/components/TileDisplay";
 import { PlayerComponentMediator } from "./../mediators/PlayerComponentMediator";
 import { PlayerComponent } from "../views/components/PlayerComponent";
 import { GameViewMediator } from "../mediators/GameViewMediator";
@@ -22,5 +24,7 @@ export class ViewsConfig implements IConfig {
         this.mediatorMap.map(GameView).toMediator(GameViewMediator);
 
         this.mediatorMap.map(PlayerComponent).toMediator(PlayerComponentMediator);
+
+        this.mediatorMap.map(TileDisplay).toMediator(TileDisplayMediator);
     }
 }

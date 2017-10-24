@@ -1,5 +1,5 @@
 import { GameView } from "./../views/GameView";
-import { HomeView } from '../views/HomeView';
+import { HomeView } from "../views/HomeView";
 import { IntroView } from "../views/IntroView";
 import { FlowService } from "./../services/FlowService";
 import { FlowEvent } from "./../events/FlowEvent";
