@@ -1,3 +1,4 @@
+import { IsoUtils } from "../utils/IsoUtils";
 import { EnemyTileDisplay } from "./../views/components/EnemyTileDisplay";
 import { Ship } from "../game/models/Ship";
 import { GameEvent } from "./../events/GameEvent";
@@ -44,8 +45,9 @@ export class EnemyComponentMediator extends Mediator<EnemyComponent> {
             for (let col = 0; col < grid.maxCols; col++) {
                 let tileId = grid.getTileId(col, row);
                 let display: TileDisplay = new EnemyTileDisplay(tileId, col, row);
-                display.x = MagicValues.TILE_WIDTH * col;
-                display.y = MagicValues.TILE_HEIGHT * row;
+                let positions = IsoUtils.toIso(col, row);
+                display.x = positions.x + 130;
+                display.y = positions.y;
                 this.view.field.scale.set(1.4);
                 this.view.field.addChild(display);
             }

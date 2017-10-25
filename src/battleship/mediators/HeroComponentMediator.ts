@@ -1,3 +1,4 @@
+import { IsoUtils } from '../utils/IsoUtils';
 import { Tile } from "../game/models/Tile";
 import { Ship } from "../game/models/Ship";
 import { GameEvent } from "./../events/GameEvent";
@@ -52,12 +53,14 @@ export class HeroComponentMediator extends Mediator<HeroComponent> {
                 let tileId = grid.getTileId(col, row);
                 let display: TileDisplay = new TileDisplay(tileId, col, row);
                 display.show();
-                display.x = MagicValues.TILE_WIDTH * col;
-                display.y = MagicValues.TILE_HEIGHT * row;
+                let positions = IsoUtils.toIso(col, row);
+                display.x = positions.x;
+                display.y = positions.y;
                 this.view.field.addChild(display);
                 this._tileDisplays.set(`${col}_${row}`, display);
             }
         }
+        this.view.field.x = 140;
     }
     private udpateBattleGrid(grid: Grid): void {
         for (let row = 0; row < grid.maxRows; row++) {
