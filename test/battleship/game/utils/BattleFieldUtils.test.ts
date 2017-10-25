@@ -40,13 +40,22 @@ describe("BattleFieldUtils", () => {
             assert.notEqual(battleField.grid.getTileId(0, 1), Tile.BLANKED);
         });
     });
-
-    it("should call console.log when the method printBattleField is invoked", () => {
-        let spy = sinon.spy(console, "log");
-        BattleFieldUtils.printBattleField(battleField);
-        assert.isTrue(spy.calledOnce);
+    context("getValidTileList", () => {
+        it("should return an array with all tiles of the grid", () => {
+            let list = BattleFieldUtils.getValidTileList(battleField);
+            let gridSize = battleField.grid.maxCols * battleField.grid.maxRows;
+            assert.equal(list.length, gridSize);
+        });
+        it("should return an array with all tiles of the grid except the tiles with the tileId equal to HITTED", () => {
+            battleField.attackTile(0, 0);
+            battleField.attackTile(0, 1);
+            battleField.attackTile(0, 2);
+            battleField.attackTile(0, 3);
+            let list = BattleFieldUtils.getValidTileList(battleField);
+            let gridSize = battleField.grid.maxCols * battleField.grid.maxRows;
+            assert.equal(list.length, gridSize - 4);
+        });
     });
-
     it("should set the tiles into a new Ship and add the ship to the battlefield", () => {
         let tiles: Tile[] = new Array<Tile>();
         tiles.push(new Tile(0, 0));
@@ -59,6 +68,9 @@ describe("BattleFieldUtils", () => {
         assert.notEqual(battleField.grid.getTileId(0, 1), Tile.BLANKED);
         assert.notEqual(battleField.grid.getTileId(0, 2), Tile.BLANKED);
     });
-    /*  addRandomShipToBattleField
-    addShipByTiles*/
+
+    /*
+    TODO: addRandomShipToBattleField
+    TODO: addShipByTiles
+    */
 });

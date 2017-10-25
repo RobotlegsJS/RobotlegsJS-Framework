@@ -96,6 +96,13 @@ export class PixiFactory {
         return background;
     }
 
+    public static getColorBoxRounded(width: number, heigth: number, color = 0x00000): Graphics {
+        let background: Graphics = new Graphics();
+        background.beginFill(color);
+        background.drawRoundedRect(0, 0, width, heigth, 5);
+        return background;
+    }
+
     public static getShadowBackground(alpha = 0.6): Graphics {
         let bg: Graphics = PixiFactory.getColorBackground(0x000000);
         bg.alpha = alpha;

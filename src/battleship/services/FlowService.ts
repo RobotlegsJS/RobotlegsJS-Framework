@@ -16,6 +16,24 @@ export class FlowService {
         this.dispatchEventWith(FlowEvent.SHOW_GAME_VIEW);
     }
 
+    // Floating Views
+    public showGameOverPopup(): void {
+        this.dispatchEventWith(FlowEvent.SHOW_GAME_OVER_POPUP);
+    }
+
+    public showYouWinPopup(): void {
+        this.dispatchEventWith(FlowEvent.SHOW_YOU_WIN_POPUP);
+    }
+
+    public showPausePopup(): void {
+        this.dispatchEventWith(FlowEvent.SHOW_PAUSE_POPUP);
+    }
+
+    // extras
+    public closePopup(): void {
+        this.dispatchEventWith(PalidorEvent.REMOVE_LAST_FLOATING_VIEW_ADDED);
+    }
+
     public dispatchEventWith(type: string): void {
         (<EventDispatcher>this.eventDispatcher).dispatchEventWith(type);
     }

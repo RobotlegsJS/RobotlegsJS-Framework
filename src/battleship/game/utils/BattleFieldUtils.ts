@@ -51,14 +51,15 @@ export class BattleFieldUtils {
         return battleField.grid.getTileId(col, row) === Tile.BLANKED;
     }
 
-    public static printBattleField(battleField: BattleField): void {
-        let field: string = "";
+    public static getValidTileList(battleField: BattleField): Tile[] {
+        let tiles = new Array<Tile>();
         for (let row = 0; row < battleField.grid.maxRows; row++) {
             for (let col = 0; col < battleField.grid.maxCols; col++) {
-                field = `${field} ${battleField.grid.getTileId(col, row)}`;
+                if (battleField.grid.getTileId(col, row) !== Tile.HITTED) {
+                    tiles.push(new Tile(col, row));
+                }
             }
-            field = `${field} \n`;
         }
-        console.log(field);
+        return tiles;
     }
 }

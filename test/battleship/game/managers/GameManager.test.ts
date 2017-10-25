@@ -24,36 +24,24 @@ describe("GameManager", () => {
     });
 
     context("attack", () => {
-        it("should return false when the tile has the id HITTED", () => {
-            battleField.grid.setTileId(Tile.HITTED, 1, 1);
-            assert.isFalse(gameManager.attack(battleField, 1, 1));
-        });
-
-        it("should return true when the tile has not the id HITTED", () => {
+        it("should return FAIL when the tile hit is not a ship", () => {
             battleField.grid.setTileId(Tile.BLANKED, 1, 1);
-            assert.isTrue(gameManager.attack(battleField, 1, 1));
+            assert.equal(gameManager.attack(battleField, 1, 1), AttackEvent.FAIL);
         });
 
-        it("should dispatch a event AttackEvent.SUCCESS when a ship is hit", () => {
+        it("should return SUCCESS when the tile hit is not a ship", () => {
             let ship: Ship = battleField.ships[0];
-            let dispatcherSpy = sinon.spy(gameManager.eventDispatcher, "dispatchEvent");
-
-            gameManager.attack(battleField, ship.tiles[0].col, ship.tiles[0].row);
-            let event: AttackEvent = <AttackEvent>dispatcherSpy.firstCall.args[0];
-
-            assert.isTrue(dispatcherSpy.calledOnce);
-            assert.equal(event.type, AttackEvent.SUCCESS, "type");
+            assert.equal(gameManager.attack(battleField, ship.tiles[0].col, ship.tiles[0].row), AttackEvent.SUCCESS);
         });
+        it("should return gameOver when the last ship is hit", () => {
+            let result;
+            for (let ship of battleField.ships) {
+                for (let tile of ship.tiles) {
+                    result = gameManager.attack(battleField, tile.col, tile.row);
+                }
+            }
 
-        it("should dispatch a event AttackEvent.FAIL when a ship is not hit", () => {
-            battleField.grid.setTileId(Tile.BLANKED, 1, 1);
-            let dispatcherSpy = sinon.spy(gameManager.eventDispatcher, "dispatchEvent");
-
-            gameManager.attack(battleField, 1, 1);
-            let event: AttackEvent = <AttackEvent>dispatcherSpy.firstCall.args[0];
-
-            assert.isTrue(dispatcherSpy.calledOnce);
-            assert.equal(event.type, AttackEvent.FAIL, "type");
+            assert.equal(result, "gameOver");
         });
     });
 

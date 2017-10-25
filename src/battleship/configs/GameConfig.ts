@@ -1,3 +1,5 @@
+import { HeroAttackCommand } from "../game/commands/HeroAttackCommand";
+import { EnemyAttackCommand } from "./../game/commands/EnemyAttackCommand";
 import { GameService } from "../services/GameService";
 import { GameEvent } from "./../events/GameEvent";
 import { CreateLevelCommand } from "../game/commands/CreateLevelCommand";
@@ -40,5 +42,7 @@ export class GameConfig implements IConfig {
 
     private mapCommands(): void {
         this.commandMap.map(GameEvent.CREATE_LEVEL_COMMAND).toCommand(CreateLevelCommand);
+        this.commandMap.map(GameEvent.ENEMY_ATTACK_COMMAND).toCommand(EnemyAttackCommand);
+        this.commandMap.map(GameEvent.HERO_ATTACK_COMMAND).toCommand(HeroAttackCommand);
     }
 }

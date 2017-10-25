@@ -1,9 +1,9 @@
-import { AtlasKeys } from "./battleship/utils/AtlasKeys";
 // tslint:disable-next-line:no-reference
 /// <reference path="../node_modules/@robotlegsjs/pixi/definitions/pixi.d.ts" />
 import "reflect-metadata";
 import PIXI = require("pixi.js");
 
+import { AtlasKeys } from "./battleship/utils/AtlasKeys";
 import { GameConfig } from "./battleship/configs/GameConfig";
 import { PalidorConfig } from "./battleship/configs/PalidorConfig";
 import { ViewsConfig } from "./battleship/configs/ViewsConfig";
