@@ -1,4 +1,4 @@
-import { IsoUtils } from '../utils/IsoUtils';
+import { IsoUtils } from "../utils/IsoUtils";
 import { Tile } from "../game/models/Tile";
 import { Ship } from "../game/models/Ship";
 import { GameEvent } from "./../events/GameEvent";
@@ -60,7 +60,6 @@ export class HeroComponentMediator extends Mediator<HeroComponent> {
                 this._tileDisplays.set(`${col}_${row}`, display);
             }
         }
-        this.view.field.x = 140;
     }
     private udpateBattleGrid(grid: Grid): void {
         for (let row = 0; row < grid.maxRows; row++) {
@@ -73,9 +72,7 @@ export class HeroComponentMediator extends Mediator<HeroComponent> {
         }
     }
     private updateInfo(ships: Ship[]): void {
-        let shipNames = ["Minesweeper", "Submarine", "Frigate", "Battleship", "Aircraftcarrier"];
         for (let i = 0; i < ships.length; i++) {
-            this.view.doubleTexts[i].label = shipNames[i];
             this.view.doubleTexts[i].text = ships[i].hp.toString();
         }
     }

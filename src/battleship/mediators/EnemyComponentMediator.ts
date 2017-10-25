@@ -46,7 +46,7 @@ export class EnemyComponentMediator extends Mediator<EnemyComponent> {
                 let tileId = grid.getTileId(col, row);
                 let display: TileDisplay = new EnemyTileDisplay(tileId, col, row);
                 let positions = IsoUtils.toIso(col, row);
-                display.x = positions.x + 130;
+                display.x = positions.x;
                 display.y = positions.y;
                 this.view.field.scale.set(1.4);
                 this.view.field.addChild(display);

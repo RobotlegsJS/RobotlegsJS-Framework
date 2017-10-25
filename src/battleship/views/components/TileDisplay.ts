@@ -54,7 +54,7 @@ export class TileDisplay extends Container {
         graphic.drawRoundedRect(0, 0, MagicValues.TILE_WIDTH - 1, MagicValues.TILE_HEIGHT - 1, 5);
         graphic.pivot.x = graphic.width * 0.5;
         graphic.pivot.y = graphic.height * 0.5;
-        graphic.rotation = Math.PI/4;
+        graphic.rotation = Math.PI / 4;
         this.scale.y = 0.5;
     }
 }

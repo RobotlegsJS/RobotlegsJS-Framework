@@ -36,21 +36,20 @@ export class GameView extends Container {
         this.addChildAt(this._hero, 1);
 
         this._enemy = new EnemyComponent(Player.ENEMY);
-        this._enemy.y = MagicValues.HALF_HEIGHT - 40;
+        this._enemy.y = MagicValues.HALF_HEIGHT - 20;
         this.addChild(this._enemy);
     }
 
     public animationIn(): void {
-        let tweenButton = new TweenLite(this.pauseButton, 0.1, { y: 30, delay: 0.2 });
+        let tweenButton = new TweenLite(this.pauseButton, 0.1, { y: 50, delay: 0.2 });
     }
     private createBackground(): void {
         this.addChild(PixiFactory.getColorBackground());
     }
     private createButtons(): void {
         this._pauseButton = PixiFactory.getIconButton(AtlasKeys.ICON_PAUSE);
-        this._pauseButton.x = MagicValues.MAX_WIDTH - 30;
+        this._pauseButton.x = MagicValues.MAX_WIDTH - 50;
         this._pauseButton.y = -100;
-        this._pauseButton.scale.set(0.7);
         this.addChild(this._pauseButton);
     }
 }
