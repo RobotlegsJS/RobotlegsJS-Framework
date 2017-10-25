@@ -30,9 +30,9 @@ export class TileDisplay extends Container {
 
     public attack(): void {
         if (this.tileId > 0) {
-            this.swichBackgroundColor(0xff0000, this._background);
+            this.swichBackgroundColor(Colors.TILE_BACKGROUND_SUCCESS, this._background);
         } else {
-            this.swichBackgroundColor(0x66aaaa, this._background);
+            this.swichBackgroundColor(Colors.TILE_BACKGROUND_FAIL, this._background);
         }
     }
 
@@ -44,7 +44,7 @@ export class TileDisplay extends Container {
         this._ship = new Graphics();
         this._ship.visible = false;
         this.addChild(this._ship);
-        this.swichBackgroundColor(0xff0000, this._ship);
+        this.swichBackgroundColor(Colors.TILE_BACKGROUND_SHIP, this._ship);
         this._ship.alpha = 0.5;
     }
 
