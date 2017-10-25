@@ -19,6 +19,10 @@ export class EnemyAttackCommand implements ICommand {
     @inject(GameManager) public gameManager: GameManager;
 
     public execute(): void {
+        setTimeout(this.enemyAttackWithDelay.bind(this), 400, this);
+    }
+
+    private enemyAttackWithDelay(): void {
         let tile: Tile = this.getRandomTile();
         let result = this.gameManager.attack(this.levelModel.hero, tile.col, tile.row);
 
@@ -32,7 +36,8 @@ export class EnemyAttackCommand implements ICommand {
             this.gameService.enemyAttackCommand();
         }
     }
-    public getRandomTile(): Tile {
+
+    private getRandomTile(): Tile {
         let tiles: Tile[] = BattleFieldUtils.getValidTileList(this.levelModel.hero);
         let rnd = Math.floor(Math.random() * tiles.length);
         return tiles[rnd];

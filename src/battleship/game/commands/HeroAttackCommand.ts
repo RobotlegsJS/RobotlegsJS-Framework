@@ -29,11 +29,7 @@ export class HeroAttackCommand implements ICommand {
             this.flowService.showYouWinPopup();
         } else if (result === AttackEvent.FAIL) {
             this.gameService.enemyPhase();
-
-            setTimeout(this.enemyAttackWithDelay.bind(this), 800, this);
+            this.gameService.enemyAttackCommand();
         }
-    }
-    private enemyAttackWithDelay(): void {
-        this.gameService.enemyAttackCommand();
     }
 }
