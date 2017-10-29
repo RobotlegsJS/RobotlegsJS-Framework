@@ -14,9 +14,9 @@ export class BattleField {
 
     public addShip(ship: Ship): void {
         this.ships.push(ship);
-        let id = this.ships.length;
+        ship.id = this.ships.length;
         for (let tile of ship.tiles) {
-            this.grid.setTileId(id, tile.col, tile.row);
+            this.grid.setTileId(ship.id, tile.col, tile.row);
         }
     }
     public attackTile(col: number, row: number): number {

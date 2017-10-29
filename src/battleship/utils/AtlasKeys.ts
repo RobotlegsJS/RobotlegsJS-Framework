@@ -15,6 +15,13 @@ export class AtlasKeys {
     public static ICON_RETRY = "icon_retry.png";
     public static ICON_HOME = "icon_home.png";
 
+    /* SHIPS */
+    public static SHIP_1 = "ship_2.png";
+    public static SHIP_2 = "ship_3_1.png";
+    public static SHIP_3 = "ship_3_2.png";
+    public static SHIP_4 = "ship_4.png";
+    public static SHIP_5 = "ship_5.png";
+
     /* Others */
     public static LOGO_BATTLESHIP = "logo_battleship.png";
 
@@ -27,6 +34,11 @@ export class AtlasKeys {
 
     public static update(textureCache: any): void {
         this.textureCache = textureCache;
+    }
+
+    public static getShipTextureById(id: number): Texture {
+        let textures = [this.SHIP_1, this.SHIP_2, this.SHIP_3, this.SHIP_4, this.SHIP_5];
+        return this.textureCache[textures[id]];
     }
 
     public static getTexture(atlasKey): Texture {

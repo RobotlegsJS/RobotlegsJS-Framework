@@ -193,11 +193,13 @@
             <key type="filename">buttons/icon_pause.png</key>
             <key type="filename">buttons/icon_resume.png</key>
             <key type="filename">buttons/icon_retry.png</key>
-            <key type="filename">others/icon_flag.png</key>
-            <key type="filename">others/icon_flag_large.png</key>
-            <key type="filename">others/icon_mine.png</key>
             <key type="filename">others/logo_battleship.png</key>
             <key type="filename">others/logo_setzer.png</key>
+            <key type="filename">ships/ship_2.png</key>
+            <key type="filename">ships/ship_3_1.png</key>
+            <key type="filename">ships/ship_3_2.png</key>
+            <key type="filename">ships/ship_4.png</key>
+            <key type="filename">ships/ship_5.png</key>
             <struct type="IndividualSpriteSettings">
                 <key>pivotPoint</key>
                 <point_f>0.5,0.5</point_f>
@@ -207,6 +209,7 @@
         <array>
             <filename>buttons</filename>
             <filename>others</filename>
+            <filename>ships</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>

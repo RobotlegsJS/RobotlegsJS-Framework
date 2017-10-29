@@ -115,6 +115,15 @@ export class PixiFactory {
         return bg;
     }
 
+    public static getIsometricBackground(length: number, color: number = 0x000000): Container {
+        let background = new Container();
+        let graphic: Graphics = PixiFactory.getColorBoxRounded(length, length, color);
+        graphic.rotation = Math.PI / 4;
+        background.addChild(graphic);
+        background.scale.y = 0.5;
+        return background;
+    }
+
     /* GAME */
     public static getTileLabel(text: string, color: number): Container {
         let style = {

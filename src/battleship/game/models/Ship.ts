@@ -1,5 +1,6 @@
 import { Tile } from "./Tile";
 export class Ship {
+    public id: number;
     private _hp: number;
     private _size: number;
     private _tiles: Tile[];

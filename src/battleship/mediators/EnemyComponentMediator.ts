@@ -1,3 +1,4 @@
+import { Sprite } from "pixi.js";
 import { IsoUtils } from "../utils/IsoUtils";
 import { EnemyTileDisplay } from "./../views/components/EnemyTileDisplay";
 import { Ship } from "../game/models/Ship";
@@ -17,10 +18,13 @@ import { Mediator } from "@robotlegsjs/pixi";
 export class EnemyComponentMediator extends Mediator<EnemyComponent> {
     @inject(LevelModel) public levelModel: LevelModel;
 
+    private _shipDisplays: Map<Ship, Sprite>;
     public initialize(): void {
+        this._shipDisplays = new Map<Ship, Sprite>();
         this.eventMap.mapListener(this.eventDispatcher, GameEvent.DRAW_BATTLEFIELD, this.onDrawBattleField, this);
         this.eventMap.mapListener(this.eventDispatcher, GameEvent.ENEMY_PHASE, this.onEnemyPhase, this);
         this.eventMap.mapListener(this.eventDispatcher, GameEvent.HERO_PHASE, this.onHeroPhase, this);
+        this.eventMap.mapListener(this.eventDispatcher, GameEvent.UPDATE_BATTLEFIELD, this.onUpdatewBattleField, this);
     }
 
     public destroy(): void {
@@ -38,8 +42,16 @@ export class EnemyComponentMediator extends Mediator<EnemyComponent> {
         let battlefield: BattleField = this.levelModel.enemy;
 
         this.drawBattleGrid(battlefield.grid);
+        for (let ship of battlefield.ships) {
+            this._shipDisplays.set(ship, this.view.createShip(ship));
+        }
     }
-
+    private onUpdatewBattleField(e: any): void {
+        let battlefield: BattleField = this.levelModel.enemy;
+        for (let ship of battlefield.ships) {
+            this._shipDisplays.get(ship).visible = !ship.hp;
+        }
+    }
     private drawBattleGrid(grid: Grid): void {
         for (let row = 0; row < grid.maxRows; row++) {
             for (let col = 0; col < grid.maxCols; col++) {

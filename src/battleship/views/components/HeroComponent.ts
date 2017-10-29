@@ -1,7 +1,11 @@
+import { ShipDisplay } from "./ShipDisplay";
+import { IsoUtils } from "../../utils/IsoUtils";
+import { AtlasKeys } from "../../utils/AtlasKeys";
+import { Ship } from "./../../game/models/Ship";
 import { Colors } from "../../utils/Colors";
 import { MagicValues } from "./../../utils/MagicValues";
 import { PixiFactory } from "./../../utils/PixiFactory";
-import { Container, Graphics } from "pixi.js";
+import { Container, Graphics, Sprite } from "pixi.js";
 export class HeroComponent extends Container {
     private _background: Container;
     private _field: Container;
@@ -29,18 +33,19 @@ export class HeroComponent extends Container {
         this.setupBackground();
         this.setupTexts();
     }
-
     public setupBackground(): void {
         let length = MagicValues.TILE_WIDTH * 9 + 2;
-        let graphic: Graphics = PixiFactory.getColorBoxRounded(length, length, 0x000000);
-        graphic.rotation = Math.PI / 4;
-        this._background = new Container();
-        this._background.addChild(graphic);
-        this._background.scale.y = 0.5;
+
+        this._background = PixiFactory.getIsometricBackground(length, 0x00aa00);
         this._background.visible = false;
         this._background.x = 160;
-        this._background.y = 100;
+        this._background.y = 103;
         this.addChild(this._background);
+
+        let isobg = PixiFactory.getIsometricBackground(length, 0x000000);
+        isobg.x = 160;
+        isobg.y = 100;
+        this.addChild(isobg);
 
         this._field = new Container();
         this._field.x = 160;

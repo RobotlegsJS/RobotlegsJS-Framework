@@ -22,12 +22,6 @@ export class TileDisplay extends Container {
         this.createBackground();
     }
 
-    public show(): void {
-        if (this.tileId > 0) {
-            this._ship.visible = true;
-        }
-    }
-
     public attack(): void {
         if (this.tileId > 0) {
             this.swichBackgroundColor(Colors.TILE_BACKGROUND_SUCCESS, this._background);
