@@ -8,10 +8,12 @@ GAME-Battleship
 
 This is a TypeScript open-source game.
 
+![battleship_ss_01](media/battleship_ss_01.png)
+
 + **Category:** Puzzle.
 + **Platform:** Web.
 + **Language:** TypeScript.
-+ **Technologies:** PixiJs, RobotlegsJs, RobotlegsJs-Pixi, RobotlegsJs-Pixi-Palidor.
++ **Technologies:** PixiJS, RobotlegsJS, RobotlegsJS-Pixi, RobotlegsJS-Pixi-Palidor.
 
 
 * * *
@@ -27,8 +29,8 @@ npm run start
 
 ### Dependencies
 
-+ [PixiJs](http://www.pixijs.com/)
-+ [RobotlegsJs](https://github.com/RobotlegsJS/RobotlegsJS)
++ [PixiJS](http://www.pixijs.com/)
++ [RobotlegsJS](https://github.com/RobotlegsJS/RobotlegsJS)
 + [Robotlegs-Pixi](https://github.com/RobotlegsJS/RobotlegsJS-Pixi)
 + [Robotlegs-Pixi-Palidor](https://github.com/RobotlegsJS/RobotlegsJS-Pixi-Palidor)
 
@@ -36,7 +38,7 @@ npm run start
 
 ```
 TODO:
-1 - Better Design
+1 - Animations
 2 - Level Editor
 3 - AI
 ```

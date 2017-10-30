@@ -4,7 +4,7 @@ import { Ship } from "./../../game/models/Ship";
 import { Sprite } from "pixi.js";
 export class ShipDisplay extends Sprite {
     constructor(ship: Ship) {
-        super(AtlasKeys.getShipTextureById(ship.id - 1));
+        super(AtlasKeys.getShipTextureById(ship.id));
 
         this.anchor.set(0.5);
         this.setupPosition(ship);

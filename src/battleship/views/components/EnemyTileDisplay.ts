@@ -1,6 +1,7 @@
 import { TileDisplay } from "./TileDisplay";
 
 export class EnemyTileDisplay extends TileDisplay {
+    private _enabled: boolean;
     public set enabled(value) {
         this.interactive = value;
         this.buttonMode = value;

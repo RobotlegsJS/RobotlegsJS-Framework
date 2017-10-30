@@ -3,17 +3,12 @@ import { AtlasKeys } from "./../../utils/AtlasKeys";
 import { Colors } from "./../../utils/Colors";
 import { MagicValues } from "./../../utils/MagicValues";
 import { PixiFactory } from "./../../utils/PixiFactory";
-
 import { Graphics, Container } from "pixi.js";
-
 export class TileDisplay extends Container {
     public tileId: number;
     public tile: Tile;
-
     protected _background: Graphics;
     protected _ship: Graphics;
-    protected _enabled: boolean;
-
     constructor(tileId: number, col: number, row: number) {
         super();
 
@@ -21,7 +16,6 @@ export class TileDisplay extends Container {
         this.tile = new Tile(col, row);
         this.createBackground();
     }
-
     public attack(): void {
         if (this.tileId > 0) {
             this.swichBackgroundColor(Colors.TILE_BACKGROUND_SUCCESS, this._background);
@@ -29,7 +23,6 @@ export class TileDisplay extends Container {
             this.swichBackgroundColor(Colors.TILE_BACKGROUND_FAIL, this._background);
         }
     }
-
     protected createBackground(): void {
         this._background = new Graphics();
         this.addChild(this._background);
@@ -41,7 +34,6 @@ export class TileDisplay extends Container {
         this.swichBackgroundColor(Colors.TILE_BACKGROUND_SHIP, this._ship);
         this._ship.alpha = 0.5;
     }
-
     protected swichBackgroundColor(color: number, graphic: Graphics): void {
         graphic.clear();
         graphic.beginFill(color);

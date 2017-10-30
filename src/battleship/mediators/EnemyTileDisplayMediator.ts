@@ -17,7 +17,6 @@ export class EnemyTileDisplayMediator extends Mediator<EnemyTileDisplay> {
     public onButtonUp(e: any): void {
         if (e.data.button === 0 && this.view.enabled) {
             this.view.attack();
-            /* this.gameManager.heroAttacking(this.view.tile.col, this.view.tile.row); */
             this.gameService.heroAttackCommand(this.view.tile.col, this.view.tile.row);
             this.disable();
         }

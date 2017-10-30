@@ -8,13 +8,13 @@ import { Graphics, Text, Container, Sprite, Texture } from "pixi.js";
 
 export class PixiFactory {
     /* TEXTFIELDS */
-    public static getText(text: string): Container {
+    public static getText(text: string, color = Colors.TEXT): Container {
         let style = {
             align: "center",
             font: { name: MagicValues.FONT_FAMILY, size: MagicValues.FONT_SIZE_DEFAULT }
         };
         let label = new PIXI.extras.BitmapText(text, style);
-        label.tint = Colors.TEXT;
+        label.tint = color;
         return label;
     }
 
@@ -28,16 +28,6 @@ export class PixiFactory {
         return label;
     }
 
-    /*     public static getHUDText(text: string): Container {
-        let style = {
-            align: "center",
-            font: { name: MagicValues.FONT_FAMILY, size: MagicValues.FONT_SIZE_HUD }
-        };
-        let label = new PIXI.extras.BitmapText(text, style);
-        label.tint = Colors.TITLE;
-        return label;
-    }
- */
     public static getTitle(label: string): Container {
         let style = {
             align: "center",

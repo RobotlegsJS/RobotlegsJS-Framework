@@ -1,3 +1,7 @@
+import { Player } from "../../game/models/Player";
+import { ShipsGridDisplay } from "./ShipsGridDisplay";
+import { GridDisplay } from "./GridDisplay";
+import { Texts } from "./../../utils/Texts";
 import { ShipDisplay } from "./ShipDisplay";
 import { IsoUtils } from "./../../utils/IsoUtils";
 import { Ship } from "../../game/models/Ship";
@@ -6,57 +10,38 @@ import { MagicValues } from "./../../utils/MagicValues";
 import { PixiFactory } from "./../../utils/PixiFactory";
 import { Container, Graphics, Sprite } from "pixi.js";
 export class EnemyComponent extends Container {
-    private _background: Container;
-    private _field: Container;
-    private _type: string;
-
-    public get type(): string {
-        return this._type;
+    private _ships: ShipsGridDisplay;
+    private _grid: GridDisplay;
+    public get grid(): GridDisplay {
+        return this._grid;
     }
-
-    public get field(): Container {
-        return this._field;
+    public get ships(): ShipsGridDisplay {
+        return this._ships;
     }
-
-    public get background(): Container {
-        return this._background;
-    }
-
-    constructor(type: string) {
+    constructor() {
         super();
-        this._type = type;
-
-        this.setupBackground();
-        this.setupTexts();
+        this.setupComponents();
+        this.setupText();
     }
-
-    public setupBackground(): void {
-        let length = MagicValues.TILE_WIDTH * 9 * 1.4 + 2;
-
-        this._background = PixiFactory.getIsometricBackground(length, 0x00aa00);
-        this._background.visible = false;
-        this._background.x = 200;
-        this._background.y = 53;
-        this.addChild(this._background);
-
-        let isobg = PixiFactory.getIsometricBackground(length, 0x000000);
-        isobg.x = 200;
-        isobg.y = 50;
-        this.addChild(isobg);
-
-        this._field = new Container();
-        this._field.x = 200;
-        this._field.y = 50;
-        this.addChild(this._field);
+    public destroy(): void {
+        this._ships.clear();
+        this.removeChildren();
     }
-    public createShip(ship: Ship): Sprite {
-        let shipDisplay = new ShipDisplay(ship);
-        shipDisplay.visible = false;
-        this.field.addChild(shipDisplay);
-        return shipDisplay;
+    private setupComponents(): void {
+        this._grid = new GridDisplay(Player.ENEMY);
+        this._grid.x = 200;
+        this._grid.y = 50;
+        this._grid.scale.set(1.4);
+        this.addChildAt(this._grid, 0);
+
+        this._ships = new ShipsGridDisplay();
+        this._ships.x = 200;
+        this._ships.y = 50;
+        this._ships.scale.set(1.4);
+        this.addChild(this._ships);
     }
-    private setupTexts(): void {
-        let title = PixiFactory.getText(this._type);
+    private setupText(): void {
+        let title = PixiFactory.getText(Texts.ENEMY, Colors.HUD);
         title.x = 10;
         title.y = 10;
         this.addChild(title);

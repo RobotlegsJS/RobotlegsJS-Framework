@@ -38,7 +38,7 @@ export class AtlasKeys {
 
     public static getShipTextureById(id: number): Texture {
         let textures = [this.SHIP_1, this.SHIP_2, this.SHIP_3, this.SHIP_4, this.SHIP_5];
-        return this.textureCache[textures[id]];
+        return this.textureCache[textures[id - 1]];
     }
 
     public static getTexture(atlasKey): Texture {

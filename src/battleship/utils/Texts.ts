@@ -1,6 +1,8 @@
 export class Texts {
     public static DEVELOPER = "RONALDO SANTIAGO";
-
+    /* Displays */
+    public static ENEMY = "Enemy";
+    public static HERO = "Hero";
     /* Texts */
     public static MAX_COLS = "Cols:";
     public static MAX_ROWS = "Rows:";

@@ -1,3 +1,4 @@
+import { Colors } from "../utils/Colors";
 import { AtlasKeys } from "./../utils/AtlasKeys";
 import { TweenLite } from "gsap";
 import { CustomButton } from "./components/CustomButton";
@@ -32,10 +33,10 @@ export class GameView extends Container {
     }
 
     public createComponents(): void {
-        this._hero = new HeroComponent(Player.HERO);
+        this._hero = new HeroComponent();
         this.addChildAt(this._hero, 1);
 
-        this._enemy = new EnemyComponent(Player.ENEMY);
+        this._enemy = new EnemyComponent();
         this._enemy.y = MagicValues.HALF_HEIGHT - 20;
         this.addChild(this._enemy);
     }
@@ -44,7 +45,7 @@ export class GameView extends Container {
         let tweenButton = new TweenLite(this.pauseButton, 0.1, { y: 50, delay: 0.2 });
     }
     private createBackground(): void {
-        this.addChild(PixiFactory.getColorBackground());
+        this.addChild(PixiFactory.getColorBackground(Colors.GAME_BACKGROUND));
     }
     private createButtons(): void {
         this._pauseButton = PixiFactory.getIconButton(AtlasKeys.ICON_PAUSE);
