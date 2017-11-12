@@ -22,6 +22,8 @@
 
 - Add Changelog (see #25).
 
+- Add Code of conduct (see #26).
+
 - Solve compilers deprecation warning messages from mocha.
 
 - Update dev dependencies to latest version.
