@@ -57,7 +57,7 @@
   },
   "homepage": "https://github.com/RobotlegsJS/SignalsJS#readme",
   "devDependencies": {
-    "@types/bluebird": "^3.5.17",
+    "@types/bluebird": "^3.5.18",
     "@types/chai": "^4.0.4",
     "@types/mocha": "^2.2.44",
     "@types/sinon": "^2.3.7",
@@ -84,23 +84,23 @@
     "karma-sinon": "^1.0.5",
     "karma-sourcemap-loader": "^0.3.7",
     "karma-sourcemap-writer": "^0.1.2",
-    "karma-webpack": "^2.0.5",
+    "karma-webpack": "^2.0.6",
     "mocha": "^4.0.1",
     "nyc": "^11.3.0",
-    "prettier": "^1.7.4",
+    "prettier": "^1.8.2",
     "publish-please": "^2.3.1",
     "reflect-metadata": "^0.1.10",
     "remap-istanbul": "^0.9.5",
     "rimraf": "^2.6.2",
-    "sinon": "^4.0.2",
+    "sinon": "^4.1.2",
     "sinon-chai": "^2.14.0",
     "source-map-support": "^0.5.0",
     "ts-loader": "^3.1.1",
     "ts-node": "^3.3.0",
     "tslint": "^5.8.0",
     "tslint-config-prettier": "^1.6.0",
-    "typescript": "^2.5.3",
+    "typescript": "^2.6.1",
     "webpack": "^3.8.1",
-    "webpack-dev-server": "^2.9.3"
+    "webpack-dev-server": "^2.9.4"
   }
 }
