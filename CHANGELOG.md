@@ -22,7 +22,7 @@
 
 - Add Changelog (see #25).
 
-- Add Code of conduct (see #26).
+- Add Code of Conduct (see #26).
 
 - Solve compilers deprecation warning messages from mocha.
 
