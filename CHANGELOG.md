@@ -24,6 +24,8 @@
 
 - Add Changelog (see #19).
 
+- Add Code of Conduct (see #20).
+
 - Update dev dependencies to latest version.
 
 ## RobotlegsJS-Pixi-SignalMediator 0.0.1
