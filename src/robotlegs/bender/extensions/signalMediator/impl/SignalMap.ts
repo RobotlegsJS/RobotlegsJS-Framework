@@ -65,8 +65,6 @@ export class SignalMap implements ISignalMap {
         );
 
         this._handlersBySignal.clear();
-
-        this._handlersBySignal = new Map();
     }
 
     /*============================================================================*/
