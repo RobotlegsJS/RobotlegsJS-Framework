@@ -46,7 +46,7 @@ export class SignalMap implements ISignalMap {
         signal.remove(handler);
 
         if (
-            this._handlersBySignal.get(signal) === null ||
+            !this._handlersBySignal.has(signal) ||
             this._handlersBySignal.get(signal).length === 0
         ) {
             return;
@@ -74,7 +74,7 @@ export class SignalMap implements ISignalMap {
     /*============================================================================*/
 
     protected storeSignalHandler(signal: ISignal, handler: Function): void {
-        if (this._handlersBySignal.get(signal) === null) {
+        if (!this._handlersBySignal.has(signal)) {
             this._handlersBySignal.set(signal, [handler]);
         } else {
             this._handlersBySignal.get(signal).push(handler);
