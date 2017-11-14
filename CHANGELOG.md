@@ -28,6 +28,8 @@
 
 - Add Issue Template (see #21).
 
+- Add Pull Request Template (see #22).
+
 - Update dev dependencies to latest version.
 
 ## RobotlegsJS-Pixi-SignalMediator 0.0.1
