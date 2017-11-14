@@ -12,6 +12,8 @@
 
   - [ ] Find a way to keep a new line between **@inject** anotation and property declarations.
 
+- [ ] Improve Code Coverage to reach 100%.
+
 ## RobotlegsJS-Pixi-SignalMediator 0.1.0
 
 ### v0.1.0
