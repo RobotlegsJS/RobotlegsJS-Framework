@@ -28,6 +28,8 @@
 
 - Add Pull Request Template (see #28).
 
+- Update README (see #31).
+
 - Solve compilers deprecation warning messages from mocha.
 
 - Update dev dependencies to latest version.
