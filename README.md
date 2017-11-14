@@ -25,6 +25,7 @@ Concept
 * A **Signal** gives an event a concrete membership in a class.
 * Listeners subscribe to real objects, not to string-based channels.
 * Event string constants are no longer needed.
+* **Signals** was originally implemented by Robert Penner in [AS3](https://github.com/robertpenner/as3-signals).
 * **Signals** are inspired by [C# events](http://en.wikipedia.org/wiki/C_Sharp_syntax#Events) and [signals/slots](http://en.wikipedia.org/wiki/Signals_and_slots) in Qt.
 
 Syntax
