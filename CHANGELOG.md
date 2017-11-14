@@ -16,9 +16,11 @@
 
 ### v0.1.0
 
+- Update README.
+
 - Update @robotlegsjs/pixi to version 0.1.0 (see #17).
 
-- Update README.
+- Add Changelog (see #20).
 
 - Update dev dependencies to latest version.
 
