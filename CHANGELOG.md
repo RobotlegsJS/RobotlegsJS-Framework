@@ -24,6 +24,8 @@
 
 - Add Code of Conduct (see #21).
 
+- Add Issue Template (see #22).
+
 - Update dev dependencies to latest version.
 
 ## RobotlegsJS-Pixi-Palidor 0.0.1
