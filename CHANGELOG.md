@@ -24,6 +24,8 @@
 
 - Add Code of Conduct (see #21).
 
+- Add Issue Template (see #22).
+
 - Add Pull Request Template (see #23).
 
 - Update dev dependencies to latest version.
