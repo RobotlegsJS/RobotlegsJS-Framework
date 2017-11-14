@@ -26,6 +26,8 @@
 
 - Add Issue Template (see #22).
 
+- Add Pull Request Template (see #23).
+
 - Update dev dependencies to latest version.
 
 ## RobotlegsJS-Pixi-Palidor 0.0.1
