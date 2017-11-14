@@ -46,16 +46,16 @@ export class SignalMap implements ISignalMap {
         signal.remove(handler);
 
         if (
-            this._handlersBySignal[signal] == null ||
-            this._handlersBySignal[signal].length === 0
+            this._handlersBySignal.get(signal) === null ||
+            this._handlersBySignal.get(signal).length === 0
         ) {
             return;
         }
 
-        let handlerIndex = this._handlersBySignal[signal].indexOf(handler);
+        let handlerIndex = this._handlersBySignal.get(signal).indexOf(handler);
 
         if (handlerIndex > -1) {
-            this._handlersBySignal[signal].splice(handlerIndex, 1);
+            this._handlersBySignal.get(signal).splice(handlerIndex, 1);
         }
     }
 
@@ -74,7 +74,7 @@ export class SignalMap implements ISignalMap {
     /*============================================================================*/
 
     protected storeSignalHandler(signal: ISignal, handler: Function): void {
-        if (this._handlersBySignal.get(signal) == null) {
+        if (this._handlersBySignal.get(signal) === null) {
             this._handlersBySignal.set(signal, [handler]);
         } else {
             this._handlersBySignal.get(signal).push(handler);
