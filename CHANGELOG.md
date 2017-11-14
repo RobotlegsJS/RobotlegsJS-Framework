@@ -18,7 +18,7 @@
 
 ## Signals 0.0.1
 
-### v0.0.12
+### [v0.0.12](https://github.com/RobotlegsJS/SignalsJS/releases/tag/0.0.12) - 2017-11-14
 
 - Add Changelog (see #25).
 
