@@ -16,9 +16,9 @@
     eventemitter3 "^2.0.3"
     pixi.js "^4.6.0"
 
-"@robotlegsjs/signals@^0.0.11":
-  version "0.0.11"
-  resolved "https://registry.npmjs.org/@robotlegsjs/signals/-/signals-0.0.11.tgz#627fdcc549d85badabbaa0b38f884e1ee852c826"
+"@robotlegsjs/signals@^0.0.12":
+  version "0.0.12"
+  resolved "https://registry.npmjs.org/@robotlegsjs/signals/-/signals-0.0.12.tgz#5d7cbbfdba902c289529cce23186985cccb64884"
 
 "@types/bluebird@^3.5.17":
   version "3.5.17"
@@ -32,9 +32,9 @@
   version "2.2.44"
   resolved "https://registry.npmjs.org/@types/mocha/-/mocha-2.2.44.tgz#1d4a798e53f35212fd5ad4d04050620171cd5b5e"
 
-"@types/sinon@^2.3.7":
-  version "2.3.7"
-  resolved "https://registry.npmjs.org/@types/sinon/-/sinon-2.3.7.tgz#e92c2fed3297eae078d78d1da032b26788b4af86"
+"@types/sinon@^4.0.0":
+  version "4.0.0"
+  resolved "https://registry.npmjs.org/@types/sinon/-/sinon-4.0.0.tgz#9a93ffa4ee1329e85166278a5ed99f81dc4c8362"
 
 abbrev@1:
   version "1.1.1"
