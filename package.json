@@ -59,7 +59,7 @@
   "homepage": "https://github.com/RobotlegsJS/RobotlegsJS-Pixi-SignalMediator#readme",
   "dependencies": {
     "@robotlegsjs/pixi": "^0.0.6",
-    "@robotlegsjs/signals": "^0.0.11"
+    "@robotlegsjs/signals": "^0.0.12"
   },
   "devDependencies": {
     "@types/bluebird": "^3.5.17",
