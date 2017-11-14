@@ -42,7 +42,7 @@ export class SignalMap implements ISignalMap {
         this.storeSignalHandler(signal, handler);
     }
 
-    public removeFromSignal(signal: any, handler: Function): void {
+    public removeFromSignal(signal: ISignal, handler: Function): void {
         signal.remove(handler);
 
         if (
@@ -73,7 +73,7 @@ export class SignalMap implements ISignalMap {
     /* Protected Functions                                                        */
     /*============================================================================*/
 
-    protected storeSignalHandler(signal: any, handler: Function): void {
+    protected storeSignalHandler(signal: ISignal, handler: Function): void {
         if (this._handlersBySignal.get(signal) == null) {
             this._handlersBySignal.set(signal, [handler]);
         } else {
