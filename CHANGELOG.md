@@ -26,6 +26,8 @@
 
 - Add Code of Conduct (see #28).
 
+- Add Issue Template (see #29).
+
 - Update dev dependencies to latest version.
 
 ## RobotlegsJS-SignalCommandMap 0.0.1
