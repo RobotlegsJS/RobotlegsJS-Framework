@@ -30,6 +30,8 @@
 
 - Add Pull Request Template (see #22).
 
+- Use Map object properly (see #23).
+
 - Update dev dependencies to latest version.
 
 ## RobotlegsJS-Pixi-SignalMediator 0.0.1
