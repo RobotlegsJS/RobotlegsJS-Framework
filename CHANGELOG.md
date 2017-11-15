@@ -24,9 +24,9 @@
 
 - Add Changelog (see #27).
 
-- Update dev dependencies to latest version.
+- Add Code of Conduct (see #28).
 
-- Remove direct dependency of @robotlegsjs/core, since @robotlegsjs/pixi already have it as a dependency (see #13).
+- Update dev dependencies to latest version.
 
 ## RobotlegsJS-SignalCommandMap 0.0.1
 
