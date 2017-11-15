@@ -51,7 +51,11 @@ export class SignalCommandTrigger implements ICommandTrigger {
     ) {
         this._injector = injector;
         this._signalClass = signalClass;
-        this._mappings = new CommandMappingList(this, processors, logger);
+        this._mappings = new CommandMappingList(
+            this,
+            processors ? processors : [],
+            logger
+        );
         this._executor = new CommandExecutor(
             injector,
             this._mappings.removeMapping
