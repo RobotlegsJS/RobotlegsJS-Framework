@@ -8,7 +8,7 @@
   dependencies:
     inversify "^4.3.0"
 
-"@robotlegsjs/signals@0.0.12":
+"@robotlegsjs/signals@^0.0.12":
   version "0.0.12"
   resolved "https://registry.npmjs.org/@robotlegsjs/signals/-/signals-0.0.12.tgz#5d7cbbfdba902c289529cce23186985cccb64884"
 
