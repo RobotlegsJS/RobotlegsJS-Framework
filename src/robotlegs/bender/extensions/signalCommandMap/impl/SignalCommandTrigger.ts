@@ -82,7 +82,6 @@ export class SignalCommandTrigger implements ICommandTrigger {
                 .bind(this._signalClass)
                 .to(this._signalClass)
                 .inSingletonScope();
-            // this._injector.map(this._signalClass).asSingleton();
         }
         this._signal = this._injector.get<ISignal>(this._signalClass);
         this._signal.add(this.routePayloadToCommands);
