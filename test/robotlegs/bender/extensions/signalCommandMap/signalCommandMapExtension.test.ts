@@ -57,4 +57,9 @@ describe("SignalCommandMapExtension", () => {
         context.injector.get<RelaySignal>(RelaySignal).dispatch(new Data(3));
         assert.equal(TargetCommand.TARGET_VALUE, 3);
     });
+
+    it("toString_returns_a_string", () => {
+        let extension: SignalCommandMapExtension = new SignalCommandMapExtension();
+        assert.isString(extension.toString());
+    });
 });
