@@ -3,76 +3,80 @@ process.env.NODE_ENV = 'test';
 
 const webpack = require("webpack");
 const path = require("path");
-const webpackConfig = require('./webpack.config.js')({isTest: true});
+const webpackConfig = require('./webpack.config.js')({ isTest: true });
 
 delete webpackConfig.entry;
 
-module.exports = function (config) {
+let frameworks = [
+  "mocha",
+  "chai",
+  "sinon",
+  "es6-shim"
+];
 
-    var configuration = {
-        basePath: "",
-        frameworks: [
-            "mocha",
-            "chai",
-            "sinon",
-            "es6-shim"
-        ],
-        files: [
-            "./test/**/**/**.test.ts",
-            {
-                pattern: '**/*.map',
-                served: true,
-                included: false,
-                watched: true
-            }
-        ],
-        preprocessors: {
-            "./**/**/**/**.ts": ["sourcemap"],
-            "./test/**/**/**.test.ts": ["webpack"]
-        },
-        webpack: webpackConfig,
-        webpackMiddleware: {
-            noInfo: true
-        },
-        plugins: [
-            "karma-webpack",
-            "karma-sourcemap-writer",
-            "karma-sourcemap-loader",
-            "karma-remap-istanbul",
-            "karma-mocha-reporter",
-            "karma-mocha",
-            "karma-chai",
-            "karma-sinon",
-            "karma-es6-shim",
-            "karma-coverage"
-        ],
-        reporters: (config.singleRun
-            ? ["dots", "mocha", "coverage"]
-            : ["dots", "mocha"]),
-        coverageReporter: {
-            dir: "coverage",
-            reporters: [
-                {type: 'html', subdir: 'report-html'},
-                {type: 'lcov', subdir: 'report-lcov'}
-            ],
-            instrumenterOptions: {
-                istanbul: {noCompact: true}
-            }
-        },
-        port: 9876,
-        colors: true,
-        logLevel: config.LOG_INFO,
-        autoWatch: true,
-        browsers: ['Chrome']
-    };
+let plugins = [
+  "karma-webpack",
+  "karma-sourcemap-writer",
+  "karma-sourcemap-loader",
+  "karma-mocha-reporter",
+  "karma-mocha",
+  "karma-chai",
+  "karma-sinon",
+  "karma-es6-shim",
+  "karma-remap-istanbul",
+  "karma-coverage-istanbul-reporter"
+];
 
-    if (process.env.TRAVIS) {
-        configuration.browsers = ['PhantomJS'];
-        configuration.plugins.push("karma-phantomjs-launcher");
-    } else {
-        configuration.browsers = ['Chrome'];
-        configuration.plugins.push("karma-chrome-launcher");
-    }
+module.exports = function(config) {
 
-    config.set(configuration);
+  var configuration = {
+    basePath: "",
+    frameworks: frameworks,
+    files: [
+      { pattern: "node_modules/reflect-metadata/Reflect.js", include: true },
+      { pattern: "node_modules/bluebird/js/browser/bluebird.js", include: true },
+      { pattern: "./test/**/**/**.test.ts", include: true },
+      { pattern: '**/*.map', served: true, included: false, watched: true }
+    ],
+    preprocessors: {
+      "./**/**/**/**.ts": ["sourcemap"],
+      "./test/**/**/**.test.ts": ["webpack"]
+    },
+    webpack: webpackConfig,
+    webpackMiddleware: {
+      noInfo: true
+    },
+    plugins: plugins,
+    reporters: (
+      config.singleRun ?
+        ["dots", "mocha", "coverage-istanbul"] :
+        ["dots", "mocha"]
+    ),
+    coverageIstanbulReporter: {
+      reports: ["html", "lcov", "lcovonly", "text-summary"],
+      dir: "coverage",
+      fixWebpackSourcePaths: true,
+      "report-config": {
+        html: {
+          subdir: "html-report"
+        }
+      }
+    },
+    port: 9876,
+    colors: true,
+    logLevel: config.LOG_INFO,
+    autoWatch: true,
+    browsers: [],
+    browserNoActivityTimeout: 50000
+  };
+
+  if (process.env.TRAVIS) {
+    configuration.browsers = ['PhantomJS'];
+    configuration.plugins.push("karma-phantomjs-launcher");
+  } else {
+    configuration.browsers = ['PhantomJS'];
+    configuration.plugins.push("karma-phantomjs-launcher");
+  }
+
+  config.set(configuration);
 };
