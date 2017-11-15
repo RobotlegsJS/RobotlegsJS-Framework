@@ -24,7 +24,7 @@
   version "2.2.44"
   resolved "https://registry.npmjs.org/@types/mocha/-/mocha-2.2.44.tgz#1d4a798e53f35212fd5ad4d04050620171cd5b5e"
 
-"@types/sinon@4.0.0":
+"@types/sinon@^4.0.0":
   version "4.0.0"
   resolved "https://registry.npmjs.org/@types/sinon/-/sinon-4.0.0.tgz#9a93ffa4ee1329e85166278a5ed99f81dc4c8362"
 
