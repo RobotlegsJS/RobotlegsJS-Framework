@@ -22,7 +22,7 @@
 
 - Update @robotlegsjs/core to version 0.1.1 (see #24).
 
-- Add Changelog.
+- Add Changelog (see #27).
 
 - Update dev dependencies to latest version.
 
