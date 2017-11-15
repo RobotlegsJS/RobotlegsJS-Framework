@@ -57,7 +57,7 @@
   },
   "homepage": "https://github.com/RobotlegsJS/RobotlegsJS-SignalCommandMap#readme",
   "dependencies": {
-    "@robotlegsjs/core": "^0.0.7",
+    "@robotlegsjs/core": "^0.1.1",
     "@robotlegsjs/signals": "^0.0.12"
   },
   "devDependencies": {
