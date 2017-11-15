@@ -10,7 +10,7 @@ import "../../../../entry.ts";
 
 import { assert } from "chai";
 
-import { Context } from "@robotlegsjs/core";
+import { IExtension, Context } from "@robotlegsjs/core";
 
 import { SignalMediatorExtension } from "../../../../../src/robotlegs/bender/extensions/signalMediator/SignalMediatorExtension";
 import { ISignalMap } from "../../../../../src/robotlegs/bender/extensions/signalMediator/api/ISignalMap";
@@ -24,16 +24,24 @@ describe("SignalMediatorExtension", () => {
     });
 
     afterEach(() => {
+        if (context.initialized) {
+            context.destroy();
+        }
         context = null;
     });
 
     it("signalMap is mapped into injector", () => {
-        let actual: Object = null;
+        let actual: any = null;
         context.install(SignalMediatorExtension);
-        context.whenInitializing(function(): void {
+        context.whenInitializing(() => {
             actual = context.injector.get(ISignalMap);
         });
         context.initialize();
         assert.instanceOf(actual, SignalMap);
+    });
+
+    it("toString_returns_a_string", () => {
+        let extension: IExtension = new SignalMediatorExtension();
+        assert.isString(extension.toString());
     });
 });
