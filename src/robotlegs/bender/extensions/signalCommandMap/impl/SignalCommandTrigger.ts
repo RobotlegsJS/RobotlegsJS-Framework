@@ -6,6 +6,7 @@
 // ------------------------------------------------------------------------------
 
 import {
+    IClass,
     IInjector,
     ILogger,
     ICommandExecutor,
@@ -26,7 +27,7 @@ export class SignalCommandTrigger implements ICommandTrigger {
     /* Private Properties                                                         */
     /*============================================================================*/
 
-    private _signalClass: any;
+    private _signalClass: IClass<ISignal>;
 
     private _signal: ISignal;
 
@@ -45,7 +46,7 @@ export class SignalCommandTrigger implements ICommandTrigger {
      */
     constructor(
         injector: IInjector,
-        signalClass: any,
+        signalClass: IClass<ISignal>,
         processors?: Function[],
         logger?: ILogger
     ) {

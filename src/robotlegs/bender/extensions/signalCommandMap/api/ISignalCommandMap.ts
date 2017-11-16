@@ -5,7 +5,9 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import { ICommandMapper, ICommandUnmapper } from "@robotlegsjs/core";
+import { IClass, ICommandMapper, ICommandUnmapper } from "@robotlegsjs/core";
+
+import { ISignal } from "@robotlegsjs/signals";
 
 /**
  * The Signal Command Map allows you to bind Signals to Commands
@@ -17,14 +19,14 @@ export interface ISignalCommandMap {
      * @param signalClass The concrete Signal class
      * @return Command mapper
      */
-    map(signalClass: Object): ICommandMapper;
+    map(signalClass: IClass<ISignal>): ICommandMapper;
 
     /**
      * Unmaps a Signal based trigger from a command
      * @param signalClass The concrete Signal class
      * @return Command unmapper
      */
-    unmap(signalClass: Object): ICommandUnmapper;
+    unmap(signalClass: IClass<ISignal>): ICommandUnmapper;
 
     /**
      * Adds a handler to process mappings
