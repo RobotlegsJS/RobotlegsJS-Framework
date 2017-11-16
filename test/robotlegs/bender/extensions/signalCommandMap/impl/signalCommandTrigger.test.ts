@@ -42,7 +42,7 @@ describe("SignalCommandTrigger", () => {
     beforeEach(() => {
         signal = new Signal();
         injector = new RobotlegsInjector();
-        subject = new SignalCommandTrigger(injector, ISignal);
+        subject = new SignalCommandTrigger(injector, Signal);
     });
 
     afterEach(() => {
@@ -215,7 +215,7 @@ describe("SignalCommandTrigger", () => {
         });
 
         injector.bind(ISignal).toConstantValue(signal);
-        subject = new SignalCommandTrigger(injector, ISignal, processors);
+        subject = new SignalCommandTrigger(injector, Signal, processors);
         mapper = subject.createMapper();
         mapper.toCommand(NullCommand);
         signal.dispatch();
@@ -239,7 +239,7 @@ describe("SignalCommandTrigger", () => {
         });
 
         injector.bind(ISignal).toConstantValue(signal);
-        subject = new SignalCommandTrigger(injector, ISignal, processors);
+        subject = new SignalCommandTrigger(injector, Signal, processors);
         mapper = subject.createMapper();
         mapper.toCommand(NullCommand);
         signal.dispatch();
