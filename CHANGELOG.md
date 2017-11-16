@@ -30,6 +30,8 @@
 
 - Add Pull Request Template (see #30).
 
+- Improve Code Coverage and Fix Bugs (see #31).
+
 - Update dev dependencies to latest version.
 
 ## RobotlegsJS-SignalCommandMap 0.0.1
