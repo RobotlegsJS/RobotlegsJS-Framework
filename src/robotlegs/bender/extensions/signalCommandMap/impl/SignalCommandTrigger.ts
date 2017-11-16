@@ -6,6 +6,7 @@
 // ------------------------------------------------------------------------------
 
 import {
+    IClass,
     IInjector,
     ILogger,
     ICommandExecutor,
@@ -26,7 +27,7 @@ export class SignalCommandTrigger implements ICommandTrigger {
     /* Private Properties                                                         */
     /*============================================================================*/
 
-    private _signalClass: any;
+    private _signalClass: IClass<ISignal>;
 
     private _signal: ISignal;
 
@@ -45,16 +46,20 @@ export class SignalCommandTrigger implements ICommandTrigger {
      */
     constructor(
         injector: IInjector,
-        signalClass: any,
+        signalClass: IClass<ISignal>,
         processors?: Function[],
         logger?: ILogger
     ) {
         this._injector = injector;
         this._signalClass = signalClass;
-        this._mappings = new CommandMappingList(this, processors, logger);
+        this._mappings = new CommandMappingList(
+            this,
+            processors ? processors : [],
+            logger
+        );
         this._executor = new CommandExecutor(
             injector,
-            this._mappings.removeMapping
+            this._mappings.removeMapping.bind(this._mappings)
         );
     }
 
@@ -78,7 +83,6 @@ export class SignalCommandTrigger implements ICommandTrigger {
                 .bind(this._signalClass)
                 .to(this._signalClass)
                 .inSingletonScope();
-            // this._injector.map(this._signalClass).asSingleton();
         }
         this._signal = this._injector.get<ISignal>(this._signalClass);
         this._signal.add(this.routePayloadToCommands);
@@ -101,11 +105,14 @@ export class SignalCommandTrigger implements ICommandTrigger {
     /* Private Functions                                                          */
     /*============================================================================*/
 
-    private routePayloadToCommands = (...valueObjects): void => {
+    private routePayloadToCommands = (...valueObjects: any[]): void => {
+        let valueClasses: any[] = this._signal.valueClasses;
+
         let payload: CommandPayload = new CommandPayload(
             valueObjects,
-            this._signal.valueClasses
+            valueClasses
         );
+
         this._executor.executeCommands(this._mappings.getList(), payload);
     };
 }

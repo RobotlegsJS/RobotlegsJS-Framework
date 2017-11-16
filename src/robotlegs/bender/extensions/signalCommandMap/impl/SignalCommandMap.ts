@@ -8,6 +8,7 @@
 import {
     injectable,
     inject,
+    IClass,
     IInjector,
     IContext,
     ILogger,
@@ -16,6 +17,8 @@ import {
     ICommandUnmapper,
     CommandTriggerMap
 } from "@robotlegsjs/core";
+
+import { ISignal } from "@robotlegsjs/signals";
 
 import { ISignalCommandMap } from "../api/ISignalCommandMap";
 import { SignalCommandTrigger } from "./SignalCommandTrigger";
@@ -60,14 +63,14 @@ export class SignalCommandMap implements ISignalCommandMap {
     /**
      * @inheritDoc
      */
-    public map(signalClass: Object): ICommandMapper {
+    public map(signalClass: IClass<ISignal>): ICommandMapper {
         return this.getTrigger(signalClass).createMapper();
     }
 
     /**
      * @inheritDoc
      */
-    public unmap(signalClass: Object): ICommandUnmapper {
+    public unmap(signalClass: IClass<ISignal>): ICommandUnmapper {
         return this.getTrigger(signalClass).createMapper();
     }
 
@@ -83,7 +86,7 @@ export class SignalCommandMap implements ISignalCommandMap {
     /* Private Functions                                                          */
     /*============================================================================*/
 
-    private createTrigger(signalClass: Object): ICommandTrigger {
+    private createTrigger(signalClass: IClass<ISignal>): ICommandTrigger {
         return new SignalCommandTrigger(
             this._injector,
             signalClass,
@@ -91,11 +94,11 @@ export class SignalCommandMap implements ISignalCommandMap {
         );
     }
 
-    private getTrigger(signalClass: Object): SignalCommandTrigger {
+    private getTrigger(signalClass: IClass<ISignal>): SignalCommandTrigger {
         return <SignalCommandTrigger>this._triggerMap.getTrigger(signalClass);
     }
 
-    private getKey(signalClass: Object): Object {
+    private getKey(signalClass: IClass<ISignal>): IClass<ISignal> {
         return signalClass;
     }
 }

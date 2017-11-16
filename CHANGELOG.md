@@ -12,11 +12,11 @@
 
   - [ ] Find a way to keep a new line between **@inject** anotation and property declarations.
 
-- [ ] Improve Code Coverage to reach 100%.
+- [x] Improve Code Coverage to reach 100%.
 
 ## RobotlegsJS-SignalCommandMap 0.1.0
 
-### v0.1.0
+### [v0.1.0](https://github.com/RobotlegsJS/RobotlegsJS-SignalCommandMap/releases/tag/0.1.0) - 2017-11-16
 
 - Update @robotlegsjs/signals to version 0.0.12 (see #26).
 
@@ -29,6 +29,8 @@
 - Add Issue Template (see #29).
 
 - Add Pull Request Template (see #30).
+
+- Improve Code Coverage and Fix Bugs (see #31).
 
 - Update dev dependencies to latest version.
 
