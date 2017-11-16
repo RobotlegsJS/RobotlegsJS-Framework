@@ -58,7 +58,7 @@ export class SignalCommandTrigger implements ICommandTrigger {
         );
         this._executor = new CommandExecutor(
             injector,
-            this._mappings.removeMapping
+            this._mappings.removeMapping.bind(this._mappings)
         );
     }
 
