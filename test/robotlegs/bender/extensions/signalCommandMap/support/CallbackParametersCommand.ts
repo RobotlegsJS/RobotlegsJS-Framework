@@ -5,37 +5,71 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import { injectable, inject, named } from "inversify";
+import { injectable, inject, named, optional } from "inversify";
 
 import { ICommand } from "@robotlegsjs/core";
 
 @injectable()
 export class CallbackParametersCommand implements ICommand {
-    @inject(Boolean) public booleanValue: boolean;
+    @inject(Boolean)
+    @optional()
+    public booleanValue: boolean;
 
-    @inject(Number) public numValue: number;
+    @inject(Number)
+    @optional()
+    public numValue: number;
 
-    @inject(String) public stringValue: string;
+    @inject(String)
+    @optional()
+    public stringValue: string;
 
-    @inject(Symbol) public symbolValue: symbol;
+    @inject(Symbol)
+    @optional()
+    public symbolValue: symbol;
 
-    @inject(Object) public objectValue: object;
+    @inject(Object)
+    @optional()
+    public objectValue: object;
 
-    @inject(Date) public dateValue: Date;
+    @inject(Date)
+    @optional()
+    public dateValue: Date;
 
-    @inject(Array) public arrayValue: any[];
+    @inject(Array)
+    @optional()
+    public arrayValue: any[];
 
     @inject("Function")
     @named("reportParameter")
     public reportParameter: Function;
 
     public execute(): void {
-        this.reportParameter(this.booleanValue);
-        this.reportParameter(this.numValue);
-        this.reportParameter(this.stringValue);
-        this.reportParameter(this.symbolValue);
-        this.reportParameter(this.objectValue);
-        this.reportParameter(this.dateValue);
-        this.reportParameter(this.arrayValue);
+        if (this.booleanValue) {
+            this.reportParameter(this.booleanValue);
+        }
+
+        if (this.numValue) {
+            this.reportParameter(this.numValue);
+        }
+
+        if (this.stringValue) {
+            this.reportParameter(this.stringValue);
+        }
+
+        if (this.symbolValue) {
+            this.reportParameter(this.symbolValue);
+        }
+
+        if (this.objectValue) {
+            this.reportParameter(this.objectValue);
+        }
+
+        if (this.dateValue) {
+            this.reportParameter(this.dateValue);
+        }
+
+        if (this.arrayValue) {
+            this.reportParameter(this.arrayValue);
+        }
     }
 }
