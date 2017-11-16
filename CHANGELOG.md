@@ -12,7 +12,7 @@
 
   - [ ] Find a way to keep a new line between **@inject** anotation and property declarations.
 
-- [ ] Improve Code Coverage to reach 100%.
+- [x] Improve Code Coverage to reach 100%.
 
 ## RobotlegsJS-SignalCommandMap 0.1.0
 
