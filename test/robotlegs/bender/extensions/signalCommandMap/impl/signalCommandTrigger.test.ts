@@ -35,7 +35,7 @@ import { NullCommand } from "../support/NullCommand";
 import { ParametersSignal } from "../support/ParametersSignal";
 
 describe("SignalCommandTrigger", () => {
-    let signal: ISignal;
+    let signal: Signal;
     let injector: IInjector;
     let subject: SignalCommandTrigger;
 
@@ -63,7 +63,7 @@ describe("SignalCommandTrigger", () => {
 
         signalMock.expects("add").once();
 
-        injector.bind(ISignal).toConstantValue(signal);
+        injector.bind(Signal).toConstantValue(signal);
         subject.activate();
 
         signalMock.restore();
@@ -81,7 +81,7 @@ describe("SignalCommandTrigger", () => {
         signalMock.expects("add").once();
         signalMock.expects("remove").once();
 
-        injector.bind(ISignal).toConstantValue(signal);
+        injector.bind(Signal).toConstantValue(signal);
         subject.activate();
         subject.deactivate();
 
@@ -95,7 +95,7 @@ describe("SignalCommandTrigger", () => {
         signalMock.expects("add").never();
         signalMock.expects("remove").never();
 
-        injector.bind(ISignal).toConstantValue(signal);
+        injector.bind(Signal).toConstantValue(signal);
         subject.deactivate();
 
         signalMock.restore();
@@ -117,7 +117,7 @@ describe("SignalCommandTrigger", () => {
             })
             .whenTargetNamed("executeCallback");
 
-        injector.bind(ISignal).toConstantValue(signal);
+        injector.bind(Signal).toConstantValue(signal);
         mapper = subject.createMapper();
         mapper.toCommand(CallbackCommand);
         signal.dispatch();
@@ -136,7 +136,7 @@ describe("SignalCommandTrigger", () => {
             })
             .whenTargetNamed("executeCallback");
 
-        injector.bind(ISignal).toConstantValue(signal);
+        injector.bind(Signal).toConstantValue(signal);
         mapper = subject.createMapper();
         mapper.toCommand(CallbackCommand);
         subject.deactivate();
@@ -167,7 +167,7 @@ describe("SignalCommandTrigger", () => {
             })
             .whenTargetNamed("reportParameter");
 
-        injector.bind(ISignal).toConstantValue(signal);
+        injector.bind(Signal).toConstantValue(signal);
         mapper = subject.createMapper();
         mapper.toCommand(CallbackParametersCommand);
         signal.dispatch.apply(signal, expected);
@@ -197,7 +197,7 @@ describe("SignalCommandTrigger", () => {
             .whenTargetNamed("reportParameter");
 
         signal = new ParametersSignal();
-        injector.bind(ISignal).toConstantValue(signal);
+        injector.bind(Signal).toConstantValue(signal);
         mapper = subject.createMapper();
         mapper.toCommand(CallbackParametersCommand);
         signal.dispatch.apply(signal, expected);
@@ -214,7 +214,7 @@ describe("SignalCommandTrigger", () => {
             callCount++;
         });
 
-        injector.bind(ISignal).toConstantValue(signal);
+        injector.bind(Signal).toConstantValue(signal);
         subject = new SignalCommandTrigger(injector, Signal, processors);
         mapper = subject.createMapper();
         mapper.toCommand(NullCommand);
@@ -238,7 +238,7 @@ describe("SignalCommandTrigger", () => {
             callCount++;
         });
 
-        injector.bind(ISignal).toConstantValue(signal);
+        injector.bind(Signal).toConstantValue(signal);
         subject = new SignalCommandTrigger(injector, Signal, processors);
         mapper = subject.createMapper();
         mapper.toCommand(NullCommand);
