@@ -2,7 +2,7 @@
 # yarn lockfile v1
 
 
-"@robotlegsjs/core@0.1.1":
+"@robotlegsjs/core@^0.1.1":
   version "0.1.1"
   resolved "https://registry.npmjs.org/@robotlegsjs/core/-/core-0.1.1.tgz#7522c7481d12c562ab41e6b6653235cf76bafaf4"
   dependencies:
