@@ -9,9 +9,7 @@ RobotlegsJS Macrobot
 [![Greenkeeper badge](https://badges.greenkeeper.io/RobotlegsJS/RobotlegsJS-Macrobot.svg)](https://greenkeeper.io/)
 [![styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 
-**Macrobot** is a macro command utility for Robotlegs which provides the ability to execute batches of commands in sequential or parallel fashion.
-
-**Macrobot** was originally implemented by [Alessandro Bianco](https://github.com/alebianco) in [AS3](https://github.com/alebianco/robotlegs-utilities-macrobot).
+**Macrobot** is a macro command utility for [RobotlegsJS](https://github.com/RobotlegsJS/RobotlegsJS) which provides the ability to execute batches of commands in sequential or parallel fashion. It was originally implemented by [Alessandro Bianco](https://github.com/alebianco) in [AS3](https://github.com/alebianco/robotlegs-utilities-macrobot).
 
 Introduction
 ---
@@ -37,6 +35,7 @@ Or using [Yarn](https://yarnpkg.com/en/):
 
 ```bash
 yarn add @robotlegsjs/macrobot
+```
 
 Usage
 ---
