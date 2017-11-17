@@ -9,18 +9,19 @@ RobotlegsJS Macrobot
 [![Greenkeeper badge](https://badges.greenkeeper.io/RobotlegsJS/RobotlegsJS-Macrobot.svg)](https://greenkeeper.io/)
 [![styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 
-**Macrobot** is a macro command utility for [RobotlegsJS](https://github.com/RobotlegsJS/RobotlegsJS) which provides the ability to execute batches of commands in sequential or parallel fashion. It was originally implemented by [Alessandro Bianco](https://github.com/alebianco) in [AS3](https://github.com/alebianco/robotlegs-utilities-macrobot).
+**Macrobot** is a macro command utility for [RobotlegsJS](https://github.com/RobotlegsJS/RobotlegsJS) which provides the ability to execute batches of commands in sequential or parallel fashion. It was originally implemented by [Alessandro Bianco](https://github.com/alebianco) in [AS3](https://github.com/alebianco/robotlegs-utilities-macrobot) and now is
+ported to [TypeScript](https://www.typescriptlang.org).
 
 Introduction
 ---
 
 While using [RobotlegsJS](https://github.com/RobotlegsJS/RobotlegsJS) and encapsulating your business logic inside commands, you may find yourself in a situation where you wish to batch commands, instead of relying on events to trigger every step.
 
-**Macrobot** simplifies this process and provide two way to group commands:
+**Macrobot** simplifies the process and provide two ways to group commands:
 
 - **Sequence**: The commands will be executed in order one after the other. A command will not be executed until the previous one is complete. The macro itself will not be complete until all its commands are complete.
 
-- **Parallel**: The commands will be executed as quickly as possible, with no regards on the order in which they were registered. The macro itself will not be complete until all its commands are complete.
+- **Parallel**: The commands will be executed as quickly as possible, with no regards to the order in which they were registered. The macro itself will not be complete until all its commands are complete.
 
 Installation
 ---
@@ -40,9 +41,9 @@ yarn add @robotlegsjs/macrobot
 Usage
 ---
 
-To create a macro command, extend on the two classes Macrobot provides: `ParallelMacro` or `SequenceMacro`.
+To create a macro command, extend one of the two classes Macrobot provides: `ParallelMacro` or `SequenceMacro`.
 Override the `prepare()` method and add sub commands by calling `addSubCommand()` specifying the command class to use.
-At the appropriate time the command will be created, initiated by satisfying the injection points and then executed.
+At the appropriate time, the command will be created, instantiated by satisfying the injection points and then executed.
 This automated process of instantiation, injection, and execution is very similar to how commands are normally prepared and executed in RobotlegsJS.
 
 You could use _Guards_ and _Hooks_ as you would normally use with regular commands to control the execution workflow.
@@ -51,11 +52,11 @@ Additionally you could use the `withPayloads()` method to add some data that can
 Here's an example of a simple sequential macro:
 
 ```typescript
-public class MyMacro extends SequenceMacro {
-	override public function prepare() {
-		add(CommandA);
-		add(CommandB);
-		add(CommandC);
+export class MyMacro extends SequenceMacro {
+	public prepare() {
+        this.add(CommandA);
+		this.add(CommandB);
+		this.add(CommandC);
 	}
 }
 ```
@@ -65,17 +66,17 @@ public class MyMacro extends SequenceMacro {
 Guards are used to approve or deny the execution of one of the subcommands.
 
 ```typescript
-public class DailyRoutine extends SequenceMacro {
-	override public function prepare() {
-		add(Work);
-		add(Party).withGuards(IsFriday); // It will only party on fridays
-		add(Sleep);
+export class DailyRoutine extends SequenceMacro {
+	public prepare() {
+		this.add(Work);
+		this.add(Party).withGuards(IsFriday); // It will only party on fridays
+		this.add(Sleep);
 	}
 }
 
-public class IsFriday implements IGuard {
-	public funciton approve():Boolean {
-		return new Date().day == 5;
+class IsFriday implements IGuard {
+	public approve():boolean {
+		return new Date().day === 5;
 	}
 }
 ```
@@ -86,18 +87,20 @@ Hooks run before the subcommands. They are typically used to run custom actions 
 Hooks will run only if the applied Guards approve the execution of the command.
 
 ```typescript
-public class DailyRoutine extends SequenceMacro {
-	override public function prepare() {
-		add(Work);
-		add(Party).withGuards(IsFriday); // It will only party on fridays
-		add(Sleep).withHook(GoToHome); // Try to avoid sleeping at the office or the pub
+export class DailyRoutine extends SequenceMacro {
+	public prepare() {
+		this.add(Work);
+		this.add(Party).withGuards(IsFriday); // It will only party on fridays
+		this.add(Sleep).withHook(GoToHome); // Try to avoid sleeping at the office or the pub
 	}
 }
 
-public class IsFriday implements IHook {
-	[Inject] public var me:Person;
+class IsFriday implements IHook {
+    @inject(Person)
+    public me:Person;
+
 	public funciton hook():void {
-		me.goHome();
+		this.me.goHome();
 	}
 }
 ```
@@ -109,17 +112,19 @@ Payloads are used to temporary inject some data, which would not be available ot
 You can use pass the data to be injected directly to the `withPayloads()` method, for a normal injection.
 
 ```typescript
-public class Macro extends SequenceMacro {
-	override public function prepare() {
-		const data:SomeModel = new SomeModel()
-		add(Action).withPayloads(data);
+export class Macro extends SequenceMacro {
+	public prepare() {
+		const data:SomeModel = new SomeModel();
+		this.add(Action).withPayloads(data);
 	}
 }
 
-public class Action implements ICommand {
-	[Inject] public var data:SomeModel;
+class Action implements ICommand {
+    @inject(SomeModel)
+    public data:SomeModel;
+
 	public function execute():void {
-		data.property = 'value'
+		this.data.property = 'value';
 	}
 }
 ```
@@ -127,16 +132,18 @@ public class Action implements ICommand {
 Or you can use the `SubCommandPayload` class to create a more complex injection.
 
 ```typescript
-public class Macro extends SequenceMacro {
-	override public function prepare() {
-		const data:SomeModel = new SomeModel()
-		const payload:SubCommandPayload = new SubCommandPayload(data).withName('mydata').ofClass(IModel)
-		add(Action).withPayloads(payload);
+export class Macro extends SequenceMacro {
+	public prepare() {
+		const data:SomeModel = new SomeModel();
+		const payload:SubCommandPayload = new SubCommandPayload(data).withName('mydata').ofClass(IModel);
+
+        this.add(Action).withPayloads(payload);
 	}
 }
 
-public class Action implements ICommand {
-	[Inject(name='mydata')] public var data:IModel;
+class Action implements ICommand {
+    @inject(IModel) @named("mydata")
+    public data:IModel;
 	public function execute():void {
 		data.property = 'value'
 	}
