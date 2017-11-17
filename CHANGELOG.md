@@ -28,6 +28,8 @@
 
 - Add Pull Request Template (see #26).
 
+- Update README (see #27).
+
 - Update dev dependencies to latest version.
 
 ## RobotlegsJS-Macrobot 0.0.1
