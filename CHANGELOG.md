@@ -24,6 +24,8 @@
 
 - Add Code of Conduct (see #24).
 
+- Add Issue Template (see #25).
+
 - Update dev dependencies to latest version.
 
 ## RobotlegsJS-Macrobot 0.0.1
