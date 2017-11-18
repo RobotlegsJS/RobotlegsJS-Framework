@@ -15,6 +15,7 @@ export abstract class SequenceMacro extends AbstractMacro implements IMacro {
 
     private _success: boolean;
     private _running: boolean;
+    private _completed: boolean;
 
     private _commands: ISubCommandMapping[];
 
@@ -26,7 +27,7 @@ export abstract class SequenceMacro extends AbstractMacro implements IMacro {
     }
 
     public set atomic(value: boolean) {
-        if (!this._running) {
+        if (!this._running && !this._completed) {
             this._customAtomic = value;
         }
     }
@@ -35,6 +36,7 @@ export abstract class SequenceMacro extends AbstractMacro implements IMacro {
         this._atomic = this.atomic;
         this._success = true;
         this._running = true;
+        this._completed = false;
         this._executionIndex = 0;
         this._commands = this._mappings.getList();
         this.executeNext();
@@ -67,6 +69,7 @@ export abstract class SequenceMacro extends AbstractMacro implements IMacro {
 
     protected dispatchComplete(success: boolean): void {
         this._running = false;
+        this._completed = true;
         this._success = true;
         this._executionIndex = 0;
         this._commands = null;
