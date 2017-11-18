@@ -24,6 +24,7 @@ import { EventCommandMap } from "@robotlegsjs/core/lib/robotlegs/bender/extensio
 
 import { SequenceMacro } from "../../../../../../src/robotlegs/bender/utilities/macrobot/impl/SequenceMacro";
 
+import { TestAddAndRemoveSequenceCommand } from "../support/TestAddAndRemoveSequenceCommand";
 import { TestAtomicSequenceWithAsyncAndCompleteCallbackCommand } from "../support/TestAtomicSequenceWithAsyncAndCompleteCallbackCommand";
 import { TestAtomicSequenceWithAsyncCommand } from "../support/TestAtomicSequenceWithAsyncCommand";
 import { TestNotAtomicSequenceWithAsyncCommand } from "../support/TestNotAtomicSequenceWithAsyncCommand";
@@ -82,6 +83,14 @@ describe("SequenceMacro", () => {
         eventCommandMap.map("trigger", Event).toCommand(TestSequenceCommand);
         dispatcher.dispatchEvent(new Event("trigger"));
         assert.deepEqual(reported, [1, 2, 3]);
+    });
+
+    it("removed_commands_are_not_executed", () => {
+        eventCommandMap
+            .map("trigger", Event)
+            .toCommand(TestAddAndRemoveSequenceCommand);
+        dispatcher.dispatchEvent(new Event("trigger"));
+        assert.deepEqual(reported, [1]);
     });
 
     it("commands_are_executed_in_sequence_and_complete_callback_is_called", (
