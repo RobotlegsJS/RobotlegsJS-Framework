@@ -30,6 +30,8 @@ import { TestSequenceWithHappyGuardsCommand } from "../support/TestSequenceWithH
 import { TestSequenceWithHooksCommand } from "../support/TestSequenceWithHooksCommand";
 import { TestSequenceWithInjectedHooksCommand } from "../support/TestSequenceWithInjectedHooksCommand";
 import { TestSequenceWithNamedPayloadsCommand } from "../support/TestSequenceWithNamedPayloadsCommand";
+import { TestSequenceWithPayloadInjectedIntoGuardsCommand } from "../support/TestSequenceWithPayloadInjectedIntoGuardsCommand";
+import { TestSequenceWithPayloadInjectedIntoHooksCommand } from "../support/TestSequenceWithPayloadInjectedIntoHooksCommand";
 import { TestSequenceWithStringPayloadCommand } from "../support/TestSequenceWithStringPayloadCommand";
 
 describe("SequenceMacro", () => {
@@ -138,5 +140,35 @@ describe("SequenceMacro", () => {
             .toCommand(TestSequenceWithGrumpyGuardsCommand);
         dispatcher.dispatchEvent(new Event("trigger"));
         assert.deepEqual(reported, []);
+    });
+
+    it("payloads_are_injected_into_guards", () => {
+        eventCommandMap
+            .map("trigger", Event)
+            .toCommand(TestSequenceWithPayloadInjectedIntoGuardsCommand);
+        dispatcher.dispatchEvent(new Event("trigger"));
+        assert.deepEqual(reported, [
+            "Guard of Command 1",
+            "Command 1",
+            "Guard of Command 2",
+            "Command 2",
+            "Guard of Command 3",
+            "Command 3"
+        ]);
+    });
+
+    it("payloads_are_injected_into_hooks", () => {
+        eventCommandMap
+            .map("trigger", Event)
+            .toCommand(TestSequenceWithPayloadInjectedIntoHooksCommand);
+        dispatcher.dispatchEvent(new Event("trigger"));
+        assert.deepEqual(reported, [
+            "Hook of Command 1",
+            "Command 1",
+            "Hook of Command 2",
+            "Command 2",
+            "Hook of Command 3",
+            "Command 3"
+        ]);
     });
 });
