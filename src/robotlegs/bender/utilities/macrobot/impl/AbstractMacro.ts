@@ -111,17 +111,15 @@ export abstract class AbstractMacro extends AsyncCommand implements IMacro {
     }
 
     protected mapPayloads(payloads: Array<ISubCommandPayload<any>>): void {
-        for (let i: number = 0; i < payloads.length; i++) {
-            let payload: ISubCommandPayload<any> = payloads[i];
+        payloads.forEach((payload: ISubCommandPayload<any>) => {
             this._injector.bind(payload.type).toConstantValue(payload.data);
-        }
+        });
     }
 
     protected unmapPayloads(payloads: Array<ISubCommandPayload<any>>): void {
-        for (let i: number = 0; i < payloads.length; i++) {
-            let payload: ISubCommandPayload<any> = payloads[i];
+        payloads.forEach((payload: ISubCommandPayload<any>) => {
             this._injector.unbind(payload.type);
-        }
+        });
     }
 
     protected abstract commandCompleteHandler(success: boolean): void;
