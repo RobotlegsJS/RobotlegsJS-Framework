@@ -19,8 +19,6 @@ export abstract class ParallelMacro extends AbstractMacro implements IMacro {
     private _commands: ISubCommandMapping[];
 
     public execute(): void {
-        super.execute();
-
         this._commands = this._mappings.getList();
 
         if (this.hasCommands) {

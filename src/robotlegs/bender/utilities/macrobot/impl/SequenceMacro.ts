@@ -31,8 +31,6 @@ export abstract class SequenceMacro extends AbstractMacro implements IMacro {
     }
 
     public execute(): void {
-        super.execute();
-
         this._running = true;
         this._executionIndex = 0;
         this._commands = this._mappings.getList();

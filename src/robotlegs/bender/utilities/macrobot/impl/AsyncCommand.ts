@@ -10,21 +10,21 @@ import { inject, injectable, IContext } from "@robotlegsjs/core";
 import { IAsyncCommand } from "../api/IAsyncCommand";
 
 @injectable()
-export class AsyncCommand implements IAsyncCommand {
+export abstract class AsyncCommand implements IAsyncCommand {
     protected _context: IContext;
     protected _listeners: any[] = [];
 
     constructor(@inject(IContext) context: IContext) {
         this._context = context;
+
+        this._context.detain(this);
     }
 
     public registerCompleteCallback(listener: Function): void {
         this._listeners.unshift(listener);
     }
 
-    public execute(): void {
-        this._context.detain(this);
-    }
+    public abstract execute(): void;
 
     protected dispatchComplete(success: boolean): void {
         this._context.release(this);
