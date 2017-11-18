@@ -15,7 +15,7 @@ import { SequenceMacro } from "../../../../../../src/robotlegs/bender/utilities/
 import { ReportStringCommand } from "./ReportStringCommand";
 
 @injectable()
-export class TestSequenceWithPayloadsCommand extends SequenceMacro {
+export class TestSequenceWithStringPayloadCommand extends SequenceMacro {
     public prepare(): void {
         this.add(ReportStringCommand).withPayloads(
             new SubCommandPayload("Hello")
