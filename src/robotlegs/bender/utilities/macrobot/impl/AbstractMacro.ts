@@ -5,6 +5,8 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
+import { interfaces, ContainerModule } from "inversify";
+
 import {
     inject,
     injectable,
@@ -31,6 +33,7 @@ import { SubCommandMappingList } from "./SubCommandMappingList";
 export abstract class AbstractMacro extends AsyncCommand implements IMacro {
     protected _injector: IInjector;
     protected _mappings: SubCommandMappingList;
+    protected _payloadsModule: ContainerModule;
 
     constructor(
         @inject(IContext) context: IContext,
@@ -111,15 +114,24 @@ export abstract class AbstractMacro extends AsyncCommand implements IMacro {
     }
 
     protected mapPayloads(payloads: Array<ISubCommandPayload<any>>): void {
-        payloads.forEach((payload: ISubCommandPayload<any>) => {
-            this._injector.bind(payload.type).toConstantValue(payload.data);
-        });
+        this._payloadsModule = new ContainerModule(
+            (bind: interfaces.Bind, unbind: interfaces.Unbind) => {
+                payloads.forEach((payload: ISubCommandPayload<any>) => {
+                    if (payload.name.length > 0) {
+                        bind(payload.type)
+                            .toConstantValue(payload.data)
+                            .whenTargetNamed(payload.name);
+                    } else {
+                        bind(payload.type).toConstantValue(payload.data);
+                    }
+                });
+            }
+        );
+        this._injector.load(this._payloadsModule);
     }
 
     protected unmapPayloads(payloads: Array<ISubCommandPayload<any>>): void {
-        payloads.forEach((payload: ISubCommandPayload<any>) => {
-            this._injector.unbind(payload.type);
-        });
+        this._injector.unload(this._payloadsModule);
     }
 
     protected abstract commandCompleteHandler(success: boolean): void;
