@@ -13,35 +13,49 @@ import { ISubCommandPayload } from "../../../../../../src/robotlegs/bender/utili
 import { SubCommandPayload } from "../../../../../../src/robotlegs/bender/utilities/macrobot/impl/SubCommandPayload";
 
 describe("SubCommandPayload", () => {
-    let payload: ISubCommandPayload;
-
-    beforeEach(() => {});
+    let payload: ISubCommandPayload<any>;
 
     afterEach(() => {
         payload = null;
     });
 
-    it("invalid data and type throws a error", () => {
-        function invalidDataAndType(): void {
-            payload = new SubCommandPayload(null, null);
-        }
-
-        assert.throws(invalidDataAndType, Error);
-    });
-
-    it("invalid data throws a error", () => {
+    it("invalid_data_throws_a_error", () => {
         function invalidData(): void {
-            payload = new SubCommandPayload(null, String);
+            payload = new SubCommandPayload(null);
         }
 
         assert.throws(invalidData, Error);
     });
 
-    it("invalid type throws a error", () => {
-        function invalidType(): void {
-            payload = new SubCommandPayload("Data", null);
-        }
+    it("data_without_type_has_type_automatically_resolved", () => {
+        const data: string = "I'm a string";
+        payload = new SubCommandPayload(data);
+        assert.equal(payload.data, data);
+        assert.equal(payload.type, String);
+    });
 
-        assert.throws(invalidType, Error);
+    it("valid_data_and_valid_type_are_stored", () => {
+        const data: string = "I'm a string";
+        payload = new SubCommandPayload(data, String);
+        assert.equal(payload.data, data);
+        assert.equal(payload.type, String);
+    });
+
+    it("payload_is_initialized_with_empty_name", () => {
+        payload = new SubCommandPayload("I'm a string", String);
+        assert.equal(payload.name, "");
+        assert.equal(payload.name.length, 0);
+    });
+
+    it("withName_define_name", () => {
+        payload = new SubCommandPayload("I'm a string", String);
+        payload.withName("callback");
+        assert.equal(payload.name, "callback");
+    });
+
+    it("ofClass_define_type", () => {
+        payload = new SubCommandPayload("I'm a string");
+        payload.ofType(String);
+        assert.equal(payload.type, String);
     });
 });
