@@ -11,26 +11,29 @@ import { ISubCommandMapping } from "../api/ISubCommandMapping";
 import { AbstractMacro } from "./AbstractMacro";
 
 export abstract class SequenceMacro extends AbstractMacro implements IMacro {
-    private _executionIndex: number = 0;
+    private _executionIndex: number;
 
-    private _success: boolean = true;
-    private _running: boolean = false;
+    private _success: boolean;
+    private _running: boolean;
 
     private _commands: ISubCommandMapping[];
 
-    private _atomic: boolean = true;
+    private _atomic: boolean;
+    private _customAtomic: boolean;
 
     public get atomic(): boolean {
-        return this._atomic;
+        return this._customAtomic !== undefined ? this._customAtomic : true;
     }
 
     public set atomic(value: boolean) {
         if (!this._running) {
-            this._atomic = value;
+            this._customAtomic = value;
         }
     }
 
     public execute(): void {
+        this._atomic = this.atomic;
+        this._success = true;
         this._running = true;
         this._executionIndex = 0;
         this._commands = this._mappings.getList();
