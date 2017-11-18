@@ -37,8 +37,6 @@ export abstract class AsyncCommand implements IAsyncCommand {
             }
         });
 
-        if (this._listeners) {
-            this._listeners = null;
-        }
+        this._listeners = null;
     }
 }
