@@ -24,7 +24,10 @@ import { EventCommandMap } from "@robotlegsjs/core/lib/robotlegs/bender/extensio
 
 import { SequenceMacro } from "../../../../../../src/robotlegs/bender/utilities/macrobot/impl/SequenceMacro";
 
+import { TestAtomicSequenceWithAsyncCommand } from "../support/TestAtomicSequenceWithAsyncCommand";
+import { TestNotAtomicSequenceWithAsyncCommand } from "../support/TestNotAtomicSequenceWithAsyncCommand";
 import { TestSequenceCommand } from "../support/TestSequenceCommand";
+import { TestSequenceWithAsyncCommand } from "../support/TestSequenceWithAsyncCommand";
 import { TestSequenceWithGrumpyGuardsCommand } from "../support/TestSequenceWithGrumpyGuardsCommand";
 import { TestSequenceWithHappyGuardsCommand } from "../support/TestSequenceWithHappyGuardsCommand";
 import { TestSequenceWithHooksCommand } from "../support/TestSequenceWithHooksCommand";
@@ -170,5 +173,71 @@ describe("SequenceMacro", () => {
             "Hook of Command 3",
             "Command 3"
         ]);
+    });
+
+    it("async_commands_are_executed_in_order", (done: Function) => {
+        eventCommandMap
+            .map("trigger", Event)
+            .toCommand(TestSequenceWithAsyncCommand);
+        dispatcher.dispatchEvent(new Event("trigger"));
+
+        setTimeout(() => {
+            assert.deepEqual(reported, [
+                "Start execution of Command 1 and await 50 milliseconds",
+                "Complete execution of Command 1",
+                "Start execution of Command 2 and await 50 milliseconds",
+                "Complete execution of Command 2",
+                "Start execution of Command 3 and await 50 milliseconds",
+                "Complete execution of Command 3",
+                "Start execution of Command 4 and await 50 milliseconds",
+                "Complete execution of Command 4"
+            ]);
+
+            done();
+        }, 250);
+    });
+
+    it("subsequent_async_commands_are_still_executed_when_a_command_fails", (
+        done: Function
+    ) => {
+        eventCommandMap
+            .map("trigger", Event)
+            .toCommand(TestAtomicSequenceWithAsyncCommand);
+        dispatcher.dispatchEvent(new Event("trigger"));
+
+        setTimeout(() => {
+            assert.deepEqual(reported, [
+                "Start execution of Command 1 and await 50 milliseconds",
+                "Complete execution of Command 1",
+                "Start execution of Command 2 and await 50 milliseconds",
+                "Execution of Command 2 failed!",
+                "Start execution of Command 3 and await 50 milliseconds",
+                "Execution of Command 3 failed!",
+                "Start execution of Command 4 and await 50 milliseconds",
+                "Execution of Command 4 failed!"
+            ]);
+
+            done();
+        }, 250);
+    });
+
+    it("subsequent_async_commands_are_not_executed_when_a_command_fails", (
+        done: Function
+    ) => {
+        eventCommandMap
+            .map("trigger", Event)
+            .toCommand(TestNotAtomicSequenceWithAsyncCommand);
+        dispatcher.dispatchEvent(new Event("trigger"));
+
+        setTimeout(() => {
+            assert.deepEqual(reported, [
+                "Start execution of Command 1 and await 50 milliseconds",
+                "Complete execution of Command 1",
+                "Start execution of Command 2 and await 50 milliseconds",
+                "Execution of Command 2 failed!"
+            ]);
+
+            done();
+        }, 250);
     });
 });
