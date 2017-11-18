@@ -24,10 +24,14 @@ import { EventCommandMap } from "@robotlegsjs/core/lib/robotlegs/bender/extensio
 
 import { SequenceMacro } from "../../../../../../src/robotlegs/bender/utilities/macrobot/impl/SequenceMacro";
 
+import { TestAtomicSequenceWithAsyncAndCompleteCallbackCommand } from "../support/TestAtomicSequenceWithAsyncAndCompleteCallbackCommand";
 import { TestAtomicSequenceWithAsyncCommand } from "../support/TestAtomicSequenceWithAsyncCommand";
 import { TestNotAtomicSequenceWithAsyncCommand } from "../support/TestNotAtomicSequenceWithAsyncCommand";
+import { TestSequenceAnChangeAtomicLaterCommand } from "../support/TestSequenceAnChangeAtomicLaterCommand";
 import { TestSequenceCommand } from "../support/TestSequenceCommand";
+import { TestSequenceWithAsyncAndCompleteCallbackCommand } from "../support/TestSequenceWithAsyncAndCompleteCallbackCommand";
 import { TestSequenceWithAsyncCommand } from "../support/TestSequenceWithAsyncCommand";
+import { TestSequenceWithCompleteCallbackCommand } from "../support/TestSequenceWithCompleteCallbackCommand";
 import { TestSequenceWithGrumpyGuardsCommand } from "../support/TestSequenceWithGrumpyGuardsCommand";
 import { TestSequenceWithHappyGuardsCommand } from "../support/TestSequenceWithHappyGuardsCommand";
 import { TestSequenceWithHooksCommand } from "../support/TestSequenceWithHooksCommand";
@@ -78,6 +82,39 @@ describe("SequenceMacro", () => {
         eventCommandMap.map("trigger", Event).toCommand(TestSequenceCommand);
         dispatcher.dispatchEvent(new Event("trigger"));
         assert.deepEqual(reported, [1, 2, 3]);
+    });
+
+    it("commands_are_executed_in_sequence_and_complete_callback_is_called", (
+        done: Function
+    ) => {
+        eventCommandMap
+            .map("trigger", Event)
+            .toCommand(TestSequenceWithCompleteCallbackCommand);
+        dispatcher.dispatchEvent(new Event("trigger"));
+
+        setTimeout(() => {
+            assert.deepEqual(reported, [
+                "Command 1",
+                "Command 2",
+                "Command 3",
+                "All commands have been executed!"
+            ]);
+
+            done();
+        }, 250);
+    });
+
+    it("change_atomic_property_after_execution_of_sub_commands_have_no_effect", () => {
+        eventCommandMap
+            .map("trigger", Event)
+            .toCommand(TestSequenceAnChangeAtomicLaterCommand);
+        dispatcher.dispatchEvent(new Event("trigger"));
+        assert.deepEqual(reported, [
+            1,
+            2,
+            3,
+            "Atomic property changed after execution of sequence."
+        ]);
     });
 
     it("payloads_are_mapped", () => {
@@ -197,6 +234,29 @@ describe("SequenceMacro", () => {
         }, 250);
     });
 
+    it("async_commands_are_executed_in_order_and_complete_callback_is_called", (
+        done: Function
+    ) => {
+        eventCommandMap
+            .map("trigger", Event)
+            .toCommand(TestSequenceWithAsyncAndCompleteCallbackCommand);
+        dispatcher.dispatchEvent(new Event("trigger"));
+
+        setTimeout(() => {
+            assert.deepEqual(reported, [
+                "Start execution of Command 1 and await 50 milliseconds",
+                "Complete execution of Command 1",
+                "Start execution of Command 2 and await 50 milliseconds",
+                "Complete execution of Command 2",
+                "Start execution of Command 3 and await 50 milliseconds",
+                "Complete execution of Command 3",
+                "All commands have been executed!"
+            ]);
+
+            done();
+        }, 250);
+    });
+
     it("subsequent_async_commands_are_still_executed_when_a_command_fails", (
         done: Function
     ) => {
@@ -215,6 +275,29 @@ describe("SequenceMacro", () => {
                 "Execution of Command 3 failed!",
                 "Start execution of Command 4 and await 50 milliseconds",
                 "Execution of Command 4 failed!"
+            ]);
+
+            done();
+        }, 250);
+    });
+
+    it("subsequent_async_commands_are_still_executed_when_a_command_fails_and_complete_callback_is_called", (
+        done: Function
+    ) => {
+        eventCommandMap
+            .map("trigger", Event)
+            .toCommand(TestAtomicSequenceWithAsyncAndCompleteCallbackCommand);
+        dispatcher.dispatchEvent(new Event("trigger"));
+
+        setTimeout(() => {
+            assert.deepEqual(reported, [
+                "Start execution of Command 1 and await 50 milliseconds",
+                "Complete execution of Command 1",
+                "Start execution of Command 2 and await 50 milliseconds",
+                "Execution of Command 2 failed!",
+                "Start execution of Command 3 and await 50 milliseconds",
+                "Execution of Command 3 failed!",
+                "All commands have been executed but some of them failed."
             ]);
 
             done();
