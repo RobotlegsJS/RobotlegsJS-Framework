@@ -25,6 +25,10 @@ import { EventCommandMap } from "@robotlegsjs/core/lib/robotlegs/bender/extensio
 import { SequenceMacro } from "../../../../../../src/robotlegs/bender/utilities/macrobot/impl/SequenceMacro";
 
 import { TestSequenceCommand } from "../support/TestSequenceCommand";
+import { TestSequenceWithGrumpyGuardsCommand } from "../support/TestSequenceWithGrumpyGuardsCommand";
+import { TestSequenceWithHappyGuardsCommand } from "../support/TestSequenceWithHappyGuardsCommand";
+import { TestSequenceWithHooksCommand } from "../support/TestSequenceWithHooksCommand";
+import { TestSequenceWithInjectedHooksCommand } from "../support/TestSequenceWithInjectedHooksCommand";
 import { TestSequenceWithNamedPayloadsCommand } from "../support/TestSequenceWithNamedPayloadsCommand";
 import { TestSequenceWithStringPayloadCommand } from "../support/TestSequenceWithStringPayloadCommand";
 
@@ -79,11 +83,60 @@ describe("SequenceMacro", () => {
         assert.deepEqual(reported, ["Hello", "World", "!"]);
     });
 
-    it("payloads_with_name_are_mapped", () => {
+    it("named_payloads_are_mapped", () => {
         eventCommandMap
             .map("trigger", Event)
             .toCommand(TestSequenceWithNamedPayloadsCommand);
         dispatcher.dispatchEvent(new Event("trigger"));
         assert.deepEqual(reported, [2, 20, 200]);
+    });
+
+    it("hooks_are_called", () => {
+        eventCommandMap
+            .map("trigger", Event)
+            .toCommand(TestSequenceWithHooksCommand);
+        dispatcher.dispatchEvent(new Event("trigger"));
+        assert.deepEqual(reported, [
+            "Hook",
+            "Command 1",
+            "Hook",
+            "Hook",
+            "Command 2",
+            "Hook",
+            "Hook",
+            "Hook",
+            "Command 3"
+        ]);
+    });
+
+    it("command_is_injected_into_hooks", () => {
+        eventCommandMap
+            .map("trigger", Event)
+            .toCommand(TestSequenceWithInjectedHooksCommand);
+        dispatcher.dispatchEvent(new Event("trigger"));
+        assert.deepEqual(reported, [
+            "Hook of Command 1",
+            "Command 1",
+            "Hook of Command 2",
+            "Command 2",
+            "Hook of Command 3",
+            "Command 3"
+        ]);
+    });
+
+    it("commands_are_executed_when_the_guard_allows", () => {
+        eventCommandMap
+            .map("trigger", Event)
+            .toCommand(TestSequenceWithHappyGuardsCommand);
+        dispatcher.dispatchEvent(new Event("trigger"));
+        assert.deepEqual(reported, ["Command 1", "Command 2", "Command 3"]);
+    });
+
+    it("commands_does_not_execute_when_any_guards_denies", () => {
+        eventCommandMap
+            .map("trigger", Event)
+            .toCommand(TestSequenceWithGrumpyGuardsCommand);
+        dispatcher.dispatchEvent(new Event("trigger"));
+        assert.deepEqual(reported, []);
     });
 });

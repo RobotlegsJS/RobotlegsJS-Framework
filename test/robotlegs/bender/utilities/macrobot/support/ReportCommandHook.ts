@@ -6,18 +6,17 @@
 // ------------------------------------------------------------------------------
 
 import { injectable, inject, named } from "inversify";
-
-import { ICommand } from "@robotlegsjs/core";
+import { ReportStringCommand } from "./ReportStringCommand";
 
 @injectable()
-export class ReportStringCommand implements ICommand {
+export class ReportCommandHook {
     @inject("Function")
     @named("reportingFunction")
     protected _report: Function;
 
-    @inject(String) public str: string;
+    @inject(ReportStringCommand) protected _command: ReportStringCommand;
 
-    public execute(): void {
-        this._report(this.str);
+    public hook() {
+        this._report("Hook of " + this._command.str);
     }
 }

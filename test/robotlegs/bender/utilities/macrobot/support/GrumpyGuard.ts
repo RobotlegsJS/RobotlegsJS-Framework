@@ -5,19 +5,11 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import { injectable, inject, named } from "inversify";
-
-import { ICommand } from "@robotlegsjs/core";
+import { injectable, IGuard } from "@robotlegsjs/core";
 
 @injectable()
-export class ReportStringCommand implements ICommand {
-    @inject("Function")
-    @named("reportingFunction")
-    protected _report: Function;
-
-    @inject(String) public str: string;
-
-    public execute(): void {
-        this._report(this.str);
+export class GrumpyGuard implements IGuard {
+    public approve(): boolean {
+        return false;
     }
 }
