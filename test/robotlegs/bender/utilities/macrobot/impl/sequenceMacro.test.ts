@@ -25,6 +25,7 @@ import { EventCommandMap } from "@robotlegsjs/core/lib/robotlegs/bender/extensio
 import { SequenceMacro } from "../../../../../../src/robotlegs/bender/utilities/macrobot/impl/SequenceMacro";
 
 import { TestSequenceCommand } from "../support/TestSequenceCommand";
+import { TestSequenceWithNamedPayloadsCommand } from "../support/TestSequenceWithNamedPayloadsCommand";
 import { TestSequenceWithStringPayloadCommand } from "../support/TestSequenceWithStringPayloadCommand";
 
 describe("SequenceMacro", () => {
@@ -76,5 +77,13 @@ describe("SequenceMacro", () => {
             .toCommand(TestSequenceWithStringPayloadCommand);
         dispatcher.dispatchEvent(new Event("trigger"));
         assert.deepEqual(reported, ["Hello", "World", "!"]);
+    });
+
+    it("payloads_with_name_are_mapped", () => {
+        eventCommandMap
+            .map("trigger", Event)
+            .toCommand(TestSequenceWithNamedPayloadsCommand);
+        dispatcher.dispatchEvent(new Event("trigger"));
+        assert.deepEqual(reported, [2, 20, 200]);
     });
 });
