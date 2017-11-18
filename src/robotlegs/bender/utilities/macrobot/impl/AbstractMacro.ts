@@ -26,7 +26,6 @@ import { ISubCommandPayload } from "../api/ISubCommandPayload";
 import { ISubCommandConfigurator } from "../dsl/ISubCommandConfigurator";
 
 import { AsyncCommand } from "./AsyncCommand";
-import { SubCommandInstanceMapping } from "./SubCommandInstanceMapping";
 import { SubCommandMapping } from "./SubCommandMapping";
 import { SubCommandMappingList } from "./SubCommandMappingList";
 
@@ -49,12 +48,6 @@ export abstract class AbstractMacro extends AsyncCommand implements IMacro {
 
     public add(commandClass: IClass<ICommand>): ISubCommandConfigurator {
         let mapping: SubCommandMapping = new SubCommandMapping(commandClass);
-        this._mappings.addMapping(mapping);
-        return mapping;
-    }
-
-    public addInstance(command: ICommand): ISubCommandConfigurator {
-        let mapping: SubCommandMapping = new SubCommandInstanceMapping(command);
         this._mappings.addMapping(mapping);
         return mapping;
     }
