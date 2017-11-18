@@ -29,15 +29,13 @@ export class AsyncCommand implements IAsyncCommand {
     protected dispatchComplete(success: boolean): void {
         this._context.release(this);
 
-        for (let i: number = 0; i < this._listeners.length; i++) {
-            let listener: Function = this._listeners[i];
-
+        this._listeners.forEach((listener: Function) => {
             if (listener.length === 0) {
                 listener();
             } else {
                 listener(success);
             }
-        }
+        });
 
         if (this._listeners) {
             this._listeners = null;
