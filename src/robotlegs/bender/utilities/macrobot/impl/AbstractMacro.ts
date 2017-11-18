@@ -64,7 +64,7 @@ export abstract class AbstractMacro extends AsyncCommand implements IMacro {
     protected executeCommand(mapping: ISubCommandMapping): void {
         let command: ICommand;
         let commandClass: any = mapping.commandClass;
-        let payloads: ISubCommandPayload[] = mapping.payloads;
+        let payloads: Array<ISubCommandPayload<any>> = mapping.payloads;
         let hasPayloads: boolean = payloads.length > 0;
 
         if (hasPayloads) {
@@ -110,16 +110,16 @@ export abstract class AbstractMacro extends AsyncCommand implements IMacro {
         }
     }
 
-    protected mapPayloads(payloads: ISubCommandPayload[]): void {
+    protected mapPayloads(payloads: Array<ISubCommandPayload<any>>): void {
         for (let i: number = 0; i < payloads.length; i++) {
-            let payload: ISubCommandPayload = payloads[i];
+            let payload: ISubCommandPayload<any> = payloads[i];
             this._injector.bind(payload.type).toConstantValue(payload.data);
         }
     }
 
-    protected unmapPayloads(payloads: ISubCommandPayload[]): void {
+    protected unmapPayloads(payloads: Array<ISubCommandPayload<any>>): void {
         for (let i: number = 0; i < payloads.length; i++) {
-            let payload: ISubCommandPayload = payloads[i];
+            let payload: ISubCommandPayload<any> = payloads[i];
             this._injector.unbind(payload.type);
         }
     }

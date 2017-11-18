@@ -18,7 +18,7 @@ export interface ISubCommandMapping {
 
     hooks: any[];
 
-    payloads: ISubCommandPayload[];
+    payloads: Array<ISubCommandPayload<any>>;
 
     getOrCreateCommandInstance(injector: IInjector): ICommand;
 }

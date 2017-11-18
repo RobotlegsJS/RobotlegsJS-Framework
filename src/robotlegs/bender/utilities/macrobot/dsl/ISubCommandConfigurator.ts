@@ -12,7 +12,9 @@ export interface ISubCommandConfigurator {
 
     withHooks(...hooks: any[]): ISubCommandConfigurator;
 
-    withPayloads(...payloads: ISubCommandPayload[]): ISubCommandConfigurator;
+    withPayloads(
+        ...payloads: Array<ISubCommandPayload<any>>
+    ): ISubCommandConfigurator;
 
     withExecuteMethod(name: String): ISubCommandConfigurator;
 }

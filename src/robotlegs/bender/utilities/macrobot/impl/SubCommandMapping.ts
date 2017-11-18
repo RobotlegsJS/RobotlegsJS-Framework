@@ -18,7 +18,7 @@ export class SubCommandMapping
     private _executeMethod: string = "execute";
 
     private _guards: any[] = [];
-    private _payloads: ISubCommandPayload[] = [];
+    private _payloads: Array<ISubCommandPayload<any>> = [];
     private _hooks: any[] = [];
 
     constructor(commandClass: any) {
@@ -41,7 +41,7 @@ export class SubCommandMapping
         return this._hooks.slice();
     }
 
-    public get payloads(): ISubCommandPayload[] {
+    public get payloads(): Array<ISubCommandPayload<any>> {
         return this._payloads.slice();
     }
 
@@ -56,10 +56,10 @@ export class SubCommandMapping
     }
 
     public withPayloads(
-        ...payloads: ISubCommandPayload[]
+        ...payloads: Array<ISubCommandPayload<any>>
     ): ISubCommandConfigurator {
         for (let i: number = 0; i < payloads.length; i++) {
-            let payload: ISubCommandPayload = payloads[i];
+            let payload: ISubCommandPayload<any> = payloads[i];
             this._payloads.push(payload);
         }
         return this;
