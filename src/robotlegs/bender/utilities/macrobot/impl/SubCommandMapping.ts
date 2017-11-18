@@ -58,10 +58,7 @@ export class SubCommandMapping
     public withPayloads(
         ...payloads: Array<ISubCommandPayload<any>>
     ): ISubCommandConfigurator {
-        for (let i: number = 0; i < payloads.length; i++) {
-            let payload: ISubCommandPayload<any> = payloads[i];
-            this._payloads.push(payload);
-        }
+        this._payloads = this._payloads.concat(payloads);
         return this;
     }
 
