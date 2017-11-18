@@ -5,6 +5,8 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
+import { IClass, ICommand } from "@robotlegsjs/core";
+
 import { ISubCommandMapping } from "../api/ISubCommandMapping";
 
 export interface ISubCommandMappingList {
@@ -12,7 +14,7 @@ export interface ISubCommandMappingList {
 
     removeMapping(mapping: ISubCommandMapping): void;
 
-    removeMappingsFor(commandClass: any): void;
+    removeMappingsFor(commandClass: IClass<ICommand>): void;
 
     removeAllMappings(): void;
 

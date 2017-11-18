@@ -10,6 +10,7 @@ import { interfaces, ContainerModule } from "inversify";
 import {
     inject,
     injectable,
+    IClass,
     ICommand,
     IInjector,
     IContext,
@@ -46,7 +47,7 @@ export abstract class AbstractMacro extends AsyncCommand implements IMacro {
         this.prepare();
     }
 
-    public add(commandClass: any): ISubCommandConfigurator {
+    public add(commandClass: IClass<ICommand>): ISubCommandConfigurator {
         let mapping: SubCommandMapping = new SubCommandMapping(commandClass);
         this._mappings.addMapping(mapping);
         return mapping;
@@ -58,7 +59,7 @@ export abstract class AbstractMacro extends AsyncCommand implements IMacro {
         return mapping;
     }
 
-    public remove(commandClass: any): void {
+    public remove(commandClass: IClass<ICommand>): void {
         this._mappings.removeMappingsFor(commandClass);
     }
 
@@ -66,7 +67,7 @@ export abstract class AbstractMacro extends AsyncCommand implements IMacro {
 
     protected executeCommand(mapping: ISubCommandMapping): void {
         let command: ICommand;
-        let commandClass: any = mapping.commandClass;
+        let commandClass: IClass<ICommand> = mapping.commandClass;
         let payloads: Array<ISubCommandPayload<any>> = mapping.payloads;
         let hasPayloads: boolean = payloads.length > 0;
 

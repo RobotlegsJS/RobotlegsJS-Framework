@@ -5,12 +5,17 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
+import { IClass, ICommand } from "@robotlegsjs/core";
+
 import { ISubCommandMapping } from "../api/ISubCommandMapping";
 import { ISubCommandMappingList } from "../dsl/ISubCommandMappingList";
 
 export class SubCommandMappingList implements ISubCommandMappingList {
     private _mappings: ISubCommandMapping[] = [];
-    private _mappingByCommand: Map<any, any> = new Map<any, any>();
+    private _mappingByCommand: Map<
+        IClass<ICommand>,
+        ISubCommandMapping[]
+    > = new Map<IClass<ICommand>, ISubCommandMapping[]>();
 
     public getList(): ISubCommandMapping[] {
         return this._mappings.concat();
@@ -24,7 +29,7 @@ export class SubCommandMappingList implements ISubCommandMappingList {
         this.deleteMapping(mapping);
     }
 
-    public removeMappingsFor(commandClass: any): void {
+    public removeMappingsFor(commandClass: IClass<ICommand>): void {
         if (this._mappingByCommand.get(commandClass)) {
             let list: ISubCommandMapping[] = this._mappingByCommand.get(
                 commandClass

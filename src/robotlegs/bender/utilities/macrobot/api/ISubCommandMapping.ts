@@ -5,12 +5,12 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import { IInjector, ICommand } from "@robotlegsjs/core";
+import { IClass, IInjector, ICommand } from "@robotlegsjs/core";
 
 import { ISubCommandPayload } from "./ISubCommandPayload";
 
 export interface ISubCommandMapping {
-    commandClass: any;
+    commandClass: IClass<ICommand>;
 
     executeMethod: string;
 

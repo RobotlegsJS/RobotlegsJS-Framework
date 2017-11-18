@@ -5,7 +5,12 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import { ICommand, IInjector, instantiateUnmapped } from "@robotlegsjs/core";
+import {
+    IClass,
+    ICommand,
+    IInjector,
+    instantiateUnmapped
+} from "@robotlegsjs/core";
 
 import { ISubCommandPayload } from "../api/ISubCommandPayload";
 import { ISubCommandMapping } from "../api/ISubCommandMapping";
@@ -15,18 +20,18 @@ import { SubCommandPayload } from "./SubCommandPayload";
 
 export class SubCommandMapping
     implements ISubCommandMapping, ISubCommandConfigurator {
-    private _commandClass: any;
+    private _commandClass: IClass<ICommand>;
     private _executeMethod: string = "execute";
 
     private _guards: any[] = [];
     private _payloads: Array<ISubCommandPayload<any>> = [];
     private _hooks: any[] = [];
 
-    constructor(commandClass: any) {
+    constructor(commandClass: IClass<ICommand>) {
         this._commandClass = commandClass;
     }
 
-    public get commandClass(): any {
+    public get commandClass(): IClass<ICommand> {
         return this._commandClass;
     }
 
