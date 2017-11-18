@@ -5,16 +5,12 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import { ISubCommandPayload } from "../api/ISubCommandPayload";
-
 export interface ISubCommandConfigurator {
     withGuards(...guards: any[]): ISubCommandConfigurator;
 
     withHooks(...hooks: any[]): ISubCommandConfigurator;
 
-    withPayloads(
-        ...payloads: Array<ISubCommandPayload<any>>
-    ): ISubCommandConfigurator;
+    withPayloads(...payloads: any[]): ISubCommandConfigurator;
 
     withExecuteMethod(name: String): ISubCommandConfigurator;
 }

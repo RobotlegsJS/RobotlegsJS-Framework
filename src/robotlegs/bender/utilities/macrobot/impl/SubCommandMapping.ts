@@ -11,6 +11,7 @@ import { ISubCommandMapping } from "../api/ISubCommandMapping";
 import { ISubCommandConfigurator } from "../dsl/ISubCommandConfigurator";
 
 import { ICommand, IInjector } from "@robotlegsjs/core";
+import { SubCommandPayload } from "./SubCommandPayload";
 
 export class SubCommandMapping
     implements ISubCommandMapping, ISubCommandConfigurator {
@@ -55,10 +56,14 @@ export class SubCommandMapping
         return this;
     }
 
-    public withPayloads(
-        ...payloads: Array<ISubCommandPayload<any>>
-    ): ISubCommandConfigurator {
-        this._payloads = this._payloads.concat(payloads);
+    public withPayloads(...payloads: any[]): ISubCommandConfigurator {
+        payloads.forEach((payload: any) => {
+            if (payload instanceof SubCommandPayload) {
+                this._payloads.push(payload);
+            } else {
+                this._payloads.push(new SubCommandPayload(payload));
+            }
+        });
         return this;
     }
 
