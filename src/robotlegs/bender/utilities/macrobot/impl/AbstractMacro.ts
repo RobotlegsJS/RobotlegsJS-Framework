@@ -92,7 +92,7 @@ export abstract class AbstractMacro extends AsyncCommand implements IMacro {
             this.unmapPayloads(payloads);
         }
 
-        if (command && mapping.executeMethod) {
+        if (command) {
             let isAsync: boolean =
                 command.constructor.prototype.registerCompleteCallback !==
                 undefined;
@@ -103,8 +103,7 @@ export abstract class AbstractMacro extends AsyncCommand implements IMacro {
                 );
             }
 
-            let executeMethod: Function = command[mapping.executeMethod];
-            executeMethod.apply(command);
+            command.execute();
 
             if (!isAsync) {
                 this.commandCompleteHandler(true);

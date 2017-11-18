@@ -21,7 +21,6 @@ import { SubCommandPayload } from "./SubCommandPayload";
 export class SubCommandMapping
     implements ISubCommandMapping, ISubCommandConfigurator {
     private _commandClass: IClass<ICommand>;
-    private _executeMethod: string = "execute";
 
     private _guards: any[] = [];
     private _payloads: Array<ISubCommandPayload<any>> = [];
@@ -33,10 +32,6 @@ export class SubCommandMapping
 
     public get commandClass(): IClass<ICommand> {
         return this._commandClass;
-    }
-
-    public get executeMethod(): string {
-        return this._executeMethod;
     }
 
     public get guards(): any[] {
@@ -69,11 +64,6 @@ export class SubCommandMapping
                 this._payloads.push(new SubCommandPayload(payload));
             }
         });
-        return this;
-    }
-
-    public withExecuteMethod(name: string): ISubCommandConfigurator {
-        this._executeMethod = name;
         return this;
     }
 

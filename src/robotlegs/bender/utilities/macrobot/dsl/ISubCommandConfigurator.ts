@@ -11,6 +11,4 @@ export interface ISubCommandConfigurator {
     withHooks(...hooks: any[]): ISubCommandConfigurator;
 
     withPayloads(...payloads: any[]): ISubCommandConfigurator;
-
-    withExecuteMethod(name: String): ISubCommandConfigurator;
 }

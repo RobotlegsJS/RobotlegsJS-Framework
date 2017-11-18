@@ -12,8 +12,6 @@ import { ISubCommandPayload } from "./ISubCommandPayload";
 export interface ISubCommandMapping {
     commandClass: IClass<ICommand>;
 
-    executeMethod: string;
-
     guards: any[];
 
     hooks: any[];
