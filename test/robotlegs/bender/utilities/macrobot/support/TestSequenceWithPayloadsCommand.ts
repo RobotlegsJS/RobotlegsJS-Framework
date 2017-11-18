@@ -18,13 +18,11 @@ import { ReportStringCommand } from "./ReportStringCommand";
 export class TestSequenceWithPayloadsCommand extends SequenceMacro {
     public prepare(): void {
         this.add(ReportStringCommand).withPayloads(
-            new SubCommandPayload("Hello", String)
+            new SubCommandPayload("Hello")
         );
         this.add(ReportStringCommand).withPayloads(
             new SubCommandPayload("World", String)
         );
-        this.add(ReportStringCommand).withPayloads(
-            new SubCommandPayload("!", String)
-        );
+        this.add(ReportStringCommand).withPayloads("!");
     }
 }
