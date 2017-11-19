@@ -5,12 +5,17 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
+import { IClass, ICommand } from "@robotlegsjs/core";
+
 import { ISubCommandMapping } from "../api/ISubCommandMapping";
 import { ISubCommandMappingList } from "../dsl/ISubCommandMappingList";
 
 export class SubCommandMappingList implements ISubCommandMappingList {
     private _mappings: ISubCommandMapping[] = [];
-    private _mappingByCommand: Map<any, any> = new Map<any, any>();
+    private _mappingsByCommand: Map<
+        IClass<ICommand>,
+        ISubCommandMapping[]
+    > = new Map<IClass<ICommand>, ISubCommandMapping[]>();
 
     public getList(): ISubCommandMapping[] {
         return this._mappings.concat();
@@ -24,47 +29,64 @@ export class SubCommandMappingList implements ISubCommandMappingList {
         this.deleteMapping(mapping);
     }
 
-    public removeMappingsFor(commandClass: any): void {
-        if (this._mappingByCommand.get(commandClass)) {
-            let list: ISubCommandMapping[] = this._mappingByCommand.get(
-                commandClass
-            );
-            let length: number = list.length;
-            while (length--) {
-                this.deleteMapping(list[length]);
+    public removeMappingsFor(commandClass: IClass<ICommand>): void {
+        if (this._mappingsByCommand.has(commandClass)) {
+            let subCommandList: ISubCommandMapping[] = this._mappingsByCommand
+                .get(commandClass)
+                .concat();
+            while (subCommandList.length > 0) {
+                this.deleteMapping(subCommandList.pop());
             }
-            this._mappingByCommand.delete(commandClass);
         }
     }
 
     public removeAllMappings(): void {
         if (this._mappings.length > 0) {
-            let list: ISubCommandMapping[] = this._mappings.concat();
-            let length: number = list.length;
-            while (length--) {
-                this.deleteMapping(list[length]);
+            let subCommandList: ISubCommandMapping[] = this._mappings.concat();
+            while (subCommandList.length > 0) {
+                this.deleteMapping(subCommandList.pop());
             }
         }
     }
 
     private storeMapping(mapping: ISubCommandMapping): void {
-        let mappingByCommand = this._mappingByCommand.get(mapping.commandClass);
-        if (!mappingByCommand) {
-            mappingByCommand = new Array<ISubCommandMapping>();
-            this._mappingByCommand.set(mapping.commandClass, mappingByCommand);
+        let subCommandList: ISubCommandMapping[];
+
+        if (!this._mappingsByCommand.has(mapping.commandClass)) {
+            subCommandList = [];
+            this._mappingsByCommand.set(mapping.commandClass, subCommandList);
+        } else {
+            subCommandList = this._mappingsByCommand.get(mapping.commandClass);
         }
-        mappingByCommand.push(mapping);
+
+        subCommandList.push(mapping);
+
         this._mappings.push(mapping);
     }
 
     private deleteMapping(mapping: ISubCommandMapping): void {
-        let mappingByCommand = this._mappingByCommand.get(mapping.commandClass);
-        if (mappingByCommand) {
-            mappingByCommand.splice(this._mappings.indexOf(mapping), 1);
-            if (mappingByCommand.length === 0) {
-                this._mappingByCommand.delete(mapping.commandClass);
+        if (this._mappingsByCommand.has(mapping.commandClass)) {
+            let subCommandList: ISubCommandMapping[] = this._mappingsByCommand.get(
+                mapping.commandClass
+            );
+
+            // Ensure that duplicates are removed
+            subCommandList.concat().forEach((m: ISubCommandMapping) => {
+                if (m === mapping) {
+                    subCommandList.splice(subCommandList.indexOf(m), 1);
+                }
+            });
+
+            if (subCommandList.length === 0) {
+                this._mappingsByCommand.delete(mapping.commandClass);
             }
         }
-        this._mappings.splice(this._mappings.indexOf(mapping), 1);
+
+        // Ensure that duplicates are removed
+        this._mappings.concat().forEach((m: ISubCommandMapping) => {
+            if (m === mapping) {
+                this._mappings.splice(this._mappings.indexOf(m), 1);
+            }
+        });
     }
 }

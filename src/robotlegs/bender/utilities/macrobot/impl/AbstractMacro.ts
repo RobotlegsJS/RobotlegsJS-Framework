@@ -5,9 +5,12 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
+import { interfaces, ContainerModule } from "inversify";
+
 import {
     inject,
     injectable,
+    IClass,
     ICommand,
     IInjector,
     IContext,
@@ -23,7 +26,6 @@ import { ISubCommandPayload } from "../api/ISubCommandPayload";
 import { ISubCommandConfigurator } from "../dsl/ISubCommandConfigurator";
 
 import { AsyncCommand } from "./AsyncCommand";
-import { SubCommandInstanceMapping } from "./SubCommandInstanceMapping";
 import { SubCommandMapping } from "./SubCommandMapping";
 import { SubCommandMappingList } from "./SubCommandMappingList";
 
@@ -31,6 +33,7 @@ import { SubCommandMappingList } from "./SubCommandMappingList";
 export abstract class AbstractMacro extends AsyncCommand implements IMacro {
     protected _injector: IInjector;
     protected _mappings: SubCommandMappingList;
+    protected _payloadsModule: ContainerModule;
 
     constructor(
         @inject(IContext) context: IContext,
@@ -43,19 +46,13 @@ export abstract class AbstractMacro extends AsyncCommand implements IMacro {
         this.prepare();
     }
 
-    public add(commandClass: any): ISubCommandConfigurator {
+    public add(commandClass: IClass<ICommand>): ISubCommandConfigurator {
         let mapping: SubCommandMapping = new SubCommandMapping(commandClass);
         this._mappings.addMapping(mapping);
         return mapping;
     }
 
-    public addInstance(command: ICommand): ISubCommandConfigurator {
-        let mapping: SubCommandMapping = new SubCommandInstanceMapping(command);
-        this._mappings.addMapping(mapping);
-        return mapping;
-    }
-
-    public remove(commandClass: any): void {
+    public remove(commandClass: IClass<ICommand>): void {
         this._mappings.removeMappingsFor(commandClass);
     }
 
@@ -63,8 +60,8 @@ export abstract class AbstractMacro extends AsyncCommand implements IMacro {
 
     protected executeCommand(mapping: ISubCommandMapping): void {
         let command: ICommand;
-        let commandClass: any = mapping.commandClass;
-        let payloads: ISubCommandPayload[] = mapping.payloads;
+        let commandClass: IClass<ICommand> = mapping.commandClass;
+        let payloads: Array<ISubCommandPayload<any>> = mapping.payloads;
         let hasPayloads: boolean = payloads.length > 0;
 
         if (hasPayloads) {
@@ -88,7 +85,7 @@ export abstract class AbstractMacro extends AsyncCommand implements IMacro {
             this.unmapPayloads(payloads);
         }
 
-        if (command && mapping.executeMethod) {
+        if (command) {
             let isAsync: boolean =
                 command.constructor.prototype.registerCompleteCallback !==
                 undefined;
@@ -99,8 +96,7 @@ export abstract class AbstractMacro extends AsyncCommand implements IMacro {
                 );
             }
 
-            let executeMethod: Function = command[mapping.executeMethod];
-            executeMethod.apply(command);
+            command.execute();
 
             if (!isAsync) {
                 this.commandCompleteHandler(true);
@@ -110,18 +106,25 @@ export abstract class AbstractMacro extends AsyncCommand implements IMacro {
         }
     }
 
-    protected mapPayloads(payloads: ISubCommandPayload[]): void {
-        for (let i: number = 0; i < payloads.length; i++) {
-            let payload: ISubCommandPayload = payloads[i];
-            this._injector.bind(payload.type).toConstantValue(payload.data);
-        }
+    protected mapPayloads(payloads: Array<ISubCommandPayload<any>>): void {
+        this._payloadsModule = new ContainerModule(
+            (bind: interfaces.Bind, unbind: interfaces.Unbind) => {
+                payloads.forEach((payload: ISubCommandPayload<any>) => {
+                    if (payload.name.length > 0) {
+                        bind(payload.type)
+                            .toConstantValue(payload.data)
+                            .whenTargetNamed(payload.name);
+                    } else {
+                        bind(payload.type).toConstantValue(payload.data);
+                    }
+                });
+            }
+        );
+        this._injector.load(this._payloadsModule);
     }
 
-    protected unmapPayloads(payloads: ISubCommandPayload[]): void {
-        for (let i: number = 0; i < payloads.length; i++) {
-            let payload: ISubCommandPayload = payloads[i];
-            this._injector.unbind(payload.type);
-        }
+    protected unmapPayloads(payloads: Array<ISubCommandPayload<any>>): void {
+        this._injector.unload(this._payloadsModule);
     }
 
     protected abstract commandCompleteHandler(success: boolean): void;

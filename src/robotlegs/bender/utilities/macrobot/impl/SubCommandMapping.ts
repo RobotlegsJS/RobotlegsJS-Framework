@@ -5,32 +5,33 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import { instantiateUnmapped } from "@robotlegsjs/core";
+import {
+    IClass,
+    ICommand,
+    IInjector,
+    instantiateUnmapped
+} from "@robotlegsjs/core";
+
 import { ISubCommandPayload } from "../api/ISubCommandPayload";
 import { ISubCommandMapping } from "../api/ISubCommandMapping";
 import { ISubCommandConfigurator } from "../dsl/ISubCommandConfigurator";
 
-import { ICommand, IInjector } from "@robotlegsjs/core";
+import { SubCommandPayload } from "./SubCommandPayload";
 
 export class SubCommandMapping
     implements ISubCommandMapping, ISubCommandConfigurator {
-    private _commandClass: any;
-    private _executeMethod: string = "execute";
+    private _commandClass: IClass<ICommand>;
 
     private _guards: any[] = [];
-    private _payloads: ISubCommandPayload[] = [];
+    private _payloads: Array<ISubCommandPayload<any>> = [];
     private _hooks: any[] = [];
 
-    constructor(commandClass: any) {
+    constructor(commandClass: IClass<ICommand>) {
         this._commandClass = commandClass;
     }
 
-    public get commandClass(): any {
+    public get commandClass(): IClass<ICommand> {
         return this._commandClass;
-    }
-
-    public get executeMethod(): string {
-        return this._executeMethod;
     }
 
     public get guards(): any[] {
@@ -41,7 +42,7 @@ export class SubCommandMapping
         return this._hooks.slice();
     }
 
-    public get payloads(): ISubCommandPayload[] {
+    public get payloads(): Array<ISubCommandPayload<any>> {
         return this._payloads.slice();
     }
 
@@ -55,18 +56,14 @@ export class SubCommandMapping
         return this;
     }
 
-    public withPayloads(
-        ...payloads: ISubCommandPayload[]
-    ): ISubCommandConfigurator {
-        for (let i: number = 0; i < payloads.length; i++) {
-            let payload: ISubCommandPayload = payloads[i];
-            this._payloads.push(payload);
-        }
-        return this;
-    }
-
-    public withExecuteMethod(name: string): ISubCommandConfigurator {
-        this._executeMethod = name;
+    public withPayloads(...payloads: any[]): ISubCommandConfigurator {
+        payloads.forEach((payload: any) => {
+            if (payload instanceof SubCommandPayload) {
+                this._payloads.push(payload);
+            } else {
+                this._payloads.push(new SubCommandPayload(payload));
+            }
+        });
         return this;
     }
 

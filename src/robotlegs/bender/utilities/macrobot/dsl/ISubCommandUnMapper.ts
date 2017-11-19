@@ -5,6 +5,8 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
+import { IClass, ICommand } from "@robotlegsjs/core";
+
 export interface ISubCommandUnMapper {
-    remove(commandClass: any): void;
+    remove(commandClass: IClass<ICommand>): void;
 }
