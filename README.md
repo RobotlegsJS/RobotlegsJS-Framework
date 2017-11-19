@@ -191,7 +191,11 @@ export class Macro extends SequenceMacro {
 
     public prepare() {
         const data: SomeModel = new SomeModel();
-        const payload: SubCommandPayload = new SubCommandPayload(data).withName("mydata").ofType(IModel);
+        const payload: SubCommandPayload = new SubCommandPayload(data);
+
+        payload.
+            .withName("mydata")
+            .ofType(IModel);
 
         this.add(Action).withPayloads(payload);
 	}
