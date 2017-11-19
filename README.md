@@ -41,13 +41,14 @@ yarn add @robotlegsjs/macrobot
 Usage
 ---
 
-To create a macro command, extend one of the two classes Macrobot provides: `ParallelMacro` or `SequenceMacro`.
-Override the `prepare()` method and add sub commands by calling `addSubCommand()` specifying the command class to use.
+To create a macro command, extend one of the two classes Macrobot provides: `SequenceMacro` or `ParallelMacro`.
+Override the `prepare()` method and add sub commands by calling `add()` specifying the command class to use.
 At the appropriate time, the command will be created, instantiated by satisfying the injection points and then executed.
 This automated process of instantiation, injection, and execution is very similar to how commands are normally prepared and executed in RobotlegsJS.
 
 You could use _Guards_ and _Hooks_ as you would normally use with regular commands to control the execution workflow.
-Additionally you could use the `withPayloads()` method to add some data that can be used to satisfy the injection points of the sub commands. The data provided will be available to the guards and hooks applied to the sub command as well.
+Additionally you could use the `withPayloads()` method to add some data that can be used to satisfy the injection points of the sub commands.
+The data provided will be available to the guards and hooks applied to the sub command as well.
 
 Here's an example of a simple sequential macro:
 
@@ -62,6 +63,23 @@ export class MyMacro extends SequenceMacro {
         this.add(CommandA);
         this.add(CommandB);
         this.add(CommandC);
+    }
+}
+```
+
+And here's an example of a simple parallel macro:
+
+```typescript
+import { injectable } from "@robotlegsjs/core";
+
+import { ParallelMacro } from "@robotlegsjs/macrobot";
+
+@injectable()
+export class MyMacro extends ParallelMacro {
+    public prepare(): void {
+        this.add(AwaitForCommand).withPayloads(25);
+        this.add(AwaitForCommand).withPayloads(50);
+        this.add(AwaitForCommand).withPayloads(75);
     }
 }
 ```
@@ -146,7 +164,7 @@ export class Macro extends SequenceMacro {
         const data: SomeModel = new SomeModel();
 
         this.add(Action).withPayloads(data);
-	}
+    }
 }
 
 @injectable()
@@ -157,7 +175,7 @@ class Action implements ICommand {
 
     public execute():void {
         this.data.property = "value";
-	}
+    }
 }
 ```
 
