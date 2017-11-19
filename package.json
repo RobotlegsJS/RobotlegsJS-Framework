@@ -1,6 +1,6 @@
 {
   "name": "@robotlegsjs/macrobot",
-  "version": "0.0.5",
+  "version": "0.1.0",
   "description": "TypeScript port of Robotlegs Utilities Macrobot",
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
@@ -44,7 +44,11 @@
   "keywords": [
     "TypeScript",
     "RobotlegsJS",
-    "IoC"
+    "IoC",
+    "Macrobot",
+    "AsyncCommand",
+    "SequenceMacro",
+    "ParallelMacro"
   ],
   "author": "RobotlegsJS",
   "contributors": [
