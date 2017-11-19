@@ -151,10 +151,10 @@ class GoToHome implements IHook {
 
 Payloads are used to temporary inject some data, which would not be available otherwise, and make it available to the subcommand, it's guards and it's hooks.
 
-You can use pass the data to be injected directly to the `withPayloads()` method, for a normal injection.
+You can pass the data to be injected directly to the `withPayloads()` method, for a normal injection.
 
 ```typescript
-import { inject, injectable } from "@robotlegsjs/core";
+import { inject, injectable, ICommand } from "@robotlegsjs/core";
 
 import { SequenceMacro } from "@robotlegsjs/macrobot";
 
@@ -182,7 +182,7 @@ class Action implements ICommand {
 Or you can use the `SubCommandPayload` class to create a more complex injection.
 
 ```typescript
-import { inject, injectable } from "@robotlegsjs/core";
+import { inject, injectable, ICommand } from "@robotlegsjs/core";
 
 import { SequenceMacro, SubCommandPayload } from "@robotlegsjs/macrobot";
 
