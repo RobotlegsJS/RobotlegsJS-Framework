@@ -22,14 +22,13 @@ export abstract class ParallelMacro extends AbstractMacro implements IMacro {
         this._commands = this._mappings.getList();
 
         if (this.hasCommands) {
+            let numCommands: number = this._commands.length;
+            let i: number = 0;
+
             this._running = true;
-            for (let i: number = 0; i < this._commands.length; i++) {
+
+            for (i = 0; i < numCommands && this._success; i++) {
                 let mapping: ISubCommandMapping = this._commands[i];
-
-                if (!this._success) {
-                    break;
-                }
-
                 this.executeCommand(mapping);
             }
         } else {
