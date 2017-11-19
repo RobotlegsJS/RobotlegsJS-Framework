@@ -1,14 +1,15 @@
 // ------------------------------------------------------------------------------
-//  2017 RobotlegsJS. All Rights Reserved.
+//  Copyright (c) 2017 RobotlegsJS. All Rights Reserved.
 //
 //  NOTICE: You are permitted to use, modify, and distribute this file
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-export interface ISubCommandConfigurator {
-    withGuards(...guards: any[]): ISubCommandConfigurator;
+import { injectable, IGuard } from "@robotlegsjs/core";
 
-    withHooks(...hooks: any[]): ISubCommandConfigurator;
-
-    withPayloads(...payloads: any[]): ISubCommandConfigurator;
+@injectable()
+export class GrumpyGuard implements IGuard {
+    public approve(): boolean {
+        return false;
+    }
 }

@@ -1,14 +1,17 @@
 // ------------------------------------------------------------------------------
-//  2017 RobotlegsJS. All Rights Reserved.
+//  Copyright (c) 2017 RobotlegsJS. All Rights Reserved.
 //
 //  NOTICE: You are permitted to use, modify, and distribute this file
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-export interface ISubCommandConfigurator {
-    withGuards(...guards: any[]): ISubCommandConfigurator;
+import { injectable } from "inversify";
 
-    withHooks(...hooks: any[]): ISubCommandConfigurator;
+import { ICommand } from "@robotlegsjs/core";
 
-    withPayloads(...payloads: any[]): ISubCommandConfigurator;
+@injectable()
+export class NullCommand2 implements ICommand {
+    public execute(): void {
+        // do nothing
+    }
 }

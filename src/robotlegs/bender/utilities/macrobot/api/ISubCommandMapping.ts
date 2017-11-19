@@ -5,20 +5,18 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import { IInjector, ICommand } from "@robotlegsjs/core";
+import { IClass, IInjector, ICommand } from "@robotlegsjs/core";
 
 import { ISubCommandPayload } from "./ISubCommandPayload";
 
 export interface ISubCommandMapping {
-    commandClass: any;
-
-    executeMethod: string;
+    commandClass: IClass<ICommand>;
 
     guards: any[];
 
     hooks: any[];
 
-    payloads: ISubCommandPayload[];
+    payloads: Array<ISubCommandPayload<any>>;
 
     getOrCreateCommandInstance(injector: IInjector): ICommand;
 }
