@@ -267,7 +267,7 @@ import { injectable, inject } from "@robotlegsjs/core";
 import { SequenceMacro, AsyncCommand } from "@robotlegsjs/macrobot";
 
 @injectable()
-export class TestNotAtomicSequenceWithAsyncCommand extends SequenceMacro {
+export class NonAtomicSequenceCommand extends SequenceMacro {
     public prepare(): void {
         this.atomic = false;
 
