@@ -28,6 +28,8 @@
 
 - Add Pull Request Template (see #26).
 
+- Update README (see #27).
+
 - Improve Code Coverage and Fix Bugs (see #28).
 
 - Update dev dependencies to latest version.
