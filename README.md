@@ -297,7 +297,7 @@ class DelayAsyncCommand extends AsyncCommand {
 In the example above, the `DelayAsyncCommand` will be executed only two times, since the second execution will report a **failure** and all remaining
 mappings will be ignored.
 
-This behaviour does not apply to parallel commands.
+This behaviour does not apply to **parallel commands**.
 
 Contributing
 ---
