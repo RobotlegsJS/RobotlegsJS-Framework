@@ -52,12 +52,17 @@ Additionally you could use the `withPayloads()` method to add some data that can
 Here's an example of a simple sequential macro:
 
 ```typescript
+import { injectable } from "@robotlegsjs/core";
+
+import { SequenceMacro } from "@robotlegsjs/macrobot";
+
+@injectable()
 export class MyMacro extends SequenceMacro {
-	public prepare() {
+    public prepare(): void {
         this.add(CommandA);
-		this.add(CommandB);
-		this.add(CommandC);
-	}
+        this.add(CommandB);
+        this.add(CommandC);
+    }
 }
 ```
 
@@ -66,18 +71,24 @@ export class MyMacro extends SequenceMacro {
 Guards are used to approve or deny the execution of one of the subcommands.
 
 ```typescript
+import { injectable, IGuard } from "@robotlegsjs/core";
+
+import { SequenceMacro } from "@robotlegsjs/macrobot";
+
+@injectable()
 export class DailyRoutine extends SequenceMacro {
-	public prepare() {
-		this.add(Work);
-		this.add(Party).withGuards(IsFriday); // It will only party on fridays
-		this.add(Sleep);
-	}
+    public prepare() {
+        this.add(Work);
+        this.add(Party).withGuards(IsFriday); // It will only party on fridays
+        this.add(Sleep);
+    }
 }
 
+@injectable()
 class IsFriday implements IGuard {
-	public approve():boolean {
-		return new Date().day === 5;
-	}
+    public approve():boolean {
+        return (new Date()).getDay() === 5;
+    }
 }
 ```
 
@@ -87,21 +98,34 @@ Hooks run before the subcommands. They are typically used to run custom actions 
 Hooks will run only if the applied Guards approve the execution of the command.
 
 ```typescript
+import { inject, injectable, IGuard, IHook } from "@robotlegsjs/core";
+
+import { SequenceMacro } from "@robotlegsjs/macrobot";
+
+@injectable()
 export class DailyRoutine extends SequenceMacro {
-	public prepare() {
-		this.add(Work);
-		this.add(Party).withGuards(IsFriday); // It will only party on fridays
-		this.add(Sleep).withHook(GoToHome); // Try to avoid sleeping at the office or the pub
-	}
+    public prepare() {
+        this.add(Work);
+        this.add(Party).withGuards(IsFriday); // It will only party on fridays
+        this.add(Sleep).withHook(GoToHome); // Try to avoid sleeping at the office or the pub
+    }
 }
 
-class IsFriday implements IHook {
-    @inject(Person)
-    public me:Person;
+@injectable()
+class IsFriday implements IGuard {
+    public approve():boolean {
+        return (new Date()).getDay() === 5;
+    }
+}
 
-	public funciton hook():void {
-		this.me.goHome();
-	}
+@injectable()
+class GoToHome implements IHook {
+    @inject(Person)
+    public me: Person;
+
+    public hook():void {
+        this.me.goHome();
+    }
 }
 ```
 
@@ -112,19 +136,27 @@ Payloads are used to temporary inject some data, which would not be available ot
 You can use pass the data to be injected directly to the `withPayloads()` method, for a normal injection.
 
 ```typescript
+import { inject, injectable } from "@robotlegsjs/core";
+
+import { SequenceMacro } from "@robotlegsjs/macrobot";
+
+@injectable()
 export class Macro extends SequenceMacro {
-	public prepare() {
-		const data:SomeModel = new SomeModel();
-		this.add(Action).withPayloads(data);
+    public prepare() {
+        const data: SomeModel = new SomeModel();
+
+        this.add(Action).withPayloads(data);
 	}
 }
 
+@injectable()
 class Action implements ICommand {
-    @inject(SomeModel)
-    public data:SomeModel;
 
-	public function execute():void {
-		this.data.property = 'value';
+    @inject(SomeModel)
+    public data: SomeModel;
+
+    public execute():void {
+        this.data.property = "value";
 	}
 }
 ```
@@ -132,20 +164,28 @@ class Action implements ICommand {
 Or you can use the `SubCommandPayload` class to create a more complex injection.
 
 ```typescript
+import { inject, injectable } from "@robotlegsjs/core";
+
+import { SequenceMacro, SubCommandPayload } from "@robotlegsjs/macrobot";
+
+@injectable()
 export class Macro extends SequenceMacro {
-	public prepare() {
-		const data:SomeModel = new SomeModel();
-		const payload:SubCommandPayload = new SubCommandPayload(data).withName('mydata').ofClass(IModel);
+
+    public prepare() {
+        const data: SomeModel = new SomeModel();
+        const payload: SubCommandPayload = new SubCommandPayload(data).withName("mydata").ofType(IModel);
 
         this.add(Action).withPayloads(payload);
 	}
 }
 
+@injectable()
 class Action implements ICommand {
     @inject(IModel) @named("mydata")
-    public data:IModel;
-	public function execute():void {
-		data.property = 'value'
+    public data: IModel;
+
+    public function execute():void {
+        this.data.property = "value";
 	}
 }
 ```
@@ -160,30 +200,36 @@ In this case you command can subclass Macrobot's AsyncCommand and call `dispatch
 Here's an example of a simulated asynchronous sub command:
 
 ```typescript
-public class DelayCommand extends AsyncCommand     {
-   protected var timer:Timer;
-   override public function execute():void {
-   	super.execute();
-   	timer = new Timer(1000, 1);
-   	timer.addEventListener(TimerEvent.TIMER_COMPLETE, timerCompleteHandler);
-   	timer.start();
-   }
-   protected function timerCompleteHandler(event:TimerEvent):void {
-   	timer.removeEventListener(TimerEvent.TIMER_COMPLETE, timerCompleteHandler);
-   	timer = null;
-   	dispatchComplete(true);
-   }
+import { injectable, inject } from "@robotlegsjs/core";
+
+import { AsyncCommand, SequenceMacro } from "@robotlegsjs/macrobot";
+
+@injectable()
+export class DelayCommand extends AsyncCommand {
+    @inject(Number) protected _delay: number;
+
+    public execute(): void {
+        setTimeout(this.onTimeout.bind(this), this._delay);
+    }
+
+    protected onTimeout(): void {
+        this.dispatchComplete(true);
+    }
 }
 
-public class MyMacro extends SequenceMacro     {
-   override public function prepare():void {
-   	add(DelayCommand)
-   	add(OtherCommand)
-   	registerCompleteCallback(onComplete)
-   }
-   protected function onComplete(success):void {
-   	trace('all commands have been executed')
-   }
+@injectable()
+export class MyMacro extends SequenceMacro {
+
+    public prepare():void {
+        this.add(DelayCommand).withPayloads(50);
+        this.add(DelayCommand).withPayloads(100);
+
+        this.registerCompleteCallback(this.onComplete.bind(this));
+    }
+
+    protected onComplete(success): void {
+        console.log("All commands have been executed!");
+    }
 }
 ```
 
