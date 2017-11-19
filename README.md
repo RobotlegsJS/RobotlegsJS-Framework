@@ -253,7 +253,7 @@ export class MyMacro extends SequenceMacro {
 
 ### Atomic execution
 
-For sequential macros, when the_ atomic_ property is set to **false** (it is **true** by default) and one of the sub commands dispatches a failure (using `dispatchComplete(false)`), subsequent sub commands will not be executed and the macro itself will dispatch failure.
+For sequential macros, when the **atomic** property is set to **false** (it is **true** by default) and one of the sub commands dispatches a failure (using `dispatchComplete(false)`), subsequent sub commands will not be executed and the macro itself will dispatch failure.
 
 This behaviour does not apply to parallel commands.
 
