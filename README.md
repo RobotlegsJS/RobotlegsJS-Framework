@@ -255,6 +255,46 @@ export class MyMacro extends SequenceMacro {
 
 For sequential macros, when the **atomic** property is set to **false** (it is **true** by default) and one of the sub commands dispatches a failure (using `dispatchComplete(false)`), subsequent sub commands will not be executed and the macro itself will dispatch failure.
 
+Here's an example of a non atomic sequence:
+
+```typescript
+import { injectable, inject } from "@robotlegsjs/core";
+
+import { SequenceMacro, AsyncCommand } from "@robotlegsjs/macrobot";
+
+@injectable()
+export class TestNotAtomicSequenceWithAsyncCommand extends SequenceMacro {
+    public prepare(): void {
+        this.atomic = false;
+
+        this.add(DelayAsyncCommand).withPayloads(25, true);
+        this.add(DelayAsyncCommand).withPayloads(50, false);
+        this.add(DelayAsyncCommand).withPayloads(750, false);
+        this.add(DelayAsyncCommand).withPayloads(100, false);
+    }
+}
+
+@injectable()
+class DelayAsyncCommand extends AsyncCommand {
+    @inject(Number) protected _delay: number;
+
+    @inject(Boolean) protected _succeed: boolean;
+
+    public execute(): void {
+        this._succeed = this._succeed === undefined ? true : this._succeed;
+
+        setTimeout(this.onTimeout.bind(this), this._delay);
+    }
+
+    protected onTimeout(): void {
+        this.dispatchComplete(this._succeed);
+    }
+}
+```
+
+In the example above, the `DelayAsyncCommand` will be executed only two times, since the second execution will report a **failure** and all remaining
+mappings will be ignored.
+
 This behaviour does not apply to parallel commands.
 
 Contributing
