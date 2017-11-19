@@ -285,8 +285,6 @@ class DelayAsyncCommand extends AsyncCommand {
     @inject(Boolean) protected _succeed: boolean;
 
     public execute(): void {
-        this._succeed = this._succeed === undefined ? true : this._succeed;
-
         setTimeout(this.onTimeout.bind(this), this._delay);
     }
 
