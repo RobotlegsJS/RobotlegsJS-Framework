@@ -9,21 +9,21 @@ import "../../../../entry";
 
 import { IContainerController } from "../../../../../src";
 import { IFlowManager } from "../../../../../src";
-import { IPixiRootContainer } from "../../../../../src";
 import { PalidorPixiExtension } from "../../../../../src";
-import { PixiRootContainer } from "./../../../../../src";
 
 import { assert } from "chai";
 import { Container } from "pixi.js";
 import { Context } from "@robotlegsjs/core";
+import { ContextView, PixiBundle } from "@robotlegsjs/pixi";
 
 describe("PalidorPixiExtension", () => {
     let context: Context;
 
     beforeEach(() => {
         context = new Context();
+        context.install(PixiBundle);
         context.install(PalidorPixiExtension);
-        context.configure(new PixiRootContainer(new Container()));
+        context.configure(new ContextView(new Container()));
     });
 
     afterEach(() => {
@@ -42,12 +42,6 @@ describe("PalidorPixiExtension", () => {
     it("FlowManager is mapped into injector", () => {
         context.whenInitializing(function(): void {
             assert.isDefined(context.injector.get(IFlowManager));
-        });
-    });
-
-    it("PixiRootContainer is mapped into injector", () => {
-        context.whenInitializing(function(): void {
-            assert.isDefined(context.injector.get(IPixiRootContainer));
         });
     });
 
