@@ -46,14 +46,14 @@ let context = new Context()
     .install(PixiBundle)
     .install(PalidorPixiExtension)
     .configure(new ContextView(this.stage))
-    .configure(PalidorConfig)
+    .configure(MyPalidorConfig)
     .initialize();
 ```
 
 + **MVCSBundle:** Installs a number of extensions and configurations for developers who are comfortable with the typical [RobotlegsJS](https://github.com/RobotlegsJS/RobotlegsJS) setup.
 + **PixiBundle:** Installs a view / mediator layer provided by [RobotlegsJS-Pixi](https://github.com/RobotlegsJS/RobotlegsJS-Pixi).
 + **PalidorPixiExtension:** It is the extension itself.
-+ **PalidorConfig:** The Class that implements the Robotlegs's IConfig and will be responsible for map all your Views and FloatingViews.
++ **MyPalidorConfig:** The Class that implements the Robotlegs's IConfig and will be responsible for map all your Views and FloatingViews.
 
 ### Step 2 - Mapping the Views/FloatingViews
 
@@ -86,7 +86,7 @@ export class MyPalidorConfig implements IConfig {
 
 ### Step 3 - Adding a View
 
-The last part it is the way that Palidor will add the views on the stage, you just need to dispatcher an event using the IEventDispatcher which is available for Injection like any other Robotlegs Command.
+The last part it is the way that Palidor will add the views on the stage, you just need to dispatch an event using the IEventDispatcher which is available for Injection like any other Robotlegs Command.
 
 ```typescript
 this.eventDispatcher.dispatchEvent(new CustomEvent(CustomEvent.SHOW_FIRST_VIEW));
