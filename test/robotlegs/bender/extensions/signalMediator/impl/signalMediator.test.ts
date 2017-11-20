@@ -178,4 +178,9 @@ describe("SignalMediator", () => {
 
         assert.equal(count, expected);
     });
+
+    it("initialize_and_destroy_are_normally_called", () => {
+        testMediator.initialize();
+        testMediator.destroy();
+    });
 });

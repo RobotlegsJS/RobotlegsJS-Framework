@@ -29,11 +29,7 @@ export class TestMediator extends SignalMediator<EventDispatcher> {
         this.addOnceToSignal(signal, handler);
     }
 
-    public initialize(): void {
-        console.log("do nothing");
-    }
+    public initialize(): void {}
 
-    public destroy(): void {
-        console.log("do nothing");
-    }
+    public destroy(): void {}
 }
