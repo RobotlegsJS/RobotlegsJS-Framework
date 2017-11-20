@@ -15,7 +15,6 @@ import {
     IContext,
     IExtension,
     IInjector,
-    ILogger,
     instanceOfType
 } from "@robotlegsjs/core";
 
@@ -23,11 +22,9 @@ import { IContextView, ContextView } from "@robotlegsjs/pixi";
 
 export class PalidorPixiExtension implements IExtension {
     private _injector: IInjector;
-    private _logger: ILogger;
 
     public extend(context: IContext): void {
         this._injector = context.injector;
-        this._logger = context.getLogger(this);
 
         context.addConfigHandler(
             instanceOfType(ContextView),
