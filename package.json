@@ -1,6 +1,6 @@
 {
   "name": "@robotlegsjs/pixi-signalmediator",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "TypeScript port of Robotlegs Extension SignalMediator",
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
@@ -50,7 +50,8 @@
   "author": "RobotlegsJS",
   "contributors": [
     "Do Duc Cuong <cuongdd2@gmail.com>",
-    "Pedro Antonio Souza Viegas <pedroasv@gmail.com>"
+    "Pedro Antonio Souza Viegas <pedroasv@gmail.com>",
+    "Tiago Schenkel <tiago.schenkel@gmail.com>"
   ],
   "license": "MIT",
   "bugs": {
