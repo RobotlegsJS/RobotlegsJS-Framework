@@ -37,7 +37,7 @@ Palidor was designed to be simple and, practical. You just need to follow three 
 
 ### Step 1 - Install/Configure
 
-Firstly, you need to instantiate your RobotlegsJS's context, and then install and configure the PalidorPixiExtension and a PixiRootContainer.
+Firstly, you need to instantiate your RobotlegsJS's context, and then install and configure the PalidorPixiExtension:
 
 ```typescript
 let stage = new PIXI.Container();
