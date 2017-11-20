@@ -20,7 +20,8 @@ import {
     inject,
     IClass,
     IEventMap,
-    IEventDispatcher
+    IEventDispatcher,
+    Event
 } from "@robotlegsjs/core";
 
 @injectable()
@@ -106,18 +107,18 @@ export class FlowManager implements IFlowManager {
         );
     }
 
-    private onChangeView(e: any): void {
+    private onChangeView(e: Event): void {
         let clazz = this._views.get(e.type);
         this._controller.removeCurrentView();
         this._controller.changeView(new clazz());
     }
 
-    private onAddFloatingView(e: any): void {
+    private onAddFloatingView(e: Event): void {
         let clazz = this._views.get(e.type);
         this._controller.addView(new clazz());
     }
 
-    private onRemoveCurrentView(e: any): void {
+    private onRemoveCurrentView(e: Event): void {
         this._controller.removeCurrentView();
     }
 
@@ -125,7 +126,7 @@ export class FlowManager implements IFlowManager {
         this._controller.removeLastFloatingViewAdded();
     }
 
-    private onRemoveAllFloatingView(e: any): void {
+    private onRemoveAllFloatingView(e: Event): void {
         this._controller.removeAllFloatingViews();
     }
 }
