@@ -30,13 +30,13 @@ export class PixiContainerContoller implements IContainerController {
         return this._currentView;
     }
 
-    private _floatingViews: Array<Container>;
-    public get floatingViews(): Array<Container> {
+    private _floatingViews: Container[];
+    public get floatingViews(): Container[] {
         return this._floatingViews;
     }
 
     constructor(@inject(IContextView) contextView: IContextView) {
-        this._floatingViews = new Array<Container>();
+        this._floatingViews = [];
         this._root = contextView.view;
         this.createLayers();
     }
