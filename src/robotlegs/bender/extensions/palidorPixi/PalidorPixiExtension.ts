@@ -7,39 +7,47 @@
 
 import { IContainerController } from "./api/IContainerController";
 import { IFlowManager } from "./api/IFlowManager";
-import { IPixiRootContainer } from "./api/IPixiRootContainer";
 import { FlowManager } from "./impl/FlowManager";
 import { PixiContainerContoller } from "./impl/PixiContainerContoller";
-import { PixiRootContainer } from "./impl/PixiRootContainer";
 
 import {
     IContext,
     IExtension,
     IInjector,
+    ILogger,
     instanceOfType
 } from "@robotlegsjs/core";
 
+import { IContextView, ContextView } from "@robotlegsjs/pixi";
+
 export class PalidorPixiExtension implements IExtension {
     private _injector: IInjector;
+    private _logger: ILogger;
 
     public extend(context: IContext): void {
         this._injector = context.injector;
+        this._logger = context.getLogger(this);
 
         context.addConfigHandler(
-            instanceOfType(PixiRootContainer),
-            this.handlePixiRootContainer.bind(this)
+            instanceOfType(ContextView),
+            this.handleContextView.bind(this)
         );
     }
 
-    private handlePixiRootContainer(root: PixiRootContainer): void {
-        this._injector.bind(IPixiRootContainer).toConstantValue(root);
-        this._injector
-            .bind(IContainerController)
-            .to(PixiContainerContoller)
-            .inSingletonScope();
-        this._injector
-            .bind(IFlowManager)
-            .to(FlowManager)
-            .inSingletonScope();
+    private handleContextView(contextView: IContextView): void {
+        if (this._injector.isBound(IContextView)) {
+            this._injector
+                .bind(IContainerController)
+                .to(PixiContainerContoller)
+                .inSingletonScope();
+            this._injector
+                .bind(IFlowManager)
+                .to(FlowManager)
+                .inSingletonScope();
+        } else {
+            this._logger.error(
+                "A ContextView must be installed if you install the PalidorPixiExtension."
+            );
+        }
     }
 }

@@ -18,9 +18,6 @@ export {
     IFlowViewMapping
 } from "./robotlegs/bender/extensions/palidorPixi/api/IFlowViewMapping";
 export {
-    IPixiRootContainer
-} from "./robotlegs/bender/extensions/palidorPixi/api/IPixiRootContainer";
-export {
     PalidorEvent
 } from "./robotlegs/bender/extensions/palidorPixi/events/PalidorEvent";
 export {
@@ -32,9 +29,6 @@ export {
 export {
     PixiContainerContoller
 } from "./robotlegs/bender/extensions/palidorPixi/impl/PixiContainerContoller";
-export {
-    PixiRootContainer
-} from "./robotlegs/bender/extensions/palidorPixi/impl/PixiRootContainer";
 export {
     PalidorPixiExtension
 } from "./robotlegs/bender/extensions/palidorPixi/PalidorPixiExtension";
