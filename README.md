@@ -68,7 +68,7 @@ Palidor splits the Main Container into two distinct Layers, one to each type of 
 
 The FlowManager will be the responsible to tells to Palidor each event mapped to each View.
 
-```ts
+```typescript
 import { IFlowManager } from "@robotlegsjs/pixi-palidor";
 import { IConfig, injectable, inject } from "@robotlegsjs/core";
 
@@ -88,7 +88,7 @@ export class MyPalidorConfig implements IConfig {
 
 The last part it is the way that Palidor will add the views on the stage, you just need to dispatcher an event using the IEventDispatcher which is available for Injection like any other Robotlegs Command.
 
-```ts
+```typescript
 this.eventDispatcher.dispatchEvent(new CustomEvent(CustomEvent.SHOW_FIRST_VIEW));
 ```
 
@@ -102,7 +102,6 @@ There are some predefined events on the  Palidor to help to remove a view or flo
 
 Examples
 ===
-
 
 + [Game - Battleship](https://github.com/RonaldoSetzer/GAME-Battleship)
 + [Game - Minesweeper](https://github.com/RonaldoSetzer/GAME-Minesweeper)
