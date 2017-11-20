@@ -18,7 +18,7 @@
 
 - Update README.
 
-- Update @robotlegsjs/pixi to version 0.1.0 (see #17).
+- Update @robotlegsjs/pixi to version 0.1.1 (see #17 and #24).
 
 - Add Changelog (see #20).
 
@@ -27,6 +27,8 @@
 - Add Issue Template (see #22).
 
 - Add Pull Request Template (see #23).
+
+- Use IContextView to get a reference of the stage (see #24).
 
 - Update dev dependencies to latest version.
 
