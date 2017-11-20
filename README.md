@@ -9,21 +9,27 @@ RobotlegsJS Pixi Palidor Extension
 [![Greenkeeper badge](https://badges.greenkeeper.io/RobotlegsJS/RobotlegsJS-Pixi-Palidor.svg)](https://greenkeeper.io/)
 [![styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 
-Palidor is an extension of RobotlegsJS for Pixi, designed to help the management of the Main Container, taking the responsibility to add, remove and, switch the views. Perfect for game development.
+Palidor is an extension of RobotlegsJS for Pixi, designed to help the management of the Main Container, taking the responsibility to add, remove and switch the views. Perfect for game development.
 
 Installation
-===
+---
 
-You can get the latest release of Palidor and its dependencies using npm:
+You can get the latest release and the type definitions using [NPM](https://www.npmjs.com/):
 
+```bash
+npm install @robotlegsjs/pixi-palidor
 ```
-npm install @robotlegsjs/pixi-palidor @robotlegsjs/core @robotlegsjs/pixi pixi.js
+
+Or using [Yarn](https://yarnpkg.com/en/):
+
+```bash
+yarn add @robotlegsjs/pixi-palidor
 ```
 **Dependencies**
 
 + [RobotlegsJS](https://github.com/RobotlegsJS/RobotlegsJS)
 + [RobotlegsJS-Pixi](https://github.com/RobotlegsJS/RobotlegsJS-Pixi)
-+ [PixiJS](https://www.pixijs.com/)
++ [PixiJS](https://github.com/pixijs/pixi.js)
 
 Usage
 ===
@@ -33,17 +39,18 @@ Palidor was designed to be simple and, practical. You just need to follow three 
 
 Firstly, you need to instantiate your RobotlegsJS's context, and then install and configure the PalidorPixiExtension and a PixiRootContainer.
 
-```ts
+```typescript
 let stage = new PIXI.Container();
 let context = new Context()
+    .install(MVCSBundle)
+    .install(PixiBundle)
     .install(PalidorPixiExtension)
-    .configure(new PixiRootContainer(this.stage))
+    .configure(new ContextView(this.stage))
     .configure(PalidorConfig)
     .initialize();
 ```
 + **PalidorPixiExtension:** It is the extension itself.
-+ **PixiRootContainer:** It is the class responsible for register the Main Container.
-+ **PalidorConfig:** The Class that implements the Robotlegs's IConfig and will be responsible for map all Views and FloatingViews.
++ **PalidorConfig:** The Class that implements the Robotlegs's IConfig and will be responsible for map all your Views and FloatingViews.
 
 ### Step 2 - Mapping the Views/FloatingViews
 
