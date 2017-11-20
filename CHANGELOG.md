@@ -32,7 +32,7 @@
 
 ## RobotlegsJS-Pixi-Palidor 0.0.1
 
-### [v0.0.6](https://github.com/RobotlegsJS/RobotlegsJS-Pixi/releases/tag/0.0.6) - 2017-10-18
+### [v0.0.6](https://github.com/RobotlegsJS/RobotlegsJS-Pixi-Palidor/releases/tag/0.0.6) - 2017-10-18
 
 - Update @robotlegsjs/pixi to version 0.0.6 (see #14).
 
@@ -40,13 +40,13 @@
 
 - Update dev dependencies to latest version.
 
-### [v0.0.5](https://github.com/RobotlegsJS/RobotlegsJS-Pixi/releases/tag/0.0.5) - 2017-10-11
+### [v0.0.5](https://github.com/RobotlegsJS/RobotlegsJS-Pixi-Palidor/releases/tag/0.0.5) - 2017-10-11
 
 - Update @robotlegsjs/pixi to version 0.0.5 (see #12).
 
 - Update dev dependencies to latest version.
 
-### [v0.0.4](https://github.com/RobotlegsJS/RobotlegsJS-Pixi/releases/tag/0.0.4) - 2017-09-26
+### [v0.0.4](https://github.com/RobotlegsJS/RobotlegsJS-Pixi-Palidor/releases/tag/0.0.4) - 2017-09-26
 
 - Adapt to NPM [v5.0.0](http://blog.npmjs.org/post/161081169345/v500) (see #5).
 
@@ -58,7 +58,7 @@
 
 - Update dev dependencies to latest version.
 
-### [v0.0.3](https://github.com/RobotlegsJS/RobotlegsJS-Pixi/releases/tag/0.0.3) - 2017-09-15
+### [v0.0.3](https://github.com/RobotlegsJS/RobotlegsJS-Pixi-Palidor/releases/tag/0.0.3) - 2017-09-15
 
 - Update @robotlegsjs/core to version 0.0.5 (see #2).
 
@@ -72,7 +72,7 @@
 
 - Update dev dependencies to latest version.
 
-### [v0.0.2](https://github.com/RobotlegsJS/RobotlegsJS-Pixi/releases/tag/0.0.2) - 2017-09-03
+### [v0.0.2](https://github.com/RobotlegsJS/RobotlegsJS-Pixi-Palidor/releases/tag/0.0.2) - 2017-09-03
 
 - Add copyright.
 
