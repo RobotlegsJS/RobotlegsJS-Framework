@@ -6,10 +6,10 @@
 // ------------------------------------------------------------------------------
 
 import { IContainerController } from "../api/IContainerController";
-import { IPixiRootContainer } from "../api/IPixiRootContainer";
 
 import { Container } from "pixi.js";
 import { injectable, inject } from "@robotlegsjs/core";
+import { IContextView, ContextView } from "@robotlegsjs/pixi";
 
 @injectable()
 export class PixiContainerContoller implements IContainerController {
@@ -30,25 +30,25 @@ export class PixiContainerContoller implements IContainerController {
         return this._currentView;
     }
 
-    private _floatingViews: Array<Container>;
-    public get floatingViews(): Array<Container> {
+    private _floatingViews: Container[];
+    public get floatingViews(): Container[] {
         return this._floatingViews;
     }
 
-    constructor(@inject(IPixiRootContainer) rootContainer: IPixiRootContainer) {
-        this._floatingViews = new Array<Container>();
-        this._root = rootContainer.getRootContainer();
+    constructor(@inject(IContextView) contextView: IContextView) {
+        this._floatingViews = [];
+        this._root = contextView.view;
         this.createLayers();
     }
 
-    public addView(view: any): void {
+    public addView(view: Container): void {
         if (this._floatingViews.indexOf(view) === -1) {
             this._floatingViews.push(view);
             this._dynamicLayer.addChild(view);
         }
     }
 
-    public changeView(view: any): void {
+    public changeView(view: Container): void {
         this._currentView = view;
         this._staticLayer.addChildAt(view, 0);
     }

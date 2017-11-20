@@ -5,17 +5,23 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import { FlowViewMapping } from "./FlowViewMapping";
 import { IContainerController } from "../api/IContainerController";
 import { IFlowViewMapping } from "../api/IFlowViewMapping";
 import { IFlowManager } from "../api/IFlowManager";
+
 import { PalidorEvent } from "./../events/PalidorEvent";
+
+import { FlowViewMapping } from "./FlowViewMapping";
+
+import { Container } from "pixi.js";
 
 import {
     injectable,
     inject,
+    IClass,
     IEventMap,
-    IEventDispatcher
+    IEventDispatcher,
+    Event
 } from "@robotlegsjs/core";
 
 @injectable()
@@ -31,8 +37,8 @@ export class FlowManager implements IFlowManager {
         return this._dispatcher;
     }
 
-    private _views: Map<string, any>;
-    public get views(): Map<string, any> {
+    private _views: Map<string, IClass<Container>>;
+    public get views(): Map<string, IClass<Container>> {
         return this._views;
     }
 
@@ -45,7 +51,7 @@ export class FlowManager implements IFlowManager {
         this._dispatcher = eventDispatcher;
         this._controller = controller;
 
-        this._views = new Map<string, any>();
+        this._views = new Map<string, IClass<Container>>();
         this.mapPalidorListeners();
     }
 
@@ -57,7 +63,7 @@ export class FlowManager implements IFlowManager {
         return new FlowViewMapping(event, this);
     }
 
-    public mapView(eventString: string, viewClass: any): void {
+    public mapView(eventString: string, viewClass: IClass<Container>): void {
         this._views.set(eventString, viewClass);
         this._eventMap.mapListener(
             this._dispatcher,
@@ -67,7 +73,10 @@ export class FlowManager implements IFlowManager {
         );
     }
 
-    public mapFloatingView(eventString: string, viewClass: any): void {
+    public mapFloatingView(
+        eventString: string,
+        viewClass: IClass<Container>
+    ): void {
         this._views.set(eventString, viewClass);
         this._eventMap.mapListener(
             this._dispatcher,
@@ -98,18 +107,18 @@ export class FlowManager implements IFlowManager {
         );
     }
 
-    private onChangeView(e: any): void {
+    private onChangeView(e: Event): void {
         let clazz = this._views.get(e.type);
         this._controller.removeCurrentView();
         this._controller.changeView(new clazz());
     }
 
-    private onAddFloatingView(e: any): void {
+    private onAddFloatingView(e: Event): void {
         let clazz = this._views.get(e.type);
         this._controller.addView(new clazz());
     }
 
-    private onRemoveCurrentView(e: any): void {
+    private onRemoveCurrentView(e: Event): void {
         this._controller.removeCurrentView();
     }
 
@@ -117,7 +126,7 @@ export class FlowManager implements IFlowManager {
         this._controller.removeLastFloatingViewAdded();
     }
 
-    private onRemoveAllFloatingView(e: any): void {
+    private onRemoveAllFloatingView(e: Event): void {
         this._controller.removeAllFloatingViews();
     }
 }

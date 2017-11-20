@@ -7,10 +7,9 @@
 
 import { IContainerController } from "./api/IContainerController";
 import { IFlowManager } from "./api/IFlowManager";
-import { IPixiRootContainer } from "./api/IPixiRootContainer";
+
 import { FlowManager } from "./impl/FlowManager";
 import { PixiContainerContoller } from "./impl/PixiContainerContoller";
-import { PixiRootContainer } from "./impl/PixiRootContainer";
 
 import {
     IContext,
@@ -19,6 +18,8 @@ import {
     instanceOfType
 } from "@robotlegsjs/core";
 
+import { IContextView, ContextView } from "@robotlegsjs/pixi";
+
 export class PalidorPixiExtension implements IExtension {
     private _injector: IInjector;
 
@@ -26,13 +27,12 @@ export class PalidorPixiExtension implements IExtension {
         this._injector = context.injector;
 
         context.addConfigHandler(
-            instanceOfType(PixiRootContainer),
-            this.handlePixiRootContainer.bind(this)
+            instanceOfType(ContextView),
+            this.handleContextView.bind(this)
         );
     }
 
-    private handlePixiRootContainer(root: PixiRootContainer): void {
-        this._injector.bind(IPixiRootContainer).toConstantValue(root);
+    private handleContextView(contextView: IContextView): void {
         this._injector
             .bind(IContainerController)
             .to(PixiContainerContoller)

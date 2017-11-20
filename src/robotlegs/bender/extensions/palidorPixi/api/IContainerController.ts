@@ -5,11 +5,13 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
+import { Container } from "pixi.js";
+
 export let IContainerController = Symbol("IContainerController");
 export interface IContainerController {
-    addView(view: any): void;
+    addView(view: Container): void;
 
-    changeView(view: any): void;
+    changeView(view: Container): void;
 
     removeCurrentView(): void;
 

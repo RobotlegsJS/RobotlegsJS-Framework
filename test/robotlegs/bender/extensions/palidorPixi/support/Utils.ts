@@ -5,22 +5,27 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import { IContainerController } from "./../../../../../../src";
-import { PixiContainerContoller } from "./../../../../../../src";
-import { IFlowManager } from "./../../../../../../src";
-import { FlowManager } from "../../../../../../src";
+import {
+    IContainerController,
+    IFlowManager,
+    FlowManager,
+    PixiContainerContoller,
+    PalidorPixiExtension
+} from "./../../../../../../src";
+
 import { Container } from "pixi.js";
-import { PixiRootContainer } from "../../../../../../src";
-import { PalidorPixiExtension } from "./../../../../../../src";
-import { MVCSBundle } from "@robotlegsjs/core";
-import { Context } from "@robotlegsjs/core";
+
+import { Context, MVCSBundle } from "@robotlegsjs/core";
+
+import { ContextView, PixiBundle } from "@robotlegsjs/pixi";
 
 export class Utils {
     public static getInstanceOfFlowManager(): FlowManager {
         let context = new Context();
         context.install(MVCSBundle);
+        context.install(PixiBundle);
         context.install(PalidorPixiExtension);
-        context.configure(new PixiRootContainer(new Container()));
+        context.configure(new ContextView(new Container()));
 
         return <FlowManager>context.injector.get(IFlowManager);
     }
@@ -28,8 +33,9 @@ export class Utils {
     public static getInstanceOfPixiContainerController(): PixiContainerContoller {
         let context = new Context();
         context.install(MVCSBundle);
+        context.install(PixiBundle);
         context.install(PalidorPixiExtension);
-        context.configure(new PixiRootContainer(new Container()));
+        context.configure(new ContextView(new Container()));
 
         return <PixiContainerContoller>context.injector.get(
             IContainerController

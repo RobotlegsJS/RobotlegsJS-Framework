@@ -30,7 +30,8 @@
   ],
   "author": "RobotlegsJS",
   "contributors": [
-    "Ronaldo Santiago <ronaldo.setzers@gmail.com>"
+    "Ronaldo Santiago <ronaldo.setzers@gmail.com>",
+    "Tiago Schenkel <tiago.schenkel@gmail.com>"
   ],
   "license": "MIT",
   "bugs": {
@@ -38,13 +39,13 @@
   },
   "homepage": "https://github.com/RobotlegsJS/RobotlegsJS-Pixi-Palidor#readme",
   "dependencies": {
-    "@robotlegsjs/pixi": "^0.1.0"
+    "@robotlegsjs/pixi": "^0.1.1"
   },
   "devDependencies": {
     "@types/bluebird": "^3.5.17",
-    "@types/chai": "^4.0.4",
+    "@types/chai": "^4.0.5",
     "@types/mocha": "^2.2.44",
-    "@types/pixi.js": "^4.5.7",
+    "@types/pixi.js": "^4.6.0",
     "@types/sinon": "^4.0.0",
     "bluebird": "^3.5.1",
     "browserify-versionify": "^1.0.6",

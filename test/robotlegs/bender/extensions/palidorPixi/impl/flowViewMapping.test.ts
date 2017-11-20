@@ -9,10 +9,10 @@ import "./../../../../../entry";
 
 import sinon = require("sinon");
 import { assert } from "chai";
-import { Utils } from "./../support/Utils";
 
-import { FlowViewMapping } from "./../../../../../../src";
-import { FlowManager } from "./../../../../../../src";
+import { FlowManager, FlowViewMapping } from "./../../../../../../src";
+
+import { Utils } from "./../support/Utils";
 
 describe("FlowViwMapping", () => {
     let flowManager: FlowManager;
