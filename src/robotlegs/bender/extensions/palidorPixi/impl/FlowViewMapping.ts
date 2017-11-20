@@ -6,6 +6,7 @@
 // ------------------------------------------------------------------------------
 
 import { IFlowViewMapping } from "./../api/IFlowViewMapping";
+
 import { FlowManager } from "./FlowManager";
 
 export class FlowViewMapping implements IFlowViewMapping {

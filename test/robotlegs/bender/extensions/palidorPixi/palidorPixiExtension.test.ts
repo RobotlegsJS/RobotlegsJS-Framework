@@ -7,9 +7,11 @@
 
 import "../../../../entry";
 
-import { IContainerController } from "../../../../../src";
-import { IFlowManager } from "../../../../../src";
-import { PalidorPixiExtension } from "../../../../../src";
+import {
+    IContainerController,
+    IFlowManager,
+    PalidorPixiExtension
+} from "../../../../../src";
 
 import { assert } from "chai";
 import { Container } from "pixi.js";

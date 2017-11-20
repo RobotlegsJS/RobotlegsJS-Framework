@@ -5,14 +5,18 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import { IContainerController } from "./../../../../../../src";
-import { PixiContainerContoller } from "./../../../../../../src";
-import { IFlowManager } from "./../../../../../../src";
-import { FlowManager } from "../../../../../../src";
+import {
+    IContainerController,
+    IFlowManager,
+    FlowManager,
+    PixiContainerContoller,
+    PalidorPixiExtension
+} from "./../../../../../../src";
+
 import { Container } from "pixi.js";
-import { PalidorPixiExtension } from "./../../../../../../src";
-import { MVCSBundle } from "@robotlegsjs/core";
-import { Context } from "@robotlegsjs/core";
+
+import { Context, MVCSBundle } from "@robotlegsjs/core";
+
 import { ContextView, PixiBundle } from "@robotlegsjs/pixi";
 
 export class Utils {

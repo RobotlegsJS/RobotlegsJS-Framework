@@ -5,11 +5,13 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import { FlowViewMapping } from "./FlowViewMapping";
 import { IContainerController } from "../api/IContainerController";
 import { IFlowViewMapping } from "../api/IFlowViewMapping";
 import { IFlowManager } from "../api/IFlowManager";
+
 import { PalidorEvent } from "./../events/PalidorEvent";
+
+import { FlowViewMapping } from "./FlowViewMapping";
 
 import {
     injectable,

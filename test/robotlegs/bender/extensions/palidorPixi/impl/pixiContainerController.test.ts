@@ -7,12 +7,12 @@
 
 import "./../../../../../entry";
 
-import { Utils } from "./../support/Utils";
-
 import { PixiContainerContoller } from "../../../../../../src";
 
 import { assert } from "chai";
 import { Container } from "pixi.js";
+
+import { Utils } from "./../support/Utils";
 
 describe("PixiContainerController", () => {
     let controller: PixiContainerContoller;

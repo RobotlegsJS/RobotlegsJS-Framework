@@ -9,16 +9,18 @@ import "./../../../../../entry";
 
 import sinon = require("sinon");
 
-import { Utils } from "./../support/Utils";
-
-import { IFlowViewMapping } from "./../../../../../../src";
-import { PalidorEvent } from "./../../../../../../src";
-import { FlowManager } from "./../../../../../../src";
-import { FlowViewMapping } from "./../../../../../../src";
+import {
+    IFlowViewMapping,
+    PalidorEvent,
+    FlowManager,
+    FlowViewMapping
+} from "./../../../../../../src";
 
 import { assert } from "chai";
 import { Container } from "pixi.js";
 import { Context, MVCSBundle } from "@robotlegsjs/core";
+
+import { Utils } from "./../support/Utils";
 
 describe("FlowManager", () => {
     let flowManager: FlowManager;
