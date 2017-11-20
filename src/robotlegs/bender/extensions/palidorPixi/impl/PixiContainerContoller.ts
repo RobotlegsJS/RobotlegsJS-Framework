@@ -41,14 +41,14 @@ export class PixiContainerContoller implements IContainerController {
         this.createLayers();
     }
 
-    public addView(view: any): void {
+    public addView(view: Container): void {
         if (this._floatingViews.indexOf(view) === -1) {
             this._floatingViews.push(view);
             this._dynamicLayer.addChild(view);
         }
     }
 
-    public changeView(view: any): void {
+    public changeView(view: Container): void {
         this._currentView = view;
         this._staticLayer.addChildAt(view, 0);
     }

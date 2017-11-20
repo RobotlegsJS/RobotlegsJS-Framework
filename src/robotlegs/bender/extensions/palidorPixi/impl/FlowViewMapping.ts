@@ -9,6 +9,10 @@ import { IFlowViewMapping } from "./../api/IFlowViewMapping";
 
 import { FlowManager } from "./FlowManager";
 
+import { Container } from "pixi.js";
+
+import { IClass } from "@robotlegsjs/core";
+
 export class FlowViewMapping implements IFlowViewMapping {
     private _event: string;
     public get event(): string {
@@ -24,11 +28,11 @@ export class FlowViewMapping implements IFlowViewMapping {
         this._flowManager = flowManager;
     }
 
-    public toFloatingView(viewClass: any): void {
+    public toFloatingView(viewClass: IClass<Container>): void {
         this._flowManager.mapFloatingView(this._event, viewClass);
     }
 
-    public toView(viewClass: any): void {
+    public toView(viewClass: IClass<Container>): void {
         this._flowManager.mapView(this._event, viewClass);
     }
 }

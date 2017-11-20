@@ -13,9 +13,12 @@ import { PalidorEvent } from "./../events/PalidorEvent";
 
 import { FlowViewMapping } from "./FlowViewMapping";
 
+import { Container } from "pixi.js";
+
 import {
     injectable,
     inject,
+    IClass,
     IEventMap,
     IEventDispatcher
 } from "@robotlegsjs/core";
@@ -33,8 +36,8 @@ export class FlowManager implements IFlowManager {
         return this._dispatcher;
     }
 
-    private _views: Map<string, any>;
-    public get views(): Map<string, any> {
+    private _views: Map<string, IClass<Container>>;
+    public get views(): Map<string, IClass<Container>> {
         return this._views;
     }
 
@@ -47,7 +50,7 @@ export class FlowManager implements IFlowManager {
         this._dispatcher = eventDispatcher;
         this._controller = controller;
 
-        this._views = new Map<string, any>();
+        this._views = new Map<string, IClass<Container>>();
         this.mapPalidorListeners();
     }
 
@@ -59,7 +62,7 @@ export class FlowManager implements IFlowManager {
         return new FlowViewMapping(event, this);
     }
 
-    public mapView(eventString: string, viewClass: any): void {
+    public mapView(eventString: string, viewClass: IClass<Container>): void {
         this._views.set(eventString, viewClass);
         this._eventMap.mapListener(
             this._dispatcher,
@@ -69,7 +72,10 @@ export class FlowManager implements IFlowManager {
         );
     }
 
-    public mapFloatingView(eventString: string, viewClass: any): void {
+    public mapFloatingView(
+        eventString: string,
+        viewClass: IClass<Container>
+    ): void {
         this._views.set(eventString, viewClass);
         this._eventMap.mapListener(
             this._dispatcher,
