@@ -49,6 +49,9 @@ let context = new Context()
     .configure(PalidorConfig)
     .initialize();
 ```
+
++ **MVCSBundle:** Installs a number of extensions and configurations for developers who are comfortable with the typical [RobotlegsJS](https://github.com/RobotlegsJS/RobotlegsJS) setup.
++ **PixiBundle:** Installs a view / mediator layer provided by [RobotlegsJS-Pixi](https://github.com/RobotlegsJS/RobotlegsJS-Pixi).
 + **PalidorPixiExtension:** It is the extension itself.
 + **PalidorConfig:** The Class that implements the Robotlegs's IConfig and will be responsible for map all your Views and FloatingViews.
 
