@@ -13,6 +13,64 @@ A port of [Robotlegs SignalMediator Extension](https://github.com/MrDodson/robot
 
 Originally published on [RobotlegsJS-SignalMediator](https://github.com/cuongdd2/RobotlegsJS-SignalMediator).
 
+Installation
+---
+
+You can get the latest release and the type definitions using [NPM](https://www.npmjs.com/):
+
+```bash
+npm install @robotlegsjs/pixi-signalmediator
+```
+
+Or using [Yarn](https://yarnpkg.com/en/):
+
+```bash
+yarn add @robotlegsjs/pixi-signalmediator
+```
+
+**Dependencies**
+
++ [RobotlegsJS](https://github.com/RobotlegsJS/RobotlegsJS)
++ [SignalsJS](https://github.com/RobotlegsJS/SignalsJS)
++ [PixiJS](https://github.com/pixijs/pixi.js)
+
+Usage
+---
+
+```typescript
+import { inject, injectable } from "@robotlegsjs/core";
+
+import { SignalMediator } from "@robotlegsjs/pixi-signalmediator";
+
+@injectable()
+export class MyUserMediator extends SignalMediator<MyUserView> {
+
+    @inject(UserLoggedInSignal) protected userLoggedInSignal: UserLoggedInSignal;
+    @inject(UserLoggedOutSignal) protected userLoggedOutSignal: UserLoggedOutSignal;
+
+    constructor() {
+        super();
+    }
+
+    private onUserLoggedIn(): void {
+        // user is logged in, do something...
+    }
+
+    private onUserLoggedOut(): void {
+        // user is logged out, do something...
+    }
+
+    public initialize(): void {
+        this.addToSignal(this.userLoggedInSignal, this.onUserLoggedIn.bind(this));
+        this.addToSignal(this.userLoggedOutSignal, this.onUserLoggedOut.bind(this));
+    }
+
+    public destroy(): void {
+        // clean up memory...
+    }
+}
+```
+
 License
 ---
 
