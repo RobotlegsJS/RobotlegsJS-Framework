@@ -28,6 +28,14 @@
     eventemitter3 "^2.0.3"
     pixi.js "^4.5.6"
 
+"@robotlegsjs/pixi@^0.1.2":
+  version "0.1.2"
+  resolved "https://registry.npmjs.org/@robotlegsjs/pixi/-/pixi-0.1.2.tgz#6e0a0d67940503ed8e6ef4a62a72e195a3ecbff0"
+  dependencies:
+    "@robotlegsjs/core" "^0.1.1"
+    eventemitter3 "^2.0.3"
+    pixi.js "^4.6.1"
+
 "@types/chai@^4.0.4":
   version "4.0.4"
   resolved "https://registry.yarnpkg.com/@types/chai/-/chai-4.0.4.tgz#fe86315d9a66827feeb16f73bc954688ec950e18"
@@ -3409,6 +3417,19 @@ pixi-gl-core@^1.0.3:
 pixi.js@^4.5.6:
   version "4.5.6"
   resolved "https://registry.yarnpkg.com/pixi.js/-/pixi.js-4.5.6.tgz#54914e7935f9a9e346923b9f424e52fa417593cd"
+  dependencies:
+    bit-twiddle "^1.0.2"
+    earcut "^2.0.7"
+    eventemitter3 "^2.0.0"
+    ismobilejs "^0.4.0"
+    object-assign "^4.0.1"
+    pixi-gl-core "^1.0.3"
+    remove-array-items "^1.0.0"
+    resource-loader "^2.0.9"
+
+pixi.js@^4.6.1:
+  version "4.6.1"
+  resolved "https://registry.npmjs.org/pixi.js/-/pixi.js-4.6.1.tgz#8a231f70e529c73bb4c75fbf684b425d7f153a8e"
   dependencies:
     bit-twiddle "^1.0.2"
     earcut "^2.0.7"

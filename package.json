@@ -28,7 +28,7 @@
   "homepage": "https://github.com/RonaldoSetzer/GAME-Battleship#readme",
   "dependencies": {
     "@robotlegsjs/core": "^0.1.1",
-    "@robotlegsjs/pixi": "^0.0.6",
+    "@robotlegsjs/pixi": "^0.1.2",
     "@robotlegsjs/pixi-palidor": "^0.0.6",
     "gsap": "^1.20.3",
     "pixi.js": "^4.5.6",
