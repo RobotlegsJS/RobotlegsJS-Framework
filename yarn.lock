@@ -8,9 +8,9 @@
   dependencies:
     inversify "^4.5.1"
 
-"@robotlegsjs/pixi@^0.1.1":
-  version "0.1.1"
-  resolved "https://registry.npmjs.org/@robotlegsjs/pixi/-/pixi-0.1.1.tgz#155d3a1c02d6522ad00a6ae0acde145c9885d5d5"
+"@robotlegsjs/pixi@^0.1.2":
+  version "0.1.2"
+  resolved "https://registry.npmjs.org/@robotlegsjs/pixi/-/pixi-0.1.2.tgz#6e0a0d67940503ed8e6ef4a62a72e195a3ecbff0"
   dependencies:
     "@robotlegsjs/core" "^0.1.1"
     eventemitter3 "^2.0.3"
@@ -2606,8 +2606,8 @@ invariant@^2.2.2:
     loose-envify "^1.0.0"
 
 inversify@^4.5.1:
-  version "4.5.1"
-  resolved "https://registry.npmjs.org/inversify/-/inversify-4.5.1.tgz#2f8a249e1fc5346e4f28b4b86dfae5af1b673178"
+  version "4.5.2"
+  resolved "https://registry.npmjs.org/inversify/-/inversify-4.5.2.tgz#f2478fd140f398836b2e1fee839f37588f1e6a9b"
 
 invert-kv@^1.0.0:
   version "1.0.0"
