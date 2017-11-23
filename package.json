@@ -12,7 +12,14 @@
     "test": "./node_modules/.bin/karma start --single-run",
     "test:tdd": "./node_modules/.bin/karma start"
   },
-  "keywords": ["Battleship", "Sea Battle", "TypeScript", "Robotlegs", "IoC", "PIXI"],
+  "keywords": [
+    "Battleship",
+    "Sea Battle",
+    "TypeScript",
+    "Robotlegs",
+    "IoC",
+    "PIXI"
+  ],
   "author": "Ronaldo Santiago <ronaldo.setzer@gmail.com>",
   "license": "MIT",
   "bugs": {
@@ -20,7 +27,7 @@
   },
   "homepage": "https://github.com/RonaldoSetzer/GAME-Battleship#readme",
   "dependencies": {
-    "@robotlegsjs/core": "^0.0.6",
+    "@robotlegsjs/core": "^0.1.1",
     "@robotlegsjs/pixi": "^0.0.6",
     "@robotlegsjs/pixi-palidor": "^0.0.6",
     "gsap": "^1.20.3",

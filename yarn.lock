@@ -8,6 +8,12 @@
   dependencies:
     inversify "^4.3.0"
 
+"@robotlegsjs/core@^0.1.1":
+  version "0.1.1"
+  resolved "https://registry.npmjs.org/@robotlegsjs/core/-/core-0.1.1.tgz#7522c7481d12c562ab41e6b6653235cf76bafaf4"
+  dependencies:
+    inversify "^4.5.1"
+
 "@robotlegsjs/pixi-palidor@^0.0.6":
   version "0.0.6"
   resolved "https://registry.yarnpkg.com/@robotlegsjs/pixi-palidor/-/pixi-palidor-0.0.6.tgz#fa2a30179f2bd2046e554e4f751428a3d1d520a9"
@@ -2091,6 +2097,10 @@ invariant@^2.2.2:
 inversify@^4.3.0:
   version "4.3.0"
   resolved "https://registry.yarnpkg.com/inversify/-/inversify-4.3.0.tgz#d2ecd2ae18340e7f1ab5148a3e44b87080391366"
+
+inversify@^4.5.1:
+  version "4.5.2"
+  resolved "https://registry.npmjs.org/inversify/-/inversify-4.5.2.tgz#f2478fd140f398836b2e1fee839f37588f1e6a9b"
 
 invert-kv@^1.0.0:
   version "1.0.0"
