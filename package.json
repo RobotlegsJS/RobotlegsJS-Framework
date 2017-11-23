@@ -35,7 +35,7 @@
     "reflect-metadata": "^0.1.10"
   },
   "devDependencies": {
-    "@types/chai": "^4.0.4",
+    "@types/chai": "^4.0.5",
     "@types/mocha": "^2.2.43",
     "@types/pixi.js": "^4.6.0",
     "@types/sinon": "2.2.2",
