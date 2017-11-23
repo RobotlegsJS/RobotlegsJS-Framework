@@ -39,7 +39,7 @@
   },
   "homepage": "https://github.com/RobotlegsJS/RobotlegsJS-Pixi-Palidor#readme",
   "dependencies": {
-    "@robotlegsjs/pixi": "^0.1.1"
+    "@robotlegsjs/pixi": "^0.1.2"
   },
   "devDependencies": {
     "@types/bluebird": "^3.5.17",
