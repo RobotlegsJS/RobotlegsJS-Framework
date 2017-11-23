@@ -32,8 +32,7 @@
     "@robotlegsjs/pixi-palidor": "^0.1.1",
     "gsap": "^1.20.3",
     "pixi.js": "^4.6.1",
-    "reflect-metadata": "^0.1.10",
-    "typescript": "^2.5.3"
+    "reflect-metadata": "^0.1.10"
   },
   "devDependencies": {
     "@types/chai": "^4.0.4",
@@ -67,6 +66,7 @@
     "ts-node": "^3.3.0",
     "tslint": "^5.8.0",
     "tslint-config-prettier": "^1.6.0",
+    "typescript": "^2.6.1",
     "webpack": "^3.8.1",
     "webpack-dev-server": "^2.9.3"
   }
