@@ -2,31 +2,17 @@
 # yarn lockfile v1
 
 
-"@robotlegsjs/core@^0.0.6":
-  version "0.0.6"
-  resolved "https://registry.yarnpkg.com/@robotlegsjs/core/-/core-0.0.6.tgz#fc056e713b0856cbc867bbcf5ea4c91bad52d4b5"
-  dependencies:
-    inversify "^4.3.0"
-
 "@robotlegsjs/core@^0.1.1":
   version "0.1.1"
   resolved "https://registry.npmjs.org/@robotlegsjs/core/-/core-0.1.1.tgz#7522c7481d12c562ab41e6b6653235cf76bafaf4"
   dependencies:
     inversify "^4.5.1"
 
-"@robotlegsjs/pixi-palidor@^0.0.6":
-  version "0.0.6"
-  resolved "https://registry.yarnpkg.com/@robotlegsjs/pixi-palidor/-/pixi-palidor-0.0.6.tgz#fa2a30179f2bd2046e554e4f751428a3d1d520a9"
+"@robotlegsjs/pixi-palidor@^0.1.1":
+  version "0.1.1"
+  resolved "https://registry.npmjs.org/@robotlegsjs/pixi-palidor/-/pixi-palidor-0.1.1.tgz#e5311476a754969fa4f85bebf684b8915d9ddb02"
   dependencies:
-    "@robotlegsjs/pixi" "^0.0.6"
-
-"@robotlegsjs/pixi@^0.0.6":
-  version "0.0.6"
-  resolved "https://registry.yarnpkg.com/@robotlegsjs/pixi/-/pixi-0.0.6.tgz#086c8aaa3756aeb9fefe71eb42dfc021a0431ab1"
-  dependencies:
-    "@robotlegsjs/core" "^0.0.6"
-    eventemitter3 "^2.0.3"
-    pixi.js "^4.5.6"
+    "@robotlegsjs/pixi" "^0.1.2"
 
 "@robotlegsjs/pixi@^0.1.2":
   version "0.1.2"
@@ -2101,10 +2087,6 @@ invariant@^2.2.2:
   resolved "https://registry.yarnpkg.com/invariant/-/invariant-2.2.2.tgz#9e1f56ac0acdb6bf303306f338be3b204ae60360"
   dependencies:
     loose-envify "^1.0.0"
-
-inversify@^4.3.0:
-  version "4.3.0"
-  resolved "https://registry.yarnpkg.com/inversify/-/inversify-4.3.0.tgz#d2ecd2ae18340e7f1ab5148a3e44b87080391366"
 
 inversify@^4.5.1:
   version "4.5.2"
