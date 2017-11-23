@@ -16,7 +16,7 @@
 
 ## RobotlegsJS-Pixi-SignalMediator 0.1.0
 
-### v0.1.2
+### [v0.1.2](https://github.com/RobotlegsJS/RobotlegsJS-Pixi-SignalMediator/releases/tag/0.1.2) - 2017-11-23
 
 - Update @robotlegsjs/pixi to version 0.1.2 (see #25).
 
