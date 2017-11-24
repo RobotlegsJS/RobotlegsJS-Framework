@@ -3,6 +3,7 @@ import { IMediatorMap } from "@robotlegsjs/pixi";
 import { IFlowManager } from "@robotlegsjs/pixi-palidor";
 
 import { ScratchManager } from "../managers/ScratchManager";
+import { FeedbackPopupMediator } from "../mediators/FeedbackPopupMediator";
 import { HUDViewMediator } from "../mediators/HUDViewMediator";
 import { IntroViewMediator } from "../mediators/IntroViewMediator";
 import { ScratchView } from "../views/ScratchView";
@@ -14,6 +15,7 @@ import { TickManager } from "./../managers/TickManager";
 import { MainViewMediator } from "./../mediators/MainViewMediator";
 import { ScratchViewMediator } from "./../mediators/ScratchViewMediator";
 import { Model } from "./../models/Model";
+import { FeedbackPopup } from "./../views/FeedbackPopup";
 import { HUDView } from "./../views/HUDView";
 import { IntroView } from "./../views/IntroView";
 import { MainView } from "./../views/MainView";
@@ -37,12 +39,14 @@ export class ScratchConfig implements IConfig {
     private mapPalidor(): void {
         this.flowManager.map(FlowEvent.SHOW_INTRO_VIEW).toView(IntroView);
         this.flowManager.map(FlowEvent.SHOW_MAIN_VIEW).toView(MainView);
+        this.flowManager.map(FlowEvent.SHOW_FEEDBACK).toFloatingView(FeedbackPopup);
     }
     private mapMediators(): void {
         this.mediatorMap.map(IntroView).toMediator(IntroViewMediator);
         this.mediatorMap.map(MainView).toMediator(MainViewMediator);
         this.mediatorMap.map(HUDView).toMediator(HUDViewMediator);
         this.mediatorMap.map(ScratchView).toMediator(ScratchViewMediator);
+        this.mediatorMap.map(FeedbackPopup).toMediator(FeedbackPopupMediator);
     }
     private mapCommands(): void {
         this.commandMap.map(GameEvent.START_GAME_COMMAND).toCommand(StartGameCommand);
