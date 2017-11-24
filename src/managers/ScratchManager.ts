@@ -1,6 +1,7 @@
 import { IEventDispatcher, inject, injectable } from "@robotlegsjs/core";
 
 import { MagicValues } from "../utils/MagicValues";
+import { GameEvent } from "./../events/GameEvent";
 import { Model } from "./../models/Model";
 import { Prizes } from "./../utils/Prizes";
 
@@ -24,6 +25,16 @@ export class ScratchManager {
     public scratchPosition(x: number, y: number): void {
         this.model.posX = Math.min(x, MagicValues.SCRATCH_BOX_WIDTH + 50);
         this.model.posY = Math.min(y, MagicValues.SCRATCH_BOX_HEIGHT + 100);
+        this.validate(x, y);
+    }
+    private validate(x: number, y: number): void {
+        x = Math.floor(x / MagicValues.TILE_SQUARE);
+        y = Math.floor(y / MagicValues.TILE_SQUARE);
+        this.covered.add(`${x}_${y}`);
+
+        if (this.covered.size >= this.mimPercent()) {
+            this.eventDispatcher.dispatchEvent(new GameEvent(GameEvent.END_GAME_COMMAND));
+        }
     }
     private generatePrizes(): string[] {
         const prizes = [];
@@ -33,5 +44,11 @@ export class ScratchManager {
             prizes.push(Prizes.ALL[rnd]);
         }
         return prizes;
+    }
+    private mimPercent(): number {
+        const { SCRATCH_BOX_HEIGHT, SCRATCH_BOX_WIDTH, TILE_SQUARE } = MagicValues;
+        const rows = SCRATCH_BOX_HEIGHT / TILE_SQUARE;
+        const cols = SCRATCH_BOX_WIDTH / TILE_SQUARE;
+        return rows * cols * 0.9;
     }
 }

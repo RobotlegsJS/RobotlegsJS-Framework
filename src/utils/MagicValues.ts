@@ -6,6 +6,8 @@ export class MagicValues {
 
     public static HUD_HEIGHT = 80;
 
+    public static TILE_SQUARE = 32;
+
     public static SCRATCH_BOX_WIDTH = 404;
     public static SCRATCH_BOX_HEIGHT = 404;
 }

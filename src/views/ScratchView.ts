@@ -3,7 +3,6 @@ import { Container, Graphics } from "pixi.js";
 import { Colors } from "../utils/Colors";
 import { MagicValues } from "./../utils/MagicValues";
 import { PixiFactory } from "./../utils/PixiFactory";
-import { Prizes } from "./../utils/Prizes";
 
 export class ScratchView extends Container {
     private coverMask: Graphics;
@@ -24,6 +23,10 @@ export class ScratchView extends Container {
             sprite.y = Math.floor(i % 3) * (128 + 5) + 5;
             this.items.addChild(sprite);
         }
+    }
+    public clearAll(): void {
+        this.coverMask.clear();
+        this.coverMask.drawRect(0, 0, MagicValues.MAX_WIDTH, MagicValues.MAX_HEIGHT);
     }
     public addScrach(x: number, y: number): void {
         this.coverMask.drawCircle(x, y, 25);
