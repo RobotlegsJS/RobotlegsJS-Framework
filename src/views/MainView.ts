@@ -15,13 +15,13 @@ export class MainView extends Container {
         this.createBackground();
     }
     public createComponents(): void {
-        this.hud = new HUDView();
-        this.addChild(this.hud);
-
         this.scratchView = new ScratchView();
         this.scratchView.x = 10;
         this.scratchView.y = 100;
         this.addChild(this.scratchView);
+
+        this.hud = new HUDView();
+        this.addChild(this.hud);
     }
     private createBackground(): void {
         this.addChild(PixiFactory.getColorBackground(Colors.BACKGROUND_LIGHT));
