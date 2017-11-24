@@ -1,3 +1,4 @@
+import { ScratchView } from "./ScratchView";
 import { MagicValues } from "../utils/MagicValues";
 import { HUDView } from "./HUDView";
 import { Container } from "pixi.js";
@@ -7,6 +8,7 @@ import { Colors } from "./../utils/Colors";
 
 export class MainView extends Container {
     private hud: HUDView;
+    private scratchView: ScratchView;
 
     constructor() {
         super();
@@ -15,6 +17,11 @@ export class MainView extends Container {
     public createComponents(): void {
         this.hud = new HUDView();
         this.addChild(this.hud);
+
+        this.scratchView = new ScratchView();
+        this.scratchView.x = 10;
+        this.scratchView.y = 100;
+        this.addChild(this.scratchView);
     }
     private createBackground(): void {
         this.addChild(PixiFactory.getColorBackground(Colors.BACKGROUND_LIGHT));
@@ -22,7 +29,7 @@ export class MainView extends Container {
         const { SCRATCH_BOX_HEIGHT, SCRATCH_BOX_WIDTH } = MagicValues;
         const scratchArea = PixiFactory.getColorBox(SCRATCH_BOX_WIDTH, SCRATCH_BOX_HEIGHT, Colors.BACKGROUND_DARK);
         scratchArea.x = 10;
-        scratchArea.y = 110;
+        scratchArea.y = 100;
         this.addChild(scratchArea);
     }
 }
