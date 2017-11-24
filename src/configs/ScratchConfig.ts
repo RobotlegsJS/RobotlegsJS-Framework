@@ -1,4 +1,4 @@
-import { IConfig, IContext, IEventDispatcher, inject, injectable } from "@robotlegsjs/core";
+import { IConfig, IContext, IEventCommandMap, IEventDispatcher, inject, injectable } from "@robotlegsjs/core";
 import { IMediatorMap } from "@robotlegsjs/pixi";
 import { IFlowManager } from "@robotlegsjs/pixi-palidor";
 
@@ -6,7 +6,10 @@ import { ScratchManager } from "../managers/ScratchManager";
 import { HUDViewMediator } from "../mediators/HUDViewMediator";
 import { IntroViewMediator } from "../mediators/IntroViewMediator";
 import { ScratchView } from "../views/ScratchView";
+import { EndGameCommand } from "./../commands/EndGameCommand";
+import { StartGameCommand } from "./../commands/StartGameCommand";
 import { FlowEvent } from "./../events/FlowEvent";
+import { GameEvent } from "./../events/GameEvent";
 import { TickManager } from "./../managers/TickManager";
 import { MainViewMediator } from "./../mediators/MainViewMediator";
 import { ScratchViewMediator } from "./../mediators/ScratchViewMediator";
@@ -21,10 +24,12 @@ export class ScratchConfig implements IConfig {
     @inject(IFlowManager) public flowManager: IFlowManager;
     @inject(IEventDispatcher) public dispatcher: IEventDispatcher;
     @inject(IMediatorMap) public mediatorMap: IMediatorMap;
+    @inject(IEventCommandMap) private commandMap: IEventCommandMap;
 
     public configure(): void {
         this.mapPalidor();
         this.mapMediators();
+        this.mapCommands();
         this.mapSingletons();
 
         this.dispatcher.dispatchEvent(new FlowEvent(FlowEvent.SHOW_INTRO_VIEW));
@@ -38,6 +43,10 @@ export class ScratchConfig implements IConfig {
         this.mediatorMap.map(MainView).toMediator(MainViewMediator);
         this.mediatorMap.map(HUDView).toMediator(HUDViewMediator);
         this.mediatorMap.map(ScratchView).toMediator(ScratchViewMediator);
+    }
+    private mapCommands(): void {
+        this.commandMap.map(GameEvent.START_GAME_COMMAND).toCommand(StartGameCommand);
+        this.commandMap.map(GameEvent.END_GAME_COMMAND).toCommand(EndGameCommand);
     }
     private mapSingletons(): void {
         this.mapSingleton(TickManager);
