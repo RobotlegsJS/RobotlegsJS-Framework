@@ -1,4 +1,4 @@
-import { Container, Text, Graphics } from "pixi.js";
+import { Container, Graphics, Text } from "pixi.js";
 
 import { Colors } from "./../utils/Colors";
 import { MagicValues } from "./../utils/MagicValues";
@@ -8,10 +8,14 @@ import { TextButton } from "./components/TextButton";
 
 export class HUDView extends Container {
     private _remaining: Text;
-    private _button: TextButton;
+    private _playButton: TextButton;
+    private _endButton: TextButton;
     private _scratchArea: Graphics;
-    public get button(): TextButton {
-        return this._button;
+    public get playButton(): TextButton {
+        return this._playButton;
+    }
+    public get endButton(): TextButton {
+        return this._endButton;
     }
     public get scratchArea(): Graphics {
         return this._scratchArea;
@@ -33,8 +37,6 @@ export class HUDView extends Container {
         this._scratchArea.x = 10;
         this._scratchArea.y = 100;
         this._scratchArea.alpha = 0.1;
-        this._scratchArea.interactive = true;
-        this._scratchArea.buttonMode = true;
         this.addChild(this._scratchArea);
     }
     private createBackground(): void {
@@ -42,11 +44,18 @@ export class HUDView extends Container {
         this.addChild(PixiFactory.getColorBox(MAX_WIDTH, HUD_HEIGHT, Colors.BACKGROUND_DARK));
     }
     private createButtons(): void {
-        this._button = new TextButton();
-        this._button.setText(Texts.PLAY);
-        this._button.x = MagicValues.HALF_WIDTH;
-        this._button.y = MagicValues.MAX_HEIGHT - 45;
-        this.addChild(this._button);
+        this._playButton = new TextButton();
+        this._playButton.setText(Texts.PLAY);
+        this._playButton.x = MagicValues.HALF_WIDTH;
+        this._playButton.y = MagicValues.MAX_HEIGHT - 45;
+        this.addChild(this._playButton);
+
+        this._endButton = new TextButton();
+        this._endButton.setText(Texts.CLEAR_ALL);
+        this._endButton.x = MagicValues.HALF_WIDTH;
+        this._endButton.y = MagicValues.MAX_HEIGHT - 45;
+        this._endButton.visible = false;
+        this.addChild(this._endButton);
     }
     private createTexts(): void {
         this._remaining = PixiFactory.getText("", Colors.TEXT);

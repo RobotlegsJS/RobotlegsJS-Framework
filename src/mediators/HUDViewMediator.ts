@@ -15,20 +15,42 @@ export class HUDViewMediator extends Mediator<HUDView> {
 
     public initialize(): void {
         this.view.updateRemaining(this.model.attempts);
-        this.eventMap.mapListener(this.eventDispatcher, GameEvent.UPDATE, this.onUpdate, this);
-        this.eventMap.mapListener(this.view.button, "click", this.onClick, this);
-        this.eventMap.mapListener(this.view.scratchArea, "mousedown", this.onMouseDown, this);
-        this.eventMap.mapListener(this.view.scratchArea, "mouseup", this.onMouseUp, this);
-        this.eventMap.mapListener(this.view.scratchArea, "mousemove", this.onMouseMove, this);
+        this.eventMap.mapListener(this.eventDispatcher, GameEvent.START, this.onStart, this);
+        this.eventMap.mapListener(this.eventDispatcher, GameEvent.END, this.onEnd, this);
+        this.eventMap.mapListener(this.view.playButton, "click", this.onPlayButton, this);
+        this.eventMap.mapListener(this.view.endButton, "click", this.onEndButton, this);
     }
     public destroy(): void {
         this.eventMap.unmapListeners();
     }
-    private onUpdate(e: any): void {
+    private onStart(e: any): void {
         this.view.updateRemaining(this.model.attempts);
+        this.view.scratchArea.buttonMode = true;
+        this.view.scratchArea.interactive = true;
+        this.eventMap.mapListener(this.view.scratchArea, "mousedown", this.onMouseDown, this);
+        this.eventMap.mapListener(this.view.scratchArea, "mouseup", this.onMouseUp, this);
+        this.eventMap.mapListener(this.view.scratchArea, "mousemove", this.onMouseMove, this);
     }
-    private onClick(e: any): void {
+    private onEnd(e: any): void {
+        this.view.updateRemaining(this.model.attempts);
+        this.view.scratchArea.buttonMode = false;
+        this.view.scratchArea.interactive = false;
+        this.view.playButton.visible = true;
+        this.view.endButton.visible = false;
+        this.eventMap.unmapListener(this.view.scratchArea, "mousedown", this.onMouseDown, this);
+        this.eventMap.unmapListener(this.view.scratchArea, "mouseup", this.onMouseUp, this);
+        this.eventMap.unmapListener(this.view.scratchArea, "mousemove", this.onMouseMove, this);
+        this.tickManager.stop();
+    }
+    private onPlayButton(e: any): void {
+        this.view.playButton.visible = false;
+        this.view.endButton.visible = true;
         this.eventDispatcher.dispatchEvent(new GameEvent(GameEvent.START_GAME_COMMAND));
+    }
+    private onEndButton(e: any): void {
+        this.view.playButton.visible = true;
+        this.view.endButton.visible = false;
+        this.eventDispatcher.dispatchEvent(new GameEvent(GameEvent.END_GAME_COMMAND));
     }
     private onMouseMove(e: any): void {
         const { x, y } = e.data.global;

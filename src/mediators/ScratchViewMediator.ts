@@ -3,7 +3,6 @@ import { Mediator } from "@robotlegsjs/pixi";
 
 import { TickManager } from "../managers/TickManager";
 import { Model } from "../models/Model";
-import { Prizes } from "../utils/Prizes";
 import { ScratchView } from "../views/ScratchView";
 import { GameEvent } from "./../events/GameEvent";
 
@@ -13,17 +12,21 @@ export class ScratchViewMediator extends Mediator<ScratchView> {
     @inject(TickManager) private tickManager: TickManager;
 
     public initialize(): void {
-        this.view.setupPrizes(Prizes.getNine());
-
-        this.tickManager.getTick().add(this.onUpdate);
-        this.eventMap.mapListener(this.eventDispatcher, GameEvent.CLEAR_ALL, this.onClearAll, this);
+        this.eventMap.mapListener(this.eventDispatcher, GameEvent.START, this.onStart, this);
+        this.eventMap.mapListener(this.eventDispatcher, GameEvent.END, this.onEnd, this);
     }
     public destroy(): void {
         this.eventMap.unmapListeners();
         this.tickManager.getTick().remove(this.onUpdate);
     }
-    private onClearAll(): void {
+    private onStart(e: any): void {
+        this.view.setupPrizes(this.model.prizes);
+
+        this.tickManager.getTick().add(this.onUpdate);
+    }
+    private onEnd(e: any): void {
         this.view.clearAll();
+        this.tickManager.getTick().remove(this.onUpdate);
     }
     private onUpdate = () => {
         this.view.addScrach(this.model.posX, this.model.posY);

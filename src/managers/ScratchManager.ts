@@ -20,7 +20,7 @@ export class ScratchManager {
         this.model.posX = NaN;
         this.model.posY = NaN;
         this.model.pressed = false;
-        this.model.prizes = this.generatePrizes();
+        this.model.prizes = Prizes.getNine();
     }
     public scratchPosition(x: number, y: number): void {
         this.model.posX = Math.min(x, MagicValues.SCRATCH_BOX_WIDTH + 50);
@@ -35,15 +35,6 @@ export class ScratchManager {
         if (this.covered.size >= this.mimPercent()) {
             this.eventDispatcher.dispatchEvent(new GameEvent(GameEvent.END_GAME_COMMAND));
         }
-    }
-    private generatePrizes(): string[] {
-        const prizes = [];
-        const total = Prizes.ALL.length;
-        for (let i = 0; i < total; i++) {
-            const rnd = Math.floor(Math.random() * total);
-            prizes.push(Prizes.ALL[rnd]);
-        }
-        return prizes;
     }
     private mimPercent(): number {
         const { SCRATCH_BOX_HEIGHT, SCRATCH_BOX_WIDTH, TILE_SQUARE } = MagicValues;

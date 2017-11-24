@@ -12,7 +12,6 @@ export class ScratchView extends Container {
         super();
         this.createBackground();
         this.createComponents();
-        this.setupMask();
     }
     public setupPrizes(prizes: string[]): void {
         this.items.removeChildren();
@@ -23,6 +22,7 @@ export class ScratchView extends Container {
             sprite.y = Math.floor(i % 3) * (128 + 5) + 5;
             this.items.addChild(sprite);
         }
+        this.setupMask();
     }
     public clearAll(): void {
         this.coverMask.clear();

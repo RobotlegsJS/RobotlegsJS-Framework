@@ -9,6 +9,8 @@ export class Model {
     public posX: number;
     public posY: number;
 
+    public feedback: string;
+
     constructor() {
         this.attempts = 5;
         this.pressed = false;
