@@ -4,7 +4,9 @@ import { IFlowManager } from '@robotlegsjs/pixi-palidor';
 
 import { IntroViewMediator } from '../mediators/IntroViewMediator';
 import { FlowEvent } from './../events/FlowEvent';
+import { MainViewMediator } from './../mediators/MainViewMediator';
 import { IntroView } from './../views/IntroView';
+import { MainView } from './../views/MainView';
 
 @injectable()
 export class ScratchConfig implements IConfig {
@@ -21,8 +23,10 @@ export class ScratchConfig implements IConfig {
     }
     private mapPalidor(): void {
         this.flowManager.map(FlowEvent.SHOW_INTRO_VIEW).toView(IntroView);
+        this.flowManager.map(FlowEvent.SHOW_MAIN_VIEW).toView(MainView);
     }
     private mapMediators(): void {
         this.mediatorMap.map(IntroView).toMediator(IntroViewMediator);
+        this.mediatorMap.map(MainView).toMediator(MainViewMediator);
     }
 }

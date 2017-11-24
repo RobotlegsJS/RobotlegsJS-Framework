@@ -1,9 +1,10 @@
-import { Container, Sprite, Text } from "pixi.js";
+import { Container, Sprite, Text } from 'pixi.js';
 
-import { AssetKeys } from "./../utils/AssetKeys";
-import { MagicValues } from "./../utils/MagicValues";
-import { PixiFactory } from "./../utils/PixiFactory";
-import { Texts } from "./../utils/Texts";
+import { AssetKeys } from './../utils/AssetKeys';
+import { Colors } from './../utils/Colors';
+import { MagicValues } from './../utils/MagicValues';
+import { PixiFactory } from './../utils/PixiFactory';
+import { Texts } from './../utils/Texts';
 
 export class IntroView extends Container {
     constructor() {
@@ -14,7 +15,7 @@ export class IntroView extends Container {
         this.createText();
     }
     private createBackground(): void {
-        this.addChild(PixiFactory.getColorBackground(0x204d63));
+        this.addChild(PixiFactory.getColorBackground(Colors.BACKGROUND_DARK));
     }
     private createImages(): void {
         const logoImg: Sprite = PIXI.Sprite.fromImage(AssetKeys.LOGO_TYPESCRIPT);
@@ -26,7 +27,7 @@ export class IntroView extends Container {
     private createText(): void {
         const style = new PIXI.TextStyle({
             align: "center",
-            fill: 0xb5d6e6,
+            fill: Colors.TEXT,
             fontFamily: "Arial",
             fontSize: 28,
             fontWeight: "bold"
