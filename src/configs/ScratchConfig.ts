@@ -1,12 +1,12 @@
-import { IConfig, IContext, IEventDispatcher, inject, injectable } from '@robotlegsjs/core';
-import { IMediatorMap } from '@robotlegsjs/pixi';
-import { IFlowManager } from '@robotlegsjs/pixi-palidor';
+import { IConfig, IContext, IEventDispatcher, inject, injectable } from "@robotlegsjs/core";
+import { IMediatorMap } from "@robotlegsjs/pixi";
+import { IFlowManager } from "@robotlegsjs/pixi-palidor";
 
-import { IntroViewMediator } from '../mediators/IntroViewMediator';
-import { FlowEvent } from './../events/FlowEvent';
-import { MainViewMediator } from './../mediators/MainViewMediator';
-import { IntroView } from './../views/IntroView';
-import { MainView } from './../views/MainView';
+import { IntroViewMediator } from "../mediators/IntroViewMediator";
+import { FlowEvent } from "./../events/FlowEvent";
+import { MainViewMediator } from "./../mediators/MainViewMediator";
+import { IntroView } from "./../views/IntroView";
+import { MainView } from "./../views/MainView";
 
 @injectable()
 export class ScratchConfig implements IConfig {
