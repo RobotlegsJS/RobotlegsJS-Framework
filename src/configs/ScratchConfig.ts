@@ -2,9 +2,13 @@ import { IConfig, IContext, IEventDispatcher, inject, injectable } from "@robotl
 import { IMediatorMap } from "@robotlegsjs/pixi";
 import { IFlowManager } from "@robotlegsjs/pixi-palidor";
 
+import { HUDViewMediator } from "../mediators/HUDViewMediator";
 import { IntroViewMediator } from "../mediators/IntroViewMediator";
 import { FlowEvent } from "./../events/FlowEvent";
+import { TickManager } from "./../managers/TickManager";
 import { MainViewMediator } from "./../mediators/MainViewMediator";
+import { Model } from "./../models/Model";
+import { HUDView } from "./../views/HUDView";
 import { IntroView } from "./../views/IntroView";
 import { MainView } from "./../views/MainView";
 
@@ -18,6 +22,7 @@ export class ScratchConfig implements IConfig {
     public configure(): void {
         this.mapPalidor();
         this.mapMediators();
+        this.mapSingletons();
 
         this.dispatcher.dispatchEvent(new FlowEvent(FlowEvent.SHOW_INTRO_VIEW));
     }
@@ -28,5 +33,16 @@ export class ScratchConfig implements IConfig {
     private mapMediators(): void {
         this.mediatorMap.map(IntroView).toMediator(IntroViewMediator);
         this.mediatorMap.map(MainView).toMediator(MainViewMediator);
+        this.mediatorMap.map(HUDView).toMediator(HUDViewMediator);
+    }
+    private mapSingletons(): void {
+        this.mapSingleton(TickManager);
+        this.mapSingleton(Model);
+    }
+    private mapSingleton(clazz: any): void {
+        this.context.injector
+            .bind(clazz)
+            .to(clazz)
+            .inSingletonScope();
     }
 }

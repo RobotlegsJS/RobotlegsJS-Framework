@@ -19,6 +19,9 @@ export class HUDView extends Container {
         this.createButtons();
         this.createTexts();
     }
+    public updateRemaining(value: number): void {
+        this._remaining.text = `${Texts.HUD_SCRATCH_REMAINING} ${value}`;
+    }
     private createBackground(): void {
         const { MAX_WIDTH, HUD_HEIGHT } = MagicValues;
         this.addChild(PixiFactory.getColorBox(MAX_WIDTH, HUD_HEIGHT, Colors.BACKGROUND_DARK));
