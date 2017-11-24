@@ -31,7 +31,7 @@ export class ScratchView extends Container {
         this.coverMask.drawRect(0, 0, MagicValues.MAX_WIDTH, MagicValues.MAX_HEIGHT);
     }
     public addScrach(x: number, y: number): void {
-        this.coverMask.drawCircle(x, y, 25);
+        this.coverMask.drawRoundedRect(x - 20, y - 20, 40, 40, Math.random() * 50);
     }
     private setupMask(): void {
         if (this.coverMask) {
