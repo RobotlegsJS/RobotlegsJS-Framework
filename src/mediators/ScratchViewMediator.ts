@@ -20,7 +20,7 @@ export class ScratchViewMediator extends Mediator<ScratchView> {
         this.tickManager.getTick().remove(this.onUpdate);
     }
     private onStart(e: any): void {
-        this.view.setupPrizes(this.model.prizes);
+        this.view.setupPrizes(this.model.prizes, this.model.matchedPrizes);
 
         this.tickManager.getTick().add(this.onUpdate);
     }

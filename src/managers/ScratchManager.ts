@@ -21,6 +21,7 @@ export class ScratchManager {
         this.model.posY = NaN;
         this.model.pressed = false;
         this.model.prizes = Prizes.getNine();
+        this.model.matchedPrizes = this.matchedPrizes();
     }
     public scratchPosition(x: number, y: number): void {
         this.model.posX = Math.min(x, MagicValues.SCRATCH_BOX_WIDTH + 50);
@@ -41,5 +42,19 @@ export class ScratchManager {
         const rows = SCRATCH_BOX_HEIGHT / TILE_SQUARE;
         const cols = SCRATCH_BOX_WIDTH / TILE_SQUARE;
         return rows * cols * 0.9;
+    }
+    private matchedPrizes(): string[] {
+        const prizes = this.model.prizes;
+        const count = {};
+        const hightlight = [];
+        for (const prize of prizes) {
+            count[prize] = count[prize] ? count[prize] + 1 : 1;
+        }
+        for (const prize in count) {
+            if (count[prize] >= 3) {
+                hightlight.push(prize);
+            }
+        }
+        return hightlight;
     }
 }

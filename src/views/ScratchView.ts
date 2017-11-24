@@ -3,6 +3,7 @@ import { Container, Graphics } from "pixi.js";
 import { Colors } from "../utils/Colors";
 import { MagicValues } from "./../utils/MagicValues";
 import { PixiFactory } from "./../utils/PixiFactory";
+import { Item } from "./components/Item";
 
 export class ScratchView extends Container {
     private coverMask: Graphics;
@@ -13,13 +14,14 @@ export class ScratchView extends Container {
         this.createBackground();
         this.createComponents();
     }
-    public setupPrizes(prizes: string[]): void {
+    public setupPrizes(prizes: string[], matched: string[]): void {
         this.items.removeChildren();
 
         for (let i = 0; i < prizes.length; i++) {
-            const sprite = PixiFactory.getSprite(prizes[i]);
-            sprite.x = Math.floor(i / 3) * (128 + 5) + 5;
-            sprite.y = Math.floor(i % 3) * (128 + 5) + 5;
+            const hightlight: boolean = matched.indexOf(prizes[i]) !== -1;
+            const sprite = new Item(prizes[i], hightlight);
+            sprite.x = Math.floor(i / 3) * MagicValues.ITEM_SIZE + 5;
+            sprite.y = Math.floor(i % 3) * MagicValues.ITEM_SIZE + 5;
             this.items.addChild(sprite);
         }
         this.setupMask();

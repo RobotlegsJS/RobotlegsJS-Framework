@@ -10,9 +10,10 @@ export class Model {
     public posY: number;
 
     public feedback: string;
+    public matchedPrizes: string[];
 
     constructor() {
-        this.attempts = 5;
+        this.attempts = 25;
         this.pressed = false;
     }
     public decreaseAttemps(): void {
