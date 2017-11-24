@@ -39,7 +39,7 @@ export class TextButton extends Container {
     private createBackground(): void {
         this._background = new Graphics();
         this._background.beginFill(Colors.BACKGROUND_DARK);
-        this._background.drawRoundedRect(0, 0, 390, 80, 5);
+        this._background.drawRoundedRect(0, 0, 410, 80, 5);
         this._background.pivot.x = this._background.width * 0.5;
         this._background.pivot.y = this._background.height * 0.5;
         this.addChild(this._background);

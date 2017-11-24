@@ -9,6 +9,7 @@ import PIXI = require("pixi.js");
 
 import { ScratchConfig } from "./configs/ScratchConfig";
 import { AssetKeys } from "./utils/AssetKeys";
+import { MagicValues } from "./utils/MagicValues";
 
 class Main {
     private stage: PIXI.Container;
@@ -16,7 +17,7 @@ class Main {
     private context: Context;
 
     constructor() {
-        this.renderer = PIXI.autoDetectRenderer(400, 600, {});
+        this.renderer = PIXI.autoDetectRenderer(MagicValues.MAX_WIDTH, MagicValues.MAX_HEIGHT, {});
         this.stage = new PIXI.Container();
         this.context = new Context();
         // this.context.logLevel = LogLevel.DEBUG;
