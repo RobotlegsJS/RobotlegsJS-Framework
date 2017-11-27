@@ -11,7 +11,7 @@ import { ViewsConfig } from "./minesweeper/configs/ViewsConfig";
 import { Container } from "pixi.js";
 import { Context, MVCSBundle, LogLevel } from "@robotlegsjs/core";
 import { PixiBundle, ContextView } from "@robotlegsjs/pixi";
-import { PalidorPixiExtension, PixiRootContainer } from "@robotlegsjs/pixi-palidor";
+import { PalidorPixiExtension } from "@robotlegsjs/pixi-palidor";
 
 class Main {
     private stage: PIXI.Container;
@@ -25,8 +25,7 @@ class Main {
         // this.context.logLevel = LogLevel.DEBUG;
         this.context.install(MVCSBundle, PixiBundle)
             .install(PalidorPixiExtension)
-            .configure(new ContextView((<any>this.renderer).plugins.interaction))
-            .configure(new PixiRootContainer(this.stage))
+            .configure(new ContextView(this.stage))
             .configure(GameConfig, ViewsConfig, PalidorConfig)
             .initialize();
         let loader = PIXI.loader
@@ -36,17 +35,14 @@ class Main {
             .load(this.onLoad);
         document.body.appendChild(this.renderer.view);
     }
-
     public onLoad(): void {
         AtlasKeys.update(PIXI.utils.TextureCache);
     }
-
     public render = () => {
         this.renderer.render(this.stage);
         window.requestAnimationFrame(this.render);
         window.addEventListener("contextmenu", event => event.preventDefault());
     }
 }
-
-let main = new Main();
+const main = new Main();
 main.render();
