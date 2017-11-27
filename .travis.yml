@@ -2,7 +2,7 @@ language: node_js
 node_js:
   - stable
 env:
-  - CODECLIMATE_REPO_TOKEN=611584fd9f3548ccff1c929361b6f63e199ff57f326c7e4427231db871665ec1
+  - CODECLIMATE_REPO_TOKEN=d37ce445a810c1ed653bf044be06d13b079a2cb7dfce952c568ce1c3e4c94935
   - CODECLIMATE_API_HOST=https://codebeat.co/webhooks/code_coverage CODECLIMATE_REPO_TOKEN=f8670689-0731-4631-aa9a-5561931884ba
 before_install:
   - export CHROME_BIN=chromium-browser
