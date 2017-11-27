@@ -1,35 +1,26 @@
-import { Texts } from "./../utils/Texts";
+import { inject, injectable } from "@robotlegsjs/core";
+import { Mediator } from "@robotlegsjs/pixi";
+
+import { FlowService } from "../services/FlowService";
 import { CustomLevelModel } from "./../game/models/CustomLevelModel";
 import { GameService } from "./../services/GameService";
-import { FlowService } from "../services/FlowService";
+import { Texts } from "./../utils/Texts";
 import { LevelCustomOptionsView } from "./../views/LevelCustomOptionsView";
-import { LevelSelectView } from "../views/LevelSelectView";
-
-import { injectable, inject } from "@robotlegsjs/core";
-import { Mediator } from "@robotlegsjs/pixi";
 
 @injectable()
 export class LevelCustomOptionsViewMediator extends Mediator<LevelCustomOptionsView> {
-
-    @inject(FlowService)
-    public flowService: FlowService;
-
-    @inject(GameService)
-    public gameService: GameService;
-
-    @inject(CustomLevelModel)
-    public customLevelModel: CustomLevelModel;
+    @inject(FlowService) public flowService: FlowService;
+    @inject(GameService) public gameService: GameService;
+    @inject(CustomLevelModel) public customLevelModel: CustomLevelModel;
 
     public initialize(): void {
         this.view.animationIn();
         this.eventMap.mapListener(this.view.backButton, "click", this.onBackClick, this);
         this.eventMap.mapListener(this.view.playButton, "click", this.onPlayClick, this);
     }
-
     public destroy(): void {
         this.eventMap.unmapListeners();
     }
-
     private onPlayClick(e: any): void {
         this.customLevelModel.maxCols = this.view.maxColsNS.value;
         this.customLevelModel.maxRows = this.view.maxRowsNS.value;
@@ -37,7 +28,6 @@ export class LevelCustomOptionsViewMediator extends Mediator<LevelCustomOptionsV
         this.flowService.closePopup();
         this.gameService.createLevel(Texts.CUSTOM);
     }
-
     private onBackClick(e: any): void {
         this.flowService.setLevelSelectView();
     }

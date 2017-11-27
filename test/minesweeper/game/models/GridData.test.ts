@@ -3,7 +3,6 @@ import { GridData } from "./../../../../src/minesweeper/game/models/GridData";
 import { assert } from "chai";
 
 describe("GridData", () => {
-
     let grid: GridData;
 
     beforeEach(() => {
@@ -45,5 +44,4 @@ describe("GridData", () => {
         grid.setCell(cell);
         assert.deepEqual(cell, grid.getCell(col, row));
     });
-
 });

@@ -1,22 +1,19 @@
-import { Cell } from "./../game/models/Cell";
-import { GameManager } from "../game/managers/GameManager";
-import { TileDisplay } from "./../views/components/TileDisplay";
-
 import { inject, injectable } from "@robotlegsjs/core";
 import { Mediator } from "@robotlegsjs/pixi";
 
+import { GameManager } from "../game/managers/GameManager";
+import { Cell } from "./../game/models/Cell";
+import { TileDisplay } from "./../views/components/TileDisplay";
+
 @injectable()
 export class TileDisplayMediator extends Mediator<TileDisplay> {
-
-    @inject(GameManager)
-    public gameManager: GameManager;
+    @inject(GameManager) public gameManager: GameManager;
 
     public initialize(): void {
         this.eventMap.mapListener(this.view, "pointerup", this.onButtonUp, this);
     }
-
     public onButtonUp(e: any): void {
-        let cell: Cell = this.view.cell;
+        const cell: Cell = this.view.cell;
         if (e.data.button === 0) {
             this.gameManager.reveal(cell);
             this.view.reveal();
@@ -26,7 +23,6 @@ export class TileDisplayMediator extends Mediator<TileDisplay> {
             this.view.flag();
         }
     }
-
     public destroy(): void {
         this.eventMap.unmapListeners();
     }

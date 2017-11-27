@@ -1,16 +1,13 @@
-import { CustomButton } from "./components/CustomButton";
+import { TweenLite } from "gsap";
+import { Container } from "pixi.js";
 
 import { AtlasKeys } from "./../utils/AtlasKeys";
-import { MagicValues } from "./../utils/MagicValues";
 import { PixiFactory } from "./../utils/PixiFactory";
 import { Texts } from "./../utils/Texts";
 import { ViewPortSize } from "./../utils/ViewPortSize";
-
-import { TweenLite } from "gsap";
-import { Container, Text } from "pixi.js";
+import { CustomButton } from "./components/CustomButton";
 
 export class PausePopup extends Container {
-
     private _titleText: any;
 
     private _exportButton: CustomButton;
@@ -47,24 +44,21 @@ export class PausePopup extends Container {
         this.createButtons();
         this.createTexts();
     }
-
     public animationIn(): void {
-        let posY = ViewPortSize.MAX_HEIGHT * .8;
-        let tweenTitle = new TweenLite(this._titleText, .3, { alpha: 1 });
-        let tweenButton0 = new TweenLite(this._resumeButton, .1, { y: 50, delay: .1 });
-        let tweenButton1 = new TweenLite(this._exportButton, .1, { y: posY, delay: .2 });
-        let tweenButton2 = new TweenLite(this._retryButton, .1, { y: posY, delay: .3 });
-        let tweenButton3 = new TweenLite(this._homeButton, .1, { y: posY, delay: .4 });
-        let tweenButton4 = new TweenLite(this._levelButton, .1, { y: posY, delay: .5 });
+        const posY = ViewPortSize.MAX_HEIGHT * 0.8;
+        const tweenTitle = new TweenLite(this._titleText, 0.3, { alpha: 1 });
+        const tweenButton0 = new TweenLite(this._resumeButton, 0.1, { y: 50, delay: 0.1 });
+        const tweenButton1 = new TweenLite(this._exportButton, 0.1, { y: posY, delay: 0.2 });
+        const tweenButton2 = new TweenLite(this._retryButton, 0.1, { y: posY, delay: 0.3 });
+        const tweenButton3 = new TweenLite(this._homeButton, 0.1, { y: posY, delay: 0.4 });
+        const tweenButton4 = new TweenLite(this._levelButton, 0.1, { y: posY, delay: 0.5 });
     }
-
     private createBackgrounds(): void {
         this.addChild(PixiFactory.getShadowBackground());
         this.addChild(PixiFactory.getShadowHeader());
     }
-
     private createButtons(): void {
-        let posY = ViewPortSize.MAX_HEIGHT + 100;
+        const posY = ViewPortSize.MAX_HEIGHT + 100;
 
         this._resumeButton = PixiFactory.getIconButton(AtlasKeys.ICON_RESUME);
         this._resumeButton.x = ViewPortSize.MAX_WIDTH - 50;
@@ -91,7 +85,6 @@ export class PausePopup extends Container {
         this._levelButton.y = posY;
         this.addChild(this._levelButton);
     }
-
     private createTexts(): void {
         this._titleText = PixiFactory.getTitle(Texts.PAUSED);
         this._titleText.alpha = 0;

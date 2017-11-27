@@ -109,7 +109,7 @@ describe("GameService", () => {
         let dispatcherSpy = sinon.spy(gameService.eventDispatcher, "dispatchEvent");
         let leveId = Texts.EASY;
         gameService.createLevel(leveId);
-        let event: GameEvent = <GameEvent>(dispatcherSpy.firstCall.args[0]);
+        let event: GameEvent = <GameEvent>dispatcherSpy.firstCall.args[0];
 
         assert.isTrue(dispatcherSpy.calledOnce);
         assert.equal(event.type, GameEvent.CREATE_LEVEL_COMMAND, "type");

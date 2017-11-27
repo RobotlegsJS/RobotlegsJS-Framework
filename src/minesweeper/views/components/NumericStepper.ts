@@ -1,13 +1,11 @@
-import { CustomButton } from "./CustomButton";
-import { MagicValues } from "../../utils/MagicValues";
-import { PixiFactory } from "../../utils/PixiFactory";
-
 import { Container } from "pixi.js";
 
-export class NumericStepper extends Container {
+import { PixiFactory } from "../../utils/PixiFactory";
+import { CustomButton } from "./CustomButton";
 
+export class NumericStepper extends Container {
     private _value: number;
-    public get value(): number{
+    public get value(): number {
         return this._value;
     }
     private _maxValue: number;
@@ -28,16 +26,14 @@ export class NumericStepper extends Container {
         this.interactive = true;
         this.createTexts();
         this.createButtons();
-        this.scale.set(.5);
+        this.scale.set(0.5);
     }
-
     public createTexts(): void {
         this._valueText = PixiFactory.getText(this._value.toString());
         this._valueText.x = 85;
         this._valueText.y = -5;
         this.addChild(this._valueText);
     }
-
     public createButtons(): void {
         this._decreaseButton = PixiFactory.getTextButton("-");
         this._decreaseButton.y = 10;
@@ -50,14 +46,12 @@ export class NumericStepper extends Container {
         this.addChild(this._increaseButton);
         this._increaseButton.on("mouseup", this.increase);
     }
-
     private descrease = (e: any, thisNS = this) => {
         thisNS._value = Math.max(thisNS._minValue, thisNS._value - 1);
         thisNS._valueText.text = thisNS._value.toString();
-    }
-
+    };
     private increase = (e: any, thisNS = this) => {
         thisNS._value = Math.min(thisNS._maxValue, thisNS._value + 1);
         thisNS._valueText.text = thisNS._value.toString();
-    }
+    };
 }

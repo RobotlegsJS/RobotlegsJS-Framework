@@ -26,19 +26,15 @@ export class Cell {
         this._col = col;
         this._row = row;
     }
-
     public increaseValue(): void {
         this._value += 1;
     }
-
     public decreaseValue(): void {
         this._value = Math.max(this.value - 1, 0);
     }
-
     public setCellAsAMine() {
         this._isMine = true;
     }
-
     public isMine(): boolean {
         return this._isMine;
     }

@@ -4,9 +4,13 @@
   "description": "OpenSource Game",
   "main": "src/index.ts",
   "scripts": {
+    "autoformat": "prettier --config .prettierrc --write '{src,test}/**/*.ts'",
+    "clean": "rimraf coverage",
+    "lint": "tslint-config-prettier-check ./tslint.json",
+    "prepush": "npm run clean && npm run autoformat && npm run lint",
     "start": "webpack-dev-server --config ./webpack.dev.config.js",
-    "test": "./node_modules/.bin/karma start --single-run --browsers PhantomJS",
-    "karma": "karma start || true"
+    "test": "./node_modules/.bin/karma start --single-run",
+    "test:tdd": "./node_modules/.bin/karma start"
   },
   "repository": {
     "type": "git",

@@ -2,7 +2,6 @@ import { Cell } from "./../../../../src/minesweeper/game/models/Cell";
 import { assert } from "chai";
 
 describe("Cell", () => {
-
     let cell: Cell;
 
     beforeEach(() => {

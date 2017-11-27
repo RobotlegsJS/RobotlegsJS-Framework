@@ -1,15 +1,14 @@
-import { CustomButton } from "./components/CustomButton";
-import { NumericStepper } from "./components/NumericStepper";
+import { TweenLite } from "gsap";
+import { Container } from "pixi.js";
+
 import { AtlasKeys } from "../utils/AtlasKeys";
 import { Texts } from "../utils/Texts";
 import { PixiFactory } from "./../utils/PixiFactory";
 import { ViewPortSize } from "./../utils/ViewPortSize";
-
-import { TweenLite } from "gsap";
-import { Container, Sprite } from "pixi.js";
+import { CustomButton } from "./components/CustomButton";
+import { NumericStepper } from "./components/NumericStepper";
 
 export class LevelCustomOptionsView extends Container {
-
     private _titleText: any;
     private _maxColsText: any;
     private _maxRowsText: any;
@@ -48,20 +47,18 @@ export class LevelCustomOptionsView extends Container {
         this.createButtons();
         this.createNumericSteppers();
     }
-
     public animationIn(): void {
-        let posY = ViewPortSize.MAX_HEIGHT * .8;
-        let tweenTitle = new TweenLite(this._titleText, .3, { alpha: 1 });
-        let tweenText1 = new TweenLite(this._maxColsText, .3, { alpha: 1, delay: .1 });
-        let tweenNS1 = new TweenLite(this._maxColsNS, .3, { alpha: 1, delay: .2 });
-        let tweenText2 = new TweenLite(this._maxRowsText, .3, { alpha: 1, delay: .2 });
-        let tweenNS2 = new TweenLite(this._maxRowsNS, .3, { alpha: 1, delay: .3 });
-        let tweenText3 = new TweenLite(this._maxMinesText, .3, { alpha: 1, delay: .3 });
-        let tweenNS3 = new TweenLite(this._maxMinesNS, .3, { alpha: 1, delay: .4 });
-        let tweenButton3 = new TweenLite(this.backButton, .1, { y: posY, delay: .3 });
-        let tweenButton4 = new TweenLite(this.playButton, .1, { y: posY, delay: .4 });
+        const posY = ViewPortSize.MAX_HEIGHT * 0.8;
+        const tweenTitle = new TweenLite(this._titleText, 0.3, { alpha: 1 });
+        const tweenText1 = new TweenLite(this._maxColsText, 0.3, { alpha: 1, delay: 0.1 });
+        const tweenNS1 = new TweenLite(this._maxColsNS, 0.3, { alpha: 1, delay: 0.2 });
+        const tweenText2 = new TweenLite(this._maxRowsText, 0.3, { alpha: 1, delay: 0.2 });
+        const tweenNS2 = new TweenLite(this._maxRowsNS, 0.3, { alpha: 1, delay: 0.3 });
+        const tweenText3 = new TweenLite(this._maxMinesText, 0.3, { alpha: 1, delay: 0.3 });
+        const tweenNS3 = new TweenLite(this._maxMinesNS, 0.3, { alpha: 1, delay: 0.4 });
+        const tweenButton3 = new TweenLite(this.backButton, 0.1, { y: posY, delay: 0.3 });
+        const tweenButton4 = new TweenLite(this.playButton, 0.1, { y: posY, delay: 0.4 });
     }
-
     private createNumericSteppers(): void {
         this._maxColsNS = new NumericStepper(6, 13, 9);
         this._maxColsNS.x = 260;
@@ -81,7 +78,6 @@ export class LevelCustomOptionsView extends Container {
         this._maxMinesNS.alpha = 0;
         this.addChild(this._maxMinesNS);
     }
-
     private createTexts(): void {
         this._titleText = PixiFactory.getTitle(Texts.LEVEL_EDITOR_OPTIONS);
         this._titleText.alpha = 0;
@@ -105,22 +101,20 @@ export class LevelCustomOptionsView extends Container {
         this._maxMinesText.alpha = 0;
         this.addChild(this._maxMinesText);
     }
-
     private createBackground(): void {
         this.addChild(PixiFactory.getColorBackground());
     }
-
     private createButtons(): void {
         this._backButton = PixiFactory.getTextButton(Texts.BACK);
         this._backButton.x = ViewPortSize.HALF_WIDTH - 40;
         this._backButton.y = ViewPortSize.MAX_HEIGHT + 100;
-        this._backButton.anchor.set(.5);
+        this._backButton.anchor.set(0.5);
         this.addChild(this._backButton);
 
         this._playButton = PixiFactory.getIconButton(AtlasKeys.ICON_RESUME);
         this._playButton.x = ViewPortSize.HALF_WIDTH + 40;
         this._playButton.y = ViewPortSize.MAX_HEIGHT + 100;
-        this._playButton.anchor.set(.5);
+        this._playButton.anchor.set(0.5);
         this.addChild(this._playButton);
     }
 }

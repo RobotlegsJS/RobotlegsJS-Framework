@@ -8,7 +8,6 @@ import { LevelModel } from "./../../../../src/minesweeper/game/models/LevelModel
 import { assert } from "chai";
 
 describe("LevelUtils", () => {
-
     let level: LevelModel;
 
     beforeEach(() => {
@@ -102,7 +101,7 @@ describe("LevelUtils", () => {
         let neighbors: Array<Cell> = GridUtils.getNeighbors(level.grid, cell);
         let result = true;
         for (let i = 0; i < neighbors.length; i++) {
-            result = result && (neighbors[i].value === 1);
+            result = result && neighbors[i].value === 1;
         }
         assert.isTrue(result);
     });
@@ -125,7 +124,7 @@ describe("LevelUtils", () => {
         let totalIntersectNeighbors = 3;
         let count = 0;
         for (let i = 0; i < neighbors1.length; i++) {
-            if ((neighbors2.indexOf(neighbors1[i]) !== -1) && neighbors1[i].value === 2) {
+            if (neighbors2.indexOf(neighbors1[i]) !== -1 && neighbors1[i].value === 2) {
                 count++;
             }
         }

@@ -1,13 +1,12 @@
-import { AtlasKeys } from "./../../utils/AtlasKeys";
+import { Container, Graphics } from "pixi.js";
+
 import { Cell } from "./../../game/models/Cell";
+import { AtlasKeys } from "./../../utils/AtlasKeys";
 import { Colors } from "./../../utils/Colors";
 import { MagicValues } from "./../../utils/MagicValues";
 import { PixiFactory } from "./../../utils/PixiFactory";
 
-import { Graphics, Container } from "pixi.js";
-
 export class TileDisplay extends Container {
-
     public cell: Cell;
 
     private _background: Graphics;
@@ -24,7 +23,6 @@ export class TileDisplay extends Container {
         this.createBackground();
         this.setValue();
     }
-
     public show(): void {
         if (this._container.visible === false) {
             let color: number = Colors.TILE_BACKGROUND_OPEN;
@@ -35,7 +33,6 @@ export class TileDisplay extends Container {
         }
         this._container.visible = true;
     }
-
     public reveal(): void {
         this.show();
         if (this.cell.isMine() === true) {
@@ -44,12 +41,10 @@ export class TileDisplay extends Container {
             this.drawBackground(Colors.TILE_BACKGROUND_OPEN);
         }
     }
-
     public flag(): void {
         this._flagContainer.visible = true;
         this.createFlag();
     }
-
     private createBackground(): void {
         this._background = new Graphics();
         this.addChild(this._background);
@@ -71,37 +66,33 @@ export class TileDisplay extends Container {
             this.createText();
         }
     }
-
     private createMine(): void {
-        let mine = PixiFactory.getImage(AtlasKeys.ICON_MINE);
-        mine.pivot.x = mine.width * .5;
-        mine.pivot.y = mine.height * .5;
+        const mine = PixiFactory.getImage(AtlasKeys.ICON_MINE);
+        mine.pivot.x = mine.width * 0.5;
+        mine.pivot.y = mine.height * 0.5;
         this._container.addChild(mine);
     }
-
     private createFlag(): void {
-        let flag = PixiFactory.getImage(AtlasKeys.ICON_FLAG);
-        flag.pivot.x = flag.width * .5;
-        flag.pivot.y = flag.height * .5;
+        const flag = PixiFactory.getImage(AtlasKeys.ICON_FLAG);
+        flag.pivot.x = flag.width * 0.5;
+        flag.pivot.y = flag.height * 0.5;
         this._flagContainer.addChild(flag);
     }
-
     private createText(): void {
-        let colors: Array<number> = [
+        const colors: number[] = [
             Colors.TILE_TEXT_1,
             Colors.TILE_TEXT_1,
             Colors.TILE_TEXT_2,
             Colors.TILE_TEXT_3,
-            Colors.TILE_TEXT_4,
+            Colors.TILE_TEXT_4
         ];
         this._container.addChild(PixiFactory.getTileLabel(this.cell.value.toString(), colors[this.cell.value]));
     }
-
     private drawBackground(color: number): void {
         this._background.clear();
         this._background.beginFill(color);
         this._background.drawRoundedRect(0, 0, MagicValues.TILE_WIDTH - 1, MagicValues.TILE_HEIGHT - 1, 5);
-        this._background.pivot.x = this._background.width * .5;
-        this._background.pivot.y = this._background.height * .5;
+        this._background.pivot.x = this._background.width * 0.5;
+        this._background.pivot.y = this._background.height * 0.5;
     }
 }

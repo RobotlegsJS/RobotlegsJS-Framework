@@ -1,18 +1,14 @@
+import { inject, injectable } from "@robotlegsjs/core";
+import { Mediator } from "@robotlegsjs/pixi";
+
 import { FlowService } from "./../services/FlowService";
 import { GameService } from "./../services/GameService";
 import { StartingPopup } from "./../views/StartingPopup";
 
-import { injectable, inject } from "@robotlegsjs/core";
-import { Mediator } from "@robotlegsjs/pixi";
-
 @injectable()
 export class StartingPopupMediator extends Mediator<StartingPopup> {
-
-    @inject(GameService)
-    public gameService: GameService;
-
-    @inject(FlowService)
-    public flowService: FlowService;
+    @inject(GameService) public gameService: GameService;
+    @inject(FlowService) public flowService: FlowService;
 
     private _count: number;
 
@@ -21,11 +17,9 @@ export class StartingPopupMediator extends Mediator<StartingPopup> {
 
         this.tick();
     }
-
     public destroy(): void {
         this.eventMap.unmapListeners();
     }
-
     private tick() {
         this._count -= 1;
         if (this._count > 0) {
@@ -35,7 +29,6 @@ export class StartingPopupMediator extends Mediator<StartingPopup> {
             this.tick_onComplete();
         }
     }
-
     private tick_onComplete(): void {
         this.gameService.resume();
         this.flowService.closePopup();

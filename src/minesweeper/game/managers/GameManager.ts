@@ -1,24 +1,18 @@
-import { CustomLevelModel } from "../models/CustomLevelModel";
-import { GridUtils } from "../utils/GridUtils";
+import { inject, injectable } from "@robotlegsjs/core";
+
 import { Texts } from "../../utils/Texts";
 import { Cell } from "../models/Cell";
-import { GameService } from "./../../services/GameService";
+import { CustomLevelModel } from "../models/CustomLevelModel";
+import { GridUtils } from "../utils/GridUtils";
 import { LevelUtils } from "../utils/LevelUtils";
+import { GameService } from "./../../services/GameService";
 import { LevelModel } from "./../models/LevelModel";
-
-import { injectable, inject } from "@robotlegsjs/core";
 
 @injectable()
 export class GameManager {
-
-    @inject(LevelModel)
-    public level: LevelModel;
-
-    @inject(CustomLevelModel)
-    public customLevel: CustomLevelModel;
-
-    @inject(GameService)
-    public gameService: GameService;
+    @inject(LevelModel) public level: LevelModel;
+    @inject(CustomLevelModel) public customLevel: CustomLevelModel;
+    @inject(GameService) public gameService: GameService;
 
     public generateGrid(levelId) {
         if (levelId === Texts.CUSTOM) {
@@ -31,7 +25,6 @@ export class GameManager {
             LevelUtils.generateBeginnerLevel(this.level);
         }
     }
-
     public reveal(cell: Cell): void {
         if (cell.isMine() === true) {
             this.level.update.push(cell);
@@ -46,28 +39,24 @@ export class GameManager {
             }
         }
     }
-
     public invokeGameOver(): void {
         this.gameService.updateGridField();
         this.gameService.gameOver();
         this.gameService.gameOverCommand();
     }
-
     public invokeYouWin(): void {
         this.gameService.gameOverCommand();
     }
-
     public isFinished(): boolean {
-        let totalCells = this.level.grid.maxCols * this.level.grid.maxRows;
+        const totalCells = this.level.grid.maxCols * this.level.grid.maxRows;
 
-        return (totalCells === (this.level.numMines + this.level.update.length));
+        return totalCells === this.level.numMines + this.level.update.length;
     }
-
     public floodFill(cell: Cell): void {
         if (this.level.update.indexOf(cell) === -1) {
             this.level.update.push(cell);
             if (cell.value === 0 && cell.isMine() === false) {
-                let neighbour: Array<Cell> = GridUtils.getNeighbors(this.level.grid, cell);
+                const neighbour: Cell[] = GridUtils.getNeighbors(this.level.grid, cell);
                 for (let i = 0; i < neighbour.length; i++) {
                     if (neighbour[i].isMine() === false) {
                         this.floodFill(neighbour[i]);
@@ -76,7 +65,6 @@ export class GameManager {
             }
         }
     }
-
     public flag(cell: Cell): void {
         if (!cell.isFlag) {
             this.level.numFlags -= 1;

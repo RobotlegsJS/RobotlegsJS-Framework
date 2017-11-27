@@ -1,23 +1,16 @@
+import { inject, injectable } from "@robotlegsjs/core";
+import { Mediator } from "@robotlegsjs/pixi";
+
 import { HighScoreManager } from "../game/managers/HighScoreManager";
 import { LevelSelectView } from "../views/LevelSelectView";
-import { GameService } from "./../services/GameService";
 import { FlowService } from "./../services/FlowService";
-import { ViewPortSize } from "./../utils/ViewPortSize";
-
-import { injectable, inject } from "@robotlegsjs/core";
-import { Mediator } from "@robotlegsjs/pixi";
+import { GameService } from "./../services/GameService";
 
 @injectable()
 export class LevelSelectViewMediator extends Mediator<LevelSelectView> {
-
-    @inject(FlowService)
-    public flowService: FlowService;
-
-    @inject(GameService)
-    public gameService: GameService;
-
-    @inject(HighScoreManager)
-    public highScoreManager: HighScoreManager;
+    @inject(FlowService) public flowService: FlowService;
+    @inject(GameService) public gameService: GameService;
+    @inject(HighScoreManager) public highScoreManager: HighScoreManager;
 
     public initialize(): void {
         this.view.updateHighscore(this.highScoreManager.getAllHighScore());
@@ -27,17 +20,14 @@ export class LevelSelectViewMediator extends Mediator<LevelSelectView> {
         this.eventMap.mapListener(this.view.hardButton, "click", this.levelButton_onTriggeredHandler, this);
         this.eventMap.mapListener(this.view.customButton, "click", this.levelCustomButton_onTriggeredHandler, this);
     }
-
     public destroy(): void {
         this.eventMap.unmapListeners();
     }
-
     private levelCustomButton_onTriggeredHandler(e: any): void {
         this.flowService.showLevelCustomOptionsView();
     }
-
     private levelButton_onTriggeredHandler(e: any): void {
-        let levelId = e.target.text;
+        const levelId = e.target.text;
         this.gameService.createLevel(levelId);
     }
 }

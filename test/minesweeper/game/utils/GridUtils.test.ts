@@ -4,7 +4,6 @@ import { GridData } from "./../../../../src/minesweeper/game/models/GridData";
 import { assert } from "chai";
 
 describe("GridUtils", () => {
-
     let grid: GridData;
 
     beforeEach(() => {
@@ -14,7 +13,6 @@ describe("GridUtils", () => {
     afterEach(() => {
         grid = undefined;
     });
-
 
     it("GetNeighbors", () => {
         let col = 4;
@@ -37,7 +35,7 @@ describe("GridUtils", () => {
 
         let result = true;
         for (let i = 0; i < neighbors.length; i++) {
-            result = result && (neighborsResult.indexOf(neighbors[i]) !== -1);
+            result = result && neighborsResult.indexOf(neighbors[i]) !== -1;
         }
         assert.isTrue(result);
         assert.equal(neighbors.length, neighborsResult.length);
@@ -56,7 +54,7 @@ describe("GridUtils", () => {
         let neighborsResult: Array<Cell> = GridUtils.getNeighbors(grid, cell);
         let result = true;
         for (let i = 0; i < neighbors.length; i++) {
-            result = result && (neighborsResult.indexOf(neighbors[i]) !== -1);
+            result = result && neighborsResult.indexOf(neighbors[i]) !== -1;
         }
         assert.isTrue(result);
         assert.equal(neighbors.length, neighborsResult.length);
@@ -75,7 +73,7 @@ describe("GridUtils", () => {
         let neighborsResult: Array<Cell> = GridUtils.getNeighbors(grid, cell);
         let result = true;
         for (let i = 0; i < neighbors.length; i++) {
-            result = result && (neighborsResult.indexOf(neighbors[i]) !== -1);
+            result = result && neighborsResult.indexOf(neighbors[i]) !== -1;
         }
         assert.isTrue(result);
         assert.equal(neighbors.length, neighborsResult.length);
@@ -94,7 +92,7 @@ describe("GridUtils", () => {
         let neighborsResult: Array<Cell> = GridUtils.getNeighbors(grid, cell);
         let result = true;
         for (let i = 0; i < neighbors.length; i++) {
-            result = result && (neighborsResult.indexOf(neighbors[i]) !== -1);
+            result = result && neighborsResult.indexOf(neighbors[i]) !== -1;
         }
         assert.isTrue(result);
         assert.equal(neighbors.length, neighborsResult.length);
@@ -113,7 +111,7 @@ describe("GridUtils", () => {
         let neighborsResult: Array<Cell> = GridUtils.getNeighbors(grid, cell);
         let result = true;
         for (let i = 0; i < neighbors.length; i++) {
-            result = result && (neighborsResult.indexOf(neighbors[i]) !== -1);
+            result = result && neighborsResult.indexOf(neighbors[i]) !== -1;
         }
         assert.isTrue(result);
         assert.equal(neighbors.length, neighborsResult.length);

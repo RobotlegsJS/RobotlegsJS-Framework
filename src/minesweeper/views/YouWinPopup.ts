@@ -1,16 +1,14 @@
-import { CustomButton } from "./components/CustomButton";
+import { TweenLite } from "gsap";
+import { Container } from "pixi.js";
 
 import { AtlasKeys } from "./../utils/AtlasKeys";
 import { MagicValues } from "./../utils/MagicValues";
 import { PixiFactory } from "./../utils/PixiFactory";
 import { Texts } from "./../utils/Texts";
 import { ViewPortSize } from "./../utils/ViewPortSize";
-
-import { Container, Text } from "pixi.js";
-import { TweenLite } from "gsap";
+import { CustomButton } from "./components/CustomButton";
 
 export class YouWinPopup extends Container {
-
     private _titleText: any;
     private _msgText: any;
     private _timeText: any;
@@ -36,57 +34,52 @@ export class YouWinPopup extends Container {
         this.createButtons();
         this.createText();
     }
-
     public animationIn(): void {
-        let posY = ViewPortSize.MAX_HEIGHT * .8;
-        let tweenTitle = new TweenLite(this._titleText, .3, { alpha: 1 });
-        let tweenText1 = new TweenLite(this._msgText, .3, { alpha: 1 });
-        let tweenText2 = new TweenLite(this._timeText, .3, { alpha: 1 });
-        let tweenText3 = new TweenLite(this._bestText, .3, { alpha: 1 });
-        let tweenText4 = new TweenLite(this._clicksText, .3, { alpha: 1 });
-        let tweenButton1 = new TweenLite(this._retryButton, .1, { y: posY });
-        let tweenButton2 = new TweenLite(this._homeButton, .1, { y: posY, delay: .1 });
+        const posY = ViewPortSize.MAX_HEIGHT * 0.8;
+        const tweenTitle = new TweenLite(this._titleText, 0.3, { alpha: 1 });
+        const tweenText1 = new TweenLite(this._msgText, 0.3, { alpha: 1 });
+        const tweenText2 = new TweenLite(this._timeText, 0.3, { alpha: 1 });
+        const tweenText3 = new TweenLite(this._bestText, 0.3, { alpha: 1 });
+        const tweenText4 = new TweenLite(this._clicksText, 0.3, { alpha: 1 });
+        const tweenButton1 = new TweenLite(this._retryButton, 0.1, { y: posY });
+        const tweenButton2 = new TweenLite(this._homeButton, 0.1, { y: posY, delay: 0.1 });
     }
-
     public showInfo(time: number, numClick: number): void {
         this._timeText.text = Texts.GAME_TIME + MagicValues.convertTime(time);
         this._bestText.text = Texts.GAME_BEST_TIME + MagicValues.convertTime(time);
         this._clicksText.text = Texts.NUM_CLICKS + numClick;
 
-        this._timeText.pivot.x = this._timeText.width * .5;
+        this._timeText.pivot.x = this._timeText.width * 0.5;
         this._timeText.x = ViewPortSize.HALF_WIDTH;
 
-        this._bestText.pivot.x = this._bestText.width * .5;
+        this._bestText.pivot.x = this._bestText.width * 0.5;
         this._bestText.x = ViewPortSize.HALF_WIDTH;
 
-        this._clicksText.pivot.x = this._clicksText.width * .5;
+        this._clicksText.pivot.x = this._clicksText.width * 0.5;
         this._clicksText.x = ViewPortSize.HALF_WIDTH;
     }
-
     private createBackgrounds(): void {
-        this.addChild(PixiFactory.getShadowBackground(.8));
+        this.addChild(PixiFactory.getShadowBackground(0.8));
         this.addChild(PixiFactory.getShadowHeader());
     }
-
     private createButtons(): void {
         this._homeButton = PixiFactory.getIconButton(AtlasKeys.ICON_HOME);
-        this._homeButton.x = ViewPortSize.HALF_WIDTH + this._homeButton.width * .5 + 4;
+        this._homeButton.x = ViewPortSize.HALF_WIDTH + this._homeButton.width * 0.5 + 4;
         this._homeButton.y = ViewPortSize.MAX_HEIGHT + 100;
         this.addChild(this._homeButton);
 
         this._retryButton = PixiFactory.getIconButton(AtlasKeys.ICON_RETRY);
-        this._retryButton.x = ViewPortSize.HALF_WIDTH - this._retryButton.width * .5 - 4;
+        this._retryButton.x = ViewPortSize.HALF_WIDTH - this._retryButton.width * 0.5 - 4;
         this._retryButton.y = ViewPortSize.MAX_HEIGHT + 100;
         this.addChild(this._retryButton);
     }
-
     private createText(): void {
         this._titleText = PixiFactory.getTitle(Texts.YOU_WIN);
         this._titleText.alpha = 0;
         this.addChild(this._titleText);
 
         this._msgText = PixiFactory.getText(Texts.WIN_MSG);
-        this._msgText.pivot.x = this._msgText.width * .5;
+        this._msgText.pivot.x = this._msgText.width * 0.5;
         this._msgText.x = ViewPortSize.HALF_WIDTH;
         this._msgText.y = 130;
         this._msgText.alpha = 0;
