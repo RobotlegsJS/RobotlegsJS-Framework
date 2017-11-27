@@ -11,7 +11,9 @@
     "@robotlegsjs/pixi-palidor": "^0.1.1",
     "gsap": "^1.20.3",
     "pixi.js": "^4.6.1",
-    "reflect-metadata": "^0.1.10"
+    "prettier": "^1.8.2",
+    "reflect-metadata": "^0.1.10",
+    "tslint-config-prettier": "^1.6.0"
   },
   "devDependencies": {
     "@types/pixi.js": "^4.6.0",
@@ -23,6 +25,7 @@
     "webpack-dev-server": "^2.9.4"
   },
   "scripts": {
+    "autoformat": "prettier --config .prettierrc --write {src,test}/**/*.ts",
     "start": "webpack-dev-server --config ./webpack.config.js"
   },
   "keywords": [

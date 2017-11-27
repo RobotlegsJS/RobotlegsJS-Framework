@@ -1,5 +1,4 @@
 export class Rectangle {
-
     public x: number;
     public y: number;
     public width: number;
@@ -13,10 +12,10 @@ export class Rectangle {
     }
 
     public intersects(toIntersect: any): boolean {
-        let resultx = Math.max(this.x, toIntersect.x);
-        let resulty = Math.max(this.y, toIntersect.y);
-        let resultwidth = Math.min(this.x + this.width, toIntersect.x + toIntersect.width) - resultx;
-        let resultheight = Math.min(this.y + this.height, toIntersect.y + toIntersect.height) - resulty;
+        const resultx = Math.max(this.x, toIntersect.x);
+        const resulty = Math.max(this.y, toIntersect.y);
+        const resultwidth = Math.min(this.x + this.width, toIntersect.x + toIntersect.width) - resultx;
+        const resultheight = Math.min(this.y + this.height, toIntersect.y + toIntersect.height) - resulty;
         if (resultwidth <= 0 || resultheight <= 0) {
             return false;
         }

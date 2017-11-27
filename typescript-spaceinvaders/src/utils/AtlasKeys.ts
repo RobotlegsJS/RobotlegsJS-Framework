@@ -1,7 +1,6 @@
 import { Texture } from "pixi.js";
 
 export class AtlasKeys {
-
     public static BUTTON_CANCEL = "button_cancel";
     public static BUTTON_CONFIG = "button_config";
     public static BUTTON_CONFIRM = "button_confirm";
@@ -35,8 +34,7 @@ export class AtlasKeys {
         this.resources = PIXI.loader.resources;
         this.textureCache = PIXI.utils.TextureCache;
     }
-
-    public static getTexture( atlasKey: string): Texture {
+    public static getTexture(atlasKey: string): Texture {
         return this.textureCache[atlasKey];
     }
 }

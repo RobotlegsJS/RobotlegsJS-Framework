@@ -1,7 +1,6 @@
 import { Sprite } from "pixi.js";
 
 export class Entity {
-
     public static BULLET = 11;
     public static CANNON = 10;
     public static ENEMY_1 = 1;
@@ -17,11 +16,9 @@ export class Entity {
     public get typeID(): number {
         return this._typeID;
     }
-
     constructor(typeID: number) {
         this._typeID = typeID;
     }
-
     public applyPosition(): void {
         this.display.x = this.x;
         this.display.y = this.y;

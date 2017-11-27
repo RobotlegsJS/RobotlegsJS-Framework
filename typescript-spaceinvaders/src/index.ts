@@ -1,14 +1,15 @@
+// tslint:disable-next-line:no-reference
 /// <reference path="../node_modules/@robotlegsjs/pixi/definitions/pixi.d.ts" />
 import "reflect-metadata";
+
+import { Context, MVCSBundle } from "@robotlegsjs/core";
+import { ContextView, PixiBundle } from "@robotlegsjs/pixi";
+import { PalidorPixiExtension } from "@robotlegsjs/pixi-palidor";
 import PIXI = require("pixi.js");
 
 import { GameConfig } from "./config/GameConfig";
 import { PalidorConfig } from "./config/PalidorConfig";
 import { ViewsConfig } from "./config/ViewsConfig";
-
-import { Context, MVCSBundle, LogLevel } from "@robotlegsjs/core";
-import { PixiBundle, ContextView } from "@robotlegsjs/pixi";
-import { PalidorPixiExtension } from "@robotlegsjs/pixi-palidor";
 
 class Main {
     private stage: PIXI.Container;
@@ -20,20 +21,19 @@ class Main {
         this.stage = new PIXI.Container();
         this.context = new Context();
         // this.context.logLevel = LogLevel.DEBUG;
-        this.context.install(MVCSBundle, PixiBundle)
-        .install(PalidorPixiExtension)
+        this.context
+            .install(MVCSBundle, PixiBundle)
+            .install(PalidorPixiExtension)
             .configure(new ContextView(this.stage))
             .configure(ViewsConfig, GameConfig, PalidorConfig)
             .initialize();
 
         document.body.appendChild(this.renderer.view);
     }
-
     public render = () => {
         this.renderer.render(this.stage);
         window.requestAnimationFrame(this.render);
-    }
+    };
 }
-
-let main = new Main();
+const main = new Main();
 main.render();

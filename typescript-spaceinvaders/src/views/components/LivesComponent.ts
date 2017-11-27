@@ -1,29 +1,26 @@
+import { Container, Sprite } from "pixi.js";
+
 import { AtlasKeys } from "./../../utils/AtlasKeys";
 import { PixiFactory } from "./../../utils/PixiFactory";
 
-import { Container, Sprite } from "pixi.js";
-
 export class LivesComponent extends Container {
-
-    private _cannons: Array<Sprite>;
+    private _cannons: Sprite[];
 
     constructor() {
         super();
 
         this.createDisplays();
     }
-
     public updateLives(value: number): void {
         for (let i = 0; i < this._cannons.length; i++) {
-            this._cannons[i].visible = (i < value);
+            this._cannons[i].visible = i < value;
         }
     }
-
     private createDisplays(): void {
         this._cannons = new Array<Sprite>();
 
         for (let i = 0; i < 3; i++) {
-            let cannon: Sprite = PixiFactory.getImage(AtlasKeys.CANNON_HUD);
+            const cannon: Sprite = PixiFactory.getImage(AtlasKeys.CANNON_HUD);
             cannon.x = i * 33;
             cannon.y = -3;
             this.addChild(cannon);

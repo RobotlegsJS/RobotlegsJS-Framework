@@ -1,14 +1,12 @@
+import { inject, injectable } from "@robotlegsjs/core";
+import { Mediator } from "@robotlegsjs/pixi";
+
 import { FlowService } from "./../services/FlowService";
 import { InfoPopup } from "./../views/InfoPopup";
 
-import { Mediator } from "@robotlegsjs/pixi";
-import { inject, injectable } from "@robotlegsjs/core";
-
 @injectable()
 export class InfoPopupMediator extends Mediator<InfoPopup> {
-
-    @inject(FlowService)
-    private service: FlowService;
+    @inject(FlowService) private service: FlowService;
 
     public initialize(): void {
         this.eventMap.mapListener(this.view.closeButton, "click", this.closeButton_onClick, this);

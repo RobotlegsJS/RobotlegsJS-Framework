@@ -1,3 +1,1 @@
-export class SharedObjectManager {
-
-}
+export class SharedObjectManager {}

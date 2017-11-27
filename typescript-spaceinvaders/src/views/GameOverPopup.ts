@@ -1,15 +1,12 @@
-import { CustomButton } from "./components/CustomButton";
-
-import { AtlasKeys } from "./../utils/AtlasKeys";
-import { ViewPortSize } from "./../utils/ViewPortSize";
-import { Colors } from "./../utils/Colors";
-import { PixiFactory } from "./../utils/PixiFactory";
-import { Texts } from "./../utils/Texts";
-
 import { Container, Text } from "pixi.js";
 
-export class GameOverPopup extends Container {
+import { AtlasKeys } from "./../utils/AtlasKeys";
+import { PixiFactory } from "./../utils/PixiFactory";
+import { Texts } from "./../utils/Texts";
+import { ViewPortSize } from "./../utils/ViewPortSize";
+import { CustomButton } from "./components/CustomButton";
 
+export class GameOverPopup extends Container {
     private _homeButton: CustomButton;
     public get homeButton(): CustomButton {
         return this._homeButton;
@@ -29,20 +26,17 @@ export class GameOverPopup extends Container {
         this.setupTexts();
         this.setupButtons();
     }
-
     private setupBackgrounds(): void {
         this.addChild(PixiFactory.getShadowBackground());
         this.addChild(PixiFactory.getBoardBackground());
     }
-
     private setupTexts(): void {
-        let title: Text = PixiFactory.getText(Texts.GAME_OVER);
+        const title: Text = PixiFactory.getText(Texts.GAME_OVER);
         title.x = ViewPortSize.HALF_WIDTH;
         title.y = ViewPortSize.HALF_HEIGHT - 30;
-        title.anchor.set(.5);
+        title.anchor.set(0.5);
         this.addChild(title);
     }
-
     private setupButtons(): void {
         this._homeButton = PixiFactory.getButton(AtlasKeys.BUTTON_HOME);
         this._homeButton.x = ViewPortSize.HALF_WIDTH + 25;

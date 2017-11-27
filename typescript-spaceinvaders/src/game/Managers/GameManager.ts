@@ -1,32 +1,26 @@
+import { inject, injectable } from "@robotlegsjs/core";
+
+import { GameModel } from "./../../models/GameModel";
+import { LevelModel } from "./../../models/LevelModel";
+import { GameService } from "./../../services/GameService";
+import { ViewPortSize } from "./../../utils/ViewPortSize";
+import { EnemyDisplay } from "./../displays/EnemyDisplay";
 import { Bullet } from "./../entities/Bullet";
 import { Entity } from "./../entities/Entity";
 import { Explosion } from "./../entities/Explosion";
 import { EntityPool } from "./../utils/EntityPool";
-import { Point } from "./../utils/Point";
 import { GameUtils } from "./../utils/GameUtils";
-import { ViewPortSize } from "./../../utils/ViewPortSize";
-import { EnemyDisplay } from "./../displays/EnemyDisplay";
-import { GameService } from "./../../services/GameService";
-import { GameModel } from "./../../models/GameModel";
-import { LevelModel } from "./../../models/LevelModel";
-
-import { injectable, inject } from "@robotlegsjs/core";
+import { Point } from "./../utils/Point";
 
 @injectable()
 export class GameManager {
-
-    @inject(GameModel)
-    private gameModel: GameModel;
-
-    @inject(LevelModel)
-    private model: LevelModel;
-
-    @inject(GameService)
-    private service: GameService;
+    @inject(GameModel) private gameModel: GameModel;
+    @inject(LevelModel) private model: LevelModel;
+    @inject(GameService) private service: GameService;
 
     private _cannonDirection: number;
 
-    private _enemyPath: Array<Point>;
+    private _enemyPath: Point[];
     private _enemyPathIndex: number;
 
     private _tickMovement: number;
@@ -40,11 +34,9 @@ export class GameManager {
         this._tickMovement = 0;
         this._tickShot = 0;
     }
-
     public cannonMovement(direction = 0): void {
         this._cannonDirection = direction;
     }
-
     public update(): void {
         this._tickMovement++;
         this._tickShot++;
@@ -69,7 +61,6 @@ export class GameManager {
         this.solveCollisions();
         this.validateNextLevel();
     }
-
     public startShooting(): void {
         if (this._shooting === false && this._tickShot > 8) {
             this.createBullets();
@@ -78,20 +69,17 @@ export class GameManager {
         this._tickShot = 0;
         this._shooting = true;
     }
-
     public stopShooting(): void {
         this._shooting = false;
     }
-
     public resume(): void {
         this._cannonDirection = 0;
         this._tickShot = 0;
         this._shooting = false;
     }
-
     private moveEnemies(): void {
         let nearEnemyY = 0;
-        for (let enemy of this.model.enemies) {
+        for (const enemy of this.model.enemies) {
             enemy.x += this._enemyPath[this._enemyPathIndex].x;
             enemy.y += this._enemyPath[this._enemyPathIndex].y;
             enemy.applyPosition();
@@ -108,33 +96,30 @@ export class GameManager {
             this.service.gameOver();
         }
     }
-
     private createEnemyBullet(): void {
-        let enemyIndex: number = Math.floor(Math.random() * (this.model.enemies.length - 1));
+        const enemyIndex: number = Math.floor(Math.random() * (this.model.enemies.length - 1));
 
         if (enemyIndex === 0) {
             return;
         }
 
-        let bullet: Bullet = <Bullet>(EntityPool.getEntity(Entity.BULLET));
+        const bullet: Bullet = <Bullet>EntityPool.getEntity(Entity.BULLET);
         bullet.x = this.model.enemies[enemyIndex].x;
         bullet.y = this.model.enemies[enemyIndex].y + 10;
         bullet.target = Bullet.PlAYER;
         bullet.applyPosition();
         this.model.addBullet(bullet);
     }
-
     private updateExplosions(): void {
-        for (let explosion of this.model.exposions) {
+        for (const explosion of this.model.exposions) {
             (<Explosion>explosion).update();
             if ((<Explosion>explosion).remove) {
                 this.model.toRemove.push(explosion);
             }
         }
     }
-
     private solveCollisions(): void {
-        for (let bullet of this.model.bullets) {
+        for (const bullet of this.model.bullets) {
             if ((<Bullet>bullet).target === Bullet.PlAYER) {
                 if (GameUtils.isCollision(bullet, this.model.cannon)) {
                     this.createExplosion(this.model.cannon);
@@ -144,7 +129,7 @@ export class GameManager {
                     break;
                 }
             } else {
-                for (let entity of this.model.enemies) {
+                for (const entity of this.model.enemies) {
                     if (GameUtils.isCollision(bullet, entity)) {
                         this.createExplosion(entity);
                         this.model.toRemove.push(entity);
@@ -156,7 +141,6 @@ export class GameManager {
             }
         }
     }
-
     private validateNextLevel(): void {
         if (this.model.enemies.length > 0) {
             return;
@@ -164,7 +148,6 @@ export class GameManager {
         this.service.pause();
         this.service.increaseLevel();
     }
-
     private moveCannon(): void {
         let newCannonXPosition: number = this.model.cannon.x + this._cannonDirection;
         newCannonXPosition = Math.min(ViewPortSize.MAX_WIDTH, newCannonXPosition);
@@ -173,9 +156,8 @@ export class GameManager {
         this.model.cannon.x = newCannonXPosition;
         this.model.cannon.applyPosition();
     }
-
     private createExplosion(entity: Entity): void {
-        let explosion: Explosion = <Explosion>(EntityPool.getEntity(Entity.EXPLOSION));
+        const explosion: Explosion = <Explosion>EntityPool.getEntity(Entity.EXPLOSION);
         explosion.x = entity.x;
         explosion.y = entity.y;
         if (entity.typeID === Entity.CANNON) {
@@ -185,15 +167,13 @@ export class GameManager {
         explosion.applyPosition();
         this.model.addExplosion(explosion);
     }
-
     private moveBullets(): void {
         let speedY: number;
 
-        for (let bullet of this.model.bullets) {
+        for (const bullet of this.model.bullets) {
+            speedY = -3;
             if ((<Bullet>bullet).target === Bullet.PlAYER) {
                 speedY = 3;
-            } else {
-                speedY = -3;
             }
             bullet.y += speedY;
             bullet.applyPosition();
@@ -202,14 +182,12 @@ export class GameManager {
             }
         }
     }
-
     private createBullets(): void {
         this.shootBullets();
         this._tickShot = 0;
     }
-
     private shootBullets(): void {
-        let bullet = <Bullet>(EntityPool.getEntity(Entity.BULLET));
+        const bullet = <Bullet>EntityPool.getEntity(Entity.BULLET);
         bullet.x = this.model.cannon.x;
         bullet.y = this.model.cannon.y - 10;
         bullet.target = Bullet.ENEMY;

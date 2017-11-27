@@ -1,5 +1,4 @@
 import { ExplosionDisplay } from "./../displays/ExplosionDisplay";
-
 import { Entity } from "./Entity";
 
 export class Explosion extends Entity {
@@ -9,7 +8,6 @@ export class Explosion extends Entity {
     constructor(typeID: number = Entity.EXPLOSION) {
         super(typeID);
     }
-
     public update(): void {
         if (this.count === 1) {
             this.remove = true;
@@ -18,7 +16,6 @@ export class Explosion extends Entity {
         this.count++;
         (<ExplosionDisplay>this.display).nextFrame();
     }
-
     public reset(): void {
         this.count = 0;
         this.remove = false;

@@ -1,19 +1,16 @@
-import { CustomButton } from "./CustomButton";
-import { LivesComponent } from "./LivesComponent";
+import { Container, Graphics, Text } from "pixi.js";
 
 import { GameModel } from "./../../models/GameModel";
-
 import { AtlasKeys } from "./../../utils/AtlasKeys";
 import { Colors } from "./../../utils/Colors";
 import { MagicValues } from "./../../utils/MagicValues";
 import { PixiFactory } from "./../../utils/PixiFactory";
 import { Texts } from "./../../utils/Texts";
 import { ViewPortSize } from "./../../utils/ViewPortSize";
-
-import { Container, Text, Graphics } from "pixi.js";
+import { CustomButton } from "./CustomButton";
+import { LivesComponent } from "./LivesComponent";
 
 export class HUDGameComponent extends Container {
-
     private _pauseButton: CustomButton;
     public get pauseButton(): CustomButton {
         return this._pauseButton;
@@ -33,25 +30,21 @@ export class HUDGameComponent extends Container {
         this.createButtons();
         this.createComponents();
     }
-
     public updateData(model: GameModel): void {
         this._livesComponent.updateLives(model.lives);
         this._scoreText.text = String(model.score);
         this._hiScoreText.text = String(model.hiScore);
         this._levelText.text = String(model.level);
     }
-
     private createBackgrounds(): void {
         this.addChild(PixiFactory.getColorBox(ViewPortSize.MAX_WIDTH, 70, Colors.BACKGROUND_DARK));
 
-        let bottomBackground: Graphics = PixiFactory.getColorBox(ViewPortSize.MAX_WIDTH, 100, Colors.BACKGROUND_DARK);
+        const bottomBackground: Graphics = PixiFactory.getColorBox(ViewPortSize.MAX_WIDTH, 100, Colors.BACKGROUND_DARK);
         bottomBackground.y = ViewPortSize.MAX_HEIGHT - 80;
         this.addChild(bottomBackground);
     }
-
     private createTextFields(): void {
-
-        let scoreLabel: Text = PixiFactory.getText(Texts.SCORE, Colors.STATIC_TEXT, Texts.FONT_SIZE_HUD);
+        const scoreLabel: Text = PixiFactory.getText(Texts.SCORE, Colors.STATIC_TEXT, Texts.FONT_SIZE_HUD);
         scoreLabel.x = MagicValues.BORDER_OFFSET;
         scoreLabel.y = MagicValues.BORDER_OFFSET;
         this.addChild(scoreLabel);
@@ -62,7 +55,7 @@ export class HUDGameComponent extends Container {
         this._scoreText.anchor.x = 1;
         this.addChild(this._scoreText);
 
-        let hiScoreLabel: Text = PixiFactory.getText(Texts.HI_SCORE, Colors.STATIC_TEXT, Texts.FONT_SIZE_HUD);
+        const hiScoreLabel: Text = PixiFactory.getText(Texts.HI_SCORE, Colors.STATIC_TEXT, Texts.FONT_SIZE_HUD);
         hiScoreLabel.x = MagicValues.BORDER_OFFSET;
         hiScoreLabel.y = this._scoreText.y + 18;
         this.addChild(hiScoreLabel);
@@ -73,7 +66,7 @@ export class HUDGameComponent extends Container {
         this._hiScoreText.anchor.x = 1;
         this.addChild(this._hiScoreText);
 
-        let levelLabel: Text = PixiFactory.getText(Texts.LEVEL, Colors.STATIC_TEXT, Texts.FONT_SIZE_HUD);
+        const levelLabel: Text = PixiFactory.getText(Texts.LEVEL, Colors.STATIC_TEXT, Texts.FONT_SIZE_HUD);
         levelLabel.x = ViewPortSize.MAX_WIDTH - MagicValues.BORDER_OFFSET - 80;
         levelLabel.y = ViewPortSize.MAX_HEIGHT - 70;
         this.addChild(levelLabel);
@@ -84,14 +77,12 @@ export class HUDGameComponent extends Container {
         this._levelText.anchor.x = 1;
         this.addChild(this._levelText);
     }
-
     private createButtons(): void {
         this._pauseButton = PixiFactory.getButton(AtlasKeys.BUTTON_PAUSE);
         this._pauseButton.x = ViewPortSize.MAX_WIDTH - 32;
         this._pauseButton.y = MagicValues.BORDER_OFFSET + 15;
         this.addChild(this._pauseButton);
     }
-
     private createComponents(): void {
         this._livesComponent = new LivesComponent();
         this._livesComponent.x = MagicValues.BORDER_OFFSET;

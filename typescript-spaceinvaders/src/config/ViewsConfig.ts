@@ -1,3 +1,6 @@
+import { IConfig, inject, injectable } from "@robotlegsjs/core";
+import { IMediatorMap } from "@robotlegsjs/pixi";
+
 import { BattleFieldComponentMediator } from "./../mediators/BattleFieldComponentMediator";
 import { GameOverPopupMediator } from "./../mediators/GameOverPopupMediator";
 import { GameViewMediator } from "./../mediators/GameViewMediator";
@@ -9,12 +12,11 @@ import { OptionsViewMediator } from "./../mediators/OptionsViewMediator";
 import { PausePopupMediator } from "./../mediators/PausePopupMediator";
 import { ResetConfirmPopupMediator } from "./../mediators/ResetConfirmPopupMediator";
 import { StartingPopupMediator } from "./../mediators/StartingPopupMediator";
-
 import { BattleFieldComponent } from "./../views/components/BattleFieldComponent";
+import { HUDGameComponent } from "./../views/components/HUDGameComponent";
 import { GameOverPopup } from "./../views/GameOverPopup";
 import { GameView } from "./../views/GameView";
 import { HomeView } from "./../views/HomeView";
-import { HUDGameComponent } from "./../views/components/HUDGameComponent";
 import { InfoPopup } from "./../views/InfoPopup";
 import { IntroView } from "./../views/IntroView";
 import { OptionsView } from "./../views/OptionsView";
@@ -22,19 +24,13 @@ import { PausePopup } from "./../views/PausePopup";
 import { ResetConfirmPopup } from "./../views/ResetConfirmPopup";
 import { StartingPopup } from "./../views/StartingPopup";
 
-import { IMediatorMap } from "@robotlegsjs/pixi";
-import { injectable, IConfig, inject } from "@robotlegsjs/core";
-
 @injectable()
 export class ViewsConfig implements IConfig {
-
-    @inject(IMediatorMap)
-    private mediatorMap: IMediatorMap;
+    @inject(IMediatorMap) private mediatorMap: IMediatorMap;
 
     public configure(): void {
         this.mapMediators();
     }
-
     private mapMediators(): void {
         this.mediatorMap.map(GameView).toMediator(GameViewMediator);
         this.mediatorMap.map(HomeView).toMediator(HomeViewMediator);

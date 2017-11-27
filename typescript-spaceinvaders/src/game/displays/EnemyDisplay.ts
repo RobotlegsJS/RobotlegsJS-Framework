@@ -1,8 +1,8 @@
-import { AtlasKeys } from "./../../utils/AtlasKeys";
 import { Sprite, Texture } from "pixi.js";
 
-export class EnemyDisplay extends Sprite {
+import { AtlasKeys } from "./../../utils/AtlasKeys";
 
+export class EnemyDisplay extends Sprite {
     private _movementTexture01: Texture;
     private _movementTexture02: Texture;
 
@@ -12,7 +12,7 @@ export class EnemyDisplay extends Sprite {
         this._movementTexture01 = AtlasKeys.getTexture(assetKey + "_frame_01.png");
         this._movementTexture02 = AtlasKeys.getTexture(assetKey + "_frame_02.png");
 
-        this.anchor.set(.5);
+        this.anchor.set(0.5);
     }
 
     public tick(): void {

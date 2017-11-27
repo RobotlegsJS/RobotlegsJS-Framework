@@ -1,16 +1,12 @@
+import { ICommand, inject, injectable } from "@robotlegsjs/core";
+
 import { GameModel } from "./../models/GameModel";
 import { GameService } from "./../services/GameService";
 
-import { ICommand, injectable, inject } from "@robotlegsjs/core";
-
 @injectable()
 export class IncreaseLevelCommand implements ICommand {
-
-    @inject(GameModel)
-    private model: GameModel;
-
-    @inject(GameService)
-    private gameService: GameService;
+    @inject(GameModel) private model: GameModel;
+    @inject(GameService) private gameService: GameService;
 
     public execute(): void {
         this.model.level += 1;

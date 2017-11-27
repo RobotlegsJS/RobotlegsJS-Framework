@@ -8,17 +8,16 @@ import { Entity } from "./../entities/Entity";
 import { Explosion } from "./../entities/Explosion";
 
 export class EntityPool {
-    public static dictionary: Map<number, Array<Entity>>;
+    public static dictionary: Map<number, Entity[]>;
 
     public static init(): void {
-        this.dictionary = new Map<number, Array<Entity>>();
+        this.dictionary = new Map<number, Entity[]>();
     }
-
     public static getEntity(typeId: number): Entity {
         if (this.dictionary.get(typeId) === undefined) {
             this.dictionary.set(typeId, new Array<Entity>());
         }
-        let list: Array<Entity> = this.dictionary.get(typeId);
+        const list: Entity[] = this.dictionary.get(typeId);
         let entity: Entity;
         if (list.length === 0) {
             entity = this.createEntityByType(typeId);
@@ -34,18 +33,16 @@ export class EntityPool {
 
         return entity;
     }
-
     public static back(entity: Entity): void {
-        let list: Entity[] = this.dictionary.get(entity.typeID);
+        const list: Entity[] = this.dictionary.get(entity.typeID);
         entity.display.visible = false;
 
         if (list.indexOf(entity) === -1) {
             list.push(entity);
         }
     }
-
     private static createDisplayByType(typeId: number): any {
-        let typesDisplay: any = {};
+        const typesDisplay: any = {};
         typesDisplay[Entity.BULLET] = { type: BulletDisplay, atlasKey: AtlasKeys.BULLET };
         typesDisplay[Entity.ENEMY_1] = { type: EnemyDisplay, atlasKey: AtlasKeys.ENEMY_01 };
         typesDisplay[Entity.ENEMY_2] = { type: EnemyDisplay, atlasKey: AtlasKeys.ENEMY_02 };
@@ -53,10 +50,9 @@ export class EntityPool {
         typesDisplay[Entity.CANNON] = { type: CannonDisplay, atlasKey: AtlasKeys.CANNON };
         typesDisplay[Entity.EXPLOSION] = { type: ExplosionDisplay, atlasKey: AtlasKeys.EXPLOSION };
 
-        let ob = typesDisplay[typeId];
+        const ob = typesDisplay[typeId];
         return new ob.type(ob.atlasKey);
     }
-
     private static createEntityByType(typeId: number): Entity {
         let entity: Entity;
 
