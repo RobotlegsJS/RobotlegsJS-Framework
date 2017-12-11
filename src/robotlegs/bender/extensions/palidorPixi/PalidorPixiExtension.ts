@@ -11,12 +11,7 @@ import { IFlowManager } from "./api/IFlowManager";
 import { FlowManager } from "./impl/FlowManager";
 import { PixiContainerContoller } from "./impl/PixiContainerContoller";
 
-import {
-    IContext,
-    IExtension,
-    IInjector,
-    instanceOfType
-} from "@robotlegsjs/core";
+import { IContext, IExtension, IInjector, instanceOfType } from "@robotlegsjs/core";
 
 import { IContextView, ContextView } from "@robotlegsjs/pixi";
 
@@ -26,10 +21,7 @@ export class PalidorPixiExtension implements IExtension {
     public extend(context: IContext): void {
         this._injector = context.injector;
 
-        context.addConfigHandler(
-            instanceOfType(ContextView),
-            this.handleContextView.bind(this)
-        );
+        context.addConfigHandler(instanceOfType(ContextView), this.handleContextView.bind(this));
     }
 
     private handleContextView(contextView: IContextView): void {

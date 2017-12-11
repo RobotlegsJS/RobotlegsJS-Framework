@@ -7,11 +7,7 @@
 
 import "../../../../entry";
 
-import {
-    IContainerController,
-    IFlowManager,
-    PalidorPixiExtension
-} from "../../../../../src";
+import { IContainerController, IFlowManager, PalidorPixiExtension } from "../../../../../src";
 
 import { assert } from "chai";
 import { Container } from "pixi.js";
@@ -26,11 +22,7 @@ import {
     MVCSBundle
 } from "@robotlegsjs/core";
 
-import {
-    ContextView,
-    ContextViewExtension,
-    PixiBundle
-} from "@robotlegsjs/pixi";
+import { ContextView, ContextViewExtension, PixiBundle } from "@robotlegsjs/pixi";
 
 describe("PalidorPixiExtension", () => {
     let context: Context;
