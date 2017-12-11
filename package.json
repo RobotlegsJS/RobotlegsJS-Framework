@@ -5,6 +5,7 @@
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
   "scripts": {
+    "example":"webpack-dev-server --config ./webpack.config.example.js",
     "test": "./node_modules/.bin/karma start --single-run",
     "test:tdd": "./node_modules/.bin/karma start",
     "mocha": "mocha test/**/*.test.ts --require ts-node/register",
