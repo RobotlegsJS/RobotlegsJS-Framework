@@ -62,3 +62,11 @@ typings/
 
 # IntelliJ
 .idea
+
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+.Trashes
+ehthumbs.db
+Thumbs.db
