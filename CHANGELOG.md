@@ -20,6 +20,8 @@
 
 ### v0.0.13
 
+- Update CODEBEAT project UUID (see #38).
+
 - Update dev dependencies to latest version.
 
 ### [v0.0.12](https://github.com/RobotlegsJS/SignalsJS/releases/tag/0.0.12) - 2017-11-14
