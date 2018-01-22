@@ -27,7 +27,7 @@ export class MonoSignal implements ISignal {
      * NOTE: Subclasses cannot call super.apply(null, valueClasses),
      * but this constructor has logic to support super(valueClasses).
      */
-    constructor(...valueClasses) {
+    constructor(...valueClasses: any[]) {
         // Cannot use super.apply(null, valueClasses), so allow the subclass to call super(valueClasses).
         this.valueClasses = valueClasses.length === 1 && valueClasses[0] instanceof Array ? valueClasses[0] : valueClasses;
     }
@@ -105,7 +105,7 @@ export class MonoSignal implements ISignal {
      * @throws ArgumentError <code>ArgumentError</code>: Incorrect number of arguments.
      * @throws ArgumentError <code>ArgumentError</code>: Value object is not an instance of the appropriate valueClasses Class.
      */
-    public dispatch(...valueObjects): void {
+    public dispatch(...valueObjects: any[]): void {
         // If valueClasses is empty, value objects are not type-checked.
         let numValueClasses: number = this._valueClasses.length;
         let numValueObjects: number = valueObjects.length;
