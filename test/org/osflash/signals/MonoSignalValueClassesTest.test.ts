@@ -20,8 +20,23 @@ describe("MonoSignalValueClassesTest", () => {
         assert.deepEqual(signal.valueClasses, [Number, String, Boolean]);
     });
 
+    it("constructor_should_accept_array_of_value_classes()", () => {
+        signal = new MonoSignal([Number, String, Boolean]);
+        assert.deepEqual(signal.valueClasses, [Number, String, Boolean]);
+    });
+
     it("set_value_classes_should_accept_only_class_objects()", () => {
         signal.valueClasses = [Number, String, Boolean];
+    });
+
+    it("set_value_classes_should_accept_null()", () => {
+        signal.valueClasses = null;
+        assert.deepEqual(signal.valueClasses, []);
+    });
+
+    it("set_value_classes_should_accept_undefined()", () => {
+        signal.valueClasses = undefined;
+        assert.deepEqual(signal.valueClasses, []);
     });
 
     it("set_value_classes_throws_error_when_objects_are_passed()", () => {
