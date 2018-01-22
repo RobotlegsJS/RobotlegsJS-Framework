@@ -8,8 +8,8 @@ import { IPrioritySignal } from "../IPrioritySignal";
  */
 export class GenericEvent implements IEvent {
     protected _bubbles: boolean;
-    protected _target: Object;
-    protected _currentTarget: Object;
+    protected _target: any;
+    protected _currentTarget: any;
     protected _signal: IPrioritySignal;
 
     constructor(bubbles: boolean = false) {
@@ -26,20 +26,20 @@ export class GenericEvent implements IEvent {
     }
 
     /** @inheritDoc */
-    public get target(): Object {
+    public get target(): any {
         return this._target;
     }
 
-    public set target(value: Object) {
+    public set target(value: any) {
         this._target = value;
     }
 
     /** @inheritDoc */
-    public get currentTarget(): Object {
+    public get currentTarget(): any {
         return this._currentTarget;
     }
 
-    public set currentTarget(value: Object) {
+    public set currentTarget(value: any) {
         this._currentTarget = value;
     }
 

@@ -5,12 +5,12 @@ export interface IEvent {
      * The object that originally dispatched the event.
      * When dispatched from an signal, the target is the object containing the signal.
      */
-    target: Object;
+    target: any;
 
     /**
      * The object that added the listener for the event.
      */
-    currentTarget: Object;
+    currentTarget: any;
 
     /**
      * The signal that dispatched the event.

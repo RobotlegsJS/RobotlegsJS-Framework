@@ -25,13 +25,13 @@ describe("PromiseTest", () => {
     });
 
     it("addOncedListenerWillReceiveDataWhenPromiseIsDispatched()", () => {
-        let received: Object;
+        let received: any;
 
-        function listener(data: Object): void {
+        function listener(data: any): void {
             received = data;
         }
 
-        let object: Object = { hello: "world" };
+        let object: any = { hello: "world" };
         promise.addOnce(listener);
         promise.dispatch(object);
 
@@ -52,13 +52,13 @@ describe("PromiseTest", () => {
     });
 
     it("listenerWillReceiveDataWhenBoundAfterPromiseIsDispatched()", () => {
-        let received: Object;
+        let received: any;
 
-        function listener(data: Object): void {
+        function listener(data: any): void {
             received = data;
         }
 
-        let object: Object = { hello: "world" };
+        let object: any = { hello: "world" };
         promise.dispatch(object);
         promise.addOnce(listener);
 
