@@ -16,9 +16,9 @@
 
 - [ ] Migrate [original documentation](https://github.com/robertpenner/as3-signals#readme) and adapt it to TypeScript.
 
-## Signals 0.0.1
+## Signals 0.1.0
 
-### v0.0.13
+### [v0.1.0](https://github.com/RobotlegsJS/SignalsJS/releases/tag/0.1.0) - 2018-01-22
 
 - Adhere to TypeScript Guidelines for General Types (see #43).
 
@@ -31,6 +31,8 @@
 - Update CODEBEAT project UUID (see #38).
 
 - Update dev dependencies to latest version.
+
+## Signals 0.0.1
 
 ### [v0.0.12](https://github.com/RobotlegsJS/SignalsJS/releases/tag/0.0.12) - 2017-11-14
 
