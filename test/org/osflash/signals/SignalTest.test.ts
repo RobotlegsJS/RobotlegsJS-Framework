@@ -81,18 +81,7 @@ describe("SignalTest", () => {
         }
 
         slot = signal.add(async.add(listener, 10, done));
-        slot.params = [
-            12345,
-            "text",
-            new Sprite(),
-            "a",
-            "b",
-            "c",
-            "d",
-            "e",
-            "f",
-            "g"
-        ];
+        slot.params = [12345, "text", new Sprite(), "a", "b", "c", "d", "e", "f", "g"];
 
         signal.dispatch();
     });

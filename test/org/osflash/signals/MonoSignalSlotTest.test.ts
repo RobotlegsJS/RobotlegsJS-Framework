@@ -3,11 +3,7 @@ import "../../../entry";
 import { assert } from "chai";
 
 import { AsyncUtil } from "../../../util/AsyncUtil";
-import {
-    checkGenericEvent,
-    failIfCalled,
-    newEmptyHandler
-} from "../../../util/TestBase";
+import { checkGenericEvent, failIfCalled, newEmptyHandler } from "../../../util/TestBase";
 
 import { MonoSignal } from "../../../../src/org/osflash/signals/MonoSignal";
 import { GenericEvent } from "../../../../src/org/osflash/signals/events/GenericEvent";
@@ -45,20 +41,14 @@ describe("MonoSignalSlotTest", () => {
         let listener: Function = newEmptyHandler();
         let slot: ISlot = completed.add(listener);
 
-        assert.isTrue(
-            slot.listener === listener,
-            "Slot listener is the same as the listener"
-        );
+        assert.isTrue(slot.listener === listener, "Slot listener is the same as the listener");
     });
 
     it("add_listener_and_remove_using_slot()", () => {
         let slot: ISlot = completed.add(newEmptyHandler());
         slot.remove();
 
-        assert.isTrue(
-            completed.numListeners === 0,
-            "Number of listeners should be 0"
-        );
+        assert.isTrue(completed.numListeners === 0, "Number of listeners should be 0");
     });
 
     it("add_listener_pause_on_slot_should_not_dispatch()", () => {
@@ -149,20 +139,14 @@ describe("MonoSignalSlotTest", () => {
         let listener: Function = newEmptyHandler();
         let slot: ISlot = completed.addOnce(listener);
 
-        assert.isTrue(
-            slot.listener === listener,
-            "Slot listener is the same as the listener"
-        );
+        assert.isTrue(slot.listener === listener, "Slot listener is the same as the listener");
     });
 
     it("addOnce_listener_and_remove_using_slot()", () => {
         let slot: ISlot = completed.addOnce(newEmptyHandler());
         slot.remove();
 
-        assert.isTrue(
-            completed.numListeners === 0,
-            "Number of listeners should be 0"
-        );
+        assert.isTrue(completed.numListeners === 0, "Number of listeners should be 0");
     });
 
     it("addOnce_listener_pause_then_resume_on_slot_should_dispatch()", () => {

@@ -23,9 +23,7 @@ describe("SlotPauseResumeTest", () => {
     });
 
     it("addOnce_listener_pause_then_resume_on_slot_should_dispatch", done => {
-        let slot: ISlot = signal.addOnce(
-            async.add(checkGenericEvent, 10, done)
-        );
+        let slot: ISlot = signal.addOnce(async.add(checkGenericEvent, 10, done));
         slot.enabled = false;
         slot.enabled = true;
 

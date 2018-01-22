@@ -50,11 +50,7 @@ describe("MonoSignalDispatchVarArgsTest", () => {
 
     function handlerArgsAt0(): Function {
         return function(...args): void {
-            assert.deepEqual(
-                [0, 1, 2, 3],
-                args,
-                "Arguments should be [0,1,2,3]"
-            );
+            assert.deepEqual([0, 1, 2, 3], args, "Arguments should be [0,1,2,3]");
             assert.equal(4, args.length, "Number of var arguments should be 4");
         };
     }

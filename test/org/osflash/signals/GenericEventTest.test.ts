@@ -17,10 +17,7 @@ describe("GenericEventTest", () => {
     });
 
     it("testInstantiated()", () => {
-        assert.isTrue(
-            instance instanceof GenericEvent,
-            "GenericEvent instantiated"
-        );
+        assert.isTrue(instance instanceof GenericEvent, "GenericEvent instantiated");
         assert.isNotOk(instance.target, "target is null by default");
         assert.isFalse(instance.bubbles, "bubbles is false by default");
     });
