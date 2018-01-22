@@ -38,7 +38,7 @@ describe("MonoSignalDispatchNonEventTest", () => {
         completed.dispatch(0, 0);
     });
 
-    function onZeroZero(a: Object, b: Object): void {
+    function onZeroZero(a: any, b: any): void {
         assert.equal(0, a);
         assert.equal(0, b);
     }

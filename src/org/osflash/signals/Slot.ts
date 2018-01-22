@@ -57,7 +57,7 @@ export class Slot implements ISlot {
     /**
      * @inheritDoc
      */
-    public execute1(value: Object): void {
+    public execute1(value: any): void {
         if (!this._enabled) {
             return;
         }

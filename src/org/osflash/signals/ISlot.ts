@@ -51,7 +51,7 @@ export interface ISlot {
      * Existing <code>params</code> are appended before the listener is called.
      * @param value The argument for the listener.
      */
-    execute1(value: Object): void;
+    execute1(value: any): void;
 
     /**
      * Executes a listener of arity <code>n</code> where <code>n</code> is

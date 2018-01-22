@@ -19,7 +19,7 @@ import { IEvent } from "./events/IEvent";
  * Project home: <a target="_top" href="http://github.com/robertpenner/as3-signals/">http://github.com/robertpenner/as3-signals/</a>
  */
 export class DeluxeSignal extends PrioritySignal {
-    protected _target: Object;
+    protected _target: any;
 
     /**
      * Creates a DeluxeSignal instance to dispatch events on behalf of a target object.
@@ -33,7 +33,7 @@ export class DeluxeSignal extends PrioritySignal {
      * NOTE: Subclasses cannot call super.apply(null, valueClasses),
      * but this constructor has logic to support super(valueClasses).
      */
-    constructor(target: Object = null, ...valueClasses: any[]) {
+    constructor(target: any = null, ...valueClasses: any[]) {
         // Cannot use super.apply(null, valueClasses), so allow the subclass to call super(valueClasses).
         valueClasses = valueClasses.length === 1 && valueClasses[0] instanceof Array ? valueClasses[0] : valueClasses;
 
@@ -45,11 +45,11 @@ export class DeluxeSignal extends PrioritySignal {
     }
 
     /** @inheritDoc */
-    public get target(): Object {
+    public get target(): any {
         return this._target;
     }
 
-    public set target(value: Object) {
+    public set target(value: any) {
         if (value === this._target) {
             return;
         }
@@ -109,7 +109,7 @@ export class DeluxeSignal extends PrioritySignal {
             return;
         }
 
-        let currentTarget: Object = this.target;
+        let currentTarget: any = this.target;
 
         while (currentTarget && currentTarget.hasOwnProperty("parent")) {
             currentTarget = (<any>currentTarget).parent;

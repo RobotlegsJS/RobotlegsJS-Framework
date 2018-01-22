@@ -83,13 +83,13 @@ describe("DeluxeSignalWithBubblingEventTest", () => {
 });
 
 class Child implements IBubbleEventHandler {
-    public parent: Object;
+    public parent: any;
     public completed: DeluxeSignal;
     public name: string;
     public listener: Function = null;
     public popsBubbles: boolean = false;
 
-    constructor(parent: Object = null, name = "", listener = null) {
+    constructor(parent: any = null, name = "", listener = null) {
         this.parent = parent;
         this.name = name;
         this.listener = listener;
