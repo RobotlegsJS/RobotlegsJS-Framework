@@ -20,6 +20,8 @@
 
 ### v0.0.13
 
+- Adhere to TypeScript Guidelines for General Types (see #43).
+
 - Improve code coverage to reach 100% (see #42).
 
 - Use `rimraf` instead of `rm -rf` (see #41).
