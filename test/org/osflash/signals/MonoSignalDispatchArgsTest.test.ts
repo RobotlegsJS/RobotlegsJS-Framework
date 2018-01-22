@@ -33,11 +33,7 @@ describe("MonoSignalDispatchArgsTest", () => {
     });
 
     function checkDispatchedValues(a: number, b: string, c: Date): void {
-        assert.equal(
-            3,
-            arguments.length,
-            "correct number of arguments were dispatched"
-        );
+        assert.equal(3, arguments.length, "correct number of arguments were dispatched");
         assert.equal(22, a, "the uint was dispatched");
         assert.equal("done", b, "the String was dispatched");
         assert.isTrue(c instanceof Date, "a Date was dispatched");

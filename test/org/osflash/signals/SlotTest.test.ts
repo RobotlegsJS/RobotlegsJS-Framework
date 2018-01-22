@@ -203,22 +203,11 @@ describe("SlotTest", () => {
         received = [value1, value2, value3];
     }
 
-    function listener4(
-        value1: any,
-        value2: any,
-        value3: any,
-        value4: any
-    ): void {
+    function listener4(value1: any, value2: any, value3: any, value4: any): void {
         received = [value1, value2, value3, value4];
     }
 
-    function listener5(
-        value1: any,
-        value2: any,
-        value3: any,
-        value4: any,
-        value5: any
-    ): void {
+    function listener5(value1: any, value2: any, value3: any, value4: any, value5: any): void {
         received = [value1, value2, value3, value4, value5];
     }
 });

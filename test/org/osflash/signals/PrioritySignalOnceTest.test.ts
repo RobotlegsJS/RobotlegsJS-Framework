@@ -36,10 +36,7 @@ describe("PrioritySignalOnceTest", () => {
 
         prioritySignal.dispatch();
 
-        assertArrayEqual(
-            expectedListenerDispatchOrder,
-            gotListenerDispatchOrder
-        );
+        assertArrayEqual(expectedListenerDispatchOrder, gotListenerDispatchOrder);
         assertNumListenersEqual(prioritySignal.numListeners, 0);
     });
 
@@ -52,10 +49,7 @@ describe("PrioritySignalOnceTest", () => {
 
         prioritySignal.dispatch();
 
-        assertArrayEqual(
-            expectedListenerDispatchOrder,
-            gotListenerDispatchOrder
-        );
+        assertArrayEqual(expectedListenerDispatchOrder, gotListenerDispatchOrder);
         assertNumListenersEqual(prioritySignal.numListeners, 0);
     });
 
@@ -68,10 +62,7 @@ describe("PrioritySignalOnceTest", () => {
 
         prioritySignal.dispatch();
 
-        assertArrayEqual(
-            expectedListenerDispatchOrder,
-            gotListenerDispatchOrder
-        );
+        assertArrayEqual(expectedListenerDispatchOrder, gotListenerDispatchOrder);
         assertNumListenersEqual(prioritySignal.numListeners, 0);
     });
 
@@ -84,10 +75,7 @@ describe("PrioritySignalOnceTest", () => {
 
         prioritySignal.dispatch();
 
-        assertArrayEqual(
-            expectedListenerDispatchOrder,
-            gotListenerDispatchOrder
-        );
+        assertArrayEqual(expectedListenerDispatchOrder, gotListenerDispatchOrder);
         assertNumListenersEqual(prioritySignal.numListeners, 0);
     });
 
@@ -100,10 +88,7 @@ describe("PrioritySignalOnceTest", () => {
 
         prioritySignal.dispatch();
 
-        assertArrayEqual(
-            expectedListenerDispatchOrder,
-            gotListenerDispatchOrder
-        );
+        assertArrayEqual(expectedListenerDispatchOrder, gotListenerDispatchOrder);
         assertNumListenersEqual(prioritySignal.numListeners, 0);
     });
 
@@ -116,10 +101,7 @@ describe("PrioritySignalOnceTest", () => {
 
         prioritySignal.dispatch();
 
-        assertArrayEqual(
-            expectedListenerDispatchOrder,
-            gotListenerDispatchOrder
-        );
+        assertArrayEqual(expectedListenerDispatchOrder, gotListenerDispatchOrder);
         assertNumListenersEqual(prioritySignal.numListeners, 0);
     });
 

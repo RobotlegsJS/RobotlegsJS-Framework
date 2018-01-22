@@ -40,10 +40,7 @@ describe("PrioritySignalTest", () => {
 
         prioritySignal.dispatch();
 
-        assertArrayEqual(
-            expectedListenerDispatchOrder,
-            gotListenerDispatchOrder
-        );
+        assertArrayEqual(expectedListenerDispatchOrder, gotListenerDispatchOrder);
     });
 
     it("listeners_added_with_higher_priority_should_be_called_first_independant_of_order_added_2()", () => {
@@ -55,10 +52,7 @@ describe("PrioritySignalTest", () => {
 
         prioritySignal.dispatch();
 
-        assertArrayEqual(
-            expectedListenerDispatchOrder,
-            gotListenerDispatchOrder
-        );
+        assertArrayEqual(expectedListenerDispatchOrder, gotListenerDispatchOrder);
     });
 
     it("listeners_added_with_higher_priority_should_be_called_first_independant_of_order_added_3()", () => {
@@ -70,10 +64,7 @@ describe("PrioritySignalTest", () => {
 
         prioritySignal.dispatch();
 
-        assertArrayEqual(
-            expectedListenerDispatchOrder,
-            gotListenerDispatchOrder
-        );
+        assertArrayEqual(expectedListenerDispatchOrder, gotListenerDispatchOrder);
     });
 
     it("listeners_added_with_higher_priority_should_be_called_first_independant_of_order_added_4()", () => {
@@ -85,10 +76,7 @@ describe("PrioritySignalTest", () => {
 
         prioritySignal.dispatch();
 
-        assertArrayEqual(
-            expectedListenerDispatchOrder,
-            gotListenerDispatchOrder
-        );
+        assertArrayEqual(expectedListenerDispatchOrder, gotListenerDispatchOrder);
     });
 
     it("listeners_added_with_higher_priority_should_be_called_first_independant_of_order_added_5()", () => {
@@ -100,10 +88,7 @@ describe("PrioritySignalTest", () => {
 
         prioritySignal.dispatch();
 
-        assertArrayEqual(
-            expectedListenerDispatchOrder,
-            gotListenerDispatchOrder
-        );
+        assertArrayEqual(expectedListenerDispatchOrder, gotListenerDispatchOrder);
     });
 
     it("listeners_added_with_higher_priority_should_be_called_first_independant_of_order_added_6()", () => {
@@ -115,10 +100,7 @@ describe("PrioritySignalTest", () => {
 
         prioritySignal.dispatch();
 
-        assertArrayEqual(
-            expectedListenerDispatchOrder,
-            gotListenerDispatchOrder
-        );
+        assertArrayEqual(expectedListenerDispatchOrder, gotListenerDispatchOrder);
     });
 
     it("listeners_added_with_higher_priority_should_be_called_first_independant_of_order_added_even_if_unconsecutive_1()", () => {
@@ -130,10 +112,7 @@ describe("PrioritySignalTest", () => {
 
         prioritySignal.dispatch();
 
-        assertArrayEqual(
-            expectedListenerDispatchOrder,
-            gotListenerDispatchOrder
-        );
+        assertArrayEqual(expectedListenerDispatchOrder, gotListenerDispatchOrder);
     });
 
     it("listeners_added_with_higher_priority_should_be_called_first_independant_of_order_added_even_if_unconsecutive_2()", () => {
@@ -145,10 +124,7 @@ describe("PrioritySignalTest", () => {
 
         prioritySignal.dispatch();
 
-        assertArrayEqual(
-            expectedListenerDispatchOrder,
-            gotListenerDispatchOrder
-        );
+        assertArrayEqual(expectedListenerDispatchOrder, gotListenerDispatchOrder);
     });
 
     it("listeners_added_with_higher_priority_should_be_called_first_independant_of_order_added_even_if_unconsecutive_3()", () => {
@@ -160,10 +136,7 @@ describe("PrioritySignalTest", () => {
 
         prioritySignal.dispatch();
 
-        assertArrayEqual(
-            expectedListenerDispatchOrder,
-            gotListenerDispatchOrder
-        );
+        assertArrayEqual(expectedListenerDispatchOrder, gotListenerDispatchOrder);
     });
 
     it("listeners_added_with_higher_priority_should_be_called_first_independant_of_order_added_even_if_unconsecutive_4()", () => {
@@ -175,10 +148,7 @@ describe("PrioritySignalTest", () => {
 
         prioritySignal.dispatch();
 
-        assertArrayEqual(
-            expectedListenerDispatchOrder,
-            gotListenerDispatchOrder
-        );
+        assertArrayEqual(expectedListenerDispatchOrder, gotListenerDispatchOrder);
     });
 
     it("listeners_added_with_higher_priority_should_be_called_first_independant_of_order_added_even_if_unconsecutive_5()", () => {
@@ -190,10 +160,7 @@ describe("PrioritySignalTest", () => {
 
         prioritySignal.dispatch();
 
-        assertArrayEqual(
-            expectedListenerDispatchOrder,
-            gotListenerDispatchOrder
-        );
+        assertArrayEqual(expectedListenerDispatchOrder, gotListenerDispatchOrder);
     });
 
     it("listeners_added_with_higher_priority_should_be_called_first_independant_of_order_added_even_if_unconsecutive_6()", () => {
@@ -204,10 +171,7 @@ describe("PrioritySignalTest", () => {
         prioritySignal.addWithPriority(listenerA, 20);
         prioritySignal.dispatch();
 
-        assertArrayEqual(
-            expectedListenerDispatchOrder,
-            gotListenerDispatchOrder
-        );
+        assertArrayEqual(expectedListenerDispatchOrder, gotListenerDispatchOrder);
     });
 
     it("listeners_added_with_higher_priority_should_be_called_first_independant_of_order_added_even_if_negative_1()", () => {
@@ -218,10 +182,7 @@ describe("PrioritySignalTest", () => {
         prioritySignal.addWithPriority(listenerC, -3);
         prioritySignal.dispatch();
 
-        assertArrayEqual(
-            expectedListenerDispatchOrder,
-            gotListenerDispatchOrder
-        );
+        assertArrayEqual(expectedListenerDispatchOrder, gotListenerDispatchOrder);
     });
 
     it("listeners_added_with_higher_priority_should_be_called_first_independant_of_order_added_even_if_negative_2()", () => {
@@ -233,10 +194,7 @@ describe("PrioritySignalTest", () => {
 
         prioritySignal.dispatch();
 
-        assertArrayEqual(
-            expectedListenerDispatchOrder,
-            gotListenerDispatchOrder
-        );
+        assertArrayEqual(expectedListenerDispatchOrder, gotListenerDispatchOrder);
     });
 
     it("listeners_added_with_higher_priority_should_be_called_first_independant_of_order_added_even_if_negative_3()", () => {
@@ -248,10 +206,7 @@ describe("PrioritySignalTest", () => {
 
         prioritySignal.dispatch();
 
-        assertArrayEqual(
-            expectedListenerDispatchOrder,
-            gotListenerDispatchOrder
-        );
+        assertArrayEqual(expectedListenerDispatchOrder, gotListenerDispatchOrder);
     });
 
     it("listeners_added_with_higher_priority_should_be_called_first_independant_of_order_added_even_if_negative_4()", () => {
@@ -263,10 +218,7 @@ describe("PrioritySignalTest", () => {
 
         prioritySignal.dispatch();
 
-        assertArrayEqual(
-            expectedListenerDispatchOrder,
-            gotListenerDispatchOrder
-        );
+        assertArrayEqual(expectedListenerDispatchOrder, gotListenerDispatchOrder);
     });
 
     it("listeners_added_with_higher_priority_should_be_called_first_independant_of_order_added_even_if_negative_5()", () => {
@@ -278,10 +230,7 @@ describe("PrioritySignalTest", () => {
 
         prioritySignal.dispatch();
 
-        assertArrayEqual(
-            expectedListenerDispatchOrder,
-            gotListenerDispatchOrder
-        );
+        assertArrayEqual(expectedListenerDispatchOrder, gotListenerDispatchOrder);
     });
 
     it("listeners_added_with_higher_priority_should_be_called_first_independant_of_order_added_even_if_negative_6()", () => {
@@ -293,10 +242,7 @@ describe("PrioritySignalTest", () => {
 
         prioritySignal.dispatch();
 
-        assertArrayEqual(
-            expectedListenerDispatchOrder,
-            gotListenerDispatchOrder
-        );
+        assertArrayEqual(expectedListenerDispatchOrder, gotListenerDispatchOrder);
     });
 
     it("listeners_added_with_same_priority_should_be_called_in_order_added_1()", () => {
@@ -308,10 +254,7 @@ describe("PrioritySignalTest", () => {
 
         prioritySignal.dispatch();
 
-        assertArrayEqual(
-            expectedListenerDispatchOrder,
-            gotListenerDispatchOrder
-        );
+        assertArrayEqual(expectedListenerDispatchOrder, gotListenerDispatchOrder);
     });
 
     it("listeners_added_with_same_priority_should_be_called_in_order_added_2()", () => {
@@ -323,10 +266,7 @@ describe("PrioritySignalTest", () => {
 
         prioritySignal.dispatch();
 
-        assertArrayEqual(
-            expectedListenerDispatchOrder,
-            gotListenerDispatchOrder
-        );
+        assertArrayEqual(expectedListenerDispatchOrder, gotListenerDispatchOrder);
     });
 
     it("listeners_added_with_priority_zero_should_be_called_in_order_added_1()", () => {
@@ -338,10 +278,7 @@ describe("PrioritySignalTest", () => {
 
         prioritySignal.dispatch();
 
-        assertArrayEqual(
-            expectedListenerDispatchOrder,
-            gotListenerDispatchOrder
-        );
+        assertArrayEqual(expectedListenerDispatchOrder, gotListenerDispatchOrder);
     });
 
     it("listeners_added_with_priority_zero_should_be_called_in_order_added_2()", () => {
@@ -353,10 +290,7 @@ describe("PrioritySignalTest", () => {
 
         prioritySignal.dispatch();
 
-        assertArrayEqual(
-            expectedListenerDispatchOrder,
-            gotListenerDispatchOrder
-        );
+        assertArrayEqual(expectedListenerDispatchOrder, gotListenerDispatchOrder);
     });
 
     it("listeners_added_with_priority_zero_should_be_called_after_high_and_before_negative_1()", () => {
@@ -368,10 +302,7 @@ describe("PrioritySignalTest", () => {
 
         prioritySignal.dispatch();
 
-        assertArrayEqual(
-            expectedListenerDispatchOrder,
-            gotListenerDispatchOrder
-        );
+        assertArrayEqual(expectedListenerDispatchOrder, gotListenerDispatchOrder);
     });
 
     it("listeners_added_with_priority_zero_should_be_called_after_high_and_before_negative_2()", () => {
@@ -383,10 +314,7 @@ describe("PrioritySignalTest", () => {
 
         prioritySignal.dispatch();
 
-        assertArrayEqual(
-            expectedListenerDispatchOrder,
-            gotListenerDispatchOrder
-        );
+        assertArrayEqual(expectedListenerDispatchOrder, gotListenerDispatchOrder);
     });
 
     function listenerA(): void {

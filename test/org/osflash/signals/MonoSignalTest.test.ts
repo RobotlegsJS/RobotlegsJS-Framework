@@ -113,10 +113,7 @@ describe("MonoSignalTest", () => {
         try {
             signal.add(failIfCalled);
         } catch (error) {
-            assert.isTrue(
-                signal.numListeners === 1,
-                "there should be 1 listener"
-            );
+            assert.isTrue(signal.numListeners === 1, "there should be 1 listener");
         }
     }
 

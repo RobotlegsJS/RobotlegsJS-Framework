@@ -138,10 +138,7 @@ describe("SlotListTest", () => {
         let listener: Function = newEmptyHandler();
         let slot: ISlot = signal.add(listener);
 
-        assert.isTrue(
-            slot.listener === listener,
-            "Slot listener is the same as the listener"
-        );
+        assert.isTrue(slot.listener === listener, "Slot listener is the same as the listener");
     });
 
     it("add_same_listener_twice_and_verify_slots_are_the_same", () => {
@@ -149,10 +146,7 @@ describe("SlotListTest", () => {
         let slot0: ISlot = signal.add(listener);
         let slot1: ISlot = signal.add(listener);
 
-        assert.isTrue(
-            slot0 === slot1,
-            'Slots are equal if they"re they have the same listener'
-        );
+        assert.isTrue(slot0 === slot1, 'Slots are equal if they"re they have the same listener');
     });
 
     it("add_same_listener_twice_and_verify_slot_listeners_are_the_same", () => {
@@ -160,20 +154,14 @@ describe("SlotListTest", () => {
         let slot0: ISlot = signal.add(listener);
         let slot1: ISlot = signal.add(listener);
 
-        assert.isTrue(
-            slot0.listener === slot1.listener,
-            "Slot listener is the same as the listener"
-        );
+        assert.isTrue(slot0.listener === slot1.listener, "Slot listener is the same as the listener");
     });
 
     it("add_listener_and_remove_using_slot", () => {
         let slot: ISlot = signal.add(newEmptyHandler());
         slot.remove();
 
-        assert.isTrue(
-            signal.numListeners === 0,
-            "Number of listeners should be 0"
-        );
+        assert.isTrue(signal.numListeners === 0, "Number of listeners should be 0");
     });
 
     it("add_same_listener_twice_and_remove_using_slot_should_have_no_listeners", () => {
@@ -183,10 +171,7 @@ describe("SlotListTest", () => {
 
         slot0.remove();
 
-        assert.isTrue(
-            signal.numListeners === 0,
-            "Number of listeners should be 0"
-        );
+        assert.isTrue(signal.numListeners === 0, "Number of listeners should be 0");
     });
 
     it("add_lots_of_same_listener_and_remove_using_slot_should_have_no_listeners", () => {
@@ -198,10 +183,7 @@ describe("SlotListTest", () => {
 
         slot0.remove();
 
-        assert.isTrue(
-            signal.numListeners === 0,
-            "Number of listeners should be 0"
-        );
+        assert.isTrue(signal.numListeners === 0, "Number of listeners should be 0");
     });
 
     it("add_listener_then_set_listener_to_null_should_throw_ArgumentError", () => {
@@ -241,10 +223,7 @@ describe("SlotListTest", () => {
         let listener: Function = newEmptyHandler();
         let slot: ISlot = signal.addOnce(listener);
 
-        assert.isTrue(
-            slot.listener === listener,
-            "Slot listener is the same as the listener"
-        );
+        assert.isTrue(slot.listener === listener, "Slot listener is the same as the listener");
     });
 
     it("addOnce_same_listener_twice_and_verify_slots_are_the_same", () => {
@@ -252,10 +231,7 @@ describe("SlotListTest", () => {
         let slot0: ISlot = signal.addOnce(listener);
         let slot1: ISlot = signal.addOnce(listener);
 
-        assert.isTrue(
-            slot0 === slot1,
-            'Slots are equal if they"re they have the same listener'
-        );
+        assert.isTrue(slot0 === slot1, 'Slots are equal if they"re they have the same listener');
     });
 
     it("addOnce_same_listener_twice_and_verify_slot_listeners_are_the_same", () => {
@@ -263,20 +239,14 @@ describe("SlotListTest", () => {
         let slot0: ISlot = signal.addOnce(listener);
         let slot1: ISlot = signal.addOnce(listener);
 
-        assert.isTrue(
-            slot0.listener === slot1.listener,
-            "Slot listener is the same as the listener"
-        );
+        assert.isTrue(slot0.listener === slot1.listener, "Slot listener is the same as the listener");
     });
 
     it("addOnce_listener_and_remove_using_slot", () => {
         let slot: ISlot = signal.addOnce(newEmptyHandler());
         slot.remove();
 
-        assert.isTrue(
-            signal.numListeners === 0,
-            "Number of listeners should be 0"
-        );
+        assert.isTrue(signal.numListeners === 0, "Number of listeners should be 0");
     });
 
     it("addOnce_same_listener_twice_and_remove_using_slot_should_have_no_listeners", () => {
@@ -286,10 +256,7 @@ describe("SlotListTest", () => {
 
         slot0.remove();
 
-        assert.isTrue(
-            signal.numListeners === 0,
-            "Number of listeners should be 0"
-        );
+        assert.isTrue(signal.numListeners === 0, "Number of listeners should be 0");
     });
 
     it("addOnce_lots_of_same_listener_and_remove_using_slot_should_have_no_listeners", () => {
@@ -301,10 +268,7 @@ describe("SlotListTest", () => {
 
         slot0.remove();
 
-        assert.isTrue(
-            signal.numListeners === 0,
-            "Number of listeners should be 0"
-        );
+        assert.isTrue(signal.numListeners === 0, "Number of listeners should be 0");
     });
 
     it("addOnce_listener_then_set_listener_to_null_should_throw_ArgumentError", () => {
