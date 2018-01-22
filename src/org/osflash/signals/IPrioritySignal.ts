@@ -18,7 +18,7 @@ export interface IPrioritySignal extends ISignal {
      * @return a ISlot, which contains the Function passed as the parameter
      * @see ISlot
      */
-    addWithPriority(listener: Function, priority: number): ISlot;
+    addWithPriority(listener: Function, priority?: number): ISlot;
 
     /**
      * Subscribes a one-time listener for this signal.
@@ -34,5 +34,5 @@ export interface IPrioritySignal extends ISignal {
      * @return a ISlot, which contains the Function passed as the parameter
      * @see ISlot
      */
-    addOnceWithPriority(listener: Function, priority: number): ISlot;
+    addOnceWithPriority(listener: Function, priority?: number): ISlot;
 }

@@ -31,7 +31,7 @@ export interface IOnceSignal {
      * @param    valueObjects    Any number of parameters to send to listeners. Will be type-checked against valueClasses.
      * @throws    ArgumentError    <code>ArgumentError</code>:    valueObjects are not compatible with valueClasses.
      */
-    dispatch(...valueObjects): void;
+    dispatch(...valueObjects: any[]): void;
 
     /**
      * Unsubscribes a listener from the signal.

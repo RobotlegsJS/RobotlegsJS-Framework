@@ -17,6 +17,16 @@ describe("DeluxeSignaltargetTest", () => {
         signal = null;
     });
 
+    it("target_should_be_empty()", () => {
+        signal = new DeluxeSignal();
+        assert.isNull(signal.target);
+    });
+
+    it("target_should_be_null()", () => {
+        signal = new DeluxeSignal(null);
+        assert.isNull(signal.target);
+    });
+
     it("set_target_should_change_target()", () => {
         let target: object = {};
         signal.target = target;

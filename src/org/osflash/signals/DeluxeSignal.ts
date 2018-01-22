@@ -33,11 +33,11 @@ export class DeluxeSignal extends PrioritySignal {
      * NOTE: Subclasses cannot call super.apply(null, valueClasses),
      * but this constructor has logic to support super(valueClasses).
      */
-    constructor(target: Object = null, ...valueClasses) {
+    constructor(target: Object = null, ...valueClasses: any[]) {
         // Cannot use super.apply(null, valueClasses), so allow the subclass to call super(valueClasses).
         valueClasses = valueClasses.length === 1 && valueClasses[0] instanceof Array ? valueClasses[0] : valueClasses;
 
-        super(valueClasses);
+        /* istanbul ignore next */ super(valueClasses);
 
         // @CHANGED - this was the first call in the constructor
         // Typescript does not allow "this" to be called before super
@@ -63,7 +63,7 @@ export class DeluxeSignal extends PrioritySignal {
      * @throws ArgumentError <code>ArgumentError</code>: Value object is not an instance of the appropriate valueClasses Class.
      */
     /*override*/
-    public dispatch(...valueObjects): void {
+    public dispatch(...valueObjects: any[]): void {
         // Validate value objects against pre-defined value classes.
         let numValueClasses: number = this._valueClasses.length;
         let numValueObjects: number = valueObjects.length;
@@ -114,6 +114,7 @@ export class DeluxeSignal extends PrioritySignal {
         while (currentTarget && currentTarget.hasOwnProperty("parent")) {
             currentTarget = (<any>currentTarget).parent;
 
+            /* istanbul ignore else */
             if ((<any>currentTarget).onEventBubbled !== null) {
                 event.currentTarget = currentTarget;
 

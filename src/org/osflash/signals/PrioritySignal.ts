@@ -4,13 +4,6 @@ import { ISlot } from "./ISlot";
 import { Slot } from "./Slot";
 
 export class PrioritySignal extends Signal implements IPrioritySignal {
-    constructor(...valueClasses) {
-        // Cannot use super.apply(null, valueClasses), so allow the subclass to call super(valueClasses).
-        valueClasses = valueClasses.length === 1 && valueClasses[0] instanceof Array ? valueClasses[0] : valueClasses;
-
-        super(valueClasses);
-    }
-
     /**
      * @inheritDoc
      * @throws flash.errors.IllegalOperationError <code>IllegalOperationError</code>: You cannot addOnce() then add() the same listener without removing the relationship first.
@@ -34,7 +27,7 @@ export class PrioritySignal extends Signal implements IPrioritySignal {
         return this.registerListenerWithPriority(listener, once);
     }
 
-    protected registerListenerWithPriority(listener: Function, once: boolean = false, priority: number = 0): ISlot {
+    protected registerListenerWithPriority(listener: Function, once: boolean, priority: number = 0): ISlot {
         if (this.registrationPossible(listener, once)) {
             let slot: ISlot = new Slot(listener, this, once, priority);
             this.slots = this.slots.insertWithPriority(slot);

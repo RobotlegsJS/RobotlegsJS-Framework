@@ -105,6 +105,32 @@ describe("PrioritySignalOnceTest", () => {
         assertNumListenersEqual(prioritySignal.numListeners, 0);
     });
 
+    it("listeners_added_once_with_priority_zero_should_be_called_after_high_and_before_negative_1()", () => {
+        let expectedListenerDispatchOrder: any[] = [A, B, C];
+
+        prioritySignal.addOnceWithPriority(listenerC, -10);
+        prioritySignal.addOnceWithPriority(listenerB);
+        prioritySignal.addOnceWithPriority(listenerA, 10);
+
+        prioritySignal.dispatch();
+
+        assertArrayEqual(expectedListenerDispatchOrder, gotListenerDispatchOrder);
+        assertNumListenersEqual(prioritySignal.numListeners, 0);
+    });
+
+    it("listeners_added_once_with_priority_zero_should_be_called_after_high_and_before_negative_2()", () => {
+        let expectedListenerDispatchOrder: any[] = [A, B, C];
+
+        prioritySignal.addOnceWithPriority(listenerC, -10);
+        prioritySignal.addOnceWithPriority(listenerA, 10);
+        prioritySignal.addOnceWithPriority(listenerB);
+
+        prioritySignal.dispatch();
+
+        assertArrayEqual(expectedListenerDispatchOrder, gotListenerDispatchOrder);
+        assertNumListenersEqual(prioritySignal.numListeners, 0);
+    });
+
     function listenerA(): void {
         gotListenerDispatchOrder.push(A);
     }
