@@ -6,11 +6,9 @@
 
 - [ ] Use [**Function Types**](https://www.typescriptlang.org/docs/handbook/functions.html) for handlers and callbacks instead of generic **Function** type.
 
-- [ ] Update **Prettier** rules:
+- [x] Update **Prettier** rules:
 
-  - [ ] **printWidth** should be around **140** characters per line.
-
-  - [ ] Find a way to keep a new line between **@inject** anotation and property declarations.
+  - [x] **printWidth** should be around **140** characters per line.
 
 - [ ] Improve Code Coverage to reach 100%.
 
@@ -19,6 +17,8 @@
 ## Signals 0.0.1
 
 ### v0.0.13
+
+- Update Prettier rules (see #39).
 
 - Update CODEBEAT project UUID (see #38).
 
