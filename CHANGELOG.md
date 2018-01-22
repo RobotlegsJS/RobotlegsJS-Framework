@@ -10,13 +10,17 @@
 
   - [x] **printWidth** should be around **140** characters per line.
 
-- [ ] Improve Code Coverage to reach 100%.
+- [x] Improve Code Coverage to reach 100%.
+
+- [ ] Move `event` package to an external dependency.
 
 - [ ] Migrate [original documentation](https://github.com/robertpenner/as3-signals#readme) and adapt it to TypeScript.
 
 ## Signals 0.0.1
 
 ### v0.0.13
+
+- Improve code coverage to reach 100% (see #42).
 
 - Use `rimraf` instead of `rm -rf` (see #41).
 
