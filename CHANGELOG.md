@@ -18,7 +18,7 @@
 
 ### v0.0.13
 
-- Update Prettier rules (see #39).
+- Update Prettier rules (see #40).
 
 - Update CODEBEAT project UUID (see #38).
 
