@@ -22,7 +22,7 @@ export class Promise extends OnceSignal {
      * @throws flash.errors.IllegalOperationError <code>IllegalOperationError</code>: You cannot dispatch() a Promise more than once
      */
     /*override*/
-    public dispatch(...valueObjects): void {
+    public dispatch(...valueObjects: any[]): void {
         if (this.isDispatched) {
             throw new Error("You cannot dispatch() a Promise more than once");
         } else {
