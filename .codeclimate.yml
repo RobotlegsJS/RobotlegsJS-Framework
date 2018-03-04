@@ -45,9 +45,6 @@ plugins:
   enabled: true
  eslint:
   enabled: true
- tslint:
-  enabled: true
-  config: tslint.json
  brakeman:
   enabled: true
 exclude_patterns:
