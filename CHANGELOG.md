@@ -20,6 +20,8 @@
 
 ### v0.1.1
 
+- Update codeclimate config to version 2 (see #49).
+
 - Update dev dependencies to latest version (see #48).
 
 ### [v0.1.0](https://github.com/RobotlegsJS/SignalsJS/releases/tag/0.1.0) - 2018-01-22
