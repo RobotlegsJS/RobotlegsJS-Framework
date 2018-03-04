@@ -1,32 +1,38 @@
 const webpack = require('webpack');
 const path = require('path');
+const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 
-module.exports = (function(options) {
+module.exports = (env => {
 
-  if (!options) options = {isTest: false};
+  if (!env) env = {production: false};
 
-  var tsconfig = options.isTest ? "tsconfig.test.json" : "tsconfig.json";
+  let tsconfig = env.production ? "tsconfig.json" : "tsconfig.test.json";
+  let filename = env.production ? "signals.min.js" : "signals.js";
 
   return {
+    mode: env.production ? "production" : "development",
     entry: {
       main: path.join(__dirname, "src/index.ts")
     },
 
     output: {
       path: path.join(__dirname, "dist"),
-      filename: "signals.min.js",
+      filename: filename,
 
       libraryTarget: "var",
       library: "SignalsJS"
     },
 
-    devtool: 'inline-source-map',
+    devtool: env.production ? undefined : "inline-source-map",
 
     module: {
       rules: [
-        { test: /\.ts$/, loader: "ts-loader?configFile=" + tsconfig },
         {
-          test: ((options.production) /* disable this loader for production builds */
+          test: /\.ts$/,
+          loader: "ts-loader?configFile=" + tsconfig
+        },
+        {
+          test: ((env.production) /* disable this loader for production builds */
             ? /^$/
             : /^(.(?!\.test))*\.ts$/),
           loader: "istanbul-instrumenter-loader",
@@ -39,8 +45,8 @@ module.exports = (function(options) {
     },
 
     plugins: (
-      (options.production)
-        ? [ new webpack.optimize.UglifyJsPlugin({ sourceMap: false }) ]
+      (env.production)
+        ? [ new UglifyJSPlugin() ]
         : [ new webpack.SourceMapDevToolPlugin({ test: /\.ts$/i }) ]
     ),
 
