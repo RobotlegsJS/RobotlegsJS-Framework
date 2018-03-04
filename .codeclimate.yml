@@ -41,12 +41,10 @@ checks:
     config:
       threshold: #language-specific defaults. overrides affect all languages.
 plugins:
- rubocop:
-  enabled: true
- eslint:
-  enabled: true
- brakeman:
-  enabled: true
+  eslint:
+    enabled: true
+  fixme:
+    enabled: true
 exclude_patterns:
 - "config/"
 - "db/"
