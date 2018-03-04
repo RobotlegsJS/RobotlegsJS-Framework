@@ -18,7 +18,7 @@
 
 ## Signals 0.1.0
 
-### v0.1.1
+### [v0.1.1](https://github.com/RobotlegsJS/SignalsJS/releases/tag/0.1.1) - 2018-03-04
 
 - Update codeclimate settings (see #49, #50).
 
