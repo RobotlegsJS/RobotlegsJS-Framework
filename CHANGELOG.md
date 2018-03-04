@@ -20,7 +20,7 @@
 
 ### v0.1.1
 
-- Update codeclimate config to version 2 (see #49).
+- Update codeclimate config to version 2 (see #49, #50).
 
 - Update dev dependencies to latest version (see #48).
 
