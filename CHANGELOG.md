@@ -18,6 +18,10 @@
 
 ## Signals 0.1.0
 
+### v0.1.1
+
+- Update dev dependencies to latest version (see #48).
+
 ### [v0.1.0](https://github.com/RobotlegsJS/SignalsJS/releases/tag/0.1.0) - 2018-01-22
 
 - Adhere to TypeScript Guidelines for General Types (see #43).
