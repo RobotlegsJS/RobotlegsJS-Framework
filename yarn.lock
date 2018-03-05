@@ -12,9 +12,9 @@
   version "3.5.20"
   resolved "https://registry.npmjs.org/@types/bluebird/-/bluebird-3.5.20.tgz#f6363172add6f4eabb8cada53ca9af2781e8d6a1"
 
-"@types/chai@^4.0.5":
-  version "4.0.5"
-  resolved "https://registry.npmjs.org/@types/chai/-/chai-4.0.5.tgz#b6e250e281b47e0192e236619e9b1afe62fd345c"
+"@types/chai@^4.1.2":
+  version "4.1.2"
+  resolved "https://registry.npmjs.org/@types/chai/-/chai-4.1.2.tgz#f1af664769cfb50af805431c407425ed619daa21"
 
 "@types/mocha@^2.2.44":
   version "2.2.44"
