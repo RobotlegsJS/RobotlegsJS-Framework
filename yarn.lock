@@ -8,9 +8,9 @@
   dependencies:
     inversify "^4.11.1"
 
-"@types/bluebird@^3.5.18":
-  version "3.5.18"
-  resolved "https://registry.npmjs.org/@types/bluebird/-/bluebird-3.5.18.tgz#6a60435d4663e290f3709898a4f75014f279c4d6"
+"@types/bluebird@^3.5.20":
+  version "3.5.20"
+  resolved "https://registry.npmjs.org/@types/bluebird/-/bluebird-3.5.20.tgz#f6363172add6f4eabb8cada53ca9af2781e8d6a1"
 
 "@types/chai@^4.0.5":
   version "4.0.5"
