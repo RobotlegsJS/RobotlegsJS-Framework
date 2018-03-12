@@ -18,6 +18,8 @@
 
 ### v0.1.1
 
+- Update codeclimate settings (see #43).
+
 - Update @robotlegsjs/core to version 0.1.3 (see #41).
 
 - Update @robotlegsjs/signals to version 0.1.1 (see #36).
