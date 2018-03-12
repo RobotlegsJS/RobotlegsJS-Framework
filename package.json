@@ -61,7 +61,7 @@
     "@robotlegsjs/signals": "^0.1.1"
   },
   "devDependencies": {
-    "@types/bluebird": "^3.5.17",
+    "@types/bluebird": "^3.5.20",
     "@types/chai": "^4.0.4",
     "@types/mocha": "^2.2.44",
     "@types/sinon": "^4.0.0",

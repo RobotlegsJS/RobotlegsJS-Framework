@@ -12,9 +12,9 @@
   version "0.1.1"
   resolved "https://registry.npmjs.org/@robotlegsjs/signals/-/signals-0.1.1.tgz#951d850955dc2447887685b90bff5a57e79c16b9"
 
-"@types/bluebird@^3.5.17":
-  version "3.5.18"
-  resolved "https://registry.npmjs.org/@types/bluebird/-/bluebird-3.5.18.tgz#6a60435d4663e290f3709898a4f75014f279c4d6"
+"@types/bluebird@^3.5.20":
+  version "3.5.20"
+  resolved "https://registry.npmjs.org/@types/bluebird/-/bluebird-3.5.20.tgz#f6363172add6f4eabb8cada53ca9af2781e8d6a1"
 
 "@types/chai@^4.0.4":
   version "4.0.4"
