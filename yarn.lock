@@ -24,9 +24,9 @@
   version "2.2.48"
   resolved "https://registry.npmjs.org/@types/mocha/-/mocha-2.2.48.tgz#3523b126a0b049482e1c3c11877460f76622ffab"
 
-"@types/sinon@^4.0.0":
-  version "4.0.0"
-  resolved "https://registry.npmjs.org/@types/sinon/-/sinon-4.0.0.tgz#9a93ffa4ee1329e85166278a5ed99f81dc4c8362"
+"@types/sinon@^4.3.0":
+  version "4.3.0"
+  resolved "https://registry.npmjs.org/@types/sinon/-/sinon-4.3.0.tgz#7f53915994a00ccea24f4e0c24709822ed11a3b1"
 
 abbrev@1:
   version "1.1.1"
