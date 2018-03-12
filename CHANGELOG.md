@@ -18,6 +18,8 @@
 
 ### v0.1.1
 
+- Update Prettier rules (see #45).
+
 - Update CODEBEAT project UUID (see #44).
 
 - Update codeclimate settings (see #43).
