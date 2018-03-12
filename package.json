@@ -95,7 +95,7 @@
     "nyc": "^11.5.0",
     "prettier": "^1.11.1",
     "publish-please": "^2.3.1",
-    "reflect-metadata": "^0.1.10",
+    "reflect-metadata": "^0.1.12",
     "remap-istanbul": "^0.10.1",
     "rimraf": "^2.6.2",
     "sinon": "^4.4.2",
@@ -109,7 +109,5 @@
     "webpack": "^3.8.1",
     "webpack-dev-server": "^2.9.4"
   },
-  "peerDependencies": {
-    "reflect-metadata": "^0.1.10"
-  }
+  "peerDependencies": {}
 }
