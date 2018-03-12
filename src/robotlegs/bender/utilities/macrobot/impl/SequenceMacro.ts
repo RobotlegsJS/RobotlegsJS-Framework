@@ -44,9 +44,7 @@ export abstract class SequenceMacro extends AbstractMacro implements IMacro {
 
     protected executeNext(): void {
         if (this.hasCommands) {
-            let mapping: ISubCommandMapping = this._commands[
-                this._executionIndex++
-            ];
+            let mapping: ISubCommandMapping = this._commands[this._executionIndex++];
             this.executeCommand(mapping);
         } else {
             this.dispatchComplete(this._success);

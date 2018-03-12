@@ -85,9 +85,7 @@ describe("ParallelMacro", () => {
     });
 
     it("removed_commands_are_not_executed", (done: Function) => {
-        eventCommandMap
-            .map("trigger", Event)
-            .toCommand(TestAddAndRemoveParallelCommand);
+        eventCommandMap.map("trigger", Event).toCommand(TestAddAndRemoveParallelCommand);
         dispatcher.dispatchEvent(new Event("trigger"));
         setTimeout(() => {
             assert.deepEqual(reported, [
@@ -104,12 +102,8 @@ describe("ParallelMacro", () => {
         }, 250);
     });
 
-    it("commands_are_executed_in_parallel_and_complete_callback_is_called", (
-        done: Function
-    ) => {
-        eventCommandMap
-            .map("trigger", Event)
-            .toCommand(TestParallelWithCompleteCallbackCommand);
+    it("commands_are_executed_in_parallel_and_complete_callback_is_called", (done: Function) => {
+        eventCommandMap.map("trigger", Event).toCommand(TestParallelWithCompleteCallbackCommand);
         dispatcher.dispatchEvent(new Event("trigger"));
 
         setTimeout(() => {
@@ -130,9 +124,7 @@ describe("ParallelMacro", () => {
     });
 
     it("empty_parallel_command_is_still_executed", (done: Function) => {
-        eventCommandMap
-            .map("trigger", Event)
-            .toCommand(TestEmptyParallelCommand);
+        eventCommandMap.map("trigger", Event).toCommand(TestEmptyParallelCommand);
         dispatcher.dispatchEvent(new Event("trigger"));
 
         setTimeout(() => {

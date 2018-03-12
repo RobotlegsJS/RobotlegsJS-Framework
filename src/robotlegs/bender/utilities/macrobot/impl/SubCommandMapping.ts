@@ -5,12 +5,7 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import {
-    IClass,
-    ICommand,
-    IInjector,
-    instantiateUnmapped
-} from "@robotlegsjs/core";
+import { IClass, ICommand, IInjector, instantiateUnmapped } from "@robotlegsjs/core";
 
 import { ISubCommandPayload } from "../api/ISubCommandPayload";
 import { ISubCommandMapping } from "../api/ISubCommandMapping";
@@ -18,8 +13,7 @@ import { ISubCommandConfigurator } from "../dsl/ISubCommandConfigurator";
 
 import { SubCommandPayload } from "./SubCommandPayload";
 
-export class SubCommandMapping
-    implements ISubCommandMapping, ISubCommandConfigurator {
+export class SubCommandMapping implements ISubCommandMapping, ISubCommandConfigurator {
     private _commandClass: IClass<ICommand>;
 
     private _guards: any[] = [];
