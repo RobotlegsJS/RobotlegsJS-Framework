@@ -18,6 +18,8 @@
 
 ### v0.1.1
 
+- Use `rimraf` instead of `rm -rf` (see #46).
+
 - Update Prettier rules (see #45).
 
 - Update CODEBEAT project UUID (see #44).
