@@ -18,6 +18,8 @@
 
 ### v0.1.1
 
+- Update CODEBEAT project UUID (see #38).
+
 - Update codeclimate settings (see #37).
 
 - Update dev dependencies to latest version.
