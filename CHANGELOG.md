@@ -8,7 +8,7 @@
 
 - [ ] Update **Prettier** rules:
 
-  - [ ] **printWidth** should be around **140** characters per line.
+  - [x] **printWidth** should be around **140** characters per line.
 
   - [ ] Find a way to keep a new line between **@inject** anotation and property declarations.
 
@@ -17,6 +17,8 @@
 ## RobotlegsJS-SignalCommandMap 0.1.0
 
 ### v0.1.1
+
+- Update Prettier rules (see #45).
 
 - Update CODEBEAT project UUID (see #44).
 

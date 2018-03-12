@@ -11,24 +11,9 @@ import sinon = require("sinon");
 
 import { assert } from "chai";
 
-import {
-    ISignal,
-    MonoSignal,
-    OnceSignal,
-    Signal,
-    DeluxeSignal,
-    PrioritySignal
-} from "@robotlegsjs/signals";
+import { ISignal, MonoSignal, OnceSignal, Signal, DeluxeSignal, PrioritySignal } from "@robotlegsjs/signals";
 
-import {
-    injectable,
-    IContext,
-    IInjector,
-    ICommandMapper,
-    ICommandUnmapper,
-    Context,
-    CommandMapper
-} from "@robotlegsjs/core";
+import { injectable, IContext, IInjector, ICommandMapper, ICommandUnmapper, Context, CommandMapper } from "@robotlegsjs/core";
 
 import { ISignalCommandMap } from "../../../../../../src/robotlegs/bender/extensions/signalCommandMap/api/ISignalCommandMap";
 import { SignalCommandMap } from "../../../../../../src/robotlegs/bender/extensions/signalCommandMap/impl/SignalCommandMap";
@@ -62,11 +47,7 @@ describe("SignalCommandMap", () => {
         reportedExecutions.push(itemClass);
     }
 
-    function commandExecutionCount(
-        totalEvents: number = 1,
-        oneshot: boolean = false,
-        ...valueObjects
-    ): number {
+    function commandExecutionCount(totalEvents: number = 1, oneshot: boolean = false, ...valueObjects): number {
         let executeCount: number = 0;
 
         injector
@@ -183,13 +164,9 @@ describe("SignalCommandMap", () => {
                 injected = command.payload;
             })
             .whenTargetNamed("executeCallback");
-        signalCommandMap
-            .map(StrictPayloadCarryingSignal)
-            .toCommand(PayloadInjectedCallbackCommand);
+        signalCommandMap.map(StrictPayloadCarryingSignal).toCommand(PayloadInjectedCallbackCommand);
         let payload: Payload = new Payload();
-        let signal: StrictPayloadCarryingSignal = injector.get(
-            StrictPayloadCarryingSignal
-        );
+        let signal: StrictPayloadCarryingSignal = injector.get(StrictPayloadCarryingSignal);
 
         signal.dispatch(payload);
 
@@ -247,10 +224,7 @@ describe("SignalCommandMap", () => {
 
         signal.dispatch();
 
-        assert.deepEqual(reportedExecutions, [
-            ReportingCommand,
-            ReportingCommand2
-        ]);
+        assert.deepEqual(reportedExecutions, [ReportingCommand, ReportingCommand2]);
     });
 
     it("test_one_shot_command_should_not_cause_infinite_loop_when_dispatching_to_self", () => {
@@ -306,11 +280,7 @@ describe("SignalCommandMap", () => {
 
         signal1.dispatch();
 
-        assert.deepEqual(reportedExecutions, [
-            ReportingCommand,
-            ReportingCommand2,
-            ReportingCommand3
-        ]);
+        assert.deepEqual(reportedExecutions, [ReportingCommand, ReportingCommand2, ReportingCommand3]);
     });
 
     it("test_commands_are_executed_in_order", () => {
@@ -327,11 +297,7 @@ describe("SignalCommandMap", () => {
 
         signal.dispatch();
 
-        assert.deepEqual(reportedExecutions, [
-            ReportingCommand,
-            ReportingCommand2,
-            ReportingCommand3
-        ]);
+        assert.deepEqual(reportedExecutions, [ReportingCommand, ReportingCommand2, ReportingCommand3]);
     });
 
     it("test_hooks_are_called", () => {
@@ -375,10 +341,7 @@ describe("SignalCommandMap", () => {
     });
 
     it("test_command_executes_when_all_guards_allow", () => {
-        assert.equal(
-            commandExecutionCountWithGuards(HappyGuard, HappyGuard),
-            1
-        );
+        assert.equal(commandExecutionCountWithGuards(HappyGuard, HappyGuard), 1);
     });
 
     it("test_command_does_not_execute_when_the_guard_denies", () => {
@@ -386,17 +349,11 @@ describe("SignalCommandMap", () => {
     });
 
     it("test_command_does_not_execute_when_any_guards_denies", () => {
-        assert.equal(
-            commandExecutionCountWithGuards(HappyGuard, GrumpyGuard),
-            0
-        );
+        assert.equal(commandExecutionCountWithGuards(HappyGuard, GrumpyGuard), 0);
     });
 
     it("test_command_does_not_execute_when_all_guards_deny", () => {
-        assert.equal(
-            commandExecutionCountWithGuards(GrumpyGuard, GrumpyGuard),
-            0
-        );
+        assert.equal(commandExecutionCountWithGuards(GrumpyGuard, GrumpyGuard), 0);
     });
 
     it("test_payload_is_injected_into_guard", () => {
@@ -415,9 +372,7 @@ describe("SignalCommandMap", () => {
             .withGuards(PayloadInjectedGuard);
 
         let payload: Payload = new Payload();
-        let signal: StrictPayloadCarryingSignal = injector.get(
-            StrictPayloadCarryingSignal
-        );
+        let signal: StrictPayloadCarryingSignal = injector.get(StrictPayloadCarryingSignal);
 
         signal.dispatch(payload);
 
@@ -441,9 +396,7 @@ describe("SignalCommandMap", () => {
             .withHooks(PayloadInjectedHook);
 
         let payload: Payload = new Payload();
-        let signal: StrictPayloadCarryingSignal = injector.get(
-            StrictPayloadCarryingSignal
-        );
+        let signal: StrictPayloadCarryingSignal = injector.get(StrictPayloadCarryingSignal);
 
         signal.dispatch(payload);
 
@@ -461,14 +414,10 @@ describe("SignalCommandMap", () => {
             })
             .whenTargetNamed("executeCallback");
 
-        signalCommandMap
-            .map(StrictPayloadCarryingSignal)
-            .toCommand(ExecuteMethodWithParametersCommand);
+        signalCommandMap.map(StrictPayloadCarryingSignal).toCommand(ExecuteMethodWithParametersCommand);
 
         let payload: Payload = new Payload();
-        let signal: StrictPayloadCarryingSignal = injector.get(
-            StrictPayloadCarryingSignal
-        );
+        let signal: StrictPayloadCarryingSignal = injector.get(StrictPayloadCarryingSignal);
 
         signal.dispatch(payload);
 
@@ -486,9 +435,7 @@ describe("SignalCommandMap", () => {
             })
             .whenTargetNamed("executeCallback");
 
-        signalCommandMap
-            .map(SupportSignal)
-            .toCommand(ExecuteMethodWithParametersCommand);
+        signalCommandMap.map(SupportSignal).toCommand(ExecuteMethodWithParametersCommand);
 
         let payload: Payload = new Payload();
         let signal: SupportSignal = injector.get(SupportSignal);
@@ -545,12 +492,7 @@ describe("SignalCommandMap", () => {
 
         signal.dispatch();
 
-        assert.deepEqual(reportedExecutions, [
-            ReportingGuard,
-            ReportingCommand,
-            ReportingGuard2,
-            ReportingCommand2
-        ]);
+        assert.deepEqual(reportedExecutions, [ReportingGuard, ReportingCommand, ReportingGuard2, ReportingCommand2]);
     });
 
     it("test_previously_constructed_command_does_not_slip_through_the_loop", () => {

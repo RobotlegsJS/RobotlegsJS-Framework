@@ -11,24 +11,9 @@ import sinon = require("sinon");
 
 import { assert } from "chai";
 
-import {
-    ISignal,
-    MonoSignal,
-    OnceSignal,
-    Signal,
-    DeluxeSignal,
-    PrioritySignal
-} from "@robotlegsjs/signals";
+import { ISignal, MonoSignal, OnceSignal, Signal, DeluxeSignal, PrioritySignal } from "@robotlegsjs/signals";
 
-import {
-    injectable,
-    IContext,
-    IInjector,
-    ICommandMapper,
-    ICommandUnmapper,
-    Context,
-    CommandMapper
-} from "@robotlegsjs/core";
+import { injectable, IContext, IInjector, ICommandMapper, ICommandUnmapper, Context, CommandMapper } from "@robotlegsjs/core";
 
 import { SignalCommandMap } from "../../../../../../src/robotlegs/bender/extensions/signalCommandMap/impl/SignalCommandMap";
 
