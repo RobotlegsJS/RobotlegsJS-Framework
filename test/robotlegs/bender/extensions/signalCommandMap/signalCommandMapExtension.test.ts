@@ -46,9 +46,7 @@ describe("SignalCommandMapExtension", () => {
         context.install(SignalCommandMapExtension);
         context.initialize();
 
-        let instance: ISignalCommandMap = context.injector.get<
-            ISignalCommandMap
-        >(ISignalCommandMap);
+        let instance: ISignalCommandMap = context.injector.get<ISignalCommandMap>(ISignalCommandMap);
 
         instance.map(RelaySignal).toCommand(RelayCommand);
         instance.map(TargetSignal).toCommand(TargetCommand);
