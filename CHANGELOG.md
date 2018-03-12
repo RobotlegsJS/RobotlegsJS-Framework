@@ -18,6 +18,8 @@
 
 ### v0.1.1
 
+- Update @robotlegsjs/core to version 0.1.3 (see #41).
+
 - Update @robotlegsjs/signals to version 0.1.1 (see #36).
 
 ### [v0.1.0](https://github.com/RobotlegsJS/RobotlegsJS-SignalCommandMap/releases/tag/0.1.0) - 2017-11-16
