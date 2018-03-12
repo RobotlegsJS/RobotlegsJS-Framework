@@ -18,6 +18,8 @@
 
 ### v0.1.1
 
+- Update CODEBEAT project UUID (see #44).
+
 - Update codeclimate settings (see #43).
 
 - Update @robotlegsjs/core to version 0.1.3 (see #41).
