@@ -44,10 +44,7 @@ export abstract class ParallelMacro extends AbstractMacro implements IMacro {
         this._executionCount++;
         this._success = this._success && success;
 
-        if (
-            this._running &&
-            (!this._success || this._executionCount === this._commands.length)
-        ) {
+        if (this._running && (!this._success || this._executionCount === this._commands.length)) {
             this.dispatchComplete(this._success);
         }
     }

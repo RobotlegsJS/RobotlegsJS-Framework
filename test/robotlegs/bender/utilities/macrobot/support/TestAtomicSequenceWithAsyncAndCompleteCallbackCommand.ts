@@ -30,9 +30,7 @@ export class TestAtomicSequenceWithAsyncAndCompleteCallbackCommand extends Seque
 
     protected onComplete(success: boolean): void {
         if (!success) {
-            this._report(
-                "All commands have been executed but some of them failed."
-            );
+            this._report("All commands have been executed but some of them failed.");
         }
     }
 }

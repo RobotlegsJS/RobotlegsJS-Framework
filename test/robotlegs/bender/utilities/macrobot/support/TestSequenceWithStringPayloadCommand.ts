@@ -17,12 +17,8 @@ import { ReportStringCommand } from "./ReportStringCommand";
 @injectable()
 export class TestSequenceWithStringPayloadCommand extends SequenceMacro {
     public prepare(): void {
-        this.add(ReportStringCommand).withPayloads(
-            new SubCommandPayload("Hello")
-        );
-        this.add(ReportStringCommand).withPayloads(
-            new SubCommandPayload("World", String)
-        );
+        this.add(ReportStringCommand).withPayloads(new SubCommandPayload("Hello"));
+        this.add(ReportStringCommand).withPayloads(new SubCommandPayload("World", String));
         this.add(ReportStringCommand).withPayloads("!");
     }
 }

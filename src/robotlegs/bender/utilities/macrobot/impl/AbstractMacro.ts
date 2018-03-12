@@ -7,16 +7,7 @@
 
 import { interfaces, ContainerModule } from "inversify";
 
-import {
-    inject,
-    injectable,
-    IClass,
-    ICommand,
-    IInjector,
-    IContext,
-    applyHooks,
-    guardsApprove
-} from "@robotlegsjs/core";
+import { inject, injectable, IClass, ICommand, IInjector, IContext, applyHooks, guardsApprove } from "@robotlegsjs/core";
 
 import { IAsyncCommand } from "../api/IAsyncCommand";
 import { IMacro } from "../api/IMacro";
@@ -35,10 +26,7 @@ export abstract class AbstractMacro extends AsyncCommand implements IMacro {
     protected _mappings: SubCommandMappingList;
     protected _payloadsModule: ContainerModule;
 
-    constructor(
-        @inject(IContext) context: IContext,
-        @inject(IInjector) injector: IInjector
-    ) {
+    constructor(@inject(IContext) context: IContext, @inject(IInjector) injector: IInjector) {
         super(context);
 
         this._injector = injector.createChild();
@@ -68,10 +56,7 @@ export abstract class AbstractMacro extends AsyncCommand implements IMacro {
             this.mapPayloads(payloads);
         }
 
-        if (
-            mapping.guards.length === 0 ||
-            guardsApprove(mapping.guards, this._injector)
-        ) {
+        if (mapping.guards.length === 0 || guardsApprove(mapping.guards, this._injector)) {
             command = mapping.getOrCreateCommandInstance(this._injector);
 
             if (mapping.hooks.length > 0) {
@@ -86,14 +71,10 @@ export abstract class AbstractMacro extends AsyncCommand implements IMacro {
         }
 
         if (command) {
-            let isAsync: boolean =
-                command.constructor.prototype.registerCompleteCallback !==
-                undefined;
+            let isAsync: boolean = command.constructor.prototype.registerCompleteCallback !== undefined;
 
             if (isAsync) {
-                (<IAsyncCommand>command).registerCompleteCallback(
-                    this.commandCompleteHandler.bind(this)
-                );
+                (<IAsyncCommand>command).registerCompleteCallback(this.commandCompleteHandler.bind(this));
             }
 
             command.execute();
@@ -107,19 +88,17 @@ export abstract class AbstractMacro extends AsyncCommand implements IMacro {
     }
 
     protected mapPayloads(payloads: Array<ISubCommandPayload<any>>): void {
-        this._payloadsModule = new ContainerModule(
-            (bind: interfaces.Bind, unbind: interfaces.Unbind) => {
-                payloads.forEach((payload: ISubCommandPayload<any>) => {
-                    if (payload.name.length > 0) {
-                        bind(payload.type)
-                            .toConstantValue(payload.data)
-                            .whenTargetNamed(payload.name);
-                    } else {
-                        bind(payload.type).toConstantValue(payload.data);
-                    }
-                });
-            }
-        );
+        this._payloadsModule = new ContainerModule((bind: interfaces.Bind, unbind: interfaces.Unbind) => {
+            payloads.forEach((payload: ISubCommandPayload<any>) => {
+                if (payload.name.length > 0) {
+                    bind(payload.type)
+                        .toConstantValue(payload.data)
+                        .whenTargetNamed(payload.name);
+                } else {
+                    bind(payload.type).toConstantValue(payload.data);
+                }
+            });
+        });
         this._injector.load(this._payloadsModule);
     }
 

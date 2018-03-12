@@ -10,9 +10,6 @@ import { ICommand } from "@robotlegsjs/core";
 import { ISubCommandMapper } from "../dsl/ISubCommandMapper";
 import { ISubCommandUnMapper } from "../dsl/ISubCommandUnMapper";
 
-export interface IMacro
-    extends ICommand,
-        ISubCommandMapper,
-        ISubCommandUnMapper {
+export interface IMacro extends ICommand, ISubCommandMapper, ISubCommandUnMapper {
     prepare(): void;
 }
