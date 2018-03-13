@@ -20,6 +20,8 @@
 
 ### v0.1.2
 
+- Enforce TSLint rules (see #55).
+
 - Update TypeScript Compiler Options (see #53).
 
 - Update dev dependencies to latest version.
