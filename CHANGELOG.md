@@ -20,6 +20,8 @@
 
 ### v0.1.2
 
+- Update TypeScript Compiler Options (see #53).
+
 - Update dev dependencies to latest version.
 
 ### [v0.1.1](https://github.com/RobotlegsJS/SignalsJS/releases/tag/0.1.1) - 2018-03-04
