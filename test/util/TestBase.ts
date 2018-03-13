@@ -3,7 +3,7 @@ import { GenericEvent } from "../../src/org/osflash/signals/events/GenericEvent"
 import { Sprite } from "../mock/mock";
 
 export function newEmptyHandler(): Function {
-    return function(e: any = null, ...args): void {};
+    return function(e: any = null, ...args: any[]): void {};
 }
 
 export function failIfCalled(e: any = null): void {

@@ -3,7 +3,6 @@ import "../../../entry";
 import { assert } from "chai";
 
 import { AsyncUtil } from "../../../util/AsyncUtil";
-import { MonoSignal } from "../../../../src/org/osflash/signals/MonoSignal";
 import { Signal } from "../../../../src/org/osflash/signals/Signal";
 
 describe("MonoSignalDispatchArgsTest", () => {

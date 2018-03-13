@@ -27,7 +27,7 @@ describe("RedispatchedEventTest", () => {
         completed.dispatch(originalEvent, done);
     });
 
-    function redispatchEvent(e: GenericEvent, done): void {
+    function redispatchEvent(e: GenericEvent, done: Function): void {
         (e.signal as DeluxeSignal).removeAll();
         assert.equal(originalEvent, e);
         completed.add(async.add(check_redispatched_event_is_not_original, 10, done));

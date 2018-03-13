@@ -1,6 +1,5 @@
 import { PrioritySignal } from "./PrioritySignal";
 import { SlotList } from "./SlotList";
-import { IBubbleEventHandler } from "./events/IBubbleEventHandler";
 import { IEvent } from "./events/IEvent";
 
 /**
