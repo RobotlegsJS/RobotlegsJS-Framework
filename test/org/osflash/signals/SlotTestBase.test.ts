@@ -5,7 +5,9 @@ import { assert } from "chai";
 import { ISignal } from "../../../../src/org/osflash/signals/ISignal";
 import { ISlot } from "../../../../src/org/osflash/signals/ISlot";
 import { Signal } from "../../../../src/org/osflash/signals/Signal";
-import { Sprite, MockMouseEvent, MockEvent } from "../../../mock/mock";
+import { Sprite } from "../../../mock/Sprite";
+import { MockMouseEvent } from "../../../mock/MockMouseEvent";
+import { MockEvent } from "../../../mock/MockEvent";
 import { newEmptyHandler, failIfCalled } from "../../../util/TestBase";
 
 describe("SlotListTest", () => {

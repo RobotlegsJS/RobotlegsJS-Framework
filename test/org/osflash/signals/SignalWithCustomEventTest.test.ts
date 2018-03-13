@@ -5,7 +5,8 @@ import { assert } from "chai";
 import { Signal } from "../../../../src/org/osflash/signals/Signal";
 import { AsyncUtil } from "../../../util/AsyncUtil";
 import { GenericEvent } from "../../../../src/org/osflash/signals/events/GenericEvent";
-import { IEvent } from "../../../../src/org/osflash/signals/events/IEvent";
+
+import { MessageEvent } from "./support/MessageEvent";
 
 describe("SignalWithCustomEventTest", () => {
     let async: AsyncUtil = new AsyncUtil();
@@ -63,17 +64,3 @@ describe("SignalWithCustomEventTest", () => {
         assert.equal("ok", e.message, "message value in the event");
     }
 });
-
-class MessageEvent extends GenericEvent implements IEvent {
-    public message: string;
-
-    constructor(message: string) {
-        super();
-        this.message = message;
-    }
-
-    /*override*/
-    public clone(): IEvent {
-        return new MessageEvent(this.message);
-    }
-}

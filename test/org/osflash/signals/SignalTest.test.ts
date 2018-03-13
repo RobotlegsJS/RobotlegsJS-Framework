@@ -4,7 +4,7 @@ import { assert } from "chai";
 
 import { ISignal } from "../../../../src/org/osflash/signals/ISignal";
 import { GenericEvent } from "../../../../src/org/osflash/signals/events/GenericEvent";
-import { Sprite } from "../../../mock/mock";
+import { Sprite } from "../../../mock/Sprite";
 import { ISlot } from "../../../../src/org/osflash/signals/ISlot";
 import { Signal } from "../../../../src/org/osflash/signals/Signal";
 import { AsyncUtil } from "../../../util/AsyncUtil";
