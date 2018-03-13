@@ -4,9 +4,10 @@ import { assert } from "chai";
 
 import { AsyncUtil } from "../../../util/AsyncUtil";
 import { GenericEvent } from "../../../../src/org/osflash/signals/events/GenericEvent";
-import { IBubbleEventHandler } from "../../../../src/org/osflash/signals/events/IBubbleEventHandler";
-import { DeluxeSignal } from "../../../../src/org/osflash/signals/DeluxeSignal";
 import { IEvent } from "../../../../src/org/osflash/signals/events/IEvent";
+
+import { BubbleHater } from "./support/BubbleHater";
+import { Child } from "./support/Child";
 
 describe("DeluxeSignalWithBubblingEventTest", () => {
     let async: AsyncUtil = new AsyncUtil();
@@ -81,36 +82,3 @@ describe("DeluxeSignalWithBubblingEventTest", () => {
         }, Error);
     });
 });
-
-class Child implements IBubbleEventHandler {
-    public parent: any;
-    public completed: DeluxeSignal;
-    public name: string;
-    public listener: Function = null;
-    public popsBubbles: boolean = false;
-
-    constructor(parent: any = null, name: string = "", listener: Function = null) {
-        this.parent = parent;
-        this.name = name;
-        this.listener = listener;
-        this.completed = new DeluxeSignal(this);
-    }
-
-    public toString(): string {
-        return "[Child " + this.name + "]";
-    }
-
-    public onEventBubbled(event: IEvent): boolean {
-        if (this.listener !== null) {
-            return this.listener(event);
-        } else {
-            return !this.popsBubbles;
-        }
-    }
-}
-
-class BubbleHater implements IBubbleEventHandler {
-    public onEventBubbled(event: IEvent): boolean {
-        throw new Error("I SAID NO BUBBLES!!!");
-    }
-}

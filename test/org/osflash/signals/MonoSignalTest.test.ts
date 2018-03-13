@@ -7,7 +7,7 @@ import { MonoSignal } from "../../../../src/org/osflash/signals/MonoSignal";
 import { GenericEvent } from "../../../../src/org/osflash/signals/events/GenericEvent";
 import { ISlot } from "../../../../src/org/osflash/signals/ISlot";
 import { IEvent } from "../../../../src/org/osflash/signals/events/IEvent";
-import { Sprite } from "../../../mock/mock";
+import { Sprite } from "../../../mock/Sprite";
 
 describe("MonoSignalTest", () => {
     let async: AsyncUtil = new AsyncUtil();

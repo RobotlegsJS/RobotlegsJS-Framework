@@ -5,6 +5,10 @@ import { assert } from "chai";
 import { AsyncUtil } from "../../../util/AsyncUtil";
 import { Signal } from "../../../../src/org/osflash/signals/Signal";
 
+import { Base } from "./support/Base";
+import { Inherited1 } from "./support/Inherited1";
+import { Inherited2 } from "./support/Inherited2";
+
 describe("MonoSignalDispatchArgsTest", () => {
     let async: AsyncUtil = new AsyncUtil();
 
@@ -46,10 +50,6 @@ describe("MonoSignalDispatchArgsTest", () => {
     });
 
     it("dispatch_strict_type_checking_with_inheritance()", () => {
-        class Base {}
-        class Inherited1 extends Base {}
-        class Inherited2 extends Inherited1 {}
-
         let signal: Signal = new Signal(Base);
         assert.throws(() => signal.dispatch(5), Error);
         signal.dispatch(new Base());

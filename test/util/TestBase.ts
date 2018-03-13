@@ -1,6 +1,6 @@
 import { assert } from "chai";
 import { GenericEvent } from "../../src/org/osflash/signals/events/GenericEvent";
-import { Sprite } from "../mock/mock";
+import { Sprite } from "../mock/Sprite";
 
 export function newEmptyHandler(): Function {
     return function(e: any = null, ...args: any[]): void {};
