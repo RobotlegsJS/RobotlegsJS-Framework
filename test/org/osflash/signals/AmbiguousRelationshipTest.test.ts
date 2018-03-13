@@ -6,11 +6,9 @@ import { Signal } from "../../../../src/org/osflash/signals/Signal";
 import { failIfCalled } from "../../../util/TestBase";
 
 describe("AmbiguousRelationshipTest", () => {
-    let target: any;
     let instance: Signal;
 
     beforeEach(() => {
-        target = {};
         instance = new Signal();
     });
 

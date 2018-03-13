@@ -89,7 +89,7 @@ class Child implements IBubbleEventHandler {
     public listener: Function = null;
     public popsBubbles: boolean = false;
 
-    constructor(parent: any = null, name = "", listener = null) {
+    constructor(parent: any = null, name: string = "", listener: Function = null) {
         this.parent = parent;
         this.name = name;
         this.listener = listener;

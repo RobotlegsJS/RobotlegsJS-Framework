@@ -4,8 +4,6 @@ import { assert } from "chai";
 
 import { IPrioritySignal } from "../../../../src/org/osflash/signals/IPrioritySignal";
 import { PrioritySignal } from "../../../../src/org/osflash/signals/PrioritySignal";
-import { ISignal } from "../../../../src/org/osflash/signals/ISignal";
-import { Signal } from "../../../../src/org/osflash/signals/Signal";
 
 describe("PrioritySignalOnceTest", () => {
     let prioritySignal: IPrioritySignal;

@@ -147,7 +147,7 @@ describe("MonoSignalTest", () => {
     });
 
     it("slot_params_with_one_param_should_be_sent_through_to_listener()", () => {
-        let listener: Function = function(...args): void {
+        let listener: Function = function(...args: any[]): void {
             assert.isTrue(typeof args[0] === "number");
             assert.equal(args[0], 1234);
         };
@@ -161,7 +161,7 @@ describe("MonoSignalTest", () => {
     it("slot_params_with_multiple_params_should_be_sent_through_to_listener()", () => {
         let slot: ISlot;
 
-        let listener: Function = function(...args): void {
+        let listener: Function = function(...args: any[]): void {
             assert.isTrue(typeof args[0] === "number");
             assert.equal(args[0], 12345);
 
@@ -179,7 +179,7 @@ describe("MonoSignalTest", () => {
     });
 
     it("verify_chaining_of_slot_params()", () => {
-        let listener: Function = function(...args): void {
+        let listener: Function = function(...args: any[]): void {
             assert.equal(args.length, 1);
             assert.equal(args[0], 1234567);
         };
@@ -192,7 +192,7 @@ describe("MonoSignalTest", () => {
     it("verify_chaining_and_concat_of_slot_params()", () => {
         let params: any[] = [12345678];
 
-        let listener: Function = function(...args): void {
+        let listener: Function = function(...args: any[]): void {
             assert.equal(args.length, 2);
             assert.equal(args[0], 12345678);
             assert.equal(args[1], "text");
@@ -204,7 +204,7 @@ describe("MonoSignalTest", () => {
     });
 
     it("verify_chaining_and_pushing_on_to_slot_params()", () => {
-        let listener: Function = function(...args): void {
+        let listener: Function = function(...args: any[]): void {
             assert.equal(args.length, 2);
             assert.equal(args[0], 123456789);
             assert.equal(args[1], "text");
