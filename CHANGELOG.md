@@ -18,6 +18,8 @@
 
 ### v0.1.1
 
+- Update TypeScript Compiler Options (see #47).
+
 - Use `rimraf` instead of `rm -rf` (see #41).
 
 - Update Prettier rules (see #40).
