@@ -3,7 +3,7 @@ process.env.NODE_ENV = 'test';
 
 const webpack = require("webpack");
 const path = require("path");
-const webpackConfig = require('./webpack.config.js')({isTest: true});
+const webpackConfig = require('./webpack.config.js')({ production: false, karma: true });
 
 delete webpackConfig.entry;
 
