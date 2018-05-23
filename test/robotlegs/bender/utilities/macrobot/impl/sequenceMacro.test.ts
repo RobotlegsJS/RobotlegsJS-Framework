@@ -9,20 +9,9 @@ import "../../../../../entry";
 
 import { assert } from "chai";
 
-import {
-    IContext,
-    IInjector,
-    ICommandMapping,
-    IEventDispatcher,
-    IEventCommandMap,
-    Context,
-    Event,
-    EventDispatcher
-} from "@robotlegsjs/core";
+import { IContext, IInjector, IEventDispatcher, IEventCommandMap, Context, Event, EventDispatcher } from "@robotlegsjs/core";
 
 import { EventCommandMap } from "@robotlegsjs/core/lib/robotlegs/bender/extensions/eventCommandMap/impl/EventCommandMap";
-
-import { SequenceMacro } from "../../../../../../src/robotlegs/bender/utilities/macrobot/impl/SequenceMacro";
 
 import { TestAddAndRemoveSequenceCommand } from "../support/TestAddAndRemoveSequenceCommand";
 import { TestAtomicSequenceWithAsyncAndCompleteCallbackCommand } from "../support/TestAtomicSequenceWithAsyncAndCompleteCallbackCommand";
@@ -45,7 +34,6 @@ import { TestSequenceWithStringPayloadCommand } from "../support/TestSequenceWit
 describe("SequenceMacro", () => {
     let context: IContext;
     let injector: IInjector;
-    let mappings: ICommandMapping[];
     let dispatcher: IEventDispatcher;
     let eventCommandMap: IEventCommandMap;
     let reported: any[];

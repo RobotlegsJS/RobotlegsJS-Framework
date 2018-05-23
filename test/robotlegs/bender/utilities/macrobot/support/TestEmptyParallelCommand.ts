@@ -5,13 +5,9 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import { injectable, inject, named } from "inversify";
-
-import { ICommand } from "@robotlegsjs/core";
+import { injectable } from "inversify";
 
 import { ParallelMacro } from "../../../../../../src/robotlegs/bender/utilities/macrobot/impl/ParallelMacro";
-
-import { ReportDelayAsyncCommand } from "./ReportDelayAsyncCommand";
 
 @injectable()
 export class TestEmptyParallelCommand extends ParallelMacro {
