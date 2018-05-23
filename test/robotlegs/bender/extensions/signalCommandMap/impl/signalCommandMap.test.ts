@@ -7,13 +7,11 @@
 
 import "../../../../../entry.ts";
 
-import sinon = require("sinon");
-
 import { assert } from "chai";
 
-import { ISignal, MonoSignal, OnceSignal, Signal, DeluxeSignal, PrioritySignal } from "@robotlegsjs/signals";
+import { ISignal, Signal } from "@robotlegsjs/signals";
 
-import { injectable, IContext, IInjector, ICommandMapper, ICommandUnmapper, Context, CommandMapper } from "@robotlegsjs/core";
+import { IContext, ICommandMapper, Context, CommandMapper } from "@robotlegsjs/core";
 
 import { SignalCommandMap } from "../../../../../../src/robotlegs/bender/extensions/signalCommandMap/impl/SignalCommandMap";
 
@@ -22,13 +20,11 @@ import { NullCommand } from "../support/NullCommand";
 describe("SignalCommandMap", () => {
     let signal: ISignal;
     let context: IContext;
-    let injector: IInjector;
     let subject: SignalCommandMap;
 
     beforeEach(() => {
         signal = new Signal();
         context = new Context();
-        injector = context.injector;
         subject = new SignalCommandMap(context);
     });
 
@@ -39,7 +35,6 @@ describe("SignalCommandMap", () => {
         }
         signal = null;
         context = null;
-        injector = null;
         subject = null;
     });
 

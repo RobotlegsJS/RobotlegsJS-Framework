@@ -11,9 +11,9 @@ import sinon = require("sinon");
 
 import { assert } from "chai";
 
-import { ISignal, MonoSignal, OnceSignal, Signal, DeluxeSignal, PrioritySignal } from "@robotlegsjs/signals";
+import { ISignal, Signal } from "@robotlegsjs/signals";
 
-import { injectable, IInjector, RobotlegsInjector, CommandMapper } from "@robotlegsjs/core";
+import { IInjector, RobotlegsInjector, CommandMapper } from "@robotlegsjs/core";
 
 import { SignalCommandTrigger } from "../../../../../../src/robotlegs/bender/extensions/signalCommandMap/impl/SignalCommandTrigger";
 
@@ -150,7 +150,7 @@ describe("SignalCommandTrigger", () => {
         injector.bind(Signal).toConstantValue(signal);
         mapper = subject.createMapper();
         mapper.toCommand(CallbackParametersCommand);
-        signal.dispatch.apply(signal, expected);
+        signal.dispatch.apply(signal, parameters);
 
         assert.deepEqual(actual, expected);
     });
