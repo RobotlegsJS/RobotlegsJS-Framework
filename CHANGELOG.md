@@ -18,6 +18,8 @@
 
 ### v0.1.1
 
+- Update TypeScript Compiler Options (see #55).
+
 - Enforce TSLint rules (see #54).
 
 - Use `rimraf` instead of `rm -rf` (see #46).
