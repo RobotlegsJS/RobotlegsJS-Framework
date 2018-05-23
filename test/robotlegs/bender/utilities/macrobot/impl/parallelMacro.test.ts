@@ -9,16 +9,7 @@ import "../../../../../entry";
 
 import { assert } from "chai";
 
-import {
-    IContext,
-    IInjector,
-    ICommandMapping,
-    IEventDispatcher,
-    IEventCommandMap,
-    Context,
-    Event,
-    EventDispatcher
-} from "@robotlegsjs/core";
+import { IContext, IInjector, IEventDispatcher, IEventCommandMap, Context, Event, EventDispatcher } from "@robotlegsjs/core";
 
 import { EventCommandMap } from "@robotlegsjs/core/lib/robotlegs/bender/extensions/eventCommandMap/impl/EventCommandMap";
 
@@ -30,7 +21,6 @@ import { TestEmptyParallelCommand } from "../support/TestEmptyParallelCommand";
 describe("ParallelMacro", () => {
     let context: IContext;
     let injector: IInjector;
-    let mappings: ICommandMapping[];
     let dispatcher: IEventDispatcher;
     let eventCommandMap: IEventCommandMap;
     let reported: any[];

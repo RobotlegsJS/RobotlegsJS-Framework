@@ -9,17 +9,6 @@ import "../../../../../entry";
 
 import { assert } from "chai";
 
-import {
-    IContext,
-    IInjector,
-    ICommandMapping,
-    IEventDispatcher,
-    IEventCommandMap,
-    Context,
-    Event,
-    EventDispatcher
-} from "@robotlegsjs/core";
-
 import { SubCommandMapping } from "../../../../../../src/robotlegs/bender/utilities/macrobot/impl/SubCommandMapping";
 import { SubCommandMappingList } from "../../../../../../src/robotlegs/bender/utilities/macrobot/impl/SubCommandMappingList";
 
@@ -157,7 +146,6 @@ describe("SubCommandMappingList", () => {
 
     it("removeMappingsFor_do_nothing_when_command_was_not_previously_added", () => {
         let mapping1: SubCommandMapping = new SubCommandMapping(NullCommand);
-        let mapping2: SubCommandMapping = new SubCommandMapping(NullCommand2);
         subject.addMapping(mapping1);
         subject.addMapping(mapping1);
         subject.addMapping(mapping1);

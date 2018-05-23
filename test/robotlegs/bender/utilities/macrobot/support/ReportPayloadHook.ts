@@ -7,8 +7,6 @@
 
 import { injectable, inject, named } from "inversify";
 
-import { ReportStringCommand } from "./ReportStringCommand";
-
 @injectable()
 export class ReportPayloadHook {
     @inject("Function")

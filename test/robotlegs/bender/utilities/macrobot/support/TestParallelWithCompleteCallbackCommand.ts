@@ -7,9 +7,6 @@
 
 import { injectable, inject, named } from "inversify";
 
-import { ICommand } from "@robotlegsjs/core";
-
-import { SubCommandPayload } from "../../../../../../src/robotlegs/bender/utilities/macrobot/impl/SubCommandPayload";
 import { ParallelMacro } from "../../../../../../src/robotlegs/bender/utilities/macrobot/impl/ParallelMacro";
 
 import { ReportDelayAsyncCommand } from "./ReportDelayAsyncCommand";
