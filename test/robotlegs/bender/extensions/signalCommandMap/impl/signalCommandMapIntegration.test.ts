@@ -7,13 +7,9 @@
 
 import "../../../../../entry.ts";
 
-import sinon = require("sinon");
-
 import { assert } from "chai";
 
-import { ISignal, MonoSignal, OnceSignal, Signal, DeluxeSignal, PrioritySignal } from "@robotlegsjs/signals";
-
-import { injectable, IContext, IInjector, ICommandMapper, ICommandUnmapper, Context, CommandMapper } from "@robotlegsjs/core";
+import { IContext, IInjector, Context } from "@robotlegsjs/core";
 
 import { ISignalCommandMap } from "../../../../../../src/robotlegs/bender/extensions/signalCommandMap/api/ISignalCommandMap";
 import { SignalCommandMap } from "../../../../../../src/robotlegs/bender/extensions/signalCommandMap/impl/SignalCommandMap";
@@ -47,7 +43,7 @@ describe("SignalCommandMap", () => {
         reportedExecutions.push(itemClass);
     }
 
-    function commandExecutionCount(totalEvents: number = 1, oneshot: boolean = false, ...valueObjects): number {
+    function commandExecutionCount(totalEvents: number = 1, oneshot: boolean = false, ...valueObjects: any[]): number {
         let executeCount: number = 0;
 
         injector
@@ -75,7 +71,7 @@ describe("SignalCommandMap", () => {
         return commandExecutionCount(totalEvents, true);
     }
 
-    function hookCallCount(...hooks): number {
+    function hookCallCount(...hooks: any[]): number {
         let callCount: number = 0;
 
         injector
@@ -101,7 +97,7 @@ describe("SignalCommandMap", () => {
         return callCount;
     }
 
-    function commandExecutionCountWithGuards(...guards): number {
+    function commandExecutionCountWithGuards(...guards: any[]): number {
         let executionCount: number = 0;
 
         injector
