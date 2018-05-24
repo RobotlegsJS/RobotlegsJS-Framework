@@ -18,7 +18,11 @@
 
 ### v0.1.3
 
+- Update @robotlegsjs/signals to version 0.1.1 (see #40).
+
 - Update Code Climate token (see #26).
+
+- Update dev dependencies to latest version.
 
 ### [v0.1.2](https://github.com/RobotlegsJS/RobotlegsJS-Pixi-SignalMediator/releases/tag/0.1.2) - 2017-11-23
 
