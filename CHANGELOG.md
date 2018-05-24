@@ -14,6 +14,10 @@
 
 ## RobotlegsJS-Pixi-Palidor 0.1.0
 
+### v0.1.2
+
+- Update dev dependencies to latest version.
+
 ### [v0.1.1](https://github.com/RobotlegsJS/RobotlegsJS-Pixi-Palidor/releases/tag/0.1.1) - 2017-11-23
 
 - Update @robotlegsjs/pixi to version 0.1.2 (see #25).
