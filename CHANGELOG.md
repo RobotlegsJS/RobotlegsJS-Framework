@@ -16,6 +16,12 @@
 
 ### v0.1.2
 
+- Added *PalidorBundle* class (see #41).
+
+- Added example project (see #41).
+
+- Update Prettier rules (see #41).
+
 - Update dev dependencies to latest version.
 
 ### [v0.1.1](https://github.com/RobotlegsJS/RobotlegsJS-Pixi-Palidor/releases/tag/0.1.1) - 2017-11-23
