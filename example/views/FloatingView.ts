@@ -56,14 +56,13 @@ export class FloatingView extends Container {
         this._closeAllButton = new ColorButton("remove all", fontSize, bgWidth, bgHeight);
         this._closeAllButton.position.set(305, posY);
         this.addChild(this._closeAllButton);
-
     }
     private createBackground(): void {
         const graphic: Graphics = new Graphics();
         const colorDark = 0x2b3b47;
         const colorLight = 0x56768f;
 
-        graphic.beginFill(colorDark, .8);
+        graphic.beginFill(colorDark, 0.8);
         graphic.drawRect(0, 0, 400, 600);
 
         graphic.beginFill(colorLight);
