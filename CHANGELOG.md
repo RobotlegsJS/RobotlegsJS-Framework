@@ -22,6 +22,8 @@
 
 - Update Prettier rules (see #41).
 
+- Use `rimraf` instead of `rm -rf` (see #42).
+
 - Update dev dependencies to latest version.
 
 ### [v0.1.1](https://github.com/RobotlegsJS/RobotlegsJS-Pixi-Palidor/releases/tag/0.1.1) - 2017-11-23
