@@ -5,7 +5,6 @@ import {
     EventDispatcherExtension,
     IBundle,
     IContext,
-    ILogger,
     InjectableLoggerExtension,
     LocalEventMapExtension
 } from "@robotlegsjs/core";

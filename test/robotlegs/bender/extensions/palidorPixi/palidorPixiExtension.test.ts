@@ -22,7 +22,7 @@ import {
     MVCSBundle
 } from "@robotlegsjs/core";
 
-import { ContextView, ContextViewExtension, PixiBundle } from "@robotlegsjs/pixi";
+import { ContextView, PixiBundle } from "@robotlegsjs/pixi";
 
 describe("PalidorPixiExtension", () => {
     let context: Context;
