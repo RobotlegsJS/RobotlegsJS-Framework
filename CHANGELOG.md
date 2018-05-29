@@ -36,6 +36,8 @@ Features Or Improvements:
 
 - Update TypeScript Compiler Options (see #43).
 
+- Update codeclimate config to version 2 (see #45).
+
 - Update dev dependencies to latest version.
 
 ## RobotlegsJS-Pixi-Palidor 0.1.0
