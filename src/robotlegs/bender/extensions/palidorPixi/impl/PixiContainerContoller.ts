@@ -9,7 +9,7 @@ import { IContainerController } from "../api/IContainerController";
 
 import { Container } from "pixi.js";
 import { injectable, inject } from "@robotlegsjs/core";
-import { IContextView, ContextView } from "@robotlegsjs/pixi";
+import { IContextView } from "@robotlegsjs/pixi";
 
 @injectable()
 export class PixiContainerContoller implements IContainerController {

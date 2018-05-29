@@ -18,6 +18,7 @@ lib-cov
 coverage
 
 # Generated files
+dev
 lib
 
 # nyc test coverage

@@ -3,14 +3,16 @@
     "outDir": "lib",
     "target": "es5",
     "lib": ["es6", "dom"],
-    "types": ["reflect-metadata"],
     "module": "commonjs",
     "moduleResolution": "node",
     "declaration": true,
-    "noImplicitAny": false,
-    "sourceMap": true,
     "experimentalDecorators": true,
-    "emitDecoratorMetadata": true
+    "emitDecoratorMetadata": true,
+    "noImplicitAny": true,
+    "noUnusedParameters": false,
+    "noUnusedLocals": true,
+    "removeComments": true,
+    "sourceMap": true
   },
   "include": [
     "./src/**/*.ts",

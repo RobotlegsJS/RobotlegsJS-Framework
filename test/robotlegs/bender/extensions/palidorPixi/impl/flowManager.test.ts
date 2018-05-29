@@ -13,7 +13,6 @@ import { IFlowViewMapping, PalidorEvent, FlowManager, FlowViewMapping } from "./
 
 import { assert } from "chai";
 import { Container } from "pixi.js";
-import { Context, MVCSBundle } from "@robotlegsjs/core";
 
 import { Utils } from "./../support/Utils";
 
