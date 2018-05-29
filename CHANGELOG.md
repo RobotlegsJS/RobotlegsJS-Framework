@@ -26,7 +26,7 @@
 
 - Update TypeScript Compiler Options (see #43).
 
-- Rename class to PixiContainerController (see #44).
+- Fix typo in class name PixiContainerController (see #44).
 
 - Update dev dependencies to latest version.
 
