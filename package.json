@@ -1,7 +1,7 @@
 {
   "name": "@robotlegsjs/pixi-palidor",
   "version": "0.1.1",
-  "description": "",
+  "description": "A RobotlegsJS View Manager Extension for PixiJS",
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
   "scripts": {
