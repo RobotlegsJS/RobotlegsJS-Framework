@@ -5,7 +5,7 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import { IContainerController, IFlowManager, FlowManager, PixiContainerContoller, PalidorPixiExtension } from "./../../../../../../src";
+import { IContainerController, IFlowManager, FlowManager, PixiContainerController, PalidorPixiExtension } from "./../../../../../../src";
 
 import { Container } from "pixi.js";
 
@@ -24,13 +24,13 @@ export class Utils {
         return <FlowManager>context.injector.get(IFlowManager);
     }
 
-    public static getInstanceOfPixiContainerController(): PixiContainerContoller {
+    public static getInstanceOfPixiContainerController(): PixiContainerController {
         let context = new Context();
         context.install(MVCSBundle);
         context.install(PixiBundle);
         context.install(PalidorPixiExtension);
         context.configure(new ContextView(new Container()));
 
-        return <PixiContainerContoller>context.injector.get(IContainerController);
+        return <PixiContainerController>context.injector.get(IContainerController);
     }
 }

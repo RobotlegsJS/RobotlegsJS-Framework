@@ -7,7 +7,7 @@
 
 import "./../../../../../entry";
 
-import { PixiContainerContoller } from "../../../../../../src";
+import { PixiContainerController } from "../../../../../../src";
 
 import { assert } from "chai";
 import { Container } from "pixi.js";
@@ -15,7 +15,7 @@ import { Container } from "pixi.js";
 import { Utils } from "./../support/Utils";
 
 describe("PixiContainerController", () => {
-    let controller: PixiContainerContoller;
+    let controller: PixiContainerController;
     let view: Container;
 
     beforeEach(() => {

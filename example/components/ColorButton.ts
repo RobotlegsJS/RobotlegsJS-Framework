@@ -1,3 +1,10 @@
+// ------------------------------------------------------------------------------
+//  Copyright (c) 2017 RobotlegsJS. All Rights Reserved.
+//
+//  NOTICE: You are permitted to use, modify, and distribute this file
+//  in accordance with the terms of the license agreement accompanying it.
+// ------------------------------------------------------------------------------
+
 import { Container, Graphics, Text, TextStyle } from "pixi.js";
 
 export class ColorButton extends Container {

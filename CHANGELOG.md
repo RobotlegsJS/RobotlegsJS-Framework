@@ -12,9 +12,19 @@
 
   - [ ] Find a way to keep a new line between **@inject** anotation and property declarations.
 
-## RobotlegsJS-Pixi-Palidor 0.1.0
+## RobotlegsJS-Pixi-Palidor 0.2.0
 
-### v0.1.2
+### v0.2.0
+
+Major Breaking Changes:
+---
+
+- Fix typo in class named **PixiContainerController** (see #44).
+    - The name of the class changed from **PixiContainerContoller** to **PixiContainerController**, don't forget to update your import statements.
+    - A copyright message was added to all source files.
+
+Features Or Improvements:
+---
 
 - Added *PalidorBundle* class (see #41).
 
@@ -27,6 +37,8 @@
 - Update TypeScript Compiler Options (see #43).
 
 - Update dev dependencies to latest version.
+
+## RobotlegsJS-Pixi-Palidor 0.1.0
 
 ### [v0.1.1](https://github.com/RobotlegsJS/RobotlegsJS-Pixi-Palidor/releases/tag/0.1.1) - 2017-11-23
 
