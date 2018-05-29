@@ -6,15 +6,21 @@
 
 - [ ] Use [**Function Types**](https://www.typescriptlang.org/docs/handbook/functions.html) for handlers and callbacks instead of generic **Function** type.
 
-- [ ] Update **Prettier** rules:
+- [x] Update **Prettier** rules:
 
-  - [ ] **printWidth** should be around **140** characters per line.
+  - [x] **printWidth** should be around **140** characters per line.
 
   - [ ] Find a way to keep a new line between **@inject** anotation and property declarations.
 
 ## RobotlegsJS-Pixi-Palidor 0.1.0
 
 ### v0.1.2
+
+- Added *PalidorBundle* class (see #41).
+
+- Added example project (see #41).
+
+- Update Prettier rules (see #41).
 
 - Update dev dependencies to latest version.
 

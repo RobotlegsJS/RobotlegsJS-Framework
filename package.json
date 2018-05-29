@@ -1,14 +1,15 @@
 {
   "name": "@robotlegsjs/pixi-palidor",
   "version": "0.1.1",
-  "description": "",
+  "description": "A RobotlegsJS View Manager Extension for PixiJS",
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
   "scripts": {
+    "example": "webpack-dev-server --config ./webpack.config.example.js",
     "test": "./node_modules/.bin/karma start --single-run",
     "test:tdd": "./node_modules/.bin/karma start",
     "mocha": "mocha test/**/*.test.ts --require ts-node/register",
-    "autoformat": "prettier --config .prettierrc --write {src,test}/**/*.ts",
+    "autoformat": "prettier --config .prettierrc --write {example,src,test}/**/*.ts",
     "tslint-check": "tslint-config-prettier-check ./tslint.json",
     "clean-up": "rm -rf .nyc_output && rm -rf coverage && rm -rf lib",
     "prepare": "npm run clean-up && tsc -d",
@@ -30,7 +31,7 @@
   ],
   "author": "RobotlegsJS",
   "contributors": [
-    "Ronaldo Santiago <ronaldo.setzers@gmail.com>",
+    "Ronaldo Santiago <ronaldo.setzer@gmail.com>",
     "Tiago Schenkel <tiago.schenkel@gmail.com>"
   ],
   "license": "MIT",
@@ -72,7 +73,7 @@
     "karma-sourcemap-writer": "^0.1.2",
     "karma-webpack": "^3.0.0",
     "mocha": "^5.2.0",
-    "prettier": "^1.12.1",
+    "prettier": "^1.13.2",
     "publish-please": "^2.4.1",
     "reflect-metadata": "^0.1.12",
     "remap-istanbul": "^0.11.1",
@@ -84,7 +85,8 @@
     "tslint": "^5.10.0",
     "tslint-config-prettier": "^1.13.0",
     "typescript": "^2.8.3",
-    "webpack": "^4.9.1",
+    "webpack": "^4.10.1",
+    "webpack-cli": "^2.1.4",
     "webpack-dev-server": "^3.1.4"
   },
   "peerDependencies": {

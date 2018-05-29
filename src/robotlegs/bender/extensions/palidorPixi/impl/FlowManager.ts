@@ -15,14 +15,7 @@ import { FlowViewMapping } from "./FlowViewMapping";
 
 import { Container } from "pixi.js";
 
-import {
-    injectable,
-    inject,
-    IClass,
-    IEventMap,
-    IEventDispatcher,
-    Event
-} from "@robotlegsjs/core";
+import { injectable, inject, IClass, IEventMap, IEventDispatcher, Event } from "@robotlegsjs/core";
 
 @injectable()
 export class FlowManager implements IFlowManager {
@@ -65,46 +58,18 @@ export class FlowManager implements IFlowManager {
 
     public mapView(eventString: string, viewClass: IClass<Container>): void {
         this._views.set(eventString, viewClass);
-        this._eventMap.mapListener(
-            this._dispatcher,
-            eventString,
-            this.onChangeView,
-            this
-        );
+        this._eventMap.mapListener(this._dispatcher, eventString, this.onChangeView, this);
     }
 
-    public mapFloatingView(
-        eventString: string,
-        viewClass: IClass<Container>
-    ): void {
+    public mapFloatingView(eventString: string, viewClass: IClass<Container>): void {
         this._views.set(eventString, viewClass);
-        this._eventMap.mapListener(
-            this._dispatcher,
-            eventString,
-            this.onAddFloatingView,
-            this
-        );
+        this._eventMap.mapListener(this._dispatcher, eventString, this.onAddFloatingView, this);
     }
 
     private mapPalidorListeners(): void {
-        this._eventMap.mapListener(
-            this._dispatcher,
-            PalidorEvent.REMOVE_CURRENT_VIEW,
-            this.onRemoveCurrentView,
-            this
-        );
-        this._eventMap.mapListener(
-            this._dispatcher,
-            PalidorEvent.REMOVE_LAST_FLOATING_VIEW_ADDED,
-            this.onRemoveLastFloatingView,
-            this
-        );
-        this._eventMap.mapListener(
-            this._dispatcher,
-            PalidorEvent.REMOVE_ALL_FLOATING_VIEWS,
-            this.onRemoveAllFloatingView,
-            this
-        );
+        this._eventMap.mapListener(this._dispatcher, PalidorEvent.REMOVE_CURRENT_VIEW, this.onRemoveCurrentView, this);
+        this._eventMap.mapListener(this._dispatcher, PalidorEvent.REMOVE_LAST_FLOATING_VIEW_ADDED, this.onRemoveLastFloatingView, this);
+        this._eventMap.mapListener(this._dispatcher, PalidorEvent.REMOVE_ALL_FLOATING_VIEWS, this.onRemoveAllFloatingView, this);
     }
 
     private onChangeView(e: Event): void {
