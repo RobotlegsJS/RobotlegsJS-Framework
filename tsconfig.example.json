@@ -12,9 +12,10 @@
     "noUnusedParameters": false,
     "noUnusedLocals": true,
     "removeComments": true,
-    "sourceMap": false
+    "sourceMap": true
   },
   "include": [
-    "./src/**/*.ts"
+    "./src/**/*.ts",
+    "./example/**/*.ts"
   ]
 }
