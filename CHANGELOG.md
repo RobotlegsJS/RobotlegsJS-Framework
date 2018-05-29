@@ -16,6 +16,16 @@
 
 ### v0.2.0
 
+Major Breaking Changes:
+---
+
+- Fix typo in class named **PixiContainerController** (see #44).
+    - The name of the class changed from **PixiContainerContoller** to **PixiContainerController**, don't forget to update your import statements.
+    - A copyright message was added to all source files.
+
+Features Or Improvements:
+---
+
 - Added *PalidorBundle* class (see #41).
 
 - Added example project (see #41).
@@ -25,8 +35,6 @@
 - Use `rimraf` instead of `rm -rf` (see #42).
 
 - Update TypeScript Compiler Options (see #43).
-
-- Fix typo in class name PixiContainerController (see #44).
 
 - Update dev dependencies to latest version.
 
