@@ -9,7 +9,7 @@ import { IContainerController } from "./api/IContainerController";
 import { IFlowManager } from "./api/IFlowManager";
 
 import { FlowManager } from "./impl/FlowManager";
-import { PixiContainerContoller } from "./impl/PixiContainerContoller";
+import { PixiContainerController } from "./impl/PixiContainerController";
 
 import { IContext, IExtension, IInjector, instanceOfType } from "@robotlegsjs/core";
 
@@ -27,7 +27,7 @@ export class PalidorPixiExtension implements IExtension {
     private handleContextView(contextView: IContextView): void {
         this._injector
             .bind(IContainerController)
-            .to(PixiContainerContoller)
+            .to(PixiContainerController)
             .inSingletonScope();
         this._injector
             .bind(IFlowManager)

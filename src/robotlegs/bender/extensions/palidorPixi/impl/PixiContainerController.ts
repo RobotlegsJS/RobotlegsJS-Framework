@@ -12,7 +12,7 @@ import { injectable, inject } from "@robotlegsjs/core";
 import { IContextView } from "@robotlegsjs/pixi";
 
 @injectable()
-export class PixiContainerContoller implements IContainerController {
+export class PixiContainerController implements IContainerController {
     private _root: Container;
 
     private _staticLayer: Container;
