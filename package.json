@@ -5,7 +5,7 @@
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
   "scripts": {
-    "example":"webpack-dev-server --config ./webpack.config.example.js",
+    "example": "webpack-dev-server --config ./webpack.config.example.js",
     "test": "./node_modules/.bin/karma start --single-run",
     "test:tdd": "./node_modules/.bin/karma start",
     "mocha": "mocha test/**/*.test.ts --require ts-node/register",
@@ -86,6 +86,7 @@
     "tslint-config-prettier": "^1.13.0",
     "typescript": "^2.8.3",
     "webpack": "^4.10.1",
+    "webpack-cli": "^2.1.4",
     "webpack-dev-server": "^3.1.4"
   },
   "peerDependencies": {
