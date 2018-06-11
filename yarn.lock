@@ -6448,9 +6448,9 @@ public-encrypt@^4.0.0:
     parse-asn1 "^5.0.0"
     randombytes "^2.0.1"
 
-publish-please@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.npmjs.org/publish-please/-/publish-please-3.0.0.tgz#c8e82fa86f2d940ac70b8c662dbf89b6f7fd6455"
+publish-please@^3.0.1:
+  version "3.0.1"
+  resolved "https://registry.npmjs.org/publish-please/-/publish-please-3.0.1.tgz#5daefa4c8f205237894f3177af938ffbca3b0ac3"
   dependencies:
     ban-sensitive-files "1.9.2"
     chalk "2.4.1"
