@@ -6,9 +6,9 @@
 
 - [ ] Use [**Function Types**](https://www.typescriptlang.org/docs/handbook/functions.html) for handlers and callbacks instead of generic **Function** type.
 
-- [ ] Update **Prettier** rules:
+- [x] Update **Prettier** rules:
 
-  - [ ] **printWidth** should be around **140** characters per line.
+  - [x] **printWidth** should be around **140** characters per line.
 
   - [ ] Find a way to keep a new line between **@inject** anotation and property declarations.
 
@@ -19,6 +19,8 @@
 ### v0.1.3
 
 - Update @robotlegsjs/signals to version 0.1.1 (see #40).
+
+- Update Prettier rules (see #46).
 
 - Update Code Climate token (see #26).
 
