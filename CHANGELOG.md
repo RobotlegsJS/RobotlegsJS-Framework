@@ -22,6 +22,8 @@
 
 - Update Prettier rules (see #46).
 
+- Update codeclimate config to version 2 (see #47).
+
 - Use `rimraf` instead of `rm -rf`.
 
 - Update Code Climate token (see #26).
