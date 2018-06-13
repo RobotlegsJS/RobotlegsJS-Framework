@@ -22,6 +22,8 @@
 
 - Update Prettier rules (see #46).
 
+- Use `rimraf` instead of `rm -rf` (see #47).
+
 - Update Code Climate token (see #26).
 
 - Update dev dependencies to latest version.
