@@ -26,6 +26,8 @@
 
 - Update TypeScript Compiler Options (see #48).
 
+- Enforce TSLint rules (see #49).
+
 - Use `rimraf` instead of `rm -rf`.
 
 - Update Code Climate token (see #26).
