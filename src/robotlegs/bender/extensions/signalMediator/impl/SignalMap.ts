@@ -45,10 +45,7 @@ export class SignalMap implements ISignalMap {
     public removeFromSignal(signal: ISignal, handler: Function): void {
         signal.remove(handler);
 
-        if (
-            !this._handlersBySignal.has(signal) ||
-            this._handlersBySignal.get(signal).length === 0
-        ) {
+        if (!this._handlersBySignal.has(signal) || this._handlersBySignal.get(signal).length === 0) {
             return;
         }
 
@@ -60,9 +57,7 @@ export class SignalMap implements ISignalMap {
     }
 
     public removeAll(): void {
-        this._handlersBySignal.forEach((handlers, signal) =>
-            handlers.forEach(handler => signal.remove(handler))
-        );
+        this._handlersBySignal.forEach((handlers, signal) => handlers.forEach(handler => signal.remove(handler)));
 
         this._handlersBySignal.clear();
     }

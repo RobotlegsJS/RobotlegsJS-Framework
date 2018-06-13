@@ -21,9 +21,7 @@ import { SignalMap } from "./SignalMap";
  * <p>Override initialize and destroy to hook into the mediator lifecycle.</p>
  */
 @injectable()
-export abstract class SignalMediator<
-    T extends IEventDispatcher
-> extends Mediator<T> {
+export abstract class SignalMediator<T extends IEventDispatcher> extends Mediator<T> {
     /*============================================================================*/
     /* Protected Properties                                                       */
     /*============================================================================*/
