@@ -135,6 +135,10 @@
   version "5.2.1"
   resolved "https://registry.npmjs.org/@types/mocha/-/mocha-5.2.1.tgz#465450aaf5cec6f7d35523748c6cc89a5e222dc5"
 
+"@types/pixi.js@^4.7.5":
+  version "4.7.5"
+  resolved "https://registry.npmjs.org/@types/pixi.js/-/pixi.js-4.7.5.tgz#098a063f6bd430af58a7a9edb45b33d0bf140909"
+
 "@types/sinon@^5.0.1":
   version "5.0.1"
   resolved "https://registry.npmjs.org/@types/sinon/-/sinon-5.0.1.tgz#a15b36ec42f1f53166617491feabd1734cb03e21"

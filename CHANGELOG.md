@@ -24,6 +24,8 @@
 
 - Update codeclimate config to version 2 (see #47).
 
+- Update TypeScript Compiler Options (see #48).
+
 - Use `rimraf` instead of `rm -rf`.
 
 - Update Code Climate token (see #26).
