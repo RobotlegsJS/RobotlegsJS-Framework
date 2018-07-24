@@ -10,7 +10,6 @@ import {
     inject,
     IInjector,
     IContext,
-    ILogger,
     ICommandTrigger,
     ICommandMapper,
     ICommandUnmapper,
@@ -35,8 +34,6 @@ export class SignalCommandMap implements ISignalCommandMap {
 
     private _triggerMap: CommandTriggerMap;
 
-    private _logger: ILogger;
-
     /*============================================================================*/
     /* Constructor                                                                */
     /*============================================================================*/
@@ -46,7 +43,6 @@ export class SignalCommandMap implements ISignalCommandMap {
      */
     constructor(@inject(IContext) context: IContext) {
         this._injector = context.injector;
-        this._logger = context.getLogger(this);
         this._triggerMap = new CommandTriggerMap(this.getKey, this.createTrigger.bind(this));
     }
 

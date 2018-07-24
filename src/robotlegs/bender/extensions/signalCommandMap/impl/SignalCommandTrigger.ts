@@ -90,7 +90,7 @@ export class SignalCommandTrigger implements ICommandTrigger {
     /* Private Functions                                                          */
     /*============================================================================*/
 
-    private routePayloadToCommands = (...valueObjects): void => {
+    private routePayloadToCommands = (...valueObjects: any[]): void => {
         let valueClasses: any[] = valueObjects.map(obj => obj.constructor);
         let payload: CommandPayload = new CommandPayload(valueObjects, valueClasses);
         this._executor.executeCommands(this._mappings.getList(), payload);
