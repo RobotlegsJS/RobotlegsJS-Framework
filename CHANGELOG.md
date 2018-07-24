@@ -6,7 +6,7 @@
 
 - Update phaser-ce to version 2.9.1 (see #13).
 
-- Add changelog (see #35).
+- Add changelog (see #30).
 
 - Update dev dependencies to latest version.
 
