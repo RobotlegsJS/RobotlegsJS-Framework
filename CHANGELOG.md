@@ -4,6 +4,8 @@
 
 ### v0.0.6
 
+- Update @robotlegsjs/core to version 0.1.3 (see #14).
+
 - Update phaser-ce to version 2.9.1 (see #13).
 
 - Add changelog (see #30).
