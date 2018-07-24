@@ -18,6 +18,8 @@
 
 - Update Prettier rules (see #35).
 
+- Use `rimraf` instead of `rm -rf` (see #36).
+
 - Update dev dependencies to latest version.
 
 ### [v0.0.5](https://github.com/RobotlegsJS/RobotlegsJS-Phaser-SignalCommandMap/releases/tag/0.0.5) - 2017-09-26
