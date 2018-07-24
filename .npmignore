@@ -1,6 +1,7 @@
 /.idea
 /.vscode
 /coverage
+/dev
 /dist
 /docs
 /lib/test
