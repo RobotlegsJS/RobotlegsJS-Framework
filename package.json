@@ -9,7 +9,7 @@
     "mocha": "mocha test/**/*.test.ts --require ts-node/register",
     "autoformat": "prettier --config .prettierrc --write {src,test}/**/*.ts",
     "tslint-check": "tslint-config-prettier-check ./tslint.json",
-    "clean-up": "rimraf .nyc_output && rimraf coverage && rimraf lib",
+    "clean-up": "rimraf .nyc_output && rimraf coverage && rimraf lib && rimraf dev",
     "compile:src": "tsc -d",
     "compile:test": "tsc -p tsconfig.test.json -d",
     "prepare": "npm run clean-up && compile:src",
