@@ -41,19 +41,11 @@ export class SignalCommandTrigger implements ICommandTrigger {
     /**
      * @private
      */
-    constructor(
-        injector: IInjector,
-        signalClass: any,
-        processors?: Function[],
-        logger?: ILogger
-    ) {
+    constructor(injector: IInjector, signalClass: any, processors?: Function[], logger?: ILogger) {
         this._injector = injector;
         this._signalClass = signalClass;
         this._mappings = new CommandMappingList(this, processors, logger);
-        this._executor = new CommandExecutor(
-            injector,
-            this._mappings.removeMapping
-        );
+        this._executor = new CommandExecutor(injector, this._mappings.removeMapping);
     }
 
     /*============================================================================*/
@@ -100,10 +92,7 @@ export class SignalCommandTrigger implements ICommandTrigger {
 
     private routePayloadToCommands = (...valueObjects): void => {
         let valueClasses: any[] = valueObjects.map(obj => obj.constructor);
-        let payload: CommandPayload = new CommandPayload(
-            valueObjects,
-            valueClasses
-        );
+        let payload: CommandPayload = new CommandPayload(valueObjects, valueClasses);
         this._executor.executeCommands(this._mappings.getList(), payload);
     };
 }
