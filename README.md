@@ -1,6 +1,7 @@
 SignalsJS
 ===
 
+[![GitHub license](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/RobotlegsJS/SignalsJS/blob/master/LICENSE)
 [![Gitter chat](https://badges.gitter.im/RobotlegsJS/RobotlegsJS.svg)](https://gitter.im/RobotlegsJS/RobotlegsJS)
 [![Build Status](https://travis-ci.org/RobotlegsJS/SignalsJS.svg?branch=master)](https://travis-ci.org/RobotlegsJS/SignalsJS)
 [![codebeat badge](https://codebeat.co/badges/6c8aeb0d-177d-4d51-a011-557d16d6d167)](https://codebeat.co/projects/github-com-robotlegsjs-signalsjs-master)
