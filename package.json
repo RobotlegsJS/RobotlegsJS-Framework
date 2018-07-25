@@ -12,7 +12,7 @@
     "tslint:src": "tslint --project tsconfig.json",
     "tslint:test": "tslint --config tslint.test.json --project tsconfig.test.json",
     "tslint": "npm run tslint-check:src && npm run tslint-check:test && npm run tslint:src && npm run tslint:test",
-    "autoformat": "prettier --config .prettierrc --write {src,test}/**/{*,*.test}.ts",
+    "autoformat": "prettier --config .prettierrc --write {src,test}{*,/**}/{*,*.test}.ts",
     "clean-up": "rimraf .nyc_output && rimraf coverage && rimraf lib",
     "compile": "tsc -d",
     "dev": "webpack",
