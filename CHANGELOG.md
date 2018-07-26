@@ -24,7 +24,9 @@
 
 - Enforce TSLint rules (see #55).
 
-- Update TypeScript Compiler Options (see #53).
+- Update TypeScript Compiler Options to be more strict and to generate inline source maps (see #53, #75).
+
+- Use [tslib](https://github.com/Microsoft/tslib) library to avoid duplicated declarations (see #75).
 
 - Update dev dependencies to latest version.
 

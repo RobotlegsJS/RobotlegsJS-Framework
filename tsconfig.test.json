@@ -1,16 +1,7 @@
 {
+  "extends": "./tsconfig.json",
   "compilerOptions": {
-    "outDir": "lib",
-    "target": "es5",
-    "lib": ["es6", "dom"],
-    "module": "commonjs",
-    "moduleResolution": "node",
-    "declaration": true,
-    "noImplicitAny": true,
-    "noUnusedParameters": false,
-    "noUnusedLocals": true,
-    "removeComments": true,
-    "sourceMap": true
+    "outDir": "lib-test"
   },
   "include": [
     "./src/**/*.ts",

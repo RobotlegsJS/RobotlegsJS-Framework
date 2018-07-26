@@ -2,15 +2,21 @@
   "compilerOptions": {
     "outDir": "lib",
     "target": "es5",
-    "lib": ["es6", "dom"],
+    "lib": ["es7", "dom"],
+    "sourceMap": true,
+    "inlineSources": true,
     "module": "commonjs",
     "moduleResolution": "node",
-    "declaration": true,
-    "noImplicitAny": true,
-    "noUnusedParameters": false,
-    "noUnusedLocals": true,
     "removeComments": true,
-    "sourceMap": false
+    "strict": false,
+    "noImplicitAny": true,
+    "strictNullChecks": false,
+    "noImplicitThis": false,
+    "alwaysStrict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": false,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true
   },
   "include": [
     "./src/**/*.ts"
