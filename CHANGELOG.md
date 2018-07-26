@@ -26,6 +26,8 @@
 
 - Update TypeScript Compiler Options to be more strict and to generate inline source maps (see #53, #75).
 
+- Use [tslib](https://github.com/Microsoft/tslib) library to avoid duplicated declarations (see #75).
+
 - Update dev dependencies to latest version.
 
 ### [v0.1.1](https://github.com/RobotlegsJS/SignalsJS/releases/tag/0.1.1) - 2018-03-04
