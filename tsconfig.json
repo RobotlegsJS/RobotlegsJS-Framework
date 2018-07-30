@@ -7,7 +7,7 @@
     "inlineSources": true,
     "module": "commonjs",
     "moduleResolution": "node",
-    "removeComments": true,
+    "removeComments": false,
     "strict": false,
     "noImplicitAny": true,
     "strictNullChecks": false,
