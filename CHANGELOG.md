@@ -20,7 +20,9 @@
 
 - Enforce TSLint rules (see #51).
 
-- Update TypeScript Compiler Options (see #47).
+- Update TypeScript Compiler Options (see #47, #61).
+
+- Use [tslib](https://github.com/Microsoft/tslib) library to avoid duplicated declarations (see #61).
 
 - Use `rimraf` instead of `rm -rf` (see #41).
 
