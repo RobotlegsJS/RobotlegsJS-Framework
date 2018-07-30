@@ -1,6 +1,7 @@
 RobotlegsJS SignalCommandMap Extension
 ===
 
+[![GitHub license](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/RobotlegsJS/RobotlegsJS-SignalCommandMap/blob/master/LICENSE)
 [![Gitter chat](https://badges.gitter.im/RobotlegsJS/RobotlegsJS.svg)](https://gitter.im/RobotlegsJS/RobotlegsJS)
 [![Build Status](https://secure.travis-ci.org/RobotlegsJS/RobotlegsJS-SignalCommandMap.svg?branch=master)](https://travis-ci.org/RobotlegsJS/RobotlegsJS-SignalCommandMap)
 [![codebeat badge](https://codebeat.co/badges/de993485-2a69-4d55-be30-bedc44410d73)](https://codebeat.co/projects/github-com-robotlegsjs-robotlegsjs-signalcommandmap-master)
