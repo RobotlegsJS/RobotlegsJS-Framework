@@ -38,6 +38,8 @@ Features Or Improvements:
 
 - Update codeclimate config to version 2 (see #45).
 
+- Adopts year-agnostic copyright message (see #51).
+
 - Update dev dependencies to latest version.
 
 ## RobotlegsJS-Pixi-Palidor 0.1.0
