@@ -34,7 +34,7 @@
 
 - Update @robotlegsjs/signals to version 0.1.1 (see #36).
 
-- Adopts year-agnostic copyright message (see #64).
+- Adopts year-agnostic copyright message.
 
 - Update dev dependencies to latest version.
 
