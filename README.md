@@ -1,6 +1,7 @@
 RobotlegsJS Pixi SignalMediator Extension
 ===
 
+[![GitHub license](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/RobotlegsJS/RobotlegsJS-Pixi-SignalMediator/blob/master/LICENSE)
 [![Gitter chat](https://badges.gitter.im/RobotlegsJS/RobotlegsJS.svg)](https://gitter.im/RobotlegsJS/RobotlegsJS)
 [![Build Status](https://secure.travis-ci.org/RobotlegsJS/RobotlegsJS-Pixi-SignalMediator.svg?branch=master)](https://travis-ci.org/RobotlegsJS/RobotlegsJS-Pixi-SignalMediator)
 [![codebeat badge](https://codebeat.co/badges/f8670689-0731-4631-aa9a-5561931884ba)](https://codebeat.co/projects/github-com-robotlegsjs-robotlegsjs-pixi-signalmediator-master)
