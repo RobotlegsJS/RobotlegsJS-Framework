@@ -34,6 +34,8 @@
 
 - Update @robotlegsjs/signals to version 0.1.1 (see #36).
 
+- Adopts year-agnostic copyright message (see #64).
+
 - Update dev dependencies to latest version.
 
 ### [v0.1.0](https://github.com/RobotlegsJS/RobotlegsJS-SignalCommandMap/releases/tag/0.1.0) - 2017-11-16
