@@ -1,6 +1,7 @@
 RobotlegsJS Pixi Palidor Extension
 ===
 
+[![GitHub license](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/RobotlegsJS/RobotlegsJS-Pixi-Palidor/blob/master/LICENSE)
 [![Gitter chat](https://badges.gitter.im/RobotlegsJS/RobotlegsJS.svg)](https://gitter.im/RobotlegsJS/RobotlegsJS)
 [![Build Status](https://secure.travis-ci.org/RobotlegsJS/RobotlegsJS-Pixi-Palidor.svg?branch=master)](https://travis-ci.org/RobotlegsJS/RobotlegsJS-Pixi-Palidor)
 [![codebeat badge](https://codebeat.co/badges/2738dc26-f93e-48a9-b3ba-0632a4dfd3b5)](https://codebeat.co/projects/github-com-robotlegsjs-robotlegsjs-pixi-palidor-master)
