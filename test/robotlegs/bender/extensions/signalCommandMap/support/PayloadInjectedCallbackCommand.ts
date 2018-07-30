@@ -17,7 +17,8 @@ export class PayloadInjectedCallbackCommand implements ICommand {
     @named("executeCallback")
     public callback: Function;
 
-    @inject(Payload) public payload: Payload;
+    @inject(Payload)
+    public payload: Payload;
 
     public execute(): void {
         this.callback(this);

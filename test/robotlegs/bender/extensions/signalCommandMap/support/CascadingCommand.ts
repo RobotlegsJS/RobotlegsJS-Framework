@@ -20,9 +20,11 @@ export class CascadingCommand implements ICommand {
     @named("executeCallback")
     public callback: Function;
 
-    @inject(IInjector) public injector: IInjector;
+    @inject(IInjector)
+    public injector: IInjector;
 
-    @inject(ISignalCommandMap) public signalCommandMap: ISignalCommandMap;
+    @inject(ISignalCommandMap)
+    public signalCommandMap: ISignalCommandMap;
 
     public execute(): void {
         this.callback();

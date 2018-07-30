@@ -15,7 +15,8 @@ export class PayloadInjectedGuard {
     @named("approveCallback")
     public callback: Function;
 
-    @inject(Payload) public payload: Payload;
+    @inject(Payload)
+    public payload: Payload;
 
     public approve(): boolean {
         this.callback(this, PayloadInjectedGuard);

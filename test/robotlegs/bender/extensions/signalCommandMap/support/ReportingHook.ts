@@ -15,7 +15,8 @@ export class ReportingHook {
     @named("hookCallback")
     public callback: Function;
 
-    @inject(ReportingCommand) public command: ReportingCommand;
+    @inject(ReportingCommand)
+    public command: ReportingCommand;
 
     public hook() {
         this.callback(this, ReportingHook);
