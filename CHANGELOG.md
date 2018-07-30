@@ -28,6 +28,8 @@
 
 - Use [tslib](https://github.com/Microsoft/tslib) library to avoid duplicated declarations (see #75).
 
+- Disable **removeComments** flag in **tsconfig.json** file, allowing comments to appear in output.
+
 - Update dev dependencies to latest version.
 
 ### [v0.1.1](https://github.com/RobotlegsJS/SignalsJS/releases/tag/0.1.1) - 2018-03-04
