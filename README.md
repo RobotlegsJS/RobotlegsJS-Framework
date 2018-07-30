@@ -1,6 +1,7 @@
 RobotlegsJS Macrobot
 ===
 
+[![GitHub license](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/RobotlegsJS/RobotlegsJS-Macrobot/blob/master/LICENSE)
 [![Gitter chat](https://badges.gitter.im/RobotlegsJS/RobotlegsJS.svg)](https://gitter.im/RobotlegsJS/RobotlegsJS)
 [![Build Status](https://travis-ci.org/RobotlegsJS/RobotlegsJS-Macrobot.svg?branch=master)](https://travis-ci.org/RobotlegsJS/RobotlegsJS-Macrobot)
 [![codebeat badge](https://codebeat.co/badges/1cda65cb-4c37-4f86-ab8e-c9538c9d258c)](https://codebeat.co/projects/github-com-robotlegsjs-robotlegsjs-macrobot-master)

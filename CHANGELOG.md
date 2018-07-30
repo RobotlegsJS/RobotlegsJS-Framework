@@ -30,6 +30,8 @@
 
 - Update codeclimate settings (see #38).
 
+- Adopts year-agnostic copyright message (see #60).
+
 - Update dev dependencies to latest version.
 
 ### [v0.1.0](https://github.com/RobotlegsJS/RobotlegsJS-Macrobot/releases/tag/0.1.0) - 2017-11-19

@@ -1,5 +1,5 @@
 // ------------------------------------------------------------------------------
-//  Copyright (c) 2017 RobotlegsJS. All Rights Reserved.
+//  Copyright (c) Copyright (c) 2017-present, RobotlegsJS. All Rights Reserved.
 //
 //  NOTICE: You are permitted to use, modify, and distribute this file
 //  in accordance with the terms of the license agreement accompanying it.
@@ -15,9 +15,11 @@ export class ReportDelayAsyncCommand extends AsyncCommand {
     @named("reportingFunction")
     protected _report: Function;
 
-    @inject(String) protected _name: string;
+    @inject(String)
+    protected _name: string;
 
-    @inject(Number) protected _delay: number;
+    @inject(Number)
+    protected _delay: number;
 
     @inject(Boolean)
     @optional()
