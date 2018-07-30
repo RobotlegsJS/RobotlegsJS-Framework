@@ -15,7 +15,8 @@ export class PayloadInjectedHook {
     @named("hookCallback")
     public callback: Function;
 
-    @inject(Payload) public payload: Payload;
+    @inject(Payload)
+    public payload: Payload;
 
     public hook(): void {
         this.callback(this, PayloadInjectedHook);

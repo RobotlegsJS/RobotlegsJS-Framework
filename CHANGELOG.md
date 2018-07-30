@@ -18,7 +18,9 @@
 
 ### v0.1.1
 
-- Update TypeScript Compiler Options (see #55).
+- Update TypeScript Compiler Options (see #55, $64).
+
+- Use [tslib](https://github.com/Microsoft/tslib) library to avoid duplicated declarations (see #64).
 
 - Enforce TSLint rules (see #54).
 
