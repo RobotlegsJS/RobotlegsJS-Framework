@@ -32,6 +32,8 @@
 
 - Update Code Climate token (see #26).
 
+- Adopts year-agnostic copyright message (see #51).
+
 - Update dev dependencies to latest version.
 
 ### [v0.1.2](https://github.com/RobotlegsJS/RobotlegsJS-Pixi-SignalMediator/releases/tag/0.1.2) - 2017-11-23
