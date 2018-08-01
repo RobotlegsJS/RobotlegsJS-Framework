@@ -34,7 +34,9 @@ Features Or Improvements:
 
 - Use `rimraf` instead of `rm -rf` (see #42).
 
-- Update TypeScript Compiler Options (see #43).
+- Update TypeScript Compiler Options (see #43, #53).
+
+- Use [tslib](https://github.com/Microsoft/tslib) library to avoid duplicated declarations (see #53).
 
 - Update codeclimate config to version 2 (see #45).
 
