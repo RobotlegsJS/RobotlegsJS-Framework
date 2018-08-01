@@ -10,7 +10,11 @@
     "test:tdd": "./node_modules/.bin/karma start",
     "mocha": "mocha test/**/*.test.ts --require ts-node/register",
     "autoformat": "prettier --config .prettierrc --write {example,src,test}/**/*.ts",
-    "tslint-check": "tslint-config-prettier-check ./tslint.json",
+    "tslint-check:src": "tslint-config-prettier-check ./tslint.json",
+    "tslint-check:test": "tslint-config-prettier-check ./tslint.test.json",
+    "tslint:src": "tslint --project tsconfig.json",
+    "tslint:test": "tslint --config tslint.test.json --project tsconfig.test.json",
+    "tslint": "npm run tslint-check:src && npm run tslint-check:test && npm run tslint:src && npm run tslint:test",
     "clean-up": "rimraf .nyc_output && rimraf coverage && rimraf lib && rimraf lib-example && rimraf lib-test && rimraf dist-example && rimraf dist-test",
     "compile:src": "tsc -d --importHelpers",
     "compile:test": "tsc -p tsconfig.test.json -d --importHelpers",
@@ -19,7 +23,7 @@
     "build": "webpack --env.production",
     "prepare": "npm run clean-up && npm run compile:src",
     "prepublishOnly": "publish-please guard",
-    "publish-please": "npm run autoformat && npm run clean-up && npm run test && publish-please"
+    "publish-please": "npm run tslint && npm run autoformat && npm run clean-up && npm run test && publish-please"
   },
   "repository": {
     "type": "git",
