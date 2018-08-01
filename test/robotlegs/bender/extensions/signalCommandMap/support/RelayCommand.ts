@@ -15,9 +15,11 @@ import { Data } from "./Data";
 
 @injectable()
 export class RelayCommand implements ICommand {
-    @inject(Data) private _data: Data;
+    @inject(Data)
+    private _data: Data;
 
-    @inject(TargetSignal) private _targetSignal: TargetSignal;
+    @inject(TargetSignal)
+    private _targetSignal: TargetSignal;
 
     public execute(): void {
         this._targetSignal.dispatch(this._data);
