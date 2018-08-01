@@ -24,7 +24,9 @@
 
 - Update codeclimate config to version 2 (see #47).
 
-- Update TypeScript Compiler Options (see #48).
+- Update TypeScript Compiler Options (see #48, #53).
+
+- Use [tslib](https://github.com/Microsoft/tslib) library to avoid duplicated declarations (see #53).
 
 - Enforce TSLint rules (see #49).
 
