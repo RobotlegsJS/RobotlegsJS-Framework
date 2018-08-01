@@ -13,9 +13,11 @@
     "tslint:src": "tslint --project tsconfig.json",
     "tslint:test": "tslint --config tslint.test.json --project tsconfig.test.json",
     "tslint": "npm run tslint-check:src && npm run tslint-check:test && npm run tslint:src && npm run tslint:test",
-    "clean-up": "rimraf .nyc_output && rimraf coverage && rimraf lib",
-    "compile:src": "tsc -d",
-    "compile:test": "tsc -p tsconfig.test.json -d",
+    "clean-up": "rimraf .nyc_output && rimraf coverage && rimraf lib && rimraf lib-test && rimraf dist && rimraf dist-test",
+    "compile:src": "tsc -d --importHelpers",
+    "compile:test": "tsc -p tsconfig.test.json -d --importHelpers",
+    "dev": "webpack",
+    "build": "webpack --env.production",
     "prepare": "npm run clean-up && npm run compile:src",
     "prepublishOnly": "publish-please guard",
     "publish-please": "npm run tslint && npm run autoformat && npm run clean-up && npm run test && publish-please"
@@ -66,7 +68,8 @@
   "homepage": "https://github.com/RobotlegsJS/RobotlegsJS-Pixi-SignalMediator#readme",
   "dependencies": {
     "@robotlegsjs/pixi": "^0.1.2",
-    "@robotlegsjs/signals": "^0.1.1"
+    "@robotlegsjs/signals": "^0.1.1",
+    "tslib": "^1.9.3"
   },
   "devDependencies": {
     "@types/bluebird": "^3.5.23",
@@ -114,6 +117,7 @@
     "tslint-config-prettier": "^1.14.0",
     "typescript": "^2.9.2",
     "webpack": "^4.16.3",
+    "webpack-cli": "^3.1.0",
     "webpack-dev-server": "^3.1.5"
   },
   "peerDependencies": {
