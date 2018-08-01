@@ -38,6 +38,8 @@ Features Or Improvements:
 
 - Use [tslib](https://github.com/Microsoft/tslib) library to avoid duplicated declarations (see #53).
 
+- Enforce TSLint rules (see #54).
+
 - Update codeclimate config to version 2 (see #45).
 
 - Adopts year-agnostic copyright message (see #51).
