@@ -1,4 +1,3 @@
-const webpack = require("webpack");
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
@@ -10,14 +9,14 @@ module.exports = {
     },
 
     output: {
-        path: path.join(__dirname, "dist"),
+        path: path.join(__dirname, "dist-example"),
         filename: "bundle.js"
     },
 
     devtool: "source-map",
 
     module: {
-        rules: [{ test: /\.ts$/, loader: "ts-loader" }]
+        rules: [{ test: /\.ts$/, loader: "ts-loader?configFile=tsconfig.example.json" }]
     },
 
     plugins: [new HtmlWebpackPlugin()],
