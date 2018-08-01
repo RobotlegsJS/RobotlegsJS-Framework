@@ -18,9 +18,12 @@ import { RobotlegsView } from "./../views/RobotlegsView";
 
 @injectable()
 export class ExampleConfig implements IConfig {
-    @inject(IFlowManager) private flowManager: IFlowManager;
-    @inject(IEventDispatcher) private dispatcher: IEventDispatcher;
-    @inject(IMediatorMap) private mediatorMap: IMediatorMap;
+    @inject(IFlowManager)
+    private flowManager: IFlowManager;
+    @inject(IEventDispatcher)
+    private dispatcher: IEventDispatcher;
+    @inject(IMediatorMap)
+    private mediatorMap: IMediatorMap;
 
     public configure(): void {
         this.mapPalidor();
