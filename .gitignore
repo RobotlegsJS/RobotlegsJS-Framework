@@ -19,7 +19,11 @@ coverage
 
 # Generated files
 dev
+dist
+dist-test
 lib
+lib-example
+lib-test
 
 # nyc test coverage
 .nyc_output
