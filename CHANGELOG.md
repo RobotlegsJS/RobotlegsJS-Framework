@@ -14,9 +14,11 @@
 
 - [ ] Improve Code Coverage to reach 100%.
 
-## RobotlegsJS-Macrobot 0.1.0
+## RobotlegsJS-Macrobot 0.2.0
 
-### v0.1.1
+### v0.2.0
+
+- Update @robotlegsjs/core to version 0.2.0 (see #63).
 
 - Enforce TSLint rules (see #51).
 
@@ -35,6 +37,8 @@
 - Adopts year-agnostic copyright message (see #60).
 
 - Update dev dependencies to latest version.
+
+## RobotlegsJS-Macrobot 0.1.0
 
 ### [v0.1.0](https://github.com/RobotlegsJS/RobotlegsJS-Macrobot/releases/tag/0.1.0) - 2017-11-19
 
