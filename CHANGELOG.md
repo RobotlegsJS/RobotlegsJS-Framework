@@ -34,7 +34,7 @@
 
 - Update @robotlegsjs/core to version 0.1.3 (see #41).
 
-- Update @robotlegsjs/signals to version 0.1.1 (see #36).
+- Update @robotlegsjs/signals to version 0.2.0 (see #66).
 
 - Adopts year-agnostic copyright message.
 
