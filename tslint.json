@@ -42,7 +42,7 @@
     "no-empty": false,
     "no-empty-interface": false,
     "no-eval": true,
-    "no-implicit-dependencies": false,
+    "no-implicit-dependencies": true,
     "no-inferrable-types": false,
     "no-shadowed-variable": true,
     "no-string-literal": true,
