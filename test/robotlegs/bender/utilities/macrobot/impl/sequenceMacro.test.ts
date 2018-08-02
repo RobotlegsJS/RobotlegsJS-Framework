@@ -9,9 +9,16 @@ import "../../../../../entry";
 
 import { assert } from "chai";
 
-import { IContext, IInjector, IEventDispatcher, IEventCommandMap, Context, Event, EventDispatcher } from "@robotlegsjs/core";
-
-import { EventCommandMap } from "@robotlegsjs/core/lib/robotlegs/bender/extensions/eventCommandMap/impl/EventCommandMap";
+import {
+    IContext,
+    IInjector,
+    IEventDispatcher,
+    IEventCommandMap,
+    Context,
+    Event,
+    EventCommandMap,
+    EventDispatcher
+} from "@robotlegsjs/core";
 
 import { TestAddAndRemoveSequenceCommand } from "../support/TestAddAndRemoveSequenceCommand";
 import { TestAtomicSequenceWithAsyncAndCompleteCallbackCommand } from "../support/TestAtomicSequenceWithAsyncAndCompleteCallbackCommand";

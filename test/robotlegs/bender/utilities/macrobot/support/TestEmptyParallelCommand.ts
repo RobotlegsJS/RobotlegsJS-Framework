@@ -5,7 +5,7 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import { injectable } from "inversify";
+import { injectable } from "@robotlegsjs/core";
 
 import { ParallelMacro } from "../../../../../../src/robotlegs/bender/utilities/macrobot/impl/ParallelMacro";
 
