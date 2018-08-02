@@ -19,16 +19,16 @@
 Major Breaking Changes:
 ---
 
+- Update @robotlegsjs/pixi to version 0.2.0 (see #56).
+
+- Move `pixi.js` and `eventemitter3` libraries to **peerDependencies** (see #56).
+
 - Fix typo in class named **PixiContainerController** (see #44).
     - The name of the class changed from **PixiContainerContoller** to **PixiContainerController**, don't forget to update your import statements.
     - A copyright message was added to all source files.
 
 Features Or Improvements:
 ---
-
-- Update @robotlegsjs/pixi to version 0.2.0 (see #56).
-
-- Move `pixi.js` and `eventemitter3` libraries to **peerDependencies** (see #56).
 
 - Added *PalidorBundle* class (see #41).
 
