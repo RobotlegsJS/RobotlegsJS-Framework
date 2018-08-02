@@ -29,11 +29,38 @@ Or using [Yarn](https://yarnpkg.com/en/):
 yarn add @robotlegsjs/pixi-signalmediator
 ```
 
+From version `0.2.0` of this package, the [PixiJS](https://github.com/pixijs/pixi.js) dependencies were moved to **peerDependencies**,
+allowing the final user to choose the desired version of the `pixi.js` library on each project.
+
+The `@robotlegsjs/pixi-signalmediator` package is compatible with versions between the `>=4.2.1 <5` version range of `pixi.js` library.
+
+Since each version of `pixi.js` library defines which version of `eventemitter3` library is being used, remember to also install the proper version of `eventemitter3` in your project.
+
+As example, when you would like to use the version `4.2.1` of `pixi.js` library, you can run:
+
+```bash
+npm install pixi.js@4.2.1 eventemitter3@^2.0.0 reflect-metadata --save
+```
+
+or
+
+```bash
+yarn add pixi.js@4.2.1 eventemitter3@^2.0.0 reflect-metadata
+```
+
+Then follow the [installation instructions](https://github.com/RobotlegsJS/RobotlegsJS/blob/master/README.md#installation) of **RobotlegsJS** library to complete the setup of your project.
+
 **Dependencies**
 
 + [RobotlegsJS](https://github.com/RobotlegsJS/RobotlegsJS)
-+ [SignalsJS](https://github.com/RobotlegsJS/SignalsJS)
++ [RobotlegsJS-Pixi](https://github.com/RobotlegsJS/RobotlegsJS-Pixi)
++ [tslib](https://github.com/Microsoft/tslib)
+
+**Peer Dependencies**
+
 + [PixiJS](https://github.com/pixijs/pixi.js)
++ [eventemitter3](https://github.com/primus/eventemitter3)
++ [reflect-metadata](https://github.com/rbuckton/reflect-metadata)
 
 Usage
 ---
