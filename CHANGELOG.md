@@ -14,7 +14,7 @@
 
 ## RobotlegsJS-Pixi-Palidor 0.2.0
 
-### v0.2.0
+### [v0.2.0](https://github.com/RobotlegsJS/RobotlegsJS-Pixi-Palidor/releases/tag/0.2.0) - 2018-08-02
 
 Major Breaking Changes:
 ---
