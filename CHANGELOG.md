@@ -23,9 +23,9 @@ Major Breaking Changes:
 
 - Update @robotlegsjs/pixi to version 0.2.0 (see #56).
 
-- Move `pixi.js` and `eventemitter3` libraries to **peerDependencies** (see #56).
-
 - Update @robotlegsjs/signals to version 0.2.0 (see #55).
+
+- Move `pixi.js` and `eventemitter3` libraries to **peerDependencies** (see #56).
 
 Features Or Improvements:
 ---
