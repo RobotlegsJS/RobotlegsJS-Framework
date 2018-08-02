@@ -6,17 +6,21 @@
 
 - [ ] Use [**Function Types**](https://www.typescriptlang.org/docs/handbook/functions.html) for handlers and callbacks instead of generic **Function** type.
 
-- [ ] Update **Prettier** rules:
+- [x] Update **Prettier** rules:
 
   - [x] **printWidth** should be around **140** characters per line.
 
-  - [ ] Find a way to keep a new line between **@inject** anotation and property declarations.
+  - [x] Find a way to keep a new line between **@inject** anotation and property declarations.
 
 - [x] Improve Code Coverage to reach 100%.
 
-## RobotlegsJS-SignalCommandMap 0.1.0
+## RobotlegsJS-SignalCommandMap 0.2.0
 
-### v0.1.1
+### v0.2.0
+
+- Update @robotlegsjs/core to version 0.2.0 (see #67).
+
+- Update @robotlegsjs/signals to version 0.2.0 (see #66).
 
 - Update TypeScript Compiler Options (see #55, $64).
 
@@ -32,13 +36,11 @@
 
 - Update codeclimate settings (see #43).
 
-- Update @robotlegsjs/core to version 0.1.3 (see #41).
-
-- Update @robotlegsjs/signals to version 0.2.0 (see #66).
-
 - Adopts year-agnostic copyright message.
 
 - Update dev dependencies to latest version.
+
+## RobotlegsJS-SignalCommandMap 0.1.0
 
 ### [v0.1.0](https://github.com/RobotlegsJS/RobotlegsJS-SignalCommandMap/releases/tag/0.1.0) - 2017-11-16
 
