@@ -5,9 +5,7 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import { injectable } from "inversify";
-
-import { ICommand } from "@robotlegsjs/core";
+import { injectable, ICommand } from "@robotlegsjs/core";
 
 @injectable()
 export class NullCommand2 implements ICommand {

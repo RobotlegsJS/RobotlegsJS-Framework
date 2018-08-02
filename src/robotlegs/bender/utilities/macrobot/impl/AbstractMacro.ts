@@ -5,9 +5,18 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import { interfaces, ContainerModule } from "inversify";
-
-import { inject, injectable, IClass, ICommand, IInjector, IContext, applyHooks, guardsApprove } from "@robotlegsjs/core";
+import {
+    inject,
+    injectable,
+    interfaces,
+    ContainerModule,
+    IClass,
+    ICommand,
+    IInjector,
+    IContext,
+    applyHooks,
+    guardsApprove
+} from "@robotlegsjs/core";
 
 import { IAsyncCommand } from "../api/IAsyncCommand";
 import { IMacro } from "../api/IMacro";
