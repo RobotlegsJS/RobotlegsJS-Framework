@@ -14,11 +14,21 @@
 
 - [ ] Improve Code Coverage to reach 100%.
 
-## RobotlegsJS-Pixi-SignalMediator 0.1.0
+## RobotlegsJS-Pixi-SignalMediator 0.2.0
 
-### v0.1.3
+### v0.2.0
+
+Major Breaking Changes:
+---
+
+- Update @robotlegsjs/pixi to version 0.2.0 (see #56).
+
+- Move `pixi.js` and `eventemitter3` libraries to **peerDependencies** (see #56).
 
 - Update @robotlegsjs/signals to version 0.2.0 (see #55).
+
+Features Or Improvements:
+---
 
 - Update Prettier rules (see #46).
 
@@ -37,6 +47,8 @@
 - Adopts year-agnostic copyright message (see #51).
 
 - Update dev dependencies to latest version.
+
+## RobotlegsJS-Pixi-SignalMediator 0.1.0
 
 ### [v0.1.2](https://github.com/RobotlegsJS/RobotlegsJS-Pixi-SignalMediator/releases/tag/0.1.2) - 2017-11-23
 
