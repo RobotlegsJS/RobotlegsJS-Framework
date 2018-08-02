@@ -113,9 +113,11 @@
     eventemitter3 "^2.0.3"
     pixi.js "^4.6.1"
 
-"@robotlegsjs/signals@^0.1.1":
-  version "0.1.1"
-  resolved "https://registry.npmjs.org/@robotlegsjs/signals/-/signals-0.1.1.tgz#951d850955dc2447887685b90bff5a57e79c16b9"
+"@robotlegsjs/signals@^0.2.0":
+  version "0.2.0"
+  resolved "https://registry.npmjs.org/@robotlegsjs/signals/-/signals-0.2.0.tgz#a3f272ccd8bdb91771f3ac0fef9c997e2c0ebc8a"
+  dependencies:
+    tslib "^1.9.3"
 
 "@sinonjs/formatio@^2.0.0":
   version "2.0.0"
