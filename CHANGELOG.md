@@ -26,6 +26,10 @@ Major Breaking Changes:
 Features Or Improvements:
 ---
 
+- Update @robotlegsjs/pixi to version 0.2.0 (see #56).
+
+- Move `pixi.js` and `eventemitter3` libraries to **peerDependencies** (see #56).
+
 - Added *PalidorBundle* class (see #41).
 
 - Added example project (see #41).
