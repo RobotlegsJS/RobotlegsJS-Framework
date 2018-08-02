@@ -6,17 +6,17 @@
 
 - [ ] Use [**Function Types**](https://www.typescriptlang.org/docs/handbook/functions.html) for handlers and callbacks instead of generic **Function** type.
 
-- [ ] Update **Prettier** rules:
+- [x] Update **Prettier** rules:
 
   - [x] **printWidth** should be around **140** characters per line.
 
-  - [ ] Find a way to keep a new line between **@inject** anotation and property declarations.
+  - [x] Find a way to keep a new line between **@inject** anotation and property declarations.
 
 - [ ] Improve Code Coverage to reach 100%.
 
 ## RobotlegsJS-Macrobot 0.2.0
 
-### v0.2.0
+### [v0.2.0](https://github.com/RobotlegsJS/RobotlegsJS-Macrobot/releases/tag/0.2.0) - 2018-08-02
 
 - Update @robotlegsjs/core to version 0.2.0 (see #63).
 
