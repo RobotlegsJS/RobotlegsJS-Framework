@@ -16,9 +16,9 @@
 
 - [ ] Migrate [original documentation](https://github.com/robertpenner/as3-signals#readme) and adapt it to TypeScript.
 
-## Signals 0.1.0
+## Signals 0.2.0
 
-### v0.1.2
+### [v0.2.0](https://github.com/RobotlegsJS/SignalsJS/releases/tag/0.2.0) - 2018-08-02
 
 - Adds copyright notice (see #74).
 
@@ -31,6 +31,8 @@
 - Disable **removeComments** flag in **tsconfig.json** file, allowing comments to appear in output.
 
 - Update dev dependencies to latest version.
+
+## Signals 0.1.0
 
 ### [v0.1.1](https://github.com/RobotlegsJS/SignalsJS/releases/tag/0.1.1) - 2018-03-04
 
