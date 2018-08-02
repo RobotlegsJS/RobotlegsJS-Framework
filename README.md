@@ -54,6 +54,7 @@ Then follow the [installation instructions](https://github.com/RobotlegsJS/Robot
 
 + [RobotlegsJS](https://github.com/RobotlegsJS/RobotlegsJS)
 + [RobotlegsJS-Pixi](https://github.com/RobotlegsJS/RobotlegsJS-Pixi)
++ [SignalsJS](https://github.com/RobotlegsJS/SignalsJS)
 + [tslib](https://github.com/Microsoft/tslib)
 
 **Peer Dependencies**
