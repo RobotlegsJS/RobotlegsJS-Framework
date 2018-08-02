@@ -18,7 +18,7 @@
 
 ### v0.1.3
 
-- Update @robotlegsjs/signals to version 0.1.1 (see #40).
+- Update @robotlegsjs/signals to version 0.2.0 (see #55).
 
 - Update Prettier rules (see #46).
 
