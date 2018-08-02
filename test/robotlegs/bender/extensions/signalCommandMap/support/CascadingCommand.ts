@@ -5,9 +5,7 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import { injectable, inject, named } from "inversify";
-
-import { IInjector, ICommand } from "@robotlegsjs/core";
+import { injectable, inject, named, IInjector, ICommand } from "@robotlegsjs/core";
 
 import { ISignalCommandMap } from "../../../../../../src/robotlegs/bender/extensions/signalCommandMap/api/ISignalCommandMap";
 
