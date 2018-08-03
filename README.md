@@ -20,7 +20,7 @@ Installation
 You can get the latest release and the type definitions using [NPM](https://www.npmjs.com/):
 
 ```bash
-npm install @robotlegsjs/phaser-ce --save
+npm install @robotlegsjs/phaser-ce --save-prod
 ```
 
 Or using [Yarn](https://yarnpkg.com/en/):
@@ -29,7 +29,34 @@ Or using [Yarn](https://yarnpkg.com/en/):
 yarn add @robotlegsjs/phaser-ce
 ````
 
+From version `0.2.0` of this package, the [Phaser-CE](https://github.com/photonstorm/phaser-ce) dependency was moved to **peerDependencies**,
+allowing the final user to choose the desired version of the `phaser-ce` library on each project.
+
+The `@robotlegsjs/phaser-ce` package is compatible with versions between the `>=2.8.1 <3` version range of `phaser-ce` library.
+
+As example, when you would like to use the version `2.8.1` of `phaser-ce` library, you can run:
+
+```bash
+npm install phaser-ce@2.8.1 reflect-metadata --save-prod
+```
+
+or
+
+```bash
+yarn add phaser-ce@2.8.1 reflect-metadata
+```
+
 Then follow the [installation instructions](https://github.com/RobotlegsJS/RobotlegsJS/blob/master/README.md#installation) of **RobotlegsJS** library to complete the setup of your project.
+
+**Dependencies**
+
++ [RobotlegsJS](https://github.com/RobotlegsJS/RobotlegsJS)
++ [tslib](https://github.com/Microsoft/tslib)
+
+**Peer Dependencies**
+
++ [Phaser-CE](https://github.com/photonstorm/phaser-ce)
++ [reflect-metadata](https://github.com/rbuckton/reflect-metadata)
 
 Usage
 ---
@@ -82,6 +109,23 @@ new Game();
 ```
 
 [See example](example)
+
+Running the example
+---
+
+Run the following commands to run the example:
+
+```bash
+npm install
+npm start
+```
+
+or:
+
+```bash
+yarn install
+yarn start
+```
 
 License
 ---
