@@ -14,6 +14,23 @@ RobotlegsJS Phaser-CE Extension
 Integrate [RobotlegsJS](https://github.com/RobotlegsJS/RobotlegsJS)
 framework with [Phaser-CE](https://github.com/photonstorm/phaser-ce).
 
+Installation
+===
+
+You can get the latest release and the type definitions using [NPM](https://www.npmjs.com/):
+
+```bash
+npm install @robotlegsjs/phaser-ce --save
+```
+
+Or using [Yarn](https://yarnpkg.com/en/):
+
+```bash
+yarn add @robotlegsjs/phaser-ce
+````
+
+Then follow the [installation instructions](https://github.com/RobotlegsJS/RobotlegsJS/blob/master/README.md#installation) of **RobotlegsJS** library to complete the setup of your project.
+
 Usage
 ---
 
