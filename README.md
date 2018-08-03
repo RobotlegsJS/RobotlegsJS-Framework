@@ -7,7 +7,7 @@ RobotlegsJS Phaser-CE Extension
 [![codebeat badge](https://codebeat.co/badges/23774a85-7477-4f53-822f-11afa0f5f78a)](https://codebeat.co/projects/github-com-robotlegsjs-robotlegsjs-phaser-ce-master)
 [![Maintainability](https://api.codeclimate.com/v1/badges/860c6f9a213f42b8c543/maintainability)](https://codeclimate.com/github/RobotlegsJS/RobotlegsJS-Phaser-CE/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/860c6f9a213f42b8c543/test_coverage)](https://codeclimate.com/github/RobotlegsJS/RobotlegsJS-Phaser-CE/test_coverage)
-[![npm version](https://badge.fury.io/js/%40robotlegsjs%2Fphaser%2Fce.svg)](https://badge.fury.io/js/%40robotlegsjs%2Fphaser%2Fce)
+[![npm version](https://badge.fury.io/js/%40robotlegsjs%2Fphaser-ce.svg)](https://badge.fury.io/js/%40robotlegsjs%2Fphaser-ce)
 [![Greenkeeper badge](https://badges.greenkeeper.io/RobotlegsJS/RobotlegsJS-Phaser-CE.svg)](https://greenkeeper.io/)
 [![styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 
