@@ -15,7 +15,7 @@ Integrate [RobotlegsJS](https://github.com/RobotlegsJS/RobotlegsJS)
 framework with [Phaser-CE](https://github.com/photonstorm/phaser-ce).
 
 Installation
-===
+---
 
 You can get the latest release and the type definitions using [NPM](https://www.npmjs.com/):
 
