@@ -1,7 +1,7 @@
 {
-  "name": "@robotlegsjs/phaser",
+  "name": "@robotlegsjs/phaser-ce",
   "version": "0.0.5",
-  "description": "RobotlegsJS integration with Phaser State Manager",
+  "description": "RobotlegsJS integration with Phaser-CE State Manager",
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
   "scripts": {
@@ -25,7 +25,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:RobotlegsJS/RobotlegsJS-Phaser.git"
+    "url": "git@github.com:RobotlegsJS/RobotlegsJS-Phaser-CE.git"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org"
@@ -34,7 +34,7 @@
     "TypeScript",
     "Robotlegs",
     "IoC",
-    "Phaser"
+    "Phaser-CE"
   ],
   "author": "RobotlegsJS",
   "contributors": [
@@ -43,9 +43,9 @@
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/RobotlegsJS/RobotlegsJS-Phaser/issues"
+    "url": "https://github.com/RobotlegsJS/RobotlegsJS-Phaser-CE/issues"
   },
-  "homepage": "https://github.com/RobotlegsJS/RobotlegsJS-Phaser#readme",
+  "homepage": "https://github.com/RobotlegsJS/RobotlegsJS-Phaser-CE#readme",
   "dependencies": {
     "@robotlegsjs/core": "^0.2.0",
     "phaser-ce": "^2.11.0",
