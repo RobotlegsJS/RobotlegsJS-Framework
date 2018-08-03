@@ -1,5 +1,5 @@
 {
-  "name": "@robotlegsjs/phaser-signalcommandmap",
+  "name": "@robotlegsjs/phaser-ce-signalcommandmap",
   "version": "0.0.5",
   "description": "SignalCommandMap RobotlegsJS Extension that maps Phaser.Signal class into commands",
   "main": "lib/index.js",
@@ -24,7 +24,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:RobotlegsJS/RobotlegsJS-Phaser-SignalCommandMap.git"
+    "url": "git@github.com:RobotlegsJS/RobotlegsJS-Phaser-CE-SignalCommandMap.git"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org"
@@ -32,7 +32,9 @@
   "keywords": [
     "TypeScript",
     "Robotlegs",
-    "IoC"
+    "IoC",
+    "Phaser-CE",
+    "Phaser.Signal"
   ],
   "author": "RobotlegsJS",
   "contributors": [
@@ -41,9 +43,9 @@
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/RobotlegsJS/RobotlegsJS-Phaser-SignalCommandMap/issues"
+    "url": "https://github.com/RobotlegsJS/RobotlegsJS-Phaser-CE-SignalCommandMap/issues"
   },
-  "homepage": "https://github.com/RobotlegsJS/RobotlegsJS-Phaser-SignalCommandMap#readme",
+  "homepage": "https://github.com/RobotlegsJS/RobotlegsJS-Phaser-CE-SignalCommandMap#readme",
   "dependencies": {
     "@robotlegsjs/core": "^0.2.0",
     "phaser-ce": "^2.11.0",
