@@ -40,7 +40,9 @@ Features Or Improvements:
 
 - Update dev dependencies to latest version.
 
-## RobotlegsJS Phaser SignalCommandMap 0.0.1 (published as `@robotlegsjs/phaser-signalcommandmap`)
+## RobotlegsJS Phaser SignalCommandMap 0.0.1
+
+_(published as `@robotlegsjs/phaser-signalcommandmap`)_
 
 ### [v0.0.5](https://github.com/RobotlegsJS/RobotlegsJS-Phaser-SignalCommandMap/releases/tag/0.0.5) - 2017-09-26
 
