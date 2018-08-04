@@ -2,7 +2,7 @@
 
 ## RobotlegsJS Phaser-CE SignalCommandMap 0.2.0
 
-### v0.2.0
+### [v0.2.0](https://github.com/RobotlegsJS/RobotlegsJS-Phaser-CE-SignalCommandMap/releases/tag/0.2.0) - 2018-08-04
 
 Major Breaking Changes:
 ---
