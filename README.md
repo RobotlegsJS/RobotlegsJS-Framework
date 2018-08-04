@@ -10,7 +10,8 @@ RobotlegsJS Phaser-CE SignalCommandMap Extension
 [![Greenkeeper badge](https://badges.greenkeeper.io/RobotlegsJS/RobotlegsJS-Phaser-CE-SignalCommandMap.svg)](https://greenkeeper.io/)
 [![styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 
-A RobotlegsJS Extension that allows the mapping of Phaser.Signal class to commands.
+A [RobotlegsJS](https://github.com/RobotlegsJS/RobotlegsJS) Extension that allows the mapping of
+[Phaser.Signal](https://photonstorm.github.io/phaser-ce/Phaser.Signal.html) class to commands.
 
 Installation
 ---
