@@ -9,7 +9,7 @@ module.exports = env => {
   let mode = env.production ? "production" : "development";
   let tsconfig = !env.karma ? "tsconfig.json" : "tsconfig.test.json";
   let output = env.production ? "dist" : "dist-test";
-  let filename = env.production ? "robotlegs-phaser-signalcommandmap.min.js" : "robotlegs-phaser-signalcommandmap.js";
+  let filename = env.production ? "robotlegs-phaser-ce-signalcommandmap.min.js" : "robotlegs-phaser-ce-signalcommandmap.js";
 
   return {
     mode: mode,
@@ -23,7 +23,7 @@ module.exports = env => {
       filename: filename,
 
       libraryTarget: "var",
-      library: "RobotlegsJSPhaserSignalCommandMap"
+      library: "RobotlegsJSPhaserCESignalCommandMap"
     },
 
     devtool: env.production ? undefined : "inline-source-map",

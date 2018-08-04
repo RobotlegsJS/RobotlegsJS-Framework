@@ -1,10 +1,10 @@
-# Contributing to RobotlegsJS-Phaser-SignalCommandMap
+# Contributing to RobotlegsJS-Phaser-CE-SignalCommandMap
 
 ## Setup
 
 1 - Clone your fork of the repository:
 ```
-$ git clone https://github.com/YOUR_USERNAME/RobotlegsJS-Phaser-SignalCommandMap.git
+$ git clone https://github.com/YOUR_USERNAME/RobotlegsJS-Phaser-CE-SignalCommandMap.git
 ```
 
 2 - Install npm dependencies using yarn:
@@ -43,4 +43,4 @@ changes.
 
 - Feel free to ask for help from other members of the RobotlegsJS team via the
 [gitter chat](https://gitter.im/RobotlegsJS/RobotlegsJS) or
-[github issues](https://github.com/RobotlegsJS/RobotlegsJS-Phaser-SignalCommandMap/issues).
+[github issues](https://github.com/RobotlegsJS/RobotlegsJS-Phaser-CE-SignalCommandMap/issues).
