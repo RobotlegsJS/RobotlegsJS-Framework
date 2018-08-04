@@ -9,6 +9,8 @@ Major Breaking Changes:
 
 - Rename package to `@robotlegsjs/phaser-ce-signalcommandmap` and move to [RobotlegsJS-Phaser-CE-SignalCommandMap](https://github.com/RobotlegsJS/RobotlegsJS-Phaser-CE-SignalCommandMap) (see #1).
 
+- Move `phaser-ce` library to **peerDependencies**, allowing the final user to choose the desired version of the `phaser-ce` library on each project (see #3).
+
 - Update `@robotlegsjs/core` to version `0.2.0` (see [44](https://github.com/RobotlegsJS/RobotlegsJS-Phaser-SignalCommandMap/pull/44)).
 
 Features Or Improvements:
