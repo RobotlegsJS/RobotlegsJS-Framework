@@ -23,3 +23,5 @@
 ### v0.2.0
 
 - Added integration with `createjs` library (see #1).
+
+- Enable `greenkeeper` (see #2).
