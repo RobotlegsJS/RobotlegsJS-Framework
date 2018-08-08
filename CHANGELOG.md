@@ -20,10 +20,10 @@
 
 ## Robotlegs-CreateJS 0.2.0
 
-### v0.2.0
+### [v0.2.0](https://github.com/RobotlegsJS/RobotlegsJS-CreateJS/releases/tag/0.2.0) - 2018-08-08
 
-- Added integration with `createjs` library (see #1).
+- Added integration with [createjs](https://createjs.com) library (see #1).
 
-- Use `easeljs` package instead of full `createjs` package (see #3).
+- Use [easeljs](https://www.npmjs.com/package/easeljs) package instead of full [createjs](https://www.npmjs.com/package/createjs) package (see #3).
 
 - Enable `greenkeeper` (see #2).
