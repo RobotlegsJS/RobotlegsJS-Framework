@@ -44,17 +44,7 @@
   version "0.0.29"
   resolved "https://registry.npmjs.org/@types/createjs-lib/-/createjs-lib-0.0.29.tgz#fae82e3ba8606663b190e789cec7d9c728fc41d7"
 
-"@types/createjs@^0.0.29":
-  version "0.0.29"
-  resolved "https://registry.npmjs.org/@types/createjs/-/createjs-0.0.29.tgz#4d19b0feaa38252dcd79d78a38a4cc6df3f181fc"
-  dependencies:
-    "@types/createjs-lib" "*"
-    "@types/easeljs" "*"
-    "@types/preloadjs" "*"
-    "@types/soundjs" "*"
-    "@types/tweenjs" "*"
-
-"@types/easeljs@*":
+"@types/easeljs@^1.0.0":
   version "1.0.0"
   resolved "https://registry.npmjs.org/@types/easeljs/-/easeljs-1.0.0.tgz#b339ca0a8d0148819831b0140254d697fd46d974"
   dependencies:
@@ -65,22 +55,9 @@
   version "5.2.5"
   resolved "https://registry.npmjs.org/@types/mocha/-/mocha-5.2.5.tgz#8a4accfc403c124a0bafe8a9fc61a05ec1032073"
 
-"@types/preloadjs@*":
-  version "0.6.32"
-  resolved "https://registry.npmjs.org/@types/preloadjs/-/preloadjs-0.6.32.tgz#12cff7c7f92e3838a780d438ce49c8cec981830d"
-  dependencies:
-    "@types/createjs-lib" "*"
-
 "@types/sinon@^5.0.1":
   version "5.0.1"
   resolved "https://registry.npmjs.org/@types/sinon/-/sinon-5.0.1.tgz#a15b36ec42f1f53166617491feabd1734cb03e21"
-
-"@types/soundjs@*":
-  version "0.6.27"
-  resolved "https://registry.npmjs.org/@types/soundjs/-/soundjs-0.6.27.tgz#dd2370350eaf7277de5ed55940e3e7d2a016b124"
-  dependencies:
-    "@types/createjs-lib" "*"
-    "@types/preloadjs" "*"
 
 "@types/tweenjs@*":
   version "1.0.0"
@@ -1493,10 +1470,6 @@ create-hmac@^1.1.0, create-hmac@^1.1.2, create-hmac@^1.1.4:
     safe-buffer "^5.0.1"
     sha.js "^2.4.8"
 
-createjs@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.npmjs.org/createjs/-/createjs-1.0.1.tgz#163e8ba35814f62c8033cd9628033f190dfdaa9f"
-
 cross-spawn-async@^2.1.6:
   version "2.2.5"
   resolved "https://registry.npmjs.org/cross-spawn-async/-/cross-spawn-async-2.2.5.tgz#845ff0c0834a3ded9d160daca6d390906bb288cc"
@@ -1875,6 +1848,10 @@ duplexify@^3.4.2, duplexify@^3.4.5, duplexify@^3.6.0:
     inherits "^2.0.1"
     readable-stream "^2.0.0"
     stream-shift "^1.0.0"
+
+easeljs@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.npmjs.org/easeljs/-/easeljs-1.0.2.tgz#68fdcc69d0f217394e2ebf51ae047428a81240de"
 
 ecc-jsbn@~0.1.1:
   version "0.1.2"
