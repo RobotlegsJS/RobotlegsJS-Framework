@@ -53,19 +53,19 @@
     "tslib": "^1.9.3"
   },
   "peerDependencies": {
-    "createjs": "^1.0.1",
+    "easeljs": "^1.0.2",
     "reflect-metadata": "^0.1.12"
   },
   "devDependencies": {
     "@types/bluebird": "^3.5.23",
     "@types/chai": "^4.1.4",
-    "@types/createjs": "^0.0.29",
+    "@types/easeljs": "^1.0.0",
     "@types/mocha": "^5.2.5",
     "@types/sinon": "^5.0.1",
     "bluebird": "^3.5.1",
     "browserify-versionify": "^1.0.6",
     "chai": "^4.1.2",
-    "createjs": "^1.0.1",
+    "easeljs": "^1.0.2",
     "es6-map": "^0.1.5",
     "es6-symbol": "^3.1.1",
     "glslify": "^6.2.1",

@@ -11,7 +11,7 @@ RobotlegsJS CreateJS Extension
 [![styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 
 Integrate [RobotlegsJS](https://github.com/RobotlegsJS/RobotlegsJS)
-framework with [CreateJS](https://github.com/CreateJS/Combined).
+framework with [CreateJS](https://createjs.com).
 
 Installation
 ---
@@ -19,7 +19,7 @@ Installation
 You can get the latest release and the type definitions using [NPM](https://www.npmjs.com/):
 
 ```bash
-npm install @robotlegsjs/createjs
+npm install @robotlegsjs/createjs --save
 ```
 
 Or using [Yarn](https://yarnpkg.com/en/):
@@ -28,21 +28,21 @@ Or using [Yarn](https://yarnpkg.com/en/):
 yarn add @robotlegsjs/createjs
 ```
 
-The [CreateJS](https://github.com/CreateJS/Combined) dependency is added as **peerDependencies**,
-allowing the final user to choose the desired version of the `createjs` library on each project.
+The [EaselJS](https://github.com/CreateJS/EaselJS) dependency is added as **peerDependencies**,
+allowing the final user to choose the desired version of the [easeljs](https://www.npmjs.com/package/easeljs) library on each project.
 
-The `@robotlegsjs/createjs` package is compatible with versions between the `>=1.0.1 <2` version range of `createjs` library.
+The `@robotlegsjs/createjs` package is compatible with versions between the `>=1.0.2 <2` version range of `easeljs` library.
 
-As example, when you would like to use the version `1.0.1` of `createjs` library, you can run:
+As example, when you would like to use the version `1.0.2` of `easeljs` library, you can run:
 
 ```bash
-npm install createjs@1.0.1 reflect-metadata --save
+npm install easeljs@1.0.2 reflect-metadata --save
 ```
 
 or
 
 ```bash
-yarn add createjs@1.0.1 reflect-metadata --save
+yarn add easeljs@1.0.2 reflect-metadata
 ```
 
 Then follow the [installation instructions](https://github.com/RobotlegsJS/RobotlegsJS/blob/master/README.md#installation) of **RobotlegsJS** library to complete the setup of your project.
@@ -54,7 +54,7 @@ Then follow the [installation instructions](https://github.com/RobotlegsJS/Robot
 
 **Peer Dependencies**
 
-+ [CreateJS](https://github.com/CreateJS/Combined)
++ [EaselJS](https://github.com/CreateJS/EaselJS)
 + [reflect-metadata](https://github.com/rbuckton/reflect-metadata)
 
 Usage

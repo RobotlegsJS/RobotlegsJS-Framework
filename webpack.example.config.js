@@ -42,7 +42,7 @@ module.exports = options => {
       }),
 
       new ConcatPlugin(concatPluginConfigGenerator("createjs", [
-        path.resolve(__dirname, "./node_modules/createjs/builds/1.0.0/createjs.js")
+        path.resolve(__dirname, "./node_modules/easeljs/lib/easeljs.js")
       ])),
     ],
 

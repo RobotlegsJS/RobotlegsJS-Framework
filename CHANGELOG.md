@@ -24,4 +24,6 @@
 
 - Added integration with `createjs` library (see #1).
 
+- Use `easeljs` package instead of full `createjs` package (see #3).
+
 - Enable `greenkeeper` (see #2).
