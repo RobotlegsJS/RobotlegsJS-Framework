@@ -23,6 +23,9 @@ coverage
 # Grunt intermediate storage (http://gruntjs.com/creating-plugins#storing-task-files)
 .grunt
 
+# IntelliJ IDEA
+.idea
+
 # Bower dependency directory (https://bower.io/)
 bower_components
 
@@ -59,3 +62,10 @@ typings/
 
 # next.js build output
 .next
+
+# project specific output
+dist
+dist-test
+lib
+lib-example
+lib-test

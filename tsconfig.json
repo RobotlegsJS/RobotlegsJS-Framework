@@ -1,0 +1,32 @@
+{
+  "compilerOptions": {
+    "outDir": "lib",
+    "target": "es5",
+    "baseUrl": ".",
+    "paths": {
+      "openfl": ["node_modules/openfl/lib/openfl"],
+      "openfl/*": ["node_modules/openfl/lib/openfl/*"]
+    },
+    "lib": ["es2017", "dom"],
+    "types": ["reflect-metadata"],
+    "sourceMap": true,
+    "inlineSources": true,
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "removeComments": false,
+    "strict": false,
+    "noImplicitAny": true,
+    "strictNullChecks": false,
+    "noImplicitThis": false,
+    "alwaysStrict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": false,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true
+  },
+  "include": [
+    "./src/**/*.ts"
+  ]
+}
