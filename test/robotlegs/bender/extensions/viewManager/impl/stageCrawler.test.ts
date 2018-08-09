@@ -62,7 +62,7 @@ describe("StageCrawler", () => {
         assert.deepEqual(actual, expected);
     });
 
-    it("scan_finds_all_direct_children", () => {
+    xit("scan_finds_all_direct_children", () => {
         const child1: DisplayObjectContainer = new DisplayObjectContainer();
         const child2: DisplayObjectContainer = new DisplayObjectContainer();
         const child3: DisplayObjectContainer = new DisplayObjectContainer();
