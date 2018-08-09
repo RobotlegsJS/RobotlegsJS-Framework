@@ -31,18 +31,18 @@ yarn add @robotlegsjs/openfl
 The [OpenFL](http://www.openfl.org) dependency is added as **peerDependencies**,
 allowing the final user to choose the desired version of the [openfl](https://www.npmjs.com/package/openfl) library on each project.
 
-The `@robotlegsjs/openfl` package is compatible with versions between the `>=7.0.0` version range of `openfl` library.
+The `@robotlegsjs/openfl` package is compatible with versions between the `>=8.3.0` version range of `openfl` library.
 
-As example, when you would like to use the version `7.0.0` of `openfl` library, you can run:
+As example, when you would like to use the version `8.3.0` of `openfl` library, you can run:
 
 ```bash
-npm install openfl@7.0.0 reflect-metadata --save
+npm install openfl@8.3.0 reflect-metadata --save
 ```
 
 or
 
 ```bash
-yarn add openfl@7.0.0 reflect-metadata
+yarn add openfl@8.3.0 reflect-metadata
 ```
 
 Then follow the [installation instructions](https://github.com/RobotlegsJS/RobotlegsJS/blob/master/README.md#installation) of **RobotlegsJS** library to complete the setup of your project.
