@@ -26,4 +26,6 @@
 
 - Update `openfl` to version `8.4.0` (see #3).
 
+- Generate code coverage report only for src folder (see #4).
+
 - Enable `greenkeeper` (see #2).
