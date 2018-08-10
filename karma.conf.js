@@ -16,13 +16,8 @@ module.exports = config => {
       "es6-shim"
     ],
     files: [
-      "./test/**/**/**.test.ts",
-      {
-        pattern: "**/*.map",
-        served: true,
-        included: false,
-        watched: true
-      }
+      { pattern: "./test/**/**/**.test.ts", include: true },
+      { pattern: '**/*.map', served: true, included: false, watched: true }
     ],
     preprocessors: {
       "./**/**/**/**.ts": ["sourcemap"],
@@ -63,7 +58,8 @@ module.exports = config => {
     colors: true,
     logLevel: config.LOG_INFO,
     autoWatch: true,
-    browsers: []
+    browsers: [],
+    browserNoActivityTimeout: 50000
   };
 
   if (process.env.TRAVIS) {
