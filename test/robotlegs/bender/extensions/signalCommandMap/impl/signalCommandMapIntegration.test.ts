@@ -11,6 +11,7 @@ import { assert } from "chai";
 
 import { IContext, IInjector, Context } from "@robotlegsjs/core";
 
+import { SignalCommandMapExtension } from "../../../../../../src/robotlegs/bender/extensions/signalCommandMap/SignalCommandMapExtension";
 import { ISignalCommandMap } from "../../../../../../src/robotlegs/bender/extensions/signalCommandMap/api/ISignalCommandMap";
 import { SignalCommandMap } from "../../../../../../src/robotlegs/bender/extensions/signalCommandMap/impl/SignalCommandMap";
 
@@ -34,6 +35,7 @@ import { SupportSignal } from "../support/SupportSignal";
 import { SupportSignal2 } from "../support/SupportSignal2";
 
 describe("SignalCommandMap", () => {
+    let extension: SignalCommandMapExtension;
     let context: IContext;
     let injector: IInjector;
     let signalCommandMap: SignalCommandMap;
@@ -120,6 +122,7 @@ describe("SignalCommandMap", () => {
     }
 
     beforeEach(() => {
+        extension = new SignalCommandMapExtension();
         context = new Context();
         injector = context.injector;
         signalCommandMap = new SignalCommandMap(context);
@@ -134,9 +137,14 @@ describe("SignalCommandMap", () => {
         if (context.initialized) {
             context.destroy();
         }
+        extension = null;
         context = null;
         injector = null;
         signalCommandMap = null;
+    });
+
+    it("extension_is_added", () => {
+        assert.isNotNull(extension);
     });
 
     it("test_command_executes_successfully", () => {

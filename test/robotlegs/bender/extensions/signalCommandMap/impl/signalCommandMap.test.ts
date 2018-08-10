@@ -13,16 +13,19 @@ import { ISignal, Signal } from "@robotlegsjs/signals";
 
 import { IContext, ICommandMapper, Context, CommandMapper } from "@robotlegsjs/core";
 
+import { SignalCommandMapExtension } from "../../../../../../src/robotlegs/bender/extensions/signalCommandMap/SignalCommandMapExtension";
 import { SignalCommandMap } from "../../../../../../src/robotlegs/bender/extensions/signalCommandMap/impl/SignalCommandMap";
 
 import { NullCommand } from "../support/NullCommand";
 
 describe("SignalCommandMap", () => {
+    let extension: SignalCommandMapExtension;
     let signal: ISignal;
     let context: IContext;
     let subject: SignalCommandMap;
 
     beforeEach(() => {
+        extension = new SignalCommandMapExtension();
         signal = new Signal();
         context = new Context();
         subject = new SignalCommandMap(context);
@@ -33,9 +36,14 @@ describe("SignalCommandMap", () => {
         if (context.initialized) {
             context.destroy();
         }
+        extension = null;
         signal = null;
         context = null;
         subject = null;
+    });
+
+    it("extension_is_added", () => {
+        assert.isNotNull(extension);
     });
 
     it("map_creates_mapper", () => {
