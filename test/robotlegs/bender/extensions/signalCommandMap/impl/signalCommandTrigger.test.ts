@@ -15,6 +15,7 @@ import { ISignal, Signal } from "@robotlegsjs/signals";
 
 import { IInjector, RobotlegsInjector, CommandMapper } from "@robotlegsjs/core";
 
+import { SignalCommandMapExtension } from "../../../../../../src/robotlegs/bender/extensions/signalCommandMap/SignalCommandMapExtension";
 import { SignalCommandTrigger } from "../../../../../../src/robotlegs/bender/extensions/signalCommandMap/impl/SignalCommandTrigger";
 
 import { CallbackCommand } from "../support/CallbackCommand";
@@ -23,11 +24,13 @@ import { NullCommand } from "../support/NullCommand";
 import { ParametersSignal } from "../support/ParametersSignal";
 
 describe("SignalCommandTrigger", () => {
+    let extension: SignalCommandMapExtension;
     let signal: Signal;
     let injector: IInjector;
     let subject: SignalCommandTrigger;
 
     beforeEach(() => {
+        extension = new SignalCommandMapExtension();
         signal = new Signal();
         injector = new RobotlegsInjector();
         subject = new SignalCommandTrigger(injector, Signal);
@@ -38,6 +41,11 @@ describe("SignalCommandTrigger", () => {
         signal = null;
         injector = null;
         subject = null;
+        extension = null;
+    });
+
+    it("extension_is_added", () => {
+        assert.isNotNull(extension);
     });
 
     it("createMapper_returns_a_command_mapper", () => {
