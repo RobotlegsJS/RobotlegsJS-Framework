@@ -24,4 +24,6 @@
 
 - Added integration with [openfl](https://www.npmjs.com/package/openfl) library (see #1).
 
+- Update `openfl` to version `8.4.0` (see #3).
+
 - Enable `greenkeeper` (see #2).

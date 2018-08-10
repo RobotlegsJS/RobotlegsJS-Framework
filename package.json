@@ -87,7 +87,7 @@
     "karma-sourcemap-writer": "^0.1.2",
     "karma-webpack": "^3.0.0",
     "mocha": "^5.2.0",
-    "openfl": "^8.3.0",
+    "openfl": "^8.4.0",
     "prettier": "^1.14.2",
     "publish-please": "^3.2.0",
     "reflect-metadata": "^0.1.12",
