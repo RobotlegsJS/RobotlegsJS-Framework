@@ -2,6 +2,12 @@
 
 ## RobotlegsJS Phaser-CE 0.2.0
 
+### v0.2.2
+
+- Update `karma` setup to generate code coverage report only for `src` folder (see #5).
+
+- Update dev dependencies to latest version.
+
 ### [v0.2.1](https://github.com/RobotlegsJS/RobotlegsJS-Phaser-CE/releases/tag/0.2.1) - 2018-08-03
 
 - Update NPM Version badge and ignore `static` folder when publishing package to **NPM** (see #4).
