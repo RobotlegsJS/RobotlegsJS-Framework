@@ -20,6 +20,12 @@
 
 ## Robotlegs-CreateJS 0.2.0
 
+### v0.2.1
+
+- Update `karma` setup to generate code coverage report only for `src` folder (see #4).
+
+- Update dev dependencies to latest version.
+
 ### [v0.2.0](https://github.com/RobotlegsJS/RobotlegsJS-CreateJS/releases/tag/0.2.0) - 2018-08-08
 
 - Added integration with [createjs](https://createjs.com) library (see #1).
