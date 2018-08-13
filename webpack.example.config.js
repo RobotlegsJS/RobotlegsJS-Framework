@@ -2,6 +2,7 @@ const webpack = require("webpack");
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const ConcatPlugin = require("webpack-concat-plugin");
+const OpenBrowserPlugin = require("open-browser-webpack-plugin");
 
 const concatPluginConfigGenerator = (name, files) => {
   return {
@@ -44,6 +45,8 @@ module.exports = options => {
       new ConcatPlugin(concatPluginConfigGenerator("createjs", [
         path.resolve(__dirname, "./node_modules/easeljs/lib/easeljs.js")
       ])),
+
+      new OpenBrowserPlugin({ url: "http://localhost:8080" })
     ],
 
     resolve: {
