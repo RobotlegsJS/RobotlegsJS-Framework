@@ -6626,6 +6626,14 @@ webpack-log@^1.0.1, webpack-log@^1.1.2:
     loglevelnext "^1.0.1"
     uuid "^3.1.0"
 
+webpack-simple-progress-plugin@^0.0.4:
+  version "0.0.4"
+  resolved "https://registry.npmjs.org/webpack-simple-progress-plugin/-/webpack-simple-progress-plugin-0.0.4.tgz#c4829137429cb673dfc6a61a262b955c35cc7ba2"
+  dependencies:
+    chalk "^1.1.3"
+    object-assign "^4.1.0"
+    progress "^1.1.8"
+
 webpack-sources@^1.0.1, webpack-sources@^1.1.0:
   version "1.1.0"
   resolved "https://registry.npmjs.org/webpack-sources/-/webpack-sources-1.1.0.tgz#a101ebae59d6507354d71d8013950a3a8b7a5a54"

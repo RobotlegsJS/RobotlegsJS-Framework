@@ -104,6 +104,7 @@
     "webpack": "^4.16.5",
     "webpack-cli": "^3.1.0",
     "webpack-concat-plugin": "^3.0.0",
-    "webpack-dev-server": "^3.1.5"
+    "webpack-dev-server": "^3.1.5",
+    "webpack-simple-progress-plugin": "^0.0.4"
   }
 }
