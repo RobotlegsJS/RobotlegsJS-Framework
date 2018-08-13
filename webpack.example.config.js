@@ -9,7 +9,7 @@ const concatPluginConfigGenerator = (name, files) => {
     uglify: false,
     sourceMap: false,
     name: name,
-    fileName: "[name].js",
+    fileName: "[name].[hash].js",
     filesToConcat: files,
     injectType: "none"
   };
@@ -25,7 +25,7 @@ module.exports = options => {
 
     output: {
       path: __dirname + "/dist",
-      filename: "bundle.js"
+      filename: "game.[hash].js"
     },
 
     devtool: "source-map",
@@ -46,7 +46,7 @@ module.exports = options => {
         path.resolve(__dirname, "./node_modules/easeljs/lib/easeljs.js")
       ])),
 
-      new OpenBrowserPlugin({ url: "http://localhost:8080" })
+      new OpenBrowserPlugin({ url: "http://0.0.0.0:8080/webpack-dev-server/" })
     ],
 
     resolve: {
