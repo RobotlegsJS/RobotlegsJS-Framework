@@ -24,7 +24,7 @@
 
 - Added integration with [openfl](https://www.npmjs.com/package/openfl) library (see #1).
 
-- Update `openfl` to version `8.4.0` (see #3).
+- Update `openfl` to version `8.4.1` (see #6).
 
 - Generate code coverage report only for src folder (see #4).
 
