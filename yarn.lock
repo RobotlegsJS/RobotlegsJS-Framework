@@ -4584,7 +4584,7 @@ open@0.0.5:
   version "0.0.5"
   resolved "https://registry.npmjs.org/open/-/open-0.0.5.tgz#42c3e18ec95466b6bf0dc42f3a2945c3f0cad8fc"
 
-openfl@^8.4.0:
+openfl@^8.4.1:
   version "8.4.1"
   resolved "https://registry.npmjs.org/openfl/-/openfl-8.4.1.tgz#5afab4c117adc6f2963c77210516cd459b027d2c"
   dependencies:
