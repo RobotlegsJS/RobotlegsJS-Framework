@@ -47,5 +47,11 @@ export class SmileyView extends createjs.Container {
     private move(): void {
         this.x = Math.random() * 960;
         this.y = Math.random() * 400;
+
+        this.x = Math.max(this.x, this._radius);
+        this.x = Math.min(this.x, 960 - this._radius);
+
+        this.y = Math.max(this.y, this._radius);
+        this.y = Math.min(this.y, 400 - this._radius);
     }
 }
