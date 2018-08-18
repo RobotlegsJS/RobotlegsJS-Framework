@@ -20,7 +20,7 @@
 
 ## Robotlegs-OpenFL 0.2.0
 
-### v0.2.0
+### [v0.2.0](https://github.com/RobotlegsJS/RobotlegsJS-OpenFL/releases/tag/0.2.0) - 2018-08-18
 
 - Added integration with [openfl](https://www.npmjs.com/package/openfl) library (see #1).
 
