@@ -31,3 +31,5 @@
 - Improve webpack configuration used to run example project. The `npm start` script will generate hashed files (to avoid browser cache) and open the broswer automatically (see #5).
 
 - Enable `greenkeeper` (see #2).
+
+- Update dev dependencies to latest version.
