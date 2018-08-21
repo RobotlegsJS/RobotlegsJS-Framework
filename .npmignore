@@ -6,7 +6,9 @@
 /dist-test
 /docs
 /example
+/lib-example
 /lib-test
+/node-modules
 /not-ported-extensions
 /src
 /static

@@ -61,6 +61,8 @@ Usage
 ---
 
 ```typescript
+import "reflect-metadata";
+
 import { Context, MVCSBundle } from "@robotlegsjs/core";
 
 import { ContextView, OpenFLBundle } from "@robotlegsjs/openfl";
