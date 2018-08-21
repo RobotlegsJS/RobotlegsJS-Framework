@@ -5,6 +5,8 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
+import "reflect-metadata";
+
 import { Context, MVCSBundle } from "@robotlegsjs/core";
 
 import { ContextView, OpenFLBundle } from "../src";
