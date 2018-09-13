@@ -15,14 +15,43 @@
 You can get the latest release and the type definitions using [NPM](https://www.npmjs.com/):
 
 ```bash
-npm install @robotlegsjs/core --save
+npm install @robotlegsjs/eventemitter3 --save
 ```
 
 Or using [Yarn](https://yarnpkg.com/en/):
 
 ```bash
-yarn add @robotlegsjs/core
+yarn add @robotlegsjs/eventemitter3
 ````
+
+The [EventEmitter3](https://github.com/primus/eventemitter3) dependency is added as **peerDependencies**,
+allowing the final user to choose the desired version of the [eventemitter3](https://www.npmjs.com/package/eventemitter3) library on each project.
+
+The `@robotlegsjs/eventemitter3` package is compatible with any version of `eventemitter3` library.
+
+As example, when you would like to use the version `3.1.0` of `eventemitter3` library, you can run:
+
+```bash
+npm install eventemitter3@3.1.0 reflect-metadata --save
+```
+
+or
+
+```bash
+yarn add eventemitter3@3.1.0 reflect-metadata
+```
+
+Then follow the [installation instructions](https://github.com/RobotlegsJS/RobotlegsJS/blob/master/README.md#installation) of **RobotlegsJS** library to complete the setup of your project.
+
+**Dependencies**
+
++ [RobotlegsJS](https://github.com/RobotlegsJS/RobotlegsJS)
++ [tslib](https://github.com/Microsoft/tslib)
+
+**Peer Dependencies**
+
++ [eventemitter3](https://github.com/primus/eventemitter3)
++ [reflect-metadata](https://github.com/rbuckton/reflect-metadata)
 
 ## License
 
