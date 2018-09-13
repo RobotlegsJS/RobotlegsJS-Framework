@@ -59,3 +59,17 @@ typings/
 
 # next.js build output
 .next
+
+# IntelliJ
+.idea
+
+# Project
+dist
+dist-test
+lib
+lib-test
+
+#os
+.DS_Store
+.AppleDouble
+.LSOverride
