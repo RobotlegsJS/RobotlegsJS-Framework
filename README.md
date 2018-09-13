@@ -6,7 +6,7 @@
 [![codebeat badge](https://codebeat.co/badges/aec5cdef-3f45-487e-bd68-6c07c2474f9d)](https://codebeat.co/projects/github-com-robotlegsjs-robotlegsjs-eventemitter3-master)
 [![Maintainability](https://api.codeclimate.com/v1/badges/c8ef7ccb9caade45214c/maintainability)](https://codeclimate.com/github/RobotlegsJS/RobotlegsJS-EventEmitter3/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/c8ef7ccb9caade45214c/test_coverage)](https://codeclimate.com/github/RobotlegsJS/RobotlegsJS-EventEmitter3/test_coverage)
-[![npm version](https://badge.fury.io/js/%40robotlegsjs%2Fcore.svg)](https://badge.fury.io/js/%40robotlegsjs%2Fcore)
+[![npm version](https://badge.fury.io/js/%40robotlegsjs%2Feventemitter3.svg)](https://badge.fury.io/js/%40robotlegsjs%2Feventemitter3)
 [![Greenkeeper badge](https://badges.greenkeeper.io/RobotlegsJS/RobotlegsJS.svg)](https://greenkeeper.io/)
 [![styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 
