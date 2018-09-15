@@ -18,6 +18,8 @@
 
 ### v0.2.1
 
+- Update @robotlegsjs/core to version 0.2.1 (see #67).
+
 - Update `karma` setup to generate code coverage report only for `src` folder (see #65).
 
 - Update dev dependencies to latest version.
