@@ -23,6 +23,7 @@ import {
 import { TestAddAndRemoveParallelCommand } from "../support/TestAddAndRemoveParallelCommand";
 import { TestParallelCommand } from "../support/TestParallelCommand";
 import { TestParallelWithCompleteCallbackCommand } from "../support/TestParallelWithCompleteCallbackCommand";
+import { TestParallelWithPayloadCommand } from "../support/TestParallelWithPayloadCommand";
 import { TestEmptyParallelCommand } from "../support/TestEmptyParallelCommand";
 
 describe("ParallelMacro", () => {
@@ -128,5 +129,27 @@ describe("ParallelMacro", () => {
             assert.deepEqual(reported, []);
             done();
         }, 50);
+    });
+
+    it("event_is_mapped_in_the_context_of_sub_commands", (done: Function) => {
+        const event: Event = new Event("trigger");
+        event.data = "Event triggered command";
+        eventCommandMap.map("trigger", Event).toCommand(TestParallelWithPayloadCommand);
+        dispatcher.dispatchEvent(event);
+
+        setTimeout(() => {
+            assert.deepEqual(reported, [
+                "Event triggered command: start execution of Command 1 and await 100 milliseconds",
+                "Event triggered command: start execution of Command 2 and await 75 milliseconds",
+                "Event triggered command: start execution of Command 3 and await 50 milliseconds",
+                "Event triggered command: start execution of Command 4 and await 25 milliseconds",
+                "Event triggered command: complete execution of Command 4",
+                "Event triggered command: complete execution of Command 3",
+                "Event triggered command: complete execution of Command 2",
+                "Event triggered command: complete execution of Command 1"
+            ]);
+
+            done();
+        }, 250);
     });
 });
