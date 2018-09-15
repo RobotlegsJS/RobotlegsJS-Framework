@@ -11,6 +11,7 @@ import { IMacro } from "../api/IMacro";
 import { ISubCommandMapping } from "../api/ISubCommandMapping";
 
 import { AbstractMacro } from "./AbstractMacro";
+
 @injectable()
 export abstract class ParallelMacro extends AbstractMacro implements IMacro {
     private _executionCount: number = 0;
