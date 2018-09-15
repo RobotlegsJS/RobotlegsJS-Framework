@@ -5,11 +5,13 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
+import { injectable } from "@robotlegsjs/core";
+
 import { IMacro } from "../api/IMacro";
 import { ISubCommandMapping } from "../api/ISubCommandMapping";
 
 import { AbstractMacro } from "./AbstractMacro";
-
+@injectable()
 export abstract class ParallelMacro extends AbstractMacro implements IMacro {
     private _executionCount: number = 0;
 
@@ -18,7 +20,11 @@ export abstract class ParallelMacro extends AbstractMacro implements IMacro {
 
     private _commands: ISubCommandMapping[];
 
-    public execute(): void {
+    public execute(payload?: any, ...payloads: any[]): void {
+        this.captureMacroPayload(arguments);
+
+        this.prepare();
+
         this._commands = this._mappings.getList();
 
         if (this.hasCommands) {

@@ -5,11 +5,14 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
+import { injectable } from "@robotlegsjs/core";
+
 import { IMacro } from "../api/IMacro";
 import { ISubCommandMapping } from "../api/ISubCommandMapping";
 
 import { AbstractMacro } from "./AbstractMacro";
 
+@injectable()
 export abstract class SequenceMacro extends AbstractMacro implements IMacro {
     private _executionIndex: number;
 
@@ -32,13 +35,18 @@ export abstract class SequenceMacro extends AbstractMacro implements IMacro {
         }
     }
 
-    public execute(): void {
+    public execute(payload?: any, ...payloads: any[]): void {
+        this.captureMacroPayload(arguments);
+
+        this.prepare();
+
         this._atomic = this.atomic;
         this._success = true;
         this._running = true;
         this._completed = false;
         this._executionIndex = 0;
         this._commands = this._mappings.getList();
+
         this.executeNext();
     }
 
