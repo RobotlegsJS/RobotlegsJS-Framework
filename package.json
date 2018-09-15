@@ -69,7 +69,7 @@
   },
   "homepage": "https://github.com/RobotlegsJS/RobotlegsJS-Macrobot#readme",
   "dependencies": {
-    "@robotlegsjs/core": "^0.2.0",
+    "@robotlegsjs/core": "^0.2.1",
     "tslib": "^1.9.3"
   },
   "devDependencies": {

@@ -99,9 +99,9 @@
   version "1.1.0"
   resolved "https://registry.npmjs.org/@nodelib/fs.stat/-/fs.stat-1.1.0.tgz#50c1e2260ac0ed9439a181de3725a0168d59c48a"
 
-"@robotlegsjs/core@^0.2.0":
-  version "0.2.0"
-  resolved "https://registry.npmjs.org/@robotlegsjs/core/-/core-0.2.0.tgz#f1204017f9cd3666d41e5a355a566b33c8ced2cd"
+"@robotlegsjs/core@^0.2.1":
+  version "0.2.1"
+  resolved "https://registry.npmjs.org/@robotlegsjs/core/-/core-0.2.1.tgz#4a77f0b85e67343866c44772387617470b67f6c3"
   dependencies:
     inversify "^4.13.0"
     tslib "^1.9.3"
