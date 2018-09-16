@@ -24,7 +24,7 @@ export abstract class AsyncCommand implements IAsyncCommand {
         this._listeners.unshift(listener);
     }
 
-    public abstract execute(): void;
+    public abstract execute(...args: any[]): void;
 
     protected dispatchComplete(success: boolean): void {
         this._context.release(this);

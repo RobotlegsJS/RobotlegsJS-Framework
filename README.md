@@ -1,5 +1,4 @@
-RobotlegsJS Macrobot
-===
+# RobotlegsJS Macrobot
 
 [![GitHub license](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/RobotlegsJS/RobotlegsJS-Macrobot/blob/master/LICENSE)
 [![Gitter chat](https://badges.gitter.im/RobotlegsJS/RobotlegsJS.svg)](https://gitter.im/RobotlegsJS/RobotlegsJS)
@@ -14,8 +13,7 @@ RobotlegsJS Macrobot
 **Macrobot** is a macro command utility for [RobotlegsJS](https://github.com/RobotlegsJS/RobotlegsJS) which provides the ability to execute batches of commands in sequential or parallel fashion. It was originally implemented by [Alessandro Bianco](https://github.com/alebianco) in [AS3](https://github.com/alebianco/robotlegs-utilities-macrobot) and now is
 ported to [TypeScript](https://www.typescriptlang.org).
 
-Introduction
----
+## Introduction
 
 While using [RobotlegsJS](https://github.com/RobotlegsJS/RobotlegsJS) and encapsulating your business logic inside commands, you may find yourself in a situation where you wish to batch commands, instead of relying on events to trigger every step.
 
@@ -25,13 +23,12 @@ While using [RobotlegsJS](https://github.com/RobotlegsJS/RobotlegsJS) and encaps
 
 - **Parallel**: The commands will be executed as quickly as possible, with no regards to the order in which they were registered. The macro itself will not be complete until all its commands are complete.
 
-Installation
----
+## Installation
 
 You can get the latest release and the type definitions using [NPM](https://www.npmjs.com/):
 
 ```bash
-npm install @robotlegsjs/macrobot
+npm install @robotlegsjs/macrobot --save-prod
 ```
 
 Or using [Yarn](https://yarnpkg.com/en/):
@@ -40,8 +37,7 @@ Or using [Yarn](https://yarnpkg.com/en/):
 yarn add @robotlegsjs/macrobot
 ```
 
-Usage
----
+## Usage
 
 To create a macro command, extend one of the two classes Macrobot provides: `SequenceMacro` or `ParallelMacro`.
 Override the `prepare()` method and add sub commands by calling `add()` specifying the command class to use.
@@ -230,7 +226,8 @@ import { AsyncCommand, SequenceMacro } from "@robotlegsjs/macrobot";
 
 @injectable()
 export class DelayCommand extends AsyncCommand {
-    @inject(Number) protected _delay: number;
+    @inject(Number)
+    protected _delay: number;
 
     public execute(): void {
         setTimeout(this.onTimeout.bind(this), this._delay);
@@ -282,9 +279,11 @@ export class NonAtomicSequenceCommand extends SequenceMacro {
 
 @injectable()
 class DelayAsyncCommand extends AsyncCommand {
-    @inject(Number) protected _delay: number;
+    @inject(Number)
+    protected _delay: number;
 
-    @inject(Boolean) protected _succeed: boolean;
+    @inject(Boolean)
+    protected _succeed: boolean;
 
     public execute(): void {
         setTimeout(this.onTimeout.bind(this), this._delay);
@@ -301,12 +300,181 @@ mappings will be ignored.
 
 This behaviour does not apply to **parallel commands**.
 
-Contributing
----
+## Macro Command Triggers
+
+Macro commands can be triggered by **Events** or **Signals**. In both cases, it is common to have to send payloads to the macro command or sub-commands
+through the **Event** or **Signal** trigger.
+
+The macro command can capture the **CommandPayload** provided by the **CommandExecutor** and map it into the context of the sub-commands.
+
+### Events
+
+The **Event** class from `@robotlegsjs/core` package can send parameters through the optional `data` property. In more complex cases, you can create your
+own **CustomEvent** class that extends the **Event** class, adding as many payloads as you wish.
+
+When dispatching an event, the **IEventCommandMap** will map the triggered **Event** into the context of the macro command,
+allowing you to access it from inside the macro, from inside guards and hooks or even from inside the context of each sub-command.
+
+Here's an example of a macro command that will load all the assets for your application based on the options of each user.
+In this case, the user can disable the sound system through user options. When loading the assets, you don't need to load the sound files when the **muted** option is enabled.
+
+```typescript
+import { inject, IEventCommandMap, IEventDispatcher } from "@robotlegsjs/core";
+
+import { LoadAssetsMacro } from "./commands/LoadAssetsMacro";
+
+import { AssetsEvent } from "./events/AssetsEvent";
+
+export class LoadAssets {
+    @inject(IEventCommandMap)
+    protected _eventCommandMap: IEventCommandMap;
+
+    @inject(IEventDispatcher)
+    protected _eventDispatcher: IEventDispatcher;
+
+    public loadAssets(): void {
+        this._eventCommandMap.map(AssetsEvent.LOAD_ASSETS, AssetsEvent).toCommand(LoadAssetsMacro);
+
+        let assetsEvent: AssetsEvent = new AssetsEvent(AssetsEvent.LOAD_ASSETS);
+        assetsEvent.muted = false;
+
+        this._eventDispatcher.dispatchEvent(assetsEvent);
+    }
+}
+```
+
+Since the `AssetsEvent` will be mapped into the context of the macro command, you can use it on a `Guard` that can allow the execution of the `LoadSoundsCommand`
+only when the sound system is not muted:
+
+```typescript
+import { inject, injectable } from "@robotlegsjs/core";
+
+import { ParallelMacro } from "@robotlegsjs/macrobot";
+
+import { LoadDataCommand } from "./commands/LoadDataCommand";
+import { LoadSpriteSheetsCommand } from "./commands/LoadSpriteSheetsCommand";
+import { LoadSoundsCommand } from "./commands/LoadSoundsCommand";
+
+@injectable()
+export class LoadAssetsMacro extends ParallelMacro {
+    public prepare(): void {
+        // load data for all users
+        this.add(LoadDataCommand);
+
+        // load sprite sheets for all users
+        this.add(LoadSpriteSheetsCommand);
+
+        // load sounds only for users who enabled sound system
+        this.add(LoadSoundsCommand).withGuards(NotMuted);
+    }
+}
+
+@injectable()
+class NotMuted implements IGuard {
+    @inject(AssetsEvent)
+    protected _assetsEvent: AssetsEvent;
+
+    public approve():boolean {
+        return !_assetsEvent.muted;
+    }
+}
+```
+
+### Signals
+
+The **Signal** class from `@robotlegsjs/signals` package can be extended to send parameters through the `dispatch` trigger.
+
+When dispatching an signal, the **ISignalCommandMap** from `@robotlegsjs/signalcommandmap` package will map the payloads into the context of the macro command,
+allowing you to access them from inside the macro, from inside guards and hooks or even from inside the context of each sub-command.
+
+Here's an example of a macro command that will load all the assets for your application based on the options of each user.
+In this case, the user can disable the sound system through user options. When loading the assets, you don't need to load the sound files when the **muted** option is enabled.
+
+The `AssetsSignal` extends the `Signal` class adding an `Boolean` as payload:
+
+```typescript
+import { injectable } from "@robotlegsjs/core";
+
+import { Signal } from "@robotlegsjs/signals";
+
+@injectable()
+export class AssetsSignal extends Signal {
+    constructor() {
+        super(Boolean);
+    }
+}
+```
+
+Then you can map the `AssetsSignal` to the `LoadAssetsMacro` command using the `ISignalCommandMap` extension:
+
+```typescript
+import { inject, IInjector } from "@robotlegsjs/core";
+
+import { ISignalCommandMap } from "@robotlegsjs/signalcommandmap";
+
+import { LoadAssetsMacro } from "./commands/LoadAssetsMacro";
+
+import { AssetsSignal } from "./signals/AssetsSignal";
+
+export class LoadAssets {
+    @inject(IInjector)
+    protected _injector: IInjector;
+
+    @inject(ISignalCommandMap)
+    protected _signalCommandMap: ISignalCommandMap;
+
+    public loadAssets(): void {
+        this._signalCommandMap.map(AssetsSignal).toCommand(LoadAssetsMacro);
+
+        let assetsSignal: AssetsSignal = this._injector.get(AssetsSignal);
+
+        // dispatch the signal telling the macro command that the muted option is disabled
+        assetsSignal.dispatch(false);
+    }
+}
+```
+
+Since the payload of the `AssetsSignal` will be mapped into the context of the macro command, you can use it on a `Guard` that can allow the execution of the `LoadSoundsCommand`
+only when the sound system is not muted:
+
+```typescript
+import { inject, injectable } from "@robotlegsjs/core";
+
+import { ParallelMacro } from "@robotlegsjs/macrobot";
+
+import { LoadDataCommand } from "./commands/LoadDataCommand";
+import { LoadSpriteSheetsCommand } from "./commands/LoadSpriteSheetsCommand";
+import { LoadSoundsCommand } from "./commands/LoadSoundsCommand";
+
+@injectable()
+export class LoadAssetsMacro extends ParallelMacro {
+    public prepare(): void {
+        // load data for all users
+        this.add(LoadDataCommand);
+
+        // load sprite sheets for all users
+        this.add(LoadSpriteSheetsCommand);
+
+        // load sounds only for users who enabled sound system
+        this.add(LoadSoundsCommand).withGuards(NotMuted);
+    }
+}
+
+@injectable()
+class NotMuted implements IGuard {
+    @inject(Boolean)
+    protected _muted: Boolean;
+
+    public approve():boolean {
+        return !this._muted;
+    }
+}
+```
+
+## Contributing
 
 If you want to contribute to the project refer to the [contributing document](CONTRIBUTING.md) for guidelines.
 
-License
----
+## License
 
 [MIT](LICENSE)

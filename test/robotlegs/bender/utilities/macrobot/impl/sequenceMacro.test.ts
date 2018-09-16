@@ -34,6 +34,7 @@ import { TestSequenceWithHappyGuardsCommand } from "../support/TestSequenceWithH
 import { TestSequenceWithHooksCommand } from "../support/TestSequenceWithHooksCommand";
 import { TestSequenceWithInjectedHooksCommand } from "../support/TestSequenceWithInjectedHooksCommand";
 import { TestSequenceWithNamedPayloadsCommand } from "../support/TestSequenceWithNamedPayloadsCommand";
+import { TestSequenceWithPayloadCommand } from "../support/TestSequenceWithPayloadCommand";
 import { TestSequenceWithPayloadInjectedIntoGuardsCommand } from "../support/TestSequenceWithPayloadInjectedIntoGuardsCommand";
 import { TestSequenceWithPayloadInjectedIntoHooksCommand } from "../support/TestSequenceWithPayloadInjectedIntoHooksCommand";
 import { TestSequenceWithStringPayloadCommand } from "../support/TestSequenceWithStringPayloadCommand";
@@ -250,5 +251,13 @@ describe("SequenceMacro", () => {
 
             done();
         }, 250);
+    });
+
+    it("event_is_mapped_in_the_context_of_sub_commands", () => {
+        const event: Event = new Event("trigger");
+        event.data = "Command:";
+        eventCommandMap.map("trigger", Event).toCommand(TestSequenceWithPayloadCommand);
+        dispatcher.dispatchEvent(event);
+        assert.deepEqual(reported, ["Command:1", "Command:2", "Command:3"]);
     });
 });
