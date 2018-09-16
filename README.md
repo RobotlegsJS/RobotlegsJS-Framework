@@ -351,6 +351,10 @@ import { inject, injectable } from "@robotlegsjs/core";
 
 import { ParallelMacro } from "@robotlegsjs/macrobot";
 
+import { LoadDataCommand } from "./commands/LoadDataCommand";
+import { LoadSpriteSheetsCommand } from "./commands/LoadSpriteSheetsCommand";
+import { LoadSoundsCommand } from "./commands/LoadSoundsCommand";
+
 @injectable()
 export class LoadAssetsMacro extends ParallelMacro {
     public prepare(): void {
@@ -437,6 +441,10 @@ only when the sound system is not muted:
 import { inject, injectable } from "@robotlegsjs/core";
 
 import { ParallelMacro } from "@robotlegsjs/macrobot";
+
+import { LoadDataCommand } from "./commands/LoadDataCommand";
+import { LoadSpriteSheetsCommand } from "./commands/LoadSpriteSheetsCommand";
+import { LoadSoundsCommand } from "./commands/LoadSoundsCommand";
 
 @injectable()
 export class LoadAssetsMacro extends ParallelMacro {
