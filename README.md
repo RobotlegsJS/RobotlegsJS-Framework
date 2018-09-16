@@ -300,14 +300,14 @@ mappings will be ignored.
 
 This behaviour does not apply to **parallel commands**.
 
-### Macro Command Triggers
+## Macro Command Triggers
 
 Macro commands can be triggered by **Events** or **Signals**. In both cases, it is common to have to send payloads to the macro command or sub-commands
 through the **Event** or **Signal** trigger.
 
 The macro command can capture the **CommandPayload** provided by the **CommandExecutor** and map it into the context of the sub-commands.
 
-#### Events
+### Events
 
 The **Event** class from `@robotlegsjs/core` package can send parameters through the optional `data` property. In more complex cases, you can create your
 own **CustomEvent** class that extends the **Event** class, adding as many payloads as you wish.
@@ -376,7 +376,7 @@ class NotMuted implements IGuard {
 }
 ```
 
-#### Signals
+### Signals
 
 The **Signal** class from `@robotlegsjs/signals` package can be extended to send parameters through the `dispatch` trigger.
 
