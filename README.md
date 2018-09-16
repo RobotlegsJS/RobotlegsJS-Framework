@@ -319,7 +319,7 @@ Here's an example of a macro command that will load all the assets for your appl
 In this case, the user can disable the sound system through user options. When loading the assets, you don't need to load the sound files when the **muted** option is enabled.
 
 ```typescript
-import { IEventCommandMap, IEventDispatcher } from "@robotlegsjs/core";
+import { inject, IEventCommandMap, IEventDispatcher } from "@robotlegsjs/core";
 
 import { LoadAssetsMacro } from "./commands/LoadAssetsMacro";
 
@@ -347,7 +347,7 @@ Since the `AssetsEvent` will be mapped into the context of the macro command, yo
 only when the sound system is not muted:
 
 ```typescript
-import { injectable } from "@robotlegsjs/core";
+import { inject, injectable } from "@robotlegsjs/core";
 
 import { ParallelMacro } from "@robotlegsjs/macrobot";
 
@@ -404,7 +404,7 @@ export class AssetsSignal extends Signal {
 Then you cam map the `AssetsSignal` to the `LoadAssetsMacro` command using the `ISignalCommandMap` extension:
 
 ```typescript
-import { IInjector } from "@robotlegsjs/core";
+import { inject, IInjector } from "@robotlegsjs/core";
 
 import { ISignalCommandMap } from "@robotlegsjs/signalcommandmap";
 
@@ -434,7 +434,7 @@ Since the payload of the `AssetsSignal` will be mapped into the context of the m
 only when the sound system is not muted:
 
 ```typescript
-import { injectable } from "@robotlegsjs/core";
+import { inject, injectable } from "@robotlegsjs/core";
 
 import { ParallelMacro } from "@robotlegsjs/macrobot";
 
