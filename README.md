@@ -405,7 +405,7 @@ export class AssetsSignal extends Signal {
 }
 ```
 
-Then you cam map the `AssetsSignal` to the `LoadAssetsMacro` command using the `ISignalCommandMap` extension:
+Then you can map the `AssetsSignal` to the `LoadAssetsMacro` command using the `ISignalCommandMap` extension:
 
 ```typescript
 import { inject, IInjector } from "@robotlegsjs/core";
