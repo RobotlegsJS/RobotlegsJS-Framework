@@ -14,9 +14,9 @@ import { ReportDelayAsyncCommand } from "./ReportDelayAsyncCommand";
 @injectable()
 export class TestParallelCommand extends ParallelMacro {
     public prepare(): void {
-        this.add(ReportDelayAsyncCommand).withPayloads("Command 1", 100);
-        this.add(ReportDelayAsyncCommand).withPayloads("Command 2", 75);
-        this.add(ReportDelayAsyncCommand).withPayloads("Command 3", 50);
-        this.add(ReportDelayAsyncCommand).withPayloads("Command 4", 25);
+        this.add(ReportDelayAsyncCommand).withPayloads("Command 1", 200);
+        this.add(ReportDelayAsyncCommand).withPayloads("Command 2", 150);
+        this.add(ReportDelayAsyncCommand).withPayloads("Command 3", 100);
+        this.add(ReportDelayAsyncCommand).withPayloads("Command 4", 50);
     }
 }

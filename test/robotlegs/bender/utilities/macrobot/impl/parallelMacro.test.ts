@@ -68,10 +68,10 @@ describe("ParallelMacro", () => {
 
         setTimeout(() => {
             assert.deepEqual(reported, [
-                "Start execution of Command 1 and await 100 milliseconds",
-                "Start execution of Command 2 and await 75 milliseconds",
-                "Start execution of Command 3 and await 50 milliseconds",
-                "Start execution of Command 4 and await 25 milliseconds",
+                "Start execution of Command 1 and await 200 milliseconds",
+                "Start execution of Command 2 and await 150 milliseconds",
+                "Start execution of Command 3 and await 100 milliseconds",
+                "Start execution of Command 4 and await 50 milliseconds",
                 "Complete execution of Command 4",
                 "Complete execution of Command 3",
                 "Complete execution of Command 2",
@@ -79,7 +79,7 @@ describe("ParallelMacro", () => {
             ]);
 
             done();
-        }, 250);
+        }, 500);
     });
 
     it("removed_commands_are_not_executed", (done: Function) => {
