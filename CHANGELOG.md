@@ -16,6 +16,10 @@
 
 ## RobotlegsJS-Macrobot 0.2.0
 
+### v0.2.2
+
+- Update dev dependencies to latest version.
+
 ### [v0.2.1](https://github.com/RobotlegsJS/RobotlegsJS-Macrobot/releases/tag/0.2.1) - 2018-09-16
 
 - Update @robotlegsjs/core to version 0.2.1 (see #67).
