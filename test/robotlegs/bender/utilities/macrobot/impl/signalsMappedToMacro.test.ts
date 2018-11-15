@@ -19,6 +19,8 @@ import { DelaySignal } from "../support/DelaySignal";
 import { ParametersSignal } from "../support/ParametersSignal";
 import { TestParallelBySignalCommand } from "../support/TestParallelBySignalCommand";
 import { TestSequenceBySignalCommand } from "../support/TestSequenceBySignalCommand";
+import { NoParametersSignal } from "../support/NoParametersSignal";
+import { TestSequenceByNoPayloadSignalCommand } from "../support/TestSequenceByNoPayloadSignalCommand";
 
 describe("SignalsMappedToMacro", () => {
     let context: IContext;
@@ -71,6 +73,16 @@ describe("SignalsMappedToMacro", () => {
         signal.dispatch.apply(signal, expected);
 
         assert.deepEqual(reported, expected.concat(expected));
+    });
+
+    it("no_payload_dispatched_by_signal_is_mapped_into_sequence_sub_commands", () => {
+        signal = new NoParametersSignal();
+        injector.bind(Signal).toConstantValue(signal);
+        mapper = signalCommandTrigger.createMapper();
+        mapper.toCommand(TestSequenceByNoPayloadSignalCommand);
+        signal.dispatch.apply(signal);
+
+        assert.deepEqual(reported, []);
     });
 
     it("payload_dispatched_by_signal_is_mapped_into_parallel_sub_commands", (done: Function) => {
