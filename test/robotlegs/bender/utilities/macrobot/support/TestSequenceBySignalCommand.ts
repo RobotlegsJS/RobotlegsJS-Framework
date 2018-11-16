@@ -18,8 +18,4 @@ export class TestSequenceBySignalCommand extends SequenceMacro {
         this.add(CallbackParametersCommand);
         this.add(CallbackParametersSequenceCommand);
     }
-
-    public execute(payload?: any, ...payloads: any[]): void {
-        super.execute(payload, ...payloads);
-    }
 }

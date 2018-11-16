@@ -6,7 +6,9 @@
 // ------------------------------------------------------------------------------
 
 import { injectable } from "@robotlegsjs/core";
+
 import { ParallelMacro } from "../../../../../../src/robotlegs/bender/utilities/macrobot/impl/ParallelMacro";
+
 import { ReportNoPayloadAsyncCommand } from "./ReportNoPayloadAsyncCommand";
 
 @injectable()
@@ -16,9 +18,5 @@ export class TestParallelByNoPayloadSignalCommand extends ParallelMacro {
         this.add(ReportNoPayloadAsyncCommand);
         this.add(ReportNoPayloadAsyncCommand);
         this.add(ReportNoPayloadAsyncCommand);
-    }
-
-    public execute(payload?: any, ...payloads: any[]): void {
-        super.execute(payload, ...payloads);
     }
 }

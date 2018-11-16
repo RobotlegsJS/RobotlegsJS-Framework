@@ -19,8 +19,4 @@ export class TestParallelBySignalCommand extends ParallelMacro {
         this.add(ReportDelayAsyncCommand).withPayloads("Command 3");
         this.add(ReportDelayAsyncCommand).withPayloads("Command 4");
     }
-
-    public execute(payload?: any, ...payloads: any[]): void {
-        super.execute(payload, ...payloads);
-    }
 }

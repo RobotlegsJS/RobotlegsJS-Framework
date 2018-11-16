@@ -16,8 +16,4 @@ export class TestSequenceByNoPayloadSignalCommand extends SequenceMacro {
         this.add(CallbackNoParametersSequenceCommand);
         this.add(CallbackNoParametersCommand);
     }
-
-    public execute(payload?: any, ...payloads: any[]): void {
-        super.execute(payload, ...payloads);
-    }
 }

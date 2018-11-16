@@ -6,7 +6,9 @@
 // ------------------------------------------------------------------------------
 
 import { injectable } from "@robotlegsjs/core";
+
 import { SequenceMacro } from "../../../../../../src/robotlegs/bender/utilities/macrobot/impl/SequenceMacro";
+
 import { CallbackCustomPayloadCommand } from "./CallbackCustomPayloadCommand";
 import { CallbackCustomPayloadSequenceCommand } from "./CallbackCustomPayloadSequenceCommand";
 
@@ -15,9 +17,5 @@ export class TestSequenceByCustomPayloadSignalCommand extends SequenceMacro {
     public prepare(): void {
         this.add(CallbackCustomPayloadSequenceCommand).withPayloads("test");
         this.add(CallbackCustomPayloadCommand).withPayloads("test");
-    }
-
-    public execute(payload?: any, ...payloads: any[]): void {
-        super.execute(payload, ...payloads);
     }
 }
