@@ -5,10 +5,12 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import { ICommand, inject, injectable, named } from "@robotlegsjs/core";
+import { inject, injectable, named } from "@robotlegsjs/core";
+import { SequenceMacro } from "../../../../../../src";
+import { CallbackParametersCommand } from "./CallbackParametersCommand";
 
 @injectable()
-export class CallbackParametersCommand implements ICommand {
+export class CallbackParametersSequenceCommand extends SequenceMacro {
     @inject(Boolean)
     public booleanValue: boolean;
 
@@ -34,33 +36,7 @@ export class CallbackParametersCommand implements ICommand {
     @named("reportingFunction")
     public reportingFunction: Function;
 
-    public execute(): void {
-        if (this.booleanValue) {
-            this.reportingFunction(this.booleanValue);
-        }
-
-        if (this.numValue) {
-            this.reportingFunction(this.numValue);
-        }
-
-        if (this.stringValue) {
-            this.reportingFunction(this.stringValue);
-        }
-
-        if (this.symbolValue) {
-            this.reportingFunction(this.symbolValue);
-        }
-
-        if (this.objectValue) {
-            this.reportingFunction(this.objectValue);
-        }
-
-        if (this.dateValue) {
-            this.reportingFunction(this.dateValue);
-        }
-
-        if (this.arrayValue) {
-            this.reportingFunction(this.arrayValue);
-        }
+    public prepare(): void {
+        this.add(CallbackParametersCommand);
     }
 }

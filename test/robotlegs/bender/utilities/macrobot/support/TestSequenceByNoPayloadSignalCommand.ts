@@ -6,14 +6,18 @@
 // ------------------------------------------------------------------------------
 
 import { injectable } from "@robotlegsjs/core";
-
 import { SequenceMacro } from "../../../../../../src/robotlegs/bender/utilities/macrobot/impl/SequenceMacro";
 import { CallbackNoParametersCommand } from "./CallbackNoParametersCommand";
+import { CallbackNoParametersSequenceCommand } from "./CallbackNoParametersSequenceCommand";
 
 @injectable()
 export class TestSequenceByNoPayloadSignalCommand extends SequenceMacro {
     public prepare(): void {
+        this.add(CallbackNoParametersSequenceCommand);
         this.add(CallbackNoParametersCommand);
-        this.add(CallbackNoParametersCommand);
+    }
+
+    public execute(payload?: any, ...payloads: any[]): void {
+        super.execute(payload, ...payloads);
     }
 }

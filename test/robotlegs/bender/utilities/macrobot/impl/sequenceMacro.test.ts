@@ -5,21 +5,18 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import "../../../../../entry";
-
-import { assert } from "chai";
-
 import {
-    IContext,
-    IInjector,
-    IEventDispatcher,
-    IEventCommandMap,
     Context,
     Event,
     EventCommandMap,
-    EventDispatcher
+    EventDispatcher,
+    IContext,
+    IEventCommandMap,
+    IEventDispatcher,
+    IInjector
 } from "@robotlegsjs/core";
-
+import { assert } from "chai";
+import "../../../../../entry";
 import { TestAddAndRemoveSequenceCommand } from "../support/TestAddAndRemoveSequenceCommand";
 import { TestAtomicSequenceWithAsyncAndCompleteCallbackCommand } from "../support/TestAtomicSequenceWithAsyncAndCompleteCallbackCommand";
 import { TestAtomicSequenceWithAsyncCommand } from "../support/TestAtomicSequenceWithAsyncCommand";

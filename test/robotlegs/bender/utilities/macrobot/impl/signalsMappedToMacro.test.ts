@@ -21,6 +21,8 @@ import { TestParallelBySignalCommand } from "../support/TestParallelBySignalComm
 import { TestSequenceBySignalCommand } from "../support/TestSequenceBySignalCommand";
 import { NoParametersSignal } from "../support/NoParametersSignal";
 import { TestSequenceByNoPayloadSignalCommand } from "../support/TestSequenceByNoPayloadSignalCommand";
+import { TestSequenceByCustomPayloadSignalCommand } from "../support/TestSequenceByCustomPayloadSignalCommand";
+import { TestParallelByNoPayloadSignalCommand } from "../support/TestParallelByNoPayloadSignalCommand";
 
 describe("SignalsMappedToMacro", () => {
     let context: IContext;
@@ -85,6 +87,17 @@ describe("SignalsMappedToMacro", () => {
         assert.deepEqual(reported, []);
     });
 
+    it("custom_payload_dispatched_by_signal_is_mapped_into_sequence_sub_commands", () => {
+        signal = new NoParametersSignal();
+        injector.bind(Signal).toConstantValue(signal);
+        mapper = signalCommandTrigger.createMapper();
+        mapper.toCommand(TestSequenceByCustomPayloadSignalCommand);
+        signal.dispatch.apply(signal);
+
+        assert.deepEqual(reported, []);
+    });
+
+
     it("payload_dispatched_by_signal_is_mapped_into_parallel_sub_commands", (done: Function) => {
         signal = new DelaySignal();
         injector.bind(Signal).toConstantValue(signal);
@@ -105,6 +118,20 @@ describe("SignalsMappedToMacro", () => {
             ]);
 
             done();
+        }, 250);
+    });
+
+
+    it("no_payload_dispatched_by_signal_is_mapped_into_parallel_sub_commands", (done: Function) => {
+        signal = new NoParametersSignal();
+        injector.bind(Signal).toConstantValue(signal);
+        mapper = signalCommandTrigger.createMapper();
+        mapper.toCommand(TestParallelByNoPayloadSignalCommand);
+        signal.dispatch();
+
+        setTimeout(() => {
+          assert.deepEqual(reported, []);
+          done();
         }, 250);
     });
 });

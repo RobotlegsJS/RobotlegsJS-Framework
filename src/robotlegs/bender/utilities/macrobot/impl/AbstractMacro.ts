@@ -6,26 +6,23 @@
 // ------------------------------------------------------------------------------
 
 import {
-    inject,
-    injectable,
-    interfaces,
+    applyHooks,
     CommandPayload,
     ContainerModule,
+    guardsApprove,
     IClass,
     ICommand,
-    IInjector,
     IContext,
-    applyHooks,
-    guardsApprove
+    IInjector,
+    inject,
+    injectable,
+    interfaces
 } from "@robotlegsjs/core";
-
 import { IAsyncCommand } from "../api/IAsyncCommand";
 import { IMacro } from "../api/IMacro";
 import { ISubCommandMapping } from "../api/ISubCommandMapping";
 import { ISubCommandPayload } from "../api/ISubCommandPayload";
-
 import { ISubCommandConfigurator } from "../dsl/ISubCommandConfigurator";
-
 import { AsyncCommand } from "./AsyncCommand";
 import { SubCommandMapping } from "./SubCommandMapping";
 import { SubCommandMappingList } from "./SubCommandMappingList";
@@ -57,24 +54,23 @@ export abstract class AbstractMacro extends AsyncCommand implements IMacro {
 
     public abstract prepare(): void;
 
-    protected captureMacroPayload(executeArguments: IArguments): void {
+    protected captureMacroPayload(executeArguments: any[]): void {
         let i: number = 0;
-
         for (i = 0; i < executeArguments.length; i++) {
             this._macroPayload.addPayload(executeArguments[i], executeArguments[i].constructor);
         }
     }
 
-    protected executeCommand(mapping: ISubCommandMapping): void {
+    protected executeCommand(mapping: ISubCommandMapping, payload?: any, payloads?: any[]): void {
         let command: ICommand;
         let commandClass: IClass<ICommand> = mapping.commandClass;
-        let payloads: Array<ISubCommandPayload<any>> = mapping.payloads;
-        let hasPayloads: boolean = payloads.length > 0;
+        let mappingPayloads: Array<ISubCommandPayload<any>> = mapping.payloads;
+        let hasPayloads: boolean = mappingPayloads.length > 0;
 
         this.mapMacroPayload(this._macroPayload);
 
         if (hasPayloads) {
-            this.mapPayloads(payloads);
+            this.mapPayloads(mappingPayloads);
         }
 
         if (mapping.guards.length === 0 || guardsApprove(mapping.guards, this._injector)) {
@@ -88,7 +84,7 @@ export abstract class AbstractMacro extends AsyncCommand implements IMacro {
         }
 
         if (hasPayloads) {
-            this.unmapPayloads(payloads);
+            this.unmapPayloads(mappingPayloads);
         }
 
         this.unmapMacroPayload(this._macroPayload);
@@ -100,7 +96,17 @@ export abstract class AbstractMacro extends AsyncCommand implements IMacro {
                 (<IAsyncCommand>command).registerCompleteCallback(this.commandCompleteHandler.bind(this));
             }
 
-            command.execute();
+            if (command instanceof AsyncCommand) {
+                payloads = payloads || []
+                if (hasPayloads) {
+                    mappingPayloads.forEach((value: ISubCommandPayload<any>) => {
+                        payloads.push(value.data);
+                    });
+                }
+                command.execute(payload, ...payloads);
+            } else {
+                command.execute();
+            }
 
             if (!isAsync) {
                 this.commandCompleteHandler(true);

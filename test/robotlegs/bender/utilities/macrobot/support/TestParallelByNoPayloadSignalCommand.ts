@@ -7,15 +7,15 @@
 
 import { injectable } from "@robotlegsjs/core";
 import { ParallelMacro } from "../../../../../../src/robotlegs/bender/utilities/macrobot/impl/ParallelMacro";
-import { ReportDelayAsyncCommand } from "./ReportDelayAsyncCommand";
+import { ReportNoPayloadAsyncCommand } from "./ReportNoPayloadAsyncCommand";
 
 @injectable()
-export class TestParallelBySignalCommand extends ParallelMacro {
+export class TestParallelByNoPayloadSignalCommand extends ParallelMacro {
     public prepare(): void {
-        this.add(ReportDelayAsyncCommand).withPayloads("Command 1");
-        this.add(ReportDelayAsyncCommand).withPayloads("Command 2");
-        this.add(ReportDelayAsyncCommand).withPayloads("Command 3");
-        this.add(ReportDelayAsyncCommand).withPayloads("Command 4");
+        this.add(ReportNoPayloadAsyncCommand);
+        this.add(ReportNoPayloadAsyncCommand);
+        this.add(ReportNoPayloadAsyncCommand);
+        this.add(ReportNoPayloadAsyncCommand);
     }
 
     public execute(payload?: any, ...payloads: any[]): void {

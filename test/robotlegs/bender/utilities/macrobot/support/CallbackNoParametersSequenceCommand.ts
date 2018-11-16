@@ -5,9 +5,13 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import { ICommand, injectable } from "@robotlegsjs/core";
+import { injectable } from "@robotlegsjs/core";
+import { SequenceMacro } from "../../../../../../src";
+import { CallbackNoParametersCommand } from "./CallbackNoParametersCommand";
 
 @injectable()
-export class CallbackNoParametersCommand implements ICommand {
-    public execute(): void {}
+export class CallbackNoParametersSequenceCommand extends SequenceMacro {
+    public prepare(): void {
+        this.add(CallbackNoParametersCommand);
+    }
 }
