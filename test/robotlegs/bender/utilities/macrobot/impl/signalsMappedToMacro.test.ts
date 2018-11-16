@@ -78,7 +78,7 @@ describe("SignalsMappedToMacro", () => {
         assert.deepEqual(reported, expected.concat(expected));
     });
 
-    it("payload_dispatched_by_signal_is_mapped_into_sequence_sub_commands", () => {
+    it("payload_dispatched_by_signal_is_mapped_into_nested_sequence_sub_commands", () => {
         const expected: any[] = [true, 999, "I'm a string!", Symbol("symbol"), { x: 5, y: 5 }, new Date(), [1, 2, 3, 4, 5, 6, 7, 8, 9]];
 
         signal = new ParametersSignal();
@@ -100,14 +100,14 @@ describe("SignalsMappedToMacro", () => {
         assert.deepEqual(reported, []);
     });
 
-    it.skip("custom_payload_dispatched_by_signal_is_mapped_into_sequence_sub_commands", () => {
+    it("subcommand_payload_is_mapped_into_nested_subcommands", () => {
         signal = new NoParametersSignal();
         injector.bind(Signal).toConstantValue(signal);
         mapper = signalCommandTrigger.createMapper();
         mapper.toCommand(TestSequenceByCustomPayloadSignalCommand);
         signal.dispatch.apply(signal);
 
-        assert.deepEqual(reported, ["test", "test"]);
+        assert.deepEqual(reported, ["command1", "command2"]);
     });
 
     it("payload_dispatched_by_signal_is_mapped_into_parallel_sub_commands", (done: Function) => {

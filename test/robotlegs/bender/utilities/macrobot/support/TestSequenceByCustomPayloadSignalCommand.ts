@@ -15,7 +15,7 @@ import { CallbackCustomPayloadSequenceCommand } from "./CallbackCustomPayloadSeq
 @injectable()
 export class TestSequenceByCustomPayloadSignalCommand extends SequenceMacro {
     public prepare(): void {
-        this.add(CallbackCustomPayloadSequenceCommand).withPayloads("test");
-        this.add(CallbackCustomPayloadCommand).withPayloads("test");
+        this.add(CallbackCustomPayloadSequenceCommand).withPayloads("command1");
+        this.add(CallbackCustomPayloadCommand).withPayloads("command2");
     }
 }
