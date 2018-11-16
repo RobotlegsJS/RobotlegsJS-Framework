@@ -33,6 +33,7 @@ import { SubCommandMappingList } from "./SubCommandMappingList";
 @injectable()
 export abstract class AbstractMacro extends AsyncCommand implements IMacro {
     protected _injector: IInjector;
+    protected _executeArguments: IArguments;
     protected _macroPayload: CommandPayload;
     protected _mappings: SubCommandMappingList;
     protected _payloadsModule: ContainerModule;
@@ -57,23 +58,26 @@ export abstract class AbstractMacro extends AsyncCommand implements IMacro {
 
     public abstract prepare(): void;
 
-    protected captureMacroPayload(executeArguments: any[]): void {
+    protected captureMacroPayload(executeArguments: IArguments): void {
+        this._executeArguments = executeArguments;
+
         let i: number = 0;
+
         for (i = 0; i < executeArguments.length; i++) {
             this._macroPayload.addPayload(executeArguments[i], executeArguments[i].constructor);
         }
     }
 
-    protected executeCommand(mapping: ISubCommandMapping, payload?: any, payloads?: any[]): void {
+    protected executeCommand(mapping: ISubCommandMapping): void {
         let command: ICommand;
         let commandClass: IClass<ICommand> = mapping.commandClass;
-        let mappingPayloads: Array<ISubCommandPayload<any>> = mapping.payloads;
-        let hasPayloads: boolean = mappingPayloads.length > 0;
+        let payloads: Array<ISubCommandPayload<any>> = mapping.payloads;
+        let hasPayloads: boolean = payloads.length > 0;
 
         this.mapMacroPayload(this._macroPayload);
 
         if (hasPayloads) {
-            this.mapPayloads(mappingPayloads);
+            this.mapPayloads(payloads);
         }
 
         if (mapping.guards.length === 0 || guardsApprove(mapping.guards, this._injector)) {
@@ -87,7 +91,7 @@ export abstract class AbstractMacro extends AsyncCommand implements IMacro {
         }
 
         if (hasPayloads) {
-            this.unmapPayloads(mappingPayloads);
+            this.unmapPayloads(payloads);
         }
 
         this.unmapMacroPayload(this._macroPayload);
@@ -99,17 +103,7 @@ export abstract class AbstractMacro extends AsyncCommand implements IMacro {
                 (<IAsyncCommand>command).registerCompleteCallback(this.commandCompleteHandler.bind(this));
             }
 
-            if (command instanceof AsyncCommand) {
-                payloads = payloads || [];
-                if (hasPayloads) {
-                    mappingPayloads.forEach((value: ISubCommandPayload<any>) => {
-                        payloads.push(value.data);
-                    });
-                }
-                command.execute(payload, ...payloads);
-            } else {
-                command.execute();
-            }
+            command.execute.apply(command, this._executeArguments);
 
             if (!isAsync) {
                 this.commandCompleteHandler(true);
