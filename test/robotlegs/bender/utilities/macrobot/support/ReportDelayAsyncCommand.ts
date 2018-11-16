@@ -6,6 +6,7 @@
 // ------------------------------------------------------------------------------
 
 import { inject, injectable, named, optional } from "@robotlegsjs/core";
+
 import { AsyncCommand } from "../../../../../../src/robotlegs/bender/utilities/macrobot/impl/AsyncCommand";
 
 @injectable()

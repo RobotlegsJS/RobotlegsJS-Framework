@@ -16,13 +16,13 @@ import { IContext, IInjector, Context, CommandMapper } from "@robotlegsjs/core";
 import { SignalCommandTrigger } from "@robotlegsjs/signalcommandmap";
 
 import { DelaySignal } from "../support/DelaySignal";
-import { ParametersSignal } from "../support/ParametersSignal";
-import { TestParallelBySignalCommand } from "../support/TestParallelBySignalCommand";
-import { TestSequenceBySignalCommand } from "../support/TestSequenceBySignalCommand";
 import { NoParametersSignal } from "../support/NoParametersSignal";
-import { TestSequenceByNoPayloadSignalCommand } from "../support/TestSequenceByNoPayloadSignalCommand";
-import { TestSequenceByCustomPayloadSignalCommand } from "../support/TestSequenceByCustomPayloadSignalCommand";
+import { ParametersSignal } from "../support/ParametersSignal";
 import { TestParallelByNoPayloadSignalCommand } from "../support/TestParallelByNoPayloadSignalCommand";
+import { TestParallelBySignalCommand } from "../support/TestParallelBySignalCommand";
+import { TestSequenceByCustomPayloadSignalCommand } from "../support/TestSequenceByCustomPayloadSignalCommand";
+import { TestSequenceByNoPayloadSignalCommand } from "../support/TestSequenceByNoPayloadSignalCommand";
+import { TestSequenceBySignalCommand } from "../support/TestSequenceBySignalCommand";
 
 describe("SignalsMappedToMacro", () => {
     let context: IContext;

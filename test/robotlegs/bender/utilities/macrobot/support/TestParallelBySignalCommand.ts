@@ -6,7 +6,9 @@
 // ------------------------------------------------------------------------------
 
 import { injectable } from "@robotlegsjs/core";
+
 import { ParallelMacro } from "../../../../../../src/robotlegs/bender/utilities/macrobot/impl/ParallelMacro";
+
 import { ReportDelayAsyncCommand } from "./ReportDelayAsyncCommand";
 
 @injectable()
