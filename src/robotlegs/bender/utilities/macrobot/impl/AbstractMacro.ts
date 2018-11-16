@@ -97,7 +97,7 @@ export abstract class AbstractMacro extends AsyncCommand implements IMacro {
             }
 
             if (command instanceof AsyncCommand) {
-                payloads = payloads || []
+                payloads = payloads || [];
                 if (hasPayloads) {
                     mappingPayloads.forEach((value: ISubCommandPayload<any>) => {
                         payloads.push(value.data);

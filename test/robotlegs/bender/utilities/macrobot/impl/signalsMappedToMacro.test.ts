@@ -97,7 +97,6 @@ describe("SignalsMappedToMacro", () => {
         assert.deepEqual(reported, []);
     });
 
-
     it("payload_dispatched_by_signal_is_mapped_into_parallel_sub_commands", (done: Function) => {
         signal = new DelaySignal();
         injector.bind(Signal).toConstantValue(signal);
@@ -121,7 +120,6 @@ describe("SignalsMappedToMacro", () => {
         }, 250);
     });
 
-
     it("no_payload_dispatched_by_signal_is_mapped_into_parallel_sub_commands", (done: Function) => {
         signal = new NoParametersSignal();
         injector.bind(Signal).toConstantValue(signal);
@@ -130,8 +128,8 @@ describe("SignalsMappedToMacro", () => {
         signal.dispatch();
 
         setTimeout(() => {
-          assert.deepEqual(reported, []);
-          done();
+            assert.deepEqual(reported, []);
+            done();
         }, 250);
     });
 });
