@@ -24,8 +24,6 @@ export abstract class SequenceMacro extends AbstractMacro implements IMacro {
 
     private _atomic: boolean;
     private _customAtomic: boolean;
-    private _executePayload: any;
-    private _executePayloads: any[];
 
     public get atomic(): boolean {
         return this._customAtomic !== undefined ? this._customAtomic : true;
@@ -38,16 +36,7 @@ export abstract class SequenceMacro extends AbstractMacro implements IMacro {
     }
 
     public execute(payload?: any, ...payloads: any[]): void {
-        this._executePayload = payload;
-        this._executePayloads = payloads;
-        const executeArguments: any[] = [];
-        // tslint:disable-next-line:prefer-for-of
-        for (let i: number = 0; i < arguments.length; i++) {
-            if (arguments[i] !== undefined) {
-                executeArguments.push(arguments[i]);
-            }
-        }
-        this.captureMacroPayload(executeArguments);
+        this.captureMacroPayload(arguments);
 
         this.prepare();
 
@@ -64,7 +53,7 @@ export abstract class SequenceMacro extends AbstractMacro implements IMacro {
     protected executeNext(): void {
         if (this.hasCommands) {
             let mapping: ISubCommandMapping = this._commands[this._executionIndex++];
-            this.executeCommand(mapping, this._executePayload, this._executePayloads);
+            this.executeCommand(mapping);
         } else {
             this.dispatchComplete(this._success);
         }

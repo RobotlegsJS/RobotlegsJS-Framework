@@ -22,14 +22,7 @@ export abstract class ParallelMacro extends AbstractMacro implements IMacro {
     private _commands: ISubCommandMapping[];
 
     public execute(payload?: any, ...payloads: any[]): void {
-        const executeArguments: any[] = [];
-        // tslint:disable-next-line:prefer-for-of
-        for (let i: number = 0; i < arguments.length; i++) {
-            if (arguments[i] !== undefined) {
-                executeArguments.push(arguments[i]);
-            }
-        }
-        this.captureMacroPayload(executeArguments);
+        this.captureMacroPayload(arguments);
 
         this.prepare();
 
@@ -43,7 +36,7 @@ export abstract class ParallelMacro extends AbstractMacro implements IMacro {
 
             for (i = 0; i < numCommands && this._success; i++) {
                 let mapping: ISubCommandMapping = this._commands[i];
-                this.executeCommand(mapping, payload, payloads);
+                this.executeCommand(mapping);
             }
         } else {
             this.dispatchComplete(true);
