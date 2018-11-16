@@ -5,12 +5,18 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import { ICommand, inject, injectable } from "@robotlegsjs/core";
+import { ICommand, inject, injectable, named } from "@robotlegsjs/core";
 
 @injectable()
 export class CallbackCustomPayloadCommand implements ICommand {
     @inject(String)
     public stringValue: string;
 
-    public execute(): void {}
+    @inject("Function")
+    @named("reportingFunction")
+    public reportingFunction: Function;
+
+    public execute(): void {
+        this.reportingFunction(this.stringValue);
+    }
 }
