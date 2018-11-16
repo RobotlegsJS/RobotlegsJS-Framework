@@ -5,7 +5,7 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import { inject, injectable } from "@robotlegsjs/core";
+import { injectable } from "@robotlegsjs/core";
 
 import { SequenceMacro } from "../../../../../../src/robotlegs/bender/utilities/macrobot/impl/SequenceMacro";
 
@@ -13,9 +13,6 @@ import { CallbackCustomPayloadCommand } from "./CallbackCustomPayloadCommand";
 
 @injectable()
 export class CallbackCustomPayloadSequenceCommand extends SequenceMacro {
-    @inject(String)
-    public stringValue: string;
-
     public prepare(): void {
         this.add(CallbackCustomPayloadCommand);
     }
