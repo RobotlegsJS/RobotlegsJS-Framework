@@ -5,29 +5,36 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import { ICommand, inject, injectable, named } from "@robotlegsjs/core";
+import { injectable, inject, named, optional, ICommand } from "@robotlegsjs/core";
 
 @injectable()
 export class CallbackParametersCommand implements ICommand {
     @inject(Boolean)
+    @optional()
     public booleanValue: boolean;
 
     @inject(Number)
+    @optional()
     public numValue: number;
 
     @inject(String)
+    @optional()
     public stringValue: string;
 
     @inject(Symbol)
+    @optional()
     public symbolValue: symbol;
 
     @inject(Object)
+    @optional()
     public objectValue: object;
 
     @inject(Date)
+    @optional()
     public dateValue: Date;
 
     @inject(Array)
+    @optional()
     public arrayValue: any[];
 
     @inject("Function")
