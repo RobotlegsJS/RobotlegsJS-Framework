@@ -6,7 +6,9 @@
 // ------------------------------------------------------------------------------
 
 import { inject, injectable, named } from "@robotlegsjs/core";
-import { SequenceMacro } from "../../../../../../src";
+
+import { SequenceMacro } from "../../../../../../src/robotlegs/bender/utilities/macrobot/impl/SequenceMacro";
+
 import { CallbackParametersCommand } from "./CallbackParametersCommand";
 
 @injectable()
