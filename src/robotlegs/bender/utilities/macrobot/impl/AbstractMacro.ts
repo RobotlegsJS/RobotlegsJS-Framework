@@ -6,6 +6,8 @@
 // ------------------------------------------------------------------------------
 
 import {
+    applyHooks,
+    guardsApprove,
     inject,
     injectable,
     interfaces,
@@ -13,10 +15,8 @@ import {
     ContainerModule,
     IClass,
     ICommand,
-    IInjector,
     IContext,
-    applyHooks,
-    guardsApprove
+    IInjector
 } from "@robotlegsjs/core";
 
 import { IAsyncCommand } from "../api/IAsyncCommand";
@@ -29,13 +29,17 @@ import { ISubCommandConfigurator } from "../dsl/ISubCommandConfigurator";
 import { AsyncCommand } from "./AsyncCommand";
 import { SubCommandMapping } from "./SubCommandMapping";
 import { SubCommandMappingList } from "./SubCommandMappingList";
+import { SubCommandPayload } from "./SubCommandPayload";
 
 @injectable()
 export abstract class AbstractMacro extends AsyncCommand implements IMacro {
     protected _injector: IInjector;
     protected _macroPayload: CommandPayload;
     protected _mappings: SubCommandMappingList;
-    protected _payloadsModule: ContainerModule;
+
+    protected _executeArguments: any;
+    protected _commandPayloads: Array<ISubCommandPayload<any>> = [];
+    protected _commandPayloadsModule: ContainerModule;
 
     constructor(@inject(IContext) context: IContext, @inject(IInjector) injector: IInjector) {
         super(context);
@@ -57,18 +61,22 @@ export abstract class AbstractMacro extends AsyncCommand implements IMacro {
 
     public abstract prepare(): void;
 
-    protected captureMacroPayload(executeArguments: IArguments): void {
-        let i: number = 0;
+    protected captureMacroPayload(executeArguments: any): void {
+        this._executeArguments = executeArguments;
 
-        for (i = 0; i < executeArguments.length; i++) {
-            this._macroPayload.addPayload(executeArguments[i], executeArguments[i].constructor);
+        for (const argument of executeArguments) {
+            if (argument instanceof SubCommandPayload) {
+                this._commandPayloads.push(argument);
+            } else {
+                this._macroPayload.addPayload(argument, argument.constructor);
+            }
         }
     }
 
     protected executeCommand(mapping: ISubCommandMapping): void {
         let command: ICommand;
         let commandClass: IClass<ICommand> = mapping.commandClass;
-        let payloads: Array<ISubCommandPayload<any>> = mapping.payloads;
+        let payloads: Array<ISubCommandPayload<any>> = this._commandPayloads.concat(mapping.payloads);
         let hasPayloads: boolean = payloads.length > 0;
 
         this.mapMacroPayload(this._macroPayload);
@@ -100,7 +108,11 @@ export abstract class AbstractMacro extends AsyncCommand implements IMacro {
                 (<IAsyncCommand>command).registerCompleteCallback(this.commandCompleteHandler.bind(this));
             }
 
-            command.execute();
+            if (payloads.length > 0) {
+                command.execute.apply(command, payloads.concat(this._executeArguments));
+            } else {
+                command.execute.apply(command, this._executeArguments);
+            }
 
             if (!isAsync) {
                 this.commandCompleteHandler(true);
@@ -125,7 +137,7 @@ export abstract class AbstractMacro extends AsyncCommand implements IMacro {
     }
 
     protected mapPayloads(payloads: Array<ISubCommandPayload<any>>): void {
-        this._payloadsModule = new ContainerModule((bind: interfaces.Bind, unbind: interfaces.Unbind) => {
+        this._commandPayloadsModule = new ContainerModule((bind: interfaces.Bind, unbind: interfaces.Unbind) => {
             payloads.forEach((payload: ISubCommandPayload<any>) => {
                 if (payload.name.length > 0) {
                     bind(payload.type)
@@ -136,11 +148,11 @@ export abstract class AbstractMacro extends AsyncCommand implements IMacro {
                 }
             });
         });
-        this._injector.load(this._payloadsModule);
+        this._injector.load(this._commandPayloadsModule);
     }
 
     protected unmapPayloads(payloads: Array<ISubCommandPayload<any>>): void {
-        this._injector.unload(this._payloadsModule);
+        this._injector.unload(this._commandPayloadsModule);
     }
 
     protected abstract commandCompleteHandler(success: boolean): void;
