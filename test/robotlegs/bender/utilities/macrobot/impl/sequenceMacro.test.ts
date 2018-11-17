@@ -10,14 +10,14 @@ import "../../../../../entry";
 import { assert } from "chai";
 
 import {
-    IContext,
-    IInjector,
-    IEventDispatcher,
-    IEventCommandMap,
     Context,
     Event,
     EventCommandMap,
-    EventDispatcher
+    EventDispatcher,
+    IContext,
+    IEventCommandMap,
+    IEventDispatcher,
+    IInjector
 } from "@robotlegsjs/core";
 
 import { TestAddAndRemoveSequenceCommand } from "../support/TestAddAndRemoveSequenceCommand";

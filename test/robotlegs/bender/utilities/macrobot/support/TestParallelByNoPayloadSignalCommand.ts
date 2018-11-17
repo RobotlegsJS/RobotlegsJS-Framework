@@ -7,14 +7,16 @@
 
 import { injectable } from "@robotlegsjs/core";
 
-import { SequenceMacro } from "../../../../../../src/robotlegs/bender/utilities/macrobot/impl/SequenceMacro";
+import { ParallelMacro } from "../../../../../../src/robotlegs/bender/utilities/macrobot/impl/ParallelMacro";
 
-import { CallbackParametersCommand } from "./CallbackParametersCommand";
+import { ReportNoPayloadAsyncCommand } from "./ReportNoPayloadAsyncCommand";
 
 @injectable()
-export class TestSequenceBySignalCommand extends SequenceMacro {
+export class TestParallelByNoPayloadSignalCommand extends ParallelMacro {
     public prepare(): void {
-        this.add(CallbackParametersCommand);
-        this.add(CallbackParametersCommand);
+        this.add(ReportNoPayloadAsyncCommand);
+        this.add(ReportNoPayloadAsyncCommand);
+        this.add(ReportNoPayloadAsyncCommand);
+        this.add(ReportNoPayloadAsyncCommand);
     }
 }

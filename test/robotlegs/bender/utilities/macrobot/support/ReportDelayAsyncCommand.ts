@@ -5,7 +5,7 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import { injectable, inject, named, optional } from "@robotlegsjs/core";
+import { inject, injectable, named, optional } from "@robotlegsjs/core";
 
 import { AsyncCommand } from "../../../../../../src/robotlegs/bender/utilities/macrobot/impl/AsyncCommand";
 

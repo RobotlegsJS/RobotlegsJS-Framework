@@ -1,5 +1,5 @@
 // ------------------------------------------------------------------------------
-//  Copyright (c) Copyright (c) 2017-present, RobotlegsJS. All Rights Reserved.
+//  Copyright (c) 2017-present, RobotlegsJS. All Rights Reserved.
 //
 //  NOTICE: You are permitted to use, modify, and distribute this file
 //  in accordance with the terms of the license agreement accompanying it.
@@ -12,9 +12,8 @@ import { SequenceMacro } from "../../../../../../src/robotlegs/bender/utilities/
 import { CallbackParametersCommand } from "./CallbackParametersCommand";
 
 @injectable()
-export class TestSequenceBySignalCommand extends SequenceMacro {
+export class CallbackParametersSequenceCommand extends SequenceMacro {
     public prepare(): void {
-        this.add(CallbackParametersCommand);
         this.add(CallbackParametersCommand);
     }
 }

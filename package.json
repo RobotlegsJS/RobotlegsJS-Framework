@@ -61,6 +61,7 @@
   "author": "RobotlegsJS",
   "contributors": [
     "Endel Dreyer <endel.dreyer@gmail.com>",
+    "Sargis Sargsyan <sargsyan.sargis.89@gmail.com>",
     "Tiago Schenkel <tiago.schenkel@gmail.com>"
   ],
   "license": "MIT",
@@ -83,7 +84,7 @@
     "chai": "^4.2.0",
     "es6-map": "^0.1.5",
     "es6-symbol": "^3.1.1",
-    "glslify": "^6.3.1",
+    "glslify": "^7.0.0",
     "imports-loader": "^0.8.0",
     "istanbul": "^0.4.5",
     "istanbul-instrumenter-loader": "^3.0.1",
