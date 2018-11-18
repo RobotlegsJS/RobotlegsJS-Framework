@@ -20,6 +20,8 @@
 
 - Map payloads into the context of nested macro commands (see #74 and #75).
 
+- Use karma-sinon-chai dependency (see #76).
+
 - Update dev dependencies to latest version.
 
 ### [v0.2.1](https://github.com/RobotlegsJS/RobotlegsJS-Macrobot/releases/tag/0.2.1) - 2018-09-16
