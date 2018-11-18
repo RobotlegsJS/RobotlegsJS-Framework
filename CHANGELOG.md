@@ -22,6 +22,8 @@
 
 - Update `karma` setup to generate code coverage report only for `src` folder (see #78).
 
+- Use karma-sinon-chai dependency (see #91).
+
 - Update dev dependencies to latest version.
 
 ### [v0.2.0](https://github.com/RobotlegsJS/SignalsJS/releases/tag/0.2.0) - 2018-08-02
