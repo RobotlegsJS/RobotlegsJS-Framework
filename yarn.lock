@@ -2271,12 +2271,6 @@ from2@^2.1.0, from2@^2.3.0:
     inherits "^2.0.1"
     readable-stream "^2.0.0"
 
-fs-access@^1.0.0:
-  version "1.0.1"
-  resolved "https://registry.npmjs.org/fs-access/-/fs-access-1.0.1.tgz#d6a87f262271cefebec30c553407fb995da8777a"
-  dependencies:
-    null-check "^1.0.0"
-
 fs-extra@^1.0.0:
   version "1.0.0"
   resolved "https://registry.npmjs.org/fs-extra/-/fs-extra-1.0.0.tgz#cd3ce5f7e7cb6145883fcae3191e9877f8587950"
@@ -3289,17 +3283,6 @@ karma-chai-sinon@^0.1.5:
   version "0.1.5"
   resolved "https://registry.npmjs.org/karma-chai-sinon/-/karma-chai-sinon-0.1.5.tgz#5c392ca95247818951d6b57902f02c36e803753a"
 
-karma-chai@^0.1.0:
-  version "0.1.0"
-  resolved "https://registry.npmjs.org/karma-chai/-/karma-chai-0.1.0.tgz#bee5ad40400517811ae34bb945f762909108b79a"
-
-karma-chrome-launcher@^2.2.0:
-  version "2.2.0"
-  resolved "https://registry.npmjs.org/karma-chrome-launcher/-/karma-chrome-launcher-2.2.0.tgz#cf1b9d07136cc18fe239327d24654c3dbc368acf"
-  dependencies:
-    fs-access "^1.0.0"
-    which "^1.2.1"
-
 karma-coverage-istanbul-reporter@^2.0.4:
   version "2.0.4"
   resolved "https://registry.npmjs.org/karma-coverage-istanbul-reporter/-/karma-coverage-istanbul-reporter-2.0.4.tgz#402ae4ed6eadb9d9dafbd408ffda17897c0d003a"
@@ -3342,9 +3325,10 @@ karma-remap-istanbul@^0.6.0:
     istanbul "^0.4.3"
     remap-istanbul "^0.9.0"
 
-karma-sinon@^1.0.5:
-  version "1.0.5"
-  resolved "https://registry.npmjs.org/karma-sinon/-/karma-sinon-1.0.5.tgz#4e3443f2830fdecff624d3747163f1217daa2a9a"
+karma-sinon-chai@^2.0.2:
+  version "2.0.2"
+  resolved "https://registry.npmjs.org/karma-sinon-chai/-/karma-sinon-chai-2.0.2.tgz#e28c109b989973abafc28a7c9f09ef24a05e07c2"
+  integrity sha512-SDgh6V0CUd+7ruL1d3yG6lFzmJNGRNQuEuCYXLaorruNP9nwQfA7hpsp4clx4CbOo5Gsajh3qUOT7CrVStUKMw==
 
 karma-sourcemap-loader@^0.3.7:
   version "0.3.7"
@@ -4117,10 +4101,6 @@ npmlog@^4.0.2:
     console-control-strings "~1.1.0"
     gauge "~2.7.3"
     set-blocking "~2.0.0"
-
-null-check@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.npmjs.org/null-check/-/null-check-1.0.0.tgz#977dffd7176012b9ec30d2a39db5cf72a0439edd"
 
 number-is-nan@^1.0.0:
   version "1.0.1"
@@ -6145,7 +6125,7 @@ which-module@^2.0.0:
   version "2.0.0"
   resolved "https://registry.npmjs.org/which-module/-/which-module-2.0.0.tgz#d9ef07dce77b9902b8a3a8fa4b31c3e3f7e6e87a"
 
-which@^1.1.1, which@^1.2.1, which@^1.2.10, which@^1.2.8, which@^1.2.9, which@^1.3.0:
+which@^1.1.1, which@^1.2.10, which@^1.2.8, which@^1.2.9, which@^1.3.0:
   version "1.3.1"
   resolved "https://registry.npmjs.org/which/-/which-1.3.1.tgz#a45043d54f5805316da8d62f9f50918d3da70b0a"
   dependencies:
