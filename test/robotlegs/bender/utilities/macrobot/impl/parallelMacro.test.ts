@@ -105,7 +105,6 @@ describe("ParallelMacro", () => {
         dispatcher.dispatchEvent(new Event("trigger"));
 
         setTimeout(() => {
-            console.log(reported);
             assert.deepEqual(reported, [
                 "Start execution of Command 1 and await 200 milliseconds",
                 "Start execution of Command 2 and await 150 milliseconds",
