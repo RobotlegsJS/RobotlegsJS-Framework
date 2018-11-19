@@ -24,6 +24,8 @@
 
 - Use karma-sinon-chai dependency (see #91).
 
+- Migrate to headless Chrome (see #92).
+
 - Update dev dependencies to latest version.
 
 ### [v0.2.0](https://github.com/RobotlegsJS/SignalsJS/releases/tag/0.2.0) - 2018-08-02
