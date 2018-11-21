@@ -19,12 +19,12 @@ module.exports = config => {
       "es6-shim"
     ],
     files: [
-      { pattern: "./test/**/**/**.test.ts", include: true },
+      { pattern: "./test/index.ts", include: true },
       { pattern: '**/*.map', served: true, included: false, watched: true }
     ],
     preprocessors: {
-      "./**/**/**/**.ts": ["sourcemap"],
-      "./test/**/**/**.test.ts": ["webpack"]
+      "./test/index.ts": ["webpack"],
+      "./**/**/**/**.ts": ["sourcemap"]
     },
     webpack: webpackConfig,
     webpackMiddleware: {
@@ -41,6 +41,9 @@ module.exports = config => {
       "karma-es6-shim",
       "karma-coverage-istanbul-reporter"
     ],
+    mime: {
+      "text/x-typescript": ["ts","tsx"]
+    },
     reporters: (
       config.singleRun ?
         ["dots", "mocha", "coverage-istanbul"] :
