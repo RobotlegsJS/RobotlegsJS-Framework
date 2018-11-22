@@ -21,7 +21,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-### Changed
+#### Changed
 
 - Update `karma` setup to generate code coverage report only for `src` folder (see #78).
 
@@ -29,7 +29,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Migrate to headless Chrome (see #92).
 
-- Improve performance of test running on `karma-webpack` (see #94).
+- Improve performance of unit tests running on `karma-webpack` (see #94).
 
 - Update dev dependencies to latest version.
 
@@ -37,11 +37,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### [v0.2.0](https://github.com/RobotlegsJS/SignalsJS/releases/tag/0.2.0) - 2018-08-02
 
-### Added
+#### Added
 
 - Use [tslib](https://github.com/Microsoft/tslib) library to avoid duplicated declarations (see #75).
 
-### Changed
+#### Changed
 
 - Adds copyright notice (see #74).
 
@@ -57,7 +57,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### [v0.1.1](https://github.com/RobotlegsJS/SignalsJS/releases/tag/0.1.1) - 2018-03-04
 
-### Changed
+#### Changed
 
 - Update codeclimate settings (see #49, #50).
 
@@ -65,11 +65,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### [v0.1.0](https://github.com/RobotlegsJS/SignalsJS/releases/tag/0.1.0) - 2018-01-22
 
-### Added
+#### Added
 
 - Adhere to TypeScript Guidelines for General Types (see #43).
 
-### Changed
+#### Changed
 
 - Improve code coverage to reach 100% (see #42).
 
@@ -85,7 +85,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### [v0.0.12](https://github.com/RobotlegsJS/SignalsJS/releases/tag/0.0.12) - 2017-11-14
 
-### Added
+#### Added
 
 - Add Changelog (see #25).
 
@@ -95,7 +95,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Add Pull Request Template (see #28).
 
-### Changed
+#### Changed
 
 - Update README (see #31).
 
@@ -105,7 +105,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### [v0.0.11](https://github.com/RobotlegsJS/SignalsJS/releases/tag/0.0.11) - 2017-09-26
 
-### Changed
+#### Changed
 
 - Adapt to NPM [v5.0.0](http://blog.npmjs.org/post/161081169345/v500) (see #16).
 
@@ -113,13 +113,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### [v0.0.10](https://github.com/RobotlegsJS/SignalsJS/releases/tag/0.0.10) - 2017-09-15
 
-### Changed
+#### Changed
 
 - Update Prettier configuration (see #15).
 
 ### [v0.0.9](https://github.com/RobotlegsJS/SignalsJS/releases/tag/0.0.9) - 2017-09-14
 
-### Changed
+#### Changed
 
 - Update TSLint rules (see #9).
 
@@ -131,11 +131,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### [v0.0.8](https://github.com/RobotlegsJS/SignalsJS/releases/tag/0.0.8) - 2017-09-04
 
-### Added
+#### Added
 
 - Add support to [Istanbul](https://istanbul.js.org) test coverage tool (see #7).
 
-### Changed
+#### Changed
 
 - Improve code coverage (see #3, #5, #6 and #8).
 
@@ -143,33 +143,33 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### [v0.0.7](https://github.com/RobotlegsJS/SignalsJS/releases/tag/0.0.7) - 2017-08-30
 
-### Changed
+#### Changed
 
 - Update Travis configuration file.
 
 ### [v0.0.6](https://github.com/RobotlegsJS/SignalsJS/releases/tag/0.0.6) - 2017-08-30
 
-### Added
+#### Added
 
 - Enable GreenKeeper (see #2).
 
-### Changed
+#### Changed
 
 - Update dev dependencies to latest version.
 
 ### [v0.0.5](https://github.com/RobotlegsJS/SignalsJS/releases/tag/0.0.5) - 2017-08-11
 
-### Changed
+#### Changed
 
 - Update contributing guidelines.
 
 ### [v0.0.4](https://github.com/RobotlegsJS/SignalsJS/releases/tag/0.0.4) - 2017-08-11
 
-### Added
+#### Added
 
 - Add contributing guidelines.
 
-### Changed
+#### Changed
 
 - Update README.
 
@@ -177,7 +177,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### [v0.0.3](https://github.com/RobotlegsJS/SignalsJS/releases/tag/0.0.3) - 2017-08-06
 
-### Changed
+#### Changed
 
 - Update README.
 
@@ -185,7 +185,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### [v0.0.2](https://github.com/RobotlegsJS/SignalsJS/releases/tag/0.0.2) - 2017-08-06
 
-### Changed
+#### Changed
 
 - Update README.
 
