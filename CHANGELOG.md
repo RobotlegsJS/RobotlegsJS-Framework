@@ -119,13 +119,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### [v0.0.9](https://github.com/RobotlegsJS/SignalsJS/releases/tag/0.0.9) - 2017-09-14
 
-#### Changed
-
-- Update TSLint rules (see #9).
+#### Added
 
 - Add support to [Prettier](https://prettier.io) code formatter (see #10).
 
 - Add integration with [CodeBeat](https://codebeat.co) (see #12 and #13).
+
+#### Changed
+
+- Update TSLint rules (see #9).
 
 - Update dev dependencies to latest version.
 
