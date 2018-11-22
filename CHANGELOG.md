@@ -21,6 +21,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### v1.0.0
+
 #### Changed
 
 - Update `karma` setup to generate code coverage report only for `src` folder (see #78).
@@ -30,6 +32,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Migrate to headless Chrome (see #92).
 
 - Improve performance of unit tests running on `karma-webpack` (see #94).
+
+- Prepare package for stable version (see #95).
 
 - Update dev dependencies to latest version.
 
