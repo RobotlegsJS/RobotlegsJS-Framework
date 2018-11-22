@@ -39,11 +39,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 #### Added
 
+- Adds copyright notice (see #74).
+
 - Use [tslib](https://github.com/Microsoft/tslib) library to avoid duplicated declarations (see #75).
 
 #### Changed
-
-- Adds copyright notice (see #74).
 
 - Enforce TSLint rules (see #55).
 
