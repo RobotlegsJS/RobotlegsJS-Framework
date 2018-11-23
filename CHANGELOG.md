@@ -6,6 +6,8 @@
 
 - Enable `greenkeeper` (see #2).
 
+- Migrate to Headless Chrome and improve performance of Karma (see #10).
+
 - Update dev dependencies to latest version.
 
 ### [v0.0.1](https://github.com/RobotlegsJS/RobotlegsJS-EventEmitter3/releases/tag/0.0.1) - 2018-09-14
