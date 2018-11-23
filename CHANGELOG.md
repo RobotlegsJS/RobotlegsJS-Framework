@@ -1,8 +1,11 @@
-# RobotlegsJS CreateJS Changelog:
+# RobotlegsJS CreateJS Changelog
 
-## Robotlegs-CreateJS 1.0.0
+All notable changes to this project will be documented in this file.
 
-### v1.0.0 - Planned stable version
+The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
+and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+
+## Suggestions or improvements for further versions
 
 - [x] Add instructions of how to install the **@robotlegsjs/createjs** package into **README.md**.
 
@@ -18,9 +21,11 @@
 
 - [ ] Migrate [original documentation](https://github.com/robotlegs/robotlegs-framework/blob/master/src/readme.md) and adapt it to TypeScript and CreateJS.
 
-## Robotlegs-CreateJS 0.2.0
+## [Unreleased]
 
-### v0.2.1
+### v1.0.0
+
+#### Changed
 
 - Update `karma` setup to generate code coverage report only for `src` folder (see #4).
 
@@ -28,7 +33,11 @@
 
 - Migrate to Headless Chrome and improve performance of Karma (see #16).
 
+- Prepare package for stable version (see #17).
+
 - Update dev dependencies to latest version.
+
+## Robotlegs-CreateJS 0.2.0
 
 ### [v0.2.0](https://github.com/RobotlegsJS/RobotlegsJS-CreateJS/releases/tag/0.2.0) - 2018-08-08
 
