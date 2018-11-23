@@ -1,8 +1,11 @@
-# RobotlegsJS Pixi SignalMediator Changelog:
+# RobotlegsJS SignalCommandMap Changelog
 
-## RobotlegsJS-SignalCommandMap 1.0.0
+All notable changes to this project will be documented in this file.
 
-### v1.0.0 - Planned stable version
+The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
+and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+
+## Suggestions or improvements for further versions
 
 - [ ] Use [**Function Types**](https://www.typescriptlang.org/docs/handbook/functions.html) for handlers and callbacks instead of generic **Function** type.
 
@@ -14,21 +17,29 @@
 
 - [x] Improve Code Coverage to reach 100%.
 
-## RobotlegsJS-SignalCommandMap 0.2.0
+## [Unreleased]
 
-### v0.2.1
+### v1.0.0
+
+#### Changed
 
 - Update `karma` setup to generate code coverage report only for `src` folder (see #69).
 
-- Migrate to Headless Chrome and improve performance of Karma (see #75).
+- Migrate to Headless Chrome and improve performance of `karma` (see #75).
+
+- Prepare package for stable version (see #76).
 
 - Update dev dependencies to latest version.
 
+## RobotlegsJS-SignalCommandMap 0.2.0
+
 ### [v0.2.0](https://github.com/RobotlegsJS/RobotlegsJS-SignalCommandMap/releases/tag/0.2.0) - 2018-08-02
 
-- Update @robotlegsjs/core to version 0.2.0 (see #67).
+#### Changed
 
-- Update @robotlegsjs/signals to version 0.2.0 (see #66).
+- Update `@robotlegsjs/core` to version `0.2.0` (see #67).
+
+- Update `@robotlegsjs/signals` to version `0.2.0` (see #66).
 
 - Update TypeScript Compiler Options (see #55, $64).
 
@@ -52,9 +63,7 @@
 
 ### [v0.1.0](https://github.com/RobotlegsJS/RobotlegsJS-SignalCommandMap/releases/tag/0.1.0) - 2017-11-16
 
-- Update @robotlegsjs/signals to version 0.0.12 (see #26).
-
-- Update @robotlegsjs/core to version 0.1.1 (see #24).
+#### Added
 
 - Add Changelog (see #27).
 
@@ -64,6 +73,12 @@
 
 - Add Pull Request Template (see #30).
 
+#### Changed
+
+- Update `@robotlegsjs/signals` to version `0.0.12` (see #26).
+
+- Update `@robotlegsjs/core` to version `0.1.1` (see #24).
+
 - Improve Code Coverage and Fix Bugs (see #31).
 
 - Update dev dependencies to latest version.
@@ -72,9 +87,11 @@
 
 ### [v0.0.5](https://github.com/RobotlegsJS/RobotlegsJS-SignalCommandMap/releases/tag/0.0.5) - 2017-09-26
 
-- Update @robotlegsjs/signals to version 0.0.11 (see #17).
+#### Changed
 
-- Update @robotlegsjs/core to version 0.0.6 (see #18).
+- Update `@robotlegsjs/signals` to version `0.0.11` (see #17).
+
+- Update `@robotlegsjs/core` to version `0.0.6` (see #18).
 
 - Adapt to NPM [v5.0.0](http://blog.npmjs.org/post/161081169345/v500) (see #15).
 
@@ -82,11 +99,7 @@
 
 ### [v0.0.4](https://github.com/RobotlegsJS/RobotlegsJS-SignalCommandMap/releases/tag/0.0.4) - 2017-09-15
 
-- Update @robotlegsjs/signals to version 0.0.10 (see #12).
-
-- Update @robotlegsjs/core to version 0.0.5 (see #11).
-
-- Update TSLint rules (see #13).
+#### Added
 
 - Add support to [Prettier](https://prettier.io) code formatter (see #13).
 
@@ -94,23 +107,37 @@
 
 - Add support to [Istanbul](https://istanbul.js.org) test coverage tool (see #13).
 
+#### Changed
+
+- Update `@robotlegsjs/signals` to version `0.0.10` (see #12).
+
+- Update `@robotlegsjs/core` to version `0.0.5` (see #11).
+
+- Update TSLint rules (see #13).
+
 - Update dev dependencies to latest version.
 
 ### [v0.0.3](https://github.com/RobotlegsJS/RobotlegsJS-SignalCommandMap/releases/tag/0.0.3) - 2017-08-30
 
-- Update @robotlegsjs/signals to version 0.0.7 (see #8).
+#### Changed
 
-- Update @robotlegsjs/core to version 0.0.4 (see #9).
+- Update `@robotlegsjs/signals` to version `0.0.7` (see #8).
+
+- Update `@robotlegsjs/core` to version `0.0.4` (see #9).
 
 - Update dev dependencies to latest version.
 
 ### [v0.0.2](https://github.com/RobotlegsJS/RobotlegsJS-SignalCommandMap/releases/tag/0.0.2) - 2017-08-11
 
-- Update @robotlegsjs/signals to version 0.0.5.
-
-- Update @robotlegsjs/core to version 0.0.3.
+#### Added
 
 - Add contributing guidelines.
+
+#### Changed
+
+- Update `@robotlegsjs/signals` to version `0.0.5`.
+
+- Update `@robotlegsjs/core` to version `0.0.3`.
 
 - Update dev dependencies to latest version.
 
