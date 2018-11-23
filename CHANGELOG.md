@@ -27,6 +27,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Migrate to Headless Chrome and improve performance of `karma` (see #65).
 
+- Prepare package for stable version (see #66).
+
 - Update dev dependencies to latest version.
 
 ## RobotlegsJS-Pixi-SignalMediator 0.2.0
