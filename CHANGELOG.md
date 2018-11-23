@@ -26,6 +26,8 @@
 
 - Improve webpack configuration used to run example project. The `npm start` script will generate hashed files (to avoid browser cache) and open the broswer automatically (see #5).
 
+- Migrate to Headless Chrome and improve performance of Karma (see #16).
+
 - Update dev dependencies to latest version.
 
 ### [v0.2.0](https://github.com/RobotlegsJS/RobotlegsJS-CreateJS/releases/tag/0.2.0) - 2018-08-08
