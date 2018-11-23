@@ -33,6 +33,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Migrate to Headless Chrome and improve performance of Karma (see #16).
 
+- Prepare package for stable version (see #17).
+
 - Update dev dependencies to latest version.
 
 ## Robotlegs-CreateJS 0.2.0
