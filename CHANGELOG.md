@@ -13,7 +13,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
   - [x] **printWidth** should be around **140** characters per line.
 
-  - [ ] Find a way to keep a new line between **@inject** anotation and property declarations.
+  - [x] Find a way to keep a new line between **@inject** anotation and property declarations.
 
 ## [Unreleased]
 
