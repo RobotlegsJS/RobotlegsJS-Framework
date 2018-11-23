@@ -15,7 +15,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
   - [x] Find a way to keep a new line between **@inject** anotation and property declarations.
 
-- [ ] Improve Code Coverage to reach 100%.
+- [x] Improve Code Coverage to reach 100%.
 
 ## [Unreleased]
 
