@@ -78,7 +78,7 @@
     "@types/bluebird": "^3.5.24",
     "@types/chai": "^4.1.7",
     "@types/mocha": "^5.2.5",
-    "@types/sinon": "^5.0.5",
+    "@types/sinon": "^5.0.7",
     "@types/webpack-env": "^1.13.6",
     "bluebird": "^3.5.3",
     "browserify-versionify": "^1.0.6",
@@ -104,7 +104,7 @@
     "mocha": "^5.2.0",
     "nyc": "^13.1.0",
     "prettier": "^1.15.2",
-    "publish-please": "^5.2.0",
+    "publish-please": "^5.3.0",
     "puppeteer": "^1.10.0",
     "reflect-metadata": "^0.1.12",
     "remap-istanbul": "^0.12.0",
@@ -117,7 +117,8 @@
     "tslint": "^5.11.0",
     "tslint-config-prettier": "^1.16.0",
     "typescript": "^3.1.6",
-    "webpack": "^4.25.1",
+    "uglifyjs-webpack-plugin": "^2.0.1",
+    "webpack": "^4.26.0",
     "webpack-cli": "^3.1.2",
     "webpack-dev-server": "^3.1.10"
   }
