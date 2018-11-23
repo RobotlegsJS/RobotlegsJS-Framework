@@ -20,6 +20,8 @@
 
 - Update `karma` setup to generate code coverage report only for `src` folder (see #69).
 
+- Migrate to Headless Chrome and improve performance of Karma (see #75).
+
 - Update dev dependencies to latest version.
 
 ### [v0.2.0](https://github.com/RobotlegsJS/RobotlegsJS-SignalCommandMap/releases/tag/0.2.0) - 2018-08-02
