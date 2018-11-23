@@ -1,5 +1,8 @@
+const puppeteer = require('puppeteer');
+
 process.env.TEST = true;
 process.env.NODE_ENV = "test";
+process.env.CHROME_BIN = puppeteer.executablePath();
 
 const webpackConfig = require("./webpack.config.js")({ production: false, karma: true });
 
@@ -18,12 +21,12 @@ module.exports = config => {
     files: [
       { pattern: "node_modules/reflect-metadata/Reflect.js", include: true },
       { pattern: "node_modules/bluebird/js/browser/bluebird.js", include: true },
-      { pattern: "./test/**/**/**.test.ts", include: true },
+      { pattern: "./test/index.ts", include: true },
       { pattern: '**/*.map', served: true, included: false, watched: true }
     ],
     preprocessors: {
-      "./**/**/**/**.ts": ["sourcemap"],
-      "./test/**/**/**.test.ts": ["webpack"]
+      "./test/index.ts": ["webpack"],
+      "./**/**/**/**.ts": ["sourcemap"]
     },
     webpack: webpackConfig,
     webpackMiddleware: {
@@ -40,6 +43,9 @@ module.exports = config => {
       "karma-es6-shim",
       "karma-coverage-istanbul-reporter"
     ],
+    mime: {
+      "text/x-typescript": ["ts","tsx"]
+    },
     reporters: (
       config.singleRun ?
         ["dots", "mocha", "coverage-istanbul"] :
@@ -64,11 +70,11 @@ module.exports = config => {
   };
 
   if (process.env.TRAVIS) {
-    configuration.browsers.push("PhantomJS");
-    configuration.plugins.push("karma-phantomjs-launcher");
+    configuration.browsers.push("ChromeHeadless");
+    configuration.plugins.push("karma-chrome-launcher");
   } else {
-    configuration.browsers.push("PhantomJS");
-    configuration.plugins.push("karma-phantomjs-launcher");
+    configuration.browsers.push("ChromeHeadless");
+    configuration.plugins.push("karma-chrome-launcher");
   }
 
   config.set(configuration);
