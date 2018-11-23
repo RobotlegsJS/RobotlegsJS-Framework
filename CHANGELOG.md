@@ -1,8 +1,11 @@
-# RobotlegsJS Pixi SignalMediator Changelog:
+# RobotlegsJS Pixi SignalMediator Changelog
 
-## RobotlegsJS-Pixi-SignalMediator 1.0.0
+All notable changes to this project will be documented in this file.
 
-### v1.0.0 - Planned stable version
+The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
+and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+
+## Suggestions or improvements for further versions
 
 - [ ] Use [**Function Types**](https://www.typescriptlang.org/docs/handbook/functions.html) for handlers and callbacks instead of generic **Function** type.
 
@@ -10,13 +13,15 @@
 
   - [x] **printWidth** should be around **140** characters per line.
 
-  - [ ] Find a way to keep a new line between **@inject** anotation and property declarations.
+  - [x] Find a way to keep a new line between **@inject** anotation and property declarations.
 
 - [ ] Improve Code Coverage to reach 100%.
 
-## RobotlegsJS-Pixi-SignalMediator 0.2.0
+## [Unreleased]
 
-### v0.2.1
+### v1.0.0
+
+#### Changed
 
 - Update `karma` setup to generate code coverage report only for `src` folder (see #57).
 
@@ -24,19 +29,17 @@
 
 - Update dev dependencies to latest version.
 
+## RobotlegsJS-Pixi-SignalMediator 0.2.0
+
 ### [v0.2.0](https://github.com/RobotlegsJS/RobotlegsJS-Pixi-SignalMediator/releases/tag/0.2.0) - 2018-08-03
 
-Major Breaking Changes:
----
+#### Changed
 
-- Update @robotlegsjs/pixi to version 0.2.0 (see #56).
+- Update `@robotlegsjs/pixi` to version `0.2.0` (see #56).
 
-- Update @robotlegsjs/signals to version 0.2.0 (see #55).
+- Update `@robotlegsjs/signals` to version `0.2.0` (see #55).
 
 - Move `pixi.js` and `eventemitter3` libraries to **peerDependencies** (see #56).
-
-Features Or Improvements:
----
 
 - Update Prettier rules (see #46).
 
@@ -60,23 +63,27 @@ Features Or Improvements:
 
 ### [v0.1.2](https://github.com/RobotlegsJS/RobotlegsJS-Pixi-SignalMediator/releases/tag/0.1.2) - 2017-11-23
 
-- Update @robotlegsjs/pixi to version 0.1.2 (see #25).
+#### Added
 
 - Add instructions about how to install and how to use the library (see #25).
+
+#### Changed
+
+- Update `@robotlegsjs/pixi` to version `0.1.2` (see #25).
 
 - Update dev dependencies to latest version.
 
 ### [v0.1.1](https://github.com/RobotlegsJS/RobotlegsJS-Pixi-SignalMediator/releases/tag/0.1.1) - 2017-11-20
 
-- Update @robotlegsjs/pixi to version 0.1.1 (see #24).
+#### Changed
+
+- Update `@robotlegsjs/pixi` to version `0.1.1` (see #24).
 
 - Update dev dependencies to latest version.
 
 ### [v0.1.0](https://github.com/RobotlegsJS/RobotlegsJS-Pixi-SignalMediator/releases/tag/0.1.0) - 2017-11-15
 
-- Update @robotlegsjs/pixi to version 0.1.0 (see #16).
-
-- Update @robotlegsjs/signals to version 0.0.12 (see #18).
+#### Added
 
 - Add Changelog (see #19).
 
@@ -86,6 +93,12 @@ Features Or Improvements:
 
 - Add Pull Request Template (see #22).
 
+#### Changed
+
+- Update `@robotlegsjs/pixi` to version `0.1.0` (see #16).
+
+- Update `@robotlegsjs/signals` to version `0.0.12` (see #18).
+
 - Use Map object properly (see #23).
 
 - Update dev dependencies to latest version.
@@ -94,27 +107,35 @@ Features Or Improvements:
 
 ### [v0.0.4](https://github.com/RobotlegsJS/RobotlegsJS-Pixi-SignalMediator/releases/tag/0.0.4) - 2017-10-18
 
-- Update @robotlegsjs/pixi to version 0.0.6 (see #13).
+#### Changed
 
-- Remove direct dependency of @robotlegsjs/core, since @robotlegsjs/pixi already have it as a dependency (see #13).
+- Update `@robotlegsjs/pixi` to version `0.0.6` (see #13).
 
 - Update dev dependencies to latest version.
 
+#### Removed
+
+- Remove direct dependency of `@robotlegsjs/core`, since `@robotlegsjs/pixi` already have it as a dependency (see #13).
+
 ### [v0.0.3](https://github.com/RobotlegsJS/RobotlegsJS-Pixi-SignalMediator/releases/tag/0.0.3) - 2017-10-11
 
-- Update @robotlegsjs/pixi to version 0.0.5 (see #11).
+#### Changed
+
+- Update `@robotlegsjs/pixi` to version `0.0.5` (see #11).
 
 - Update dev dependencies to latest version.
 
 ### [v0.0.2](https://github.com/RobotlegsJS/RobotlegsJS-Pixi-SignalMediator/releases/tag/0.0.2) - 2017-09-26
 
+#### Changed
+
 - Adapt to NPM [v5.0.0](http://blog.npmjs.org/post/161081169345/v500) (see #1).
 
-- Update @robotlegsjs/signals to version 0.0.11 (see #3).
+- Update `@robotlegsjs/signals` to version `0.0.11` (see #3).
 
-- Update @robotlegsjs/core to version 0.0.6 (see #4).
+- Update `@robotlegsjs/core` to version `0.0.6` (see #4).
 
-- Update @robotlegsjs/pixi to version 0.0.4 (see #5).
+- Update `@robotlegsjs/pixi` to version `0.0.4` (see #5).
 
 - Update dev dependencies to latest version.
 
