@@ -1,8 +1,11 @@
-# RobotlegsJS Macrobot Changelog:
+# RobotlegsJS Macrobot Changelog
 
-## RobotlegsJS-Macrobot 1.0.0
+All notable changes to this project will be documented in this file.
 
-### v1.0.0 - Planned stable version
+The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
+and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+
+## Suggestions or improvements for further versions
 
 - [ ] Use [**Function Types**](https://www.typescriptlang.org/docs/handbook/functions.html) for handlers and callbacks instead of generic **Function** type.
 
@@ -12,33 +15,45 @@
 
   - [x] Find a way to keep a new line between **@inject** anotation and property declarations.
 
-- [ ] Improve Code Coverage to reach 100%.
+- [x] Improve Code Coverage to reach 100%.
 
-## RobotlegsJS-Macrobot 0.2.0
+## [Unreleased]
 
-### v0.2.2
+### v1.0.0
+
+#### Changed
+
+- Use `karma-sinon-chai` dependency (see #76).
+
+- Migrate to Headless Chrome and improve performance of `karma` (see #77).
+
+- Update dev dependencies to latest version.
+
+#### Fixed
 
 - Map payloads into the context of nested macro commands (see #74 and #75).
 
-- Use karma-sinon-chai dependency (see #76).
-
-- Migrate to Headless Chrome and improve performance of Karma (see #77).
-
-- Update dev dependencies to latest version.
+## RobotlegsJS-Macrobot 0.2.0
 
 ### [v0.2.1](https://github.com/RobotlegsJS/RobotlegsJS-Macrobot/releases/tag/0.2.1) - 2018-09-16
 
-- Update @robotlegsjs/core to version 0.2.1 (see #67).
+#### Changed
+
+- Update `@robotlegsjs/core` to version `0.2.1` (see #67).
 
 - Update `karma` setup to generate code coverage report only for `src` folder (see #65).
 
-- Map payloads into the context of macro commands (see #49 and #68).
-
 - Update dev dependencies to latest version.
+
+#### Fixed
+
+- Map payloads into the context of macro commands (see #49 and #68).
 
 ### [v0.2.0](https://github.com/RobotlegsJS/RobotlegsJS-Macrobot/releases/tag/0.2.0) - 2018-08-02
 
-- Update @robotlegsjs/core to version 0.2.0 (see #63).
+#### Changed
+
+- Update `@robotlegsjs/core` to version `0.2.0` (see #63).
 
 - Enforce TSLint rules (see #51).
 
@@ -62,7 +77,7 @@
 
 ### [v0.1.0](https://github.com/RobotlegsJS/RobotlegsJS-Macrobot/releases/tag/0.1.0) - 2017-11-19
 
-- Update @robotlegsjs/core to version 0.1.1 (see #21).
+#### Added
 
 - Add Changelog (see #23).
 
@@ -71,6 +86,10 @@
 - Add Issue Template (see #25).
 
 - Add Pull Request Template (see #26).
+
+#### Changed
+
+- Update `@robotlegsjs/core` to version `0.1.1` (see #21).
 
 - Update README (see #27).
 
@@ -82,7 +101,9 @@
 
 ### [v0.0.5](https://github.com/RobotlegsJS/RobotlegsJS-Macrobot/releases/tag/0.0.5) - 2017-09-26
 
-- Update @robotlegsjs/core to version 0.0.6 (see #13).
+#### Changed
+
+- Update `@robotlegsjs/core` to version `0.0.6` (see #13).
 
 - Adapt to NPM [v5.0.0](http://blog.npmjs.org/post/161081169345/v500) (see #11).
 
@@ -90,9 +111,7 @@
 
 ### [v0.0.4](https://github.com/RobotlegsJS/RobotlegsJS-Macrobot/releases/tag/0.0.4) - 2017-09-15
 
-- Update @robotlegsjs/core to version 0.0.5 (see #5).
-
-- Update TSLint rules (see #7).
+#### Added
 
 - Add support to [Prettier](https://prettier.io) code formatter (see #8).
 
@@ -100,19 +119,31 @@
 
 - Add support to [Istanbul](https://istanbul.js.org) test coverage tool (see #10).
 
+#### Changed
+
+- Update `@robotlegsjs/core` to version `0.0.5` (see #5).
+
+- Update TSLint rules (see #7).
+
 - Update dev dependencies to latest version.
 
 ### [v0.0.3](https://github.com/RobotlegsJS/RobotlegsJS-Macrobot/releases/tag/0.0.3) - 2017-08-30
 
-- Update @robotlegsjs/core to version 0.0.4 (see #4).
+#### Changed
+
+- Update `@robotlegsjs/core` to version `0.0.4` (see #4).
 
 - Update dev dependencies to latest version.
 
 ### [v0.0.2](https://github.com/RobotlegsJS/RobotlegsJS-Macrobot/releases/tag/0.0.2) - 2017-08-11
 
-- Update @robotlegsjs/core to version 0.0.3.
+#### Added
 
 - Add contributing guidelines.
+
+#### Changed
+
+- Update `@robotlegsjs/core` to version `0.0.3`.
 
 - Update dev dependencies to latest version.
 
