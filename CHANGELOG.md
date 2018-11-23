@@ -18,7 +18,7 @@
 
 - Update `karma` setup to generate code coverage report only for `src` folder (see #57).
 
-- Migrate to Headless Chrome and improve performance of Karma (see #64).
+- Migrate to Headless Chrome and improve performance of Karma (see #65).
 
 - Update dev dependencies to latest version.
 
