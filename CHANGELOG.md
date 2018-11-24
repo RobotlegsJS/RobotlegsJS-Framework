@@ -22,6 +22,8 @@
 
 ### v0.2.1
 
+- Update `openfl` to version `8.6.4` (see #22).
+
 - Update dev dependencies to latest version.
 
 ### [v0.2.0](https://github.com/RobotlegsJS/RobotlegsJS-OpenFL/releases/tag/0.2.0) - 2018-08-18
