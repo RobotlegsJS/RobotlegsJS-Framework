@@ -4977,7 +4977,7 @@ open@0.0.5:
   resolved "https://registry.npmjs.org/open/-/open-0.0.5.tgz#42c3e18ec95466b6bf0dc42f3a2945c3f0cad8fc"
   integrity sha1-QsPhjslUZra/DcQvOilFw/DK2Pw=
 
-openfl@^8.5.1:
+openfl@^8.6.4:
   version "8.6.4"
   resolved "https://registry.npmjs.org/openfl/-/openfl-8.6.4.tgz#793e670066579686e968f787ad49bacd97004999"
   integrity sha512-fqODrJ0guaB54l31hrVWWtSr79eOAJOxy24u+C3u55dI2rnegVY1Df3fMdlnH2Ux+eV0Xl3JxmPxytt52J1b+g==

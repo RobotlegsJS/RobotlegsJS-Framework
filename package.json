@@ -88,7 +88,7 @@
     "karma-webpack": "^3.0.5",
     "mocha": "^5.2.0",
     "open-browser-webpack-plugin": "^0.0.5",
-    "openfl": "^8.5.1",
+    "openfl": "^8.6.4",
     "prettier": "^1.15.2",
     "publish-please": "^5.4.0",
     "reflect-metadata": "^0.1.12",
