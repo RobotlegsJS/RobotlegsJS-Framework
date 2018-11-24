@@ -6,6 +6,8 @@
 
 - Update `karma` setup to generate code coverage report only for `src` folder (see #5).
 
+- Migrate to Headless Chrome and improve performance of `karma` (see #13).
+
 - Update dev dependencies to latest version.
 
 ### [v0.2.1](https://github.com/RobotlegsJS/RobotlegsJS-Phaser-CE/releases/tag/0.2.1) - 2018-08-03
