@@ -1,8 +1,11 @@
-# RobotlegsJS OpenFL Changelog:
+# RobotlegsJS OpenFL Changelog
 
-## Robotlegs-OpenFL 1.0.0
+All notable changes to this project will be documented in this file.
 
-### v1.0.0 - Planned stable version
+The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
+and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+
+## Suggestions or improvements for further versions
 
 - [x] Add instructions of how to install the **@robotlegsjs/openfl** package into **README.md**.
 
@@ -18,15 +21,21 @@
 
 - [ ] Migrate [original documentation](https://github.com/robotlegs/robotlegs-framework/blob/master/src/readme.md) and adapt it to TypeScript and OpenFL.
 
-## Robotlegs-OpenFL 0.2.0
+## [Unreleased]
 
-### v0.2.1
+### v1.0.0
+
+#### Changed
 
 - Update `openfl` to version `8.6.4` (see #22).
 
 - Migrate to Headless Chrome and improve performance of `karma` (see #23).
 
+- Prepare package for stable version (see #24).
+
 - Update dev dependencies to latest version.
+
+## Robotlegs-OpenFL 0.2.0
 
 ### [v0.2.0](https://github.com/RobotlegsJS/RobotlegsJS-OpenFL/releases/tag/0.2.0) - 2018-08-18
 
