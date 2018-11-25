@@ -29,6 +29,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Prepare package for stable version (see #66).
 
+- Update GitHub Templates (see #68).
+
 - Update dev dependencies to latest version.
 
 ## RobotlegsJS-Pixi-SignalMediator 0.2.0
