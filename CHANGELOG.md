@@ -29,6 +29,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Update `openfl` to version `8.6.4` (see #22).
 
+- Update `@robotlegsjs/core` to version `1.0.0` (see #26).
+
 - Migrate to Headless Chrome and improve performance of `karma` (see #23).
 
 - Prepare package for stable version (see #24).
