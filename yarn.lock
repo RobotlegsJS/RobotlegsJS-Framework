@@ -3156,9 +3156,9 @@ invariant@^2.2.2:
     loose-envify "^1.0.0"
 
 inversify@^4.13.0:
-  version "4.14.0"
-  resolved "https://registry.npmjs.org/inversify/-/inversify-4.14.0.tgz#393c1f86ee92aef0592eb0e493623b9d88dfb376"
-  integrity sha512-DQLg2u2tWaiHo6V5lGr47a/M9YBX3g72c8Y58+JPH0Lx9fXugEsnXRc08mwsTvDg6gGWBKSkIgtBS/eJCQmDVg==
+  version "4.13.0"
+  resolved "https://registry.npmjs.org/inversify/-/inversify-4.13.0.tgz#0ab40570bfa4474b04d5b919bbab3a4f682a72f5"
+  integrity sha512-O5d8y7gKtyRwrvTLZzYET3kdFjqUy58sGpBYMARF13mzqDobpfBXVOPLH7HmnD2VR6Q+1HzZtslGvsdQfeb0SA==
 
 inversify@^5.0.1:
   version "5.0.1"
