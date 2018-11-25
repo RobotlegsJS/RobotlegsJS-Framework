@@ -5,7 +5,7 @@
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
   "scripts": {
-    "example": "webpack-dev-server --config ./webpack.config.example.js",
+    "start": "webpack-dev-server --config ./webpack.example.config.js",
     "test": "./node_modules/.bin/karma start --single-run",
     "test:tdd": "./node_modules/.bin/karma start",
     "mocha": "mocha test/**/*.test.ts --require ts-node/register",
@@ -95,6 +95,7 @@
     "karma-sourcemap-writer": "^0.1.2",
     "karma-webpack": "^3.0.5",
     "mocha": "^5.2.0",
+    "open-browser-webpack-plugin": "^0.0.5",
     "pixi.js": "^4.8.2",
     "prettier": "^1.15.2",
     "publish-please": "^5.4.0",
@@ -112,6 +113,7 @@
     "uglifyjs-webpack-plugin": "^2.0.1",
     "webpack": "^4.26.1",
     "webpack-cli": "^3.1.2",
-    "webpack-dev-server": "^3.1.10"
+    "webpack-dev-server": "^3.1.10",
+    "webpack-simple-progress-plugin": "^0.0.4"
   }
 }

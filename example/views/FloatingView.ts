@@ -29,7 +29,7 @@ export class FloatingView extends Container {
         });
         const titleText: Text = new Text(`Floating View ${index}`, style);
         titleText.anchor.set(0.5);
-        titleText.position.set(200, 185);
+        titleText.position.set(480, 185);
         this.addChild(titleText);
     }
     private createTexts(): void {
@@ -43,7 +43,7 @@ export class FloatingView extends Container {
         const text = "Add - A new FloatingView\nRemove - The current FloatingView\nRemove All - FloatingViews";
 
         const info: Text = new Text(text, style);
-        info.position.set(50, 250);
+        info.position.set(280 + 50, 250);
         this.addChild(info);
     }
     private createButtons(): void {
@@ -53,15 +53,15 @@ export class FloatingView extends Container {
         const posY = 420;
 
         this._addViewButton = new ColorButton("add", fontSize, bgWidth, bgHeight);
-        this._addViewButton.position.set(95, posY);
+        this._addViewButton.position.set(280 + 95, posY);
         this.addChild(this._addViewButton);
 
         this._closeButton = new ColorButton("remove", fontSize, bgWidth, bgHeight);
-        this._closeButton.position.set(200, posY);
+        this._closeButton.position.set(280 + 200, posY);
         this.addChild(this._closeButton);
 
         this._closeAllButton = new ColorButton("remove all", fontSize, bgWidth, bgHeight);
-        this._closeAllButton.position.set(305, posY);
+        this._closeAllButton.position.set(280 + 305, posY);
         this.addChild(this._closeAllButton);
     }
     private createBackground(): void {
@@ -70,13 +70,13 @@ export class FloatingView extends Container {
         const colorLight = 0x56768f;
 
         graphic.beginFill(colorDark, 0.8);
-        graphic.drawRect(0, 0, 400, 600);
+        graphic.drawRect(0, 0, 960, 600);
 
         graphic.beginFill(colorLight);
-        graphic.drawRect(40, 150, 320, 300);
+        graphic.drawRect(320, 150, 320, 300);
 
         graphic.beginFill(colorDark);
-        graphic.drawRoundedRect(50, 160, 300, 50, 10);
+        graphic.drawRoundedRect(280 + 50, 160, 300, 50, 10);
 
         this.addChild(graphic);
     }
