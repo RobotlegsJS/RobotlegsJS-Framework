@@ -24,11 +24,11 @@ export class AbstractView extends Container {
         const posY = 550;
 
         this._setViewButton = new ColorButton("View");
-        this._setViewButton.position.set(100, posY);
+        this._setViewButton.position.set(240, posY);
         this.addChild(this._setViewButton);
 
         this._addViewButton = new ColorButton("Floating\nView");
-        this._addViewButton.position.set(300, posY);
+        this._addViewButton.position.set(720, posY);
         this.addChild(this._addViewButton);
     }
     private createText(title: string): void {
@@ -41,22 +41,22 @@ export class AbstractView extends Container {
         });
         const titleText: Text = new Text(title, style);
         titleText.anchor.set(0.5);
-        titleText.position.set(200, 60);
+        titleText.position.set(480, 60);
         this.addChild(titleText);
     }
     private createImages(imgUrl: string): void {
         const logo: Sprite = PIXI.Sprite.fromImage(imgUrl);
         logo.anchor.set(0.5);
-        logo.position.set(200, 300);
+        logo.position.set(480, 300);
         this.addChild(logo);
     }
     private createBackground(lightColor: number, darkColor: number): void {
         const graphic: Graphics = new Graphics();
         graphic.beginFill(lightColor);
-        graphic.drawRect(0, 0, 400, 600);
+        graphic.drawRect(0, 0, 960, 600);
 
         graphic.beginFill(darkColor);
-        graphic.drawRoundedRect(10, 10, 380, 100, 10);
+        graphic.drawRoundedRect(10, 10, 940, 100, 10);
 
         this.addChild(graphic);
     }

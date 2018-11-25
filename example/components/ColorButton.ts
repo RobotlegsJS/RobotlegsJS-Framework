@@ -8,7 +8,7 @@
 import { Container, Graphics, Text, TextStyle } from "pixi.js";
 
 export class ColorButton extends Container {
-    constructor(text: string, fontSize: number = 28, bgWidth: number = 180, bgHeight: number = 90) {
+    constructor(text: string, fontSize: number = 28, bgWidth: number = 460, bgHeight: number = 90) {
         super();
 
         this.interactive = true;
