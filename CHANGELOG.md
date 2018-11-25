@@ -21,6 +21,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 #### Changed
 
+- Update `@robotlegsjs/pixi` to version `1.0.0` (see #69).
+
 - Update `karma` setup to generate code coverage report only for `src` folder (see #57).
 
 - Migrate to Headless Chrome and improve performance of Karma (see #65).
