@@ -35,6 +35,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Prepare package for stable version (see #95).
 
+- Update GitHub Templates (see #97).
+
 - Update dev dependencies to latest version.
 
 ## Signals 0.2.0

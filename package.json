@@ -63,6 +63,12 @@
     "url": "https://github.com/RobotlegsJS/SignalsJS/issues"
   },
   "homepage": "https://github.com/RobotlegsJS/SignalsJS#readme",
+  "files": [
+    "lib"
+  ],
+  "directories": {
+    "lib": "./lib"
+  },
   "dependencies": {
     "tslib": "^1.9.3"
   },
