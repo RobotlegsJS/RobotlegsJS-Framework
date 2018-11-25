@@ -29,6 +29,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Prepare package for stable version (see #11).
 
+- Update GitHub Templates (see #12).
+
 - Update dev dependencies to latest version.
 
 ## RobotlegsJS Phaser-CE SignalCommandMap 0.2.0
