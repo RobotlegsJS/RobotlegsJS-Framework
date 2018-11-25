@@ -33,6 +33,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Prepare package for stable version (see #24).
 
+- Update GitHub Templates (see #25).
+
 - Update dev dependencies to latest version.
 
 ## Robotlegs-OpenFL 0.2.0
