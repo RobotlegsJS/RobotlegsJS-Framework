@@ -35,6 +35,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Prepare package for stable version (see #17).
 
+- Update GitHub Templates (see #20).
+
 - Update dev dependencies to latest version.
 
 ## Robotlegs-CreateJS 0.2.0
