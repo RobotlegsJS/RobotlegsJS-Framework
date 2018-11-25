@@ -71,7 +71,7 @@
     "lib": "./lib"
   },
   "dependencies": {
-    "@robotlegsjs/core": "^0.2.1",
+    "@robotlegsjs/core": "^1.0.0",
     "@robotlegsjs/signals": "^1.0.0"
   },
   "devDependencies": {

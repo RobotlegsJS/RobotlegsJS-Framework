@@ -25,6 +25,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Update `@robotlegsjs/signals` to version `1.0.0` (see #79).
 
+- Update `@robotlegsjs/core` to version `1.0.0` (see #80).
+
 - Update `karma` setup to generate code coverage report only for `src` folder (see #69).
 
 - Migrate to Headless Chrome and improve performance of `karma` (see #75).
