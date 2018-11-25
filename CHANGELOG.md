@@ -25,6 +25,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Update `@robotlegsjs/core` to version `1.0.0` (see #81).
 
+- Update `@robotlegsjs/signalcommandmap` to version `1.0.0` (see #82).
+
 - Use `karma-sinon-chai` dependency (see #76).
 
 - Migrate to Headless Chrome and improve performance of `karma` (see #77).
