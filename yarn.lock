@@ -97,14 +97,6 @@
   dependencies:
     commander "^2.15.1"
 
-"@robotlegsjs/core@^0.2.0":
-  version "0.2.1"
-  resolved "https://registry.npmjs.org/@robotlegsjs/core/-/core-0.2.1.tgz#4a77f0b85e67343866c44772387617470b67f6c3"
-  integrity sha512-GookVVseOR1cuG3FimiBPuUQkt9pV8k0HWH7ZqgPwrh17/Yq2109Q4z9E8gVcQVgzs7RQiyafVCw5d84Ree1ew==
-  dependencies:
-    inversify "^4.13.0"
-    tslib "^1.9.3"
-
 "@robotlegsjs/core@^1.0.0":
   version "1.0.0"
   resolved "https://registry.npmjs.org/@robotlegsjs/core/-/core-1.0.0.tgz#7a187196765772830cb524f995b6eb1eb2c67f49"
@@ -113,18 +105,18 @@
     inversify "^5.0.1"
     tslib "^1.9.3"
 
-"@robotlegsjs/signalcommandmap@^0.2.0":
-  version "0.2.0"
-  resolved "https://registry.npmjs.org/@robotlegsjs/signalcommandmap/-/signalcommandmap-0.2.0.tgz#45a8a9cf81afa12bfad2287a664c8598fa09f94e"
-  integrity sha512-vVFNvsJsh5Kk8XFUQtpw0Lu7zMRrA+E/sCJlkmqOA0cBUik2oDCGYo0g/8bIy82Z8Vp3NeBQ/q8LFqMsDMsGfg==
+"@robotlegsjs/signalcommandmap@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.npmjs.org/@robotlegsjs/signalcommandmap/-/signalcommandmap-1.0.0.tgz#d706f9087bfb0a5f5d81340d4603f1d6b91cebd1"
+  integrity sha512-pOhsVX0TqrlWaKx/sxiN69L4Z1QXVUpwuqELMS4ciwYGGYqh5HLEgNhsEd9Hv3oQTBhBtgXOJ1KYdAlabU65Ug==
   dependencies:
-    "@robotlegsjs/core" "^0.2.0"
-    "@robotlegsjs/signals" "^0.2.0"
+    "@robotlegsjs/core" "^1.0.0"
+    "@robotlegsjs/signals" "^1.0.0"
 
-"@robotlegsjs/signals@^0.2.0":
-  version "0.2.0"
-  resolved "https://registry.npmjs.org/@robotlegsjs/signals/-/signals-0.2.0.tgz#a3f272ccd8bdb91771f3ac0fef9c997e2c0ebc8a"
-  integrity sha512-2Ok/C2wHmMiEPnE6FeAjG23TIyjTZXlMoDnNSLO5uM+nXS6nlx6sGF6AFMx123uVhBNet2pzLQUCnuH/qY988g==
+"@robotlegsjs/signals@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.npmjs.org/@robotlegsjs/signals/-/signals-1.0.0.tgz#d09cafb9cbe3012f6fc0ecfbed205962a6606e68"
+  integrity sha512-QORt8eMY69pyy4McsEa49Yl+WtLArk6BttGSOx3rfHRbdz10+v+w4qnxiapcDKV/jQZ5/pLWH9KAZ1gVralksw==
   dependencies:
     tslib "^1.9.3"
 
@@ -3154,11 +3146,6 @@ invariant@^2.2.2:
   integrity sha512-phJfQVBuaJM5raOpJjSfkiD6BpbCE4Ns//LaXl6wGYtUBY83nWS6Rf9tXm2e8VaK60JEjYldbPif/A2B1C2gNA==
   dependencies:
     loose-envify "^1.0.0"
-
-inversify@^4.13.0:
-  version "4.14.0"
-  resolved "https://registry.npmjs.org/inversify/-/inversify-4.14.0.tgz#393c1f86ee92aef0592eb0e493623b9d88dfb376"
-  integrity sha512-DQLg2u2tWaiHo6V5lGr47a/M9YBX3g72c8Y58+JPH0Lx9fXugEsnXRc08mwsTvDg6gGWBKSkIgtBS/eJCQmDVg==
 
 inversify@^5.0.1:
   version "5.0.1"
