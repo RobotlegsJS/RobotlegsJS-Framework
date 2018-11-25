@@ -72,7 +72,7 @@
   },
   "dependencies": {
     "@robotlegsjs/core": "^0.2.1",
-    "@robotlegsjs/signals": "^0.2.0"
+    "@robotlegsjs/signals": "^1.0.0"
   },
   "devDependencies": {
     "@types/bluebird": "^3.5.24",
