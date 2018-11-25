@@ -35,6 +35,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Update dev dependencies to latest version.
 
+#### Fixed
+
+- Load image on `README` using absolute path (see #71).
+
 ## RobotlegsJS-Pixi-Palidor 0.2.0
 
 ### [v0.2.0](https://github.com/RobotlegsJS/RobotlegsJS-Pixi-Palidor/releases/tag/0.2.0) - 2018-08-02
