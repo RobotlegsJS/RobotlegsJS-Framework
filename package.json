@@ -66,6 +66,12 @@
     "url": "https://github.com/RobotlegsJS/RobotlegsJS-Pixi-SignalMediator/issues"
   },
   "homepage": "https://github.com/RobotlegsJS/RobotlegsJS-Pixi-SignalMediator#readme",
+  "files": [
+    "lib"
+  ],
+  "directories": {
+    "lib": "./lib"
+  },
   "dependencies": {
     "@robotlegsjs/pixi": "^0.2.0",
     "@robotlegsjs/signals": "^0.2.0",
