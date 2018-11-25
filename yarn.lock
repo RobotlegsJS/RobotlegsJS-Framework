@@ -113,10 +113,10 @@
     "@robotlegsjs/core" "^0.2.0"
     tslib "^1.9.3"
 
-"@robotlegsjs/signals@^0.2.0":
-  version "0.2.0"
-  resolved "https://registry.npmjs.org/@robotlegsjs/signals/-/signals-0.2.0.tgz#a3f272ccd8bdb91771f3ac0fef9c997e2c0ebc8a"
-  integrity sha512-2Ok/C2wHmMiEPnE6FeAjG23TIyjTZXlMoDnNSLO5uM+nXS6nlx6sGF6AFMx123uVhBNet2pzLQUCnuH/qY988g==
+"@robotlegsjs/signals@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.npmjs.org/@robotlegsjs/signals/-/signals-1.0.0.tgz#d09cafb9cbe3012f6fc0ecfbed205962a6606e68"
+  integrity sha512-QORt8eMY69pyy4McsEa49Yl+WtLArk6BttGSOx3rfHRbdz10+v+w4qnxiapcDKV/jQZ5/pLWH9KAZ1gVralksw==
   dependencies:
     tslib "^1.9.3"
 
