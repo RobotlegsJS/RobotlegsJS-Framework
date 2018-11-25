@@ -46,6 +46,12 @@
     "url": "https://github.com/RobotlegsJS/RobotlegsJS-Phaser-CE-SignalCommandMap/issues"
   },
   "homepage": "https://github.com/RobotlegsJS/RobotlegsJS-Phaser-CE-SignalCommandMap#readme",
+  "files": [
+    "lib"
+  ],
+  "directories": {
+    "lib": "./lib"
+  },
   "dependencies": {
     "@robotlegsjs/core": "^0.2.1",
     "tslib": "^1.9.3"
