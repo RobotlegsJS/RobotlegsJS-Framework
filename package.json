@@ -22,6 +22,8 @@
     "compile:example": "tsc -p tsconfig.example.json -d --importHelpers",
     "dev": "webpack",
     "build": "webpack --env.production",
+    "build:example": "webpack --config ./webpack.example.config.js --env.production",
+    "deploy:example": "gh-pages-deploy -- 'update example build'",
     "prepare": "npm run clean-up && npm run compile:src",
     "prepublishOnly": "publish-please guard",
     "publish-please": "npm run tslint && npm run autoformat && npm run clean-up && npm run test && publish-please"
@@ -72,9 +74,11 @@
     "bluebird": "^3.5.3",
     "browserify-versionify": "^1.0.6",
     "chai": "^4.2.0",
+    "copy-webpack-plugin": "^4.6.0",
     "easeljs": "^1.0.2",
     "es6-map": "^0.1.5",
     "es6-symbol": "^3.1.1",
+    "gh-pages-deploy": "^0.5.0",
     "glslify": "^7.0.0",
     "html-webpack-plugin": "^3.2.0",
     "imports-loader": "^0.8.0",
@@ -112,5 +116,13 @@
     "webpack-concat-plugin": "^3.0.0",
     "webpack-dev-server": "^3.1.10",
     "webpack-simple-progress-plugin": "^0.0.4"
+  },
+  "gh-pages-deploy": {
+    "staticpath": "dist",
+    "prep": [
+      "build:example"
+    ],
+    "commit": "update example build",
+    "noprompt": false
   }
 }
