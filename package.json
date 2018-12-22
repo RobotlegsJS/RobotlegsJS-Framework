@@ -22,6 +22,8 @@
     "compile:example": "tsc -p tsconfig.example.json -d --importHelpers",
     "dev": "webpack",
     "build": "webpack --env.production",
+    "build:example": "webpack --config ./webpack.example.config.js --env.production",
+    "deploy:example": "./deploy-example.sh",
     "prepare": "npm run clean-up && npm run compile:src",
     "prepublishOnly": "publish-please guard",
     "publish-please": "npm run tslint && npm run autoformat && npm run clean-up && npm run test && publish-please"
@@ -72,6 +74,8 @@
     "bluebird": "^3.5.3",
     "browserify-versionify": "^1.0.6",
     "chai": "^4.2.0",
+    "clean-webpack-plugin": "^1.0.0",
+    "copy-webpack-plugin": "^4.6.0",
     "easeljs": "^1.0.2",
     "es6-map": "^0.1.5",
     "es6-symbol": "^3.1.1",

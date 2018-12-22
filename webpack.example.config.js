@@ -2,6 +2,8 @@ const webpack = require("webpack");
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const ConcatPlugin = require("webpack-concat-plugin");
+const CopyPlugin = require("copy-webpack-plugin");
+const CleanWebpackPlugin = require("clean-webpack-plugin");
 const OpenBrowserPlugin = require("open-browser-webpack-plugin");
 const SimpleProgressPlugin = require("webpack-simple-progress-plugin");
 
@@ -38,6 +40,8 @@ module.exports = options => {
     },
 
     plugins: [
+      new CleanWebpackPlugin([ "dist" ]),
+
       new HtmlWebpackPlugin({
         template: path.resolve("static/index.html"),
         inject: false
@@ -46,6 +50,8 @@ module.exports = options => {
       new ConcatPlugin(concatPluginConfigGenerator("createjs", [
         path.resolve(__dirname, "./node_modules/easeljs/lib/easeljs.js")
       ])),
+
+      new CopyPlugin([{ from: "static", to: "." }]),
 
       new SimpleProgressPlugin(),
 
