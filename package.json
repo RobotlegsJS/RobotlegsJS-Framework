@@ -122,6 +122,9 @@
     "prep": [
       "build:example"
     ],
+    "post": [
+      "clean-up"
+    ],
     "commit": "update example build",
     "noprompt": false
   }
