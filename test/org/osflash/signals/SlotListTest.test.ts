@@ -93,7 +93,7 @@ describe("SlotListTest", () => {
     });
 
     it("NIL_does_not_contain_anonymous_listener", () => {
-        assert.isFalse(SlotList.NIL.contains(new Function()));
+        assert.isFalse(SlotList.NIL.contains(() => {}));
     });
 
     it("find_in_empty_list_yields_null", () => {
@@ -211,10 +211,10 @@ describe("SlotListTest", () => {
     // Issue #56
     it("insertWithPriority_adds_4_slots_without_losing_any", () => {
         let s: PrioritySignal = new PrioritySignal();
-        let l1: Function = new Function();
-        let l2: Function = new Function();
-        let l3: Function = new Function();
-        let l4: Function = new Function();
+        let l1: Function = () => {};
+        let l2: Function = () => {};
+        let l3: Function = () => {};
+        let l4: Function = () => {};
         let slot1: ISlot = new Slot(l1, s);
         let slot2: ISlot = new Slot(l2, s, false, -1);
         let slot3: ISlot = new Slot(l3, s);

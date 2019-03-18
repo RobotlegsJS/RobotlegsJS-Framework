@@ -42,7 +42,7 @@ describe("SignalDispatchNoArgsTest", () => {
     });
 
     function addOnceInHandler(done: Function): void {
-        signal.addOnce(async.add(new Function(), 10, done));
+        signal.addOnce(async.add(() => {}, 10, done));
         signal.dispatch();
     }
 });
