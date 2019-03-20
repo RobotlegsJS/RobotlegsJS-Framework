@@ -105,6 +105,14 @@
     inversify "^5.0.1"
     tslib "^1.9.3"
 
+"@robotlegsjs/core@^1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@robotlegsjs/core/-/core-1.0.1.tgz#5bed68e1250ff133846ddf2d79e7e5a8ebe6b729"
+  integrity sha512-sj9pM6o91IeVE2oyb4mrhSPwxJHs4Wi+m22RAFgrYfA5drzCMyJ4L6awK99nxJNNGjF0tepKcRXQyALRO60VOA==
+  dependencies:
+    inversify "^5.0.1"
+    tslib "^1.9.3"
+
 "@robotlegsjs/signalcommandmap@^1.0.0":
   version "1.0.0"
   resolved "https://registry.npmjs.org/@robotlegsjs/signalcommandmap/-/signalcommandmap-1.0.0.tgz#d706f9087bfb0a5f5d81340d4603f1d6b91cebd1"
