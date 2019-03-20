@@ -21,7 +21,6 @@ import { GameConfig } from "./config/GameConfig";
 import { StateMediatorConfig } from "./config/StateMediatorConfig";
 
 export class Game extends Phaser.Game {
-
     private _context: IContext;
 
     constructor(
@@ -37,7 +36,8 @@ export class Game extends Phaser.Game {
         super(width, height, renderer, parent, state, transparent, antialias, physicsConfig);
 
         this._context = new Context();
-        this._context.install(MVCSBundle, PhaserBundle)
+        this._context
+            .install(MVCSBundle, PhaserBundle)
             .configure(new ContextStateManager(this.state))
             .configure(StateMediatorConfig)
             .configure(GameConfig)
