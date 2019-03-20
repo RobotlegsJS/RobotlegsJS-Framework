@@ -75,7 +75,7 @@
   },
   "peerDependencies": {
     "eventemitter3": "*",
-    "reflect-metadata": "^0.1.13"
+    "reflect-metadata": "^0.1.12"
   },
   "devDependencies": {
     "@types/bluebird": "^3.5.26",
