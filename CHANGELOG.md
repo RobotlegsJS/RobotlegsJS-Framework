@@ -47,6 +47,8 @@ Types of changes:
 
 #### Changed
 
+- Deploy example project (see #24).
+
 - Improve `prettier` rules and `autoformat` script (see #32).
 
 - Enable `"editor.formatOnSave"` rule for `VS Code` (see #32).
