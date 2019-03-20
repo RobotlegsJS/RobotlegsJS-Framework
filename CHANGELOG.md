@@ -31,6 +31,8 @@ Types of changes:
 
 #### Changed
 
+- Update [`@robotlegsjs/core`](https://github.com/RobotlegsJS/RobotlegsJS) to version `1.0.1` (see #23).
+
 - Improve `prettier` rules and `autoformat` script (see #22).
 
 - Enable `"editor.formatOnSave"` rule for `VS Code` (see #22).

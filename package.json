@@ -70,12 +70,12 @@
     "lib": "./lib"
   },
   "dependencies": {
-    "@robotlegsjs/core": "^1.0.0",
+    "@robotlegsjs/core": "^1.0.1",
     "tslib": "^1.9.3"
   },
   "peerDependencies": {
     "eventemitter3": "*",
-    "reflect-metadata": "^0.1.13"
+    "reflect-metadata": "^0.1.12"
   },
   "devDependencies": {
     "@types/bluebird": "^3.5.26",
@@ -114,7 +114,7 @@
     "reflect-metadata": "^0.1.13",
     "remap-istanbul": "^0.13.0",
     "rimraf": "^2.6.3",
-    "sinon": "^7.2.7",
+    "sinon": "^7.3.0",
     "sinon-chai": "^3.3.0",
     "source-map-support": "^0.5.11",
     "ts-loader": "^5.3.3",
