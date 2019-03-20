@@ -114,7 +114,7 @@
     "reflect-metadata": "^0.1.13",
     "remap-istanbul": "^0.13.0",
     "rimraf": "^2.6.3",
-    "sinon": "^7.2.7",
+    "sinon": "^7.3.0",
     "sinon-chai": "^3.3.0",
     "source-map-support": "^0.5.11",
     "ts-loader": "^5.3.3",
