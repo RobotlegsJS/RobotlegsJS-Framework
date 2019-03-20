@@ -76,11 +76,11 @@
     "lib": "./lib"
   },
   "dependencies": {
-    "@robotlegsjs/core": "^1.0.0",
+    "@robotlegsjs/core": "^1.0.1",
     "tslib": "^1.9.3"
   },
   "devDependencies": {
-    "@robotlegsjs/signalcommandmap": "^1.0.0",
+    "@robotlegsjs/signalcommandmap": "^1.0.1",
     "@types/bluebird": "^3.5.26",
     "@types/chai": "^4.1.7",
     "@types/mocha": "^5.2.6",
@@ -115,14 +115,14 @@
     "reflect-metadata": "^0.1.13",
     "remap-istanbul": "^0.13.0",
     "rimraf": "^2.6.3",
-    "sinon": "^7.2.7",
+    "sinon": "^7.3.0",
     "sinon-chai": "^3.3.0",
     "source-map-support": "^0.5.11",
     "ts-loader": "^5.3.3",
     "ts-node": "^8.0.3",
     "tslint": "^5.14.0",
     "tslint-config-prettier": "^1.18.0",
-    "typescript": "^3.3.3333",
+    "typescript": "^3.3.4000",
     "uglifyjs-webpack-plugin": "^2.1.2",
     "webpack": "^4.29.6",
     "webpack-cli": "^3.3.0",
