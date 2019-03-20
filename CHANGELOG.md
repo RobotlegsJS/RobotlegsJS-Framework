@@ -43,6 +43,10 @@ Types of changes:
 
 #### Changed
 
+- Update [`@robotlegsjs/signals`](https://github.com/RobotlegsJS/SignalsJS) to version `1.0.1` (see #87).
+
+- Update [`@robotlegsjs/core`](https://github.com/RobotlegsJS/RobotlegsJS) to version `1.0.1` (see #87).
+
 - Improve `prettier` rules and `autoformat` script (see #86).
 
 - Enable `"editor.formatOnSave"` rule for `VS Code` (see #86).
