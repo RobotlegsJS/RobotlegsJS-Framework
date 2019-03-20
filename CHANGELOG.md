@@ -45,6 +45,16 @@ Types of changes:
 - in case of vulnerabilities.
 -->
 
+#### Changed
+
+- Deploy example project (see #24).
+
+- Improve `prettier` rules and `autoformat` script (see #32).
+
+- Enable `"editor.formatOnSave"` rule for `VS Code` (see #32).
+
+- Update dev dependencies to latest version.
+
 ## Robotlegs-CreateJS 1.0.0
 
 ### [v1.0.0](https://github.com/RobotlegsJS/RobotlegsJS-CreateJS/releases/tag/1.0.0) - 2018-11-26
