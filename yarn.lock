@@ -97,7 +97,7 @@
   dependencies:
     commander "^2.15.1"
 
-"@robotlegsjs/core@^1.0.0", "@robotlegsjs/core@^1.0.1":
+"@robotlegsjs/core@^1.0.1":
   version "1.0.1"
   resolved "https://registry.npmjs.org/@robotlegsjs/core/-/core-1.0.1.tgz#5bed68e1250ff133846ddf2d79e7e5a8ebe6b729"
   integrity sha512-sj9pM6o91IeVE2oyb4mrhSPwxJHs4Wi+m22RAFgrYfA5drzCMyJ4L6awK99nxJNNGjF0tepKcRXQyALRO60VOA==
@@ -105,18 +105,18 @@
     inversify "^5.0.1"
     tslib "^1.9.3"
 
-"@robotlegsjs/signalcommandmap@^1.0.0":
-  version "1.0.0"
-  resolved "https://registry.npmjs.org/@robotlegsjs/signalcommandmap/-/signalcommandmap-1.0.0.tgz#d706f9087bfb0a5f5d81340d4603f1d6b91cebd1"
-  integrity sha512-pOhsVX0TqrlWaKx/sxiN69L4Z1QXVUpwuqELMS4ciwYGGYqh5HLEgNhsEd9Hv3oQTBhBtgXOJ1KYdAlabU65Ug==
+"@robotlegsjs/signalcommandmap@^1.0.1":
+  version "1.0.1"
+  resolved "https://registry.npmjs.org/@robotlegsjs/signalcommandmap/-/signalcommandmap-1.0.1.tgz#e961f8d74c827c24d58874827546f1088307a4dc"
+  integrity sha512-uKHMHExQARMkfUKImgAuTycljsuOwqhZ0mlSqNNz3z+kHmBi9JR1iI2D2HqYr2zhGQuwthW7WR/BE953IXESuQ==
   dependencies:
-    "@robotlegsjs/core" "^1.0.0"
-    "@robotlegsjs/signals" "^1.0.0"
+    "@robotlegsjs/core" "^1.0.1"
+    "@robotlegsjs/signals" "^1.0.1"
 
-"@robotlegsjs/signals@^1.0.0":
-  version "1.0.0"
-  resolved "https://registry.npmjs.org/@robotlegsjs/signals/-/signals-1.0.0.tgz#d09cafb9cbe3012f6fc0ecfbed205962a6606e68"
-  integrity sha512-QORt8eMY69pyy4McsEa49Yl+WtLArk6BttGSOx3rfHRbdz10+v+w4qnxiapcDKV/jQZ5/pLWH9KAZ1gVralksw==
+"@robotlegsjs/signals@^1.0.1":
+  version "1.0.1"
+  resolved "https://registry.npmjs.org/@robotlegsjs/signals/-/signals-1.0.1.tgz#70b7b1604677acd4cc8176cf8847c2b235187397"
+  integrity sha512-hvfPLOBWna1nrCpUeweO+N+LwIxxd2wo161LeFnfZCEUkyvPpZEDTEMO0gmj7FsKhbGYE6TKIBOMLoCQNnWpNA==
   dependencies:
     tslib "^1.9.3"
 
