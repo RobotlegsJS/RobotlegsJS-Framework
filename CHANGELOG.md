@@ -39,6 +39,14 @@ Types of changes:
 - in case of vulnerabilities.
 -->
 
+#### Changed
+
+- Improve `prettier` rules and `autoformat` script (see #79).
+
+- Enable `"editor.formatOnSave"` rule for `VS Code` (see #79).
+
+- Update dev dependencies to latest version.
+
 ## RobotlegsJS-Pixi-Palidor 1.0.0
 
 ### [v1.0.0](https://github.com/RobotlegsJS/RobotlegsJS-Pixi-Palidor/releases/tag/1.0.0) - 2018-11-25
