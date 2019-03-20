@@ -9,7 +9,7 @@
     "test": "./node_modules/.bin/karma start --single-run",
     "test:tdd": "./node_modules/.bin/karma start",
     "mocha": "mocha test/**/*.test.ts --require ts-node/register",
-    "autoformat": "prettier --config .prettierrc --write {example,src,test}/**/*.ts",
+    "autoformat": "prettier --config .prettierrc --write --list-different \"{src,static,test,example,definitions}{/**/,/}*.{html,css,js,json,ts}\"",
     "tslint-check:src": "tslint-config-prettier-check ./tslint.json",
     "tslint-check:test": "tslint-config-prettier-check ./tslint.test.json",
     "tslint-check:example": "tslint-config-prettier-check ./tslint.example.json",
