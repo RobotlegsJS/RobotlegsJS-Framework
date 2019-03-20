@@ -41,6 +41,10 @@ Types of changes:
 - in case of vulnerabilities.
 -->
 
+## RobotlegsJS-SignalCommandMap 1.0.0
+
+### [v1.0.1](https://github.com/RobotlegsJS/RobotlegsJS-SignalCommandMap/releases/tag/1.0.1) - 2019-03-20
+
 #### Changed
 
 - Update [`@robotlegsjs/signals`](https://github.com/RobotlegsJS/SignalsJS) to version `1.0.1` (see #87).
@@ -52,8 +56,6 @@ Types of changes:
 - Enable `"editor.formatOnSave"` rule for `VS Code` (see #86).
 
 - Update dev dependencies to latest version.
-
-## RobotlegsJS-SignalCommandMap 1.0.0
 
 ### [v1.0.0](https://github.com/RobotlegsJS/RobotlegsJS-SignalCommandMap/releases/tag/1.0.0) - 2018-11-25
 
