@@ -71,8 +71,8 @@
     "lib": "./lib"
   },
   "dependencies": {
-    "@robotlegsjs/core": "^1.0.0",
-    "@robotlegsjs/signals": "^1.0.0"
+    "@robotlegsjs/core": "^1.0.1",
+    "@robotlegsjs/signals": "^1.0.1"
   },
   "devDependencies": {
     "@types/bluebird": "^3.5.26",
