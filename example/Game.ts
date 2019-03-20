@@ -14,25 +14,25 @@ import { MyConfig } from "./config/MyConfig";
 import { RobotlegsView } from "./view/RobotlegsView";
 
 export class Game {
-
     private _canvas: HTMLCanvasElement;
     private _stage: createjs.Stage;
 
     private _context: Context;
 
-    constructor () {
+    constructor() {
         this.init();
     }
 
     private init(): void {
-        this._canvas = <HTMLCanvasElement>(document.getElementById("canvas"));
+        this._canvas = <HTMLCanvasElement>document.getElementById("canvas");
         this._stage = new createjs.Stage(this._canvas);
 
         this._context = new Context();
-        this._context.install(MVCSBundle, CreateJSBundle).
-            configure(new ContextView(this._stage)).
-            configure(MyConfig).
-            initialize();
+        this._context
+            .install(MVCSBundle, CreateJSBundle)
+            .configure(new ContextView(this._stage))
+            .configure(MyConfig)
+            .initialize();
 
         // enable touch interactions if supported on the current device:
         createjs.Touch.enable(this._stage);
