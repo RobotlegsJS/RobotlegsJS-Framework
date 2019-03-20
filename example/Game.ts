@@ -31,7 +31,7 @@ export class Game {
 
     private init(): void {
         // remove loader
-        this._loading = <HTMLDivElement>(document.getElementById("loading"));
+        this._loading = <HTMLDivElement>document.getElementById("loading");
         document.body.removeChild(this._loading);
 
         // create stage
@@ -39,13 +39,14 @@ export class Game {
 
         // create robotlegs context
         this._context = new Context();
-        this._context.install(MVCSBundle, OpenFLBundle).
-            configure(new ContextView(this._stage)).
-            configure(MyConfig).
-            initialize();
+        this._context
+            .install(MVCSBundle, OpenFLBundle)
+            .configure(new ContextView(this._stage))
+            .configure(MyConfig)
+            .initialize();
 
         // add stage to html body
-        this._canvas = <HTMLDivElement>(document.getElementById("canvas"));
+        this._canvas = <HTMLDivElement>document.getElementById("canvas");
         this._canvas.appendChild(this._stage.element);
     }
 }
