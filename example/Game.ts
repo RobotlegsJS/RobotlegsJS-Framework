@@ -13,16 +13,15 @@ import { PalidorBundle } from "../src/robotlegs/bender/bundles/palidor/PalidorBu
 import { ExampleConfig } from "./config/ExampleConfig";
 
 export class Game {
-
     private canvas: HTMLCanvasElement;
     private stage: Container;
     private renderer: CanvasRenderer | WebGLRenderer;
     private context: Context;
 
     constructor() {
-        this.canvas = <HTMLCanvasElement>(document.getElementById("canvas"));
+        this.canvas = <HTMLCanvasElement>document.getElementById("canvas");
         this.renderer = autoDetectRenderer(960, 600, {
-            backgroundColor: 0xFFFFFF,
+            backgroundColor: 0xffffff,
             view: this.canvas
         });
         this.stage = new Container();
