@@ -41,6 +41,14 @@ Types of changes:
 - in case of vulnerabilities.
 -->
 
+#### Fixed
+
+- Solve `npm readme` problem (see #94):
+
+> "Unable to find a readme for @robotlegsjs/macrobot@1.0.1".
+
+- Solve `npm audit` warning, ignoring warnings from `dev dependencies` (see #94).
+
 ## RobotlegsJS-Macrobot 1.0.0
 
 ### [v1.0.1](https://github.com/RobotlegsJS/RobotlegsJS-Macrobot/releases/tag/1.0.1) - 2019-03-21
