@@ -45,6 +45,8 @@ Types of changes:
 
 #### Changed
 
+- Update `instanbul` settings (see #116).
+
 - Migrate project to `travis-ci.com`.
 
 - Update `codebeat` Project UUID.
