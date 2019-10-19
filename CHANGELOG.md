@@ -45,6 +45,8 @@ Types of changes:
 
 #### Changed
 
+- Update `codebeat` Project UUID.
+
 - Update dev dependencies to latest version.
 
 ## Signals 1.0.0

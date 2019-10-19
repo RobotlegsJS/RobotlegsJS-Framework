@@ -4,7 +4,7 @@ SignalsJS
 [![GitHub license](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/RobotlegsJS/SignalsJS/blob/master/LICENSE)
 [![Gitter chat](https://badges.gitter.im/RobotlegsJS/RobotlegsJS.svg)](https://gitter.im/RobotlegsJS/RobotlegsJS)
 [![Build Status](https://travis-ci.org/RobotlegsJS/SignalsJS.svg?branch=master)](https://travis-ci.org/RobotlegsJS/SignalsJS)
-[![codebeat badge](https://codebeat.co/badges/6c8aeb0d-177d-4d51-a011-557d16d6d167)](https://codebeat.co/projects/github-com-robotlegsjs-signalsjs-master)
+[![codebeat badge](https://codebeat.co/badges/7d8bbfeb-08d4-4255-b282-56a7f59d4ab7)](https://codebeat.co/projects/github-com-robotlegsjs-signalsjs-master)
 [![Maintainability](https://api.codeclimate.com/v1/badges/37bea90e36d1402c9192/maintainability)](https://codeclimate.com/github/RobotlegsJS/SignalsJS/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/37bea90e36d1402c9192/test_coverage)](https://codeclimate.com/github/RobotlegsJS/SignalsJS/test_coverage)
 [![npm version](https://badge.fury.io/js/%40robotlegsjs%2Fsignals.svg)](https://badge.fury.io/js/%40robotlegsjs%2Fsignals)
