@@ -23,6 +23,7 @@
     "publish-please": "npm run tslint && npm run autoformat && npm run clean-up && npm run test && publish-please"
   },
   "nyc": {
+    "extends": "@istanbuljs/nyc-config-typescript",
     "include": [
       "src/**/*.ts"
     ],
@@ -39,6 +40,7 @@
       "text-summary",
       "lcov"
     ],
+    "check-coverage": true,
     "sourceMap": true,
     "instrument": true
   },
@@ -80,6 +82,7 @@
     "tslib": "^1.10.0"
   },
   "devDependencies": {
+    "@istanbuljs/nyc-config-typescript": "^0.1.3",
     "@robotlegsjs/signalcommandmap": "^1.0.1",
     "@types/bluebird": "^3.5.28",
     "@types/chai": "^4.2.3",
@@ -93,7 +96,6 @@
     "es6-symbol": "^3.1.2",
     "glslify": "^7.0.0",
     "imports-loader": "^0.8.0",
-    "istanbul": "^0.4.5",
     "istanbul-instrumenter-loader": "^3.0.1",
     "karma": "^4.4.1",
     "karma-chai-sinon": "^0.1.5",
