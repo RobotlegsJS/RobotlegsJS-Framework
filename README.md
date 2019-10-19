@@ -2,7 +2,7 @@
 
 [![GitHub license](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/RobotlegsJS/RobotlegsJS-Macrobot/blob/master/LICENSE)
 [![Gitter chat](https://badges.gitter.im/RobotlegsJS/RobotlegsJS.svg)](https://gitter.im/RobotlegsJS/RobotlegsJS)
-[![Build Status](https://travis-ci.org/RobotlegsJS/RobotlegsJS-Macrobot.svg?branch=master)](https://travis-ci.org/RobotlegsJS/RobotlegsJS-Macrobot)
+[![Build Status](https://travis-ci.com/RobotlegsJS/RobotlegsJS-Macrobot.svg?branch=master)](https://travis-ci.com/RobotlegsJS/RobotlegsJS-Macrobot)
 [![codebeat badge](https://codebeat.co/badges/b94a4b05-0483-4add-afad-0850a587872d)](https://codebeat.co/projects/github-com-robotlegsjs-robotlegsjs-macrobot-master)
 [![Maintainability](https://api.codeclimate.com/v1/badges/46031a693884b3c45506/maintainability)](https://codeclimate.com/github/RobotlegsJS/RobotlegsJS-Macrobot/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/46031a693884b3c45506/test_coverage)](https://codeclimate.com/github/RobotlegsJS/RobotlegsJS-Macrobot/test_coverage)
