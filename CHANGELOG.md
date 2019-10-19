@@ -29,13 +29,15 @@ Types of changes:
 - in case of vulnerabilities.
 -->
 
-## Robotlegs-EventEmitter3 1.0.0
-
-### [v1.0.2](https://github.com/RobotlegsJS/RobotlegsJS-EventEmitter3/releases/tag/1.0.2) - 2019-08-15
-
 #### Changed
 
+- Migrate project to `travis-ci.com`.
+
+- Update `codebeat` Project UUID.
+
 - Update dev dependencies to latest version.
+
+## Robotlegs-EventEmitter3 1.0.0
 
 ### [v1.0.1](https://github.com/RobotlegsJS/RobotlegsJS-EventEmitter3/releases/tag/1.0.1) - 2019-03-21
 
