@@ -40,7 +40,6 @@
       "text-summary",
       "lcov"
     ],
-    "all": true,
     "check-coverage": true,
     "sourceMap": true,
     "instrument": true
