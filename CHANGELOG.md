@@ -43,6 +43,8 @@ Types of changes:
 
 #### Changed
 
+- Migrate project to `travis-ci.com`.
+
 - Update `codebeat` Project UUID.
 
 - Improve `prettier` rules and `autoformat` script (see #77).
