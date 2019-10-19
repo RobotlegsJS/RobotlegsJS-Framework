@@ -43,6 +43,8 @@ Types of changes:
 
 #### Changed
 
+- Update `codebeat` Project UUID.
+
 - Update dev dependencies to latest version.
 
 ## RobotlegsJS-SignalCommandMap 1.0.0
