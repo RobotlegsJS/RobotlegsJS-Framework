@@ -31,6 +31,8 @@ Types of changes:
 
 #### Changed
 
+- Migrate project to `travis-ci.com`.
+
 - Update `codebeat` Project UUID.
 
 - Update dev dependencies to latest version.
