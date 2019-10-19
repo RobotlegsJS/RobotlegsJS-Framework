@@ -2,8 +2,8 @@
 
 [![GitHub license](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/RobotlegsJS/RobotlegsJS-Macrobot/blob/master/LICENSE)
 [![Gitter chat](https://badges.gitter.im/RobotlegsJS/RobotlegsJS.svg)](https://gitter.im/RobotlegsJS/RobotlegsJS)
-[![Build Status](https://travis-ci.org/RobotlegsJS/RobotlegsJS-Macrobot.svg?branch=master)](https://travis-ci.org/RobotlegsJS/RobotlegsJS-Macrobot)
-[![codebeat badge](https://codebeat.co/badges/1cda65cb-4c37-4f86-ab8e-c9538c9d258c)](https://codebeat.co/projects/github-com-robotlegsjs-robotlegsjs-macrobot-master)
+[![Build Status](https://travis-ci.com/RobotlegsJS/RobotlegsJS-Macrobot.svg?branch=master)](https://travis-ci.com/RobotlegsJS/RobotlegsJS-Macrobot)
+[![codebeat badge](https://codebeat.co/badges/b94a4b05-0483-4add-afad-0850a587872d)](https://codebeat.co/projects/github-com-robotlegsjs-robotlegsjs-macrobot-master)
 [![Maintainability](https://api.codeclimate.com/v1/badges/46031a693884b3c45506/maintainability)](https://codeclimate.com/github/RobotlegsJS/RobotlegsJS-Macrobot/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/46031a693884b3c45506/test_coverage)](https://codeclimate.com/github/RobotlegsJS/RobotlegsJS-Macrobot/test_coverage)
 [![npm version](https://badge.fury.io/js/%40robotlegsjs%2Fmacrobot.svg)](https://badge.fury.io/js/%40robotlegsjs%2Fmacrobot)
