@@ -31,6 +31,8 @@ Types of changes:
 
 #### Changed
 
+- Update `codebeat` Project UUID.
+
 - Update dev dependencies to latest version.
 
 ## Robotlegs-EventEmitter3 1.0.0
