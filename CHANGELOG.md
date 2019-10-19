@@ -45,6 +45,10 @@ Types of changes:
 
 - Enable `"editor.formatOnSave"` rule for `VS Code` (see #79).
 
+- Migrate project to `travis-ci.com`.
+
+- Update `codebeat` Project UUID.
+
 - Update dev dependencies to latest version.
 
 ## RobotlegsJS-Pixi-Palidor 1.0.0
