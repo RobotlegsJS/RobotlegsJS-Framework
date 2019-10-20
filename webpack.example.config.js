@@ -4,7 +4,6 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const ConcatPlugin = require("webpack-concat-plugin");
 const CopyPlugin = require("copy-webpack-plugin");
 const CleanWebpackPlugin = require("clean-webpack-plugin");
-const OpenBrowserPlugin = require("open-browser-webpack-plugin");
 const SimpleProgressPlugin = require("webpack-simple-progress-plugin");
 
 const concatPluginConfigGenerator = (name, files) => {
@@ -49,9 +48,7 @@ module.exports = options => {
 
       new CopyPlugin([{ from: "static", to: "." }]),
 
-      new SimpleProgressPlugin(),
-
-      new OpenBrowserPlugin({ url: "http://0.0.0.0:8080/webpack-dev-server/" })
+      new SimpleProgressPlugin()
     ],
 
     resolve: {
