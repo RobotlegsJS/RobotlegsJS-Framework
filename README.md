@@ -3,7 +3,7 @@ RobotlegsJS OpenFL Extension
 
 [![GitHub license](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/RobotlegsJS/RobotlegsJS-OpenFL/blob/master/LICENSE)
 [![Gitter chat](https://badges.gitter.im/RobotlegsJS/RobotlegsJS.svg)](https://gitter.im/RobotlegsJS/RobotlegsJS)
-[![Build Status](https://travis-ci.org/RobotlegsJS/RobotlegsJS-OpenFL.svg?branch=master)](https://travis-ci.org/RobotlegsJS/RobotlegsJS-OpenFL)
+[![Build Status](https://travis-ci.com/RobotlegsJS/RobotlegsJS-OpenFL.svg?branch=master)](https://travis-ci.com/RobotlegsJS/RobotlegsJS-OpenFL)
 [![codebeat badge](https://codebeat.co/badges/d1319321-9119-4546-9a91-2bb8c6969e39)](https://codebeat.co/projects/github-com-robotlegsjs-robotlegsjs-openfl-master)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/1b5077e213ada0659e63/test_coverage)](https://codeclimate.com/github/RobotlegsJS/RobotlegsJS-OpenFL/test_coverage)
 [![npm version](https://badge.fury.io/js/%40robotlegsjs%2Fopenfl.svg)](https://badge.fury.io/js/%40robotlegsjs%2Fopenfl)
