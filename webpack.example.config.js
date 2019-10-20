@@ -34,22 +34,18 @@ module.exports = options => {
     devtool: "source-map",
 
     module: {
-      rules: [
-        { test: /\.ts$/, loader: "ts-loader" }
-      ]
+      rules: [{ test: /\.ts$/, loader: "ts-loader" }]
     },
 
     plugins: [
-      new CleanWebpackPlugin([ "dist" ]),
+      new CleanWebpackPlugin(["dist"]),
 
       new HtmlWebpackPlugin({
         template: path.resolve("static/index.html"),
         inject: false
       }),
 
-      new ConcatPlugin(concatPluginConfigGenerator("createjs", [
-        path.resolve(__dirname, "./node_modules/easeljs/lib/easeljs.js")
-      ])),
+      new ConcatPlugin(concatPluginConfigGenerator("createjs", [path.resolve(__dirname, "./node_modules/easeljs/lib/easeljs.js")])),
 
       new CopyPlugin([{ from: "static", to: "." }]),
 
@@ -67,8 +63,7 @@ module.exports = options => {
       contentBase: path.join(__dirname, "static"),
       hot: true,
       disableHostCheck: true,
-      inline:false
+      inline: false
     }
-
-  }
+  };
 };
