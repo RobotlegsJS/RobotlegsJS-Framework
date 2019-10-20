@@ -4,7 +4,6 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const ConcatPlugin = require("webpack-concat-plugin");
 const CopyPlugin = require("copy-webpack-plugin");
 const CleanWebpackPlugin = require("clean-webpack-plugin");
-const OpenBrowserPlugin = require("open-browser-webpack-plugin");
 const SimpleProgressPlugin = require("webpack-simple-progress-plugin");
 
 const concatPluginConfigGenerator = (name, files) => {
@@ -34,28 +33,22 @@ module.exports = options => {
     devtool: "source-map",
 
     module: {
-      rules: [
-        { test: /\.ts$/, loader: "ts-loader" }
-      ]
+      rules: [{ test: /\.ts$/, loader: "ts-loader" }]
     },
 
     plugins: [
-      new CleanWebpackPlugin([ "dist" ]),
+      new CleanWebpackPlugin(["dist"]),
 
       new HtmlWebpackPlugin({
         template: path.resolve("static/index.html"),
         inject: false
       }),
 
-      new ConcatPlugin(concatPluginConfigGenerator("createjs", [
-        path.resolve(__dirname, "./node_modules/easeljs/lib/easeljs.js")
-      ])),
+      new ConcatPlugin(concatPluginConfigGenerator("createjs", [path.resolve(__dirname, "./node_modules/easeljs/lib/easeljs.js")])),
 
       new CopyPlugin([{ from: "static", to: "." }]),
 
-      new SimpleProgressPlugin(),
-
-      new OpenBrowserPlugin({ url: "http://0.0.0.0:8080/webpack-dev-server/" })
+      new SimpleProgressPlugin()
     ],
 
     resolve: {
@@ -67,8 +60,7 @@ module.exports = options => {
       contentBase: path.join(__dirname, "static"),
       hot: true,
       disableHostCheck: true,
-      inline:false
+      inline: false
     }
-
-  }
+  };
 };
