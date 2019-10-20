@@ -4617,10 +4617,10 @@ onetime@^2.0.0:
   dependencies:
     mimic-fn "^1.0.0"
 
-openfl@^8.9.5:
-  version "8.9.5"
-  resolved "https://registry.npmjs.org/openfl/-/openfl-8.9.5.tgz#6c7916f6ce0736185c5425aa336960617fcfe8ef"
-  integrity sha512-CcjvspntuhC7giTWhdGtL+FJkf7dyZdR6Sbv+XIr/rNb0fX3a172sCDQfbwLeEzS7s/uW5K/j2+/XKAMPekwTw==
+openfl@^8.8.0:
+  version "8.8.0"
+  resolved "https://registry.npmjs.org/openfl/-/openfl-8.8.0.tgz#317118b7465008f733374d6ebabbb56e43a7aba2"
+  integrity sha512-nS+5yfRfUxmb+nCGflje9AufH/SwZu7Q531lz3N8os6QIdYG3AwJAVPuBLrNTQFJ09xGuSpZ8qjGD4KvD2x/SQ==
   dependencies:
     file-saver "^1.3.8"
     howler "^2.0.15"
