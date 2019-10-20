@@ -47,6 +47,10 @@ Types of changes:
 
 - Enable `"editor.formatOnSave"` rule for `VS Code` (see #23).
 
+- Migrate project to `travis-ci.com`.
+
+- Update `codebeat` Project UUID.
+
 - Update dev dependencies to latest version.
 
 ## RobotlegsJS Phaser-CE 1.0.0
