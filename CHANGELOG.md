@@ -43,6 +43,8 @@ Types of changes:
 
 #### Changed
 
+- Update `@robotlegsjs/signals` to version `1.0.3` (see #101).
+
 - Migrate project to `travis-ci.com`.
 
 - Update `codebeat` Project UUID.
