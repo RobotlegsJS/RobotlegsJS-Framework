@@ -27,12 +27,10 @@ module.exports = options => {
       filename: "bundle.js"
     },
 
-    devtool: 'source-map',
+    devtool: "source-map",
 
     module: {
-      rules: [
-        { test: /\.ts$/, loader: "ts-loader" }
-      ]
+      rules: [{ test: /\.ts$/, loader: "ts-loader" }]
     },
 
     plugins: [
@@ -41,13 +39,11 @@ module.exports = options => {
         inject: false
       }),
 
-      new ConcatPlugin(concatPluginConfigGenerator("phaser", [
-        path.resolve(__dirname, "node_modules/phaser-ce/build/phaser.js")
-      ])),
+      new ConcatPlugin(concatPluginConfigGenerator("phaser", [path.resolve(__dirname, "node_modules/phaser-ce/build/phaser.js")]))
     ],
 
     resolve: {
-      extensions: ['.ts', '.js', '.json']
+      extensions: [".ts", ".js", ".json"]
     },
 
     devServer: {
@@ -55,8 +51,7 @@ module.exports = options => {
       contentBase: path.join(__dirname, "static"),
       hot: true,
       disableHostCheck: true,
-      inline:false
+      inline: false
     }
-
-  }
+  };
 };
