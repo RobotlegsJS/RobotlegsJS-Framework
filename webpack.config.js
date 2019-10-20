@@ -3,13 +3,12 @@ const path = require("path");
 const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
 
 module.exports = env => {
-
   if (!env) env = { production: false, karma: false };
 
   let mode = env.production ? "production" : "development";
   let tsconfig = !env.karma ? "tsconfig.json" : "tsconfig.test.json";
   let output = env.production ? "dist" : "dist-test";
-  let filename = env.karma ? "[name].[hash].js" : (env.production ? "robotlegs-openfl.min.js" : "robotlegs-openfl.js");
+  let filename = env.karma ? "[name].[hash].js" : env.production ? "robotlegs-openfl.min.js" : "robotlegs-openfl.js";
 
   return {
     mode: mode,
@@ -35,9 +34,7 @@ module.exports = env => {
           loader: "ts-loader?configFile=" + tsconfig
         },
         {
-          test: ((env.production) /* disable this loader for production builds */
-            ? /^$/
-            : /^.*(src).*\.ts$/),
+          test: env.production /* disable this loader for production builds */ ? /^$/ : /^.*(src).*\.ts$/,
           loader: "istanbul-instrumenter-loader",
           query: {
             embedSource: true
@@ -47,37 +44,30 @@ module.exports = env => {
       ]
     },
 
-    plugins: (
-      (env.production)
-        ? []
-        : [ new webpack.SourceMapDevToolPlugin({ test: /\.ts$/i }) ]
-    ),
+    plugins: env.production ? [] : [new webpack.SourceMapDevToolPlugin({ test: /\.ts$/i })],
 
-    optimization:
-      (env.production)
-        ? {
-            concatenateModules: true,
-            minimize: true,
-            minimizer: [
-              new UglifyJsPlugin({
-                cache: true,
-                parallel: 4,
-                uglifyOptions: {
-                  output: {
-                    comments: false
-                  }
+    optimization: env.production
+      ? {
+          concatenateModules: true,
+          minimize: true,
+          minimizer: [
+            new UglifyJsPlugin({
+              cache: true,
+              parallel: 4,
+              uglifyOptions: {
+                output: {
+                  comments: false
                 }
-              })
-            ]
-          }
-        : {}
-    ,
-
+              }
+            })
+          ]
+        }
+      : {},
     resolve: {
       alias: {
-        "openfl": path.resolve (__dirname, "node_modules/openfl/lib/openfl")
+        openfl: path.resolve(__dirname, "node_modules/openfl/lib/openfl")
       },
       extensions: [".ts", ".js", ".json"]
     }
-  }
+  };
 };
