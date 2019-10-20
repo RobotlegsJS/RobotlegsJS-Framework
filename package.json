@@ -90,7 +90,6 @@
     "karma-sourcemap-writer": "^0.1.2",
     "karma-webpack": "^4.0.2",
     "mocha": "^6.2.2",
-    "open-browser-webpack-plugin": "^0.0.5",
     "openfl": "^8.9.5",
     "prettier": "^1.18.2",
     "publish-please": "^5.5.1",
