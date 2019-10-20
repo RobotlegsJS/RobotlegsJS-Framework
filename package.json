@@ -76,7 +76,7 @@
   },
   "dependencies": {
     "@robotlegsjs/pixi": "^1.0.0",
-    "@robotlegsjs/signals": "^1.0.2",
+    "@robotlegsjs/signals": "^1.0.3",
     "tslib": "^1.10.0"
   },
   "peerDependencies": {
