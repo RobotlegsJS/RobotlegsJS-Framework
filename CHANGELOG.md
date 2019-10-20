@@ -31,7 +31,7 @@ Types of changes:
 
 #### Changed
 
-- Update `@robotlegsjs/core` to version `1.0.3` (see #377).
+- Update `@robotlegsjs/core` to version `1.0.3` (see #37).
 
 - Update `instanbul` settings (see #36).
 
