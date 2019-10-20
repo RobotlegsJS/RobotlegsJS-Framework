@@ -45,6 +45,8 @@ Types of changes:
 
 - Update `@robotlegsjs/signals` to version `1.0.3` (see #98).
 
+- Update `@robotlegsjs/core` to version `1.0.3` (see #99).
+
 - Update `instanbul` settings (see #97).
 
 - Migrate project to `travis-ci.com`.
