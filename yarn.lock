@@ -109,10 +109,10 @@
     inversify "^5.0.1"
     tslib "^1.10.0"
 
-"@robotlegsjs/signals@^1.0.2":
-  version "1.0.2"
-  resolved "https://registry.npmjs.org/@robotlegsjs/signals/-/signals-1.0.2.tgz#bbfd4dfe3c1fc9917a1051f5808d2aa05fed72f7"
-  integrity sha512-4lFsZW1b1xR5GhdOmJWUExnngb5A9WIfgaizMfa/cXYxqpbqPeFFsJtUKfNevJQ7ciEm5DhkRYJO+h2r0PSd9g==
+"@robotlegsjs/signals@^1.0.3":
+  version "1.0.3"
+  resolved "https://registry.npmjs.org/@robotlegsjs/signals/-/signals-1.0.3.tgz#c7dc75a0230b277ffefd53363912ca0cd2f01bbf"
+  integrity sha512-TMN+vX+jceyTSieYK3VesXTZ8jEQTRQeNSwC108V4B9P6wiVCXOWtLW63+IpaizLSFMwlmmDXM6C6Fte7d/teQ==
   dependencies:
     tslib "^1.10.0"
 
