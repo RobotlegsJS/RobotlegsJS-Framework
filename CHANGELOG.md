@@ -47,6 +47,8 @@ Types of changes:
 
 #### Changed
 
+- Update `@robotlegsjs/core` to version `1.0.3` (see #52).
+
 - Deploy example project (see #24).
 
 - Improve `prettier` rules and `autoformat` script (see #32).
