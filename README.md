@@ -4,7 +4,7 @@ RobotlegsJS CreateJS Extension
 [![GitHub license](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/RobotlegsJS/RobotlegsJS-CreateJS/blob/master/LICENSE)
 [![Gitter chat](https://badges.gitter.im/RobotlegsJS/RobotlegsJS.svg)](https://gitter.im/RobotlegsJS/RobotlegsJS)
 [![Build Status](https://travis-ci.org/RobotlegsJS/RobotlegsJS-CreateJS.svg?branch=master)](https://travis-ci.org/RobotlegsJS/RobotlegsJS-CreateJS)
-[![codebeat badge](https://codebeat.co/badges/e8be9dff-117b-436d-92c4-1b91aed35e33)](https://codebeat.co/projects/github-com-robotlegsjs-robotlegsjs-createjs-master)
+[![codebeat badge](https://codebeat.co/badges/22af20ac-333a-40b9-9232-3c0373570b3b)](https://codebeat.co/projects/github-com-robotlegsjs-robotlegsjs-createjs-master)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/e8d37f3f011c6d211083/test_coverage)](https://codeclimate.com/github/RobotlegsJS/RobotlegsJS-CreateJS/test_coverage)
 [![npm version](https://badge.fury.io/js/%40robotlegsjs%2Fcreatejs.svg)](https://badge.fury.io/js/%40robotlegsjs%2Fcreatejs)
 [![Greenkeeper badge](https://badges.greenkeeper.io/RobotlegsJS/RobotlegsJS-CreateJS.svg)](https://greenkeeper.io/)
