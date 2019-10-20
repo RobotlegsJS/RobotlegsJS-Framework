@@ -51,6 +51,10 @@ Types of changes:
 
 - Enable `"editor.formatOnSave"` rule for `VS Code` (see #34).
 
+- Migrate project to `travis-ci.com`.
+
+- Update `codebeat` Project UUID.
+
 - Update dev dependencies to latest version.
 
 ## Robotlegs-OpenFL 1.0.0

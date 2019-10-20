@@ -2,7 +2,6 @@ const webpack = require("webpack");
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const ConcatPlugin = require("webpack-concat-plugin");
-const OpenBrowserPlugin = require("open-browser-webpack-plugin");
 const SimpleProgressPlugin = require("webpack-simple-progress-plugin");
 
 const concatPluginConfigGenerator = (name, files) => {
@@ -32,9 +31,7 @@ module.exports = options => {
     devtool: "source-map",
 
     module: {
-      rules: [
-        { test: /\.ts$/, loader: "ts-loader" }
-      ]
+      rules: [{ test: /\.ts$/, loader: "ts-loader" }]
     },
 
     plugins: [
@@ -49,14 +46,12 @@ module.exports = options => {
       ]))
       */
 
-      new SimpleProgressPlugin(),
-
-      new OpenBrowserPlugin({ url: "http://0.0.0.0:8080/webpack-dev-server/" })
+      new SimpleProgressPlugin()
     ],
 
     resolve: {
       alias: {
-        "openfl": path.resolve (__dirname, "node_modules/openfl/lib/openfl")
+        openfl: path.resolve(__dirname, "node_modules/openfl/lib/openfl")
       },
       extensions: [".ts", ".js", ".json"]
     },
@@ -66,8 +61,7 @@ module.exports = options => {
       contentBase: path.join(__dirname, "static"),
       hot: true,
       disableHostCheck: true,
-      inline:false
+      inline: false
     }
-
-  }
+  };
 };

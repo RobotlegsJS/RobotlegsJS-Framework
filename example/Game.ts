@@ -32,7 +32,7 @@ export class Game {
     private init(): void {
         // remove loader
         this._loading = <HTMLDivElement>document.getElementById("loading");
-        document.body.removeChild(this._loading);
+        this._loading.remove();
 
         // create stage
         this._stage = new Stage(960, 400, 0xffffff, GameView);
