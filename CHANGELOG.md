@@ -41,6 +41,10 @@ Types of changes:
 - in case of vulnerabilities.
 -->
 
+## RobotlegsJS-Macrobot 1.0.0
+
+### [v1.0.3](https://github.com/RobotlegsJS/RobotlegsJS-Macrobot/releases/tag/1.0.3) - 2019-10-24
+
 #### Changed
 
 - Update `@robotlegsjs/core` to version `1.0.3` (see #107).
@@ -52,8 +56,6 @@ Types of changes:
 - Update `codebeat` Project UUID.
 
 - Update dev dependencies to latest version.
-
-## RobotlegsJS-Macrobot 1.0.0
 
 ### [v1.0.2](https://github.com/RobotlegsJS/RobotlegsJS-Macrobot/releases/tag/1.0.2) - 2019-03-23
 
