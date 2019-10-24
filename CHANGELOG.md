@@ -41,6 +41,10 @@ Types of changes:
 - in case of vulnerabilities.
 -->
 
+## RobotlegsJS-Pixi-SignalMediator 1.0.0
+
+### [v1.0.1](https://github.com/RobotlegsJS/RobotlegsJS-Pixi-SignalMediator/releases/tag/1.0.1) - 2019-10-25
+
 #### Changed
 
 - Update `@robotlegsjs/signals` to version `1.0.3` (see #101).
@@ -56,8 +60,6 @@ Types of changes:
 - Enable `"editor.formatOnSave"` rule for `VS Code` (see #77).
 
 - Update dev dependencies to latest version.
-
-## RobotlegsJS-Pixi-SignalMediator 1.0.0
 
 ### [v1.0.0](https://github.com/RobotlegsJS/RobotlegsJS-Pixi-SignalMediator/releases/tag/1.0.0) - 2018-11-25
 
