@@ -96,7 +96,7 @@
   dependencies:
     commander "^2.15.1"
 
-"@robotlegsjs/core@^1.0.0":
+"@robotlegsjs/core@^1.0.3":
   version "1.0.3"
   resolved "https://registry.npmjs.org/@robotlegsjs/core/-/core-1.0.3.tgz#3ae018b4e8834552a076caf4f4eed7fe1433951a"
   integrity sha512-fWQWvEqCx9SojQsIMbd1thvylhiUqyX11CBlnUJrpRxZEoLIWZ+F71E/7D662en79HGxtb8OAZZR7WXaiixljw==
@@ -104,13 +104,13 @@
     inversify "^5.0.1"
     tslib "^1.10.0"
 
-"@robotlegsjs/pixi@^1.0.0":
-  version "1.0.0"
-  resolved "https://registry.npmjs.org/@robotlegsjs/pixi/-/pixi-1.0.0.tgz#51bbd021beb09721bc02f41e79105a726273af71"
-  integrity sha512-wpuKDIWLaK1N2mFkryH14GS29gZWf8jQhRdwV1SsIQdYapW2WdfEOf1nBPOYT11gdrWtvsuMIBiJXIfvBs7Riw==
+"@robotlegsjs/pixi@^1.0.1":
+  version "1.0.1"
+  resolved "https://registry.npmjs.org/@robotlegsjs/pixi/-/pixi-1.0.1.tgz#1aabffcefa7dbd5aaf7185b024f27796bcdfc25f"
+  integrity sha512-Mg82nkAuEchf2lxIR1XbW0/bBG3sUbsJfhcGq2vQ4/K4lX04ZbbDXaXkCMrNGYMPETacI/VXiieptEWZ7oB9Pg==
   dependencies:
-    "@robotlegsjs/core" "^1.0.0"
-    tslib "^1.9.3"
+    "@robotlegsjs/core" "^1.0.3"
+    tslib "^1.10.0"
 
 "@sinonjs/commons@^1", "@sinonjs/commons@^1.3.0", "@sinonjs/commons@^1.4.0":
   version "1.6.0"
@@ -6250,7 +6250,7 @@ ts-node@^8.4.1:
     source-map-support "^0.5.6"
     yn "^3.0.0"
 
-tslib@^1.10.0, tslib@^1.8.0, tslib@^1.8.1, tslib@^1.9.0, tslib@^1.9.3:
+tslib@^1.10.0, tslib@^1.8.0, tslib@^1.8.1, tslib@^1.9.0:
   version "1.10.0"
   resolved "https://registry.npmjs.org/tslib/-/tslib-1.10.0.tgz#c3c19f95973fb0a62973fb09d90d961ee43e5c8a"
   integrity sha512-qOebF53frne81cf0S9B41ByenJ3/IuH8yJKngAX35CmiZySA0khhkovshKK+jGCaMnVomla7gVlIcc3EvKPbTQ==
