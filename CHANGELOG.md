@@ -45,6 +45,8 @@ Types of changes:
 
 - Update `@robotlegsjs/signals` to version `1.0.3` (see #101).
 
+- Update `@robotlegsjs/pixi` to version `1.0.1` (see #103).
+
 - Migrate project to `travis-ci.com`.
 
 - Update `codebeat` Project UUID.
