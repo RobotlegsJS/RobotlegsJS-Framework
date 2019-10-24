@@ -39,6 +39,10 @@ Types of changes:
 - in case of vulnerabilities.
 -->
 
+## RobotlegsJS-Pixi-Palidor 1.0.0
+
+### [v1.0.1](https://github.com/RobotlegsJS/RobotlegsJS-Pixi-Palidor/releases/tag/1.0.1) - 2019-10-25
+
 #### Changed
 
 - Update `@robotlegsjs/pixi` to version `1.0.1` (see #102).
@@ -52,8 +56,6 @@ Types of changes:
 - Update `codebeat` Project UUID.
 
 - Update dev dependencies to latest version.
-
-## RobotlegsJS-Pixi-Palidor 1.0.0
 
 ### [v1.0.0](https://github.com/RobotlegsJS/RobotlegsJS-Pixi-Palidor/releases/tag/1.0.0) - 2018-11-25
 
