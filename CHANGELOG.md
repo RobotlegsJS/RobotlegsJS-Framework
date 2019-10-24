@@ -41,6 +41,8 @@ Types of changes:
 
 #### Changed
 
+- Update `@robotlegsjs/pixi` to version `1.0.1` (see #102).
+
 - Improve `prettier` rules and `autoformat` script (see #79).
 
 - Enable `"editor.formatOnSave"` rule for `VS Code` (see #79).
