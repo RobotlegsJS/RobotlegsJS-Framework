@@ -41,11 +41,15 @@ Types of changes:
 - in case of vulnerabilities.
 -->
 
+## RobotlegsJS-SignalCommandMap 1.0.0
+
+### [v1.0.2](https://github.com/RobotlegsJS/RobotlegsJS-SignalCommandMap/releases/tag/1.0.2) - 2019-10-24
+
 #### Changed
 
-- Update `@robotlegsjs/signals` to version `1.0.3` (see #98).
+- Update [`@robotlegsjs/signals`](https://github.com/RobotlegsJS/SignalsJS) to version `1.0.3` (see #98).
 
-- Update `@robotlegsjs/core` to version `1.0.3` (see #99).
+- Update [`@robotlegsjs/core`](https://github.com/RobotlegsJS/RobotlegsJS) to version `1.0.3` (see #99).
 
 - Update `instanbul` settings (see #97).
 
@@ -54,8 +58,6 @@ Types of changes:
 - Update `codebeat` Project UUID.
 
 - Update dev dependencies to latest version.
-
-## RobotlegsJS-SignalCommandMap 1.0.0
 
 ### [v1.0.1](https://github.com/RobotlegsJS/RobotlegsJS-SignalCommandMap/releases/tag/1.0.1) - 2019-03-20
 
@@ -75,9 +77,9 @@ Types of changes:
 
 #### Changed
 
-- Update `@robotlegsjs/signals` to version `1.0.0` (see #79).
+- Update [`@robotlegsjs/signals`](https://github.com/RobotlegsJS/SignalsJS) to version `1.0.0` (see #79).
 
-- Update `@robotlegsjs/core` to version `1.0.0` (see #80).
+- Update [`@robotlegsjs/core`](https://github.com/RobotlegsJS/RobotlegsJS) to version `1.0.0` (see #80).
 
 - Update `karma` setup to generate code coverage report only for `src` folder (see #69).
 
@@ -95,9 +97,9 @@ Types of changes:
 
 #### Changed
 
-- Update `@robotlegsjs/core` to version `0.2.0` (see #67).
+- Update [`@robotlegsjs/core`](https://github.com/RobotlegsJS/RobotlegsJS) to version `0.2.0` (see #67).
 
-- Update `@robotlegsjs/signals` to version `0.2.0` (see #66).
+- Update [`@robotlegsjs/signals`](https://github.com/RobotlegsJS/SignalsJS) to version `0.2.0` (see #66).
 
 - Update TypeScript Compiler Options (see #55, $64).
 
@@ -133,9 +135,9 @@ Types of changes:
 
 #### Changed
 
-- Update `@robotlegsjs/signals` to version `0.0.12` (see #26).
+- Update [`@robotlegsjs/signals`](https://github.com/RobotlegsJS/SignalsJS) to version `0.0.12` (see #26).
 
-- Update `@robotlegsjs/core` to version `0.1.1` (see #24).
+- Update [`@robotlegsjs/core`](https://github.com/RobotlegsJS/RobotlegsJS) to version `0.1.1` (see #24).
 
 - Improve Code Coverage and Fix Bugs (see #31).
 
@@ -147,9 +149,9 @@ Types of changes:
 
 #### Changed
 
-- Update `@robotlegsjs/signals` to version `0.0.11` (see #17).
+- Update [`@robotlegsjs/signals`](https://github.com/RobotlegsJS/SignalsJS) to version `0.0.11` (see #17).
 
-- Update `@robotlegsjs/core` to version `0.0.6` (see #18).
+- Update [`@robotlegsjs/core`](https://github.com/RobotlegsJS/RobotlegsJS) to version `0.0.6` (see #18).
 
 - Adapt to NPM [v5.0.0](http://blog.npmjs.org/post/161081169345/v500) (see #15).
 
@@ -167,9 +169,9 @@ Types of changes:
 
 #### Changed
 
-- Update `@robotlegsjs/signals` to version `0.0.10` (see #12).
+- Update [`@robotlegsjs/signals`](https://github.com/RobotlegsJS/SignalsJS) to version `0.0.10` (see #12).
 
-- Update `@robotlegsjs/core` to version `0.0.5` (see #11).
+- Update [`@robotlegsjs/core`](https://github.com/RobotlegsJS/RobotlegsJS) to version `0.0.5` (see #11).
 
 - Update TSLint rules (see #13).
 
@@ -179,9 +181,9 @@ Types of changes:
 
 #### Changed
 
-- Update `@robotlegsjs/signals` to version `0.0.7` (see #8).
+- Update [`@robotlegsjs/signals`](https://github.com/RobotlegsJS/SignalsJS) to version `0.0.7` (see #8).
 
-- Update `@robotlegsjs/core` to version `0.0.4` (see #9).
+- Update [`@robotlegsjs/core`](https://github.com/RobotlegsJS/RobotlegsJS) to version `0.0.4` (see #9).
 
 - Update dev dependencies to latest version.
 
@@ -193,9 +195,9 @@ Types of changes:
 
 #### Changed
 
-- Update `@robotlegsjs/signals` to version `0.0.5`.
+- Update [`@robotlegsjs/signals`](https://github.com/RobotlegsJS/SignalsJS) to version `0.0.5`.
 
-- Update `@robotlegsjs/core` to version `0.0.3`.
+- Update [`@robotlegsjs/core`](https://github.com/RobotlegsJS/RobotlegsJS) to version `0.0.3`.
 
 - Update dev dependencies to latest version.
 
