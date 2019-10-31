@@ -1,6 +1,6 @@
 {
   "name": "@robotlegsjs/openfl",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "OpenFL View Integration with RobotlegsJS",
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",

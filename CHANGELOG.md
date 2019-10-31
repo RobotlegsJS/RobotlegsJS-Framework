@@ -45,6 +45,10 @@ Types of changes:
 - in case of vulnerabilities.
 -->
 
+## Robotlegs-OpenFL 1.0.0
+
+### [v1.0.1](https://github.com/RobotlegsJS/RobotlegsJS-OpenFL/releases/tag/1.0.1) - 2019-10-31
+
 #### Changed
 
 - Update `@robotlegsjs/core` to version `1.0.3` (see #55).
@@ -58,8 +62,6 @@ Types of changes:
 - Update `codebeat` Project UUID.
 
 - Update dev dependencies to latest version.
-
-## Robotlegs-OpenFL 1.0.0
 
 ### [v1.0.0](https://github.com/RobotlegsJS/RobotlegsJS-OpenFL/releases/tag/1.0.0) - 2018-11-26
 
