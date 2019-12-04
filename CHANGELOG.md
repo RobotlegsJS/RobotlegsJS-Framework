@@ -47,6 +47,8 @@ Types of changes:
 
 - Add **Tidelift** as funding option (see #119).
 
+- Add **Enterprise Support** information (see #120).
+
 ## Signals 1.0.0
 
 ### [v1.0.3](https://github.com/RobotlegsJS/SignalsJS/releases/tag/1.0.3) - 2019-10-20
