@@ -53,6 +53,12 @@ Then follow the [installation instructions](https://github.com/RobotlegsJS/Robot
 + [eventemitter3](https://github.com/primus/eventemitter3)
 + [reflect-metadata](https://github.com/rbuckton/reflect-metadata)
 
+## RobotlegsJS EventEmitter3 for enterprise
+
+Available as part of the Tidelift Subscription
+
+The maintainers of [@robotlegsjs/eventemitter3](https://github.com/RobotlegsJS/RobotlegsJS-EventEmitter3) and thousands of other packages are working with Tidelift to deliver commercial support and maintenance for the open source dependencies you use to build your applications. Save time, reduce risk, and improve code health, while paying the maintainers of the exact dependencies you use. [Learn more.](https://tidelift.com/subscription/pkg/npm-robotlegsjs-eventemitter3?utm_source=npm-robotlegsjs-eventemitter3&utm_medium=referral&utm_campaign=enterprise&utm_term=repo)
+
 ## License
 
 [MIT](LICENSE)
