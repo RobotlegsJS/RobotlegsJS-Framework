@@ -129,7 +129,8 @@ export class MonoSignal implements ISignal {
             // Optimized for the optimistic case that values are correct.
             if (
                 valueObjects[i] === null ||
-                valueObjects[i] instanceof this._valueClasses[i] || valueObjects[i].constructor === this._valueClasses[i]
+                valueObjects[i] instanceof this._valueClasses[i] ||
+                valueObjects[i].constructor === this._valueClasses[i]
             ) {
                 continue;
             }
