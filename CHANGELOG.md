@@ -29,6 +29,10 @@ Types of changes:
 - in case of vulnerabilities.
 -->
 
+#### Security
+
+- Migrate to [terser-webpack-plugin](https://github.com/webpack-contrib/terser-webpack-plugin) to solve security vulnerability (see #45).
+
 ## Robotlegs-EventEmitter3 1.0.0
 
 ### [v1.0.2](https://github.com/RobotlegsJS/RobotlegsJS-EventEmitter3/releases/tag/1.0.2) - 2019-10-24
