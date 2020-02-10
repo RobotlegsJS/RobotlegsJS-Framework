@@ -45,6 +45,10 @@ Types of changes:
 - in case of vulnerabilities.
 -->
 
+#### Security
+
+- Migrate to [terser-webpack-plugin](https://github.com/webpack-contrib/terser-webpack-plugin) to solve security vulnerability (see #58).
+
 ## Robotlegs-CreateJS 1.0.1
 
 ### [v1.0.1](https://github.com/RobotlegsJS/RobotlegsJS-CreateJS/releases/tag/1.0.1) - 2019-10-31
