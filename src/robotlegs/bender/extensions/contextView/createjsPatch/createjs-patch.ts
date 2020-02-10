@@ -62,7 +62,7 @@ export function applyCreateJSPatch(stage: createjs.Stage) {
     };
 
     createjs.Container.prototype.addChildAt = function patchedAddChildAt<T extends createjs.DisplayObject>(
-        ...childOrIndex: Array<T | number>
+        ...childOrIndex: T[] | number[]
     ): T {
         for (let i = 0, len = arguments.length - 1; i < len; i++) {
             const object = arguments[i];
