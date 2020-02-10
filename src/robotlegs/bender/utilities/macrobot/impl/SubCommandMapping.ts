@@ -17,7 +17,7 @@ export class SubCommandMapping implements ISubCommandMapping, ISubCommandConfigu
     private _commandClass: IClass<ICommand>;
 
     private _guards: any[] = [];
-    private _payloads: Array<ISubCommandPayload<any>> = [];
+    private _payloads: ISubCommandPayload<any>[] = [];
     private _hooks: any[] = [];
 
     constructor(commandClass: IClass<ICommand>) {
@@ -36,7 +36,7 @@ export class SubCommandMapping implements ISubCommandMapping, ISubCommandConfigu
         return this._hooks.slice();
     }
 
-    public get payloads(): Array<ISubCommandPayload<any>> {
+    public get payloads(): ISubCommandPayload<any>[] {
         return this._payloads.slice();
     }
 
