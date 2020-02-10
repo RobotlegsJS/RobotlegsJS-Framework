@@ -38,7 +38,7 @@ export abstract class AbstractMacro extends AsyncCommand implements IMacro {
     protected _mappings: SubCommandMappingList;
 
     protected _executeArguments: any;
-    protected _commandPayloads: Array<ISubCommandPayload<any>> = [];
+    protected _commandPayloads: ISubCommandPayload<any>[] = [];
     protected _commandPayloadsModule: ContainerModule;
 
     constructor(@inject(IContext) context: IContext, @inject(IInjector) injector: IInjector) {
@@ -76,7 +76,7 @@ export abstract class AbstractMacro extends AsyncCommand implements IMacro {
     protected executeCommand(mapping: ISubCommandMapping): void {
         let command: ICommand;
         let commandClass: IClass<ICommand> = mapping.commandClass;
-        let payloads: Array<ISubCommandPayload<any>> = this._commandPayloads.concat(mapping.payloads);
+        let payloads: ISubCommandPayload<any>[] = this._commandPayloads.concat(mapping.payloads);
         let hasPayloads: boolean = payloads.length > 0;
 
         this.mapMacroPayload(this._macroPayload);
@@ -136,7 +136,7 @@ export abstract class AbstractMacro extends AsyncCommand implements IMacro {
         }
     }
 
-    protected mapPayloads(payloads: Array<ISubCommandPayload<any>>): void {
+    protected mapPayloads(payloads: ISubCommandPayload<any>[]): void {
         this._commandPayloadsModule = new ContainerModule((bind: interfaces.Bind, unbind: interfaces.Unbind) => {
             payloads.forEach((payload: ISubCommandPayload<any>) => {
                 if (payload.name.length > 0) {
@@ -151,7 +151,7 @@ export abstract class AbstractMacro extends AsyncCommand implements IMacro {
         this._injector.load(this._commandPayloadsModule);
     }
 
-    protected unmapPayloads(payloads: Array<ISubCommandPayload<any>>): void {
+    protected unmapPayloads(payloads: ISubCommandPayload<any>[]): void {
         this._injector.unload(this._commandPayloadsModule);
     }
 
