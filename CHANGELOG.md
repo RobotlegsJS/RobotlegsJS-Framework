@@ -49,6 +49,10 @@ Types of changes:
 
 - Add **Enterprise Support** information (see #120).
 
+#### Security
+
+- Migrate to [terser-webpack-plugin](https://github.com/webpack-contrib/terser-webpack-plugin) to solve security vulnerability (see #126).
+
 ## Signals 1.0.0
 
 ### [v1.0.3](https://github.com/RobotlegsJS/SignalsJS/releases/tag/1.0.3) - 2019-10-20
