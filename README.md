@@ -1,5 +1,4 @@
-RobotlegsJS CreateJS Extension
-===
+# RobotlegsJS CreateJS Extension
 
 [![GitHub license](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/RobotlegsJS/RobotlegsJS-CreateJS/blob/master/LICENSE)
 [![Gitter chat](https://badges.gitter.im/RobotlegsJS/RobotlegsJS.svg)](https://gitter.im/RobotlegsJS/RobotlegsJS)
@@ -13,8 +12,7 @@ RobotlegsJS CreateJS Extension
 Integrate [RobotlegsJS](https://github.com/RobotlegsJS/RobotlegsJS)
 framework with [CreateJS](https://createjs.com).
 
-Installation
----
+## Installation
 
 You can get the latest release and the type definitions using [NPM](https://www.npmjs.com/):
 
@@ -57,8 +55,7 @@ Then follow the [installation instructions](https://github.com/RobotlegsJS/Robot
 + [EaselJS](https://github.com/CreateJS/EaselJS)
 + [reflect-metadata](https://github.com/rbuckton/reflect-metadata)
 
-Usage
----
+## Usage
 
 ```typescript
 import { Context, MVCSBundle } from "@robotlegsjs/core";
@@ -120,8 +117,7 @@ export class Game {
 
 [See full example here](example/index.ts)
 
-Running the example
----
+## Running the example
 
 Run the following commands to run the example:
 
@@ -137,7 +133,12 @@ yarn install
 yarn start
 ```
 
-License
----
+## RobotlegsJS CreateJS for enterprise
+
+Available as part of the Tidelift Subscription
+
+The maintainers of [@robotlegsjs/createjs](https://github.com/RobotlegsJS/RobotlegsJS-CreateJS) and thousands of other packages are working with Tidelift to deliver commercial support and maintenance for the open source dependencies you use to build your applications. Save time, reduce risk, and improve code health, while paying the maintainers of the exact dependencies you use. [Learn more.](https://tidelift.com/subscription/pkg/npm-robotlegsjs-createjs?utm_source=npm-robotlegsjs-createjs&utm_medium=referral&utm_campaign=enterprise&utm_term=repo)
+
+## License
 
 [MIT](LICENSE)

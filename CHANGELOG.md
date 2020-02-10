@@ -49,6 +49,8 @@ Types of changes:
 
 - Add **Tidelift** as funding option (see #59).
 
+- Add **Enterprise Support** information (see #60).
+
 #### Security
 
 - Migrate to [terser-webpack-plugin](https://github.com/webpack-contrib/terser-webpack-plugin) to solve security vulnerability (see #58).
