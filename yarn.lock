@@ -5080,10 +5080,10 @@ pend@~1.2.0:
   resolved "https://registry.npmjs.org/pend/-/pend-1.2.0.tgz#7a57eb550a6783f9115331fcf4663d5c8e007a50"
   integrity sha1-elfrVQpng/kRUzH89GY9XI4AelA=
 
-phaser-ce@^2.13.3:
-  version "2.13.3"
-  resolved "https://registry.npmjs.org/phaser-ce/-/phaser-ce-2.13.3.tgz#8c7b2bbd59ee5fba58ec1f7d8afdc17ccedcc43d"
-  integrity sha512-tiaLwzuY1xVSTqpReg6At4ESgDWEn1cUUMjMudv4ft8VAL1whkVBiimtM2LjOi2fvbaFJBR99fSfFfNDKBxj4Q==
+phaser-ce@^2.14.0:
+  version "2.14.0"
+  resolved "https://registry.npmjs.org/phaser-ce/-/phaser-ce-2.14.0.tgz#756ee4ddac2bd42de1be1d014e1fcb55107d23d6"
+  integrity sha512-reI2PA5RJtUdL8AjkY+dXZX6ggOg3FkZb/g9tdckv3vzDkLeq+xEhfEgsmThAcbDtrJu0eiey4KcX0PlMeRdew==
 
 picomatch@^2.0.4, picomatch@^2.0.5, picomatch@^2.0.7:
   version "2.2.1"
