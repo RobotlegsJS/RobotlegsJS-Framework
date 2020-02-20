@@ -1,5 +1,4 @@
-RobotlegsJS Phaser-CE SignalCommandMap Extension
-===
+# RobotlegsJS Phaser-CE SignalCommandMap Extension
 
 [![GitHub license](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/RobotlegsJS/RobotlegsJS-Phaser-SignalCommandMap/blob/master/LICENSE)
 [![Gitter chat](https://badges.gitter.im/RobotlegsJS/RobotlegsJS.svg)](https://gitter.im/RobotlegsJS/RobotlegsJS)
@@ -13,8 +12,7 @@ RobotlegsJS Phaser-CE SignalCommandMap Extension
 A [RobotlegsJS](https://github.com/RobotlegsJS/RobotlegsJS) Extension that allows the mapping of
 [Phaser.Signal](https://photonstorm.github.io/phaser-ce/Phaser.Signal.html) class to commands.
 
-Installation
----
+## Installation
 
 You can get the latest release and the type definitions using [NPM](https://www.npmjs.com/):
 
@@ -57,7 +55,12 @@ Then follow the [installation instructions](https://github.com/RobotlegsJS/Robot
 + [Phaser-CE](https://github.com/photonstorm/phaser-ce)
 + [reflect-metadata](https://github.com/rbuckton/reflect-metadata)
 
-License
----
+## RobotlegsJS Phaser-CE SignalCommandMap for enterprise
+
+Available as part of the Tidelift Subscription
+
+The maintainers of [@robotlegsjs/phaser-ce-signalcommandmap](https://github.com/RobotlegsJS/RobotlegsJS-Phaser-CE-SignalCommandMap) and thousands of other packages are working with Tidelift to deliver commercial support and maintenance for the open source dependencies you use to build your applications. Save time, reduce risk, and improve code health, while paying the maintainers of the exact dependencies you use. [Learn more.](https://tidelift.com/subscription/pkg/npm-robotlegsjs-phaser-ce-signalcommandmap?utm_source=npm-robotlegsjs-phaser-ce-signalcommandmap&utm_medium=referral&utm_campaign=enterprise&utm_term=repo)
+
+## License
 
 [MIT](LICENSE)
