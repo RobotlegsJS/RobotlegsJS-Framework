@@ -39,6 +39,10 @@ Types of changes:
 - in case of vulnerabilities.
 -->
 
+#### Security
+
+- Migrate to [terser-webpack-plugin](https://github.com/webpack-contrib/terser-webpack-plugin) to solve security vulnerability (see #108).
+
 ## RobotlegsJS-Pixi-Palidor 1.0.0
 
 ### [v1.0.1](https://github.com/RobotlegsJS/RobotlegsJS-Pixi-Palidor/releases/tag/1.0.1) - 2019-10-25
