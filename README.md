@@ -1,5 +1,4 @@
-RobotlegsJS Pixi Palidor Extension
-===
+# RobotlegsJS Pixi Palidor Extension
 
 [![GitHub license](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/RobotlegsJS/RobotlegsJS-Pixi-Palidor/blob/master/LICENSE)
 [![Gitter chat](https://badges.gitter.im/RobotlegsJS/RobotlegsJS.svg)](https://gitter.im/RobotlegsJS/RobotlegsJS)
@@ -12,8 +11,7 @@ RobotlegsJS Pixi Palidor Extension
 
 Palidor is an extension of RobotlegsJS for Pixi, designed to help the management of the Main Container, taking the responsibility to add, remove and switch the views. Perfect for game development.
 
-Installation
----
+## Installation
 
 You can get the latest release and the type definitions using [NPM](https://www.npmjs.com/):
 
@@ -60,8 +58,8 @@ Then follow the [installation instructions](https://github.com/RobotlegsJS/Robot
 + [eventemitter3](https://github.com/primus/eventemitter3)
 + [reflect-metadata](https://github.com/rbuckton/reflect-metadata)
 
-Usage
-===
+## Usage
+
 Palidor was designed to be simple and, practical. You just need to follow three steps to start to use.
 
 ### Step 1 - Install/Configure
@@ -129,8 +127,7 @@ There are some predefined events on the  Palidor to help to remove a view or flo
 + PalidorEvent.REMOVE_ALL_FLOATING_VIEWS:
 + PalidorEvent.REMOVE_LAST_FLOATING_VIEW_ADDED:
 
-Examples
-===
+## Examples
 
 + [Game - Battleship](https://github.com/RonaldoSetzer/GAME-Battleship)
 + [Game - Minesweeper](https://github.com/RonaldoSetzer/GAME-Minesweeper)
@@ -138,7 +135,12 @@ Examples
 + [Game - Tetris](https://github.com/RonaldoSetzer/GAME-Tetris)
 + [Game - Match 3](https://github.com/RonaldoSetzer/GAME-Match3)
 
-License
----
+## RobotlegsJS Pixi Palidor for enterprise
+
+Available as part of the Tidelift Subscription
+
+The maintainers of [@robotlegsjs/pixi-palidor](https://github.com/RobotlegsJS/RobotlegsJS-Pixi-Palidor) and thousands of other packages are working with Tidelift to deliver commercial support and maintenance for the open source dependencies you use to build your applications. Save time, reduce risk, and improve code health, while paying the maintainers of the exact dependencies you use. [Learn more.](https://tidelift.com/subscription/pkg/npm-robotlegsjs-pixi-palidor?utm_source=npm-robotlegsjs-pixi-palidor&utm_medium=referral&utm_campaign=enterprise&utm_term=repo)
+
+## License
 
 [MIT](LICENSE)
