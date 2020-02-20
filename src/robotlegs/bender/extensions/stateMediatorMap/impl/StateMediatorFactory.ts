@@ -141,8 +141,8 @@ export class StateMediatorFactory {
         });
     }
 
-    private requiredTypesFor(filter: ITypeFilter, type: IClass<any>): Array<IType<any>> {
-        let requiredTypes: Array<IType<any>> = filter.allOfTypes.concat(filter.anyOfTypes);
+    private requiredTypesFor(filter: ITypeFilter, type: IClass<any>): IType<any>[] {
+        let requiredTypes: IType<any>[] = filter.allOfTypes.concat(filter.anyOfTypes);
 
         if (requiredTypes.indexOf(type) === -1) {
             requiredTypes.push(type);

@@ -8,9 +8,7 @@
 // ContextStateManager
 export { IContextStateManager } from "./robotlegs/bender/extensions/contextStateManager/api/IContextStateManager";
 export { ContextStateManager } from "./robotlegs/bender/extensions/contextStateManager/impl/ContextStateManager";
-export {
-    ContextStateManagerListenerConfig
-} from "./robotlegs/bender/extensions/contextStateManager/impl/ContextStateManagerListenerConfig";
+export { ContextStateManagerListenerConfig } from "./robotlegs/bender/extensions/contextStateManager/impl/ContextStateManagerListenerConfig";
 export { ContextStateManagerExtension } from "./robotlegs/bender/extensions/contextStateManager/ContextStateManagerExtension";
 
 // StateMediatorMap
