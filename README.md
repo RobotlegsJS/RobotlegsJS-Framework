@@ -1,5 +1,4 @@
-RobotlegsJS Phaser-CE Extension
-===
+# RobotlegsJS Phaser-CE Extension
 
 [![GitHub license](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/RobotlegsJS/RobotlegsJS-Phaser-CE/blob/master/LICENSE)
 [![Gitter chat](https://badges.gitter.im/RobotlegsJS/RobotlegsJS.svg)](https://gitter.im/RobotlegsJS/RobotlegsJS)
@@ -14,8 +13,7 @@ RobotlegsJS Phaser-CE Extension
 Integrate [RobotlegsJS](https://github.com/RobotlegsJS/RobotlegsJS)
 framework with [Phaser-CE](https://github.com/photonstorm/phaser-ce).
 
-Installation
----
+## Installation
 
 You can get the latest release and the type definitions using [NPM](https://www.npmjs.com/):
 
@@ -27,7 +25,7 @@ Or using [Yarn](https://yarnpkg.com/en/):
 
 ```bash
 yarn add @robotlegsjs/phaser-ce
-````
+```
 
 From version `0.2.0` of this package, the [Phaser-CE](https://github.com/photonstorm/phaser-ce) dependency was moved to **peerDependencies**,
 allowing the final user to choose the desired version of the `phaser-ce` library on each project.
@@ -110,8 +108,7 @@ new Game();
 
 [See example](example)
 
-Running the example
----
+## Running the example
 
 Run the following commands to run the example:
 
@@ -127,7 +124,12 @@ yarn install
 yarn start
 ```
 
-License
----
+## RobotlegsJS Phaser-CE for enterprise
+
+Available as part of the Tidelift Subscription
+
+The maintainers of [@robotlegsjs/phaser-ce](https://github.com/RobotlegsJS/RobotlegsJS-Phaser-CE) and thousands of other packages are working with Tidelift to deliver commercial support and maintenance for the open source dependencies you use to build your applications. Save time, reduce risk, and improve code health, while paying the maintainers of the exact dependencies you use. [Learn more.](https://tidelift.com/subscription/pkg/npm-robotlegsjs-phaser-ce?utm_source=npm-robotlegsjs-phaser-ce&utm_medium=referral&utm_campaign=enterprise&utm_term=repo)
+
+## License
 
 [MIT](LICENSE)
