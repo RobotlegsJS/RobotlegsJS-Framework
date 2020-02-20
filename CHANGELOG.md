@@ -47,6 +47,10 @@ Types of changes:
 
 - Add **Enterprise Support** information (see #48).
 
+#### Changed
+
+- Update `phaser-ce` to version `2.14.0` (see #49).
+
 #### Security
 
 - Migrate to [terser-webpack-plugin](https://github.com/webpack-contrib/terser-webpack-plugin) to solve security vulnerability (see #46).
