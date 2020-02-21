@@ -1,5 +1,4 @@
-RobotlegsJS Pixi SignalMediator Extension
-===
+# RobotlegsJS Pixi SignalMediator Extension
 
 [![GitHub license](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/RobotlegsJS/RobotlegsJS-Pixi-SignalMediator/blob/master/LICENSE)
 [![Gitter chat](https://badges.gitter.im/RobotlegsJS/RobotlegsJS.svg)](https://gitter.im/RobotlegsJS/RobotlegsJS)
@@ -14,8 +13,7 @@ A port of [Robotlegs SignalMediator Extension](https://github.com/MrDodson/robot
 
 Originally published on [RobotlegsJS-SignalMediator](https://github.com/cuongdd2/RobotlegsJS-SignalMediator).
 
-Installation
----
+## Installation
 
 You can get the latest release and the type definitions using [NPM](https://www.npmjs.com/):
 
@@ -63,8 +61,7 @@ Then follow the [installation instructions](https://github.com/RobotlegsJS/Robot
 + [eventemitter3](https://github.com/primus/eventemitter3)
 + [reflect-metadata](https://github.com/rbuckton/reflect-metadata)
 
-Usage
----
+## Usage
 
 ```typescript
 import { inject, injectable } from "@robotlegsjs/core";
@@ -100,7 +97,12 @@ export class MyUserMediator extends SignalMediator<MyUserView> {
 }
 ```
 
-License
----
+## RobotlegsJS Pixi SignalMediator for enterprise
+
+Available as part of the Tidelift Subscription
+
+The maintainers of [@robotlegsjs/pixi-signalmediator](https://github.com/RobotlegsJS/RobotlegsJS-Pixi-SignalMediator) and thousands of other packages are working with Tidelift to deliver commercial support and maintenance for the open source dependencies you use to build your applications. Save time, reduce risk, and improve code health, while paying the maintainers of the exact dependencies you use. [Learn more.](https://tidelift.com/subscription/pkg/npm-robotlegsjs-pixi-signalmediator?utm_source=npm-robotlegsjs-pixi-signalmediator&utm_medium=referral&utm_campaign=enterprise&utm_term=repo)
+
+## License
 
 [MIT](LICENSE)
