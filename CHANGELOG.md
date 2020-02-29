@@ -49,6 +49,10 @@ Types of changes:
 
 - Add **Enterprise Support** information (see #120).
 
+#### Changed
+
+- Update `tslib` to version `1.11.1` (see #128).
+
 #### Security
 
 - Migrate to [terser-webpack-plugin](https://github.com/webpack-contrib/terser-webpack-plugin) to solve security vulnerability (see #126).
