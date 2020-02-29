@@ -51,6 +51,8 @@ Types of changes:
 
 - Update `phaser-ce` to version `2.14.0` (see #49).
 
+- Update `tslib` to version `1.11.1` (see #51).
+
 #### Security
 
 - Migrate to [terser-webpack-plugin](https://github.com/webpack-contrib/terser-webpack-plugin) to solve security vulnerability (see #46).
