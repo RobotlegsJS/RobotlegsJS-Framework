@@ -41,6 +41,14 @@ Types of changes:
 - in case of vulnerabilities.
 -->
 
+#### Breaking Change
+
+- Update [`@robotlegsjs/core`](https://github.com/RobotlegsJS/RobotlegsJS) to version `^2.0.0` (see #112).
+
+  - Migrate array notation from `Array<SomeType>` to `SomeType[]`.
+
+  - The rest of the `Public API` remains unchanged.
+
 #### Added
 
 - Add **Tidelift** as funding option (see #107).
