@@ -41,6 +41,14 @@ Types of changes:
 - in case of vulnerabilities.
 -->
 
+#### Breaking Change
+
+- Update [`@robotlegsjs/core`](https://github.com/RobotlegsJS/RobotlegsJS) to version `^2.0.0` (see #49 and #54).
+
+  - Migrate array notation from `Array<SomeType>` to `SomeType[]`.
+
+  - The rest of the `Public API` remains unchanged.
+
 #### Added
 
 - Add **Tidelift** as funding option (see #50).
@@ -52,6 +60,8 @@ Types of changes:
 - Update `phaser-ce` to version `2.14.0` (see #52).
 
 - Update `tslib` to version `1.11.1` (see #53).
+
+- Update dev dependencies to latest version.
 
 #### Security
 
