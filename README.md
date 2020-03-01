@@ -122,6 +122,10 @@ yarn install
 yarn start
 ```
 
+## Checking the example
+
+You can check our example project [here](http://robotlegsjs.io/RobotlegsJS-OpenFL).
+
 ## RobotlegsJS OpenFL for enterprise
 
 Available as part of the Tidelift Subscription
