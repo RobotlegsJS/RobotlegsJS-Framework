@@ -51,6 +51,8 @@ Types of changes:
 
 - Add **Enterprise Support** information (see #60).
 
+- Add link to example project on `Readme` (see #63).
+
 #### Changed
 
 - Update `tslib` to version `1.11.1` (see #62).
