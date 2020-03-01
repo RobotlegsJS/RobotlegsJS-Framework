@@ -156,12 +156,12 @@
     inversify "^5.0.1"
     tslib "^1.10.0"
 
-"@robotlegsjs/signals@^1.0.3":
-  version "1.0.3"
-  resolved "https://registry.npmjs.org/@robotlegsjs/signals/-/signals-1.0.3.tgz#c7dc75a0230b277ffefd53363912ca0cd2f01bbf"
-  integrity sha512-TMN+vX+jceyTSieYK3VesXTZ8jEQTRQeNSwC108V4B9P6wiVCXOWtLW63+IpaizLSFMwlmmDXM6C6Fte7d/teQ==
+"@robotlegsjs/signals@^1.1.0":
+  version "1.1.0"
+  resolved "https://registry.npmjs.org/@robotlegsjs/signals/-/signals-1.1.0.tgz#3e227777cdc3503c7726a15b41740b56c1c299b1"
+  integrity sha512-2fFN87/IFSZSnO3TiA+xzRVP6Ift8+/3R6vafcpzu4HYtF86158xFZt2LAMdjb8RLTnIM+Ftbrbq+iGlsmmDtQ==
   dependencies:
-    tslib "^1.10.0"
+    tslib "^1.11.1"
 
 "@sinonjs/commons@^1", "@sinonjs/commons@^1.6.0", "@sinonjs/commons@^1.7.0":
   version "1.7.1"
