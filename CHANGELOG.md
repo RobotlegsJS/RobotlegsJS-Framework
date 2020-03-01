@@ -43,6 +43,10 @@ Types of changes:
 - in case of vulnerabilities.
 -->
 
+## Signals 1.0.0
+
+### [v1.1.0](https://github.com/RobotlegsJS/SignalsJS/releases/tag/1.1.0) - 2020-03-01
+
 #### Added
 
 - Add **Tidelift** as funding option (see #119).
@@ -53,11 +57,11 @@ Types of changes:
 
 - Update `tslib` to version `1.11.1` (see #128).
 
+- Update dev dependencies to latest version.
+
 #### Security
 
 - Migrate to [terser-webpack-plugin](https://github.com/webpack-contrib/terser-webpack-plugin) to solve security vulnerability (see #126).
-
-## Signals 1.0.0
 
 ### [v1.0.3](https://github.com/RobotlegsJS/SignalsJS/releases/tag/1.0.3) - 2019-10-20
 
