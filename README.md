@@ -127,6 +127,28 @@ There are some predefined events on the  Palidor to help to remove a view or flo
 + PalidorEvent.REMOVE_ALL_FLOATING_VIEWS:
 + PalidorEvent.REMOVE_LAST_FLOATING_VIEW_ADDED:
 
+## Running the example
+
+Run the following commands to run the example:
+
+```bash
+npm install
+npm start
+```
+
+or:
+
+```bash
+yarn install
+yarn start
+```
+
+[See full example here](example/index.ts)
+
+## Checking the example
+
+You can check our example project [here](http://robotlegsjs.io/RobotlegsJS-Pixi-Palidor).
+
 ## Examples
 
 + [Game - Battleship](https://github.com/RonaldoSetzer/GAME-Battleship)

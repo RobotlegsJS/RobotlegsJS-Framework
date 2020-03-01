@@ -24,6 +24,7 @@ dist-test
 lib
 lib-example
 lib-test
+gh-pages
 
 # nyc test coverage
 .nyc_output
