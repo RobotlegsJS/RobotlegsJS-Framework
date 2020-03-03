@@ -7,7 +7,7 @@
 
 import { Context } from "@robotlegsjs/core";
 import { ContextView } from "@robotlegsjs/pixi";
-import { autoDetectRenderer, CanvasRenderer, Container, WebGLRenderer } from "pixi.js";
+import { autoDetectRenderer, Renderer, Container } from "pixi.js";
 
 import { PalidorBundle } from "../src/robotlegs/bender/bundles/palidor/PalidorBundle";
 import { ExampleConfig } from "./config/ExampleConfig";
@@ -15,12 +15,14 @@ import { ExampleConfig } from "./config/ExampleConfig";
 export class Game {
     private canvas: HTMLCanvasElement;
     private stage: Container;
-    private renderer: CanvasRenderer | WebGLRenderer;
+    private renderer: Renderer;
     private context: Context;
 
     constructor() {
         this.canvas = <HTMLCanvasElement>document.getElementById("canvas");
-        this.renderer = autoDetectRenderer(960, 600, {
+        this.renderer = autoDetectRenderer({
+            width: 960,
+            height: 600,
             backgroundColor: 0xffffff,
             view: this.canvas
         });

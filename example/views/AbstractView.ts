@@ -5,7 +5,7 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import { Container, Graphics, Sprite, Text, TextStyle } from "pixi.js";
+import { Container, Graphics, Sprite, Text, TextStyle, TilingSprite } from "pixi.js";
 
 import { ColorButton } from "./../components/ColorButton";
 
@@ -45,7 +45,7 @@ export class AbstractView extends Container {
         this.addChild(titleText);
     }
     private createImages(imgUrl: string): void {
-        const logo: Sprite = PIXI.Sprite.fromImage(imgUrl);
+        const logo: Sprite = TilingSprite.from(imgUrl, 230, 230);
         logo.anchor.set(0.5);
         logo.position.set(480, 300);
         this.addChild(logo);
