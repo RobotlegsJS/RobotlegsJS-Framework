@@ -43,6 +43,10 @@ Types of changes:
 - in case of vulnerabilities.
 -->
 
+#### Changed
+
+- Update dev dependencies to latest version.
+
 ## Signals 1.0.0
 
 ### [v1.1.0](https://github.com/RobotlegsJS/SignalsJS/releases/tag/1.1.0) - 2020-03-01
