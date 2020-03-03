@@ -41,6 +41,10 @@ Types of changes:
 - in case of vulnerabilities.
 -->
 
+## RobotlegsJS-Macrobot 2.0.0
+
+### [v2.0.0](https://github.com/RobotlegsJS/RobotlegsJS-Macrobot/releases/tag/2.0.0) - 2020-03-03
+
 #### Breaking Change
 
 - Update [`@robotlegsjs/core`](https://github.com/RobotlegsJS/RobotlegsJS) to version `^2.0.0` (see #120).
