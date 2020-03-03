@@ -61,6 +61,8 @@ Types of changes:
 
 - Update [`@robotlegsjs/signals`](https://github.com/RobotlegsJS/SignalsJS) to version `1.1.0` (see #111).
 
+- Update dev dependencies to latest version.
+
 #### Security
 
 - Migrate to [terser-webpack-plugin](https://github.com/webpack-contrib/terser-webpack-plugin) to solve security vulnerability (see #106).
