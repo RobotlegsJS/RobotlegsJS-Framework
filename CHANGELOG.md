@@ -49,6 +49,12 @@ Types of changes:
 
   - The rest of the `Public API` remains unchanged.
 
+- Update [`@robotlegsjs/signalcommandmap`](https://github.com/RobotlegsJS/RobotlegsJS-SignalCommandMap) to version `^2.0.0` (see #120).
+
+  - Migrate array notation from `Array<SomeType>` to `SomeType[]`.
+
+  - The rest of the `Public API` remains unchanged.
+
 #### Added
 
 - Add **Tidelift** as funding option (see #116).
