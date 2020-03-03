@@ -86,7 +86,7 @@
     "@robotlegsjs/signalcommandmap": "^2.0.0",
     "@types/bluebird": "^3.5.30",
     "@types/chai": "^4.2.10",
-    "@types/mocha": "^7.0.1",
+    "@types/mocha": "^7.0.2",
     "@types/sinon": "^7.5.2",
     "@types/webpack-env": "^1.15.1",
     "bluebird": "^3.7.2",
