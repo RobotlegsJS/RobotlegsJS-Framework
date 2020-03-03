@@ -83,7 +83,7 @@
   },
   "devDependencies": {
     "@istanbuljs/nyc-config-typescript": "^1.0.1",
-    "@robotlegsjs/signalcommandmap": "^1.0.2",
+    "@robotlegsjs/signalcommandmap": "^2.0.0",
     "@types/bluebird": "^3.5.29",
     "@types/chai": "^4.2.9",
     "@types/mocha": "^7.0.1",
