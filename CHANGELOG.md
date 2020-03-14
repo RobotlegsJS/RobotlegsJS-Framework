@@ -39,6 +39,22 @@ Types of changes:
 - in case of vulnerabilities.
 -->
 
+#### Breaking Change
+
+- Update `pixi.js` to version `^5.0.0` (see #113).
+
+  - `eventemitter3` package is not necessary anymore, you should remove this dependency from your `package.json`.
+
+  - `@types/pixi.js` package is not necessary anymore, you should remove this dependency from your `package.json`.
+
+  - For compatibility with version 4 of `pixi.js`, use `@robotlegsjs/pixi-palidor` version 1.
+
+- Update [`@robotlegsjs/pixi`](https://github.com/RobotlegsJS/RobotlegsJS-Pixi) to version `^2.0.0` (see #113).
+
+  - Migrate array notation from `Array<SomeType>` to `SomeType[]`.
+
+  - The rest of the `Public API` remains unchanged.
+
 #### Added
 
 - Add **Tidelift** as funding option (see #109).
@@ -50,6 +66,8 @@ Types of changes:
 - Update `tslib` to version `1.11.1` (see #111).
 
 - Deploy example project (see #112).
+
+- Update dev dependencies to latest version.
 
 #### Security
 
