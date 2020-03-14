@@ -88,7 +88,6 @@
     "@types/bluebird": "^3.5.30",
     "@types/chai": "^4.2.11",
     "@types/mocha": "^7.0.2",
-    "@types/pixi.js": "^5.0.0",
     "@types/sinon": "^7.5.2",
     "@types/webpack-env": "^1.15.1",
     "bluebird": "^3.7.2",
