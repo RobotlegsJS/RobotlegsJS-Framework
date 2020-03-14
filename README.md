@@ -45,7 +45,7 @@ npm install pixi.js@^5.0.0 reflect-metadata --save
 or
 
 ```bash
-yarn add pixi.js@^5.0.0 reflect-metadata --save
+yarn add pixi.js@^5.0.0 reflect-metadata
 ```
 
 #### For `pixi.js` version 4
