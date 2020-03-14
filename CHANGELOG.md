@@ -41,6 +41,14 @@ Types of changes:
 - in case of vulnerabilities.
 -->
 
+#### Changed
+
+- Update dev dependencies to latest version.
+
+#### Security
+
+- Bump acorn to solve security vulnerability (see #114).
+
 ## RobotlegsJS-SignalCommandMap 2.0.0
 
 ### [v2.0.0](https://github.com/RobotlegsJS/RobotlegsJS-SignalCommandMap/releases/tag/2.0.0) - 2020-03-03
