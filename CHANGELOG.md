@@ -67,6 +67,8 @@ Types of changes:
 
 - Deploy example project (see #112).
 
+- Update dev dependencies to latest version.
+
 #### Security
 
 - Migrate to [terser-webpack-plugin](https://github.com/webpack-contrib/terser-webpack-plugin) to solve security vulnerability (see #108).
