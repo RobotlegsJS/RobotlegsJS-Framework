@@ -47,6 +47,10 @@ Types of changes:
 
 - Update dev dependencies to latest version.
 
+#### Security
+
+- Bump acorn to solve security vulnerability (see #130).
+
 ## Signals 1.0.0
 
 ### [v1.1.0](https://github.com/RobotlegsJS/SignalsJS/releases/tag/1.1.0) - 2020-03-01
