@@ -45,7 +45,7 @@ npm install pixi.js@^5.0.0 reflect-metadata --save
 or
 
 ```bash
-yarn add pixi.js@^5.0.0 reflect-metadata --save
+yarn add pixi.js@^5.0.0 reflect-metadata
 ```
 
 #### For `pixi.js` version 4
@@ -63,7 +63,7 @@ npm install pixi.js@4.2.1 eventemitter3@^2.0.0 reflect-metadata --save
 or
 
 ```bash
-yarn add pixi.js@4.2.1 eventemitter3@^2.0.0 reflect-metadata --save
+yarn add pixi.js@4.2.1 eventemitter3@^2.0.0 reflect-metadata
 ```
 
 Then follow the [installation instructions](https://github.com/RobotlegsJS/RobotlegsJS/blob/master/README.md#installation) of **RobotlegsJS** library to complete the setup of your project.
@@ -77,7 +77,6 @@ Then follow the [installation instructions](https://github.com/RobotlegsJS/Robot
 **Peer Dependencies**
 
 + [PixiJS](https://github.com/pixijs/pixi.js)
-+ [eventemitter3](https://github.com/primus/eventemitter3)
 + [reflect-metadata](https://github.com/rbuckton/reflect-metadata)
 
 ## Usage

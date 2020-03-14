@@ -39,6 +39,10 @@ Types of changes:
 - in case of vulnerabilities.
 -->
 
+#### Changed
+
+- Update readme to remove `eventemitter3` as peer dependency (see #114).
+
 ## RobotlegsJS-Pixi-Palidor 2.0.0
 
 ### [v2.0.0](https://github.com/RobotlegsJS/RobotlegsJS-Pixi-Palidor/releases/tag/2.0.0) - 2020-03-14
