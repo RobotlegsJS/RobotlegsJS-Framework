@@ -45,6 +45,10 @@ Types of changes:
 - in case of vulnerabilities.
 -->
 
+## Robotlegs-CreateJS 2.0.0
+
+### [v2.0.0](https://github.com/RobotlegsJS/RobotlegsJS-CreateJS/releases/tag/2.0.0) - 2020-03-14
+
 #### Breaking Change
 
 - Update [`@robotlegsjs/core`](https://github.com/RobotlegsJS/RobotlegsJS) to version `^2.0.0` (see #58 and #64).
