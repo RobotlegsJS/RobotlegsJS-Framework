@@ -57,7 +57,7 @@ Types of changes:
 
 #### Changed
 
-- Update `phaser-ce` to version `2.14.0` (see #49).
+- Update `phaser-ce` to version `2.15.0` (see #53).
 
 - Update `tslib` to version `1.11.1` (see #51).
 
