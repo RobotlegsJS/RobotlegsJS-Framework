@@ -41,6 +41,10 @@ Types of changes:
 - in case of vulnerabilities.
 -->
 
+## RobotlegsJS-Pixi-SignalMediator 2.0.0
+
+### [v2.0.0](https://github.com/RobotlegsJS/RobotlegsJS-Pixi-SignalMediator/releases/tag/2.0.0) - 2020-03-14
+
 #### Breaking Change
 
 - Update `pixi.js` to version `^5.0.0` (see #117).
