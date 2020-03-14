@@ -41,6 +41,10 @@ Types of changes:
 - in case of vulnerabilities.
 -->
 
+## RobotlegsJS Phaser-CE 2.0.0
+
+### [v2.0.0](https://github.com/RobotlegsJS/RobotlegsJS-Phaser-CE/releases/tag/2.0.0) - 2020-03-14
+
 #### Breaking Change
 
 - Update [`@robotlegsjs/core`](https://github.com/RobotlegsJS/RobotlegsJS) to version `^2.0.0` (see #49 and #54).
