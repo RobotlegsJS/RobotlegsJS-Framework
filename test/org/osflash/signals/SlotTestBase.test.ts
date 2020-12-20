@@ -315,7 +315,7 @@ describe("SlotListTest", () => {
     });
 
     it("slot_params_with_one_param_should_be_sent_through_to_listener", () => {
-        let listener: Function = function(e: MockEvent, ...args: any[]): void {
+        let listener: Function = function (e: MockEvent, ...args: any[]): void {
             assert.isNotNull(e);
 
             assert.isTrue(typeof args[0] === "number");
@@ -331,7 +331,7 @@ describe("SlotListTest", () => {
     it("slot_params_with_multiple_params_should_be_sent_through_to_listener", () => {
         let slot: ISlot;
 
-        let listener: Function = function(e: MockEvent, ...args: any[]): void {
+        let listener: Function = function (e: MockEvent, ...args: any[]): void {
             assert.isNotNull(e);
 
             assert.isTrue(typeof args[0] === "number");
@@ -351,7 +351,7 @@ describe("SlotListTest", () => {
     });
 
     it("slot_params_should_not_effect_other_slots", () => {
-        let listener0: Function = function(e: MockEvent): void {
+        let listener0: Function = function (e: MockEvent): void {
             assert.isNotNull(e);
 
             assert.equal(arguments.length, 1);
@@ -359,7 +359,7 @@ describe("SlotListTest", () => {
 
         signal.add(listener0);
 
-        let listener1: Function = function(e: MockEvent): void {
+        let listener1: Function = function (e: MockEvent): void {
             assert.isNotNull(e);
 
             assert.equal(arguments.length, 2);
@@ -373,7 +373,7 @@ describe("SlotListTest", () => {
     });
 
     it("verify_chaining_of_slot_params", () => {
-        let listener: Function = function(e: MockEvent, ...args: any[]): void {
+        let listener: Function = function (e: MockEvent, ...args: any[]): void {
             assert.isNotNull(e);
 
             assert.equal(args.length, 1);
@@ -386,7 +386,7 @@ describe("SlotListTest", () => {
     });
 
     it("verify_chaining_and_concat_of_slot_params", () => {
-        let listener: Function = function(e: MockEvent, ...args: any[]): void {
+        let listener: Function = function (e: MockEvent, ...args: any[]): void {
             assert.isNotNull(e);
 
             assert.equal(args.length, 2);
@@ -401,7 +401,7 @@ describe("SlotListTest", () => {
     });
 
     it("verify_chaining_and_pushing_on_to_slot_params", () => {
-        let listener: Function = function(e: MockEvent, ...args: any[]): void {
+        let listener: Function = function (e: MockEvent, ...args: any[]): void {
             assert.isNotNull(e);
 
             assert.equal(args.length, 2);

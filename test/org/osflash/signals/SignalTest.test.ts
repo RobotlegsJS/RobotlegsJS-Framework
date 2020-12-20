@@ -25,7 +25,7 @@ describe("SignalTest", () => {
         signal = new Signal();
     });
 
-    it("dispatch_should_pass_event_to_listener_but_not_set_signal_or_target_properties", done => {
+    it("dispatch_should_pass_event_to_listener_but_not_set_signal_or_target_properties", (done) => {
         signal.add(async.add(checkGenericEvent, 10, done));
         signal.dispatch(new GenericEvent());
     });
@@ -44,7 +44,7 @@ describe("SignalTest", () => {
         signal.add(redispatchSignal.dispatch);
     });
 
-    it("slot_params_should_be_sent_through_to_listener", done => {
+    it("slot_params_should_be_sent_through_to_listener", (done) => {
         let slot: ISlot;
 
         function assertResults(num: number, str: string, sprite: Sprite): void {
@@ -59,7 +59,7 @@ describe("SignalTest", () => {
         signal.dispatch();
     });
 
-    it("slot_params_with_with_10_params_should_be_sent_through_to_listener", done => {
+    it("slot_params_with_with_10_params_should_be_sent_through_to_listener", (done) => {
         // Test the function.apply - maying sure we get everything we ask for.
         let slot: ISlot;
 

@@ -27,7 +27,7 @@ describe("SignalDispatchNoArgsTest", () => {
         signal = null;
     });
 
-    it("dispatch_no_args_should_call_listener_with_no_args", done => {
+    it("dispatch_no_args_should_call_listener_with_no_args", (done) => {
         signal.add(async.add(onCompleted, 10, done));
         signal.dispatch();
     });
@@ -36,7 +36,7 @@ describe("SignalDispatchNoArgsTest", () => {
         assert.equal(0, arguments.length);
     }
 
-    it("addOnce_in_handler_and_dispatch_should_call_new_listener", done => {
+    it("addOnce_in_handler_and_dispatch_should_call_new_listener", (done) => {
         signal.addOnce(async.add(addOnceInHandler, 10));
         signal.dispatch(done);
     });

@@ -28,7 +28,7 @@ describe("RedispatchedEventTest", () => {
         completed = null;
     });
 
-    it("dispatch_event_already_dispatched_should_clone_it", done => {
+    it("dispatch_event_already_dispatched_should_clone_it", (done) => {
         completed.add(async.add(redispatchEvent, 10));
         originalEvent = new GenericEvent();
         completed.dispatch(originalEvent, done);

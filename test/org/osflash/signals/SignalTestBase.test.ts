@@ -53,7 +53,7 @@ describe("SignalTestBase", () => {
 
     it("add_2_listeners_remove_2nd_then_dispatch_should_call_1st_not_2nd_listener", () => {
         let called = false;
-        signal.add(function(e: any = null): void {
+        signal.add(function (e: any = null): void {
             called = true;
         });
         signal.add(failIfCalled);
@@ -101,10 +101,10 @@ describe("SignalTestBase", () => {
     it("add_two_listeners_and_dispatch_should_call_both", () => {
         let calledA = false;
         let calledB = false;
-        signal.add(function(e: any = null): void {
+        signal.add(function (e: any = null): void {
             calledA = true;
         });
-        signal.add(function(e: any = null): void {
+        signal.add(function (e: any = null): void {
             calledB = true;
         });
         dispatchSignal();
@@ -118,7 +118,7 @@ describe("SignalTestBase", () => {
         signal.add(listener);
     });
 
-    it("dispatch_2_listeners_1st_listener_removes_itself_then_2nd_listener_is_still_called", done => {
+    it("dispatch_2_listeners_1st_listener_removes_itself_then_2nd_listener_is_still_called", (done) => {
         signal.add(selfRemover);
 
         // async.add verifies the second listener is called
@@ -126,13 +126,13 @@ describe("SignalTestBase", () => {
         dispatchSignal();
     });
 
-    it("dispatch_2_listeners_1st_listener_removes_all_then_2nd_listener_is_still_called", done => {
+    it("dispatch_2_listeners_1st_listener_removes_all_then_2nd_listener_is_still_called", (done) => {
         signal.add(async.add(allRemover, 10));
         signal.add(async.add(newEmptyHandler(), 10, done));
         dispatchSignal();
     });
 
-    it("adding_a_listener_during_dispatch_should_not_call_it", done => {
+    it("adding_a_listener_during_dispatch_should_not_call_it", (done) => {
         signal.add(async.add(addListenerDuringDispatch, 10, done));
         dispatchSignal();
     });

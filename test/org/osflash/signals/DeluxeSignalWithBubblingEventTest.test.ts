@@ -51,7 +51,7 @@ describe("DeluxeSignalWithBubblingEventTest", () => {
         assert.equal(theParent, theChild.parent, "theChild's parent is this");
     });
 
-    it("dispatch_bubbling_event_from_theGrandChild_should_bubble_to_parent_IBubbleHandler()", done => {
+    it("dispatch_bubbling_event_from_theGrandChild_should_bubble_to_parent_IBubbleHandler()", (done) => {
         // If cancelTimeout() isn"t called, this test will fail.
         cancelTimeout = async.add(null, 1500);
 

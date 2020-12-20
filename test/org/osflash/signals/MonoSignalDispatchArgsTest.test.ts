@@ -36,7 +36,7 @@ describe("MonoSignalDispatchArgsTest", () => {
         signal.dispatch(new Date(), [], "extra value object");
     });
 
-    it("dispatch_values_with_no_value_classes_defined_should_pass_to_listener()", done => {
+    it("dispatch_values_with_no_value_classes_defined_should_pass_to_listener()", (done) => {
         let signalNoValueClasses: Signal = new Signal();
         signalNoValueClasses.add(async.add(checkDispatchedValues, 10, done));
         signalNoValueClasses.dispatch(22, "done", new Date());
