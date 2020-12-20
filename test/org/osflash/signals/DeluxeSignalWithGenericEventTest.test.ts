@@ -37,7 +37,7 @@ describe("DeluxeSignalWithGenericEventTest", () => {
         assert.equal(0, completed.numListeners);
     });
 
-    it("add_listener_and_dispatch_event_should_pass_event_to_listener()", done => {
+    it("add_listener_and_dispatch_event_should_pass_event_to_listener()", (done) => {
         completed.add(async.add(checkGenericEvent, 10, done));
         completed.dispatch(new GenericEvent());
     });
@@ -49,7 +49,7 @@ describe("DeluxeSignalWithGenericEventTest", () => {
         assert.equal(e.target, e.currentTarget, "event.target is e.currentTarget because event does not bubble");
     }
 
-    it("add_two_listeners_and_dispatch_should_call_both()", done => {
+    it("add_two_listeners_and_dispatch_should_call_both()", (done) => {
         completed.add(async.add(checkGenericEvent, 10));
         completed.add(async.add(checkGenericEvent, 10, done));
         completed.dispatch(new GenericEvent());
@@ -61,7 +61,7 @@ describe("DeluxeSignalWithGenericEventTest", () => {
         assert.equal(0, completed.numListeners, "there should be no listeners");
     });
 
-    it("add_one_listener_and_dispatch_then_listener_remove_itself_using_event_signal()", done => {
+    it("add_one_listener_and_dispatch_then_listener_remove_itself_using_event_signal()", (done) => {
         delegate = async.add(remove_myself_from_signal, 10, done);
         completed.add(delegate);
         completed.dispatch(new GenericEvent());
@@ -83,7 +83,7 @@ describe("DeluxeSignalWithGenericEventTest", () => {
         completed.dispatch(new GenericEvent());
     });
 
-    it("add_2_listeners_remove_2nd_then_dispatch_should_call_1st_not_2nd_listener()", done => {
+    it("add_2_listeners_remove_2nd_then_dispatch_should_call_1st_not_2nd_listener()", (done) => {
         completed.add(async.add(checkGenericEvent, 10, done));
         let delegateCallback: Function = failIfCalled;
         completed.add(delegateCallback);

@@ -56,7 +56,7 @@ describe("PriorityListenersTest", () => {
         }
     }
 
-    it("listener_added_second_with_higher_priority_should_be_called_first()", done => {
+    it("listener_added_second_with_higher_priority_should_be_called_first()", (done) => {
         listenersToCall = 2;
         callback = done;
 
@@ -66,7 +66,7 @@ describe("PriorityListenersTest", () => {
         completed.dispatch();
     });
 
-    it("listeners_added_with_same_priority_should_be_called_in_order_added()", done => {
+    it("listeners_added_with_same_priority_should_be_called_in_order_added()", (done) => {
         listenersToCall = 3;
         callback = done;
 
@@ -77,7 +77,7 @@ describe("PriorityListenersTest", () => {
         completed.dispatch();
     });
 
-    it("listeners_with_high_priority_should_be_called_first", done => {
+    it("listeners_with_high_priority_should_be_called_first", (done) => {
         listenersToCall = 3;
         callback = done;
 

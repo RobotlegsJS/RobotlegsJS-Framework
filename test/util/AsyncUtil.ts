@@ -13,7 +13,7 @@ export class AsyncUtil {
     }
 
     private createTimeout(callback: Function, delay: number, doneCallback?: Function, ...args: any[]) {
-        setTimeout(function() {
+        setTimeout(function () {
             if (callback) {
                 callback(...args);
             }

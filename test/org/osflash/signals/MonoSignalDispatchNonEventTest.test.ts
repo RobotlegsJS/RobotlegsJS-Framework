@@ -29,7 +29,7 @@ describe("MonoSignalDispatchNonEventTest", () => {
     /**
      * Captures bug where dispatching 0 was considered null.
      */
-    it("dispatch_zero_should_call_listener_with_zero()", done => {
+    it("dispatch_zero_should_call_listener_with_zero()", (done) => {
         completed = new MonoSignal(Number);
         completed.add(async.add(onZero, 10, done));
         completed.dispatch(0);
@@ -39,7 +39,7 @@ describe("MonoSignalDispatchNonEventTest", () => {
         assert.equal(0, num);
     }
 
-    it("dispatch_2_zeroes_should_call_listener_with_2_zeroes()", done => {
+    it("dispatch_2_zeroes_should_call_listener_with_2_zeroes()", (done) => {
         completed = new MonoSignal(Number, Number);
         completed.add(async.add(onZeroZero, 10, done));
         completed.dispatch(0, 0);
@@ -50,7 +50,7 @@ describe("MonoSignalDispatchNonEventTest", () => {
         assert.equal(0, b);
     }
 
-    it("dispatch_null_should_call_listener_with_null()", done => {
+    it("dispatch_null_should_call_listener_with_null()", (done) => {
         completed.addOnce(async.add(checkNullDate, 10, done));
         completed.dispatch(null);
     });

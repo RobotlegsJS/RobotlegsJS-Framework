@@ -21,7 +21,7 @@ describe("SlotPauseResumeTest", () => {
         signal = new Signal();
     });
 
-    it("add_listener_pause_then_resume_on_slot_should_dispatch", done => {
+    it("add_listener_pause_then_resume_on_slot_should_dispatch", (done) => {
         let slot: ISlot = signal.add(async.add(checkGenericEvent, 10, done));
         slot.enabled = false;
         slot.enabled = true;
@@ -29,7 +29,7 @@ describe("SlotPauseResumeTest", () => {
         signal.dispatch(new GenericEvent());
     });
 
-    it("addOnce_listener_pause_then_resume_on_slot_should_dispatch", done => {
+    it("addOnce_listener_pause_then_resume_on_slot_should_dispatch", (done) => {
         let slot: ISlot = signal.addOnce(async.add(checkGenericEvent, 10, done));
         slot.enabled = false;
         slot.enabled = true;
