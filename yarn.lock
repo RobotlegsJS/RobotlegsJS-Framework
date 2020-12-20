@@ -3932,10 +3932,10 @@ lodash.toarray@^4.4.0:
   resolved "https://registry.npmjs.org/lodash.toarray/-/lodash.toarray-4.4.0.tgz#24c4bfcd6b2fba38bfd0594db1179d8e9b656561"
   integrity sha1-JMS/zWsvuji/0FlNsRedjptlZWE=
 
-lodash@4.17.12:
-  version "4.17.12"
-  resolved "https://registry.npmjs.org/lodash/-/lodash-4.17.12.tgz#a712c74fdc31f7ecb20fe44f157d802d208097ef"
-  integrity sha512-+CiwtLnsJhX03p20mwXuvhoebatoh5B3tt+VvYlrPgZC1g36y+RRbkufX95Xa+X4I59aWEacDFYwnJZiyBh9gA==
+lodash@4.17.20:
+  version "4.17.20"
+  resolved "https://registry.npmjs.org/lodash/-/lodash-4.17.20.tgz#b44a9b6297bcb698f1c51a3545a2b3b368d59c52"
+  integrity sha512-PlhdFcillOINfeV7Ni6oF1TAEayyZBoZ8bcshTHqOYJYlrqzRK5hagpagky5o4HfCzzd1TRkXPMFq6cKk9rGmA==
 
 lodash@^4.17.10, lodash@^4.17.11, lodash@^4.17.13, lodash@^4.17.14, lodash@^4.17.15, lodash@^4.17.4:
   version "4.17.15"
@@ -4995,17 +4995,17 @@ public-encrypt@^4.0.0:
     randombytes "^2.0.1"
     safe-buffer "^5.1.2"
 
-publish-please@^5.5.1:
-  version "5.5.1"
-  resolved "https://registry.npmjs.org/publish-please/-/publish-please-5.5.1.tgz#a49675d6589d860854729494c07aed5fc0f09b30"
-  integrity sha512-KFX+79e3QhNswHp1wLfwXN7rLf6tO3+7jcY5ELjOVR8rtjqDiXu9jrDbHqSapI1xwiPMdersn2O4c8PwUuOZtA==
+publish-please@^5.5.2:
+  version "5.5.2"
+  resolved "https://registry.npmjs.org/publish-please/-/publish-please-5.5.2.tgz#e71185872b40d961889094d312696b1a985394be"
+  integrity sha512-jSoWJj6sXHixoRPxBNv0hURDXw1OqTb8kypobzyBSvGxEVwbGN1BLrpMbDf24g4On7X0zLQDV7+9zwXAwDJ2Og==
   dependencies:
     chalk "2.4.1"
     cp-sugar "1.0.0"
     elegant-status "1.1.0"
     inquirer "6.2.0"
     is-ci "1.2.1"
-    lodash "4.17.12"
+    lodash "4.17.20"
     micromatch "3.1.10"
     node-emoji "1.8.1"
     osenv "0.1.5"

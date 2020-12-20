@@ -103,7 +103,7 @@
     "mocha": "^7.1.0",
     "nyc": "^15.1.0",
     "prettier": "^2.2.1",
-    "publish-please": "^5.5.1",
+    "publish-please": "^5.5.2",
     "puppeteer": "^2.1.1",
     "reflect-metadata": "^0.1.13",
     "rimraf": "^3.0.2",
