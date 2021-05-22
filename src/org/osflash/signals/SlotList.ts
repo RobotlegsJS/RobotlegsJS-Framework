@@ -17,6 +17,7 @@ export class SlotList {
     /**
      * Represents an empty list. Used as the list terminator.
      */
+    // eslint-disable-next-line @typescript-eslint/naming-convention
     public static NIL: SlotList = new SlotList(null, null);
 
     // Although those variables are not const, they would be if AS3 would handle it correctly.
@@ -234,7 +235,7 @@ export class SlotList {
      *
      * @param   listener The Function being searched for
      * @return  The ISlot in this list associated with the listener parameter through the ISlot.listener property.
-     *          Returns null if no such ISlot instance exists or the list is empty.
+     * Returns null if no such ISlot instance exists or the list is empty.
      */
     public find(listener: Function): ISlot {
         if (!this.nonEmpty) {

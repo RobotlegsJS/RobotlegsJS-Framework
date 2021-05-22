@@ -10,7 +10,9 @@ import { ISlot } from "./ISlot";
 /**
  *
  */
+// eslint-disable-next-line @typescript-eslint/naming-convention
 export const IOnceSignal = Symbol("IOnceSignal");
+// eslint-disable-next-line no-redeclare
 export interface IOnceSignal {
     /**
      * An optional array of classes defining the types of parameters sent to listeners.

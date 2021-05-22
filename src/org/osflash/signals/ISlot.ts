@@ -12,7 +12,9 @@
  * @author Joa Ebert
  * @author Robert Penner
  */
+// eslint-disable-next-line @typescript-eslint/naming-convention
 export const ISlot = Symbol("ISlot");
+// eslint-disable-next-line no-redeclare
 export interface ISlot {
     /**
      * The listener associated with this slot.
