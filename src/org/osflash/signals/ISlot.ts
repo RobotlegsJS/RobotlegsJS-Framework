@@ -12,7 +12,7 @@
  * @author Joa Ebert
  * @author Robert Penner
  */
-export let ISlot = Symbol("ISlot");
+export const ISlot = Symbol("ISlot");
 export interface ISlot {
     /**
      * The listener associated with this slot.

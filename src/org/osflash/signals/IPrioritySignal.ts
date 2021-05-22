@@ -11,7 +11,7 @@ import { ISignal } from "./ISignal";
 /**
  *
  */
-export let IPrioritySignal = Symbol("IPrioritySignal");
+export const IPrioritySignal = Symbol("IPrioritySignal");
 export interface IPrioritySignal extends ISignal {
     /**
      * Subscribes a listener for the signal.
