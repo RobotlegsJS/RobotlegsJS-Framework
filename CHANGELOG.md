@@ -45,6 +45,8 @@ Types of changes:
 
 #### Changed
 
+- Migrate to `eslint` (see #148).
+
 - Update `tslib` to version `2.0.3` (see #144).
 
 - Update dev dependencies to latest version.
