@@ -40,7 +40,7 @@ export class DeluxeSignal extends PrioritySignal {
      * NOTE: Subclasses cannot call super.apply(null, valueClasses),
      * but this constructor has logic to support super(valueClasses).
      */
-    constructor(target: any = null, ...valueClasses: any[]) {
+    public constructor(target: any = null, ...valueClasses: any[]) {
         // Cannot use super.apply(null, valueClasses), so allow the subclass to call super(valueClasses).
         valueClasses = valueClasses.length === 1 && valueClasses[0] instanceof Array ? valueClasses[0] : valueClasses;
 

@@ -37,7 +37,7 @@ export class SlotList {
      * @throws ArgumentError <code>ArgumentError</code>: Parameters head and tail are null. Use the NIL element instead.
      * @throws ArgumentError <code>ArgumentError</code>: Parameter head cannot be null.
      */
-    constructor(head: ISlot, tail: SlotList = null) {
+    public constructor(head: ISlot, tail: SlotList = null) {
         if (!head && !tail) {
             if (SlotList.NIL) {
                 throw new Error("Parameters head and tail are null. Use the NIL element instead.");
