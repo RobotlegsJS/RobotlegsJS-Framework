@@ -56,6 +56,7 @@ export interface ISlot {
     /**
      * Dispatches one argument to a listener.
      * Existing <code>params</code> are appended before the listener is called.
+     *
      * @param value The argument for the listener.
      */
     execute1(value: any): void;
@@ -64,6 +65,7 @@ export interface ISlot {
      * Executes a listener of arity <code>n</code> where <code>n</code> is
      * <code>valueObjects.length</code>.
      * Existing <code>params</code> are appended before the listener is called.
+     *
      * @param valueObjects The array of arguments to be applied to the listener.
      */
     execute(valueObjects: any[]): void;

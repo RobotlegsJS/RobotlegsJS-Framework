@@ -13,7 +13,7 @@ import { ISlot } from "./ISlot";
  * Allows the valueClasses to be set in MXML, e.g.
  * <signals:Signal id="nameChanged">{[String, uint]}</signals:Signal>
  */
-/*[DefaultProperty("valueClasses")]*/
+/* [DefaultProperty("valueClasses")]*/
 
 /**
  * A MonoSignal can have only one listener.
@@ -25,6 +25,7 @@ export class MonoSignal implements ISignal {
 
     /**
      * Creates a MonoSignal instance to dispatch value objects.
+     *
      * @param    valueClasses Any number of class references that enable type checks in dispatch().
      * For example, new Signal(String, uint)
      * would allow: signal.dispatch("the Answer", 42)
@@ -43,7 +44,7 @@ export class MonoSignal implements ISignal {
      * @inheritDoc
      * @throws ArgumentError <code>ArgumentError</code>: Invalid valueClasses argument: item at index should be a Class but was not.
      */
-    /*[ArrayElementType("Class")]*/
+    /* [ArrayElementType("Class")]*/
     public get valueClasses(): any[] {
         return this._valueClasses;
     }

@@ -16,7 +16,7 @@ export class MessageEvent extends GenericEvent implements IEvent {
         this.message = message;
     }
 
-    /*override*/
+    /* override*/
     public clone(): IEvent {
         return new MessageEvent(this.message);
     }

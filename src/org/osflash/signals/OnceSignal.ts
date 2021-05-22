@@ -14,7 +14,7 @@ import { Slot } from "./Slot";
  * Allows the valueClasses to be set in MXML, e.g.
  * <signals:Signal id="nameChanged">{[String, uint]}</signals:Signal>
  */
-/*[DefaultProperty("valueClasses")]*/
+/* [DefaultProperty("valueClasses")]*/
 
 /**
  * Signal dispatches events to multiple listeners.
@@ -32,6 +32,7 @@ export class OnceSignal implements IOnceSignal {
 
     /**
      * Creates a Signal instance to dispatch value objects.
+     *
      * @param    valueClasses Any number of class references that enable type checks in dispatch().
      * For example, new Signal(String, uint)
      * would allow: signal.dispatch("the Answer", 42)
@@ -50,7 +51,7 @@ export class OnceSignal implements IOnceSignal {
      * @inheritDoc
      * @throws ArgumentError <code>ArgumentError</code>: Invalid valueClasses argument: item at index should be a Class but was not.
      */
-    /*[ArrayElementType("Class")]*/
+    /* [ArrayElementType("Class")]*/
     public get valueClasses(): any[] {
         return this._valueClasses;
     }

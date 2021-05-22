@@ -28,10 +28,6 @@ export class Child implements IBubbleEventHandler {
     }
 
     public onEventBubbled(event: IEvent): boolean {
-        if (this.listener !== null) {
-            return this.listener(event);
-        } else {
-            return !this.popsBubbles;
-        }
+        return this.listener !== null ? this.listener(event) : !this.popsBubbles;
     }
 }
