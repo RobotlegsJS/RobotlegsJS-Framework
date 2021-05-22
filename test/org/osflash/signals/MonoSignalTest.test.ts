@@ -20,6 +20,31 @@ describe("MonoSignalTest", () => {
     let async: AsyncUtil = new AsyncUtil();
     let signal: MonoSignal;
 
+    function checkGenericEvent(e: GenericEvent): void {
+        assert.isNotOk(e.signal, "event.signal is not set by Signal");
+        assert.isNotOk(e.target, "event.target is not set by Signal");
+    }
+
+    function failIfCalled(e: IEvent): void {
+        assert.fail("event handler should not have been called.");
+    }
+
+    function newEmptyHandler(): Function {
+        return function (e: any): void {};
+    }
+
+    function checkSprite(sprite: Sprite): void {
+        assert.isTrue(sprite instanceof Sprite);
+    }
+
+    function addListenerDuringDispatch(): void {
+        try {
+            signal.add(failIfCalled);
+        } catch (error) {
+            assert.isTrue(signal.numListeners === 1, "there should be 1 listener");
+        }
+    }
+
     beforeEach(() => {
         signal = new MonoSignal();
     });
@@ -37,11 +62,6 @@ describe("MonoSignalTest", () => {
         signal.add(async.add(checkGenericEvent, 10, done));
         signal.dispatch(new GenericEvent());
     });
-
-    function checkGenericEvent(e: GenericEvent): void {
-        assert.isNotOk(e.signal, "event.signal is not set by Signal");
-        assert.isNotOk(e.target, "event.target is not set by Signal");
-    }
 
     it("add_two_listeners_should_throw_an_error()", () => {
         assert.throws(() => {
@@ -77,19 +97,11 @@ describe("MonoSignalTest", () => {
         signal.dispatch(new GenericEvent());
     });
 
-    function failIfCalled(e: IEvent): void {
-        assert.fail("event handler should not have been called.");
-    }
-
     it("add_listener_then_remove_function_not_in_listeners_should_do_nothing()", () => {
         signal.add(newEmptyHandler());
         signal.remove(newEmptyHandler());
         assert.equal(1, signal.numListeners);
     });
-
-    function newEmptyHandler(): Function {
-        return function (e: any): void {};
-    }
 
     it("addOnce_same_listener_twice_should_throw_error()", () => {
         assert.throws(() => {
@@ -107,22 +119,10 @@ describe("MonoSignalTest", () => {
         signal.dispatch(new Sprite());
     });
 
-    function checkSprite(sprite: Sprite): void {
-        assert.isTrue(sprite instanceof Sprite);
-    }
-
     it("adding_a_listener_during_dispatch_should_not_call_it()", (done) => {
         signal.add(async.add(addListenerDuringDispatch, 10, done));
         signal.dispatch(new GenericEvent());
     });
-
-    function addListenerDuringDispatch(): void {
-        try {
-            signal.add(failIfCalled);
-        } catch (error) {
-            assert.isTrue(signal.numListeners === 1, "there should be 1 listener");
-        }
-    }
 
     it("removed_listener_should_return_slot()", () => {
         let listener: Function = function (): void {};

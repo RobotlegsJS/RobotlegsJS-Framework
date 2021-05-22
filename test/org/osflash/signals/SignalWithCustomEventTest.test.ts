@@ -19,6 +19,10 @@ describe("SignalWithCustomEventTest", () => {
     let async: AsyncUtil = new AsyncUtil();
     let messaged: Signal;
 
+    function onMessage(e: MessageEvent): void {
+        assert.equal("ok", e.message, "message value in the event");
+    }
+
     beforeEach(() => {
         messaged = new Signal(MessageEvent);
     });
@@ -66,8 +70,4 @@ describe("SignalWithCustomEventTest", () => {
     it("constructing_signal_with_class_and_non_class_should_throw_ArgumentError()", () => {
         assert.throws(() => new Signal(Date, 42));
     });
-
-    function onMessage(e: MessageEvent): void {
-        assert.equal("ok", e.message, "message value in the event");
-    }
 });

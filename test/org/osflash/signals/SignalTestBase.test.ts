@@ -20,6 +20,22 @@ describe("SignalTestBase", () => {
     let signal: ISignal;
     let async: AsyncUtil = new AsyncUtil();
 
+    function selfRemover(e: any = null): void {
+        signal.remove(selfRemover);
+    }
+
+    function allRemover(e: any = null): void {
+        signal.removeAll();
+    }
+
+    function dispatchSignal(): void {
+        signal.dispatch(new MockEvent("test"));
+    }
+
+    function addListenerDuringDispatch(e: any = null): void {
+        signal.add(failIfCalled);
+    }
+
     beforeEach(() => {
         signal = new Signal();
     });
@@ -178,20 +194,4 @@ describe("SignalTestBase", () => {
         let slot: ISlot = signal.add(listener);
         assert.equal(slot, signal.remove(listener));
     });
-
-    function selfRemover(e: any = null): void {
-        signal.remove(selfRemover);
-    }
-
-    function allRemover(e: any = null): void {
-        signal.removeAll();
-    }
-
-    function dispatchSignal(): void {
-        signal.dispatch(new MockEvent("test"));
-    }
-
-    function addListenerDuringDispatch(e: any = null): void {
-        signal.add(failIfCalled);
-    }
 });

@@ -21,6 +21,29 @@ describe("PrioritySignalOnceTest", () => {
     const B = "B";
     const C = "C";
 
+    function listenerA(): void {
+        gotListenerDispatchOrder.push(A);
+    }
+
+    function listenerB(): void {
+        gotListenerDispatchOrder.push(B);
+    }
+
+    function listenerC(): void {
+        gotListenerDispatchOrder.push(C);
+    }
+
+    function assertArrayEqual(expected: any[], got: any[]): void {
+        assert.equal(expected.length, got.length, "array length unequal");
+        for (let i = 0; i < gotListenerDispatchOrder.length; i++) {
+            assert.equal(expected[i], got[i], "@i=" + i);
+        }
+    }
+
+    function assertNumListenersEqual(expected: number, got: number): void {
+        assert.equal(expected, got);
+    }
+
     beforeEach(() => {
         gotListenerDispatchOrder = [];
         prioritySignal = new PrioritySignal();
@@ -135,27 +158,4 @@ describe("PrioritySignalOnceTest", () => {
         assertArrayEqual(expectedListenerDispatchOrder, gotListenerDispatchOrder);
         assertNumListenersEqual(prioritySignal.numListeners, 0);
     });
-
-    function listenerA(): void {
-        gotListenerDispatchOrder.push(A);
-    }
-
-    function listenerB(): void {
-        gotListenerDispatchOrder.push(B);
-    }
-
-    function listenerC(): void {
-        gotListenerDispatchOrder.push(C);
-    }
-
-    function assertArrayEqual(expected: any[], got: any[]): void {
-        assert.equal(expected.length, got.length, "array length unequal");
-        for (let i = 0; i < gotListenerDispatchOrder.length; i++) {
-            assert.equal(expected[i], got[i], "@i=" + i);
-        }
-    }
-
-    function assertNumListenersEqual(expected: number, got: number): void {
-        assert.equal(expected, got);
-    }
 });

@@ -14,6 +14,31 @@ import { MonoSignal } from "../../../../src/org/osflash/signals/MonoSignal";
 describe("MonoSignalDispatchVarArgsTest", () => {
     let completed: MonoSignal;
 
+    function handlerArgsAt0(): Function {
+        return function (...args: any[]): void {
+            assert.deepEqual([0, 1, 2, 3], args, "Arguments should be [0,1,2,3]");
+            assert.equal(4, args.length, "Number of var arguments should be 4");
+        };
+    }
+
+    function handlerArgsAt1(): Function {
+        return function (a: number, ...args: any[]): void {
+            assert.deepEqual([1, 2, 3], args, "Arguments should be [1,2,3]");
+            assert.equal(3, args.length, "Number of var arguments should be 3");
+        };
+    }
+
+    function handlerArgsAt2(): Function {
+        return function (a: number, b: number, ...args: any[]): void {
+            assert.deepEqual([2, 3], args, "Arguments should be [2,3]");
+            assert.equal(2, args.length, "Number of var arguments should be 2");
+        };
+    }
+
+    function verifyNumArgs(...args: any[]): void {
+        assert.equal(4, args.length, "Number of arguments should be 4");
+    }
+
     beforeEach(() => {
         completed = new MonoSignal(Number, Number, Number, Number);
     });
@@ -54,29 +79,4 @@ describe("MonoSignalDispatchVarArgsTest", () => {
         completed.add(verifyNumArgs);
         completed.dispatch(0, 1, 2, 3);
     });
-
-    function handlerArgsAt0(): Function {
-        return function (...args: any[]): void {
-            assert.deepEqual([0, 1, 2, 3], args, "Arguments should be [0,1,2,3]");
-            assert.equal(4, args.length, "Number of var arguments should be 4");
-        };
-    }
-
-    function handlerArgsAt1(): Function {
-        return function (a: number, ...args: any[]): void {
-            assert.deepEqual([1, 2, 3], args, "Arguments should be [1,2,3]");
-            assert.equal(3, args.length, "Number of var arguments should be 3");
-        };
-    }
-
-    function handlerArgsAt2(): Function {
-        return function (a: number, b: number, ...args: any[]): void {
-            assert.deepEqual([2, 3], args, "Arguments should be [2,3]");
-            assert.equal(2, args.length, "Number of var arguments should be 2");
-        };
-    }
-
-    function verifyNumArgs(...args: any[]): void {
-        assert.equal(4, args.length, "Number of arguments should be 4");
-    }
 });
