@@ -17,6 +17,7 @@ export class SlotList {
     /**
      * Represents an empty list. Used as the list terminator.
      */
+    // eslint-disable-next-line @typescript-eslint/naming-convention
     public static NIL: SlotList = new SlotList(null, null);
 
     // Although those variables are not const, they would be if AS3 would handle it correctly.
@@ -37,7 +38,7 @@ export class SlotList {
      * @throws ArgumentError <code>ArgumentError</code>: Parameters head and tail are null. Use the NIL element instead.
      * @throws ArgumentError <code>ArgumentError</code>: Parameter head cannot be null.
      */
-    constructor(head: ISlot, tail: SlotList = null) {
+    public constructor(head: ISlot, tail: SlotList = null) {
         if (!head && !tail) {
             if (SlotList.NIL) {
                 throw new Error("Parameters head and tail are null. Use the NIL element instead.");
@@ -83,6 +84,7 @@ export class SlotList {
 
     /**
      * Prepends a slot to this list.
+     *
      * @param    slot The item to be prepended.
      * @return    A list consisting of slot followed by all elements of this list.
      *
@@ -97,6 +99,7 @@ export class SlotList {
      * Note: appending is O(n). Where possible, prepend which is O(1).
      * In some cases, many list items must be cloned to
      * avoid changing existing lists.
+     *
      * @param    slot The item to be appended.
      * @return    A list consisting of all elements of this list followed by slot.
      */
@@ -133,6 +136,7 @@ export class SlotList {
     /**
      * Insert a slot into the list in a position according to its priority.
      * The higher the priority, the closer the item will be inserted to the list head.
+     *
      * @params slot The item to be inserted.
      *
      * @throws ArgumentError <code>ArgumentError</code>: Parameters head and tail are null. Use the NIL element instead.
@@ -172,6 +176,7 @@ export class SlotList {
     /**
      * Returns the slots in this list that do not contain the supplied listener.
      * Note: assumes the listener is not repeated within the list.
+     *
      * @param    listener The function to remove.
      * @return A list consisting of all elements of this list that do not have listener.
      */
@@ -227,9 +232,10 @@ export class SlotList {
 
     /**
      * Retrieves the ISlot associated with a supplied listener within the SlotList.
+     *
      * @param   listener The Function being searched for
      * @return  The ISlot in this list associated with the listener parameter through the ISlot.listener property.
-     *          Returns null if no such ISlot instance exists or the list is empty.
+     * Returns null if no such ISlot instance exists or the list is empty.
      */
     public find(listener: Function): ISlot {
         if (!this.nonEmpty) {

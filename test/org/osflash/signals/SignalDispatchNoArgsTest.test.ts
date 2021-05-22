@@ -18,6 +18,15 @@ describe("SignalDispatchNoArgsTest", () => {
 
     let signal: ISignal;
 
+    function onCompleted(): void {
+        assert.equal(0, arguments.length);
+    }
+
+    function addOnceInHandler(done: Function): void {
+        signal.addOnce(async.add(() => {}, 10, done));
+        signal.dispatch();
+    }
+
     beforeEach(() => {
         signal = new Signal();
     });
@@ -32,17 +41,8 @@ describe("SignalDispatchNoArgsTest", () => {
         signal.dispatch();
     });
 
-    function onCompleted(): void {
-        assert.equal(0, arguments.length);
-    }
-
     it("addOnce_in_handler_and_dispatch_should_call_new_listener", (done) => {
         signal.addOnce(async.add(addOnceInHandler, 10));
         signal.dispatch(done);
     });
-
-    function addOnceInHandler(done: Function): void {
-        signal.addOnce(async.add(() => {}, 10, done));
-        signal.dispatch();
-    }
 });

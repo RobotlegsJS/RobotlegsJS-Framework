@@ -33,7 +33,7 @@ export class Slot implements ISlot {
      * @throws ArgumentError <code>ArgumentError</code>: Given listener is <code>null</code>.
      * @throws Error <code>Error</code>: Internal signal reference has not been set yet.
      */
-    constructor(listener: Function, signal: IOnceSignal, once: boolean = false, priority: number = 0) {
+    public constructor(listener: Function, signal: IOnceSignal, once: boolean = false, priority: number = 0) {
         this._listener = listener;
         this._once = once;
         this._signal = signal;

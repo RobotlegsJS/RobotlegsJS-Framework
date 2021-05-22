@@ -13,7 +13,7 @@ import { IEvent } from "./events/IEvent";
  * Allows the valueClasses to be set in MXML, e.g.
  * <signals:Signal id="nameChanged">{[String, uint]}</signals:Signal>
  */
-/*[DefaultProperty("valueClasses")]*/
+/* [DefaultProperty("valueClasses")]*/
 /**
  * Signal dispatches events to multiple listeners.
  * It is inspired by C# events and delegates, and by
@@ -29,6 +29,7 @@ export class DeluxeSignal extends PrioritySignal {
 
     /**
      * Creates a DeluxeSignal instance to dispatch events on behalf of a target object.
+     *
      * @param    target The object the signal is dispatching events on behalf of.
      * @param    valueClasses Any number of class references that enable type checks in dispatch().
      * For example, new DeluxeSignal(this, String, uint)
@@ -39,7 +40,7 @@ export class DeluxeSignal extends PrioritySignal {
      * NOTE: Subclasses cannot call super.apply(null, valueClasses),
      * but this constructor has logic to support super(valueClasses).
      */
-    constructor(target: any = null, ...valueClasses: any[]) {
+    public constructor(target: any = null, ...valueClasses: any[]) {
         // Cannot use super.apply(null, valueClasses), so allow the subclass to call super(valueClasses).
         valueClasses = valueClasses.length === 1 && valueClasses[0] instanceof Array ? valueClasses[0] : valueClasses;
 
@@ -68,7 +69,7 @@ export class DeluxeSignal extends PrioritySignal {
      * @throws ArgumentError <code>ArgumentError</code>: Incorrect number of arguments.
      * @throws ArgumentError <code>ArgumentError</code>: Value object is not an instance of the appropriate valueClasses Class.
      */
-    /*override*/
+    /* override*/
     public dispatch(...valueObjects: any[]): void {
         // Validate value objects against pre-defined value classes.
         let numValueClasses: number = this._valueClasses.length;

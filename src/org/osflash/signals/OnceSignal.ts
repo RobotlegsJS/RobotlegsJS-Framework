@@ -14,7 +14,7 @@ import { Slot } from "./Slot";
  * Allows the valueClasses to be set in MXML, e.g.
  * <signals:Signal id="nameChanged">{[String, uint]}</signals:Signal>
  */
-/*[DefaultProperty("valueClasses")]*/
+/* [DefaultProperty("valueClasses")]*/
 
 /**
  * Signal dispatches events to multiple listeners.
@@ -32,6 +32,7 @@ export class OnceSignal implements IOnceSignal {
 
     /**
      * Creates a Signal instance to dispatch value objects.
+     *
      * @param    valueClasses Any number of class references that enable type checks in dispatch().
      * For example, new Signal(String, uint)
      * would allow: signal.dispatch("the Answer", 42)
@@ -41,7 +42,7 @@ export class OnceSignal implements IOnceSignal {
      * NOTE: In AS3, subclasses cannot call super.apply(null, valueClasses),
      * but this constructor has logic to support super(valueClasses).
      */
-    constructor(...valueClasses: any[]) {
+    public constructor(...valueClasses: any[]) {
         // Cannot use super.apply(null, valueClasses), so allow the subclass to call super(valueClasses).
         this.valueClasses = valueClasses.length === 1 && valueClasses[0] instanceof Array ? valueClasses[0] : valueClasses;
     }
@@ -50,7 +51,7 @@ export class OnceSignal implements IOnceSignal {
      * @inheritDoc
      * @throws ArgumentError <code>ArgumentError</code>: Invalid valueClasses argument: item at index should be a Class but was not.
      */
-    /*[ArrayElementType("Class")]*/
+    /* [ArrayElementType("Class")]*/
     public get valueClasses(): any[] {
         return this._valueClasses;
     }

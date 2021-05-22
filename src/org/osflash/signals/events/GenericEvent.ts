@@ -19,7 +19,7 @@ export class GenericEvent implements IEvent {
     protected _currentTarget: any;
     protected _signal: IPrioritySignal;
 
-    constructor(bubbles: boolean = false) {
+    public constructor(bubbles: boolean = false) {
         this._bubbles = bubbles;
     }
 

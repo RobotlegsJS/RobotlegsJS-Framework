@@ -17,6 +17,13 @@ describe("SignalDispatchArgsTest", () => {
 
     let completed: Signal;
 
+    function checkDispatchedValues(a: number, b: string, c: Date): void {
+        assert.equal(3, arguments.length, "correct number of arguments were dispatched");
+        assert.equal(22, a, "the uint was dispatched");
+        assert.equal("done", b, "the String was dispatched");
+        assert.isTrue(c instanceof Date, "a Date was dispatched");
+    }
+
     beforeEach(() => {
         completed = new Signal();
     });
@@ -46,13 +53,6 @@ describe("SignalDispatchArgsTest", () => {
         signalNoValueClasses.add(async.add(checkDispatchedValues, 10));
         signalNoValueClasses.dispatch(22, "done", new Date());
     });
-
-    function checkDispatchedValues(a: number, b: string, c: Date): void {
-        assert.equal(3, arguments.length, "correct number of arguments were dispatched");
-        assert.equal(22, a, "the uint was dispatched");
-        assert.equal("done", b, "the String was dispatched");
-        assert.isTrue(c instanceof Date, "a Date was dispatched");
-    }
 
     it("dispatch_one_correct_and_one_incorrect_value_object_should_throw_ArgumentError()", () => {
         let signal: Signal = new Signal(Date, Array);

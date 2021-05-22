@@ -1,25 +1,26 @@
-// Place your settings in this file to overwrite default and user settings.
 {
   "typescript.tsdk": "node_modules/typescript/lib",
-  "tslint.configFile": "tslint.test.json",
 
-  // Set the default
+  "editor.defaultFormatter": null,
   "editor.formatOnSave": false,
 
-  // Enable per-language
   "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": true
   },
 
   "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": true
   },
 
   "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": true
   },
 
   "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": true
   }
 }

@@ -10,7 +10,9 @@ import { ISlot } from "./ISlot";
 /**
  *
  */
-export let IOnceSignal = Symbol("IOnceSignal");
+// eslint-disable-next-line @typescript-eslint/naming-convention
+export const IOnceSignal = Symbol("IOnceSignal");
+// eslint-disable-next-line no-redeclare
 export interface IOnceSignal {
     /**
      * An optional array of classes defining the types of parameters sent to listeners.
@@ -26,6 +28,7 @@ export interface IOnceSignal {
      * Subscribes a one-time listener for this signal.
      * The signal will remove the listener automatically the first time it is called,
      * after the dispatch to all listeners is complete.
+     *
      * @param    listener A function with arguments
      * that matches the value classes dispatched by the signal.
      * If value classes are not specified (e.g. via Signal constructor), dispatch() can be called without arguments.
@@ -35,6 +38,7 @@ export interface IOnceSignal {
 
     /**
      * Dispatches an object to listeners.
+     *
      * @param    valueObjects    Any number of parameters to send to listeners. Will be type-checked against valueClasses.
      * @throws    ArgumentError    <code>ArgumentError</code>:    valueObjects are not compatible with valueClasses.
      */
@@ -42,6 +46,7 @@ export interface IOnceSignal {
 
     /**
      * Unsubscribes a listener from the signal.
+     *
      * @param    listener
      * @return a ISlot, which contains the Function passed as the parameter
      */

@@ -17,6 +17,19 @@ describe("MonoSignalDispatchNonEventTest", () => {
 
     let completed: MonoSignal;
 
+    function onZero(num: number): void {
+        assert.equal(0, num);
+    }
+
+    function onZeroZero(a: any, b: any): void {
+        assert.equal(0, a);
+        assert.equal(0, b);
+    }
+
+    function checkNullDate(date: Date): void {
+        assert.isNull(date);
+    }
+
     beforeEach(() => {
         completed = new MonoSignal(Date);
     });
@@ -35,27 +48,14 @@ describe("MonoSignalDispatchNonEventTest", () => {
         completed.dispatch(0);
     });
 
-    function onZero(num: number): void {
-        assert.equal(0, num);
-    }
-
     it("dispatch_2_zeroes_should_call_listener_with_2_zeroes()", (done) => {
         completed = new MonoSignal(Number, Number);
         completed.add(async.add(onZeroZero, 10, done));
         completed.dispatch(0, 0);
     });
 
-    function onZeroZero(a: any, b: any): void {
-        assert.equal(0, a);
-        assert.equal(0, b);
-    }
-
     it("dispatch_null_should_call_listener_with_null()", (done) => {
         completed.addOnce(async.add(checkNullDate, 10, done));
         completed.dispatch(null);
     });
-
-    function checkNullDate(date: Date): void {
-        assert.isNull(date);
-    }
 });

@@ -17,6 +17,17 @@ describe("MonoSignalDispatchNoArgsTest", () => {
 
     let completed: MonoSignal;
 
+    function onCompleted(): void {
+        assert.equal(0, arguments.length);
+    }
+
+    function secondAddOnceListener(): void {}
+
+    function addOnceInHandler(doneCallback: Function): void {
+        completed.addOnce(async.add(secondAddOnceListener, 10, doneCallback));
+        completed.dispatch();
+    }
+
     beforeEach(() => {
         completed = new MonoSignal();
     });
@@ -31,19 +42,8 @@ describe("MonoSignalDispatchNoArgsTest", () => {
         completed.dispatch();
     });
 
-    function onCompleted(): void {
-        assert.equal(0, arguments.length);
-    }
-
     it("addOnce_in_handler_and_dispatch_should_call_new_listener()", (done) => {
         completed.addOnce(async.add(addOnceInHandler, 10));
         completed.dispatch(done);
     });
-
-    function addOnceInHandler(doneCallback: Function): void {
-        completed.addOnce(async.add(secondAddOnceListener, 10, doneCallback));
-        completed.dispatch();
-    }
-
-    function secondAddOnceListener(): void {}
 });

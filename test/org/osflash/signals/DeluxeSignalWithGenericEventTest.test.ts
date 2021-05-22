@@ -23,6 +23,26 @@ describe("DeluxeSignalWithGenericEventTest", () => {
     let delegate: Function;
     let self = this;
 
+    function checkGenericEvent(e: IEvent): void {
+        assert.isTrue(e instanceof GenericEvent, "instance of GenericEvent");
+        assert.equal(completed, e.signal, "event.signal points to the originating Signal");
+        assert.equal(e.target, self, "event.target points to object containing the Signal");
+        assert.equal(e.target, e.currentTarget, "event.target is e.currentTarget because event does not bubble");
+    }
+
+    function removeMyselfFromSignal(e: IEvent): void {
+        assert.equal(1, e.signal.numListeners, "listener still in signal");
+
+        // Can"t remove(arguments.callee) because it"s wrapped with delegate created by async.add().
+        e.signal.remove(delegate);
+
+        assert.equal(0, e.signal.numListeners, "listener removed from signal");
+    }
+
+    function checkSprite(sprite: Sprite): void {
+        assert.isTrue(sprite instanceof Sprite);
+    }
+
     beforeEach(() => {
         completed = new DeluxeSignal(self);
     });
@@ -42,13 +62,6 @@ describe("DeluxeSignalWithGenericEventTest", () => {
         completed.dispatch(new GenericEvent());
     });
 
-    function checkGenericEvent(e: IEvent): void {
-        assert.isTrue(e instanceof GenericEvent, "instance of GenericEvent");
-        assert.equal(completed, e.signal, "event.signal points to the originating Signal");
-        assert.equal(e.target, self, "event.target points to object containing the Signal");
-        assert.equal(e.target, e.currentTarget, "event.target is e.currentTarget because event does not bubble");
-    }
-
     it("add_two_listeners_and_dispatch_should_call_both()", (done) => {
         completed.add(async.add(checkGenericEvent, 10));
         completed.add(async.add(checkGenericEvent, 10, done));
@@ -62,19 +75,10 @@ describe("DeluxeSignalWithGenericEventTest", () => {
     });
 
     it("add_one_listener_and_dispatch_then_listener_remove_itself_using_event_signal()", (done) => {
-        delegate = async.add(remove_myself_from_signal, 10, done);
+        delegate = async.add(removeMyselfFromSignal, 10, done);
         completed.add(delegate);
         completed.dispatch(new GenericEvent());
     });
-
-    function remove_myself_from_signal(e: IEvent): void {
-        assert.equal(1, e.signal.numListeners, "listener still in signal");
-
-        // Can"t remove(arguments.callee) because it"s wrapped with delegate created by async.add().
-        e.signal.remove(delegate);
-
-        assert.equal(0, e.signal.numListeners, "listener removed from signal");
-    }
 
     it("add_listener_then_remove_then_dispatch_should_not_call_listener()", () => {
         let delegateCallback: Function = failIfCalled;
@@ -130,8 +134,4 @@ describe("DeluxeSignalWithGenericEventTest", () => {
         // an error would be thrown and test would fail.
         completed.dispatch(new Sprite());
     });
-
-    function checkSprite(sprite: Sprite): void {
-        assert.isTrue(sprite instanceof Sprite);
-    }
 });

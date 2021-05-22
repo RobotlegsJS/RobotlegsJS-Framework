@@ -20,17 +20,11 @@ describe("PriorityListenersTest", () => {
     let listenersCalled: any[];
     let callback: Function;
 
-    beforeEach(() => {
-        completed = new DeluxeSignal(this);
-        listenersCalled = [];
-    });
-
-    afterEach(() => {
-        completed.removeAll();
-        completed = null;
-        listenersCalled = null;
-        callback = null;
-    });
+    function checkCallback(): void {
+        if (listenersCalled.length >= listenersToCall) {
+            callback();
+        }
+    }
 
     function listener0(): void {
         listenersCalled.push(listener0);
@@ -50,11 +44,17 @@ describe("PriorityListenersTest", () => {
         checkCallback();
     }
 
-    function checkCallback(): void {
-        if (listenersCalled.length >= listenersToCall) {
-            callback();
-        }
-    }
+    beforeEach(() => {
+        completed = new DeluxeSignal(this);
+        listenersCalled = [];
+    });
+
+    afterEach(() => {
+        completed.removeAll();
+        completed = null;
+        listenersCalled = null;
+        callback = null;
+    });
 
     it("listener_added_second_with_higher_priority_should_be_called_first()", (done) => {
         listenersToCall = 2;

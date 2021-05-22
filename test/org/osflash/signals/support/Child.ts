@@ -16,7 +16,7 @@ export class Child implements IBubbleEventHandler {
     public listener: Function = null;
     public popsBubbles: boolean = false;
 
-    constructor(parent: any = null, name: string = "", listener: Function = null) {
+    public constructor(parent: any = null, name: string = "", listener: Function = null) {
         this.parent = parent;
         this.name = name;
         this.listener = listener;
@@ -28,10 +28,6 @@ export class Child implements IBubbleEventHandler {
     }
 
     public onEventBubbled(event: IEvent): boolean {
-        if (this.listener !== null) {
-            return this.listener(event);
-        } else {
-            return !this.popsBubbles;
-        }
+        return this.listener !== null ? this.listener(event) : !this.popsBubbles;
     }
 }

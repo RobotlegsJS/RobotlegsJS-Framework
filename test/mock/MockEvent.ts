@@ -6,7 +6,7 @@
  */
 
 export class MockEvent {
-    constructor(public type: string) {
+    public constructor(public type: string) {
         this.type = type;
     }
 }

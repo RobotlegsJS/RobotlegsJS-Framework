@@ -17,6 +17,13 @@ describe("SignalDispatchExtraArgsTest", () => {
 
     let completed: Signal;
 
+    function onCompleted(a: number, b: string, c: Date): void {
+        assert.equal(3, arguments.length);
+        assert.equal(22, a);
+        assert.equal("done", b);
+        assert.isTrue(c instanceof Date);
+    }
+
     beforeEach(() => {
         completed = new Signal();
     });
@@ -30,11 +37,4 @@ describe("SignalDispatchExtraArgsTest", () => {
         completed.add(async.add(onCompleted, 10, done));
         completed.dispatch(22, "done", new Date());
     });
-
-    function onCompleted(a: number, b: string, c: Date): void {
-        assert.equal(3, arguments.length);
-        assert.equal(22, a);
-        assert.equal("done", b);
-        assert.isTrue(c instanceof Date);
-    }
 });

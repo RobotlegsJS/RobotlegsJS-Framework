@@ -19,6 +19,30 @@ describe("SlotTest", () => {
     let expected: any[];
     let received: any[];
 
+    function listener0(): void {
+        received = [];
+    }
+
+    function listener1(value: any): void {
+        received = [value];
+    }
+
+    function listener2(value1: any, value2: any): void {
+        received = [value1, value2];
+    }
+
+    function listener3(value1: any, value2: any, value3: any): void {
+        received = [value1, value2, value3];
+    }
+
+    function listener4(value1: any, value2: any, value3: any, value4: any): void {
+        received = [value1, value2, value3, value4];
+    }
+
+    function listener5(value1: any, value2: any, value3: any, value4: any, value5: any): void {
+        received = [value1, value2, value3, value4, value5];
+    }
+
     beforeEach(() => {
         signal = new Signal();
         expected = null;
@@ -193,28 +217,4 @@ describe("SlotTest", () => {
         slot = new Slot(listener0, signal);
         assert.isString(slot.toString());
     });
-
-    function listener0(): void {
-        received = [];
-    }
-
-    function listener1(value: any): void {
-        received = [value];
-    }
-
-    function listener2(value1: any, value2: any): void {
-        received = [value1, value2];
-    }
-
-    function listener3(value1: any, value2: any, value3: any): void {
-        received = [value1, value2, value3];
-    }
-
-    function listener4(value1: any, value2: any, value3: any, value4: any): void {
-        received = [value1, value2, value3, value4];
-    }
-
-    function listener5(value1: any, value2: any, value3: any, value4: any, value5: any): void {
-        received = [value1, value2, value3, value4, value5];
-    }
 });
