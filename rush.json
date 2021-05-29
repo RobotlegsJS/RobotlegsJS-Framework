@@ -441,6 +441,11 @@
       "packageName": "@robotlegsjs/pixi-signalmediator",
       "projectFolder": "packages/pixi-signalmediator",
       "reviewCategory": "production"
+    },
+    {
+      "packageName": "@robotlegsjs/phaser-ce",
+      "projectFolder": "packages/phaser-ce",
+      "reviewCategory": "production"
     }
     // {
     //   /**
