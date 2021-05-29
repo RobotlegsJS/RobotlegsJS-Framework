@@ -28,8 +28,7 @@
     "publish-please": "npm run tslint && npm run autoformat && npm run clean-up && npm run test && publish-please"
   },
   "repository": {
-    "type": "git",
-    "url": "git@github.com:RobotlegsJS/RobotlegsJS-OpenFL.git"
+    "url": "https://github.com/RobotlegsJS/Robotlegs/tree/master/packages/openfl"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org"
@@ -46,9 +45,9 @@
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/RobotlegsJS/RobotlegsJS-OpenFL/issues"
+    "url": "https://github.com/RobotlegsJS/Robotlegs/issues"
   },
-  "homepage": "https://github.com/RobotlegsJS/RobotlegsJS-OpenFL#readme",
+  "homepage": "https://github.com/RobotlegsJS/Robotlegs/tree/master/packages/openfl#readme",
   "files": [
     "lib"
   ],

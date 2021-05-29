@@ -29,8 +29,7 @@
     "publish-please": "npm run tslint && npm run autoformat && npm run clean-up && npm run test && publish-please"
   },
   "repository": {
-    "type": "git",
-    "url": "git@github.com:RobotlegsJS/RobotlegsJS-Pixi-Palidor.git"
+    "url": "https://github.com/RobotlegsJS/Robotlegs/tree/master/packages/pixi-palidor"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org"
@@ -48,9 +47,9 @@
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/RobotlegsJS/RobotlegsJS-Pixi-Palidor/issues"
+    "url": "https://github.com/RobotlegsJS/Robotlegs/issues"
   },
-  "homepage": "https://github.com/RobotlegsJS/RobotlegsJS-Pixi-Palidor#readme",
+  "homepage": "https://github.com/RobotlegsJS/Robotlegs/tree/master/packages/pixi-palidor#readme",
   "files": [
     "lib"
   ],

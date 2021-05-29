@@ -26,8 +26,7 @@
     "publish-please": "npm run tslint && npm run autoformat && npm run clean-up && npm run test && publish-please"
   },
   "repository": {
-    "type": "git",
-    "url": "git@github.com:RobotlegsJS/RobotlegsJS-Phaser-CE.git"
+    "url": "https://github.com/RobotlegsJS/Robotlegs/tree/master/packages/phaser-ce"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org"
@@ -45,9 +44,9 @@
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/RobotlegsJS/RobotlegsJS-Phaser-CE/issues"
+    "url": "https://github.com/RobotlegsJS/Robotlegs/issues"
   },
-  "homepage": "https://github.com/RobotlegsJS/RobotlegsJS-Phaser-CE#readme",
+  "homepage": "https://github.com/RobotlegsJS/Robotlegs/tree/master/packages/phaser-ce#readme",
   "files": [
     "lib"
   ],

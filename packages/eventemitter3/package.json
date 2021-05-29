@@ -44,8 +44,7 @@
     "instrument": true
   },
   "repository": {
-    "type": "git",
-    "url": "git@github.com:RobotlegsJS/RobotlegsJS-EventEmitter3.git"
+    "url": "https://github.com/RobotlegsJS/Robotlegs/tree/master/packages/eventemitter3"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org"
@@ -61,9 +60,9 @@
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/RobotlegsJS/RobotlegsJS-EventEmitter3/issues"
+    "url": "https://github.com/RobotlegsJS/Robotlegs/issues"
   },
-  "homepage": "https://github.com/RobotlegsJS/RobotlegsJS-EventEmitter3#readme",
+  "homepage": "https://github.com/RobotlegsJS/Robotlegs/tree/master/packages/eventemitter3#readme",
   "files": [
     "lib"
   ],

@@ -44,8 +44,7 @@
     "instrument": true
   },
   "repository": {
-    "type": "git",
-    "url": "git@github.com:RobotlegsJS/RobotlegsJS-Pixi-SignalMediator.git"
+    "url": "https://github.com/RobotlegsJS/Robotlegs/tree/master/packages/pixi-signalmediator"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org"
@@ -64,9 +63,9 @@
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/RobotlegsJS/RobotlegsJS-Pixi-SignalMediator/issues"
+    "url": "https://github.com/RobotlegsJS/Robotlegs/issues"
   },
-  "homepage": "https://github.com/RobotlegsJS/RobotlegsJS-Pixi-SignalMediator#readme",
+  "homepage": "https://github.com/RobotlegsJS/Robotlegs/tree/master/packages/pixi-signalmediator#readme",
   "files": [
     "lib"
   ],

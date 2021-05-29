@@ -44,8 +44,7 @@
     "instrument": true
   },
   "repository": {
-    "type": "git",
-    "url": "git@github.com:RobotlegsJS/RobotlegsJS-SignalCommandMap.git"
+    "url": "https://github.com/RobotlegsJS/Robotlegs/tree/master/packages/signalcommandmap"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org"
@@ -62,9 +61,9 @@
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/RobotlegsJS/RobotlegsJS-SignalCommandMap/issues"
+    "url": "https://github.com/RobotlegsJS/Robotlegs/issues"
   },
-  "homepage": "https://github.com/RobotlegsJS/RobotlegsJS-SignalCommandMap#readme",
+  "homepage": "https://github.com/RobotlegsJS/Robotlegs/tree/master/packages/signalcommandmap#readme",
   "files": [
     "lib"
   ],

@@ -44,8 +44,7 @@
     "instrument": true
   },
   "repository": {
-    "type": "git",
-    "url": "git@github.com:RobotlegsJS/RobotlegsJS.git"
+    "url": "https://github.com/RobotlegsJS/Robotlegs/tree/master/packages/core"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org"
@@ -62,9 +61,9 @@
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/RobotlegsJS/RobotlegsJS/issues"
+    "url": "https://github.com/RobotlegsJS/Robotlegs/issues"
   },
-  "homepage": "https://github.com/RobotlegsJS/RobotlegsJS#readme",
+  "homepage": "https://github.com/RobotlegsJS/Robotlegs/tree/master/packages/core#readme",
   "files": [
     "lib"
   ],
