@@ -431,6 +431,11 @@
       "packageName": "@robotlegsjs/pixi",
       "projectFolder": "packages/pixi",
       "reviewCategory": "production"
+    },
+    {
+      "packageName": "@robotlegsjs/pixi-palidor",
+      "projectFolder": "packages/pixi-palidor",
+      "reviewCategory": "production"
     }
     // {
     //   /**
