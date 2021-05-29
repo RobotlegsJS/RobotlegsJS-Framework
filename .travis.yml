@@ -1,0 +1,24 @@
+dist: trusty
+addons:
+  chrome: stable
+language: node_js
+node_js:
+  - stable
+env:
+  - CODECLIMATE_REPO_TOKEN=81d6af056eb99397e5d254956816ac04c01b8a9295d16cf238a271291becbcb9
+  - CODECLIMATE_API_HOST=https://codebeat.co/webhooks/code_coverage CODECLIMATE_REPO_TOKEN=22af20ac-333a-40b9-9232-3c0373570b3b
+before_install:
+  - export CHROME_BIN=chromium-browser
+  - export DISPLAY=:99.0
+  - sh -e /etc/init.d/xvfb start
+  - yarn config set registry "https://registry.npmjs.org"
+  - yarn global add greenkeeper-lockfile@1
+  - yarn global add codeclimate-test-reporter
+before_script:
+  - greenkeeper-lockfile-update
+script:
+  - yarn test
+after_script:
+  - greenkeeper-lockfile-upload
+after_success:
+  - codeclimate-test-reporter < coverage/lcov.info
