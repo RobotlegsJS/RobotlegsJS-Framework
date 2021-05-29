@@ -426,6 +426,11 @@
       "packageName": "@robotlegsjs/openfl",
       "projectFolder": "packages/openfl",
       "reviewCategory": "production"
+    },
+    {
+      "packageName": "@robotlegsjs/pixi",
+      "projectFolder": "packages/pixi",
+      "reviewCategory": "production"
     }
     // {
     //   /**
