@@ -398,6 +398,11 @@
       "packageName": "@robotlegsjs/core",
       "projectFolder": "packages/core",
       "reviewCategory": "production"
+    },
+    {
+      "packageName": "@robotlegsjs/macrobot",
+      "projectFolder": "packages/macrobot",
+      "reviewCategory": "production"
     }
     // {
     //   /**
