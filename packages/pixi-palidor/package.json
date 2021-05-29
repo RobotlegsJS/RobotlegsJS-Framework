@@ -26,7 +26,6 @@
     "build:example": "webpack --config ./webpack.example.config.js --env.production",
     "deploy:example": "./deploy-example.sh",
     "prepare": "npm run clean-up && npm run compile:src",
-    "prepublishOnly": "publish-please guard",
     "publish-please": "npm run tslint && npm run autoformat && npm run clean-up && npm run test && publish-please"
   },
   "repository": {
