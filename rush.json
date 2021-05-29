@@ -407,7 +407,10 @@
     {
       "packageName": "@robotlegsjs/macrobot",
       "projectFolder": "packages/macrobot",
-      "reviewCategory": "production"
+      "reviewCategory": "production",
+      "cyclicDependencyProjects": [
+        "@robotlegsjs/signalcommandmap"
+      ]
     }
     // {
     //   /**
