@@ -8,6 +8,7 @@ specifiers:
   '@rush-temp/eventemitter3': file:./projects/eventemitter3.tgz
   '@rush-temp/macrobot': file:./projects/macrobot.tgz
   '@rush-temp/openfl': file:./projects/openfl.tgz
+  '@rush-temp/phaser-ce': file:./projects/phaser-ce.tgz
   '@rush-temp/pixi': file:./projects/pixi.tgz
   '@rush-temp/pixi-palidor': file:./projects/pixi-palidor.tgz
   '@rush-temp/pixi-signalmediator': file:./projects/pixi-signalmediator.tgz
@@ -60,6 +61,7 @@ dependencies:
   '@rush-temp/eventemitter3': file:projects/eventemitter3.tgz
   '@rush-temp/macrobot': file:projects/macrobot.tgz
   '@rush-temp/openfl': file:projects/openfl.tgz
+  '@rush-temp/phaser-ce': file:projects/phaser-ce.tgz
   '@rush-temp/pixi': file:projects/pixi.tgz
   '@rush-temp/pixi-palidor': file:projects/pixi-palidor.tgz
   '@rush-temp/pixi-signalmediator': file:projects/pixi-signalmediator.tgz
@@ -7533,6 +7535,10 @@ packages:
     resolution: {integrity: sha1-elfrVQpng/kRUzH89GY9XI4AelA=}
     dev: false
 
+  /phaser-ce/2.18.0:
+    resolution: {integrity: sha512-1j3X89aqCaQcmhoFxc7tbKFNlB1VS/BV3FRdu6qSCUfxNT7+A9ioOTfva4jcX8xyNcrgOKTMvB7dOUqYPbL8ZQ==}
+    dev: false
+
   /picomatch/2.3.0:
     resolution: {integrity: sha512-lY1Q/PiJGC2zOv/z391WOTD+Z02bCgsFfvxoXXf6h7kv9o+WmsmzYqrAwY63sNgOxE4xEdq0WyUnXfKeBrSvYw==}
     engines: {node: '>=8.6'}
@@ -10716,6 +10722,61 @@ packages:
       webpack-dev-server: 3.11.2_46edf965869dcc7c8d09e022f331d1ea
       webpack-merge: 4.2.2
       webpack-simple-progress-plugin: 0.0.4_webpack@4.46.0
+    transitivePeerDependencies:
+      - debug
+      - supports-color
+      - webpack-command
+    dev: false
+
+  file:projects/phaser-ce.tgz:
+    resolution: {integrity: sha512-t9JxAuss3rxmEjFljhxFld+K9mVsbmVZjPUZbYi9AbWNjjsSDDRkLJjM/LeIn5JCgOH1YZkyRSlPmMpwYt8zqQ==, tarball: file:projects/phaser-ce.tgz}
+    name: '@rush-temp/phaser-ce'
+    version: 0.0.0
+    dependencies:
+      '@types/bluebird': 3.5.35
+      '@types/chai': 4.2.18
+      '@types/mocha': 7.0.2
+      '@types/sinon': 7.5.2
+      '@types/webpack-env': 1.16.0
+      bluebird: 3.7.2
+      browserify-versionify: 1.0.6
+      chai: 4.3.4
+      clean-webpack-plugin: 3.0.0_webpack@4.46.0
+      es6-map: 0.1.5
+      es6-symbol: 3.1.3
+      glslify: 7.1.1
+      html-webpack-plugin: 3.2.0_webpack@4.46.0
+      imports-loader: 0.8.0
+      istanbul-instrumenter-loader: 3.0.1_webpack@4.46.0
+      karma: 4.4.1
+      karma-chrome-launcher: 3.1.0
+      karma-coverage-istanbul-reporter: 2.1.1
+      karma-es6-shim: 1.0.0
+      karma-mocha: 1.3.0
+      karma-mocha-reporter: 2.2.5_karma@4.4.1
+      karma-sinon-chai: 2.0.2_e049826b6d09622ebd0e871dc094b68f
+      karma-sourcemap-loader: 0.3.8
+      karma-sourcemap-writer: 0.1.2
+      karma-webpack: 4.0.2_webpack@4.46.0
+      mocha: 7.2.0
+      phaser-ce: 2.18.0
+      prettier: 1.19.1
+      puppeteer: 2.1.1
+      reflect-metadata: 0.1.13
+      rimraf: 3.0.2
+      sinon: 9.2.4
+      sinon-chai: 3.7.0_chai@4.3.4+sinon@9.2.4
+      terser-webpack-plugin: 2.3.8_webpack@4.46.0
+      ts-loader: 6.2.2_typescript@3.9.9
+      ts-node: 8.10.2_typescript@3.9.9
+      tslib: 1.14.1
+      tslint: 6.1.3_typescript@3.9.9
+      tslint-config-prettier: 1.18.0
+      typescript: 3.9.9
+      webpack: 4.46.0_webpack-cli@3.3.12
+      webpack-cli: 3.3.12_webpack@4.46.0
+      webpack-concat-plugin: 3.0.0_webpack@4.46.0
+      webpack-dev-server: 3.11.2_46edf965869dcc7c8d09e022f331d1ea
     transitivePeerDependencies:
       - debug
       - supports-color
