@@ -44,11 +44,6 @@ Right now, this framework has extensions for [pixi.js v5](https://github.com/pix
 
 - [RobotlegsJS-Phaser](https://github.com/RobotlegsJS/Robotlegs/tree/master/packages/phaser): integrate RobotlegsJS with [Phaser](https://github.com/photonstorm/phaser).
 
-## Some companies using RobotlegsJS
-
-<a href="http://www.cupcakese.com" target="_blank"><img width="100" src="http://www.gamefounders.com/wp-content/uploads/formidable/Cupcake_SquareThumb-150x150.png"/></a>
-<a href="https://koreez.games" target="_blank"><img width="100" src="https://koreez.games/img/about/1.jpg"/></a>
-
 ## Installation
 
 You can get the latest release and the type definitions using [NPM](https://www.npmjs.com/):
