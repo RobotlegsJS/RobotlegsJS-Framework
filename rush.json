@@ -436,6 +436,11 @@
       "packageName": "@robotlegsjs/pixi-palidor",
       "projectFolder": "packages/pixi-palidor",
       "reviewCategory": "production"
+    },
+    {
+      "packageName": "@robotlegsjs/pixi-signalmediator",
+      "projectFolder": "packages/pixi-signalmediator",
+      "reviewCategory": "production"
     }
     // {
     //   /**
