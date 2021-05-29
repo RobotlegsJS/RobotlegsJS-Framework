@@ -2,7 +2,9 @@ lockfileVersion: 5.3
 
 specifiers:
   '@istanbuljs/nyc-config-typescript': ^1.0.1
+  '@robotlegsjs/signalcommandmap': ^2.0.0
   '@rush-temp/core': file:./projects/core.tgz
+  '@rush-temp/macrobot': file:./projects/macrobot.tgz
   '@rush-temp/signals': file:./projects/signals.tgz
   '@typescript-eslint/eslint-plugin': ^4.24.0
   '@typescript-eslint/parser': ^4.24.0
@@ -30,12 +32,13 @@ specifiers:
   karma-sourcemap-writer: ^0.1.2
   reflect-metadata: ^0.1.13
   rimraf: ^3.0.2
-  tslint: ^6.0.0
   tslint-config-prettier: ^1.18.0
 
 dependencies:
   '@istanbuljs/nyc-config-typescript': 1.0.1
+  '@robotlegsjs/signalcommandmap': 2.0.0
   '@rush-temp/core': file:projects/core.tgz
+  '@rush-temp/macrobot': file:projects/macrobot.tgz
   '@rush-temp/signals': file:projects/signals.tgz
   '@typescript-eslint/eslint-plugin': 4.25.0_abd2267607402f16adbe38429bbae6ba
   '@typescript-eslint/parser': 4.25.0_eslint@7.27.0
@@ -63,7 +66,6 @@ dependencies:
   karma-sourcemap-writer: 0.1.2
   reflect-metadata: 0.1.13
   rimraf: 3.0.2
-  tslint: 6.1.3
   tslint-config-prettier: 1.18.0
 
 packages:
@@ -385,6 +387,27 @@ packages:
     dependencies:
       '@nodelib/fs.scandir': 2.1.4
       fastq: 1.11.0
+    dev: false
+
+  /@robotlegsjs/core/2.0.0:
+    resolution: {integrity: sha512-yucJHS2aWoCQejV4SOKAfh61wVZXjjD2AX7fgIlYkRNErTHxtliISDla95AW5AhlpNuymTXA63afkbqqsysTyw==}
+    dependencies:
+      inversify: 5.1.1
+      tslib: 1.14.1
+    dev: false
+
+  /@robotlegsjs/signalcommandmap/2.0.0:
+    resolution: {integrity: sha512-XVii9maxNoz6ArpgF3Kgg54XpPnsjmoSOaGui3X0MbtTj/INS0z2xSagE9DVDnzFrg1b4rVQC3XWLZJD5mfLUA==}
+    dependencies:
+      '@robotlegsjs/core': 2.0.0
+      '@robotlegsjs/signals': 1.1.0
+      tslib: 1.14.1
+    dev: false
+
+  /@robotlegsjs/signals/1.1.0:
+    resolution: {integrity: sha512-2fFN87/IFSZSnO3TiA+xzRVP6Ift8+/3R6vafcpzu4HYtF86158xFZt2LAMdjb8RLTnIM+Ftbrbq+iGlsmmDtQ==}
+    dependencies:
+      tslib: 1.14.1
     dev: false
 
   /@sinonjs/commons/1.8.3:
@@ -5177,6 +5200,21 @@ packages:
       sinon-chai: '*'
     dev: false
 
+  /karma-chai-sinon/0.1.5_02768bc47c9c042f99d52f3d04e5a040:
+    resolution: {integrity: sha1-XDksqVJHgYlR1rV5AvAsNugDdTo=}
+    engines: {node: '>=0.8'}
+    peerDependencies:
+      chai: '*'
+      karma: '>=0.6'
+      sinon: '*'
+      sinon-chai: '*'
+    dependencies:
+      chai: 4.3.4
+      karma: 4.4.1
+      sinon: 9.2.4
+      sinon-chai: 3.7.0_chai@4.3.4+sinon@9.2.4
+    dev: false
+
   /karma-chai-sinon/0.1.5_59c20e31672ed62766f1e19869c98ca8:
     resolution: {integrity: sha1-XDksqVJHgYlR1rV5AvAsNugDdTo=}
     engines: {node: '>=0.8'}
@@ -8336,29 +8374,6 @@ packages:
     hasBin: true
     dev: false
 
-  /tslint/6.1.3:
-    resolution: {integrity: sha512-IbR4nkT96EQOvKE2PW/djGz8iGNeJ4rF2mBfiYaR/nvUWYKJhLwimoJKgjIFEIDibBtOevj7BqCRL4oHeWWUCg==}
-    engines: {node: '>=4.8.0'}
-    deprecated: TSLint has been deprecated in favor of ESLint. Please see https://github.com/palantir/tslint/issues/4534 for more information.
-    hasBin: true
-    peerDependencies:
-      typescript: '>=2.3.0-dev || >=2.4.0-dev || >=2.5.0-dev || >=2.6.0-dev || >=2.7.0-dev || >=2.8.0-dev || >=2.9.0-dev || >=3.0.0-dev || >= 3.1.0-dev || >= 3.2.0-dev || >= 4.0.0-dev'
-    dependencies:
-      '@babel/code-frame': 7.12.13
-      builtin-modules: 1.1.1
-      chalk: 2.4.2
-      commander: 2.20.3
-      diff: 4.0.2
-      glob: 7.1.7
-      js-yaml: 3.14.1
-      minimatch: 3.0.4
-      mkdirp: 0.5.5
-      resolve: 1.20.0
-      semver: 5.7.1
-      tslib: 1.14.1
-      tsutils: 2.29.0
-    dev: false
-
   /tslint/6.1.3_typescript@3.9.9:
     resolution: {integrity: sha512-IbR4nkT96EQOvKE2PW/djGz8iGNeJ4rF2mBfiYaR/nvUWYKJhLwimoJKgjIFEIDibBtOevj7BqCRL4oHeWWUCg==}
     engines: {node: '>=4.8.0'}
@@ -8381,14 +8396,6 @@ packages:
       tslib: 1.14.1
       tsutils: 2.29.0_typescript@3.9.9
       typescript: 3.9.9
-    dev: false
-
-  /tsutils/2.29.0:
-    resolution: {integrity: sha512-g5JVHCIJwzfISaXpXE1qvNalca5Jwob6FjI4AoPlqMusJ6ftFE7IkkFoMhVLRgK+4Kx3gkzb8UZK5t5yTTvEmA==}
-    peerDependencies:
-      typescript: '>=2.1.0 || >=2.1.0-dev || >=2.2.0-dev || >=2.3.0-dev || >=2.4.0-dev || >=2.5.0-dev || >=2.6.0-dev || >=2.7.0-dev || >=2.8.0-dev || >=2.9.0-dev || >= 3.0.0-dev || >= 3.1.0-dev'
-    dependencies:
-      tslib: 1.14.1
     dev: false
 
   /tsutils/2.29.0_typescript@3.9.9:
@@ -9372,6 +9379,62 @@ packages:
       - debug
       - supports-color
       - utf-8-validate
+      - webpack-command
+    dev: false
+
+  file:projects/macrobot.tgz:
+    resolution: {integrity: sha512-BD7HHCqa7ECVfnbK4xpQgaGgFKSFTtLn1JjlsyTDcOOq2rfgZ2FN9dy9QOBcoacNaM3ZAPP4DfjLy1ts9IimEQ==, tarball: file:projects/macrobot.tgz}
+    name: '@rush-temp/macrobot'
+    version: 0.0.0
+    dependencies:
+      '@istanbuljs/nyc-config-typescript': 1.0.1_824a854ffcab8aef868c78aff15d1863
+      '@robotlegsjs/signalcommandmap': 2.0.0
+      '@types/bluebird': 3.5.35
+      '@types/chai': 4.2.18
+      '@types/mocha': 7.0.2
+      '@types/sinon': 7.5.2
+      '@types/webpack-env': 1.16.0
+      bluebird: 3.7.2
+      browserify-versionify: 1.0.6
+      chai: 4.3.4
+      es6-map: 0.1.5
+      es6-symbol: 3.1.3
+      glslify: 7.1.1
+      imports-loader: 0.8.0
+      istanbul-instrumenter-loader: 3.0.1_webpack@4.46.0
+      karma: 4.4.1
+      karma-chai-sinon: 0.1.5_02768bc47c9c042f99d52f3d04e5a040
+      karma-chrome-launcher: 3.1.0
+      karma-coverage-istanbul-reporter: 2.1.1
+      karma-es6-shim: 1.0.0
+      karma-mocha: 1.3.0
+      karma-mocha-reporter: 2.2.5_karma@4.4.1
+      karma-sinon-chai: 2.0.2_e049826b6d09622ebd0e871dc094b68f
+      karma-sourcemap-loader: 0.3.8
+      karma-sourcemap-writer: 0.1.2
+      karma-webpack: 4.0.2_webpack@4.46.0
+      mocha: 7.2.0
+      nyc: 15.1.0
+      prettier: 1.19.1
+      puppeteer: 2.1.1
+      reflect-metadata: 0.1.13
+      rimraf: 3.0.2
+      sinon: 9.2.4
+      sinon-chai: 3.7.0_chai@4.3.4+sinon@9.2.4
+      source-map-support: 0.5.19
+      terser-webpack-plugin: 2.3.8_webpack@4.46.0
+      ts-loader: 6.2.2_typescript@3.9.9
+      ts-node: 8.10.2_typescript@3.9.9
+      tslib: 1.14.1
+      tslint: 6.1.3_typescript@3.9.9
+      tslint-config-prettier: 1.18.0
+      typescript: 3.9.9
+      webpack: 4.46.0_webpack-cli@3.3.12
+      webpack-cli: 3.3.12_webpack@4.46.0
+      webpack-dev-server: 3.11.2_46edf965869dcc7c8d09e022f331d1ea
+    transitivePeerDependencies:
+      - debug
+      - supports-color
       - webpack-command
     dev: false
 
