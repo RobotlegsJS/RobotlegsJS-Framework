@@ -2,7 +2,9 @@ lockfileVersion: 5.3
 
 specifiers:
   '@istanbuljs/nyc-config-typescript': ^1.0.1
+  '@robotlegsjs/signalcommandmap': ^2.0.0
   '@rush-temp/core': file:./projects/core.tgz
+  '@rush-temp/eventemitter3': file:./projects/eventemitter3.tgz
   '@rush-temp/macrobot': file:./projects/macrobot.tgz
   '@rush-temp/signalcommandmap': file:./projects/signalcommandmap.tgz
   '@rush-temp/signals': file:./projects/signals.tgz
@@ -36,7 +38,9 @@ specifiers:
 
 dependencies:
   '@istanbuljs/nyc-config-typescript': 1.0.1
+  '@robotlegsjs/signalcommandmap': 2.0.0
   '@rush-temp/core': file:projects/core.tgz
+  '@rush-temp/eventemitter3': file:projects/eventemitter3.tgz
   '@rush-temp/macrobot': file:projects/macrobot.tgz
   '@rush-temp/signalcommandmap': file:projects/signalcommandmap.tgz
   '@rush-temp/signals': file:projects/signals.tgz
@@ -9382,8 +9386,68 @@ packages:
       - webpack-command
     dev: false
 
+  file:projects/eventemitter3.tgz:
+    resolution: {integrity: sha512-LpWsdzu4l5jS/2omubXyLCryfCEiXqjwoEi6fBDKMB1ussiY0eZNFyOGFnTNZ3a7BqfDjiYFBpZeCwXMQlRa4g==, tarball: file:projects/eventemitter3.tgz}
+    name: '@rush-temp/eventemitter3'
+    version: 0.0.0
+    dependencies:
+      '@istanbuljs/nyc-config-typescript': 1.0.1_824a854ffcab8aef868c78aff15d1863
+      '@types/bluebird': 3.5.35
+      '@types/chai': 4.2.18
+      '@types/mocha': 7.0.2
+      '@types/sinon': 7.5.2
+      '@types/webpack-env': 1.16.0
+      bluebird: 3.7.2
+      browserify-versionify: 1.0.6
+      chai: 4.3.4
+      es6-map: 0.1.5
+      es6-symbol: 3.1.3
+      eventemitter3: 4.0.7
+      glslify: 7.1.1
+      imports-loader: 0.8.0
+      istanbul-instrumenter-loader: 3.0.1_webpack@4.46.0
+      jsdom: 16.6.0
+      jsdom-global: 3.0.2_jsdom@16.6.0
+      karma: 4.4.1
+      karma-chrome-launcher: 3.1.0
+      karma-coverage-istanbul-reporter: 2.1.1
+      karma-es6-shim: 1.0.0
+      karma-mocha: 1.3.0
+      karma-mocha-reporter: 2.2.5_karma@4.4.1
+      karma-sinon-chai: 2.0.2_e049826b6d09622ebd0e871dc094b68f
+      karma-sourcemap-loader: 0.3.8
+      karma-sourcemap-writer: 0.1.2
+      karma-webpack: 4.0.2_webpack@4.46.0
+      mocha: 7.2.0
+      nyc: 15.1.0
+      prettier: 1.19.1
+      puppeteer: 2.1.1
+      reflect-metadata: 0.1.13
+      rimraf: 3.0.2
+      sinon: 9.2.4
+      sinon-chai: 3.7.0_chai@4.3.4+sinon@9.2.4
+      source-map-support: 0.5.19
+      terser-webpack-plugin: 2.3.8_webpack@4.46.0
+      ts-loader: 6.2.2_typescript@3.9.9
+      ts-node: 8.10.2_typescript@3.9.9
+      tslib: 1.14.1
+      tslint: 6.1.3_typescript@3.9.9
+      tslint-config-prettier: 1.18.0
+      typescript: 3.9.9
+      webpack: 4.46.0_webpack-cli@3.3.12
+      webpack-cli: 3.3.12_webpack@4.46.0
+      webpack-dev-server: 3.11.2_46edf965869dcc7c8d09e022f331d1ea
+    transitivePeerDependencies:
+      - bufferutil
+      - canvas
+      - debug
+      - supports-color
+      - utf-8-validate
+      - webpack-command
+    dev: false
+
   file:projects/macrobot.tgz:
-    resolution: {integrity: sha512-i6FBMS38UeoU46Qbfn2aN6iIJEjpXSpe0AdaBrwzmi949Z2XI2FQsaVP95eFD//lV3ZqJGBy+vzJUlQQ0Xzsng==, tarball: file:projects/macrobot.tgz}
+    resolution: {integrity: sha512-BD7HHCqa7ECVfnbK4xpQgaGgFKSFTtLn1JjlsyTDcOOq2rfgZ2FN9dy9QOBcoacNaM3ZAPP4DfjLy1ts9IimEQ==, tarball: file:projects/macrobot.tgz}
     name: '@rush-temp/macrobot'
     version: 0.0.0
     dependencies:
