@@ -1,0 +1,17 @@
+.idea
+.nyc_output
+coverage
+dist/lib
+dist-test
+lib
+lib-test
+node_modules
+*.as
+*.iml
+src/**/*.js
+src/**/*.js.map
+test/**/*.js
+test/**/*.js.map
+package-lock.json
+npm-debug.log
+yarn-error.log
