@@ -1,13 +1,8 @@
 # RobotlegsJS EventEmitter3
 
-[![GitHub license](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/RobotlegsJS/RobotlegsJS-EventEmitter3/blob/master/LICENSE)
+[![GitHub license](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/RobotlegsJS/Robotlegs/blob/master/packages/eventemitter3/LICENSE)
 [![Gitter chat](https://badges.gitter.im/RobotlegsJS/RobotlegsJS.svg)](https://gitter.im/RobotlegsJS/RobotlegsJS)
-[![Build Status](https://travis-ci.com/RobotlegsJS/RobotlegsJS-EventEmitter3.svg?branch=master)](https://travis-ci.com/RobotlegsJS/RobotlegsJS-EventEmitter3)
-[![codebeat badge](https://codebeat.co/badges/d5162c9e-5040-4bf1-a756-77612acfdb1f)](https://codebeat.co/projects/github-com-robotlegsjs-robotlegsjs-eventemitter3-master)
-[![Maintainability](https://api.codeclimate.com/v1/badges/c8ef7ccb9caade45214c/maintainability)](https://codeclimate.com/github/RobotlegsJS/RobotlegsJS-EventEmitter3/maintainability)
-[![Test Coverage](https://api.codeclimate.com/v1/badges/c8ef7ccb9caade45214c/test_coverage)](https://codeclimate.com/github/RobotlegsJS/RobotlegsJS-EventEmitter3/test_coverage)
 [![npm version](https://badge.fury.io/js/%40robotlegsjs%2Feventemitter3.svg)](https://badge.fury.io/js/%40robotlegsjs%2Feventemitter3)
-[![Greenkeeper badge](https://badges.greenkeeper.io/RobotlegsJS/RobotlegsJS-EventEmitter3.svg)](https://greenkeeper.io/)
 [![styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 
 ## Installation

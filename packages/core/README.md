@@ -1,13 +1,8 @@
 # RobotlegsJS <img src="https://raw.githubusercontent.com/RobotlegsJS/RobotlegsJS/master/media/robotlegs.png" width="30" height="30" />
 
-[![GitHub license](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/RobotlegsJS/RobotlegsJS/blob/master/LICENSE)
+[![GitHub license](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/RobotlegsJS/Robotlegs/blob/master/packages/core/LICENSE)
 [![Gitter chat](https://badges.gitter.im/RobotlegsJS/RobotlegsJS.svg)](https://gitter.im/RobotlegsJS/RobotlegsJS)
-[![Build Status](https://travis-ci.com/RobotlegsJS/RobotlegsJS.svg?branch=master)](https://travis-ci.com/RobotlegsJS/RobotlegsJS)
-[![codebeat badge](https://codebeat.co/badges/688bb0d8-636d-4ff6-ba00-ec077188ef65)](https://codebeat.co/projects/github-com-robotlegsjs-robotlegsjs-master)
-[![Maintainability](https://api.codeclimate.com/v1/badges/6a6bb3d51f955aef1cd7/maintainability)](https://codeclimate.com/github/RobotlegsJS/RobotlegsJS/maintainability)
-[![Test Coverage](https://api.codeclimate.com/v1/badges/6a6bb3d51f955aef1cd7/test_coverage)](https://codeclimate.com/github/RobotlegsJS/RobotlegsJS/test_coverage)
 [![npm version](https://badge.fury.io/js/%40robotlegsjs%2Fcore.svg)](https://badge.fury.io/js/%40robotlegsjs%2Fcore)
-[![Greenkeeper badge](https://badges.greenkeeper.io/RobotlegsJS/RobotlegsJS.svg)](https://greenkeeper.io/)
 [![styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 
 RobotlegsJS is a architecture-based IoC framework for JavaScript/TypeScript. This

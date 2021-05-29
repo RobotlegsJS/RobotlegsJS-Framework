@@ -1,13 +1,8 @@
 # RobotlegsJS Macrobot
 
-[![GitHub license](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/RobotlegsJS/RobotlegsJS-Macrobot/blob/master/LICENSE)
+[![GitHub license](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/RobotlegsJS/Robotlegs/blob/master/packages/macrobot/LICENSE)
 [![Gitter chat](https://badges.gitter.im/RobotlegsJS/RobotlegsJS.svg)](https://gitter.im/RobotlegsJS/RobotlegsJS)
-[![Build Status](https://travis-ci.com/RobotlegsJS/RobotlegsJS-Macrobot.svg?branch=master)](https://travis-ci.com/RobotlegsJS/RobotlegsJS-Macrobot)
-[![codebeat badge](https://codebeat.co/badges/b94a4b05-0483-4add-afad-0850a587872d)](https://codebeat.co/projects/github-com-robotlegsjs-robotlegsjs-macrobot-master)
-[![Maintainability](https://api.codeclimate.com/v1/badges/46031a693884b3c45506/maintainability)](https://codeclimate.com/github/RobotlegsJS/RobotlegsJS-Macrobot/maintainability)
-[![Test Coverage](https://api.codeclimate.com/v1/badges/46031a693884b3c45506/test_coverage)](https://codeclimate.com/github/RobotlegsJS/RobotlegsJS-Macrobot/test_coverage)
 [![npm version](https://badge.fury.io/js/%40robotlegsjs%2Fmacrobot.svg)](https://badge.fury.io/js/%40robotlegsjs%2Fmacrobot)
-[![Greenkeeper badge](https://badges.greenkeeper.io/RobotlegsJS/RobotlegsJS-Macrobot.svg)](https://greenkeeper.io/)
 [![styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 
 **Macrobot** is a macro command utility for [RobotlegsJS](https://github.com/RobotlegsJS/RobotlegsJS) which provides the ability to execute batches of commands in sequential or parallel fashion. It was originally implemented by [Alessandro Bianco](https://github.com/alebianco) in [AS3](https://github.com/alebianco/robotlegs-utilities-macrobot) and now is

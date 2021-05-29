@@ -1,12 +1,8 @@
 # RobotlegsJS Pixi SignalMediator Extension
 
-[![GitHub license](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/RobotlegsJS/RobotlegsJS-Pixi-SignalMediator/blob/master/LICENSE)
+[![GitHub license](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/RobotlegsJS/Robotlegs/blob/master/packages/pixi-signalmediator/LICENSE)
 [![Gitter chat](https://badges.gitter.im/RobotlegsJS/RobotlegsJS.svg)](https://gitter.im/RobotlegsJS/RobotlegsJS)
-[![Build Status](https://travis-ci.com/RobotlegsJS/RobotlegsJS-Pixi-SignalMediator.svg?branch=master)](https://travis-ci.com/RobotlegsJS/RobotlegsJS-Pixi-SignalMediator)
-[![codebeat badge](https://codebeat.co/badges/ceb8fe89-36c1-4b0c-b736-7b5fedc9ff88)](https://codebeat.co/projects/github-com-robotlegsjs-robotlegsjs-pixi-signalmediator-master)
-[![Test Coverage](https://codeclimate.com/github/RobotlegsJS/RobotlegsJS-Pixi-SignalMediator/badges/coverage.svg)](https://codeclimate.com/github/RobotlegsJS/RobotlegsJS-Pixi-SignalMediator/coverage)
 [![npm version](https://badge.fury.io/js/%40robotlegsjs%2Fpixi-signalmediator.svg)](https://badge.fury.io/js/%40robotlegsjs%2Fpixi-signalmediator)
-[![Greenkeeper badge](https://badges.greenkeeper.io/RobotlegsJS/RobotlegsJS-Pixi-SignalMediator.svg)](https://greenkeeper.io/)
 [![styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 
 A port of [Robotlegs SignalMediator Extension](https://github.com/MrDodson/robotlegs-extensions-SignalMediator) to TypeScript.

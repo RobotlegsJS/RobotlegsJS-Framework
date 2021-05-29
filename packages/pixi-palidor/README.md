@@ -1,12 +1,8 @@
 # RobotlegsJS Pixi Palidor Extension
 
-[![GitHub license](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/RobotlegsJS/RobotlegsJS-Pixi-Palidor/blob/master/LICENSE)
+[![GitHub license](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/RobotlegsJS/Robotlegs/blob/master/packages/pixi-palidor/LICENSE)
 [![Gitter chat](https://badges.gitter.im/RobotlegsJS/RobotlegsJS.svg)](https://gitter.im/RobotlegsJS/RobotlegsJS)
-[![Build Status](https://travis-ci.com/RobotlegsJS/RobotlegsJS-Pixi-Palidor.svg?branch=master)](https://travis-ci.com/RobotlegsJS/RobotlegsJS-Pixi-Palidor)
-[![codebeat badge](https://codebeat.co/badges/a04b8f65-1fd0-4a28-8e37-0ea6df8c3fbb)](https://codebeat.co/projects/github-com-robotlegsjs-robotlegsjs-pixi-palidor-master)
-[![Test Coverage](https://codeclimate.com/github/RobotlegsJS/RobotlegsJS-Pixi-Palidor/badges/coverage.svg)](https://codeclimate.com/github/RobotlegsJS/RobotlegsJS-Pixi-Palidor/coverage)
 [![npm version](https://badge.fury.io/js/%40robotlegsjs%2Fpixi-palidor.svg)](https://badge.fury.io/js/%40robotlegsjs%2Fpixi-palidor)
-[![Greenkeeper badge](https://badges.greenkeeper.io/RobotlegsJS/RobotlegsJS-Pixi-Palidor.svg)](https://greenkeeper.io/)
 [![styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 
 Palidor is an extension of RobotlegsJS for Pixi, designed to help the management of the Main Container, taking the responsibility to add, remove and switch the views. Perfect for game development.

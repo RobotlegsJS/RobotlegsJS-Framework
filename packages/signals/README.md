@@ -1,14 +1,9 @@
 SignalsJS
 ===
 
-[![GitHub license](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/RobotlegsJS/SignalsJS/blob/master/LICENSE)
+[![GitHub license](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/RobotlegsJS/Robotlegs/blob/master/packages/signals/LICENSE)
 [![Gitter chat](https://badges.gitter.im/RobotlegsJS/RobotlegsJS.svg)](https://gitter.im/RobotlegsJS/RobotlegsJS)
-[![Build Status](https://travis-ci.com/RobotlegsJS/SignalsJS.svg?branch=master)](https://travis-ci.com/RobotlegsJS/SignalsJS)
-[![codebeat badge](https://codebeat.co/badges/7d8bbfeb-08d4-4255-b282-56a7f59d4ab7)](https://codebeat.co/projects/github-com-robotlegsjs-signalsjs-master)
-[![Maintainability](https://api.codeclimate.com/v1/badges/37bea90e36d1402c9192/maintainability)](https://codeclimate.com/github/RobotlegsJS/SignalsJS/maintainability)
-[![Test Coverage](https://api.codeclimate.com/v1/badges/37bea90e36d1402c9192/test_coverage)](https://codeclimate.com/github/RobotlegsJS/SignalsJS/test_coverage)
 [![npm version](https://badge.fury.io/js/%40robotlegsjs%2Fsignals.svg)](https://badge.fury.io/js/%40robotlegsjs%2Fsignals)
-[![Greenkeeper badge](https://badges.greenkeeper.io/RobotlegsJS/SignalsJS.svg)](https://greenkeeper.io/)
 [![styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 
 **SignalsJS** is a [TypeScript](https://www.typescriptlang.org/) port of [AS3 Signals](https://github.com/robertpenner/as3-signals).
