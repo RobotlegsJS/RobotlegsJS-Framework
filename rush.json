@@ -416,6 +416,11 @@
       "cyclicDependencyProjects": [
         "@robotlegsjs/signalcommandmap"
       ]
+    },
+    {
+      "packageName": "@robotlegsjs/createjs",
+      "projectFolder": "packages/createjs",
+      "reviewCategory": "production"
     }
     // {
     //   /**
