@@ -405,6 +405,11 @@
       "reviewCategory": "production"
     },
     {
+      "packageName": "@robotlegsjs/eventemitter3",
+      "projectFolder": "packages/eventemitter3",
+      "reviewCategory": "production"
+    },
+    {
       "packageName": "@robotlegsjs/macrobot",
       "projectFolder": "packages/macrobot",
       "reviewCategory": "production",
