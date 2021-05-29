@@ -96,7 +96,6 @@
     "mocha": "^7.1.0",
     "pixi.js": "^5.2.1",
     "prettier": "^1.19.1",
-    "publish-please": "^5.5.1",
     "puppeteer": "^2.1.1",
     "reflect-metadata": "^0.1.13",
     "remap-istanbul": "^0.13.0",
