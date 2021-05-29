@@ -446,6 +446,11 @@
       "packageName": "@robotlegsjs/phaser-ce",
       "projectFolder": "packages/phaser-ce",
       "reviewCategory": "production"
+    },
+    {
+      "packageName": "@robotlegsjs/phaser-ce-signalcommandmap",
+      "projectFolder": "packages/phaser-ce-signalcommandmap",
+      "reviewCategory": "production"
     }
     // {
     //   /**
