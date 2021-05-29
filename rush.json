@@ -400,6 +400,11 @@
       "reviewCategory": "production"
     },
     {
+      "packageName": "@robotlegsjs/signalcommandmap",
+      "projectFolder": "packages/signalcommandmap",
+      "reviewCategory": "production"
+    },
+    {
       "packageName": "@robotlegsjs/macrobot",
       "projectFolder": "packages/macrobot",
       "reviewCategory": "production"
