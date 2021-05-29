@@ -421,6 +421,11 @@
       "packageName": "@robotlegsjs/createjs",
       "projectFolder": "packages/createjs",
       "reviewCategory": "production"
+    },
+    {
+      "packageName": "@robotlegsjs/openfl",
+      "projectFolder": "packages/openfl",
+      "reviewCategory": "production"
     }
     // {
     //   /**
