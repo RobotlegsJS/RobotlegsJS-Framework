@@ -36,11 +36,11 @@ or
 yarn add eventemitter3@3.1.0 reflect-metadata
 ```
 
-Then follow the [installation instructions](https://github.com/RobotlegsJS/RobotlegsJS/blob/master/README.md#installation) of **RobotlegsJS** library to complete the setup of your project.
+Then follow the [installation instructions](https://github.com/RobotlegsJS/Robotlegs/tree/master/packages/core/blob/master/README.md#installation) of **RobotlegsJS** library to complete the setup of your project.
 
 **Dependencies**
 
-+ [RobotlegsJS](https://github.com/RobotlegsJS/RobotlegsJS)
++ [RobotlegsJS](https://github.com/RobotlegsJS/Robotlegs/tree/master/packages/core)
 + [tslib](https://github.com/Microsoft/tslib)
 
 **Peer Dependencies**
@@ -52,7 +52,7 @@ Then follow the [installation instructions](https://github.com/RobotlegsJS/Robot
 
 Available as part of the Tidelift Subscription
 
-The maintainers of [@robotlegsjs/eventemitter3](https://github.com/RobotlegsJS/RobotlegsJS-EventEmitter3) and thousands of other packages are working with Tidelift to deliver commercial support and maintenance for the open source dependencies you use to build your applications. Save time, reduce risk, and improve code health, while paying the maintainers of the exact dependencies you use. [Learn more.](https://tidelift.com/subscription/pkg/npm-robotlegsjs-eventemitter3?utm_source=npm-robotlegsjs-eventemitter3&utm_medium=referral&utm_campaign=enterprise&utm_term=repo)
+The maintainers of [@robotlegsjs/eventemitter3](https://github.com/RobotlegsJS/Robotlegs/tree/master/packages/eventemitter3) and thousands of other packages are working with Tidelift to deliver commercial support and maintenance for the open source dependencies you use to build your applications. Save time, reduce risk, and improve code health, while paying the maintainers of the exact dependencies you use. [Learn more.](https://tidelift.com/subscription/pkg/npm-robotlegsjs-eventemitter3?utm_source=npm-robotlegsjs-eventemitter3&utm_medium=referral&utm_campaign=enterprise&utm_term=repo)
 
 ## License
 

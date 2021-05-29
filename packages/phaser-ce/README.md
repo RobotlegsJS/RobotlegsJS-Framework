@@ -5,7 +5,7 @@
 [![npm version](https://badge.fury.io/js/%40robotlegsjs%2Fphaser-ce.svg)](https://badge.fury.io/js/%40robotlegsjs%2Fphaser-ce)
 [![styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 
-Integrate [RobotlegsJS](https://github.com/RobotlegsJS/RobotlegsJS)
+Integrate [RobotlegsJS](https://github.com/RobotlegsJS/Robotlegs/tree/master/packages/core)
 framework with [Phaser-CE](https://github.com/photonstorm/phaser-ce).
 
 ## Installation
@@ -39,11 +39,11 @@ or
 yarn add phaser-ce@2.8.1 reflect-metadata
 ```
 
-Then follow the [installation instructions](https://github.com/RobotlegsJS/RobotlegsJS/blob/master/README.md#installation) of **RobotlegsJS** library to complete the setup of your project.
+Then follow the [installation instructions](https://github.com/RobotlegsJS/Robotlegs/tree/master/packages/core/blob/master/README.md#installation) of **RobotlegsJS** library to complete the setup of your project.
 
 **Dependencies**
 
-+ [RobotlegsJS](https://github.com/RobotlegsJS/RobotlegsJS)
++ [RobotlegsJS](https://github.com/RobotlegsJS/Robotlegs/tree/master/packages/core)
 + [tslib](https://github.com/Microsoft/tslib)
 
 **Peer Dependencies**
@@ -123,7 +123,7 @@ yarn start
 
 Available as part of the Tidelift Subscription
 
-The maintainers of [@robotlegsjs/phaser-ce](https://github.com/RobotlegsJS/RobotlegsJS-Phaser-CE) and thousands of other packages are working with Tidelift to deliver commercial support and maintenance for the open source dependencies you use to build your applications. Save time, reduce risk, and improve code health, while paying the maintainers of the exact dependencies you use. [Learn more.](https://tidelift.com/subscription/pkg/npm-robotlegsjs-phaser-ce?utm_source=npm-robotlegsjs-phaser-ce&utm_medium=referral&utm_campaign=enterprise&utm_term=repo)
+The maintainers of [@robotlegsjs/phaser-ce](https://github.com/RobotlegsJS/Robotlegs/tree/master/packages/phaser-ce) and thousands of other packages are working with Tidelift to deliver commercial support and maintenance for the open source dependencies you use to build your applications. Save time, reduce risk, and improve code health, while paying the maintainers of the exact dependencies you use. [Learn more.](https://tidelift.com/subscription/pkg/npm-robotlegsjs-phaser-ce?utm_source=npm-robotlegsjs-phaser-ce&utm_medium=referral&utm_campaign=enterprise&utm_term=repo)
 
 ## License
 

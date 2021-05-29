@@ -5,7 +5,7 @@
 [![npm version](https://badge.fury.io/js/%40robotlegsjs%2Fopenfl.svg)](https://badge.fury.io/js/%40robotlegsjs%2Fopenfl)
 [![styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 
-Integrate [RobotlegsJS](https://github.com/RobotlegsJS/RobotlegsJS)
+Integrate [RobotlegsJS](https://github.com/RobotlegsJS/Robotlegs/tree/master/packages/core)
 framework with [OpenFL](http://www.openfl.org/).
 
 ## Installation
@@ -39,11 +39,11 @@ or
 yarn add openfl@8.3.0 reflect-metadata
 ```
 
-Then follow the [installation instructions](https://github.com/RobotlegsJS/RobotlegsJS/blob/master/README.md#installation) of **RobotlegsJS** library to complete the setup of your project.
+Then follow the [installation instructions](https://github.com/RobotlegsJS/Robotlegs/tree/master/packages/core/blob/master/README.md#installation) of **RobotlegsJS** library to complete the setup of your project.
 
 **Dependencies**
 
-+ [RobotlegsJS](https://github.com/RobotlegsJS/RobotlegsJS)
++ [RobotlegsJS](https://github.com/RobotlegsJS/Robotlegs/tree/master/packages/core)
 + [tslib](https://github.com/Microsoft/tslib)
 
 **Peer Dependencies**
@@ -126,7 +126,7 @@ You can check our example project [here](http://robotlegsjs.io/RobotlegsJS-OpenF
 
 Available as part of the Tidelift Subscription
 
-The maintainers of [@robotlegsjs/openfl](https://github.com/RobotlegsJS/RobotlegsJS-OpenFL) and thousands of other packages are working with Tidelift to deliver commercial support and maintenance for the open source dependencies you use to build your applications. Save time, reduce risk, and improve code health, while paying the maintainers of the exact dependencies you use. [Learn more.](https://tidelift.com/subscription/pkg/npm-robotlegsjs-openfl?utm_source=npm-robotlegsjs-openfl&utm_medium=referral&utm_campaign=enterprise&utm_term=repo)
+The maintainers of [@robotlegsjs/openfl](https://github.com/RobotlegsJS/Robotlegs/tree/master/packages/openfl) and thousands of other packages are working with Tidelift to deliver commercial support and maintenance for the open source dependencies you use to build your applications. Save time, reduce risk, and improve code health, while paying the maintainers of the exact dependencies you use. [Learn more.](https://tidelift.com/subscription/pkg/npm-robotlegsjs-openfl?utm_source=npm-robotlegsjs-openfl&utm_medium=referral&utm_campaign=enterprise&utm_term=repo)
 
 ## License
 
