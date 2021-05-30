@@ -1,0 +1,286 @@
+// DO NOT ADD COMMENTS IN THIS FILE.  They will be lost when the Rush tool resaves it.
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/rush/v5/approved-packages.schema.json",
+  "packages": [
+    {
+      "name": "@istanbuljs/nyc-config-typescript",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "@robotlegsjs/core",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "@robotlegsjs/pixi",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "@robotlegsjs/signalcommandmap",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "@robotlegsjs/signals",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "@typescript-eslint/eslint-plugin",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "@typescript-eslint/parser",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "bluebird",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "browserify-versionify",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "chai",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "clean-webpack-plugin",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "copy-webpack-plugin",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "easeljs",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "es6-map",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "es6-symbol",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "eslint",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "eslint-config-prettier",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "eslint-plugin-import",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "eslint-plugin-jsdoc",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "eslint-plugin-prefer-arrow",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "eslint-plugin-react",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "eslint-plugin-unicorn",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "eventemitter3",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "glslify",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "html-webpack-plugin",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "imports-loader",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "inversify",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "istanbul-instrumenter-loader",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "jsdom",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "jsdom-global",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "karma",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "karma-chai-sinon",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "karma-chrome-launcher",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "karma-commonjs",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "karma-coverage",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "karma-coverage-istanbul-reporter",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "karma-es6-shim",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "karma-mocha",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "karma-mocha-reporter",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "karma-sinon-chai",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "karma-sourcemap-loader",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "karma-sourcemap-writer",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "karma-webpack",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "mocha",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "nyc",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "openfl",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "phaser",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "phaser-ce",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "pixi.js",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "prettier",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "puppeteer",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "reflect-metadata",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "remap-istanbul",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "rimraf",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "sinon",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "sinon-chai",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "source-map-support",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "terser-webpack-plugin",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "ts-loader",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "ts-node",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "tslib",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "tslint",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "tslint-config-prettier",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "typescript",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "webpack",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "webpack-cli",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "webpack-concat-plugin",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "webpack-dev-server",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "webpack-merge",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "webpack-simple-progress-plugin",
+      "allowedCategories": [ "production" ]
+    }
+  ]
+}

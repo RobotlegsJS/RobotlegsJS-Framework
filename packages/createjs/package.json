@@ -25,12 +25,10 @@
     "build:example": "webpack --config ./webpack.example.config.js --env.production",
     "deploy:example": "./deploy-example.sh",
     "prepare": "npm run clean-up && npm run compile:src",
-    "prepublishOnly": "publish-please guard",
     "publish-please": "npm run tslint && npm run autoformat && npm run clean-up && npm run test && publish-please"
   },
   "repository": {
-    "type": "git",
-    "url": "git@github.com:RobotlegsJS/RobotlegsJS-CreateJS.git"
+    "url": "https://github.com/RobotlegsJS/Robotlegs/tree/master/packages/createjs"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org"
@@ -47,9 +45,9 @@
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/RobotlegsJS/RobotlegsJS-CreateJS/issues"
+    "url": "https://github.com/RobotlegsJS/Robotlegs/issues"
   },
-  "homepage": "https://github.com/RobotlegsJS/RobotlegsJS-CreateJS#readme",
+  "homepage": "https://github.com/RobotlegsJS/Robotlegs/tree/master/packages/createjs#readme",
   "files": [
     "lib"
   ],
@@ -95,7 +93,6 @@
     "karma-webpack": "^4.0.2",
     "mocha": "^7.1.0",
     "prettier": "^1.19.1",
-    "publish-please": "^5.5.1",
     "puppeteer": "^2.1.1",
     "reflect-metadata": "^0.1.13",
     "remap-istanbul": "^0.13.0",

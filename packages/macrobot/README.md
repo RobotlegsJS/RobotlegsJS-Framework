@@ -1,21 +1,16 @@
 # RobotlegsJS Macrobot
 
-[![GitHub license](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/RobotlegsJS/RobotlegsJS-Macrobot/blob/master/LICENSE)
+[![GitHub license](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/RobotlegsJS/Robotlegs/tree/master/packages/macrobot/LICENSE)
 [![Gitter chat](https://badges.gitter.im/RobotlegsJS/RobotlegsJS.svg)](https://gitter.im/RobotlegsJS/RobotlegsJS)
-[![Build Status](https://travis-ci.com/RobotlegsJS/RobotlegsJS-Macrobot.svg?branch=master)](https://travis-ci.com/RobotlegsJS/RobotlegsJS-Macrobot)
-[![codebeat badge](https://codebeat.co/badges/b94a4b05-0483-4add-afad-0850a587872d)](https://codebeat.co/projects/github-com-robotlegsjs-robotlegsjs-macrobot-master)
-[![Maintainability](https://api.codeclimate.com/v1/badges/46031a693884b3c45506/maintainability)](https://codeclimate.com/github/RobotlegsJS/RobotlegsJS-Macrobot/maintainability)
-[![Test Coverage](https://api.codeclimate.com/v1/badges/46031a693884b3c45506/test_coverage)](https://codeclimate.com/github/RobotlegsJS/RobotlegsJS-Macrobot/test_coverage)
 [![npm version](https://badge.fury.io/js/%40robotlegsjs%2Fmacrobot.svg)](https://badge.fury.io/js/%40robotlegsjs%2Fmacrobot)
-[![Greenkeeper badge](https://badges.greenkeeper.io/RobotlegsJS/RobotlegsJS-Macrobot.svg)](https://greenkeeper.io/)
 [![styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 
-**Macrobot** is a macro command utility for [RobotlegsJS](https://github.com/RobotlegsJS/RobotlegsJS) which provides the ability to execute batches of commands in sequential or parallel fashion. It was originally implemented by [Alessandro Bianco](https://github.com/alebianco) in [AS3](https://github.com/alebianco/robotlegs-utilities-macrobot) and now is
+**Macrobot** is a macro command utility for [RobotlegsJS](https://github.com/RobotlegsJS/Robotlegs/tree/master/packages/core) which provides the ability to execute batches of commands in sequential or parallel fashion. It was originally implemented by [Alessandro Bianco](https://github.com/alebianco) in [AS3](https://github.com/alebianco/robotlegs-utilities-macrobot) and now is
 ported to [TypeScript](https://www.typescriptlang.org).
 
 ## Introduction
 
-While using [RobotlegsJS](https://github.com/RobotlegsJS/RobotlegsJS) and encapsulating your business logic inside commands, you may find yourself in a situation where you wish to batch commands, instead of relying on events to trigger every step.
+While using [RobotlegsJS](https://github.com/RobotlegsJS/Robotlegs/tree/master/packages/core) and encapsulating your business logic inside commands, you may find yourself in a situation where you wish to batch commands, instead of relying on events to trigger every step.
 
 **Macrobot** simplifies the process and provide two ways to group commands:
 
@@ -479,7 +474,7 @@ If you want to contribute to the project refer to the [contributing document](CO
 
 Available as part of the Tidelift Subscription
 
-The maintainers of [@robotlegsjs/macrobot](https://github.com/RobotlegsJS/RobotlegsJS-Macrobot) and thousands of other packages are working with Tidelift to deliver commercial support and maintenance for the open source dependencies you use to build your applications. Save time, reduce risk, and improve code health, while paying the maintainers of the exact dependencies you use. [Learn more.](https://tidelift.com/subscription/pkg/npm-robotlegsjs-macrobot?utm_source=npm-robotlegsjs-macrobot&utm_medium=referral&utm_campaign=enterprise&utm_term=repo)
+The maintainers of [@robotlegsjs/macrobot](https://github.com/RobotlegsJS/Robotlegs/tree/master/packages/macrobot) and thousands of other packages are working with Tidelift to deliver commercial support and maintenance for the open source dependencies you use to build your applications. Save time, reduce risk, and improve code health, while paying the maintainers of the exact dependencies you use. [Learn more.](https://tidelift.com/subscription/pkg/npm-robotlegsjs-macrobot?utm_source=npm-robotlegsjs-macrobot&utm_medium=referral&utm_campaign=enterprise&utm_term=repo)
 
 ## License
 

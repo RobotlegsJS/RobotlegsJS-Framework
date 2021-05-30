@@ -19,7 +19,6 @@
     "dev": "webpack",
     "build": "webpack --env production",
     "prepare": "npm run clean-up && npm run compile:src",
-    "prepublishOnly": "publish-please guard",
     "publish-please": "npm run lint && npm run autoformat && npm run clean-up && npm run build && npm run test && publish-please"
   },
   "nyc": {
@@ -46,8 +45,7 @@
     "instrument": true
   },
   "repository": {
-    "type": "git",
-    "url": "git@github.com:RobotlegsJS/SignalsJS.git"
+    "url": "https://github.com/RobotlegsJS/Robotlegs/tree/master/packages/signals"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org"
@@ -63,9 +61,9 @@
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/RobotlegsJS/SignalsJS/issues"
+    "url": "https://github.com/RobotlegsJS/Robotlegs/issues"
   },
-  "homepage": "https://github.com/RobotlegsJS/SignalsJS#readme",
+  "homepage": "https://github.com/RobotlegsJS/Robotlegs/tree/master/packages/signals#readme",
   "files": [
     "lib"
   ],
@@ -113,7 +111,6 @@
     "mocha": "^8.4.0",
     "nyc": "^15.1.0",
     "prettier": "^2.3.0",
-    "publish-please": "^5.5.2",
     "puppeteer": "^9.1.1",
     "reflect-metadata": "^0.1.13",
     "rimraf": "^3.0.2",

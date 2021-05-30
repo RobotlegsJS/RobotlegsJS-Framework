@@ -25,12 +25,10 @@
     "build:example": "webpack --config ./webpack.example.config.js --env.production",
     "deploy:example": "./deploy-example.sh",
     "prepare": "npm run clean-up && npm run compile:src",
-    "prepublishOnly": "publish-please guard",
     "publish-please": "npm run tslint && npm run autoformat && npm run clean-up && npm run test && publish-please"
   },
   "repository": {
-    "type": "git",
-    "url": "git@github.com:RobotlegsJS/RobotlegsJS-Pixi.git"
+    "url": "https://github.com/RobotlegsJS/Robotlegs/tree/master/packages/pixi"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org"
@@ -50,9 +48,9 @@
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/RobotlegsJS/RobotlegsJS-Pixi/issues"
+    "url": "https://github.com/RobotlegsJS/Robotlegs/issues"
   },
-  "homepage": "https://github.com/RobotlegsJS/RobotlegsJS-Pixi#readme",
+  "homepage": "https://github.com/RobotlegsJS/Robotlegs/tree/master/packages/pixi#readme",
   "files": [
     "definitions",
     "lib"
@@ -98,7 +96,6 @@
     "mocha": "^7.1.0",
     "pixi.js": "^5.2.1",
     "prettier": "^1.19.1",
-    "publish-please": "^5.5.1",
     "puppeteer": "^2.1.1",
     "reflect-metadata": "^0.1.13",
     "rimraf": "^3.0.2",

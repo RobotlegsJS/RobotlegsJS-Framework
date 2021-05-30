@@ -1,12 +1,8 @@
 # RobotlegsJS Pixi SignalMediator Extension
 
-[![GitHub license](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/RobotlegsJS/RobotlegsJS-Pixi-SignalMediator/blob/master/LICENSE)
+[![GitHub license](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/RobotlegsJS/Robotlegs/tree/master/packages/pixi-signalmediator/LICENSE)
 [![Gitter chat](https://badges.gitter.im/RobotlegsJS/RobotlegsJS.svg)](https://gitter.im/RobotlegsJS/RobotlegsJS)
-[![Build Status](https://travis-ci.com/RobotlegsJS/RobotlegsJS-Pixi-SignalMediator.svg?branch=master)](https://travis-ci.com/RobotlegsJS/RobotlegsJS-Pixi-SignalMediator)
-[![codebeat badge](https://codebeat.co/badges/ceb8fe89-36c1-4b0c-b736-7b5fedc9ff88)](https://codebeat.co/projects/github-com-robotlegsjs-robotlegsjs-pixi-signalmediator-master)
-[![Test Coverage](https://codeclimate.com/github/RobotlegsJS/RobotlegsJS-Pixi-SignalMediator/badges/coverage.svg)](https://codeclimate.com/github/RobotlegsJS/RobotlegsJS-Pixi-SignalMediator/coverage)
 [![npm version](https://badge.fury.io/js/%40robotlegsjs%2Fpixi-signalmediator.svg)](https://badge.fury.io/js/%40robotlegsjs%2Fpixi-signalmediator)
-[![Greenkeeper badge](https://badges.greenkeeper.io/RobotlegsJS/RobotlegsJS-Pixi-SignalMediator.svg)](https://greenkeeper.io/)
 [![styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 
 A port of [Robotlegs SignalMediator Extension](https://github.com/MrDodson/robotlegs-extensions-SignalMediator) to TypeScript.
@@ -66,13 +62,13 @@ or
 yarn add pixi.js@4.2.1 eventemitter3@^2.0.0 reflect-metadata
 ```
 
-Then follow the [installation instructions](https://github.com/RobotlegsJS/RobotlegsJS/blob/master/README.md#installation) of **RobotlegsJS** library to complete the setup of your project.
+Then follow the [installation instructions](https://github.com/RobotlegsJS/Robotlegs/tree/master/packages/core#installation) of **RobotlegsJS** library to complete the setup of your project.
 
 **Dependencies**
 
-+ [RobotlegsJS](https://github.com/RobotlegsJS/RobotlegsJS)
-+ [RobotlegsJS-Pixi](https://github.com/RobotlegsJS/RobotlegsJS-Pixi)
-+ [SignalsJS](https://github.com/RobotlegsJS/SignalsJS)
++ [RobotlegsJS](https://github.com/RobotlegsJS/Robotlegs/tree/master/packages/core)
++ [RobotlegsJS-Pixi](https://github.com/RobotlegsJS/Robotlegs/tree/master/packages/pixi)
++ [SignalsJS](https://github.com/RobotlegsJS/Robotlegs/tree/master/packages/signals)
 + [tslib](https://github.com/Microsoft/tslib)
 
 **Peer Dependencies**
@@ -120,7 +116,7 @@ export class MyUserMediator extends SignalMediator<MyUserView> {
 
 Available as part of the Tidelift Subscription
 
-The maintainers of [@robotlegsjs/pixi-signalmediator](https://github.com/RobotlegsJS/RobotlegsJS-Pixi-SignalMediator) and thousands of other packages are working with Tidelift to deliver commercial support and maintenance for the open source dependencies you use to build your applications. Save time, reduce risk, and improve code health, while paying the maintainers of the exact dependencies you use. [Learn more.](https://tidelift.com/subscription/pkg/npm-robotlegsjs-pixi-signalmediator?utm_source=npm-robotlegsjs-pixi-signalmediator&utm_medium=referral&utm_campaign=enterprise&utm_term=repo)
+The maintainers of [@robotlegsjs/pixi-signalmediator](https://github.com/RobotlegsJS/Robotlegs/tree/master/packages/pixi-signalmediator) and thousands of other packages are working with Tidelift to deliver commercial support and maintenance for the open source dependencies you use to build your applications. Save time, reduce risk, and improve code health, while paying the maintainers of the exact dependencies you use. [Learn more.](https://tidelift.com/subscription/pkg/npm-robotlegsjs-pixi-signalmediator?utm_source=npm-robotlegsjs-pixi-signalmediator&utm_medium=referral&utm_campaign=enterprise&utm_term=repo)
 
 ## License
 

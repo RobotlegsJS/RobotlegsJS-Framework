@@ -19,7 +19,6 @@
     "dev": "webpack",
     "build": "webpack --env.production",
     "prepare": "npm run clean-up && npm run compile:src",
-    "prepublishOnly": "publish-please guard",
     "publish-please": "npm run tslint && npm run autoformat && npm run clean-up && npm run test && publish-please"
   },
   "nyc": {
@@ -45,8 +44,7 @@
     "instrument": true
   },
   "repository": {
-    "type": "git",
-    "url": "git@github.com:RobotlegsJS/RobotlegsJS-EventEmitter3.git"
+    "url": "https://github.com/RobotlegsJS/Robotlegs/tree/master/packages/eventemitter3"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org"
@@ -62,9 +60,9 @@
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/RobotlegsJS/RobotlegsJS-EventEmitter3/issues"
+    "url": "https://github.com/RobotlegsJS/Robotlegs/issues"
   },
-  "homepage": "https://github.com/RobotlegsJS/RobotlegsJS-EventEmitter3#readme",
+  "homepage": "https://github.com/RobotlegsJS/Robotlegs/tree/master/packages/eventemitter3#readme",
   "files": [
     "lib"
   ],
@@ -110,7 +108,6 @@
     "mocha": "^7.1.0",
     "nyc": "^15.0.0",
     "prettier": "^1.19.1",
-    "publish-please": "^5.5.1",
     "puppeteer": "^2.1.1",
     "reflect-metadata": "^0.1.13",
     "rimraf": "^3.0.2",

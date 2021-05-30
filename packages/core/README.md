@@ -1,13 +1,8 @@
 # RobotlegsJS <img src="https://raw.githubusercontent.com/RobotlegsJS/RobotlegsJS/master/media/robotlegs.png" width="30" height="30" />
 
-[![GitHub license](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/RobotlegsJS/RobotlegsJS/blob/master/LICENSE)
+[![GitHub license](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/RobotlegsJS/Robotlegs/tree/master/packages/core/LICENSE)
 [![Gitter chat](https://badges.gitter.im/RobotlegsJS/RobotlegsJS.svg)](https://gitter.im/RobotlegsJS/RobotlegsJS)
-[![Build Status](https://travis-ci.com/RobotlegsJS/RobotlegsJS.svg?branch=master)](https://travis-ci.com/RobotlegsJS/RobotlegsJS)
-[![codebeat badge](https://codebeat.co/badges/688bb0d8-636d-4ff6-ba00-ec077188ef65)](https://codebeat.co/projects/github-com-robotlegsjs-robotlegsjs-master)
-[![Maintainability](https://api.codeclimate.com/v1/badges/6a6bb3d51f955aef1cd7/maintainability)](https://codeclimate.com/github/RobotlegsJS/RobotlegsJS/maintainability)
-[![Test Coverage](https://api.codeclimate.com/v1/badges/6a6bb3d51f955aef1cd7/test_coverage)](https://codeclimate.com/github/RobotlegsJS/RobotlegsJS/test_coverage)
 [![npm version](https://badge.fury.io/js/%40robotlegsjs%2Fcore.svg)](https://badge.fury.io/js/%40robotlegsjs%2Fcore)
-[![Greenkeeper badge](https://badges.greenkeeper.io/RobotlegsJS/RobotlegsJS.svg)](https://greenkeeper.io/)
 [![styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 
 RobotlegsJS is a architecture-based IoC framework for JavaScript/TypeScript. This
@@ -27,32 +22,27 @@ Right now, this framework has extensions for [pixi.js v5](https://github.com/pix
 
 **Extensions**
 
-- [RobotlegsJS-Macrobot](https://github.com/RobotlegsJS/RobotlegsJS-Macrobot): extends commands, adding support to async and macro commands.
+- [RobotlegsJS-Macrobot](https://github.com/RobotlegsJS/Robotlegs/tree/master/packages/macrobot): extends commands, adding support to async and macro commands.
 
-- [RobotlegsJS-SignalCommandMap](https://github.com/RobotlegsJS/RobotlegsJS-SignalCommandMap): maps [SignalsJS](https://github.com/RobotlegsJS/SignalsJS) to commands.
+- [RobotlegsJS-SignalCommandMap](https://github.com/RobotlegsJS/Robotlegs/tree/master/packages/signalcommandmap): maps [SignalsJS](https://github.com/RobotlegsJS/Robotlegs/tree/master/packages/signals) to commands.
 
-- [RobotlegsJS-EventEmitter3](https://github.com/RobotlegsJS/RobotlegsJS-EventEmitter3): integrate RobotlegsJS with [EventEmitter3](https://github.com/primus/eventemitter3).
+- [RobotlegsJS-EventEmitter3](https://github.com/RobotlegsJS/Robotlegs/tree/master/packages/eventemitter3): integrate RobotlegsJS with [EventEmitter3](https://github.com/primus/eventemitter3).
 
-- [RobotlegsJS-Pixi](https://github.com/RobotlegsJS/RobotlegsJS-Pixi): integrate RobotlegsJS with [PixiJS](https://github.com/pixijs/pixi.js).
+- [RobotlegsJS-Pixi](https://github.com/RobotlegsJS/Robotlegs/tree/master/packages/pixi): integrate RobotlegsJS with [PixiJS](https://github.com/pixijs/pixi.js).
 
-- [RobotlegsJS-Pixi-Palidor](https://github.com/RobotlegsJS/RobotlegsJS-Pixi-Palidor): a view manager extension for [RobotlegsJS-Pixi](https://github.com/RobotlegsJS/RobotlegsJS-Pixi).
+- [RobotlegsJS-Pixi-Palidor](https://github.com/RobotlegsJS/Robotlegs/tree/master/packages/pixi-palidor): a view manager extension for [RobotlegsJS-Pixi](https://github.com/RobotlegsJS/Robotlegs/tree/master/packages/pixi).
 
-- [RobotlegsJS-Pixi-SignalMediator](https://github.com/RobotlegsJS/RobotlegsJS-Pixi-SignalMediator): a port of [Robotlegs SignalMediator Extension](https://github.com/MrDodson/robotlegs-extensions-SignalMediator) to TypeScript.
+- [RobotlegsJS-Pixi-SignalMediator](https://github.com/RobotlegsJS/Robotlegs/tree/master/packages/pixi-signalmediator): a port of [Robotlegs SignalMediator Extension](https://github.com/MrDodson/robotlegs-extensions-SignalMediator) to TypeScript.
 
-- [RobotlegsJS-CreateJS](https://github.com/RobotlegsJS/RobotlegsJS-CreateJS): integrate RobotlegsJS with [EaselJS](https://github.com/CreateJS/EaselJS).
+- [RobotlegsJS-CreateJS](https://github.com/RobotlegsJS/Robotlegs/tree/master/packages/createjs): integrate RobotlegsJS with [EaselJS](https://github.com/CreateJS/EaselJS).
 
-- [RobotlegsJS-OpenFL](https://github.com/RobotlegsJS/RobotlegsJS-OpenFL): integrate RobotlegsJS with [OpenFL](https://github.com/openfl/openfl).
+- [RobotlegsJS-OpenFL](https://github.com/RobotlegsJS/Robotlegs/tree/master/packages/openfl): integrate RobotlegsJS with [OpenFL](https://github.com/openfl/openfl).
 
-- [RobotlegsJS-Phaser-CE](https://github.com/RobotlegsJS/RobotlegsJS-Phaser-CE): integrate RobotlegsJS with [Phaser-CE](https://github.com/photonstorm/phaser-ce).
+- [RobotlegsJS-Phaser-CE](https://github.com/RobotlegsJS/Robotlegs/tree/master/packages/phaser-ce): integrate RobotlegsJS with [Phaser-CE](https://github.com/photonstorm/phaser-ce).
 
-- [RobotlegsJS-Phaser-CE-SignalCommandMap](https://github.com/RobotlegsJS/RobotlegsJS-Phaser-CE-SignalCommandMap): maps [Phaser.Signal](https://photonstorm.github.io/phaser-ce/Phaser.Signal.html) to commands.
+- [RobotlegsJS-Phaser-CE-SignalCommandMap](https://github.com/RobotlegsJS/Robotlegs/tree/master/packages/phaser-ce-signalcommandmap): maps [Phaser.Signal](https://photonstorm.github.io/phaser-ce/Phaser.Signal.html) to commands.
 
-- [RobotlegsJS-Phaser](https://github.com/RobotlegsJS/RobotlegsJS-Phaser): integrate RobotlegsJS with [Phaser](https://github.com/photonstorm/phaser).
-
-## Some companies using RobotlegsJS
-
-<a href="http://www.cupcakese.com" target="_blank"><img width="100" src="http://www.gamefounders.com/wp-content/uploads/formidable/Cupcake_SquareThumb-150x150.png"/></a>
-<a href="https://koreez.games" target="_blank"><img width="100" src="https://koreez.games/img/about/1.jpg"/></a>
+- [RobotlegsJS-Phaser](https://github.com/RobotlegsJS/Robotlegs/tree/master/packages/phaser): integrate RobotlegsJS with [Phaser](https://github.com/photonstorm/phaser).
 
 ## Installation
 
@@ -259,7 +249,7 @@ community for interactive experiences.
 
 Available as part of the Tidelift Subscription
 
-The maintainers of [@robotlegsjs/core](https://github.com/RobotlegsJS/RobotlegsJS) and thousands of other packages are working with Tidelift to deliver commercial support and maintenance for the open source dependencies you use to build your applications. Save time, reduce risk, and improve code health, while paying the maintainers of the exact dependencies you use. [Learn more.](https://tidelift.com/subscription/pkg/npm-robotlegsjs-core?utm_source=npm-robotlegsjs-core&utm_medium=referral&utm_campaign=enterprise&utm_term=repo)
+The maintainers of [@robotlegsjs/core](https://github.com/RobotlegsJS/Robotlegs/tree/master/packages/core) and thousands of other packages are working with Tidelift to deliver commercial support and maintenance for the open source dependencies you use to build your applications. Save time, reduce risk, and improve code health, while paying the maintainers of the exact dependencies you use. [Learn more.](https://tidelift.com/subscription/pkg/npm-robotlegsjs-core?utm_source=npm-robotlegsjs-core&utm_medium=referral&utm_campaign=enterprise&utm_term=repo)
 
 ## License
 

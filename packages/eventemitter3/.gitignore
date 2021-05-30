@@ -69,9 +69,6 @@ dist-test
 lib
 lib-test
 
-# NPM lock file
-package-lock.json
-
 #os
 .DS_Store
 .AppleDouble

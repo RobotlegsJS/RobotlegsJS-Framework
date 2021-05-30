@@ -1,15 +1,11 @@
 # RobotlegsJS Phaser-CE SignalCommandMap Extension
 
-[![GitHub license](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/RobotlegsJS/RobotlegsJS-Phaser-SignalCommandMap/blob/master/LICENSE)
+[![GitHub license](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/RobotlegsJS/Robotlegs/tree/master/packages/phaser-ce-signalcommandmap/LICENSE)
 [![Gitter chat](https://badges.gitter.im/RobotlegsJS/RobotlegsJS.svg)](https://gitter.im/RobotlegsJS/RobotlegsJS)
-[![Build Status](https://travis-ci.com/RobotlegsJS/RobotlegsJS-Phaser-CE-SignalCommandMap.svg?branch=master)](https://travis-ci.com/RobotlegsJS/RobotlegsJS-Phaser-CE-SignalCommandMap)
-[![codebeat badge](https://codebeat.co/badges/5a3a6779-ae1f-4b31-9091-d24503a6b2d7)](https://codebeat.co/projects/github-com-robotlegsjs-robotlegsjs-phaser-ce-signalcommandmap-master)
-[![Test Coverage](https://api.codeclimate.com/v1/badges/be8024a4f08a2f6bdfc0/test_coverage)](https://codeclimate.com/github/RobotlegsJS/RobotlegsJS-Phaser-CE-SignalCommandMap/test_coverage)
 [![npm version](https://badge.fury.io/js/%40robotlegsjs%2Fphaser-ce-signalcommandmap.svg)](https://badge.fury.io/js/%40robotlegsjs%2Fphaser-ce-signalcommandmap)
-[![Greenkeeper badge](https://badges.greenkeeper.io/RobotlegsJS/RobotlegsJS-Phaser-CE-SignalCommandMap.svg)](https://greenkeeper.io/)
 [![styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 
-A [RobotlegsJS](https://github.com/RobotlegsJS/RobotlegsJS) Extension that allows the mapping of
+A [RobotlegsJS](https://github.com/RobotlegsJS/Robotlegs/tree/master/packages/core) Extension that allows the mapping of
 [Phaser.Signal](https://photonstorm.github.io/phaser-ce/Phaser.Signal.html) class to commands.
 
 ## Installation
@@ -43,11 +39,11 @@ or
 yarn add phaser-ce@2.8.1 reflect-metadata
 ```
 
-Then follow the [installation instructions](https://github.com/RobotlegsJS/RobotlegsJS/blob/master/README.md#installation) of **RobotlegsJS** library to complete the setup of your project.
+Then follow the [installation instructions](https://github.com/RobotlegsJS/Robotlegs/tree/master/packages/core#installation) of **RobotlegsJS** library to complete the setup of your project.
 
 **Dependencies**
 
-+ [RobotlegsJS](https://github.com/RobotlegsJS/RobotlegsJS)
++ [RobotlegsJS](https://github.com/RobotlegsJS/Robotlegs/tree/master/packages/core)
 + [tslib](https://github.com/Microsoft/tslib)
 
 **Peer Dependencies**
@@ -59,7 +55,7 @@ Then follow the [installation instructions](https://github.com/RobotlegsJS/Robot
 
 Available as part of the Tidelift Subscription
 
-The maintainers of [@robotlegsjs/phaser-ce-signalcommandmap](https://github.com/RobotlegsJS/RobotlegsJS-Phaser-CE-SignalCommandMap) and thousands of other packages are working with Tidelift to deliver commercial support and maintenance for the open source dependencies you use to build your applications. Save time, reduce risk, and improve code health, while paying the maintainers of the exact dependencies you use. [Learn more.](https://tidelift.com/subscription/pkg/npm-robotlegsjs-phaser-ce-signalcommandmap?utm_source=npm-robotlegsjs-phaser-ce-signalcommandmap&utm_medium=referral&utm_campaign=enterprise&utm_term=repo)
+The maintainers of [@robotlegsjs/phaser-ce-signalcommandmap](https://github.com/RobotlegsJS/Robotlegs/tree/master/packages/phaser-ce-signalcommandmap) and thousands of other packages are working with Tidelift to deliver commercial support and maintenance for the open source dependencies you use to build your applications. Save time, reduce risk, and improve code health, while paying the maintainers of the exact dependencies you use. [Learn more.](https://tidelift.com/subscription/pkg/npm-robotlegsjs-phaser-ce-signalcommandmap?utm_source=npm-robotlegsjs-phaser-ce-signalcommandmap&utm_medium=referral&utm_campaign=enterprise&utm_term=repo)
 
 ## License
 

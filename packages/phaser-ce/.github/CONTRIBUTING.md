@@ -43,4 +43,4 @@ changes.
 
 - Feel free to ask for help from other members of the RobotlegsJS team via the
 [gitter chat](https://gitter.im/RobotlegsJS/RobotlegsJS) or
-[github issues](https://github.com/RobotlegsJS/RobotlegsJS-Phaser-CE/issues).
+[github issues](https://github.com/RobotlegsJS/Robotlegs/issues).
