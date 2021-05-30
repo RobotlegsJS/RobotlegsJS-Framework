@@ -5,7 +5,7 @@
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
   "scripts": {
-    "start": "webpack-dev-server --config ./webpack.example.config.js",
+    "start": "webpack serve --config ./webpack.example.config.js",
     "test": "node --max-old-space-size=2048 ./node_modules/karma/bin/karma start --single-run",
     "mocha": "mocha test/**/*.test.ts --require ts-node/register",
     "autoformat": "prettier --config .prettierrc --write --list-different \"{src,static,test,example,definitions}{/**/,/}*.{html,css,js,json,ts}\"",
@@ -109,7 +109,6 @@
     "webpack-cli": "^4.7.0",
     "webpack-concat-plugin": "^3.0.0",
     "webpack-dev-server": "^3.11.2",
-    "webpack-merge": "^5.7.3",
-    "webpack-simple-progress-plugin": "^0.0.5"
+    "webpack-merge": "^5.7.3"
   }
 }
