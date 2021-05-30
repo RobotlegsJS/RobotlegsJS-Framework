@@ -1,0 +1,31 @@
+{
+  // Threat JSON files as JSONC
+  "files.associations": {
+    "*.json": "jsonc"
+  },
+
+  // Set the default
+  "editor.defaultFormatter": null,
+  "editor.formatOnSave": false,
+
+  // Enable per-language
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  }
+}
