@@ -1,19 +1,19 @@
 const webpack = require("webpack");
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-const ConcatPlugin = require("webpack-concat-plugin");
+const ConcatPlugin = require("@mcler/webpack-concat-plugin");
 const CopyPlugin = require("copy-webpack-plugin");
-const SimpleProgressPlugin = require("webpack-simple-progress-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
 const concatPluginConfigGenerator = (name, files) => {
   return {
-    uglify: false,
-    sourceMap: false,
     name: name,
-    fileName: "[name].[hash].js",
+    fileName: "[name].js",
     filesToConcat: files,
-    injectType: "none"
+    injectType: "none",
+    attributes: {
+      async: false
+    }
   };
 };
 
@@ -37,18 +37,19 @@ module.exports = options => {
     },
 
     plugins: [
+      new webpack.ProgressPlugin(),
+
       new CleanWebpackPlugin(),
 
       new HtmlWebpackPlugin({
-        template: path.resolve("static/index.html"),
+        template: path.resolve("./static/index-template.html"),
+        filename: "index.html",
         inject: false
       }),
 
       new ConcatPlugin(concatPluginConfigGenerator("createjs", [path.resolve(__dirname, "./node_modules/easeljs/lib/easeljs.js")])),
 
-      new CopyPlugin([{ from: "static", to: "." }]),
-
-      new SimpleProgressPlugin()
+      new CopyPlugin({ patterns: [{ from: path.resolve("./static"), to: "." }] })
     ],
 
     resolve: {
