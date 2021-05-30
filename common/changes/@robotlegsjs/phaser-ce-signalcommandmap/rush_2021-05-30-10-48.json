@@ -4,6 +4,11 @@
       "packageName": "@robotlegsjs/phaser-ce-signalcommandmap",
       "comment": "Setup [rush](https://rushjs.io/) to be used as monorepo manager (see [1](https://github.com/RobotlegsJS/Robotlegs/pull/1))",
       "type": "patch"
+    },
+    {
+      "packageName": "@robotlegsjs/phaser-ce-signalcommandmap",
+      "comment": "For the changelog of older versions, check the following [changelog](https://github.com/RobotlegsJS/RobotlegsJS-Phaser-CE-SignalCommandMap/tree/master/CHANGELOG.md)",
+      "type": "patch"
     }
   ],
   "packageName": "@robotlegsjs/phaser-ce-signalcommandmap",
