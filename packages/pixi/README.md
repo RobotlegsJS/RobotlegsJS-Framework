@@ -75,7 +75,7 @@ yarn add pixi.js@4.2.1 eventemitter3@^2.0.0 reflect-metadata
 
 ### Setup of your project
 
-Then follow the [installation instructions](https://github.com/RobotlegsJS/Robotlegs/tree/master/packages/core/blob/master/README.md#installation) of **RobotlegsJS** library to complete the setup of your project.
+Then follow the [installation instructions](https://github.com/RobotlegsJS/Robotlegs/tree/master/packages/core#installation) of **RobotlegsJS** library to complete the setup of your project.
 
 **Dependencies**
 
