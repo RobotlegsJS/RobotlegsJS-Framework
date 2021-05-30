@@ -1,0 +1,11 @@
+{
+  "changes": [
+    {
+      "packageName": "@robotlegsjs/phaser-ce-signalcommandmap",
+      "comment": "Setup [rush](https://rushjs.io/) to be used as monorepo manager.",
+      "type": "patch"
+    }
+  ],
+  "packageName": "@robotlegsjs/phaser-ce-signalcommandmap",
+  "email": "tiago.schenkel@gmail.com"
+}

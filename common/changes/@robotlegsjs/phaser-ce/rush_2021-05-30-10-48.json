@@ -1,0 +1,11 @@
+{
+  "changes": [
+    {
+      "packageName": "@robotlegsjs/phaser-ce",
+      "comment": "Setup [rush](https://rushjs.io/) to be used as monorepo manager.",
+      "type": "patch"
+    }
+  ],
+  "packageName": "@robotlegsjs/phaser-ce",
+  "email": "tiago.schenkel@gmail.com"
+}
