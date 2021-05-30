@@ -1,7 +1,6 @@
 const webpack = require("webpack");
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-const SimpleProgressPlugin = require("webpack-simple-progress-plugin");
 const CopyPlugin = require("copy-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
@@ -25,16 +24,17 @@ module.exports = options => {
     },
 
     plugins: [
+      new webpack.ProgressPlugin(),
+
       new CleanWebpackPlugin(),
 
       new HtmlWebpackPlugin({
-        template: path.resolve("static/index.html"),
+        template: path.resolve("./static/index-template.html"),
+        filename: "index.html",
         inject: false
       }),
 
-      new CopyPlugin([{ from: "static", to: "." }]),
-
-      new SimpleProgressPlugin()
+      new CopyPlugin({ patterns: [{ from: path.resolve("./static"), to: "." }] })
     ],
 
     resolve: {
