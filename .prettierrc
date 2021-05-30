@@ -1,12 +1,14 @@
 {
-  "printWidth": 110,
+  "printWidth": 120,
   "tabWidth": 4,
   "useTabs": false,
   "semi": true,
   "singleQuote": false,
+  "quoteProps": "consistent",
   "trailingComma": "none",
   "bracketSpacing": true,
-  "endOfLine": "auto",
+  "arrowParens": "always",
+  "endOfLine": "lf",
   "overrides": [
     {
       "files": "*.js",
