@@ -16,8 +16,9 @@
     "clean-up": "rimraf .nyc_output && rimraf coverage && rimraf lib && rimraf lib-test && rimraf dist-test",
     "compile:src": "tsc -d --importHelpers",
     "compile:test": "tsc -p tsconfig.test.json -d --importHelpers",
-    "dev": "webpack",
-    "build": "webpack --env production",
+    "dist:dev": "webpack",
+    "dist:production": "webpack --env production",
+    "build": "npm run clean-up && npm run compile:src",
     "prepare": "npm run clean-up && npm run compile:src",
     "publish-please": "npm run tslint && npm run autoformat && npm run clean-up && npm run test && publish-please"
   },
