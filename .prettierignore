@@ -138,3 +138,6 @@ lib
 
 # Prettier reformats code blocks inside Markdown, which affects rendered output
 *.md
+
+# Ignore unused code from 'core' package
+packages/core/not-ported-extensions
