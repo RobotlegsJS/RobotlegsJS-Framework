@@ -2,6 +2,7 @@ lockfileVersion: 5.3
 
 specifiers:
   '@istanbuljs/nyc-config-typescript': ^1.0.1
+  '@mcler/webpack-concat-plugin': ^4.1.3
   '@robotlegsjs/signalcommandmap': ^2.0.0
   '@robotlegsjs/signals': ^1.1.0
   '@rush-temp/core': file:./projects/core.tgz
@@ -77,13 +78,12 @@ specifiers:
   tslint-config-prettier: ^1.18.0
   webpack: ^5.38.1
   webpack-cli: ^4.7.0
-  webpack-concat-plugin: ^3.0.0
   webpack-dev-server: ^3.11.2
   webpack-merge: ^5.7.3
-  webpack-simple-progress-plugin: ^0.0.5
 
 dependencies:
   '@istanbuljs/nyc-config-typescript': 1.0.1_40f74ebf3b42f8d97356b2262606f547
+  '@mcler/webpack-concat-plugin': 4.1.3_113243b053f7620383bd9a5a80771064
   '@robotlegsjs/signalcommandmap': 2.0.0
   '@robotlegsjs/signals': 1.1.0
   '@rush-temp/core': file:projects/core.tgz
@@ -159,10 +159,8 @@ dependencies:
   tslint-config-prettier: 1.18.0
   webpack: 5.38.1_webpack-cli@4.7.0
   webpack-cli: 4.7.0_4f38b4f344caeae135cc7debc9aac51b
-  webpack-concat-plugin: 3.0.0_webpack@5.38.1
   webpack-dev-server: 3.11.2_webpack-cli@4.7.0+webpack@5.38.1
   webpack-merge: 5.7.3
-  webpack-simple-progress-plugin: 0.0.5_webpack@5.38.1
 
 packages:
 
@@ -437,6 +435,21 @@ packages:
   /@istanbuljs/schema/0.1.3:
     resolution: {integrity: sha512-ZXRY4jNvVgSVQ8DL3LTcakaAtXwTVUxE81hslsyD2AtoXW/wVob10HkOJ1X/pAlcI7D+2YoZKg5do8G/w6RYgA==}
     engines: {node: '>=8'}
+    dev: false
+
+  /@mcler/webpack-concat-plugin/4.1.3_113243b053f7620383bd9a5a80771064:
+    resolution: {integrity: sha512-usy0VPy7afO58etf4Ln7RXH09USOfd6H5DaXiXqvDOuFuCIacpLcuBDJpjxgEatA8F12ht886Yd5xZwKki/dkQ==}
+    engines: {node: '>= 14'}
+    peerDependencies:
+      html-webpack-plugin: ^5.3.1
+      webpack: ^5.12.0
+      webpack-sources: ^2.2.0
+    dependencies:
+      globby: 8.0.2
+      html-webpack-plugin: 5.3.1_webpack@5.38.1
+      schema-utils: 3.0.0
+      upath: 2.0.1
+      webpack: 5.38.1_webpack-cli@4.7.0
     dev: false
 
   /@mrmlnc/readdir-enhanced/2.2.1:
@@ -2192,10 +2205,6 @@ packages:
       delayed-stream: 1.0.0
     dev: false
 
-  /commander/2.13.0:
-    resolution: {integrity: sha512-MVuS359B+YzaWqjCL/c+22gfryv+mCBPHAv3zyVI2GN8EY6IRP8VwtasXn8jyyhvvq84R4ImN1OKRtcbIasjYA==}
-    dev: false
-
   /commander/2.20.3:
     resolution: {integrity: sha512-GpVkmM8vF2vQUkj2LvZmD35JxeJOLCwJ9cUkugyk2nuhbv3+mJvpLYYt+0+USMxE+oj+ey/lJEnhZw75x/OMcQ==}
     dev: false
@@ -2255,12 +2264,6 @@ packages:
       inherits: 2.0.4
       readable-stream: 2.3.7
       typedarray: 0.0.6
-    dev: false
-
-  /concat-with-sourcemaps/1.1.0:
-    resolution: {integrity: sha512-4gEjHJFT9e+2W/77h/DS5SGUgwDaOwprX8L/gl5+3ixnzkVJJsZWDSelmN3Oilw3LNDZjZV0yqH1hLG3k6nghg==}
-    dependencies:
-      source-map: 0.6.1
     dev: false
 
   /connect-history-api-fallback/1.6.0:
@@ -3315,8 +3318,8 @@ packages:
       strip-eof: 1.0.0
     dev: false
 
-  /execa/5.0.0:
-    resolution: {integrity: sha512-ov6w/2LCiuyO4RLYGdpFGjkcs0wMTgGE8PrkTHikeUy5iJekXyPIKUjifk5CsE0pt7sMCrMZ3YNqoCj6idQOnQ==}
+  /execa/5.0.1:
+    resolution: {integrity: sha512-4hFTjFbFzQa3aCLobpbPJR/U+VoL1wdV5ozOWjeet0AWDeYr9UFGM1eUFWHX+VtOWFq4p0xXUXfW1YxUaP4fpw==}
     engines: {node: '>=10'}
     dependencies:
       cross-spawn: 7.0.3
@@ -6341,11 +6344,6 @@ packages:
     engines: {node: '>= 0.6.0'}
     dev: false
 
-  /progress/1.1.8:
-    resolution: {integrity: sha1-4mDHj2Fhzdmw5WzD4Khd4Xx6V74=}
-    engines: {node: '>=0.4.0'}
-    dev: false
-
   /progress/2.0.3:
     resolution: {integrity: sha512-7PiHtLll5LdnKIMw100I+8xJXR5gW2QwWYkT6iJva0bXitZKa/XMrSbdmg3r2Xnaidz9Qumd0VPaMrZlF9V9sA==}
     engines: {node: '>=0.4.0'}
@@ -6808,14 +6806,6 @@ packages:
     engines: {node: '>= 4.3 < 5.0.0 || >= 5.10'}
     dependencies:
       ajv: 5.5.2
-    dev: false
-
-  /schema-utils/0.4.7:
-    resolution: {integrity: sha512-v/iwU6wvwGK8HbU9yi3/nhGzP0yGSuhQMzL6ySiec1FSrZZDkhm4noOSWzrNFo/jEc+SJY6jRTwuwbSXJPDUnQ==}
-    engines: {node: '>= 4'}
-    dependencies:
-      ajv: 6.12.6
-      ajv-keywords: 3.5.2_ajv@6.12.6
     dev: false
 
   /schema-utils/1.0.0:
@@ -7906,16 +7896,6 @@ packages:
     resolution: {integrity: sha512-6Gurc1n//gjp9eQNXjD9O3M/sMwVtN5S8Lv9bvOYBfKfDNiIIhqiyi01vMBO45u4zkDE420w/e0se7Vs+sIg+g==}
     dev: false
 
-  /uglify-es/3.3.9:
-    resolution: {integrity: sha512-r+MU0rfv4L/0eeW3xZrd16t4NZfK8Ld4SWVglYBb7ez5uXFWHuVRs6xCTrf1yirs9a4j4Y27nn7SRfO6v67XsQ==}
-    engines: {node: '>=0.8.0'}
-    deprecated: support for ECMAScript is superseded by `uglify-js` as of v3.13.0
-    hasBin: true
-    dependencies:
-      commander: 2.13.0
-      source-map: 0.6.1
-    dev: false
-
   /uglify-js/3.13.8:
     resolution: {integrity: sha512-PvFLMFIQHfIjFFlvAch69U2IvIxK9TNzNWt1SxZGp9JZ/v70yvqIQuiJeVPPtUMOzoNt+aNRDk4wgxb34wvEqA==}
     engines: {node: '>=0.8.0'}
@@ -7969,6 +7949,11 @@ packages:
 
   /upath/1.2.0:
     resolution: {integrity: sha512-aZwGpamFO61g3OlfT7OQCHqhGnW43ieH9WZeP7QxN/G/jS4jfqUkZxoryvJgVPEcrl5NL/ggHsSmLMHuH64Lhg==}
+    engines: {node: '>=4'}
+    dev: false
+
+  /upath/2.0.1:
+    resolution: {integrity: sha512-1uEe95xksV1O0CYKXo8vQvN1JEbtJp7lb7C5U9HMsIp6IVwntkH/oNUzyVNQSd4S1sYk2FpSSW44FqMc8qee5w==}
     engines: {node: '>=4'}
     dev: false
 
@@ -8111,7 +8096,7 @@ packages:
       '@webpack-cli/serve': 1.4.0_7cbb6369db867e7782bcc6ed9d7442a1
       colorette: 1.2.2
       commander: 7.2.0
-      execa: 5.0.0
+      execa: 5.0.1
       fastest-levenshtein: 1.0.12
       import-local: 3.0.2
       interpret: 2.2.0
@@ -8120,20 +8105,6 @@ packages:
       webpack: 5.38.1_webpack-cli@4.7.0
       webpack-dev-server: 3.11.2_webpack-cli@4.7.0+webpack@5.38.1
       webpack-merge: 5.7.3
-    dev: false
-
-  /webpack-concat-plugin/3.0.0_webpack@5.38.1:
-    resolution: {integrity: sha512-DLdDbZXyrFR99wyAVC9P06HLjr2XujBmQdSbnQMK2o01H9U2NHsN5W76jeTVeXDq5OLvZf8r/se65ftRo3Prow==}
-    engines: {node: '>= 4.8 < 5.0.0 || >= 5.10'}
-    peerDependencies:
-      webpack: ^4.0.1
-    dependencies:
-      concat-with-sourcemaps: 1.1.0
-      globby: 8.0.2
-      schema-utils: 0.4.7
-      uglify-es: 3.3.9
-      upath: 1.2.0
-      webpack: 5.38.1_webpack-cli@4.7.0
     dev: false
 
   /webpack-dev-middleware/3.7.3_webpack@5.38.1:
@@ -8218,17 +8189,6 @@ packages:
     dependencies:
       clone-deep: 4.0.1
       wildcard: 2.0.0
-    dev: false
-
-  /webpack-simple-progress-plugin/0.0.5_webpack@5.38.1:
-    resolution: {integrity: sha512-e4NGjl4ahIOBVAJ1BxTfk+f+yjzFhsuib3ROIMU11T7rAy4TOy/nPnuciC2y5f+wWNchfVMQMTiP+643g+U9EA==}
-    peerDependencies:
-      webpack: ^1.3.0 || ^2.1.0-beta || ^3.0.0 || ^4.0.0 || ^5.0.0
-    dependencies:
-      chalk: 1.1.3
-      object-assign: 4.1.1
-      progress: 1.1.8
-      webpack: 5.38.1_webpack-cli@4.7.0
     dev: false
 
   /webpack-sources/2.3.0:
@@ -8470,11 +8430,6 @@ packages:
     engines: {node: '>=10'}
     dev: false
 
-  /yargs-parser/20.2.7:
-    resolution: {integrity: sha512-FiNkvbeHzB/syOjIUxFDCnhSfzAL8R5vs40MgLFBorXACCOAEaWu0gRZl14vG8MR9AOJIZbmkjhusqBYZ3HTHw==}
-    engines: {node: '>=10'}
-    dev: false
-
   /yargs-unparser/2.0.0:
     resolution: {integrity: sha512-7pRTIA9Qc1caZ0bZ6RYRGbHJthJWuakf+WmHK0rVeLkNrrGhfoabBNdue6kdINI6r4if7ocq9aD/n7xwKOdzOA==}
     engines: {node: '>=10'}
@@ -8527,7 +8482,7 @@ packages:
       require-directory: 2.1.1
       string-width: 4.2.2
       y18n: 5.0.8
-      yargs-parser: 20.2.7
+      yargs-parser: 20.2.4
     dev: false
 
   /yauzl/2.10.0:
@@ -8614,10 +8569,11 @@ packages:
     dev: false
 
   file:projects/createjs.tgz:
-    resolution: {integrity: sha512-zzEZehXQdtoquv1GdEGHRokuDd8qc8pwpgUmb5GaxIA3oey4yUTsgPSFX+HiwiN7A8X/ITHS9saUeOmR9nuabg==, tarball: file:projects/createjs.tgz}
+    resolution: {integrity: sha512-DnhUNZ3HwT575aWlX5p8DKFiasP5eQOzgeIe6RshvXrzAD0rE/+l1Up1VM5aj/jZKjN2wASaL9hNwhLF15+n4w==, tarball: file:projects/createjs.tgz}
     name: '@rush-temp/createjs'
     version: 0.0.0
     dependencies:
+      '@mcler/webpack-concat-plugin': 4.1.3_113243b053f7620383bd9a5a80771064
       '@types/bluebird': 3.5.35
       '@types/chai': 4.2.18
       '@types/easeljs': 1.0.0
@@ -8663,9 +8619,7 @@ packages:
       typescript: 3.9.9
       webpack: 5.38.1_webpack-cli@4.7.0
       webpack-cli: 4.7.0_4f38b4f344caeae135cc7debc9aac51b
-      webpack-concat-plugin: 3.0.0_webpack@5.38.1
       webpack-dev-server: 3.11.2_webpack-cli@4.7.0+webpack@5.38.1
-      webpack-simple-progress-plugin: 0.0.5_webpack@5.38.1
     transitivePeerDependencies:
       - '@swc/core'
       - '@swc/wasm'
@@ -8677,6 +8631,7 @@ packages:
       - supports-color
       - utf-8-validate
       - webpack-bundle-analyzer
+      - webpack-sources
     dev: false
 
   file:projects/eventemitter3.tgz:
@@ -8809,7 +8764,7 @@ packages:
     dev: false
 
   file:projects/openfl.tgz:
-    resolution: {integrity: sha512-qgStWzJTswwpHK1qeUdDsseZCB4hswtawEBwDju7UxCSsm0sKgvqYA89BxpHX8vwir7kLC62ubs6iZ3E8HZohw==, tarball: file:projects/openfl.tgz}
+    resolution: {integrity: sha512-Gv7ZZlQ1YpqU4tguZj/Qd7lGVsf0fW97dHAFkpKY3xZJdv5SyHk0Vl3Egn+Iik9GVMbb2PwFhBlp4udfNNvuGA==, tarball: file:projects/openfl.tgz}
     name: '@rush-temp/openfl'
     version: 0.0.0
     dependencies:
@@ -8857,10 +8812,8 @@ packages:
       typescript: 3.9.9
       webpack: 5.38.1_webpack-cli@4.7.0
       webpack-cli: 4.7.0_4f38b4f344caeae135cc7debc9aac51b
-      webpack-concat-plugin: 3.0.0_webpack@5.38.1
       webpack-dev-server: 3.11.2_webpack-cli@4.7.0+webpack@5.38.1
       webpack-merge: 5.7.3
-      webpack-simple-progress-plugin: 0.0.5_webpack@5.38.1
     transitivePeerDependencies:
       - '@swc/core'
       - '@swc/wasm'
@@ -8934,10 +8887,11 @@ packages:
     dev: false
 
   file:projects/phaser-ce.tgz:
-    resolution: {integrity: sha512-nE1taHnjvY8zVyxf7susILM4o1tBigpdi/KbKqAdlbOROE65RNNbajHDC8KX5MjxKeV93PlABolGliHcK/5rsA==, tarball: file:projects/phaser-ce.tgz}
+    resolution: {integrity: sha512-XDWLYyQTr1pR02jGs3KcWKmDuc+lKOV18Urvbpbeei+z9PyQ7TJ44wI85IX/WqpGf5FusQSNITEufjKjxQmdxQ==, tarball: file:projects/phaser-ce.tgz}
     name: '@rush-temp/phaser-ce'
     version: 0.0.0
     dependencies:
+      '@mcler/webpack-concat-plugin': 4.1.3_113243b053f7620383bd9a5a80771064
       '@types/bluebird': 3.5.35
       '@types/chai': 4.2.18
       '@types/mocha': 8.2.2
@@ -8980,7 +8934,6 @@ packages:
       typescript: 3.9.9
       webpack: 5.38.1_webpack-cli@4.7.0
       webpack-cli: 4.7.0_4f38b4f344caeae135cc7debc9aac51b
-      webpack-concat-plugin: 3.0.0_webpack@5.38.1
       webpack-dev-server: 3.11.2_webpack-cli@4.7.0+webpack@5.38.1
     transitivePeerDependencies:
       - '@swc/core'
@@ -8993,13 +8946,15 @@ packages:
       - supports-color
       - utf-8-validate
       - webpack-bundle-analyzer
+      - webpack-sources
     dev: false
 
   file:projects/phaser.tgz:
-    resolution: {integrity: sha512-qOzvvB7TpNrTnweFrHC23Krh2vLl4+drm4gv2Kf/cJj0VTbBkYd/358JtpPnl936zJDmWBEP/WEx/CexotLVwg==, tarball: file:projects/phaser.tgz}
+    resolution: {integrity: sha512-j7+wyKbIgy3lZER29cBmrMCQCC1yvelI5hTEDXCtcXoFreVPwKez86fbHlpCJG6qJAKLeUFiF/dft+9qqfmWkA==, tarball: file:projects/phaser.tgz}
     name: '@rush-temp/phaser'
     version: 0.0.0
     dependencies:
+      '@mcler/webpack-concat-plugin': 4.1.3_113243b053f7620383bd9a5a80771064
       '@types/bluebird': 3.5.35
       '@types/chai': 4.2.18
       '@types/mocha': 8.2.2
@@ -9043,9 +8998,7 @@ packages:
       typescript: 3.9.9
       webpack: 5.38.1_webpack-cli@4.7.0
       webpack-cli: 4.7.0_4f38b4f344caeae135cc7debc9aac51b
-      webpack-concat-plugin: 3.0.0_webpack@5.38.1
       webpack-dev-server: 3.11.2_webpack-cli@4.7.0+webpack@5.38.1
-      webpack-simple-progress-plugin: 0.0.5_webpack@5.38.1
     transitivePeerDependencies:
       - '@swc/core'
       - '@swc/wasm'
@@ -9057,10 +9010,11 @@ packages:
       - supports-color
       - utf-8-validate
       - webpack-bundle-analyzer
+      - webpack-sources
     dev: false
 
   file:projects/pixi-palidor.tgz:
-    resolution: {integrity: sha512-k7reVcLj6+CV97Ze3R/WM5v2o+IRgMq1BuPg5ENpmmCLJoSRHl4jni5SlzDdd0ty4t37Qoug/Ywzc5U8VH6QMg==, tarball: file:projects/pixi-palidor.tgz}
+    resolution: {integrity: sha512-NW5m9xwDh40BYH3LIAlhMJSo7y2ukPSiynOePMVkPjg1CCL4pU4DPF4/xJlJi9GuaUqhWSmdaDfVztm2NVjLbQ==, tarball: file:projects/pixi-palidor.tgz}
     name: '@rush-temp/pixi-palidor'
     version: 0.0.0
     dependencies:
@@ -9109,7 +9063,6 @@ packages:
       webpack: 5.38.1_webpack-cli@4.7.0
       webpack-cli: 4.7.0_4f38b4f344caeae135cc7debc9aac51b
       webpack-dev-server: 3.11.2_webpack-cli@4.7.0+webpack@5.38.1
-      webpack-simple-progress-plugin: 0.0.5_webpack@5.38.1
     transitivePeerDependencies:
       - '@swc/core'
       - '@swc/wasm'
@@ -9188,7 +9141,7 @@ packages:
     dev: false
 
   file:projects/pixi.tgz:
-    resolution: {integrity: sha512-1qZMWMxAyiashabg+oQfvYoaHzGxv6YLGT4hT7pT66HNphIOTmzG7453/dZ45/8Ia1WYc3Xu1/XQtEgRPHeMdw==, tarball: file:projects/pixi.tgz}
+    resolution: {integrity: sha512-MSfZjr/I68BVB+kW/h0FjMSXMumhq0AsCP7jmZydFoEK4zSvNTHIEN3a3NAt3u1yWS3ziStx/2D8zj3nJf7V/A==, tarball: file:projects/pixi.tgz}
     name: '@rush-temp/pixi'
     version: 0.0.0
     dependencies:
@@ -9236,7 +9189,6 @@ packages:
       webpack: 5.38.1_webpack-cli@4.7.0
       webpack-cli: 4.7.0_4f38b4f344caeae135cc7debc9aac51b
       webpack-dev-server: 3.11.2_webpack-cli@4.7.0+webpack@5.38.1
-      webpack-simple-progress-plugin: 0.0.5_webpack@5.38.1
     transitivePeerDependencies:
       - '@swc/core'
       - '@swc/wasm'

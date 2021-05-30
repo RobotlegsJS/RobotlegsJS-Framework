@@ -7,6 +7,10 @@
       "allowedCategories": [ "production" ]
     },
     {
+      "name": "@mcler/webpack-concat-plugin",
+      "allowedCategories": [ "production" ]
+    },
+    {
       "name": "@robotlegsjs/core",
       "allowedCategories": [ "production" ]
     },
@@ -267,19 +271,11 @@
       "allowedCategories": [ "production" ]
     },
     {
-      "name": "webpack-concat-plugin",
-      "allowedCategories": [ "production" ]
-    },
-    {
       "name": "webpack-dev-server",
       "allowedCategories": [ "production" ]
     },
     {
       "name": "webpack-merge",
-      "allowedCategories": [ "production" ]
-    },
-    {
-      "name": "webpack-simple-progress-plugin",
       "allowedCategories": [ "production" ]
     }
   ]
