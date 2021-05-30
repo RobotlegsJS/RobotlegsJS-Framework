@@ -21,9 +21,11 @@ specifiers:
   '@types/bluebird': ^3.5.35
   '@types/chai': ^4.2.18
   '@types/core-js': ^2.5.4
+  '@types/createjs-lib': ^0.0.29
   '@types/easeljs': ^1.0.0
   '@types/mocha': ^8.2.2
   '@types/sinon': ^10.0.1
+  '@types/tweenjs': ^1.0.3
   '@types/webpack-env': ^1.16.0
   '@typescript-eslint/eslint-plugin': ^4.25.0
   '@typescript-eslint/parser': ^4.25.0
@@ -75,7 +77,9 @@ specifiers:
   terser-webpack-plugin: ^5.1.2
   ts-loader: ^9.2.2
   ts-node: ^10.0.0
+  tslib: ^2.2.0
   tslint-config-prettier: ^1.18.0
+  typescript: ~4.2.4
   webpack: ^5.38.1
   webpack-cli: ^4.7.0
   webpack-dev-server: ^3.11.2
@@ -102,12 +106,14 @@ dependencies:
   '@types/bluebird': 3.5.35
   '@types/chai': 4.2.18
   '@types/core-js': 2.5.4
+  '@types/createjs-lib': 0.0.29
   '@types/easeljs': 1.0.0
   '@types/mocha': 8.2.2
   '@types/sinon': 10.0.1
+  '@types/tweenjs': 1.0.3
   '@types/webpack-env': 1.16.0
-  '@typescript-eslint/eslint-plugin': 4.25.0_abd2267607402f16adbe38429bbae6ba
-  '@typescript-eslint/parser': 4.25.0_eslint@7.27.0
+  '@typescript-eslint/eslint-plugin': 4.25.0_6fb86b31e39dbd15f93824c03ca6ca0c
+  '@typescript-eslint/parser': 4.25.0_eslint@7.27.0+typescript@4.2.4
   bluebird: 3.7.2
   browserify-versionify: 1.0.6
   chai: 4.3.4
@@ -154,9 +160,11 @@ dependencies:
   sinon-chai: 3.7.0_chai@4.3.4+sinon@11.1.1
   source-map-support: 0.5.19
   terser-webpack-plugin: 5.1.2_webpack@5.38.1
-  ts-loader: 9.2.2_webpack@5.38.1
-  ts-node: 10.0.0
+  ts-loader: 9.2.2_typescript@4.2.4+webpack@5.38.1
+  ts-node: 10.0.0_typescript@4.2.4
+  tslib: 2.2.0
   tslint-config-prettier: 1.18.0
+  typescript: 4.2.4
   webpack: 5.38.1_webpack-cli@4.7.0
   webpack-cli: 4.7.0_4f38b4f344caeae135cc7debc9aac51b
   webpack-dev-server: 3.11.2_webpack-cli@4.7.0+webpack@5.38.1
@@ -429,7 +437,7 @@ packages:
       '@istanbuljs/schema': 0.1.3
       nyc: 15.1.0
       source-map-support: 0.5.19
-      ts-node: 10.0.0
+      ts-node: 10.0.0_typescript@4.2.4
     dev: false
 
   /@istanbuljs/schema/0.1.3:
@@ -974,7 +982,7 @@ packages:
     dev: false
     optional: true
 
-  /@typescript-eslint/eslint-plugin/4.25.0_abd2267607402f16adbe38429bbae6ba:
+  /@typescript-eslint/eslint-plugin/4.25.0_6fb86b31e39dbd15f93824c03ca6ca0c:
     resolution: {integrity: sha512-Qfs3dWkTMKkKwt78xp2O/KZQB8MPS1UQ5D3YW2s6LQWBE1074BE+Rym+b1pXZIX3M3fSvPUDaCvZLKV2ylVYYQ==}
     engines: {node: ^10.12.0 || >=12.0.0}
     peerDependencies:
@@ -985,8 +993,8 @@ packages:
       typescript:
         optional: true
     dependencies:
-      '@typescript-eslint/experimental-utils': 4.25.0_eslint@7.27.0
-      '@typescript-eslint/parser': 4.25.0_eslint@7.27.0
+      '@typescript-eslint/experimental-utils': 4.25.0_eslint@7.27.0+typescript@4.2.4
+      '@typescript-eslint/parser': 4.25.0_eslint@7.27.0+typescript@4.2.4
       '@typescript-eslint/scope-manager': 4.25.0
       debug: 4.3.1
       eslint: 7.27.0
@@ -994,38 +1002,13 @@ packages:
       lodash: 4.17.21
       regexpp: 3.1.0
       semver: 7.3.5
-      tsutils: 3.21.0
+      tsutils: 3.21.0_typescript@4.2.4
+      typescript: 4.2.4
     transitivePeerDependencies:
       - supports-color
     dev: false
 
-  /@typescript-eslint/eslint-plugin/4.25.0_ec7770e83475322b368bff30b543badb:
-    resolution: {integrity: sha512-Qfs3dWkTMKkKwt78xp2O/KZQB8MPS1UQ5D3YW2s6LQWBE1074BE+Rym+b1pXZIX3M3fSvPUDaCvZLKV2ylVYYQ==}
-    engines: {node: ^10.12.0 || >=12.0.0}
-    peerDependencies:
-      '@typescript-eslint/parser': ^4.0.0
-      eslint: ^5.0.0 || ^6.0.0 || ^7.0.0
-      typescript: '*'
-    peerDependenciesMeta:
-      typescript:
-        optional: true
-    dependencies:
-      '@typescript-eslint/experimental-utils': 4.25.0_eslint@7.27.0+typescript@4.3.2
-      '@typescript-eslint/parser': 4.25.0_eslint@7.27.0+typescript@4.3.2
-      '@typescript-eslint/scope-manager': 4.25.0
-      debug: 4.3.1
-      eslint: 7.27.0
-      functional-red-black-tree: 1.0.1
-      lodash: 4.17.21
-      regexpp: 3.1.0
-      semver: 7.3.5
-      tsutils: 3.21.0_typescript@4.3.2
-      typescript: 4.3.2
-    transitivePeerDependencies:
-      - supports-color
-    dev: false
-
-  /@typescript-eslint/experimental-utils/4.25.0_eslint@7.27.0:
+  /@typescript-eslint/experimental-utils/4.25.0_eslint@7.27.0+typescript@4.2.4:
     resolution: {integrity: sha512-f0doRE76vq7NEEU0tw+ajv6CrmPelw5wLoaghEHkA2dNLFb3T/zJQqGPQ0OYt5XlZaS13MtnN+GTPCuUVg338w==}
     engines: {node: ^10.12.0 || >=12.0.0}
     peerDependencies:
@@ -1034,7 +1017,7 @@ packages:
       '@types/json-schema': 7.0.7
       '@typescript-eslint/scope-manager': 4.25.0
       '@typescript-eslint/types': 4.25.0
-      '@typescript-eslint/typescript-estree': 4.25.0
+      '@typescript-eslint/typescript-estree': 4.25.0_typescript@4.2.4
       eslint: 7.27.0
       eslint-scope: 5.1.1
       eslint-utils: 2.1.0
@@ -1043,25 +1026,7 @@ packages:
       - typescript
     dev: false
 
-  /@typescript-eslint/experimental-utils/4.25.0_eslint@7.27.0+typescript@4.3.2:
-    resolution: {integrity: sha512-f0doRE76vq7NEEU0tw+ajv6CrmPelw5wLoaghEHkA2dNLFb3T/zJQqGPQ0OYt5XlZaS13MtnN+GTPCuUVg338w==}
-    engines: {node: ^10.12.0 || >=12.0.0}
-    peerDependencies:
-      eslint: '*'
-    dependencies:
-      '@types/json-schema': 7.0.7
-      '@typescript-eslint/scope-manager': 4.25.0
-      '@typescript-eslint/types': 4.25.0
-      '@typescript-eslint/typescript-estree': 4.25.0_typescript@4.3.2
-      eslint: 7.27.0
-      eslint-scope: 5.1.1
-      eslint-utils: 2.1.0
-    transitivePeerDependencies:
-      - supports-color
-      - typescript
-    dev: false
-
-  /@typescript-eslint/parser/4.25.0_eslint@7.27.0:
+  /@typescript-eslint/parser/4.25.0_eslint@7.27.0+typescript@4.2.4:
     resolution: {integrity: sha512-OZFa1SKyEJpAhDx8FcbWyX+vLwh7OEtzoo2iQaeWwxucyfbi0mT4DijbOSsTgPKzGHr6GrF2V5p/CEpUH/VBxg==}
     engines: {node: ^10.12.0 || >=12.0.0}
     peerDependencies:
@@ -1073,29 +1038,10 @@ packages:
     dependencies:
       '@typescript-eslint/scope-manager': 4.25.0
       '@typescript-eslint/types': 4.25.0
-      '@typescript-eslint/typescript-estree': 4.25.0
+      '@typescript-eslint/typescript-estree': 4.25.0_typescript@4.2.4
       debug: 4.3.1
       eslint: 7.27.0
-    transitivePeerDependencies:
-      - supports-color
-    dev: false
-
-  /@typescript-eslint/parser/4.25.0_eslint@7.27.0+typescript@4.3.2:
-    resolution: {integrity: sha512-OZFa1SKyEJpAhDx8FcbWyX+vLwh7OEtzoo2iQaeWwxucyfbi0mT4DijbOSsTgPKzGHr6GrF2V5p/CEpUH/VBxg==}
-    engines: {node: ^10.12.0 || >=12.0.0}
-    peerDependencies:
-      eslint: ^5.0.0 || ^6.0.0 || ^7.0.0
-      typescript: '*'
-    peerDependenciesMeta:
-      typescript:
-        optional: true
-    dependencies:
-      '@typescript-eslint/scope-manager': 4.25.0
-      '@typescript-eslint/types': 4.25.0
-      '@typescript-eslint/typescript-estree': 4.25.0_typescript@4.3.2
-      debug: 4.3.1
-      eslint: 7.27.0
-      typescript: 4.3.2
+      typescript: 4.2.4
     transitivePeerDependencies:
       - supports-color
     dev: false
@@ -1113,7 +1059,7 @@ packages:
     engines: {node: ^8.10.0 || ^10.13.0 || >=11.10.1}
     dev: false
 
-  /@typescript-eslint/typescript-estree/4.25.0:
+  /@typescript-eslint/typescript-estree/4.25.0_typescript@4.2.4:
     resolution: {integrity: sha512-1B8U07TGNAFMxZbSpF6jqiDs1cVGO0izVkf18Q/SPcUAc9LhHxzvSowXDTvkHMWUVuPpagupaW63gB6ahTXVlg==}
     engines: {node: ^10.12.0 || >=12.0.0}
     peerDependencies:
@@ -1128,28 +1074,8 @@ packages:
       globby: 11.0.3
       is-glob: 4.0.1
       semver: 7.3.5
-      tsutils: 3.21.0
-    transitivePeerDependencies:
-      - supports-color
-    dev: false
-
-  /@typescript-eslint/typescript-estree/4.25.0_typescript@4.3.2:
-    resolution: {integrity: sha512-1B8U07TGNAFMxZbSpF6jqiDs1cVGO0izVkf18Q/SPcUAc9LhHxzvSowXDTvkHMWUVuPpagupaW63gB6ahTXVlg==}
-    engines: {node: ^10.12.0 || >=12.0.0}
-    peerDependencies:
-      typescript: '*'
-    peerDependenciesMeta:
-      typescript:
-        optional: true
-    dependencies:
-      '@typescript-eslint/types': 4.25.0
-      '@typescript-eslint/visitor-keys': 4.25.0
-      debug: 4.3.1
-      globby: 11.0.3
-      is-glob: 4.0.1
-      semver: 7.3.5
-      tsutils: 3.21.0_typescript@4.3.2
-      typescript: 4.3.2
+      tsutils: 3.21.0_typescript@4.2.4
+      typescript: 4.2.4
     transitivePeerDependencies:
       - supports-color
     dev: false
@@ -7618,7 +7544,7 @@ packages:
     engines: {node: '>=0.10.0'}
     dev: false
 
-  /ts-loader/9.2.2_typescript@3.9.9+webpack@5.38.1:
+  /ts-loader/9.2.2_typescript@4.2.4+webpack@5.38.1:
     resolution: {integrity: sha512-hNIhGTQHtNKjOzR2ZtQ2OSVbXPykOae+zostf1IlHCf61Mt41GMJurKNqrYUbzHgpmj6UWRu8eBfb7q0XliV0g==}
     engines: {node: '>=12.0.0'}
     peerDependencies:
@@ -7629,40 +7555,11 @@ packages:
       enhanced-resolve: 5.8.2
       micromatch: 4.0.4
       semver: 7.3.5
-      typescript: 3.9.9
+      typescript: 4.2.4
       webpack: 5.38.1_webpack-cli@4.7.0
     dev: false
 
-  /ts-loader/9.2.2_typescript@4.3.2+webpack@5.38.1:
-    resolution: {integrity: sha512-hNIhGTQHtNKjOzR2ZtQ2OSVbXPykOae+zostf1IlHCf61Mt41GMJurKNqrYUbzHgpmj6UWRu8eBfb7q0XliV0g==}
-    engines: {node: '>=12.0.0'}
-    peerDependencies:
-      typescript: '*'
-      webpack: ^5.0.0
-    dependencies:
-      chalk: 4.1.1
-      enhanced-resolve: 5.8.2
-      micromatch: 4.0.4
-      semver: 7.3.5
-      typescript: 4.3.2
-      webpack: 5.38.1_webpack-cli@4.7.0
-    dev: false
-
-  /ts-loader/9.2.2_webpack@5.38.1:
-    resolution: {integrity: sha512-hNIhGTQHtNKjOzR2ZtQ2OSVbXPykOae+zostf1IlHCf61Mt41GMJurKNqrYUbzHgpmj6UWRu8eBfb7q0XliV0g==}
-    engines: {node: '>=12.0.0'}
-    peerDependencies:
-      typescript: '*'
-      webpack: ^5.0.0
-    dependencies:
-      chalk: 4.1.1
-      enhanced-resolve: 5.8.2
-      micromatch: 4.0.4
-      semver: 7.3.5
-      webpack: 5.38.1_webpack-cli@4.7.0
-    dev: false
-
-  /ts-node/10.0.0:
+  /ts-node/10.0.0_typescript@4.2.4:
     resolution: {integrity: sha512-ROWeOIUvfFbPZkoDis0L/55Fk+6gFQNZwwKPLinacRl6tsxstTF1DbAcLKkovwnpKMVvOMHP1TIbnwXwtLg1gg==}
     engines: {node: '>=12.0.0'}
     hasBin: true
@@ -7686,62 +7583,7 @@ packages:
       diff: 4.0.2
       make-error: 1.3.6
       source-map-support: 0.5.19
-      yn: 3.1.1
-    dev: false
-
-  /ts-node/10.0.0_typescript@3.9.9:
-    resolution: {integrity: sha512-ROWeOIUvfFbPZkoDis0L/55Fk+6gFQNZwwKPLinacRl6tsxstTF1DbAcLKkovwnpKMVvOMHP1TIbnwXwtLg1gg==}
-    engines: {node: '>=12.0.0'}
-    hasBin: true
-    peerDependencies:
-      '@swc/core': '>=1.2.45'
-      '@swc/wasm': '>=1.2.45'
-      '@types/node': '*'
-      typescript: '>=2.7'
-    peerDependenciesMeta:
-      '@swc/core':
-        optional: true
-      '@swc/wasm':
-        optional: true
-    dependencies:
-      '@tsconfig/node10': 1.0.7
-      '@tsconfig/node12': 1.0.7
-      '@tsconfig/node14': 1.0.0
-      '@tsconfig/node16': 1.0.1
-      arg: 4.1.3
-      create-require: 1.1.1
-      diff: 4.0.2
-      make-error: 1.3.6
-      source-map-support: 0.5.19
-      typescript: 3.9.9
-      yn: 3.1.1
-    dev: false
-
-  /ts-node/10.0.0_typescript@4.3.2:
-    resolution: {integrity: sha512-ROWeOIUvfFbPZkoDis0L/55Fk+6gFQNZwwKPLinacRl6tsxstTF1DbAcLKkovwnpKMVvOMHP1TIbnwXwtLg1gg==}
-    engines: {node: '>=12.0.0'}
-    hasBin: true
-    peerDependencies:
-      '@swc/core': '>=1.2.45'
-      '@swc/wasm': '>=1.2.45'
-      '@types/node': '*'
-      typescript: '>=2.7'
-    peerDependenciesMeta:
-      '@swc/core':
-        optional: true
-      '@swc/wasm':
-        optional: true
-    dependencies:
-      '@tsconfig/node10': 1.0.7
-      '@tsconfig/node12': 1.0.7
-      '@tsconfig/node14': 1.0.0
-      '@tsconfig/node16': 1.0.1
-      arg: 4.1.3
-      create-require: 1.1.1
-      diff: 4.0.2
-      make-error: 1.3.6
-      source-map-support: 0.5.19
-      typescript: 4.3.2
+      typescript: 4.2.4
       yn: 3.1.1
     dev: false
 
@@ -7768,7 +7610,7 @@ packages:
     hasBin: true
     dev: false
 
-  /tslint/6.1.3_typescript@3.9.9:
+  /tslint/6.1.3_typescript@4.2.4:
     resolution: {integrity: sha512-IbR4nkT96EQOvKE2PW/djGz8iGNeJ4rF2mBfiYaR/nvUWYKJhLwimoJKgjIFEIDibBtOevj7BqCRL4oHeWWUCg==}
     engines: {node: '>=4.8.0'}
     deprecated: TSLint has been deprecated in favor of ESLint. Please see https://github.com/palantir/tslint/issues/4534 for more information.
@@ -7788,36 +7630,27 @@ packages:
       resolve: 1.20.0
       semver: 5.7.1
       tslib: 1.14.1
-      tsutils: 2.29.0_typescript@3.9.9
-      typescript: 3.9.9
+      tsutils: 2.29.0_typescript@4.2.4
+      typescript: 4.2.4
     dev: false
 
-  /tsutils/2.29.0_typescript@3.9.9:
+  /tsutils/2.29.0_typescript@4.2.4:
     resolution: {integrity: sha512-g5JVHCIJwzfISaXpXE1qvNalca5Jwob6FjI4AoPlqMusJ6ftFE7IkkFoMhVLRgK+4Kx3gkzb8UZK5t5yTTvEmA==}
     peerDependencies:
       typescript: '>=2.1.0 || >=2.1.0-dev || >=2.2.0-dev || >=2.3.0-dev || >=2.4.0-dev || >=2.5.0-dev || >=2.6.0-dev || >=2.7.0-dev || >=2.8.0-dev || >=2.9.0-dev || >= 3.0.0-dev || >= 3.1.0-dev'
     dependencies:
       tslib: 1.14.1
-      typescript: 3.9.9
+      typescript: 4.2.4
     dev: false
 
-  /tsutils/3.21.0:
+  /tsutils/3.21.0_typescript@4.2.4:
     resolution: {integrity: sha512-mHKK3iUXL+3UF6xL5k0PEhKRUBKPBCv/+RkEOpjRWxxx27KKRBmmA60A9pgOUvMi8GKhRMPEmjBRPzs2W7O1OA==}
     engines: {node: '>= 6'}
     peerDependencies:
       typescript: '>=2.8.0 || >= 3.2.0-dev || >= 3.3.0-dev || >= 3.4.0-dev || >= 3.5.0-dev || >= 3.6.0-dev || >= 3.6.0-beta || >= 3.7.0-dev || >= 3.7.0-beta'
     dependencies:
       tslib: 1.14.1
-    dev: false
-
-  /tsutils/3.21.0_typescript@4.3.2:
-    resolution: {integrity: sha512-mHKK3iUXL+3UF6xL5k0PEhKRUBKPBCv/+RkEOpjRWxxx27KKRBmmA60A9pgOUvMi8GKhRMPEmjBRPzs2W7O1OA==}
-    engines: {node: '>= 6'}
-    peerDependencies:
-      typescript: '>=2.8.0 || >= 3.2.0-dev || >= 3.3.0-dev || >= 3.4.0-dev || >= 3.5.0-dev || >= 3.6.0-dev || >= 3.6.0-beta || >= 3.7.0-dev || >= 3.7.0-beta'
-    dependencies:
-      tslib: 1.14.1
-      typescript: 4.3.2
+      typescript: 4.2.4
     dev: false
 
   /type-check/0.3.2:
@@ -7880,14 +7713,8 @@ packages:
     resolution: {integrity: sha1-hnrHTjhkGHsdPUfZlqeOxciDB3c=}
     dev: false
 
-  /typescript/3.9.9:
-    resolution: {integrity: sha512-kdMjTiekY+z/ubJCATUPlRDl39vXYiMV9iyeMuEuXZh2we6zz80uovNN2WlAxmmdE/Z/YQe+EbOEXB5RHEED3w==}
-    engines: {node: '>=4.2.0'}
-    hasBin: true
-    dev: false
-
-  /typescript/4.3.2:
-    resolution: {integrity: sha512-zZ4hShnmnoVnAHpVHWpTcxdv7dWP60S2FsydQLV8V5PbS3FifjWFFRiHSWpDJahly88PRyV5teTSLoq4eG7mKw==}
+  /typescript/4.2.4:
+    resolution: {integrity: sha512-V+evlYHZnQkaz8TRBuxTA92yZBPotr5H+WhQ7bD3hZUndx5tGOa1fuCgeSjxAzM1RiN5IzvadIXTVefuuwZCRg==}
     engines: {node: '>=4.2.0'}
     hasBin: true
     dev: false
@@ -8503,7 +8330,7 @@ packages:
     dev: false
 
   file:projects/core.tgz:
-    resolution: {integrity: sha512-rWrO9quWpceYeoHnAqXIZMQ8OiTLcc3f3FpPewKFxWDCSWFz2gaeyb8L4FAy/l9TALhCT+2rGXNiKZitAzEMRQ==, tarball: file:projects/core.tgz}
+    resolution: {integrity: sha512-98BsD8sjMPo9JCPmlFIm90fkKUgy8ZJY+Jq3/QccV4kMfuqRWEIs3ExaRHRssI1SBolXFw5c5hGvpDakifpqvQ==, tarball: file:projects/core.tgz}
     name: '@rush-temp/core'
     version: 0.0.0
     dependencies:
@@ -8545,12 +8372,12 @@ packages:
       sinon-chai: 3.7.0_chai@4.3.4+sinon@11.1.1
       source-map-support: 0.5.19
       terser-webpack-plugin: 5.1.2_webpack@5.38.1
-      ts-loader: 9.2.2_typescript@3.9.9+webpack@5.38.1
-      ts-node: 10.0.0_typescript@3.9.9
-      tslib: 1.14.1
-      tslint: 6.1.3_typescript@3.9.9
+      ts-loader: 9.2.2_typescript@4.2.4+webpack@5.38.1
+      ts-node: 10.0.0_typescript@4.2.4
+      tslib: 2.2.0
+      tslint: 6.1.3_typescript@4.2.4
       tslint-config-prettier: 1.18.0
-      typescript: 3.9.9
+      typescript: 4.2.4
       webpack: 5.38.1_webpack-cli@4.7.0
       webpack-cli: 4.7.0_4f38b4f344caeae135cc7debc9aac51b
       webpack-dev-server: 3.11.2_webpack-cli@4.7.0+webpack@5.38.1
@@ -8569,16 +8396,18 @@ packages:
     dev: false
 
   file:projects/createjs.tgz:
-    resolution: {integrity: sha512-DnhUNZ3HwT575aWlX5p8DKFiasP5eQOzgeIe6RshvXrzAD0rE/+l1Up1VM5aj/jZKjN2wASaL9hNwhLF15+n4w==, tarball: file:projects/createjs.tgz}
+    resolution: {integrity: sha512-hAr3/B1U1uWlBrSshi+c0kPc5ASh3taCVriiuuGrWeUhcmnlwDAqAn93vkWUc7nx/54ve99LeqXDTaqt7FudqQ==, tarball: file:projects/createjs.tgz}
     name: '@rush-temp/createjs'
     version: 0.0.0
     dependencies:
       '@mcler/webpack-concat-plugin': 4.1.3_113243b053f7620383bd9a5a80771064
       '@types/bluebird': 3.5.35
       '@types/chai': 4.2.18
+      '@types/createjs-lib': 0.0.29
       '@types/easeljs': 1.0.0
       '@types/mocha': 8.2.2
       '@types/sinon': 10.0.1
+      '@types/tweenjs': 1.0.3
       '@types/webpack-env': 1.16.0
       bluebird: 3.7.2
       browserify-versionify: 1.0.6
@@ -8611,12 +8440,12 @@ packages:
       sinon: 11.1.1
       sinon-chai: 3.7.0_chai@4.3.4+sinon@11.1.1
       terser-webpack-plugin: 5.1.2_webpack@5.38.1
-      ts-loader: 9.2.2_typescript@3.9.9+webpack@5.38.1
-      ts-node: 10.0.0_typescript@3.9.9
-      tslib: 1.14.1
-      tslint: 6.1.3_typescript@3.9.9
+      ts-loader: 9.2.2_typescript@4.2.4+webpack@5.38.1
+      ts-node: 10.0.0_typescript@4.2.4
+      tslib: 2.2.0
+      tslint: 6.1.3_typescript@4.2.4
       tslint-config-prettier: 1.18.0
-      typescript: 3.9.9
+      typescript: 4.2.4
       webpack: 5.38.1_webpack-cli@4.7.0
       webpack-cli: 4.7.0_4f38b4f344caeae135cc7debc9aac51b
       webpack-dev-server: 3.11.2_webpack-cli@4.7.0+webpack@5.38.1
@@ -8635,7 +8464,7 @@ packages:
     dev: false
 
   file:projects/eventemitter3.tgz:
-    resolution: {integrity: sha512-Ihhnq0QZcM4BIsBJd/vjL18kgwbIbS4g+nzTf3af/vFgS+TVqMT+ZPlvH/PYgMPmgOT60BFZXnbX5hrWYJjTLg==, tarball: file:projects/eventemitter3.tgz}
+    resolution: {integrity: sha512-9PKU2+wnXnXjMTw92La67stc9XEz66Q9lp2y2SyZz+B74P5A/ShhLMHccOegW1AXVk8jXRuzVCqcKY1Sl/bYgQ==, tarball: file:projects/eventemitter3.tgz}
     name: '@rush-temp/eventemitter3'
     version: 0.0.0
     dependencies:
@@ -8676,12 +8505,12 @@ packages:
       sinon-chai: 3.7.0_chai@4.3.4+sinon@11.1.1
       source-map-support: 0.5.19
       terser-webpack-plugin: 5.1.2_webpack@5.38.1
-      ts-loader: 9.2.2_typescript@3.9.9+webpack@5.38.1
-      ts-node: 10.0.0_typescript@3.9.9
-      tslib: 1.14.1
-      tslint: 6.1.3_typescript@3.9.9
+      ts-loader: 9.2.2_typescript@4.2.4+webpack@5.38.1
+      ts-node: 10.0.0_typescript@4.2.4
+      tslib: 2.2.0
+      tslint: 6.1.3_typescript@4.2.4
       tslint-config-prettier: 1.18.0
-      typescript: 3.9.9
+      typescript: 4.2.4
       webpack: 5.38.1_webpack-cli@4.7.0
       webpack-cli: 4.7.0_4f38b4f344caeae135cc7debc9aac51b
       webpack-dev-server: 3.11.2_webpack-cli@4.7.0+webpack@5.38.1
@@ -8700,7 +8529,7 @@ packages:
     dev: false
 
   file:projects/macrobot.tgz:
-    resolution: {integrity: sha512-iHnZvy+R/ziH9OrggdhpqCsOFhjNuGBgbSIVB5xpuUe2lVc6Hzq20ySPxIuKYxwtknTAG1E7S4Y2mvjF40JMqA==, tarball: file:projects/macrobot.tgz}
+    resolution: {integrity: sha512-jnzKJNa8Ft5qgzcQxjmwZABCvdCwWHDbBpVLLtwoyXCnY+bI2HE6RfRm7YeXd/jN/wkJIqD08tM6qiDzOmBtkQ==, tarball: file:projects/macrobot.tgz}
     name: '@rush-temp/macrobot'
     version: 0.0.0
     dependencies:
@@ -8741,12 +8570,12 @@ packages:
       sinon-chai: 3.7.0_chai@4.3.4+sinon@11.1.1
       source-map-support: 0.5.19
       terser-webpack-plugin: 5.1.2_webpack@5.38.1
-      ts-loader: 9.2.2_typescript@3.9.9+webpack@5.38.1
-      ts-node: 10.0.0_typescript@3.9.9
-      tslib: 1.14.1
-      tslint: 6.1.3_typescript@3.9.9
+      ts-loader: 9.2.2_typescript@4.2.4+webpack@5.38.1
+      ts-node: 10.0.0_typescript@4.2.4
+      tslib: 2.2.0
+      tslint: 6.1.3_typescript@4.2.4
       tslint-config-prettier: 1.18.0
-      typescript: 3.9.9
+      typescript: 4.2.4
       webpack: 5.38.1_webpack-cli@4.7.0
       webpack-cli: 4.7.0_4f38b4f344caeae135cc7debc9aac51b
       webpack-dev-server: 3.11.2_webpack-cli@4.7.0+webpack@5.38.1
@@ -8764,7 +8593,7 @@ packages:
     dev: false
 
   file:projects/openfl.tgz:
-    resolution: {integrity: sha512-Gv7ZZlQ1YpqU4tguZj/Qd7lGVsf0fW97dHAFkpKY3xZJdv5SyHk0Vl3Egn+Iik9GVMbb2PwFhBlp4udfNNvuGA==, tarball: file:projects/openfl.tgz}
+    resolution: {integrity: sha512-XEDdPj3XdZuBVUM2jQynMw35G90Oc3PgeA8M0+V8dMtn30ifybb6RFCRfT0nUVKtoRT5JhNpesE/MvaGMl3voA==, tarball: file:projects/openfl.tgz}
     name: '@rush-temp/openfl'
     version: 0.0.0
     dependencies:
@@ -8804,12 +8633,12 @@ packages:
       sinon: 11.1.1
       sinon-chai: 3.7.0_chai@4.3.4+sinon@11.1.1
       terser-webpack-plugin: 5.1.2_webpack@5.38.1
-      ts-loader: 9.2.2_typescript@3.9.9+webpack@5.38.1
-      ts-node: 10.0.0_typescript@3.9.9
-      tslib: 1.14.1
-      tslint: 6.1.3_typescript@3.9.9
+      ts-loader: 9.2.2_typescript@4.2.4+webpack@5.38.1
+      ts-node: 10.0.0_typescript@4.2.4
+      tslib: 2.2.0
+      tslint: 6.1.3_typescript@4.2.4
       tslint-config-prettier: 1.18.0
-      typescript: 3.9.9
+      typescript: 4.2.4
       webpack: 5.38.1_webpack-cli@4.7.0
       webpack-cli: 4.7.0_4f38b4f344caeae135cc7debc9aac51b
       webpack-dev-server: 3.11.2_webpack-cli@4.7.0+webpack@5.38.1
@@ -8828,7 +8657,7 @@ packages:
     dev: false
 
   file:projects/phaser-ce-signalcommandmap.tgz:
-    resolution: {integrity: sha512-znoMS669VwRT2Y0tEnqbWAjhTXQQbVgQM35gVpNK4IX1QrimuGVxzsK/TCiSl0DgfBqzgL1E/5GGZhtym8OJ8Q==, tarball: file:projects/phaser-ce-signalcommandmap.tgz}
+    resolution: {integrity: sha512-VU2+snkp7wvHRjK+xUfJW/CAKS5qsdz/eMkNSzmhnEdZK87rXKNgpdB5+WIlq7J+9MZUO5yYXkJrswzLaNzIaQ==, tarball: file:projects/phaser-ce-signalcommandmap.tgz}
     name: '@rush-temp/phaser-ce-signalcommandmap'
     version: 0.0.0
     dependencies:
@@ -8864,12 +8693,12 @@ packages:
       sinon: 11.1.1
       sinon-chai: 3.7.0_chai@4.3.4+sinon@11.1.1
       terser-webpack-plugin: 5.1.2_webpack@5.38.1
-      ts-loader: 9.2.2_typescript@3.9.9+webpack@5.38.1
-      ts-node: 10.0.0_typescript@3.9.9
-      tslib: 1.14.1
-      tslint: 6.1.3_typescript@3.9.9
+      ts-loader: 9.2.2_typescript@4.2.4+webpack@5.38.1
+      ts-node: 10.0.0_typescript@4.2.4
+      tslib: 2.2.0
+      tslint: 6.1.3_typescript@4.2.4
       tslint-config-prettier: 1.18.0
-      typescript: 3.9.9
+      typescript: 4.2.4
       webpack: 5.38.1_webpack-cli@4.7.0
       webpack-cli: 4.7.0_4f38b4f344caeae135cc7debc9aac51b
       webpack-dev-server: 3.11.2_webpack-cli@4.7.0+webpack@5.38.1
@@ -8887,7 +8716,7 @@ packages:
     dev: false
 
   file:projects/phaser-ce.tgz:
-    resolution: {integrity: sha512-XDWLYyQTr1pR02jGs3KcWKmDuc+lKOV18Urvbpbeei+z9PyQ7TJ44wI85IX/WqpGf5FusQSNITEufjKjxQmdxQ==, tarball: file:projects/phaser-ce.tgz}
+    resolution: {integrity: sha512-LYG5wz5+AzaM/bNzsSWWPAN2mX8Ng288o3vrwh84SvCC+aWEXSkF12QLF0Lvpa0qfQnTvoHBzfoFCCM7jRkygg==, tarball: file:projects/phaser-ce.tgz}
     name: '@rush-temp/phaser-ce'
     version: 0.0.0
     dependencies:
@@ -8926,12 +8755,12 @@ packages:
       sinon: 11.1.1
       sinon-chai: 3.7.0_chai@4.3.4+sinon@11.1.1
       terser-webpack-plugin: 5.1.2_webpack@5.38.1
-      ts-loader: 9.2.2_typescript@3.9.9+webpack@5.38.1
-      ts-node: 10.0.0_typescript@3.9.9
-      tslib: 1.14.1
-      tslint: 6.1.3_typescript@3.9.9
+      ts-loader: 9.2.2_typescript@4.2.4+webpack@5.38.1
+      ts-node: 10.0.0_typescript@4.2.4
+      tslib: 2.2.0
+      tslint: 6.1.3_typescript@4.2.4
       tslint-config-prettier: 1.18.0
-      typescript: 3.9.9
+      typescript: 4.2.4
       webpack: 5.38.1_webpack-cli@4.7.0
       webpack-cli: 4.7.0_4f38b4f344caeae135cc7debc9aac51b
       webpack-dev-server: 3.11.2_webpack-cli@4.7.0+webpack@5.38.1
@@ -8950,7 +8779,7 @@ packages:
     dev: false
 
   file:projects/phaser.tgz:
-    resolution: {integrity: sha512-j7+wyKbIgy3lZER29cBmrMCQCC1yvelI5hTEDXCtcXoFreVPwKez86fbHlpCJG6qJAKLeUFiF/dft+9qqfmWkA==, tarball: file:projects/phaser.tgz}
+    resolution: {integrity: sha512-we2wRLnFelYnooVsUilUFE1EwxASMHaufENGH5mgQBs5DfpEOTqYkhLyDxSskAUt4R4AWyKq50pS+YMg61mNBw==, tarball: file:projects/phaser.tgz}
     name: '@rush-temp/phaser'
     version: 0.0.0
     dependencies:
@@ -8990,12 +8819,12 @@ packages:
       sinon: 11.1.1
       sinon-chai: 3.7.0_chai@4.3.4+sinon@11.1.1
       terser-webpack-plugin: 5.1.2_webpack@5.38.1
-      ts-loader: 9.2.2_typescript@3.9.9+webpack@5.38.1
-      ts-node: 10.0.0_typescript@3.9.9
-      tslib: 1.14.1
-      tslint: 6.1.3_typescript@3.9.9
+      ts-loader: 9.2.2_typescript@4.2.4+webpack@5.38.1
+      ts-node: 10.0.0_typescript@4.2.4
+      tslib: 2.2.0
+      tslint: 6.1.3_typescript@4.2.4
       tslint-config-prettier: 1.18.0
-      typescript: 3.9.9
+      typescript: 4.2.4
       webpack: 5.38.1_webpack-cli@4.7.0
       webpack-cli: 4.7.0_4f38b4f344caeae135cc7debc9aac51b
       webpack-dev-server: 3.11.2_webpack-cli@4.7.0+webpack@5.38.1
@@ -9014,7 +8843,7 @@ packages:
     dev: false
 
   file:projects/pixi-palidor.tgz:
-    resolution: {integrity: sha512-NW5m9xwDh40BYH3LIAlhMJSo7y2ukPSiynOePMVkPjg1CCL4pU4DPF4/xJlJi9GuaUqhWSmdaDfVztm2NVjLbQ==, tarball: file:projects/pixi-palidor.tgz}
+    resolution: {integrity: sha512-7fUV4QJE2od1+JTyb9X5A31ISOQ8vlQixIJuYz6taiC3ZDxLK3brUbFX1sqRLcPZJd6J1KM2HMhG8FBLdh8JPQ==, tarball: file:projects/pixi-palidor.tgz}
     name: '@rush-temp/pixi-palidor'
     version: 0.0.0
     dependencies:
@@ -9054,12 +8883,12 @@ packages:
       sinon: 11.1.1
       sinon-chai: 3.7.0_chai@4.3.4+sinon@11.1.1
       terser-webpack-plugin: 5.1.2_webpack@5.38.1
-      ts-loader: 9.2.2_typescript@3.9.9+webpack@5.38.1
-      ts-node: 10.0.0_typescript@3.9.9
-      tslib: 1.14.1
-      tslint: 6.1.3_typescript@3.9.9
+      ts-loader: 9.2.2_typescript@4.2.4+webpack@5.38.1
+      ts-node: 10.0.0_typescript@4.2.4
+      tslib: 2.2.0
+      tslint: 6.1.3_typescript@4.2.4
       tslint-config-prettier: 1.18.0
-      typescript: 3.9.9
+      typescript: 4.2.4
       webpack: 5.38.1_webpack-cli@4.7.0
       webpack-cli: 4.7.0_4f38b4f344caeae135cc7debc9aac51b
       webpack-dev-server: 3.11.2_webpack-cli@4.7.0+webpack@5.38.1
@@ -9077,7 +8906,7 @@ packages:
     dev: false
 
   file:projects/pixi-signalmediator.tgz:
-    resolution: {integrity: sha512-xW+dMzxJ1lnZmCoKqz7qEhSKMFLKFC3ysC18XvWfUoJu3FLUyjkBG4acrB5GrO+mN/9vdFHYCVY+D6/EvI+/Kg==, tarball: file:projects/pixi-signalmediator.tgz}
+    resolution: {integrity: sha512-VQByGz4jtx41YqliMnjVtB8or9mjp0ex8Mtf4P99QK7kNkODKhASkIbJsG658YtM6A7hu04sqBv3eMUv3YnNww==, tarball: file:projects/pixi-signalmediator.tgz}
     name: '@rush-temp/pixi-signalmediator'
     version: 0.0.0
     dependencies:
@@ -9118,12 +8947,12 @@ packages:
       sinon-chai: 3.7.0_chai@4.3.4+sinon@11.1.1
       source-map-support: 0.5.19
       terser-webpack-plugin: 5.1.2_webpack@5.38.1
-      ts-loader: 9.2.2_typescript@3.9.9+webpack@5.38.1
-      ts-node: 10.0.0_typescript@3.9.9
-      tslib: 1.14.1
-      tslint: 6.1.3_typescript@3.9.9
+      ts-loader: 9.2.2_typescript@4.2.4+webpack@5.38.1
+      ts-node: 10.0.0_typescript@4.2.4
+      tslib: 2.2.0
+      tslint: 6.1.3_typescript@4.2.4
       tslint-config-prettier: 1.18.0
-      typescript: 3.9.9
+      typescript: 4.2.4
       webpack: 5.38.1_webpack-cli@4.7.0
       webpack-cli: 4.7.0_4f38b4f344caeae135cc7debc9aac51b
       webpack-dev-server: 3.11.2_webpack-cli@4.7.0+webpack@5.38.1
@@ -9141,7 +8970,7 @@ packages:
     dev: false
 
   file:projects/pixi.tgz:
-    resolution: {integrity: sha512-MSfZjr/I68BVB+kW/h0FjMSXMumhq0AsCP7jmZydFoEK4zSvNTHIEN3a3NAt3u1yWS3ziStx/2D8zj3nJf7V/A==, tarball: file:projects/pixi.tgz}
+    resolution: {integrity: sha512-c+yT3PLKcywAhY9zjuE1tlkvUi+XdIdRRazmoIWukJIfm/9CeOhLf5iNpXg0+tu3yy5VrcbIwMC//CFZqz0l6A==, tarball: file:projects/pixi.tgz}
     name: '@rush-temp/pixi'
     version: 0.0.0
     dependencies:
@@ -9180,12 +9009,12 @@ packages:
       sinon: 11.1.1
       sinon-chai: 3.7.0_chai@4.3.4+sinon@11.1.1
       terser-webpack-plugin: 5.1.2_webpack@5.38.1
-      ts-loader: 9.2.2_typescript@3.9.9+webpack@5.38.1
-      ts-node: 10.0.0_typescript@3.9.9
-      tslib: 1.14.1
-      tslint: 6.1.3_typescript@3.9.9
+      ts-loader: 9.2.2_typescript@4.2.4+webpack@5.38.1
+      ts-node: 10.0.0_typescript@4.2.4
+      tslib: 2.2.0
+      tslint: 6.1.3_typescript@4.2.4
       tslint-config-prettier: 1.18.0
-      typescript: 3.9.9
+      typescript: 4.2.4
       webpack: 5.38.1_webpack-cli@4.7.0
       webpack-cli: 4.7.0_4f38b4f344caeae135cc7debc9aac51b
       webpack-dev-server: 3.11.2_webpack-cli@4.7.0+webpack@5.38.1
@@ -9203,7 +9032,7 @@ packages:
     dev: false
 
   file:projects/signalcommandmap.tgz:
-    resolution: {integrity: sha512-rjBeyW1jdT0WifeEQWmyegPqJ/FYwlE4rdWPeh8gBwiI9asPfrk9slt77rnAqdvxR9dofAWA5Ix/rxRDl8akUw==, tarball: file:projects/signalcommandmap.tgz}
+    resolution: {integrity: sha512-sk9zoGDYEymzz0Qm3fOaVVukpHOHcEUueJQYcSya7Vw6Uid2cVqKU3nswjr62btK4E/dI+ij+DSDjAcuYP39jg==, tarball: file:projects/signalcommandmap.tgz}
     name: '@rush-temp/signalcommandmap'
     version: 0.0.0
     dependencies:
@@ -9241,12 +9070,12 @@ packages:
       sinon-chai: 3.7.0_chai@4.3.4+sinon@11.1.1
       source-map-support: 0.5.19
       terser-webpack-plugin: 5.1.2_webpack@5.38.1
-      ts-loader: 9.2.2_typescript@3.9.9+webpack@5.38.1
-      ts-node: 10.0.0_typescript@3.9.9
-      tslib: 1.14.1
-      tslint: 6.1.3_typescript@3.9.9
+      ts-loader: 9.2.2_typescript@4.2.4+webpack@5.38.1
+      ts-node: 10.0.0_typescript@4.2.4
+      tslib: 2.2.0
+      tslint: 6.1.3_typescript@4.2.4
       tslint-config-prettier: 1.18.0
-      typescript: 3.9.9
+      typescript: 4.2.4
       webpack: 5.38.1_webpack-cli@4.7.0
       webpack-cli: 4.7.0_4f38b4f344caeae135cc7debc9aac51b
       webpack-dev-server: 3.11.2_webpack-cli@4.7.0+webpack@5.38.1
@@ -9264,7 +9093,7 @@ packages:
     dev: false
 
   file:projects/signals.tgz:
-    resolution: {integrity: sha512-sz2aYiywSwPmOusUQ734m+tk+fMgrZCoC5NS4EzkDzRVEL3q8XqOmzzK+a91tDDo3O/iqZVNitHmRRu4DsBJQw==, tarball: file:projects/signals.tgz}
+    resolution: {integrity: sha512-yco3JNTFqchTQ+oWeBdMAyIXWZAZ5H9bmO/Vv3tnyb4XC8DPPYxpcsG+4RowZdgleRh3oo+llDE+rkNYgSTQGQ==, tarball: file:projects/signals.tgz}
     name: '@rush-temp/signals'
     version: 0.0.0
     dependencies:
@@ -9274,8 +9103,8 @@ packages:
       '@types/mocha': 8.2.2
       '@types/sinon': 10.0.1
       '@types/webpack-env': 1.16.0
-      '@typescript-eslint/eslint-plugin': 4.25.0_ec7770e83475322b368bff30b543badb
-      '@typescript-eslint/parser': 4.25.0_eslint@7.27.0+typescript@4.3.2
+      '@typescript-eslint/eslint-plugin': 4.25.0_6fb86b31e39dbd15f93824c03ca6ca0c
+      '@typescript-eslint/parser': 4.25.0_eslint@7.27.0+typescript@4.2.4
       bluebird: 3.7.2
       browserify-versionify: 1.0.6
       chai: 4.3.4
@@ -9312,10 +9141,10 @@ packages:
       sinon-chai: 3.7.0_chai@4.3.4+sinon@11.1.1
       source-map-support: 0.5.19
       terser-webpack-plugin: 5.1.2_webpack@5.38.1
-      ts-loader: 9.2.2_typescript@4.3.2+webpack@5.38.1
-      ts-node: 10.0.0_typescript@4.3.2
+      ts-loader: 9.2.2_typescript@4.2.4+webpack@5.38.1
+      ts-node: 10.0.0_typescript@4.2.4
       tslib: 2.2.0
-      typescript: 4.3.2
+      typescript: 4.2.4
       webpack: 5.38.1_webpack-cli@4.7.0
       webpack-cli: 4.7.0_4f38b4f344caeae135cc7debc9aac51b
       webpack-dev-server: 3.11.2_webpack-cli@4.7.0+webpack@5.38.1

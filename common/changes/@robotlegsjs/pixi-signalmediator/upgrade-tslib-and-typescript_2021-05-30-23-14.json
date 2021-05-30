@@ -1,0 +1,11 @@
+{
+  "changes": [
+    {
+      "packageName": "@robotlegsjs/pixi-signalmediator",
+      "comment": "Update [tslib](https://www.npmjs.com/package/tslib) to version **2.2.0** and [typescript](https://www.npmjs.com/package/typescript) to version **4.2.4** (see [3](https://github.com/RobotlegsJS/Robotlegs/pull/3))",
+      "type": "major"
+    }
+  ],
+  "packageName": "@robotlegsjs/pixi-signalmediator",
+  "email": "tiago.schenkel@gmail.com"
+}
