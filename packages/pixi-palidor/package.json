@@ -5,7 +5,7 @@
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
   "scripts": {
-    "start": "webpack-dev-server --config ./webpack.example.config.js",
+    "start": "webpack serve --config ./webpack.example.config.js",
     "test": "./node_modules/.bin/karma start --single-run",
     "test:tdd": "./node_modules/.bin/karma start",
     "mocha": "mocha test/**/*.test.ts --require ts-node/register",
@@ -110,7 +110,6 @@
     "typescript": "^3.8.3",
     "webpack": "^5.38.1",
     "webpack-cli": "^4.7.0",
-    "webpack-dev-server": "^3.11.2",
-    "webpack-simple-progress-plugin": "^0.0.5"
+    "webpack-dev-server": "^3.11.2"
   }
 }
