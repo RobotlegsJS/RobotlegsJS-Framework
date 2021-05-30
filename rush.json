@@ -227,10 +227,10 @@
   //   // "ignoredNpmScopes": ["@types"]
   // },
   "approvedPackagesPolicy": {
-    "reviewCategories": [ "production" ],
+    "reviewCategories": ["production"],
     // We don't need to review @types packages, because we can assume
     // the untyped package should already have been approved
-    "ignoredNpmScopes": [ "@types" ]
+    "ignoredNpmScopes": ["@types"]
   },
 
   /**
@@ -492,7 +492,7 @@
       "projectFolder": "packages/macrobot",
       "reviewCategory": "production",
       "versionPolicyName": "robotlegsjs",
-      "cyclicDependencyProjects": ["@robotlegsjs/signalcommandmap"]
+      "cyclicDependencyProjects": ["@robotlegsjs/signalcommandmap", "@robotlegsjs/signals"]
     },
     {
       "packageName": "@robotlegsjs/createjs",

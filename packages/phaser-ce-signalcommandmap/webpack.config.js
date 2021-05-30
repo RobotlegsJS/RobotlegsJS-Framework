@@ -35,14 +35,11 @@ module.exports = env => {
       rules: [
         {
           test: /\.ts$/,
-          loader: "ts-loader?configFile=" + tsconfig
+          use: [{ loader: "ts-loader", options: { configFile: tsconfig } }]
         },
         {
           test: env.production /* disable this loader for production builds */ ? /^$/ : /^.*(src).*\.ts$/,
           loader: "istanbul-instrumenter-loader",
-          query: {
-            embedSource: true
-          },
           enforce: "post"
         }
       ]
@@ -56,10 +53,10 @@ module.exports = env => {
           minimize: true,
           minimizer: [
             new TerserPlugin({
-              cache: true,
               parallel: 4,
+              extractComments: false,
               terserOptions: {
-                output: {
+                format: {
                   comments: false
                 }
               }

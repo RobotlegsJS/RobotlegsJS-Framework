@@ -83,12 +83,11 @@ export class SceneManagerObserver {
     }
 
     private patchGameObjectFactoryAddExistingMethod(sceneManager: Phaser.Scenes.SceneManager) {
-        const originalMethod: (child: Phaser.GameObjects.GameObject) => Phaser.GameObjects.GameObject =
-            Phaser.GameObjects.GameObjectFactory.prototype.existing;
+        const originalMethod = Phaser.GameObjects.GameObjectFactory.prototype.existing;
 
         const self = this;
 
-        Phaser.GameObjects.GameObjectFactory.prototype.existing = function(child: Phaser.GameObjects.GameObject) {
+        Phaser.GameObjects.GameObjectFactory.prototype.existing = function(child) {
             if (child instanceof Phaser.GameObjects.Container) {
                 let binding: SceneManagerBinding = self._registry.getBinding(sceneManager);
                 if (binding) {

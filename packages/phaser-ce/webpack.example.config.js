@@ -1,17 +1,18 @@
 const webpack = require("webpack");
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-const ConcatPlugin = require("webpack-concat-plugin");
+const ConcatPlugin = require("@mcler/webpack-concat-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
 const concatPluginConfigGenerator = (name, files) => {
   return {
-    uglify: false,
-    sourceMap: false,
     name: name,
     fileName: "[name].js",
     filesToConcat: files,
-    injectType: "none"
+    injectType: "none",
+    attributes: {
+      async: false
+    }
   };
 };
 
@@ -35,10 +36,13 @@ module.exports = options => {
     },
 
     plugins: [
+      new webpack.ProgressPlugin(),
+
       new CleanWebpackPlugin(),
 
       new HtmlWebpackPlugin({
-        template: path.resolve("static/index.html"),
+        template: path.resolve("./static/index-template.html"),
+        filename: "index.html",
         inject: false
       }),
 

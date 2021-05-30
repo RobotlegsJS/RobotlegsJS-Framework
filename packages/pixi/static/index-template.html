@@ -20,19 +20,19 @@
             }
         </script>
 
-        <script src="<%= htmlWebpackPlugin.files.chunks.main.entry %>"></script>
+        <script src="<%= htmlWebpackPlugin.files.js %>"></script>
     </head>
 
     <body>
         <header class="PixiJS">
             <h1>integration with <a target="_blank" href="http://www.pixijs.com/">PixiJS</a></h1>
             <p>
-                This example shows how to integrate <code>RobotlegsJS</code> framework with <code>PixiJS</code>. Click on the buttons to see
+                This example shows how to integrate <code>RobotlegsJS</code> framework with <code>PixiJS</code>. Click on the logo to see
                 some action!
             </p>
         </header>
 
-        <canvas id="canvas" width="960" height="600"></canvas>
+        <canvas id="canvas" width="960" height="400"></canvas>
 
         <script type="text/javascript">
             window.onload = initGame;

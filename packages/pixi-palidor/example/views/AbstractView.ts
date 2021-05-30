@@ -45,7 +45,7 @@ export class AbstractView extends Container {
         this.addChild(titleText);
     }
     private createImages(imgUrl: string): void {
-        const logo: Sprite = TilingSprite.from(imgUrl, 230, 230);
+        const logo: Sprite = TilingSprite.from(imgUrl, { width: 230, height: 230 });
         logo.anchor.set(0.5);
         logo.position.set(480, 300);
         this.addChild(logo);
