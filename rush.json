@@ -226,6 +226,12 @@
   //    */
   //   // "ignoredNpmScopes": ["@types"]
   // },
+  "approvedPackagesPolicy": {
+    "reviewCategories": [ "production" ],
+    // We don't need to review @types packages, because we can assume
+    // the untyped package should already have been approved
+    "ignoredNpmScopes": [ "@types" ]
+  },
 
   /**
    * If you use Git as your version control system, this section has some additional
