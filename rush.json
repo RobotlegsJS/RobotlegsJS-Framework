@@ -2,7 +2,7 @@
  * This is the main configuration file for Rush.
  * For full documentation, please see https://rushjs.io
  */
-{
+ {
   "$schema": "https://developer.microsoft.com/json-schemas/rush/v5/rush.schema.json",
 
   /**
@@ -217,7 +217,7 @@
   //     "tools",      // non-shipping projects that are part of the developer toolchain
   //     "prototypes"  // experiments that should mostly be ignored by the review process
   //   ],
-  // 
+  //
   //   /**
   //    * A list of NPM package scopes that will be excluded from review.
   //    * We recommend to exclude TypeScript typings (the "@types" scope), because
@@ -263,7 +263,7 @@
      * in the commit message, and then customize Rush's message to contain that string.
      */
     // "versionBumpCommitMessage": "Applying package updates. [skip-ci]",
-
+    
     /**
      * The commit message to use when committing changes during 'rush version'.
      *
@@ -355,7 +355,7 @@
     //    * The folder name for this variant.
     //    */
     //   "variantName": "old-sdk",
-    // 
+    //
     //   /**
     //    * An informative description
     //    */
@@ -389,92 +389,24 @@
    * 3. It's useful to have a centralized inventory of all projects and their important metadata.
    */
   "projects": [
-    {
-      "packageName": "@robotlegsjs/signals",
-      "projectFolder": "packages/signals",
-      "reviewCategory": "production"
-    },
-    {
-      "packageName": "@robotlegsjs/core",
-      "projectFolder": "packages/core",
-      "reviewCategory": "production"
-    },
-    {
-      "packageName": "@robotlegsjs/signalcommandmap",
-      "projectFolder": "packages/signalcommandmap",
-      "reviewCategory": "production"
-    },
-    {
-      "packageName": "@robotlegsjs/eventemitter3",
-      "projectFolder": "packages/eventemitter3",
-      "reviewCategory": "production"
-    },
-    {
-      "packageName": "@robotlegsjs/macrobot",
-      "projectFolder": "packages/macrobot",
-      "reviewCategory": "production",
-      "cyclicDependencyProjects": [
-        "@robotlegsjs/signalcommandmap"
-      ]
-    },
-    {
-      "packageName": "@robotlegsjs/createjs",
-      "projectFolder": "packages/createjs",
-      "reviewCategory": "production"
-    },
-    {
-      "packageName": "@robotlegsjs/openfl",
-      "projectFolder": "packages/openfl",
-      "reviewCategory": "production"
-    },
-    {
-      "packageName": "@robotlegsjs/pixi",
-      "projectFolder": "packages/pixi",
-      "reviewCategory": "production"
-    },
-    {
-      "packageName": "@robotlegsjs/pixi-palidor",
-      "projectFolder": "packages/pixi-palidor",
-      "reviewCategory": "production"
-    },
-    {
-      "packageName": "@robotlegsjs/pixi-signalmediator",
-      "projectFolder": "packages/pixi-signalmediator",
-      "reviewCategory": "production"
-    },
-    {
-      "packageName": "@robotlegsjs/phaser-ce",
-      "projectFolder": "packages/phaser-ce",
-      "reviewCategory": "production"
-    },
-    {
-      "packageName": "@robotlegsjs/phaser-ce-signalcommandmap",
-      "projectFolder": "packages/phaser-ce-signalcommandmap",
-      "reviewCategory": "production"
-    },
-    {
-      "packageName": "@robotlegsjs/phaser",
-      "projectFolder": "packages/phaser",
-      "reviewCategory": "production"
-    }
     // {
     //   /**
     //    * The NPM package name of the project (must match package.json)
     //    */
     //   "packageName": "my-app",
-    // 
+    //
     //   /**
     //    * The path to the project folder, relative to the rush.json config file.
     //    */
     //   "projectFolder": "apps/my-app",
-    // 
+    //
     //   /**
     //    * An optional category for usage in the "browser-approved-packages.json"
     //    * and "nonbrowser-approved-packages.json" files.  The value must be one of the
     //    * strings from the "reviewCategories" defined above.
     //    */
     //   "reviewCategory": "production",
-    // 
+    //
     //   /**
     //    * A list of local projects that appear as devDependencies for this project, but cannot be
     //    * locally linked because it would create a cyclic dependency; instead, the last published
@@ -483,20 +415,20 @@
     //   "cyclicDependencyProjects": [
     //     // "my-toolchain"
     //   ],
-    // 
+    //
     //   /**
     //    * If true, then this project will be ignored by the "rush check" command.
     //    * The default value is false.
     //    */
     //   // "skipRushCheck": false,
-    // 
+    //
     //   /**
     //    * A flag indicating that changes to this project will be published to npm, which affects
     //    * the Rush change and publish workflows. The default value is false.
     //    * NOTE: "versionPolicyName" and "shouldPublish" are alternatives; you cannot specify them both.
     //    */
     //   // "shouldPublish": false,
-    // 
+    //
     //   /**
     //    * Facilitates postprocessing of a project's files prior to publishing.
     //    *
@@ -505,7 +437,7 @@
     //    * must contain its own package.json file, which is typically a build output.
     //    */
     //   // "publishFolder": "temp/publish",
-    // 
+    //
     //   /**
     //    * An optional version policy associated with the project.  Version policies are defined
     //    * in "version-policies.json" file.  See the "rush publish" documentation for more info.
@@ -513,17 +445,96 @@
     //    */
     //   // "versionPolicyName": ""
     // },
-    // 
+    //
     // {
     //   "packageName": "my-controls",
     //   "projectFolder": "libraries/my-controls",
     //   "reviewCategory": "production"
     // },
-    // 
+    //
     // {
     //   "packageName": "my-toolchain",
     //   "projectFolder": "tools/my-toolchain",
     //   "reviewCategory": "tools"
     // }
+    {
+      "packageName": "@robotlegsjs/signals",
+      "projectFolder": "packages/signals",
+      "reviewCategory": "production",
+      "versionPolicyName": "robotlegsjs"
+    },
+    {
+      "packageName": "@robotlegsjs/core",
+      "projectFolder": "packages/core",
+      "reviewCategory": "production",
+      "versionPolicyName": "robotlegsjs"
+    },
+    {
+      "packageName": "@robotlegsjs/signalcommandmap",
+      "projectFolder": "packages/signalcommandmap",
+      "reviewCategory": "production",
+      "versionPolicyName": "robotlegsjs"
+    },
+    {
+      "packageName": "@robotlegsjs/eventemitter3",
+      "projectFolder": "packages/eventemitter3",
+      "reviewCategory": "production",
+      "versionPolicyName": "robotlegsjs"
+    },
+    {
+      "packageName": "@robotlegsjs/macrobot",
+      "projectFolder": "packages/macrobot",
+      "reviewCategory": "production",
+      "versionPolicyName": "robotlegsjs",
+      "cyclicDependencyProjects": ["@robotlegsjs/signalcommandmap"]
+    },
+    {
+      "packageName": "@robotlegsjs/createjs",
+      "projectFolder": "packages/createjs",
+      "reviewCategory": "production",
+      "versionPolicyName": "robotlegsjs"
+    },
+    {
+      "packageName": "@robotlegsjs/openfl",
+      "projectFolder": "packages/openfl",
+      "reviewCategory": "production",
+      "versionPolicyName": "robotlegsjs"
+    },
+    {
+      "packageName": "@robotlegsjs/pixi",
+      "projectFolder": "packages/pixi",
+      "reviewCategory": "production",
+      "versionPolicyName": "robotlegsjs"
+    },
+    {
+      "packageName": "@robotlegsjs/pixi-palidor",
+      "projectFolder": "packages/pixi-palidor",
+      "reviewCategory": "production",
+      "versionPolicyName": "robotlegsjs"
+    },
+    {
+      "packageName": "@robotlegsjs/pixi-signalmediator",
+      "projectFolder": "packages/pixi-signalmediator",
+      "reviewCategory": "production",
+      "versionPolicyName": "robotlegsjs"
+    },
+    {
+      "packageName": "@robotlegsjs/phaser-ce",
+      "projectFolder": "packages/phaser-ce",
+      "reviewCategory": "production",
+      "versionPolicyName": "robotlegsjs"
+    },
+    {
+      "packageName": "@robotlegsjs/phaser-ce-signalcommandmap",
+      "projectFolder": "packages/phaser-ce-signalcommandmap",
+      "reviewCategory": "production",
+      "versionPolicyName": "robotlegsjs"
+    },
+    {
+      "packageName": "@robotlegsjs/phaser",
+      "projectFolder": "packages/phaser",
+      "reviewCategory": "production",
+      "versionPolicyName": "robotlegsjs"
+    }
   ]
 }
