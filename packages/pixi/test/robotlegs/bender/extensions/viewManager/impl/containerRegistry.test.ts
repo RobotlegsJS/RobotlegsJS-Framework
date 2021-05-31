@@ -56,7 +56,11 @@ describe("ContainerRegistry", () => {
         let containerBinding2: ContainerBinding = registry.addContainer(container2);
         let containerBinding3: ContainerBinding = registry.addContainer(container3);
 
-        let expectedBindings: ContainerBinding[] = [containerBinding1, containerBinding2, containerBinding3];
+        let expectedBindings: ContainerBinding[] = [
+            containerBinding1,
+            containerBinding2,
+            containerBinding3
+        ];
 
         assert.deepEqual(expectedBindings, registry.bindings);
     });
@@ -96,11 +100,20 @@ describe("ContainerRegistry", () => {
         registry.addContainer(searchTrees[1]);
         registry.addContainer(searchTrees[1].treeChildren[3]);
 
-        let searchItem: Sprite = searchTrees[1].treeChildren[3].treeChildren[3].treeChildren[3].treeChildren[3];
+        let searchItem: Sprite =
+            searchTrees[1].treeChildren[3].treeChildren[3].treeChildren[3].treeChildren[3];
         let result: ContainerBinding = registry.findParentBinding(searchItem);
 
-        assert.equal(searchTrees[1].treeChildren[3], result.container, "Binding returns with correct container view");
-        assert.equal(searchTrees[1], result.parent.container, "Binding returns with correct container parent view");
+        assert.equal(
+            searchTrees[1].treeChildren[3],
+            result.container,
+            "Binding returns with correct container view"
+        );
+        assert.equal(
+            searchTrees[1],
+            result.parent.container,
+            "Binding returns with correct container parent view"
+        );
         assert.equal(null, result.parent.parent, "Further parents are null");
     });
 
@@ -111,12 +124,21 @@ describe("ContainerRegistry", () => {
         registry.addContainer(searchTrees[1].treeChildren[3]);
         registry.addContainer(searchTrees[1]);
 
-        let searchItem: Sprite = searchTrees[1].treeChildren[3].treeChildren[3].treeChildren[3].treeChildren[3];
+        let searchItem: Sprite =
+            searchTrees[1].treeChildren[3].treeChildren[3].treeChildren[3].treeChildren[3];
         let result: ContainerBinding = registry.findParentBinding(searchItem);
 
-        assert.equal(searchTrees[1].treeChildren[3], result.container, "Binding returns with correct container view");
+        assert.equal(
+            searchTrees[1].treeChildren[3],
+            result.container,
+            "Binding returns with correct container view"
+        );
 
-        assert.equal(searchTrees[1], result.parent.container, "Binding returns with correct container parent view");
+        assert.equal(
+            searchTrees[1],
+            result.parent.container,
+            "Binding returns with correct container parent view"
+        );
         assert.equal(null, result.parent.parent, "Further parents are null");
     });
 
@@ -127,12 +149,21 @@ describe("ContainerRegistry", () => {
         registry.addContainer(searchTrees[1].treeChildren[3].treeChildren[2]);
         registry.addContainer(searchTrees[1]);
 
-        let searchItem: Sprite = searchTrees[1].treeChildren[3].treeChildren[2].treeChildren[3].treeChildren[3];
+        let searchItem: Sprite =
+            searchTrees[1].treeChildren[3].treeChildren[2].treeChildren[3].treeChildren[3];
         let result: ContainerBinding = registry.findParentBinding(searchItem);
 
-        assert.equal(searchTrees[1].treeChildren[3].treeChildren[2], result.container, "Binding returns with correct container view");
+        assert.equal(
+            searchTrees[1].treeChildren[3].treeChildren[2],
+            result.container,
+            "Binding returns with correct container view"
+        );
 
-        assert.equal(searchTrees[1], result.parent.container, "Binding returns with correct container parent view");
+        assert.equal(
+            searchTrees[1],
+            result.parent.container,
+            "Binding returns with correct container parent view"
+        );
         assert.equal(null, result.parent.parent, "Further parents are null");
     });
 
@@ -147,7 +178,8 @@ describe("ContainerRegistry", () => {
 
         registry.removeContainer(searchTrees[1].treeChildren[3].treeChildren[2]);
 
-        let searchItem: Sprite = searchTrees[1].treeChildren[3].treeChildren[2].treeChildren[3].treeChildren[3];
+        let searchItem: Sprite =
+            searchTrees[1].treeChildren[3].treeChildren[2].treeChildren[3].treeChildren[3];
         let result: ContainerBinding = registry.findParentBinding(searchItem);
 
         assert.equal(
@@ -155,8 +187,16 @@ describe("ContainerRegistry", () => {
             result.container,
             "Binding returns with correct container view"
         );
-        assert.equal(searchTrees[1].treeChildren[3], result.parent.container, "Binding returns with correct container parent view");
-        assert.equal(searchTrees[1], result.parent.parent.container, "Binding returns with correct container parent parent view");
+        assert.equal(
+            searchTrees[1].treeChildren[3],
+            result.parent.container,
+            "Binding returns with correct container parent view"
+        );
+        assert.equal(
+            searchTrees[1],
+            result.parent.parent.container,
+            "Binding returns with correct container parent parent view"
+        );
         assert.equal(null, result.parent.parent.parent, "Further parents are null");
     });
 
@@ -171,7 +211,8 @@ describe("ContainerRegistry", () => {
 
         registry.removeContainer(searchTrees[1].treeChildren[3].treeChildren[2]);
 
-        let searchItem: Sprite = searchTrees[2].treeChildren[3].treeChildren[2].treeChildren[3].treeChildren[3];
+        let searchItem: Sprite =
+            searchTrees[2].treeChildren[3].treeChildren[2].treeChildren[3].treeChildren[3];
         let result: ContainerBinding = registry.findParentBinding(searchItem);
 
         assert.equal(null, result, "Returns null if not inside an included view");
@@ -181,7 +222,11 @@ describe("ContainerRegistry", () => {
         let searchTrees: TreeContainer[] = createTrees(1, 1);
         let expectedBinding: ContainerBinding = registry.addContainer(searchTrees[0]);
         let expectedRootBindings: ContainerBinding[] = [expectedBinding];
-        assert.deepEqual(expectedRootBindings, registry.rootBindings, "Returns root container view bindings one item");
+        assert.deepEqual(
+            expectedRootBindings,
+            registry.rootBindings,
+            "Returns root container view bindings one item"
+        );
     });
 
     it("returns_root_container_view_bindings_many_items", () => {
@@ -195,8 +240,15 @@ describe("ContainerRegistry", () => {
 
         registry.addContainer(searchTrees[1].treeChildren[3]);
 
-        let expectedRootBindings: ContainerBinding[] = [firstExpectedBinding, secondExpectedBinding];
-        assert.deepEqual(expectedRootBindings, registry.rootBindings, "Returns root container view bindings many items");
+        let expectedRootBindings: ContainerBinding[] = [
+            firstExpectedBinding,
+            secondExpectedBinding
+        ];
+        assert.deepEqual(
+            expectedRootBindings,
+            registry.rootBindings,
+            "Returns root container view bindings many items"
+        );
     });
 
     it("returns_root_container_view_bindings_many_items_after_removals", () => {
@@ -207,20 +259,32 @@ describe("ContainerRegistry", () => {
         registry.addContainer(searchTrees[1].treeChildren[3].treeChildren[2]);
         registry.addContainer(searchTrees[1]);
 
-        let secondExpectedBinding: ContainerBinding = registry.addContainer(searchTrees[1].treeChildren[3]);
+        let secondExpectedBinding: ContainerBinding = registry.addContainer(
+            searchTrees[1].treeChildren[3]
+        );
 
         registry.removeContainer(searchTrees[1]);
 
-        let expectedRootBindings: ContainerBinding[] = [firstExpectedBinding, secondExpectedBinding];
-        assert.deepEqual(expectedRootBindings, registry.rootBindings, "Returns root container view bindings many items after removals");
+        let expectedRootBindings: ContainerBinding[] = [
+            firstExpectedBinding,
+            secondExpectedBinding
+        ];
+        assert.deepEqual(
+            expectedRootBindings,
+            registry.rootBindings,
+            "Returns root container view bindings many items after removals"
+        );
     });
 
     it("adding_container_dispatches_event", () => {
         let container: Sprite = new Sprite();
         let callCount: number = 0;
-        registry.addEventListener(ContainerRegistryEvent.CONTAINER_ADD, function onContainerAdd(event: ContainerRegistryEvent): void {
-            callCount++;
-        });
+        registry.addEventListener(
+            ContainerRegistryEvent.CONTAINER_ADD,
+            function onContainerAdd(event: ContainerRegistryEvent): void {
+                callCount++;
+            }
+        );
         registry.addContainer(container);
         registry.addContainer(container);
         assert.equal(callCount, 1);
@@ -229,9 +293,12 @@ describe("ContainerRegistry", () => {
     it("removing_container_dispatches_event", () => {
         let container: Sprite = new Sprite();
         let callCount: number = 0;
-        registry.addEventListener(ContainerRegistryEvent.CONTAINER_REMOVE, function onContainerRemove(event: ContainerRegistryEvent): void {
-            callCount++;
-        });
+        registry.addEventListener(
+            ContainerRegistryEvent.CONTAINER_REMOVE,
+            function onContainerRemove(event: ContainerRegistryEvent): void {
+                callCount++;
+            }
+        );
         registry.addContainer(container);
         registry.removeContainer(container);
         registry.removeContainer(container);
@@ -241,11 +308,12 @@ describe("ContainerRegistry", () => {
     it("adding_root_container_dispatches_event", () => {
         let container: Sprite = new Sprite();
         let callCount: number = 0;
-        registry.addEventListener(ContainerRegistryEvent.ROOT_CONTAINER_ADD, function onRootContainerAdd(
-            event: ContainerRegistryEvent
-        ): void {
-            callCount++;
-        });
+        registry.addEventListener(
+            ContainerRegistryEvent.ROOT_CONTAINER_ADD,
+            function onRootContainerAdd(event: ContainerRegistryEvent): void {
+                callCount++;
+            }
+        );
         registry.addContainer(container);
         assert.equal(callCount, 1);
     });
@@ -253,11 +321,12 @@ describe("ContainerRegistry", () => {
     it("removing_root_container_dispatches_event", () => {
         let container: Sprite = new Sprite();
         let callCount: number = 0;
-        registry.addEventListener(ContainerRegistryEvent.ROOT_CONTAINER_REMOVE, function onRootContainerRemove(
-            event: ContainerRegistryEvent
-        ): void {
-            callCount++;
-        });
+        registry.addEventListener(
+            ContainerRegistryEvent.ROOT_CONTAINER_REMOVE,
+            function onRootContainerRemove(event: ContainerRegistryEvent): void {
+                callCount++;
+            }
+        );
         registry.addContainer(container);
         registry.removeContainer(container);
         assert.equal(callCount, 1);

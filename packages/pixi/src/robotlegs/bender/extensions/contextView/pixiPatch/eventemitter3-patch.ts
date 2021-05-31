@@ -17,7 +17,12 @@ import EventEmitter = utils.EventEmitter;
 import { IEvent } from "@robotlegsjs/core";
 
 const EventDispatcherMixin = {
-    addEventListener(this: EventEmitter, type: string | symbol, listener: Function, context?: any): void {
+    addEventListener(
+        this: EventEmitter,
+        type: string | symbol,
+        listener: Function,
+        context?: any
+    ): void {
         this.on(type, listener, context);
     },
 
@@ -25,7 +30,13 @@ const EventDispatcherMixin = {
         return this.listenerCount(type) > 0;
     },
 
-    removeEventListener(this: EventEmitter, type: string | symbol, listener?: Function, context?: any, once?: boolean): void {
+    removeEventListener(
+        this: EventEmitter,
+        type: string | symbol,
+        listener?: Function,
+        context?: any,
+        once?: boolean
+    ): void {
         this.off(type, listener, context, once);
     },
 

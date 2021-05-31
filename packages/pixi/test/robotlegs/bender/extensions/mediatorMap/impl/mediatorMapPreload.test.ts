@@ -70,14 +70,8 @@ describe("MediatorMap", () => {
             .toMediator(RectangleMediator)
             .withHooks(HookWithMediatorAndViewInjectionReportFunction);
 
-        injector
-            .bind(Number)
-            .toConstantValue(expectedViewWidth)
-            .whenTargetNamed("width");
-        injector
-            .bind(Number)
-            .toConstantValue(expectedViewHeight)
-            .whenTargetNamed("height");
+        injector.bind(Number).toConstantValue(expectedViewWidth).whenTargetNamed("width");
+        injector.bind(Number).toConstantValue(expectedViewHeight).whenTargetNamed("height");
 
         injector
             .bind("Function")
@@ -106,7 +100,9 @@ describe("MediatorMap", () => {
     });
 
     it("doesnt_leave_view_and_mediator_mappings_lying_around", () => {
-        mediatorMap.mapMatcher(new TypeMatcher().anyOf(Container, Sprite)).toMediator(ExampleMediator);
+        mediatorMap
+            .mapMatcher(new TypeMatcher().anyOf(Container, Sprite))
+            .toMediator(ExampleMediator);
         mediatorMap.handleView(new Sprite(), Sprite);
 
         assert.isFalse(injector.isBound(Container));
@@ -115,7 +111,9 @@ describe("MediatorMap", () => {
     });
 
     it("handler_creates_mediator_for_view_mapped_by_matcher", () => {
-        mediatorMap.mapMatcher(new TypeMatcher().allOf(DisplayObject)).toMediator(ExampleDisplayObjectMediator);
+        mediatorMap
+            .mapMatcher(new TypeMatcher().allOf(DisplayObject))
+            .toMediator(ExampleDisplayObjectMediator);
 
         mediatorMap.handleView(new Sprite(), Sprite);
 
@@ -125,7 +123,9 @@ describe("MediatorMap", () => {
     });
 
     it("handler_doesnt_create_mediator_for_wrong_view_mapped_by_matcher", () => {
-        mediatorMap.mapMatcher(new TypeMatcher().allOf(Container)).toMediator(ExampleDisplayObjectMediator);
+        mediatorMap
+            .mapMatcher(new TypeMatcher().allOf(Container))
+            .toMediator(ExampleDisplayObjectMediator);
 
         mediatorMap.handleView(new DisplayObject(), null);
 
@@ -145,10 +145,7 @@ describe("MediatorMap", () => {
     });
 
     it("mediator_is_created_if_guard_allows_it", () => {
-        mediatorMap
-            .map(Sprite)
-            .toMediator(ExampleMediator)
-            .withGuards(OnlyIfViewHasChildrenGuard);
+        mediatorMap.map(Sprite).toMediator(ExampleMediator).withGuards(OnlyIfViewHasChildrenGuard);
         const view: Sprite = new Sprite();
         view.addChild(new Sprite());
         mediatorMap.mediate(view);
@@ -157,10 +154,7 @@ describe("MediatorMap", () => {
     });
 
     it("no_mediator_is_created_if_guard_prevents_it", () => {
-        mediatorMap
-            .map(Sprite)
-            .toMediator(ExampleMediator)
-            .withGuards(OnlyIfViewHasChildrenGuard);
+        mediatorMap.map(Sprite).toMediator(ExampleMediator).withGuards(OnlyIfViewHasChildrenGuard);
         const view: Sprite = new Sprite();
         mediatorMap.mediate(view);
         const expectedNotifications: string[] = [];
