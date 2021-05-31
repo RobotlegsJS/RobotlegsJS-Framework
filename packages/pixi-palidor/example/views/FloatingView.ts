@@ -40,7 +40,8 @@ export class FloatingView extends Container {
             fontWeight: "bold",
             lineHeight: 40
         });
-        const text = "Add - A new FloatingView\nRemove - The current FloatingView\nRemove All - FloatingViews";
+        const text =
+            "Add - A new FloatingView\nRemove - The current FloatingView\nRemove All - FloatingViews";
 
         const info: Text = new Text(text, style);
         info.position.set(280 + 50, 250);

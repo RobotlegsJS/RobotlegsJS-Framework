@@ -25,13 +25,7 @@ export class PalidorPixiExtension implements IExtension {
     }
 
     private handleContextView(contextView: IContextView): void {
-        this._injector
-            .bind(IContainerController)
-            .to(PixiContainerController)
-            .inSingletonScope();
-        this._injector
-            .bind(IFlowManager)
-            .to(FlowManager)
-            .inSingletonScope();
+        this._injector.bind(IContainerController).to(PixiContainerController).inSingletonScope();
+        this._injector.bind(IFlowManager).to(FlowManager).inSingletonScope();
     }
 }

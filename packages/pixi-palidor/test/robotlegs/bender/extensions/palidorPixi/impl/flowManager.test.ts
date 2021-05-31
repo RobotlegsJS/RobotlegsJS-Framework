@@ -9,7 +9,12 @@ import "./../../../../../entry";
 
 import sinon = require("sinon");
 
-import { IFlowViewMapping, PalidorEvent, FlowManager, FlowViewMapping } from "./../../../../../../src";
+import {
+    IFlowViewMapping,
+    PalidorEvent,
+    FlowManager,
+    FlowViewMapping
+} from "./../../../../../../src";
 
 import { assert } from "chai";
 import { Container } from "pixi.js";
@@ -85,7 +90,9 @@ describe("FlowManager", () => {
         it("should invoke the method removeCurrentView from the controller when the PalidorEvent.REMOVE_CURRENT_VIEW is dispatched", () => {
             let spy = sinon.spy(flowManager.controller, "removeCurrentView");
 
-            flowManager.dispatcher.dispatchEvent(new PalidorEvent(PalidorEvent.REMOVE_CURRENT_VIEW));
+            flowManager.dispatcher.dispatchEvent(
+                new PalidorEvent(PalidorEvent.REMOVE_CURRENT_VIEW)
+            );
 
             assert.isTrue(spy.calledOnce);
         });
@@ -93,7 +100,9 @@ describe("FlowManager", () => {
         it("should invoke the method removeLastFloatingViewAdded when the REMOVE_LAST_FLOATING_VIEW_ADDED is dispatched", () => {
             let spy = sinon.spy(flowManager.controller, "removeLastFloatingViewAdded");
 
-            flowManager.dispatcher.dispatchEvent(new PalidorEvent(PalidorEvent.REMOVE_LAST_FLOATING_VIEW_ADDED));
+            flowManager.dispatcher.dispatchEvent(
+                new PalidorEvent(PalidorEvent.REMOVE_LAST_FLOATING_VIEW_ADDED)
+            );
 
             assert.isTrue(spy.calledOnce);
         });
@@ -101,7 +110,9 @@ describe("FlowManager", () => {
         it("should invoke the method removeAllFloatingViews from the controller when the REMOVE_ALL_FLOATING_VIEWS is dispatched", () => {
             let spy = sinon.spy(flowManager.controller, "removeAllFloatingViews");
 
-            flowManager.dispatcher.dispatchEvent(new PalidorEvent(PalidorEvent.REMOVE_ALL_FLOATING_VIEWS));
+            flowManager.dispatcher.dispatchEvent(
+                new PalidorEvent(PalidorEvent.REMOVE_ALL_FLOATING_VIEWS)
+            );
 
             assert.isTrue(spy.calledOnce);
         });

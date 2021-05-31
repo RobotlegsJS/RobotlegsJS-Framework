@@ -26,10 +26,7 @@ describe("PixiBundle", () => {
 
     it("should bound properly all Palidor interfaces", () => {
         context = new Context();
-        context
-            .install(PalidorBundle)
-            .configure(new ContextView(new Container()))
-            .initialize();
+        context.install(PalidorBundle).configure(new ContextView(new Container())).initialize();
 
         assert.isTrue(context.injector.isBound(IFlowManager));
         assert.isTrue(context.injector.isBound(IContainerController));
