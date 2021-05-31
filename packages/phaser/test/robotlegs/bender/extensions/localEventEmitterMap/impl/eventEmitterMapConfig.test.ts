@@ -68,7 +68,9 @@ describe("EventEmitterMapConfig", () => {
     });
 
     it("equalTo_do_not_accept_different_dispatcher", () => {
-        assert.isFalse(instance.equalTo(new Phaser.Events.EventEmitter(), EVENT_STRING, LISTENER, CONTEXT));
+        assert.isFalse(
+            instance.equalTo(new Phaser.Events.EventEmitter(), EVENT_STRING, LISTENER, CONTEXT)
+        );
     });
 
     it("equalTo_do_not_accept_different_event_string", () => {
@@ -119,6 +121,13 @@ describe("EventEmitterMapConfig", () => {
             {},
             false
         );
-        assert.isFalse(instance.equalTo(anotherInstance.emitter, anotherInstance.event, anotherInstance.listener, anotherInstance.context));
+        assert.isFalse(
+            instance.equalTo(
+                anotherInstance.emitter,
+                anotherInstance.event,
+                anotherInstance.listener,
+                anotherInstance.context
+            )
+        );
     });
 });

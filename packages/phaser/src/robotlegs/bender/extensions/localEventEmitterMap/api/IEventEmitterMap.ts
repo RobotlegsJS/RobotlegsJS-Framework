@@ -22,7 +22,12 @@ export interface IEventEmitterMap extends IEventMap {
      * @param listener The `event` handler
      * @param context the listener function's "this"
      */
-    on(emitter: Phaser.Events.EventEmitter, event: string | symbol, listener: Function, context?: any): void;
+    on(
+        emitter: Phaser.Events.EventEmitter,
+        event: string | symbol,
+        listener: Function,
+        context?: any
+    ): void;
 
     /**
      * The same as calling `once` directly on the `Phaser.Events.EventEmitter`,
@@ -33,7 +38,12 @@ export interface IEventEmitterMap extends IEventMap {
      * @param listener The `event` handler
      * @param context the listener function's "this"
      */
-    once(emitter: Phaser.Events.EventEmitter, event: string | symbol, listener: Function, context?: any): void;
+    once(
+        emitter: Phaser.Events.EventEmitter,
+        event: string | symbol,
+        listener: Function,
+        context?: any
+    ): void;
 
     /**
      * The same as calling `off` or `removeListener` directly on the `Phaser.Events.EventEmitter`,
@@ -44,7 +54,12 @@ export interface IEventEmitterMap extends IEventMap {
      * @param listener The `event` handler
      * @param context the listener function's "this"
      */
-    off(emitter: Phaser.Events.EventEmitter, event: string | symbol, listener?: Function, context?: any): void;
+    off(
+        emitter: Phaser.Events.EventEmitter,
+        event: string | symbol,
+        listener?: Function,
+        context?: any
+    ): void;
 
     /**
      * Removes all listeners registered through `on` or `once`

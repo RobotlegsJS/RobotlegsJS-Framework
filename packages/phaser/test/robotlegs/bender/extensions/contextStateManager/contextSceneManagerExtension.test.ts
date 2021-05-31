@@ -41,7 +41,9 @@ describe("ContextSceneManagerExtension", () => {
     it("contextSceneManager_is_mapped", () => {
         let game: Phaser.Game = new Phaser.Game();
         let actual: ContextSceneManager = null;
-        context.install(ContextSceneManagerExtension).configure(new ContextSceneManager(game.scene));
+        context
+            .install(ContextSceneManagerExtension)
+            .configure(new ContextSceneManager(game.scene));
         context.whenInitializing(() => {
             actual = context.injector.get<ContextSceneManager>(IContextSceneManager);
         });
@@ -55,7 +57,10 @@ describe("ContextSceneManagerExtension", () => {
         let secondGame: Phaser.Game = new Phaser.Game();
         context
             .install(ContextSceneManagerExtension)
-            .configure(new ContextSceneManager(game.scene), new ContextSceneManager(secondGame.scene));
+            .configure(
+                new ContextSceneManager(game.scene),
+                new ContextSceneManager(secondGame.scene)
+            );
         context.whenInitializing(() => {
             actual = context.injector.get<ContextSceneManager>(IContextSceneManager);
         });
@@ -65,8 +70,11 @@ describe("ContextSceneManagerExtension", () => {
 
     it("extension_logs_error_when_context_initialized_with_no_ContextSceneManager", () => {
         let errorLogged: boolean = false;
-        let logTarget: CallbackLogTarget = new CallbackLogTarget(function(log: LogParams): void {
-            if (log.source instanceof ContextSceneManagerExtension && log.level === LogLevel.ERROR) {
+        let logTarget: CallbackLogTarget = new CallbackLogTarget(function (log: LogParams): void {
+            if (
+                log.source instanceof ContextSceneManagerExtension &&
+                log.level === LogLevel.ERROR
+            ) {
                 errorLogged = true;
             }
         });

@@ -53,9 +53,12 @@ export class SceneManagerObserverExtension implements IExtension {
     private whenInitializing(): void {
         // Hark, an actual Singleton!
         if (!SceneManagerObserverExtension._sceneObserver) {
-            const containerRegistry: SceneRegistry = this._injector.get<SceneRegistry>(SceneRegistry);
+            const containerRegistry: SceneRegistry =
+                this._injector.get<SceneRegistry>(SceneRegistry);
             this._logger.debug("Creating genuine SceneManagerObserver Singleton");
-            SceneManagerObserverExtension._sceneObserver = new SceneManagerObserver(containerRegistry);
+            SceneManagerObserverExtension._sceneObserver = new SceneManagerObserver(
+                containerRegistry
+            );
         }
     }
 

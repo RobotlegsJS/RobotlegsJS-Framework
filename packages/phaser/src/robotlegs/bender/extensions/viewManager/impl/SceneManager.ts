@@ -76,7 +76,9 @@ export class SceneManager extends EventDispatcher implements ISceneManager {
             this._registry.addSceneManager(sceneManager).addViewHandler(handler);
         });
 
-        this.dispatchEvent(new SceneManagerEvent(SceneManagerEvent.SCENE_MANAGER_ADD, sceneManager));
+        this.dispatchEvent(
+            new SceneManagerEvent(SceneManagerEvent.SCENE_MANAGER_ADD, sceneManager)
+        );
     }
 
     /**
@@ -101,7 +103,9 @@ export class SceneManager extends EventDispatcher implements ISceneManager {
             binding.removeViewHandler(handler);
         });
 
-        this.dispatchEvent(new SceneManagerEvent(SceneManagerEvent.SCENE_MANAGER_REMOVE, sceneManager));
+        this.dispatchEvent(
+            new SceneManagerEvent(SceneManagerEvent.SCENE_MANAGER_REMOVE, sceneManager)
+        );
     }
 
     /**
@@ -118,7 +122,9 @@ export class SceneManager extends EventDispatcher implements ISceneManager {
             this._registry.addSceneManager(sceneManager).addSceneHandler(handler);
         });
 
-        this.dispatchEvent(new SceneManagerEvent(SceneManagerEvent.SCENE_HANDLER_ADD, null, handler));
+        this.dispatchEvent(
+            new SceneManagerEvent(SceneManagerEvent.SCENE_HANDLER_ADD, null, handler)
+        );
     }
 
     /**
@@ -136,7 +142,9 @@ export class SceneManager extends EventDispatcher implements ISceneManager {
             this._registry.getBinding(sceneManager).removeSceneHandler(handler);
         });
 
-        this.dispatchEvent(new SceneManagerEvent(SceneManagerEvent.SCENE_HANDLER_REMOVE, null, handler));
+        this.dispatchEvent(
+            new SceneManagerEvent(SceneManagerEvent.SCENE_HANDLER_REMOVE, null, handler)
+        );
     }
 
     /**
@@ -153,7 +161,9 @@ export class SceneManager extends EventDispatcher implements ISceneManager {
             this._registry.addSceneManager(sceneManager).addViewHandler(handler);
         });
 
-        this.dispatchEvent(new SceneManagerEvent(SceneManagerEvent.VIEW_HANDLER_ADD, null, null, handler));
+        this.dispatchEvent(
+            new SceneManagerEvent(SceneManagerEvent.VIEW_HANDLER_ADD, null, null, handler)
+        );
     }
 
     /**
@@ -171,7 +181,9 @@ export class SceneManager extends EventDispatcher implements ISceneManager {
             this._registry.getBinding(sceneManager).removeViewHandler(handler);
         });
 
-        this.dispatchEvent(new SceneManagerEvent(SceneManagerEvent.VIEW_HANDLER_REMOVE, null, null, handler));
+        this.dispatchEvent(
+            new SceneManagerEvent(SceneManagerEvent.VIEW_HANDLER_REMOVE, null, null, handler)
+        );
     }
 
     /**

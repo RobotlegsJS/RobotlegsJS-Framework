@@ -39,10 +39,7 @@ export class ViewMediatorMapExtension implements IExtension {
             .beforeDestroying(this.beforeDestroying.bind(this))
             .whenDestroying(this.whenDestroying.bind(this));
         this._injector = context.injector;
-        this._injector
-            .bind(IViewMediatorMap)
-            .to(ViewMediatorMap)
-            .inSingletonScope();
+        this._injector.bind(IViewMediatorMap).to(ViewMediatorMap).inSingletonScope();
     }
 
     /*============================================================================*/

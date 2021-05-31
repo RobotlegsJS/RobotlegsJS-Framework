@@ -139,7 +139,9 @@ export class SceneManagerBinding extends EventDispatcher {
      */
     private dispatchBindingEmpty(): void {
         if (this._sceneHandlers.length === 0 && this._viewHandlers.length === 0) {
-            this.dispatchEvent(new SceneManagerBindingEvent(SceneManagerBindingEvent.BINDING_EMPTY));
+            this.dispatchEvent(
+                new SceneManagerBindingEvent(SceneManagerBindingEvent.BINDING_EMPTY)
+            );
         }
     }
 }

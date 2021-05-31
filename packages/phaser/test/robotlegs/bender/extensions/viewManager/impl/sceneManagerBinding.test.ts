@@ -29,7 +29,7 @@ describe("SceneManagerBinding", () => {
     let sceneManager: Phaser.Scenes.SceneManager = null;
     let binding: SceneManagerBinding = null;
 
-    before(done => {
+    before((done) => {
         game = new MockGame();
         scene = new MockScene("theScene");
 
@@ -92,9 +92,11 @@ describe("SceneManagerBinding", () => {
 
     it("scene_handler_is_not_invoked_after_removal", () => {
         let callCount: number = 0;
-        const handler: ISceneHandler = new CallbackSceneHandler((s: Phaser.Scene, t: IClass<any>): void => {
-            callCount++;
-        });
+        const handler: ISceneHandler = new CallbackSceneHandler(
+            (s: Phaser.Scene, t: IClass<any>): void => {
+                callCount++;
+            }
+        );
         binding.addSceneHandler(handler);
         binding.removeSceneHandler(handler);
         binding.handleScene(scene, <IClass<any>>scene.constructor);
@@ -103,9 +105,11 @@ describe("SceneManagerBinding", () => {
 
     it("scene_handler_is_not_invoked_multiple_times_when_added_multiple_times", () => {
         let callCount: number = 0;
-        const handler: ISceneHandler = new CallbackSceneHandler((s: Phaser.Scene, t: IClass<any>): void => {
-            callCount++;
-        });
+        const handler: ISceneHandler = new CallbackSceneHandler(
+            (s: Phaser.Scene, t: IClass<any>): void => {
+                callCount++;
+            }
+        );
         binding.addSceneHandler(handler);
         binding.addSceneHandler(handler);
         binding.addSceneHandler(handler);
@@ -138,9 +142,12 @@ describe("SceneManagerBinding", () => {
     it("scene_handler_binding_fires_event_on_empty", () => {
         const handler: ISceneHandler = new CallbackSceneHandler();
         let callCount: number = 0;
-        binding.addEventListener(SceneManagerBindingEvent.BINDING_EMPTY, (event: SceneManagerBindingEvent): void => {
-            callCount++;
-        });
+        binding.addEventListener(
+            SceneManagerBindingEvent.BINDING_EMPTY,
+            (event: SceneManagerBindingEvent): void => {
+                callCount++;
+            }
+        );
         binding.addSceneHandler(handler);
         binding.removeSceneHandler(handler);
         assert.equal(callCount, 1);
@@ -149,9 +156,12 @@ describe("SceneManagerBinding", () => {
     it("scene_handler_event_on_empty_is_not_invoked_multiple_times_when_handler_is_removed_multiple_times", () => {
         const handler: ISceneHandler = new CallbackSceneHandler();
         let callCount: number = 0;
-        binding.addEventListener(SceneManagerBindingEvent.BINDING_EMPTY, (event: SceneManagerBindingEvent): void => {
-            callCount++;
-        });
+        binding.addEventListener(
+            SceneManagerBindingEvent.BINDING_EMPTY,
+            (event: SceneManagerBindingEvent): void => {
+                callCount++;
+            }
+        );
         binding.addSceneHandler(handler);
         binding.removeSceneHandler(handler);
         binding.removeSceneHandler(handler);
@@ -164,9 +174,12 @@ describe("SceneManagerBinding", () => {
         const handler2: ISceneHandler = new CallbackSceneHandler();
         const handler3: ISceneHandler = new CallbackSceneHandler();
         let callCount: number = 0;
-        binding.addEventListener(SceneManagerBindingEvent.BINDING_EMPTY, (event: SceneManagerBindingEvent): void => {
-            callCount++;
-        });
+        binding.addEventListener(
+            SceneManagerBindingEvent.BINDING_EMPTY,
+            (event: SceneManagerBindingEvent): void => {
+                callCount++;
+            }
+        );
         binding.addSceneHandler(handler1);
         binding.addSceneHandler(handler2);
         binding.addSceneHandler(handler3);
@@ -205,9 +218,11 @@ describe("SceneManagerBinding", () => {
 
     it("view_handler_is_not_invoked_after_removal", () => {
         let callCount: number = 0;
-        const handler: IViewHandler = new CallbackViewHandler((v: Phaser.GameObjects.Container, t: IClass<any>): void => {
-            callCount++;
-        });
+        const handler: IViewHandler = new CallbackViewHandler(
+            (v: Phaser.GameObjects.Container, t: IClass<any>): void => {
+                callCount++;
+            }
+        );
         binding.addViewHandler(handler);
         binding.removeViewHandler(handler);
         binding.handleView(scene.view, <IClass<any>>scene.view.constructor);
@@ -216,9 +231,11 @@ describe("SceneManagerBinding", () => {
 
     it("view_handler_is_not_invoked_multiple_times_when_added_multiple_times", () => {
         let callCount: number = 0;
-        const handler: IViewHandler = new CallbackViewHandler((v: Phaser.GameObjects.Container, t: IClass<any>): void => {
-            callCount++;
-        });
+        const handler: IViewHandler = new CallbackViewHandler(
+            (v: Phaser.GameObjects.Container, t: IClass<any>): void => {
+                callCount++;
+            }
+        );
         binding.addViewHandler(handler);
         binding.addViewHandler(handler);
         binding.addViewHandler(handler);
@@ -251,9 +268,12 @@ describe("SceneManagerBinding", () => {
     it("view_handler_binding_fires_event_on_empty", () => {
         const handler: IViewHandler = new CallbackViewHandler();
         let callCount: number = 0;
-        binding.addEventListener(SceneManagerBindingEvent.BINDING_EMPTY, (event: SceneManagerBindingEvent): void => {
-            callCount++;
-        });
+        binding.addEventListener(
+            SceneManagerBindingEvent.BINDING_EMPTY,
+            (event: SceneManagerBindingEvent): void => {
+                callCount++;
+            }
+        );
         binding.addViewHandler(handler);
         binding.removeViewHandler(handler);
         assert.equal(callCount, 1);
@@ -262,9 +282,12 @@ describe("SceneManagerBinding", () => {
     it("view_handler_event_on_empty_is_not_invoked_multiple_times_when_handler_is_removed_multiple_times", () => {
         const handler: IViewHandler = new CallbackViewHandler();
         let callCount: number = 0;
-        binding.addEventListener(SceneManagerBindingEvent.BINDING_EMPTY, (event: SceneManagerBindingEvent): void => {
-            callCount++;
-        });
+        binding.addEventListener(
+            SceneManagerBindingEvent.BINDING_EMPTY,
+            (event: SceneManagerBindingEvent): void => {
+                callCount++;
+            }
+        );
         binding.addViewHandler(handler);
         binding.removeViewHandler(handler);
         binding.removeViewHandler(handler);
@@ -277,9 +300,12 @@ describe("SceneManagerBinding", () => {
         const handler2: IViewHandler = new CallbackViewHandler();
         const handler3: IViewHandler = new CallbackViewHandler();
         let callCount: number = 0;
-        binding.addEventListener(SceneManagerBindingEvent.BINDING_EMPTY, (event: SceneManagerBindingEvent): void => {
-            callCount++;
-        });
+        binding.addEventListener(
+            SceneManagerBindingEvent.BINDING_EMPTY,
+            (event: SceneManagerBindingEvent): void => {
+                callCount++;
+            }
+        );
         binding.addViewHandler(handler1);
         binding.addViewHandler(handler2);
         binding.addViewHandler(handler3);
@@ -293,9 +319,12 @@ describe("SceneManagerBinding", () => {
         const sceneHandler: ISceneHandler = new CallbackSceneHandler();
         const viewHandler: IViewHandler = new CallbackViewHandler();
         let callCount: number = 0;
-        binding.addEventListener(SceneManagerBindingEvent.BINDING_EMPTY, (event: SceneManagerBindingEvent): void => {
-            callCount++;
-        });
+        binding.addEventListener(
+            SceneManagerBindingEvent.BINDING_EMPTY,
+            (event: SceneManagerBindingEvent): void => {
+                callCount++;
+            }
+        );
         binding.addSceneHandler(sceneHandler);
         binding.addViewHandler(viewHandler);
         binding.removeViewHandler(viewHandler);
@@ -306,9 +335,12 @@ describe("SceneManagerBinding", () => {
         const sceneHandler: ISceneHandler = new CallbackSceneHandler();
         const viewHandler: IViewHandler = new CallbackViewHandler();
         let callCount: number = 0;
-        binding.addEventListener(SceneManagerBindingEvent.BINDING_EMPTY, (event: SceneManagerBindingEvent): void => {
-            callCount++;
-        });
+        binding.addEventListener(
+            SceneManagerBindingEvent.BINDING_EMPTY,
+            (event: SceneManagerBindingEvent): void => {
+                callCount++;
+            }
+        );
         binding.addSceneHandler(sceneHandler);
         binding.addViewHandler(viewHandler);
         binding.removeSceneHandler(sceneHandler);

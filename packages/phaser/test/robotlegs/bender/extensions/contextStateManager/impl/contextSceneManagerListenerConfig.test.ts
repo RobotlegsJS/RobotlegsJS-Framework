@@ -27,7 +27,10 @@ describe("ContextSceneManagerListenerConfig", () => {
         contextSceneManager = new ContextSceneManager(game.scene);
         sceneRegistry = new SceneRegistry();
         sceneManager = new SceneManager(sceneRegistry);
-        contextSceneManagerListenerConfig = new ContextSceneManagerListenerConfig(contextSceneManager, sceneManager);
+        contextSceneManagerListenerConfig = new ContextSceneManagerListenerConfig(
+            contextSceneManager,
+            sceneManager
+        );
     });
 
     afterEach(() => {

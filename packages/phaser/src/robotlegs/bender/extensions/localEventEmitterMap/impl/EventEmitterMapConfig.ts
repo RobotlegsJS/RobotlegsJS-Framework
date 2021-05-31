@@ -81,7 +81,13 @@ export class EventEmitterMapConfig {
     /**
      * @private
      */
-    constructor(emitter: Phaser.Events.EventEmitter, event: string | symbol, listener: Function, context: any, once?: boolean) {
+    constructor(
+        emitter: Phaser.Events.EventEmitter,
+        event: string | symbol,
+        listener: Function,
+        context: any,
+        once?: boolean
+    ) {
         this._emitter = emitter;
         this._event = event;
         this._listener = listener;
@@ -89,7 +95,17 @@ export class EventEmitterMapConfig {
         this._once = once;
     }
 
-    public equalTo(emitter: Phaser.Events.EventEmitter, event: string | symbol, listener: Function, context: any): boolean {
-        return this._emitter === emitter && this._event === event && this._listener === listener && this._context === context;
+    public equalTo(
+        emitter: Phaser.Events.EventEmitter,
+        event: string | symbol,
+        listener: Function,
+        context: any
+    ): boolean {
+        return (
+            this._emitter === emitter &&
+            this._event === event &&
+            this._listener === listener &&
+            this._context === context
+        );
     }
 }

@@ -26,7 +26,12 @@ describe("SceneManagerEvent", () => {
         game = new Phaser.Game();
         sceneHandler = new CallbackSceneHandler();
         viewHandler = new CallbackViewHandler();
-        event = new SceneManagerEvent(SceneManagerEvent.SCENE_MANAGER_ADD, game.scene, sceneHandler, viewHandler);
+        event = new SceneManagerEvent(
+            SceneManagerEvent.SCENE_MANAGER_ADD,
+            game.scene,
+            sceneHandler,
+            viewHandler
+        );
     });
 
     afterEach(() => {

@@ -41,7 +41,7 @@ describe("PhaserBundle", () => {
         context = null;
     });
 
-    it("bundle_is_properly_installed_into_context", done => {
+    it("bundle_is_properly_installed_into_context", (done) => {
         game = new Phaser.Game({
             type: Phaser.CANVAS,
             width: 800,
@@ -50,10 +50,7 @@ describe("PhaserBundle", () => {
             parent: "phaser-example"
         });
         context = new Context();
-        context
-            .install(PhaserBundle)
-            .configure(new ContextSceneManager(game.scene))
-            .initialize();
+        context.install(PhaserBundle).configure(new ContextSceneManager(game.scene)).initialize();
 
         // Verify if all extensions are installed
         assert.isTrue(context.injector.isBound(IContextSceneManager));
@@ -65,7 +62,7 @@ describe("PhaserBundle", () => {
         done();
     });
 
-    it("bundle_logs_an_error_message_when_context_scene_manager_is_not_provided", done => {
+    it("bundle_logs_an_error_message_when_context_scene_manager_is_not_provided", (done) => {
         let errorLogged: boolean = false;
         let logTarget: CallbackLogTarget = new CallbackLogTarget((log: LogParams) => {
             if (log.source instanceof PhaserBundle && log.level === LogLevel.ERROR) {

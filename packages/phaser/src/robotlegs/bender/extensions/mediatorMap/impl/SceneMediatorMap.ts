@@ -5,7 +5,15 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import { injectable, inject, IClass, IContext, ILogger, ITypeMatcher, TypeMatcher } from "@robotlegsjs/core";
+import {
+    injectable,
+    inject,
+    IClass,
+    IContext,
+    ILogger,
+    ITypeMatcher,
+    TypeMatcher
+} from "@robotlegsjs/core";
 
 import { ISceneHandler } from "../../viewManager/api/ISceneHandler";
 
