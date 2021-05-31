@@ -52,7 +52,9 @@ export class StageCrawlerExtension implements IExtension {
 
     private afterInitializing(): void {
         this._containerRegistry = this._injector.get<ContainerRegistry>(ContainerRegistry);
-        this._injector.isBound(IViewManager) ? this.scanViewManagedContainers() : this.scanContextView();
+        this._injector.isBound(IViewManager)
+            ? this.scanViewManagedContainers()
+            : this.scanContextView();
     }
 
     private scanViewManagedContainers(): void {
@@ -69,7 +71,9 @@ export class StageCrawlerExtension implements IExtension {
             let contextView: IContextView = this._injector.get<IContextView>(IContextView);
             this.scanContainer(contextView.view);
         } else {
-            this._logger.error("A ContextView must be installed if you install the StageCrawlerExtension.");
+            this._logger.error(
+                "A ContextView must be installed if you install the StageCrawlerExtension."
+            );
         }
     }
 

@@ -74,14 +74,20 @@ describe("MediatorMap", () => {
     });
 
     xit("unmapMatcher_returns_mapper", () => {
-        const mapper: MediatorMapper = <MediatorMapper>mediatorMap.mapMatcher(new TypeMatcher().allOf(DisplayObjectContainer));
-        const unmappedMapper: MediatorMapper = <MediatorMapper>mediatorMap.unmapMatcher(new TypeMatcher().allOf(DisplayObjectContainer));
+        const mapper: MediatorMapper = <MediatorMapper>(
+            mediatorMap.mapMatcher(new TypeMatcher().allOf(DisplayObjectContainer))
+        );
+        const unmappedMapper: MediatorMapper = <MediatorMapper>(
+            mediatorMap.unmapMatcher(new TypeMatcher().allOf(DisplayObjectContainer))
+        );
         assert.equal(unmappedMapper, mapper);
     });
 
     xit("unmap_returns_mapper", () => {
         const mapper: MediatorMapper = <MediatorMapper>mediatorMap.map(DisplayObjectContainer);
-        const unmappedMapper: MediatorMapper = <MediatorMapper>mediatorMap.unmap(DisplayObjectContainer);
+        const unmappedMapper: MediatorMapper = <MediatorMapper>(
+            mediatorMap.unmap(DisplayObjectContainer)
+        );
         assert.equal(unmappedMapper, mapper);
     });
 

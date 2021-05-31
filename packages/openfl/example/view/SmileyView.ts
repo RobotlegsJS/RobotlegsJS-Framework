@@ -77,7 +77,10 @@ export class SmileyView extends Sprite {
 
         for (let i: number = 1; i <= steps; i++) {
             angle = angleFrom + (angleDiff / steps) * i;
-            graphics.lineTo(centerX + radius * Math.cos(angle * degToRad), centerY + radius * Math.sin(angle * degToRad));
+            graphics.lineTo(
+                centerX + radius * Math.cos(angle * degToRad),
+                centerY + radius * Math.sin(angle * degToRad)
+            );
         }
     }
 

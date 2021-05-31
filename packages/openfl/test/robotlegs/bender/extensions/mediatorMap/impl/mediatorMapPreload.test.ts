@@ -72,14 +72,8 @@ describe("MediatorMap", () => {
             .toMediator(RectangleMediator)
             .withHooks(HookWithMediatorAndViewInjectionReportFunction);
 
-        injector
-            .bind(Number)
-            .toConstantValue(expectedViewWidth)
-            .whenTargetNamed("width");
-        injector
-            .bind(Number)
-            .toConstantValue(expectedViewHeight)
-            .whenTargetNamed("height");
+        injector.bind(Number).toConstantValue(expectedViewWidth).whenTargetNamed("width");
+        injector.bind(Number).toConstantValue(expectedViewHeight).whenTargetNamed("height");
 
         injector
             .bind("Function")
@@ -117,7 +111,9 @@ describe("MediatorMap", () => {
     });
 
     xit("handler_creates_mediator_for_view_mapped_by_matcher", () => {
-        mediatorMap.mapMatcher(new TypeMatcher().allOf(DisplayObject)).toMediator(ExampleDisplayObjectMediator);
+        mediatorMap
+            .mapMatcher(new TypeMatcher().allOf(DisplayObject))
+            .toMediator(ExampleDisplayObjectMediator);
 
         mediatorMap.handleView(new ExampleView(), ExampleView);
 
@@ -127,7 +123,9 @@ describe("MediatorMap", () => {
     });
 
     xit("handler_doesnt_create_mediator_for_wrong_view_mapped_by_matcher", () => {
-        mediatorMap.mapMatcher(new TypeMatcher().allOf(DisplayObjectContainer)).toMediator(ExampleDisplayObjectMediator);
+        mediatorMap
+            .mapMatcher(new TypeMatcher().allOf(DisplayObjectContainer))
+            .toMediator(ExampleDisplayObjectMediator);
 
         mediatorMap.handleView(new DisplayObject(), null);
 

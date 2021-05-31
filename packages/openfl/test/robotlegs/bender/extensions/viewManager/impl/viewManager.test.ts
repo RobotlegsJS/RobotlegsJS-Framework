@@ -138,10 +138,12 @@ describe("ViewManager", () => {
         const expected: DisplayObjectContainer = new DisplayObjectContainer();
         let actual: DisplayObjectContainer = null;
         let count: number = 0;
-        let handler: CallbackViewHandler = new CallbackViewHandler((view: DisplayObjectContainer, type: IClass<any>) => {
-            actual = view;
-            count++;
-        });
+        let handler: CallbackViewHandler = new CallbackViewHandler(
+            (view: DisplayObjectContainer, type: IClass<any>) => {
+                actual = view;
+                count++;
+            }
+        );
         viewManager.addContainer(stage);
         viewManager.addViewHandler(handler);
         viewManager.addViewHandler(handler);
@@ -216,9 +218,11 @@ describe("ViewManager", () => {
 
     it("handler_is_not_called_after_removeViewHandler", () => {
         let callCount: number = 0;
-        let handler: CallbackViewHandler = new CallbackViewHandler((view: DisplayObjectContainer, type: IClass<any>) => {
-            callCount++;
-        });
+        let handler: CallbackViewHandler = new CallbackViewHandler(
+            (view: DisplayObjectContainer, type: IClass<any>) => {
+                callCount++;
+            }
+        );
         viewManager.addContainer(stage);
         viewManager.addViewHandler(handler);
         viewManager.removeViewHandler(handler);
@@ -228,9 +232,11 @@ describe("ViewManager", () => {
 
     it("handler_is_not_called_after_removeViewHandler_called_twice", () => {
         let callCount: number = 0;
-        let handler: CallbackViewHandler = new CallbackViewHandler((view: DisplayObjectContainer, type: IClass<any>) => {
-            callCount++;
-        });
+        let handler: CallbackViewHandler = new CallbackViewHandler(
+            (view: DisplayObjectContainer, type: IClass<any>) => {
+                callCount++;
+            }
+        );
         viewManager.addContainer(stage);
         viewManager.addViewHandler(handler);
         viewManager.removeViewHandler(handler);

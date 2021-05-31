@@ -47,7 +47,11 @@ describe("MediatorViewHandler", () => {
         handler = null;
     });
 
-    function createTypeFilter(allOf: any[], anyOf: any[] = null, noneOf: any[] = null): ITypeFilter {
+    function createTypeFilter(
+        allOf: any[],
+        anyOf: any[] = null,
+        noneOf: any[] = null
+    ): ITypeFilter {
         const matcher: TypeMatcher = new TypeMatcher();
 
         if (allOf) {
@@ -71,7 +75,10 @@ describe("MediatorViewHandler", () => {
                 createdMediator = mediator;
             })
             .whenTargetNamed("executeCallback");
-        const mapping: MediatorMapping = new MediatorMapping(createTypeFilter([DisplayObjectContainer]), CallbackMediator);
+        const mapping: MediatorMapping = new MediatorMapping(
+            createTypeFilter([DisplayObjectContainer]),
+            CallbackMediator
+        );
         handler.addMapping(mapping);
         handler.handleView(new DisplayObjectContainer(), DisplayObjectContainer);
         assert.isNotNull(createdMediator);
@@ -86,7 +93,10 @@ describe("MediatorViewHandler", () => {
                 createdMediator = mediator;
             })
             .whenTargetNamed("executeCallback");
-        const mapping: MediatorMapping = new MediatorMapping(createTypeFilter([Sprite]), CallbackMediator);
+        const mapping: MediatorMapping = new MediatorMapping(
+            createTypeFilter([Sprite]),
+            CallbackMediator
+        );
         handler.addMapping(mapping);
         handler.handleView(new DisplayObjectContainer(), DisplayObjectContainer);
         assert.isNull(createdMediator);
@@ -100,7 +110,10 @@ describe("MediatorViewHandler", () => {
                 createdMediators.push(mediator);
             })
             .whenTargetNamed("executeCallback");
-        const mapping: MediatorMapping = new MediatorMapping(createTypeFilter([DisplayObjectContainer]), CallbackMediator);
+        const mapping: MediatorMapping = new MediatorMapping(
+            createTypeFilter([DisplayObjectContainer]),
+            CallbackMediator
+        );
         handler.addMapping(mapping);
         handler.addMapping(mapping);
         handler.handleView(new DisplayObjectContainer(), DisplayObjectContainer);
@@ -115,7 +128,10 @@ describe("MediatorViewHandler", () => {
                 createdMediators.push(mediator);
             })
             .whenTargetNamed("executeCallback");
-        const mapping: MediatorMapping = new MediatorMapping(createTypeFilter([DisplayObjectContainer]), CallbackMediator);
+        const mapping: MediatorMapping = new MediatorMapping(
+            createTypeFilter([DisplayObjectContainer]),
+            CallbackMediator
+        );
         handler.addMapping(mapping);
         handler.removeMapping(mapping);
         handler.handleView(new DisplayObjectContainer(), DisplayObjectContainer);
@@ -130,7 +146,10 @@ describe("MediatorViewHandler", () => {
                 createdMediators.push(mediator);
             })
             .whenTargetNamed("executeCallback");
-        const mapping: MediatorMapping = new MediatorMapping(createTypeFilter([DisplayObjectContainer]), CallbackMediator);
+        const mapping: MediatorMapping = new MediatorMapping(
+            createTypeFilter([DisplayObjectContainer]),
+            CallbackMediator
+        );
         handler.addMapping(mapping);
         handler.removeMapping(mapping);
         handler.removeMapping(mapping);
@@ -146,7 +165,10 @@ describe("MediatorViewHandler", () => {
                 createdMediators.push(mediator);
             })
             .whenTargetNamed("executeCallback");
-        const mapping: MediatorMapping = new MediatorMapping(createTypeFilter([NotAView]), CallbackMediator);
+        const mapping: MediatorMapping = new MediatorMapping(
+            createTypeFilter([NotAView]),
+            CallbackMediator
+        );
         handler.addMapping(mapping);
         handler.handleItem(new NotAView(), NotAView);
         assert.equal(createdMediators.length, 1);
@@ -160,7 +182,10 @@ describe("MediatorViewHandler", () => {
                 createdMediators.push(mediator);
             })
             .whenTargetNamed("executeCallback");
-        const mapping: MediatorMapping = new MediatorMapping(createTypeFilter([NotAView]), CallbackMediator);
+        const mapping: MediatorMapping = new MediatorMapping(
+            createTypeFilter([NotAView]),
+            CallbackMediator
+        );
         handler.addMapping(mapping);
         handler.handleItem(new DisplayObjectContainer(), DisplayObjectContainer);
         assert.equal(createdMediators.length, 0);
@@ -174,9 +199,15 @@ describe("MediatorViewHandler", () => {
                 createdMediators.push(mediator);
             })
             .whenTargetNamed("executeCallback");
-        const mapping1: MediatorMapping = new MediatorMapping(createTypeFilter([DisplayObjectContainer]), CallbackMediator);
+        const mapping1: MediatorMapping = new MediatorMapping(
+            createTypeFilter([DisplayObjectContainer]),
+            CallbackMediator
+        );
         handler.addMapping(mapping1);
-        const mapping2: MediatorMapping = new MediatorMapping(createTypeFilter([DisplayObject]), CallbackMediator);
+        const mapping2: MediatorMapping = new MediatorMapping(
+            createTypeFilter([DisplayObject]),
+            CallbackMediator
+        );
         handler.addMapping(mapping2);
 
         handler.handleItem(new NotAView(), NotAView);
@@ -193,9 +224,15 @@ describe("MediatorViewHandler", () => {
                 createdMediators.push(mediator);
             })
             .whenTargetNamed("executeCallback");
-        const mapping1: MediatorMapping = new MediatorMapping(createTypeFilter([DisplayObjectContainer]), CallbackMediator);
+        const mapping1: MediatorMapping = new MediatorMapping(
+            createTypeFilter([DisplayObjectContainer]),
+            CallbackMediator
+        );
         handler.addMapping(mapping1);
-        const mapping2: MediatorMapping = new MediatorMapping(createTypeFilter([DisplayObject]), CallbackMediator);
+        const mapping2: MediatorMapping = new MediatorMapping(
+            createTypeFilter([DisplayObject]),
+            CallbackMediator
+        );
         handler.addMapping(mapping2);
 
         handler.handleView(new DisplayObjectContainer(), DisplayObjectContainer);
