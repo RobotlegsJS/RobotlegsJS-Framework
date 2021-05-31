@@ -1,5 +1,5 @@
 {
-  "printWidth": 120,
+  "printWidth": 100,
   "tabWidth": 4,
   "useTabs": false,
   "semi": true,
@@ -18,6 +18,12 @@
     },
     {
       "files": "*.json",
+      "options": {
+        "tabWidth": 2
+      }
+    },
+    {
+      "files": "*.yml",
       "options": {
         "tabWidth": 2
       }
