@@ -163,7 +163,10 @@ describe("SlotListTest", () => {
         let slot0: ISlot = signal.add(listener);
         let slot1: ISlot = signal.add(listener);
 
-        assert.isTrue(slot0.listener === slot1.listener, "Slot listener is the same as the listener");
+        assert.isTrue(
+            slot0.listener === slot1.listener,
+            "Slot listener is the same as the listener"
+        );
     });
 
     it("add_listener_and_remove_using_slot", () => {
@@ -248,7 +251,10 @@ describe("SlotListTest", () => {
         let slot0: ISlot = signal.addOnce(listener);
         let slot1: ISlot = signal.addOnce(listener);
 
-        assert.isTrue(slot0.listener === slot1.listener, "Slot listener is the same as the listener");
+        assert.isTrue(
+            slot0.listener === slot1.listener,
+            "Slot listener is the same as the listener"
+        );
     });
 
     it("addOnce_listener_and_remove_using_slot", () => {

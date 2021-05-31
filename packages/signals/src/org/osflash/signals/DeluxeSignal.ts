@@ -42,7 +42,10 @@ export class DeluxeSignal extends PrioritySignal {
      */
     public constructor(target: any = null, ...valueClasses: any[]) {
         // Cannot use super.apply(null, valueClasses), so allow the subclass to call super(valueClasses).
-        valueClasses = valueClasses.length === 1 && valueClasses[0] instanceof Array ? valueClasses[0] : valueClasses;
+        valueClasses =
+            valueClasses.length === 1 && valueClasses[0] instanceof Array
+                ? valueClasses[0]
+                : valueClasses;
 
         /* istanbul ignore next */ super(valueClasses);
 
@@ -77,7 +80,12 @@ export class DeluxeSignal extends PrioritySignal {
 
         if (numValueObjects < numValueClasses) {
             throw new Error(
-                "Incorrect number of arguments. " + "Expected at least " + numValueClasses + " but received " + numValueObjects + "."
+                "Incorrect number of arguments. " +
+                    "Expected at least " +
+                    numValueClasses +
+                    " but received " +
+                    numValueObjects +
+                    "."
             );
         }
 
@@ -88,7 +96,13 @@ export class DeluxeSignal extends PrioritySignal {
                 continue;
             }
 
-            throw new Error("Value object <" + valueObjects[i] + "> is not an instance of <" + this._valueClasses[i] + ">.");
+            throw new Error(
+                "Value object <" +
+                    valueObjects[i] +
+                    "> is not an instance of <" +
+                    this._valueClasses[i] +
+                    ">."
+            );
         }
 
         // Extract and clone event object if necessary.

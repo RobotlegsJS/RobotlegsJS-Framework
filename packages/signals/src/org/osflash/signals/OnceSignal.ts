@@ -44,7 +44,10 @@ export class OnceSignal implements IOnceSignal {
      */
     public constructor(...valueClasses: any[]) {
         // Cannot use super.apply(null, valueClasses), so allow the subclass to call super(valueClasses).
-        this.valueClasses = valueClasses.length === 1 && valueClasses[0] instanceof Array ? valueClasses[0] : valueClasses;
+        this.valueClasses =
+            valueClasses.length === 1 && valueClasses[0] instanceof Array
+                ? valueClasses[0]
+                : valueClasses;
     }
 
     /**
@@ -117,7 +120,12 @@ export class OnceSignal implements IOnceSignal {
         // Cannot dispatch fewer objects than declared classes.
         if (numValueObjects < numValueClasses) {
             throw new Error(
-                "Incorrect number of arguments. " + "Expected at least " + numValueClasses + " but received " + numValueObjects + "."
+                "Incorrect number of arguments. " +
+                    "Expected at least " +
+                    numValueClasses +
+                    " but received " +
+                    numValueObjects +
+                    "."
             );
         }
 
@@ -132,7 +140,13 @@ export class OnceSignal implements IOnceSignal {
                 continue;
             }
 
-            throw new Error("Value object <" + valueObjects[i] + "> is not an instance of <" + this._valueClasses[i] + ">.");
+            throw new Error(
+                "Value object <" +
+                    valueObjects[i] +
+                    "> is not an instance of <" +
+                    this._valueClasses[i] +
+                    ">."
+            );
         }
 
         // Broadcast to listeners.
@@ -168,7 +182,9 @@ export class OnceSignal implements IOnceSignal {
         if (existingSlot.once !== once) {
             // If the listener was previously added, definitely don't add it again.
             // But throw an exception if their once values differ.
-            throw new Error("You cannot addOnce() then add() the same listener without removing the relationship first.");
+            throw new Error(
+                "You cannot addOnce() then add() the same listener without removing the relationship first."
+            );
         }
 
         return false; // Listener was already registered.
