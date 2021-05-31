@@ -11,7 +11,13 @@ import { assert } from "chai";
 
 import { IContext, Context, LogLevel } from "@robotlegsjs/core";
 
-import { IContextView, IMediatorMap, IViewManager, ContextView, CreateJSBundle } from "../../../../../src";
+import {
+    IContextView,
+    IMediatorMap,
+    IViewManager,
+    ContextView,
+    CreateJSBundle
+} from "../../../../../src";
 
 import { ContainerRegistry } from "../../../../../src/robotlegs/bender/extensions/viewManager/impl/ContainerRegistry";
 

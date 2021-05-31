@@ -39,10 +39,7 @@ export class MediatorMapExtension implements IExtension {
             .beforeDestroying(this.beforeDestroying.bind(this))
             .whenDestroying(this.whenDestroying.bind(this));
         this._injector = context.injector;
-        this._injector
-            .bind(IMediatorMap)
-            .to(MediatorMap)
-            .inSingletonScope();
+        this._injector.bind(IMediatorMap).to(MediatorMap).inSingletonScope();
     }
 
     /*============================================================================*/

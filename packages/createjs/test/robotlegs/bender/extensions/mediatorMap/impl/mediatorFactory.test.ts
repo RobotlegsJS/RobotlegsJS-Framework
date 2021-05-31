@@ -44,7 +44,11 @@ describe("MediatorFactory", () => {
         factory = null;
     });
 
-    function createTypeFilter(allOf: any[], anyOf: any[] = null, noneOf: any[] = null): ITypeFilter {
+    function createTypeFilter(
+        allOf: any[],
+        anyOf: any[] = null,
+        noneOf: any[] = null
+    ): ITypeFilter {
         const matcher: TypeMatcher = new TypeMatcher();
 
         if (allOf) {
@@ -68,44 +72,82 @@ describe("MediatorFactory", () => {
                 callCount++;
             })
             .whenTargetNamed("hookCallback");
-        const mapping: MediatorMapping = new MediatorMapping(createTypeFilter([createjs.Container]), CallbackMediator);
+        const mapping: MediatorMapping = new MediatorMapping(
+            createTypeFilter([createjs.Container]),
+            CallbackMediator
+        );
         mapping.withHooks.apply(mapping, hooks);
         factory.createMediators(new createjs.Container(), createjs.Container, [mapping]);
         return callCount;
     }
 
     function mediatorsCreatedWithGuards(...guards: any[]): number {
-        const mapping: MediatorMapping = new MediatorMapping(createTypeFilter([createjs.Container]), CallbackMediator);
+        const mapping: MediatorMapping = new MediatorMapping(
+            createTypeFilter([createjs.Container]),
+            CallbackMediator
+        );
         mapping.withGuards(guards);
-        const mediators: any[] = factory.createMediators(new createjs.Container(), createjs.Container, [mapping]);
+        const mediators: any[] = factory.createMediators(
+            new createjs.Container(),
+            createjs.Container,
+            [mapping]
+        );
         return mediators.length;
     }
 
     it("mediator_is_created", () => {
-        const mapping: IMediatorMapping = new MediatorMapping(createTypeFilter([createjs.Container]), CallbackMediator);
-        const mediator: IMediator = factory.createMediators(new createjs.Container(), createjs.Container, [mapping])[0];
+        const mapping: IMediatorMapping = new MediatorMapping(
+            createTypeFilter([createjs.Container]),
+            CallbackMediator
+        );
+        const mediator: IMediator = factory.createMediators(
+            new createjs.Container(),
+            createjs.Container,
+            [mapping]
+        )[0];
         assert.instanceOf(mediator, CallbackMediator);
     });
 
     it("mediator_is_injected_into", () => {
         const expected: number = 128;
-        const mapping: IMediatorMapping = new MediatorMapping(createTypeFilter([createjs.Container]), InjectedMediator);
+        const mapping: IMediatorMapping = new MediatorMapping(
+            createTypeFilter([createjs.Container]),
+            InjectedMediator
+        );
         injector.bind(Number).toConstantValue(expected);
-        const mediator: InjectedMediator = factory.createMediators(new createjs.Container(), createjs.Container, [mapping])[0];
+        const mediator: InjectedMediator = factory.createMediators(
+            new createjs.Container(),
+            createjs.Container,
+            [mapping]
+        )[0];
         assert.equal(mediator.number, expected);
     });
 
     it("mediatedItem_is_injected_as_exact_type_into_mediator", () => {
         const expected: createjs.Container = new createjs.Container();
-        const mapping: IMediatorMapping = new MediatorMapping(createTypeFilter([createjs.Container]), ViewInjectedMediator);
-        const mediator: ViewInjectedMediator = factory.createMediators(expected, createjs.Container, [mapping])[0];
+        const mapping: IMediatorMapping = new MediatorMapping(
+            createTypeFilter([createjs.Container]),
+            ViewInjectedMediator
+        );
+        const mediator: ViewInjectedMediator = factory.createMediators(
+            expected,
+            createjs.Container,
+            [mapping]
+        )[0];
         assert.equal(mediator.mediatedItem, expected);
     });
 
     it("mediatedItem_is_injected_as_requested_type_into_mediator", () => {
         const expected: createjs.Container = new createjs.Container();
-        const mapping: MediatorMapping = new MediatorMapping(createTypeFilter([createjs.DisplayObject]), ViewInjectedAsRequestedMediator);
-        const mediator: ViewInjectedAsRequestedMediator = factory.createMediators(expected, createjs.Container, [mapping])[0];
+        const mapping: MediatorMapping = new MediatorMapping(
+            createTypeFilter([createjs.DisplayObject]),
+            ViewInjectedAsRequestedMediator
+        );
+        const mediator: ViewInjectedAsRequestedMediator = factory.createMediators(
+            expected,
+            createjs.Container,
+            [mapping]
+        )[0];
         assert.equal(mediator.mediatedItem, expected);
     });
 
@@ -124,7 +166,10 @@ describe("MediatorFactory", () => {
                 injectedView = hook.mediatedItem;
             })
             .whenTargetNamed("callback");
-        const mapping: MediatorMapping = new MediatorMapping(createTypeFilter([createjs.Container]), ViewInjectedMediator);
+        const mapping: MediatorMapping = new MediatorMapping(
+            createTypeFilter([createjs.Container]),
+            ViewInjectedMediator
+        );
         mapping.withHooks(MediatorHook);
         factory.createMediators(mediatedItem, createjs.Container, [mapping]);
         assert.instanceOf(injectedMediator, ViewInjectedMediator);
@@ -153,31 +198,58 @@ describe("MediatorFactory", () => {
 
     it("same_mediators_are_returned_for_mappings_and_mediatedItem", () => {
         const mediatedItem: createjs.Container = new createjs.Container();
-        const mapping1: MediatorMapping = new MediatorMapping(createTypeFilter([createjs.Container]), ViewInjectedMediator);
-        const mapping2: MediatorMapping = new MediatorMapping(createTypeFilter([createjs.DisplayObject]), ViewInjectedAsRequestedMediator);
-        const mediators1: any[] = factory.createMediators(mediatedItem, createjs.Container, [mapping1, mapping2]);
-        const mediators2: any[] = factory.createMediators(mediatedItem, createjs.Container, [mapping1, mapping2]);
+        const mapping1: MediatorMapping = new MediatorMapping(
+            createTypeFilter([createjs.Container]),
+            ViewInjectedMediator
+        );
+        const mapping2: MediatorMapping = new MediatorMapping(
+            createTypeFilter([createjs.DisplayObject]),
+            ViewInjectedAsRequestedMediator
+        );
+        const mediators1: any[] = factory.createMediators(mediatedItem, createjs.Container, [
+            mapping1,
+            mapping2
+        ]);
+        const mediators2: any[] = factory.createMediators(mediatedItem, createjs.Container, [
+            mapping1,
+            mapping2
+        ]);
         assert.deepEqual(mediators1, mediators2);
     });
 
     it("expected_number_of_mediators_are_returned_for_mappings_and_mediatedItem", () => {
         const mediatedItem: createjs.Container = new createjs.Container();
-        const mapping1: MediatorMapping = new MediatorMapping(createTypeFilter([createjs.Container]), ViewInjectedMediator);
-        const mapping2: MediatorMapping = new MediatorMapping(createTypeFilter([createjs.DisplayObject]), ViewInjectedAsRequestedMediator);
-        const mediators: any = factory.createMediators(mediatedItem, createjs.Container, [mapping1, mapping2]);
+        const mapping1: MediatorMapping = new MediatorMapping(
+            createTypeFilter([createjs.Container]),
+            ViewInjectedMediator
+        );
+        const mapping2: MediatorMapping = new MediatorMapping(
+            createTypeFilter([createjs.DisplayObject]),
+            ViewInjectedAsRequestedMediator
+        );
+        const mediators: any = factory.createMediators(mediatedItem, createjs.Container, [
+            mapping1,
+            mapping2
+        ]);
         assert.equal(mediators.length, 2);
     });
 
     it("getMediator", () => {
         const mediatedItem: createjs.Container = new createjs.Container();
-        const mapping: IMediatorMapping = new MediatorMapping(createTypeFilter([createjs.Container]), CallbackMediator);
+        const mapping: IMediatorMapping = new MediatorMapping(
+            createTypeFilter([createjs.Container]),
+            CallbackMediator
+        );
         factory.createMediators(mediatedItem, createjs.Container, [mapping]);
         assert.isNotNull(factory.getMediator(mediatedItem, mapping));
     });
 
     it("removeMediator", () => {
         const mediatedItem: createjs.Container = new createjs.Container();
-        const mapping: IMediatorMapping = new MediatorMapping(createTypeFilter([createjs.Container]), CallbackMediator);
+        const mapping: IMediatorMapping = new MediatorMapping(
+            createTypeFilter([createjs.Container]),
+            CallbackMediator
+        );
         factory.createMediators(mediatedItem, createjs.Container, [mapping]);
         factory.removeMediators(mediatedItem);
         assert.isNull(factory.getMediator(mediatedItem, mapping));
@@ -185,7 +257,10 @@ describe("MediatorFactory", () => {
 
     it("creating_mediator_gives_mediator_to_mediator_manager", () => {
         const mediatedItem: createjs.Container = new createjs.Container();
-        const mapping: IMediatorMapping = new MediatorMapping(createTypeFilter([createjs.Container]), CallbackMediator);
+        const mapping: IMediatorMapping = new MediatorMapping(
+            createTypeFilter([createjs.Container]),
+            CallbackMediator
+        );
         manager = new MediatorManager(factory);
         let managerMock = sinon.mock(manager);
         managerMock.expects("addMediator").once();
@@ -198,7 +273,10 @@ describe("MediatorFactory", () => {
 
     it("removeMediator_removes_mediator_from_manager", () => {
         const mediatedItem: createjs.Container = new createjs.Container();
-        const mapping: IMediatorMapping = new MediatorMapping(createTypeFilter([createjs.Container]), CallbackMediator);
+        const mapping: IMediatorMapping = new MediatorMapping(
+            createTypeFilter([createjs.Container]),
+            CallbackMediator
+        );
         manager = new MediatorManager(factory);
         let managerMock = sinon.mock(manager);
         managerMock.expects("removeMediator").once();
@@ -213,8 +291,14 @@ describe("MediatorFactory", () => {
     it("removeAllMediators_removes_all_mediators_from_manager", () => {
         const mediatedItem1: createjs.Container = new createjs.Container();
         const mediatedItem2: createjs.Container = new createjs.Container();
-        const mapping1: IMediatorMapping = new MediatorMapping(createTypeFilter([createjs.Container]), CallbackMediator);
-        const mapping2: IMediatorMapping = new MediatorMapping(createTypeFilter([createjs.DisplayObject]), ViewInjectedAsRequestedMediator);
+        const mapping1: IMediatorMapping = new MediatorMapping(
+            createTypeFilter([createjs.Container]),
+            CallbackMediator
+        );
+        const mapping2: IMediatorMapping = new MediatorMapping(
+            createTypeFilter([createjs.DisplayObject]),
+            ViewInjectedAsRequestedMediator
+        );
         manager = new MediatorManager(factory);
         let managerMock = sinon.mock(manager);
         managerMock.expects("removeMediator").exactly(4);

@@ -71,14 +71,20 @@ describe("MediatorMap", () => {
     });
 
     it("unmapMatcher_returns_mapper", () => {
-        const mapper: MediatorMapper = <MediatorMapper>mediatorMap.mapMatcher(new TypeMatcher().allOf(createjs.Container));
-        const unmappedMapper: MediatorMapper = <MediatorMapper>mediatorMap.unmapMatcher(new TypeMatcher().allOf(createjs.Container));
+        const mapper: MediatorMapper = <MediatorMapper>(
+            mediatorMap.mapMatcher(new TypeMatcher().allOf(createjs.Container))
+        );
+        const unmappedMapper: MediatorMapper = <MediatorMapper>(
+            mediatorMap.unmapMatcher(new TypeMatcher().allOf(createjs.Container))
+        );
         assert.equal(unmappedMapper, mapper);
     });
 
     it("unmap_returns_mapper", () => {
         const mapper: MediatorMapper = <MediatorMapper>mediatorMap.map(createjs.Container);
-        const unmappedMapper: MediatorMapper = <MediatorMapper>mediatorMap.unmap(createjs.Container);
+        const unmappedMapper: MediatorMapper = <MediatorMapper>(
+            mediatorMap.unmap(createjs.Container)
+        );
         assert.equal(unmappedMapper, mapper);
     });
 

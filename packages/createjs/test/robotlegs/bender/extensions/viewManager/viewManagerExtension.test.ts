@@ -38,7 +38,7 @@ describe("ViewManagerExtension", () => {
     it("viewManager is mapped into injector", () => {
         let viewManager: IViewManager = null;
         context.install(ViewManagerExtension);
-        context.whenInitializing(function(): void {
+        context.whenInitializing(function (): void {
             viewManager = context.injector.get<IViewManager>(IViewManager);
         });
         context.initialize();

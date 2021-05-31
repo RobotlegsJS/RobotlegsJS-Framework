@@ -23,7 +23,10 @@ export class MediatorMapper implements IMediatorMapper, IMediatorUnmapper {
     /* Private Properties                                                         */
     /*============================================================================*/
 
-    private _mappings: Map<IClass<any>, IMediatorMapping> = new Map<IClass<any>, IMediatorMapping>();
+    private _mappings: Map<IClass<any>, IMediatorMapping> = new Map<
+        IClass<any>,
+        IMediatorMapping
+    >();
 
     private _typeFilter: ITypeFilter;
 
