@@ -64,10 +64,7 @@ export class SignalCommandTrigger implements ICommandTrigger {
      */
     public activate(): void {
         if (!this._injector.isBound(this._signalClass)) {
-            this._injector
-                .bind(this._signalClass)
-                .to(this._signalClass)
-                .inSingletonScope();
+            this._injector.bind(this._signalClass).to(this._signalClass).inSingletonScope();
         }
         this._signal = this._injector.get<Phaser.Signal>(this._signalClass);
         this._signal.add(this.routePayloadToCommands, this);
@@ -91,7 +88,7 @@ export class SignalCommandTrigger implements ICommandTrigger {
     /*============================================================================*/
 
     private routePayloadToCommands = (...valueObjects: any[]): void => {
-        let valueClasses: any[] = valueObjects.map(obj => obj.constructor);
+        let valueClasses: any[] = valueObjects.map((obj) => obj.constructor);
         let payload: CommandPayload = new CommandPayload(valueObjects, valueClasses);
         this._executor.executeCommands(this._mappings.getList(), payload);
     };
