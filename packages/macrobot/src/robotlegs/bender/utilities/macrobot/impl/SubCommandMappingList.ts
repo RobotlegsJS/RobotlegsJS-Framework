@@ -12,7 +12,10 @@ import { ISubCommandMappingList } from "../dsl/ISubCommandMappingList";
 
 export class SubCommandMappingList implements ISubCommandMappingList {
     private _mappings: ISubCommandMapping[] = [];
-    private _mappingsByCommand: Map<IClass<ICommand>, ISubCommandMapping[]> = new Map<IClass<ICommand>, ISubCommandMapping[]>();
+    private _mappingsByCommand: Map<IClass<ICommand>, ISubCommandMapping[]> = new Map<
+        IClass<ICommand>,
+        ISubCommandMapping[]
+    >();
 
     public getList(): ISubCommandMapping[] {
         return this._mappings.concat();
@@ -28,7 +31,9 @@ export class SubCommandMappingList implements ISubCommandMappingList {
 
     public removeMappingsFor(commandClass: IClass<ICommand>): void {
         if (this._mappingsByCommand.has(commandClass)) {
-            let subCommandList: ISubCommandMapping[] = this._mappingsByCommand.get(commandClass).concat();
+            let subCommandList: ISubCommandMapping[] = this._mappingsByCommand
+                .get(commandClass)
+                .concat();
             while (subCommandList.length > 0) {
                 this.deleteMapping(subCommandList.pop());
             }
@@ -61,7 +66,9 @@ export class SubCommandMappingList implements ISubCommandMappingList {
 
     private deleteMapping(mapping: ISubCommandMapping): void {
         if (this._mappingsByCommand.has(mapping.commandClass)) {
-            let subCommandList: ISubCommandMapping[] = this._mappingsByCommand.get(mapping.commandClass);
+            let subCommandList: ISubCommandMapping[] = this._mappingsByCommand.get(
+                mapping.commandClass
+            );
 
             // Ensure that duplicates are removed
             subCommandList.concat().forEach((m: ISubCommandMapping) => {

@@ -102,10 +102,13 @@ export abstract class AbstractMacro extends AsyncCommand implements IMacro {
         this.unmapMacroPayload(this._macroPayload);
 
         if (command) {
-            let isAsync: boolean = command.constructor.prototype.registerCompleteCallback !== undefined;
+            let isAsync: boolean =
+                command.constructor.prototype.registerCompleteCallback !== undefined;
 
             if (isAsync) {
-                (<IAsyncCommand>command).registerCompleteCallback(this.commandCompleteHandler.bind(this));
+                (<IAsyncCommand>command).registerCompleteCallback(
+                    this.commandCompleteHandler.bind(this)
+                );
             }
 
             if (payloads.length > 0) {
@@ -137,17 +140,19 @@ export abstract class AbstractMacro extends AsyncCommand implements IMacro {
     }
 
     protected mapPayloads(payloads: ISubCommandPayload<any>[]): void {
-        this._commandPayloadsModule = new ContainerModule((bind: interfaces.Bind, unbind: interfaces.Unbind) => {
-            payloads.forEach((payload: ISubCommandPayload<any>) => {
-                if (payload.name.length > 0) {
-                    bind(payload.type)
-                        .toConstantValue(payload.data)
-                        .whenTargetNamed(payload.name);
-                } else {
-                    bind(payload.type).toConstantValue(payload.data);
-                }
-            });
-        });
+        this._commandPayloadsModule = new ContainerModule(
+            (bind: interfaces.Bind, unbind: interfaces.Unbind) => {
+                payloads.forEach((payload: ISubCommandPayload<any>) => {
+                    if (payload.name.length > 0) {
+                        bind(payload.type)
+                            .toConstantValue(payload.data)
+                            .whenTargetNamed(payload.name);
+                    } else {
+                        bind(payload.type).toConstantValue(payload.data);
+                    }
+                });
+            }
+        );
         this._injector.load(this._commandPayloadsModule);
     }
 

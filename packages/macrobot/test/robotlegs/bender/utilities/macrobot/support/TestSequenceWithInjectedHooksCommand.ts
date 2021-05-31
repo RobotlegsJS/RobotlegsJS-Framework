@@ -15,14 +15,8 @@ import { ReportCommandHook } from "./ReportCommandHook";
 @injectable()
 export class TestSequenceWithInjectedHooksCommand extends SequenceMacro {
     public prepare(): void {
-        this.add(ReportStringCommand)
-            .withPayloads("Command 1")
-            .withHooks(ReportCommandHook);
-        this.add(ReportStringCommand)
-            .withPayloads("Command 2")
-            .withHooks(ReportCommandHook);
-        this.add(ReportStringCommand)
-            .withPayloads("Command 3")
-            .withHooks(ReportCommandHook);
+        this.add(ReportStringCommand).withPayloads("Command 1").withHooks(ReportCommandHook);
+        this.add(ReportStringCommand).withPayloads("Command 2").withHooks(ReportCommandHook);
+        this.add(ReportStringCommand).withPayloads("Command 3").withHooks(ReportCommandHook);
     }
 }
