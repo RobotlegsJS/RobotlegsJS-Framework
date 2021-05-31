@@ -34,8 +34,18 @@ describe("EventCommandTrigger", () => {
     let eventDispatcher: EventDispatcher;
     let eventCommandTrigger: EventCommandTrigger;
 
-    function createTrigger(eventType: string, eventClass?: IClass<IEvent>, processors?: any[]): void {
-        eventCommandTrigger = new EventCommandTrigger(context.injector, eventDispatcher, eventType, eventClass, processors);
+    function createTrigger(
+        eventType: string,
+        eventClass?: IClass<IEvent>,
+        processors?: any[]
+    ): void {
+        eventCommandTrigger = new EventCommandTrigger(
+            context.injector,
+            eventDispatcher,
+            eventType,
+            eventClass,
+            processors
+        );
         context.initialize();
     }
 
@@ -62,10 +72,7 @@ describe("EventCommandTrigger", () => {
         let eventDispatcherMock = sinon.mock(eventDispatcher);
 
         // Expects that console messages are called
-        eventDispatcherMock
-            .expects("addEventListener")
-            .withArgs("added")
-            .once();
+        eventDispatcherMock.expects("addEventListener").withArgs("added").once();
         eventCommandTrigger.activate();
 
         // Verify if addEventListener is called by trigger
@@ -79,10 +86,7 @@ describe("EventCommandTrigger", () => {
         let eventDispatcherMock = sinon.mock(eventDispatcher);
 
         // Expects that console messages are called
-        eventDispatcherMock
-            .expects("removeEventListener")
-            .withArgs("added")
-            .once();
+        eventDispatcherMock.expects("removeEventListener").withArgs("added").once();
         eventCommandTrigger.deactivate();
 
         // Verify if addEventListener is called by trigger

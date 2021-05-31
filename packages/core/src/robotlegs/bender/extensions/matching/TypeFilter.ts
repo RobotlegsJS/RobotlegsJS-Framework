@@ -94,7 +94,10 @@ export class TypeFilter implements ITypeFilter {
             }
         }
 
-        if (this._anyOfTypes.length === 0 && (this._allOfTypes.length > 0 || this._noneOfTypes.length > 0)) {
+        if (
+            this._anyOfTypes.length === 0 &&
+            (this._allOfTypes.length > 0 || this._noneOfTypes.length > 0)
+        ) {
             return true;
         }
 

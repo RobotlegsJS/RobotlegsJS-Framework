@@ -28,18 +28,24 @@ describe("ObjectProcessor", () => {
     it("handler handles object", () => {
         let expected: TestObject = new TestObject("TestObject");
         let actual: TestObject = null;
-        objectProcessor.addObjectHandler(instanceOfType(TestObject), function(object: TestObject): void {
-            actual = object;
-        });
+        objectProcessor.addObjectHandler(
+            instanceOfType(TestObject),
+            function (object: TestObject): void {
+                actual = object;
+            }
+        );
         objectProcessor.processObject(expected);
         assert.equal(actual, expected);
     });
 
     it("handler does not handle wrong object", () => {
         let actual: TestObject = null;
-        objectProcessor.addObjectHandler(instanceOfType(TestObject), function(object: TestObject): void {
-            actual = object;
-        });
+        objectProcessor.addObjectHandler(
+            instanceOfType(TestObject),
+            function (object: TestObject): void {
+                actual = object;
+            }
+        );
         objectProcessor.processObject({});
         assert.isNull(actual);
     });
@@ -47,15 +53,24 @@ describe("ObjectProcessor", () => {
     it("handlers handle object", () => {
         let expected: string[] = ["handler1", "handler2", "handler3"];
         let actual: string[] = [];
-        objectProcessor.addObjectHandler(instanceOfType(TestObject), function(object: TestObject): void {
-            actual.push("handler1");
-        });
-        objectProcessor.addObjectHandler(instanceOfType(TestObject), function(object: TestObject): void {
-            actual.push("handler2");
-        });
-        objectProcessor.addObjectHandler(instanceOfType(TestObject), function(object: TestObject): void {
-            actual.push("handler3");
-        });
+        objectProcessor.addObjectHandler(
+            instanceOfType(TestObject),
+            function (object: TestObject): void {
+                actual.push("handler1");
+            }
+        );
+        objectProcessor.addObjectHandler(
+            instanceOfType(TestObject),
+            function (object: TestObject): void {
+                actual.push("handler2");
+            }
+        );
+        objectProcessor.addObjectHandler(
+            instanceOfType(TestObject),
+            function (object: TestObject): void {
+                actual.push("handler3");
+            }
+        );
         objectProcessor.processObject(new TestObject("TestObject"));
         assert.deepEqual(actual, expected);
     });
@@ -63,15 +78,24 @@ describe("ObjectProcessor", () => {
     it("remove all handlers", () => {
         let expected: string[] = [];
         let actual: string[] = [];
-        objectProcessor.addObjectHandler(instanceOfType(TestObject), function(object: TestObject): void {
-            actual.push("Handler should not fire after call to removeAllHandlers.");
-        });
-        objectProcessor.addObjectHandler(instanceOfType(TestObject), function(object: TestObject): void {
-            actual.push("Handler should not fire after call to removeAllHandlers.");
-        });
-        objectProcessor.addObjectHandler(instanceOfType(TestObject), function(object: TestObject): void {
-            actual.push("Handler should not fire after call to removeAllHandlers.");
-        });
+        objectProcessor.addObjectHandler(
+            instanceOfType(TestObject),
+            function (object: TestObject): void {
+                actual.push("Handler should not fire after call to removeAllHandlers.");
+            }
+        );
+        objectProcessor.addObjectHandler(
+            instanceOfType(TestObject),
+            function (object: TestObject): void {
+                actual.push("Handler should not fire after call to removeAllHandlers.");
+            }
+        );
+        objectProcessor.addObjectHandler(
+            instanceOfType(TestObject),
+            function (object: TestObject): void {
+                actual.push("Handler should not fire after call to removeAllHandlers.");
+            }
+        );
         objectProcessor.removeAllHandlers();
         objectProcessor.processObject(new TestObject("TestObject"));
         assert.deepEqual(actual, expected);

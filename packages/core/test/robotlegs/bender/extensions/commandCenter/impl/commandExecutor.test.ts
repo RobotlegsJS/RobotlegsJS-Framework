@@ -43,7 +43,9 @@ describe("CommandExecutor", () => {
     let injector: IInjector;
 
     function addMapping(commandClass: IClass<ICommand> = null): ICommandMapping {
-        let mapping: ICommandMapping = new CommandMapping(commandClass || ClassReportingCallbackCommand);
+        let mapping: ICommandMapping = new CommandMapping(
+            commandClass || ClassReportingCallbackCommand
+        );
         mappings.push(mapping);
         return mapping;
     }
@@ -62,7 +64,11 @@ describe("CommandExecutor", () => {
         reported.push(item);
     }
 
-    function resultReporter(result: any, command: IClass<ICommand>, mapping: ICommandMapping): void {
+    function resultReporter(
+        result: any,
+        command: IClass<ICommand>,
+        mapping: ICommandMapping
+    ): void {
         reported.push(result);
         reported.push(mapping);
     }
@@ -112,7 +118,11 @@ describe("CommandExecutor", () => {
     });
 
     it("hooks are called", () => {
-        addMapping(NullCommand).addHooks(ClassReportingCallbackHook, ClassReportingCallbackHook, ClassReportingCallbackHook);
+        addMapping(NullCommand).addHooks(
+            ClassReportingCallbackHook,
+            ClassReportingCallbackHook,
+            ClassReportingCallbackHook
+        );
         executeCommands();
         assert.equal(reported.length, 3);
     });
@@ -122,13 +132,13 @@ describe("CommandExecutor", () => {
         let injectedCommand: SelfReportingCallbackCommand = null;
         injector
             .bind("Function")
-            .toConstantValue(function(command: SelfReportingCallbackCommand): void {
+            .toConstantValue(function (command: SelfReportingCallbackCommand): void {
                 executedCommand = command;
             })
             .whenTargetNamed("executeCallback");
         injector
             .bind("Function")
-            .toConstantValue(function(hook: SelfReportingCallbackHook): void {
+            .toConstantValue(function (hook: SelfReportingCallbackHook): void {
                 injectedCommand = hook.command;
             })
             .whenTargetNamed("hookCallback");
@@ -162,11 +172,13 @@ describe("CommandExecutor", () => {
     });
 
     it("execution sequence is guard hook command", () => {
-        addMapping()
-            .addGuards(ClassReportingCallbackGuard)
-            .addHooks(ClassReportingCallbackHook);
+        addMapping().addGuards(ClassReportingCallbackGuard).addHooks(ClassReportingCallbackHook);
         executeCommands();
-        assert.deepEqual(reported, [ClassReportingCallbackGuard, ClassReportingCallbackHook, ClassReportingCallbackCommand]);
+        assert.deepEqual(reported, [
+            ClassReportingCallbackGuard,
+            ClassReportingCallbackHook,
+            ClassReportingCallbackCommand
+        ]);
     });
 
     it("allowed commands get executed after denied command", () => {
@@ -210,7 +222,11 @@ describe("CommandExecutor", () => {
             let payload: CommandPayload = new CommandPayload(["message", 1], [String, Number]);
             executeCommands(payload);
         }
-        assert.throws(payloadInjectionDisabledThrowsError, Error, "No matching bindings found for serviceIdentifier: String");
+        assert.throws(
+            payloadInjectionDisabledThrowsError,
+            Error,
+            "No matching bindings found for serviceIdentifier: String"
+        );
     });
 
     it("result is handled", () => {

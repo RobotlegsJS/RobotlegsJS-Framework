@@ -110,7 +110,13 @@ export class EventDispatcher implements IEventDispatcher {
      * @version Egret 2.4
      * @platform Web,Native
      */
-    public addEventListener(type: string, listener: Function, thisObject?: any, useCapture?: boolean, priority?: number): void {
+    public addEventListener(
+        type: string,
+        listener: Function,
+        thisObject?: any,
+        useCapture?: boolean,
+        priority?: number
+    ): void {
         this._addListener(type, listener, thisObject, useCapture, priority);
     }
 
@@ -119,7 +125,13 @@ export class EventDispatcher implements IEventDispatcher {
      * @version Egret 2.4
      * @platform Web,Native
      */
-    public once(type: string, listener: Function, thisObject?: any, useCapture?: boolean, priority?: number): void {
+    public once(
+        type: string,
+        listener: Function,
+        thisObject?: any,
+        useCapture?: boolean,
+        priority?: number
+    ): void {
         this._addListener(type, listener, thisObject, useCapture, priority, true);
     }
 
@@ -128,7 +140,12 @@ export class EventDispatcher implements IEventDispatcher {
      * @version Egret 2.4
      * @platform Web,Native
      */
-    public removeEventListener(type: string, listener: Function, thisObject?: any, useCapture?: boolean): void {
+    public removeEventListener(
+        type: string,
+        listener: Function,
+        thisObject?: any,
+        useCapture?: boolean
+    ): void {
         let values = this._eventDispatcher;
         let eventMap: any = this._getEventMap(useCapture);
         let list: IEventBin[] = eventMap[type];
@@ -188,7 +205,12 @@ export class EventDispatcher implements IEventDispatcher {
      * @platform Web,Native
      * @language en_US
      */
-    public dispatchEventWith(type: string, bubbles?: boolean, data?: any, cancelable?: boolean): boolean {
+    public dispatchEventWith(
+        type: string,
+        bubbles?: boolean,
+        data?: any,
+        cancelable?: boolean
+    ): boolean {
         if (bubbles || this.hasEventListener(type)) {
             let event: Event = new Event(type, bubbles, cancelable, data);
             let result = this.dispatchEvent(event);
@@ -319,7 +341,12 @@ export class EventDispatcher implements IEventDispatcher {
         values[Keys.notifyLevel]--;
         while (onceList.length) {
             let eventBin = onceList.pop();
-            eventBin.target.removeEventListener(eventBin.type, eventBin.listener, eventBin.thisObject, eventBin.useCapture);
+            eventBin.target.removeEventListener(
+                eventBin.type,
+                eventBin.listener,
+                eventBin.thisObject,
+                eventBin.useCapture
+            );
         }
         return !event.isDefaultPrevented;
     }

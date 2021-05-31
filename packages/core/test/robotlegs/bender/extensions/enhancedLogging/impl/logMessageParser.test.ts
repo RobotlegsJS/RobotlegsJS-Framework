@@ -49,18 +49,10 @@ describe("LogMessageParser", () => {
 
     it("parseMessage_parse_message_with_parameters", () => {
         const expected: string = "Lets count to ten: 1, 2, 3, 4, 5, 6, 7, 8, 9 and 10!!!";
-        let actual: string = logMessageParser.parseMessage("Lets count to ten: {0}, {1}, {2}, {3}, {4}, {5}, {6}, {7}, {8} and {9}!!!", [
-            1,
-            2,
-            3,
-            4,
-            5,
-            6,
-            7,
-            8,
-            9,
-            10
-        ]);
+        let actual: string = logMessageParser.parseMessage(
+            "Lets count to ten: {0}, {1}, {2}, {3}, {4}, {5}, {6}, {7}, {8} and {9}!!!",
+            [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+        );
 
         assert.equal(actual, expected);
     });

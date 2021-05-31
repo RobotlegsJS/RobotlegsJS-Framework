@@ -74,8 +74,13 @@ describe("TypeFilter", () => {
     });
 
     it("get_descriptor_returns_with_duplicated_elements", () => {
-        let typeFilter: TypeFilter = new TypeFilter([BaseType, BaseType], [BaseType, BaseType], [BaseType, BaseType]);
-        const expected: string = "all of: BaseType,BaseType; any of: BaseType,BaseType; none of: BaseType,BaseType";
+        let typeFilter: TypeFilter = new TypeFilter(
+            [BaseType, BaseType],
+            [BaseType, BaseType],
+            [BaseType, BaseType]
+        );
+        const expected: string =
+            "all of: BaseType,BaseType; any of: BaseType,BaseType; none of: BaseType,BaseType";
         let actual: string = typeFilter.descriptor;
         assert.equal(actual, expected);
     });
@@ -145,7 +150,11 @@ describe("TypeFilter", () => {
     });
 
     it("matches_anyOff_noneOff", () => {
-        let typeFilter: TypeFilter = new TypeFilter([], [String, Function, Number, Boolean], [Error, Function]);
+        let typeFilter: TypeFilter = new TypeFilter(
+            [],
+            [String, Function, Number, Boolean],
+            [Error, Function]
+        );
 
         assert.isTrue(typeFilter.matches(5));
         assert.isTrue(typeFilter.matches(true));

@@ -83,7 +83,9 @@ export interface IContext extends IEventDispatcher {
      * @param extensions Objects or classes implementing IExtension or IBundle
      * @return this
      */
-    install(...extensions: IBundle[] | IClass<IBundle>[] | IExtension[] | IClass<IExtension>[]): IContext;
+    install(
+        ...extensions: IBundle[] | IClass<IBundle>[] | IExtension[] | IClass<IExtension>[]
+    ): IContext;
 
     /**
      * Configures the context with custom configurations

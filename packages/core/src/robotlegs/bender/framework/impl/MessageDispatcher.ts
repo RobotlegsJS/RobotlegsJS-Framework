@@ -69,7 +69,11 @@ export class MessageDispatcher {
      * @param callback The completion callback function
      * @param reverse Should handlers be called in reverse order
      */
-    public dispatchMessage(message: string, callback: Function = null, reverse: boolean = false): void {
+    public dispatchMessage(
+        message: string,
+        callback: Function = null,
+        reverse: boolean = false
+    ): void {
         let handlers: Function[] = this._handlers.get(<any>message);
         if (handlers) {
             handlers = handlers.concat();

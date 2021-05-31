@@ -75,7 +75,10 @@ export class DomEventMapConfig {
         options: boolean | AddEventListenerOptions
     ): boolean {
         return (
-            this._dispatcher === dispatcher && this._eventString === eventString && this._listener === listener && this._options === options
+            this._dispatcher === dispatcher &&
+            this._eventString === eventString &&
+            this._listener === listener &&
+            this._options === options
         );
     }
 }

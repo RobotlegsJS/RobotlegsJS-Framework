@@ -42,7 +42,7 @@ describe("LifecycleTransition", () => {
     });
 
     it("invalid transition does not throw when errorListener is attached", () => {
-        lifecycle.addEventListener(LifecycleEvent.ERROR, function(event: LifecycleEvent): void {});
+        lifecycle.addEventListener(LifecycleEvent.ERROR, function (event: LifecycleEvent): void {});
         transition.fromStates("impossible").enter();
     });
 
@@ -54,7 +54,7 @@ describe("LifecycleTransition", () => {
     it("transitionState is set", () => {
         transition
             .toStates(LifecycleState.INITIALIZING, LifecycleState.ACTIVE)
-            .addBeforeHandler(function(message: any, callback: Function): void {
+            .addBeforeHandler(function (message: any, callback: Function): void {
                 setTimeout(callback, 1);
             })
             .enter();
@@ -63,10 +63,14 @@ describe("LifecycleTransition", () => {
 
     it("lifecycle events are dispatched", () => {
         let actual: string[] = [];
-        let expected: string[] = [LifecycleEvent.PRE_INITIALIZE, LifecycleEvent.INITIALIZE, LifecycleEvent.POST_INITIALIZE];
+        let expected: string[] = [
+            LifecycleEvent.PRE_INITIALIZE,
+            LifecycleEvent.INITIALIZE,
+            LifecycleEvent.POST_INITIALIZE
+        ];
         transition.withEvents(expected[0], expected[1], expected[2]);
         for (const type of expected) {
-            lifecycle.addEventListener(type, function(event: Event): void {
+            lifecycle.addEventListener(type, function (event: Event): void {
                 actual.push(event.type);
             });
         }
@@ -78,13 +82,13 @@ describe("LifecycleTransition", () => {
         let actual: number[] = [];
         let expected: number[] = [3, 2, 1];
         transition.withEvents("preEvent", "event", "postEvent").inReverse();
-        lifecycle.addEventListener("event", function(event: Event): void {
+        lifecycle.addEventListener("event", function (event: Event): void {
             actual.push(1);
         });
-        lifecycle.addEventListener("event", function(event: Event): void {
+        lifecycle.addEventListener("event", function (event: Event): void {
             actual.push(2);
         });
-        lifecycle.addEventListener("event", function(event: Event): void {
+        lifecycle.addEventListener("event", function (event: Event): void {
             actual.push(3);
         });
         transition.enter();
@@ -93,7 +97,7 @@ describe("LifecycleTransition", () => {
 
     it("callback is called", () => {
         let callCount: number = 0;
-        transition.enter(function(): void {
+        transition.enter(function (): void {
             callCount++;
         });
         assert.equal(callCount, 1);
@@ -102,13 +106,13 @@ describe("LifecycleTransition", () => {
     it("beforeHandlers are run", () => {
         let expected: string[] = ["a", "b", "c"];
         let actual: string[] = [];
-        transition.addBeforeHandler(function(): void {
+        transition.addBeforeHandler(function (): void {
             actual.push("a");
         });
-        transition.addBeforeHandler(function(): void {
+        transition.addBeforeHandler(function (): void {
             actual.push("b");
         });
-        transition.addBeforeHandler(function(): void {
+        transition.addBeforeHandler(function (): void {
             actual.push("c");
         });
         transition.enter();
@@ -119,13 +123,13 @@ describe("LifecycleTransition", () => {
         let expected: string[] = ["c", "b", "a"];
         let actual: string[] = [];
         transition.inReverse();
-        transition.addBeforeHandler(function(): void {
+        transition.addBeforeHandler(function (): void {
             actual.push("a");
         });
-        transition.addBeforeHandler(function(): void {
+        transition.addBeforeHandler(function (): void {
             actual.push("b");
         });
-        transition.addBeforeHandler(function(): void {
+        transition.addBeforeHandler(function (): void {
             actual.push("c");
         });
         transition.enter();
@@ -135,7 +139,7 @@ describe("LifecycleTransition", () => {
     it("beforeHandler error throws", () => {
         function beforeHandler(): void {
             transition
-                .addBeforeHandler(function(message: string, callback: Function): void {
+                .addBeforeHandler(function (message: string, callback: Function): void {
                     callback("some error message");
                 })
                 .enter();
@@ -146,12 +150,12 @@ describe("LifecycleTransition", () => {
     it("beforeHandler does not throw when errorListener is attached", () => {
         let expected: Error = new Error("There was a problem");
         let actual: Error = null;
-        lifecycle.addEventListener(LifecycleEvent.ERROR, function(event: LifecycleEvent): void {});
+        lifecycle.addEventListener(LifecycleEvent.ERROR, function (event: LifecycleEvent): void {});
         transition
-            .addBeforeHandler(function(message: string, callback: Function): void {
+            .addBeforeHandler(function (message: string, callback: Function): void {
                 callback(expected);
             })
-            .enter(function(error: Error): void {
+            .enter(function (error: Error): void {
                 actual = error;
             });
         assert.equal(actual, expected);
@@ -159,8 +163,8 @@ describe("LifecycleTransition", () => {
 
     it("invalidTransition is passed to callback when errorListener is attached", () => {
         let actual: any = null;
-        lifecycle.addEventListener(LifecycleEvent.ERROR, function(event: LifecycleEvent): void {});
-        transition.fromStates("impossible").enter(function(error: any): void {
+        lifecycle.addEventListener(LifecycleEvent.ERROR, function (event: LifecycleEvent): void {});
+        transition.fromStates("impossible").enter(function (error: any): void {
             actual = error;
         });
         assert.instanceOf(actual, Error);
@@ -168,11 +172,11 @@ describe("LifecycleTransition", () => {
 
     it("beforeHandlerError reverts state", () => {
         let expected: string = lifecycle.state;
-        lifecycle.addEventListener(LifecycleEvent.ERROR, function(event: LifecycleEvent): void {});
+        lifecycle.addEventListener(LifecycleEvent.ERROR, function (event: LifecycleEvent): void {});
         transition
             .fromStates(LifecycleState.UNINITIALIZED)
             .toStates("startState", "endState")
-            .addBeforeHandler(function(message: string, callback: Function): void {
+            .addBeforeHandler(function (message: string, callback: Function): void {
                 callback("There was a problem");
             })
             .enter();
@@ -183,7 +187,7 @@ describe("LifecycleTransition", () => {
         let callCount: number = 0;
         transition.fromStates(LifecycleState.UNINITIALIZED).toStates("startState", "endState");
         transition.enter();
-        transition.enter(function(): void {
+        transition.enter(function (): void {
             callCount++;
         });
         assert.equal(callCount, 1);
@@ -194,14 +198,14 @@ describe("LifecycleTransition", () => {
         transition
             .fromStates(LifecycleState.UNINITIALIZED)
             .toStates("startState", "endState")
-            .addBeforeHandler(function(message: any, callback: Function): void {
+            .addBeforeHandler(function (message: any, callback: Function): void {
                 setTimeout(callback, 1);
             });
         transition.enter();
-        transition.enter(function(): void {
+        transition.enter(function (): void {
             callCount++;
         });
-        setTimeout(function(): void {
+        setTimeout(function (): void {
             assert.equal(callCount, 1);
             done();
         }, 50);

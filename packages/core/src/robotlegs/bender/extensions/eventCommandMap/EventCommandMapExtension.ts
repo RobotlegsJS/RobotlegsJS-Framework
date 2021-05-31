@@ -23,9 +23,6 @@ export class EventCommandMapExtension implements IExtension {
      * @inheritDoc
      */
     public extend(context: IContext): void {
-        context.injector
-            .bind(IEventCommandMap)
-            .to(EventCommandMap)
-            .inSingletonScope();
+        context.injector.bind(IEventCommandMap).to(EventCommandMap).inSingletonScope();
     }
 }

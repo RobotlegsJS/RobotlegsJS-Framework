@@ -49,7 +49,11 @@ describe("DirectCommandMapper", () => {
         injector = context.injector;
         let sandboxedInjector: IInjector = context.injector.createChild();
         mappingProcessors = [];
-        mappings = new CommandMappingList(new NullCommandTrigger(), mappingProcessors, context.getLogger(this));
+        mappings = new CommandMappingList(
+            new NullCommandTrigger(),
+            mappingProcessors,
+            context.getLogger(this)
+        );
         executor = new CommandExecutor(sandboxedInjector, mappings.removeMapping.bind(mappings));
         return new DirectCommandMapper(executor, mappings, commandClass);
     }

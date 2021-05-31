@@ -19,8 +19,16 @@ import { BaseType } from "./support/BaseType";
 import { ExtendedType } from "./support/ExtendedType";
 
 describe("instanceOfType", () => {
-    let booleanCollection: TypeCollection<Boolean> = new TypeCollection(Boolean, [], [true, false, Math.random() >= 0, Math.random() < 1]);
-    let dateCollection: TypeCollection<Date> = new TypeCollection(Date, [], [new Date(), new Date(2017, 11, 3)]);
+    let booleanCollection: TypeCollection<Boolean> = new TypeCollection(
+        Boolean,
+        [],
+        [true, false, Math.random() >= 0, Math.random() < 1]
+    );
+    let dateCollection: TypeCollection<Date> = new TypeCollection(
+        Date,
+        [],
+        [new Date(), new Date(2017, 11, 3)]
+    );
     let functionCollection: TypeCollection<Function> = new TypeCollection(
         Function,
         [],
@@ -102,7 +110,11 @@ describe("instanceOfType", () => {
     let baseTypeCollection: TypeCollection<BaseType> = new TypeCollection(
         BaseType,
         [ExtendedType],
-        [new BaseType(""), new BaseType("who am I?"), new BaseType("I'm a long long long long string")]
+        [
+            new BaseType(""),
+            new BaseType("who am I?"),
+            new BaseType("I'm a long long long long string")
+        ]
     );
     let extendedTypeCollection: TypeCollection<BaseType> = new TypeCollection(
         ExtendedType,
@@ -113,7 +125,7 @@ describe("instanceOfType", () => {
     it("matches_primitive_type_Boolean", () => {
         let matcher: IMatcher = booleanCollection.matcher;
 
-        booleanCollection.items.forEach(item => {
+        booleanCollection.items.forEach((item) => {
             assert.isTrue(matcher.matches(item));
         });
     });
@@ -121,7 +133,7 @@ describe("instanceOfType", () => {
     it("matches_primitive_type_Date", () => {
         let matcher: IMatcher = dateCollection.matcher;
 
-        dateCollection.items.forEach(item => {
+        dateCollection.items.forEach((item) => {
             assert.isTrue(matcher.matches(item));
         });
     });
@@ -129,7 +141,7 @@ describe("instanceOfType", () => {
     it("matches_primitive_type_Function", () => {
         let matcher: IMatcher = functionCollection.matcher;
 
-        functionCollection.items.forEach(item => {
+        functionCollection.items.forEach((item) => {
             assert.isTrue(matcher.matches(item));
         });
     });
@@ -137,7 +149,7 @@ describe("instanceOfType", () => {
     it("matches_primitive_type_Number", () => {
         let matcher: IMatcher = numberCollection.matcher;
 
-        numberCollection.items.forEach(item => {
+        numberCollection.items.forEach((item) => {
             assert.isTrue(matcher.matches(item));
         });
     });
@@ -145,7 +157,7 @@ describe("instanceOfType", () => {
     it("matches_primitive_type_String", () => {
         let matcher: IMatcher = stringCollection.matcher;
 
-        stringCollection.items.forEach(item => {
+        stringCollection.items.forEach((item) => {
             assert.isTrue(matcher.matches(item));
         });
     });
@@ -153,7 +165,7 @@ describe("instanceOfType", () => {
     it("matches_primitive_type_Symbol", () => {
         let matcher: IMatcher = symbolCollection.matcher;
 
-        symbolCollection.items.forEach(item => {
+        symbolCollection.items.forEach((item) => {
             assert.isTrue(matcher.matches(item));
         });
     });
@@ -161,7 +173,7 @@ describe("instanceOfType", () => {
     it("matches_primitive_type_Object", () => {
         let matcher: IMatcher = objectCollection.matcher;
 
-        objectCollection.items.forEach(item => {
+        objectCollection.items.forEach((item) => {
             assert.isTrue(matcher.matches(item));
         });
     });
@@ -169,7 +181,7 @@ describe("instanceOfType", () => {
     it("matches_primitive_type_Array", () => {
         let matcher: IMatcher = arrayCollection.matcher;
 
-        arrayCollection.items.forEach(item => {
+        arrayCollection.items.forEach((item) => {
             assert.isTrue(matcher.matches(item));
         });
     });
@@ -177,7 +189,7 @@ describe("instanceOfType", () => {
     it("matches_custom_base_type", () => {
         let matcher: IMatcher = baseTypeCollection.matcher;
 
-        baseTypeCollection.items.forEach(item => {
+        baseTypeCollection.items.forEach((item) => {
             assert.isTrue(matcher.matches(item));
         });
     });
@@ -185,12 +197,12 @@ describe("instanceOfType", () => {
     it("matches_custom_extended_type", () => {
         let matcher: IMatcher = extendedTypeCollection.matcher;
 
-        extendedTypeCollection.items.forEach(item => {
+        extendedTypeCollection.items.forEach((item) => {
             assert.isTrue(matcher.matches(item));
         });
     });
 
-    it("stress_match_test", done => {
+    it("stress_match_test", (done) => {
         let collections: TypeCollection<any>[] = [
             arrayCollection,
             baseTypeCollection,

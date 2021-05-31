@@ -31,7 +31,7 @@ describe("Logger", () => {
         let actual: object = null;
         let logger: Logger = new Logger(
             source,
-            new CallbackLogTarget(function(result: LogParams): void {
+            new CallbackLogTarget(function (result: LogParams): void {
                 actual = result.source;
             })
         );
@@ -40,11 +40,17 @@ describe("Logger", () => {
     });
 
     it("level is passed", () => {
-        let expected: number[] = [LogLevel.FATAL, LogLevel.ERROR, LogLevel.WARN, LogLevel.INFO, LogLevel.DEBUG];
+        let expected: number[] = [
+            LogLevel.FATAL,
+            LogLevel.ERROR,
+            LogLevel.WARN,
+            LogLevel.INFO,
+            LogLevel.DEBUG
+        ];
         let actual: number[] = [];
         let logger: Logger = new Logger(
             source,
-            new CallbackLogTarget(function(result: LogParams): void {
+            new CallbackLogTarget(function (result: LogParams): void {
                 actual.push(result.level);
             })
         );
@@ -61,7 +67,7 @@ describe("Logger", () => {
         let actual: string = null;
         let logger: Logger = new Logger(
             source,
-            new CallbackLogTarget(function(result: LogParams): void {
+            new CallbackLogTarget(function (result: LogParams): void {
                 actual = result.message;
             })
         );
@@ -74,7 +80,7 @@ describe("Logger", () => {
         let actual: number[] = null;
         let logger: Logger = new Logger(
             source,
-            new CallbackLogTarget(function(result: LogParams): void {
+            new CallbackLogTarget(function (result: LogParams): void {
                 actual = result.params;
             })
         );

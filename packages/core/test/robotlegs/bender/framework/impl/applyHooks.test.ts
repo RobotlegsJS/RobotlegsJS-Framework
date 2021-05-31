@@ -18,7 +18,7 @@ describe("applyHooks", () => {
     it("function hooks run", () => {
         let callCount: number = 0;
         applyHooks([
-            function(): void {
+            function (): void {
                 callCount++;
             }
         ]);
@@ -30,7 +30,7 @@ describe("applyHooks", () => {
         let injector: RobotlegsInjector = new RobotlegsInjector();
         injector
             .bind("Function")
-            .toConstantValue(function(): void {
+            .toConstantValue(function (): void {
                 callCount++;
             })
             .whenTargetNamed("hookCallback");
@@ -40,7 +40,7 @@ describe("applyHooks", () => {
 
     it("instance hooks run", () => {
         let callCount: number = 0;
-        let hook: CallbackHook = new CallbackHook(function(): void {
+        let hook: CallbackHook = new CallbackHook(function (): void {
             callCount++;
         });
         applyHooks([hook]);

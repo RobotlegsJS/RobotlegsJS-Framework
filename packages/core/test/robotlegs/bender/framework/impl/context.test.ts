@@ -41,7 +41,7 @@ describe("Context", () => {
 
     it("extensions are installed", () => {
         let actual: IContext = null;
-        let extension: IExtension = new CallbackExtension(function(err: any, ctx: IContext): void {
+        let extension: IExtension = new CallbackExtension(function (err: any, ctx: IContext): void {
             actual = ctx;
         });
         context.install(extension);
@@ -50,7 +50,7 @@ describe("Context", () => {
 
     it("configs are installed", () => {
         let installed: boolean = false;
-        let config: IConfig = new CallbackConfig(function(): void {
+        let config: IConfig = new CallbackConfig(function (): void {
             installed = true;
         });
         context.configure(config);
@@ -66,7 +66,7 @@ describe("Context", () => {
     it("detain stores the instance", () => {
         let expected: any = {};
         let actual: any;
-        let handler: Function = function(event: PinEvent): void {
+        let handler: Function = function (event: PinEvent): void {
             actual = event.instance;
         };
         context.addEventListener(PinEvent.DETAIN, handler);
@@ -77,7 +77,7 @@ describe("Context", () => {
     it("release frees up the instance", () => {
         let expected: any = {};
         let actual: any;
-        let handler: Function = function(event: PinEvent): void {
+        let handler: Function = function (event: PinEvent): void {
             actual = event.instance;
         };
         context.addEventListener(PinEvent.RELEASE, handler);
@@ -95,7 +95,7 @@ describe("Context", () => {
     it("addChild logs warning unless child is uninitialized", () => {
         let warning: LogParams = null;
         context.addLogTarget(
-            new CallbackLogTarget(function(log: LogParams): void {
+            new CallbackLogTarget(function (log: LogParams): void {
                 if (log.level === LogLevel.WARN) {
                     warning = log;
                 }
@@ -111,7 +111,7 @@ describe("Context", () => {
     it("addChild logs warning if child parentInjector is already set", () => {
         let warning: LogParams = null;
         context.addLogTarget(
-            new CallbackLogTarget(function(log: LogParams): void {
+            new CallbackLogTarget(function (log: LogParams): void {
                 if (log.level === LogLevel.WARN) {
                     warning = log;
                 }
@@ -127,7 +127,7 @@ describe("Context", () => {
     it("removeChild logs warning if child is NOT a child", () => {
         let warning: LogParams = null;
         context.addLogTarget(
-            new CallbackLogTarget(function(log: LogParams): void {
+            new CallbackLogTarget(function (log: LogParams): void {
                 if (log.level === LogLevel.WARN) {
                     warning = log;
                 }
@@ -168,7 +168,7 @@ describe("Context", () => {
     it("removed child is not removed again when destroyed", () => {
         let warning: LogParams = null;
         context.addLogTarget(
-            new CallbackLogTarget(function(log: LogParams): void {
+            new CallbackLogTarget(function (log: LogParams): void {
                 if (log.level === LogLevel.WARN) {
                     warning = log;
                 }
@@ -213,9 +213,12 @@ describe("Context", () => {
 
     it("lifecycleStateChangeEvent is propagated", () => {
         let called: boolean = false;
-        context.addEventListener(LifecycleEvent.STATE_CHANGE, function(event: LifecycleEvent): void {
-            called = true;
-        });
+        context.addEventListener(
+            LifecycleEvent.STATE_CHANGE,
+            function (event: LifecycleEvent): void {
+                called = true;
+            }
+        );
         context.initialize();
         assert.isTrue(called);
     });

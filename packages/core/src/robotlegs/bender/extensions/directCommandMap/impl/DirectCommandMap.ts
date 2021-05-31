@@ -56,8 +56,15 @@ export class DirectCommandMap implements IDirectCommandMap {
         let sandboxedInjector: IInjector = context.injector.createChild();
         // allow access to this specific instance in the commands
         sandboxedInjector.bind(IDirectCommandMap).toConstantValue(this);
-        this._mappings = new CommandMappingList(new NullCommandTrigger(), this._mappingProcessors, context.getLogger(this));
-        this._executor = new CommandExecutor(sandboxedInjector, this._mappings.removeMapping.bind(this._mappings));
+        this._mappings = new CommandMappingList(
+            new NullCommandTrigger(),
+            this._mappingProcessors,
+            context.getLogger(this)
+        );
+        this._executor = new CommandExecutor(
+            sandboxedInjector,
+            this._mappings.removeMapping.bind(this._mappings)
+        );
     }
 
     /*============================================================================*/

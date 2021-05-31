@@ -35,7 +35,7 @@ describe("EventCommandMapExtension", () => {
     it("eventCommandMap_is_mapped_into_injector", () => {
         let actual: IEventCommandMap = null;
         context.install(EventCommandMapExtension);
-        context.whenInitializing(function(): void {
+        context.whenInitializing(function (): void {
             actual = context.injector.get<IEventCommandMap>(IEventCommandMap);
         });
         context.initialize();

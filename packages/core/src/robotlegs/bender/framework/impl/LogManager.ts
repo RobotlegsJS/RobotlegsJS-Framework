@@ -67,7 +67,13 @@ export class LogManager implements ILogTarget {
     /**
      * @inheritDoc
      */
-    public log(source: any, level: number, timestamp: number, message: string, params?: any[]): void {
+    public log(
+        source: any,
+        level: number,
+        timestamp: number,
+        message: string,
+        params?: any[]
+    ): void {
         if (level > this._logLevel) {
             return;
         }

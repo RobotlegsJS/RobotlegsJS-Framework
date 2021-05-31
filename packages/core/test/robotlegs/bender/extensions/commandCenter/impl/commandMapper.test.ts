@@ -50,10 +50,7 @@ describe("CommandMapper", () => {
 
     it("fromCommand_delegates_to_MappingList", () => {
         let mappingsMock = sinon.mock(mappings);
-        mappingsMock
-            .expects("removeMappingFor")
-            .once()
-            .withArgs(NullCommand);
+        mappingsMock.expects("removeMappingFor").once().withArgs(NullCommand);
         subject.fromCommand(NullCommand);
         mappingsMock.restore();
         mappingsMock.verify();
@@ -71,10 +68,7 @@ describe("CommandMapper", () => {
         subject.toCommand(NullCommand);
         let list: ICommandMapping[] = mappings.getList();
         let mappingMock = sinon.mock(list[0]);
-        mappingMock
-            .expects("setFireOnce")
-            .once()
-            .withArgs(true);
+        mappingMock.expects("setFireOnce").once().withArgs(true);
         subject.once();
         mappingMock.restore();
         mappingMock.verify();
@@ -84,10 +78,7 @@ describe("CommandMapper", () => {
         subject.toCommand(NullCommand);
         let list: ICommandMapping[] = mappings.getList();
         let mappingMock = sinon.mock(list[0]);
-        mappingMock
-            .expects("setFireOnce")
-            .once()
-            .withArgs(true);
+        mappingMock.expects("setFireOnce").once().withArgs(true);
         subject.once(true);
         mappingMock.restore();
         mappingMock.verify();
@@ -97,10 +88,7 @@ describe("CommandMapper", () => {
         subject.toCommand(NullCommand);
         let list: ICommandMapping[] = mappings.getList();
         let mappingMock = sinon.mock(list[0]);
-        mappingMock
-            .expects("setFireOnce")
-            .once()
-            .withArgs(false);
+        mappingMock.expects("setFireOnce").once().withArgs(false);
         subject.once(false);
         mappingMock.restore();
         mappingMock.verify();
@@ -110,10 +98,7 @@ describe("CommandMapper", () => {
         subject.toCommand(NullCommand);
         let list: ICommandMapping[] = mappings.getList();
         let mappingMock = sinon.mock(list[0]);
-        mappingMock
-            .expects("addGuards")
-            .once()
-            .withArgs(HappyGuard, GrumpyGuard);
+        mappingMock.expects("addGuards").once().withArgs(HappyGuard, GrumpyGuard);
         subject.withGuards(HappyGuard, GrumpyGuard);
         mappingMock.restore();
         mappingMock.verify();
@@ -123,10 +108,7 @@ describe("CommandMapper", () => {
         subject.toCommand(NullCommand);
         let list: ICommandMapping[] = mappings.getList();
         let mappingMock = sinon.mock(list[0]);
-        mappingMock
-            .expects("addHooks")
-            .once()
-            .withArgs(CallbackHook);
+        mappingMock.expects("addHooks").once().withArgs(CallbackHook);
         subject.withHooks(CallbackHook);
         mappingMock.restore();
         mappingMock.verify();
@@ -136,10 +118,7 @@ describe("CommandMapper", () => {
         subject.toCommand(NullCommand);
         let list: ICommandMapping[] = mappings.getList();
         let mappingMock = sinon.mock(list[0]);
-        mappingMock
-            .expects("setPayloadInjectionEnabled")
-            .once()
-            .withArgs(true);
+        mappingMock.expects("setPayloadInjectionEnabled").once().withArgs(true);
         subject.withPayloadInjection();
         mappingMock.restore();
         mappingMock.verify();
@@ -149,10 +128,7 @@ describe("CommandMapper", () => {
         subject.toCommand(NullCommand);
         let list: ICommandMapping[] = mappings.getList();
         let mappingMock = sinon.mock(list[0]);
-        mappingMock
-            .expects("setPayloadInjectionEnabled")
-            .once()
-            .withArgs(true);
+        mappingMock.expects("setPayloadInjectionEnabled").once().withArgs(true);
         subject.withPayloadInjection(true);
         mappingMock.restore();
         mappingMock.verify();
@@ -162,10 +138,7 @@ describe("CommandMapper", () => {
         subject.toCommand(NullCommand);
         let list: ICommandMapping[] = mappings.getList();
         let mappingMock = sinon.mock(list[0]);
-        mappingMock
-            .expects("setPayloadInjectionEnabled")
-            .once()
-            .withArgs(false);
+        mappingMock.expects("setPayloadInjectionEnabled").once().withArgs(false);
         subject.withPayloadInjection(false);
         mappingMock.restore();
         mappingMock.verify();

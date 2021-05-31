@@ -24,10 +24,7 @@ export class CascadingCommand implements ICommand {
     public eventCommandMap: IEventCommandMap;
 
     public execute(): void {
-        this.eventCommandMap
-            .map(CascadingCommand.EVENT_TYPE)
-            .toCommand(NullCommand)
-            .once();
+        this.eventCommandMap.map(CascadingCommand.EVENT_TYPE).toCommand(NullCommand).once();
 
         this.dispatcher.dispatchEvent(new Event(CascadingCommand.EVENT_TYPE));
     }
