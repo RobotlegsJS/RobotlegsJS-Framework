@@ -31,10 +31,7 @@ export class SignalCommandMapExtension implements IExtension {
     /*============================================================================*/
 
     public extend(context: IContext): void {
-        context.injector
-            .bind(ISignalCommandMap)
-            .to(SignalCommandMap)
-            .inSingletonScope();
+        context.injector.bind(ISignalCommandMap).to(SignalCommandMap).inSingletonScope();
     }
 
     public toString(): string {

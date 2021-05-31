@@ -45,7 +45,11 @@ describe("SignalCommandMap", () => {
         reportedExecutions.push(itemClass);
     }
 
-    function commandExecutionCount(totalEvents: number = 1, oneshot: boolean = false, ...valueObjects: any[]): number {
+    function commandExecutionCount(
+        totalEvents: number = 1,
+        oneshot: boolean = false,
+        ...valueObjects: any[]
+    ): number {
         let executeCount: number = 0;
 
         injector
@@ -55,10 +59,7 @@ describe("SignalCommandMap", () => {
             })
             .whenTargetNamed("executeCallback");
 
-        signalCommandMap
-            .map(SupportSignal)
-            .toCommand(ReportingCommand)
-            .once(oneshot);
+        signalCommandMap.map(SupportSignal).toCommand(ReportingCommand).once(oneshot);
 
         let signal: SupportSignal = injector.get<SupportSignal>(SupportSignal);
 
@@ -90,10 +91,7 @@ describe("SignalCommandMap", () => {
             })
             .whenTargetNamed("hookCallback");
 
-        signalCommandMap
-            .map(SupportSignal)
-            .toCommand(ReportingCommand)
-            .withHooks(hooks);
+        signalCommandMap.map(SupportSignal).toCommand(ReportingCommand).withHooks(hooks);
         let signal: SupportSignal = injector.get(SupportSignal);
         signal.dispatch();
         return callCount;
@@ -109,10 +107,7 @@ describe("SignalCommandMap", () => {
             })
             .whenTargetNamed("executeCallback");
 
-        signalCommandMap
-            .map(SupportSignal)
-            .toCommand(ReportingCommand)
-            .withGuards(guards);
+        signalCommandMap.map(SupportSignal).toCommand(ReportingCommand).withGuards(guards);
 
         let signal: SupportSignal = injector.get(SupportSignal);
 
@@ -178,10 +173,7 @@ describe("SignalCommandMap", () => {
     });
 
     it("test_only_commands_mapped_to_dispatching_signal_are_executed", () => {
-        injector
-            .bind("Function")
-            .toFunction(reportingFunction)
-            .whenTargetNamed("executeCallback");
+        injector.bind("Function").toFunction(reportingFunction).whenTargetNamed("executeCallback");
 
         signalCommandMap.map(SupportSignal).toCommand(ReportingCommand);
 
@@ -216,10 +208,7 @@ describe("SignalCommandMap", () => {
     });
 
     it("test_oneshot_mappings_should_not_bork_stacked_mappings", () => {
-        injector
-            .bind("Function")
-            .toFunction(reportingFunction)
-            .whenTargetNamed("executeCallback");
+        injector.bind("Function").toFunction(reportingFunction).whenTargetNamed("executeCallback");
 
         signalCommandMap.map(SupportSignal).toCommand(ReportingCommand);
         signalCommandMap.map(SupportSignal).toCommand(ReportingCommand2);
@@ -234,10 +223,7 @@ describe("SignalCommandMap", () => {
     it("test_one_shot_command_should_not_cause_infinite_loop_when_dispatching_to_self", () => {
         let executeCount: number = 0;
 
-        injector
-            .bind(SupportSignal)
-            .toSelf()
-            .inSingletonScope();
+        injector.bind(SupportSignal).toSelf().inSingletonScope();
 
         let signal: SupportSignal = injector.get(SupportSignal);
 
@@ -249,10 +235,7 @@ describe("SignalCommandMap", () => {
             })
             .whenTargetNamed("executeCallback");
 
-        signalCommandMap
-            .map(SupportSignal)
-            .toCommand(ReportingCommand)
-            .once();
+        signalCommandMap.map(SupportSignal).toCommand(ReportingCommand).once();
 
         signal.dispatch();
 
@@ -284,14 +267,15 @@ describe("SignalCommandMap", () => {
 
         signal1.dispatch();
 
-        assert.deepEqual(reportedExecutions, [ReportingCommand, ReportingCommand2, ReportingCommand3]);
+        assert.deepEqual(reportedExecutions, [
+            ReportingCommand,
+            ReportingCommand2,
+            ReportingCommand3
+        ]);
     });
 
     it("test_commands_are_executed_in_order", () => {
-        injector
-            .bind("Function")
-            .toFunction(reportingFunction)
-            .whenTargetNamed("executeCallback");
+        injector.bind("Function").toFunction(reportingFunction).whenTargetNamed("executeCallback");
 
         signalCommandMap.map(SupportSignal).toCommand(ReportingCommand);
         signalCommandMap.map(SupportSignal).toCommand(ReportingCommand2);
@@ -301,7 +285,11 @@ describe("SignalCommandMap", () => {
 
         signal.dispatch();
 
-        assert.deepEqual(reportedExecutions, [ReportingCommand, ReportingCommand2, ReportingCommand3]);
+        assert.deepEqual(reportedExecutions, [
+            ReportingCommand,
+            ReportingCommand2,
+            ReportingCommand3
+        ]);
     });
 
     it("test_hooks_are_called", () => {
@@ -326,10 +314,7 @@ describe("SignalCommandMap", () => {
             })
             .whenTargetNamed("hookCallback");
 
-        signalCommandMap
-            .map(SupportSignal)
-            .toCommand(ReportingCommand)
-            .withHooks(ReportingHook);
+        signalCommandMap.map(SupportSignal).toCommand(ReportingCommand).withHooks(ReportingHook);
 
         let signal: SupportSignal = injector.get(SupportSignal);
 
@@ -418,7 +403,9 @@ describe("SignalCommandMap", () => {
             })
             .whenTargetNamed("executeCallback");
 
-        signalCommandMap.map(StrictPayloadCarryingSignal).toCommand(ExecuteMethodWithParametersCommand);
+        signalCommandMap
+            .map(StrictPayloadCarryingSignal)
+            .toCommand(ExecuteMethodWithParametersCommand);
 
         let payload: Payload = new Payload();
         let signal: StrictPayloadCarryingSignal = injector.get(StrictPayloadCarryingSignal);
@@ -461,10 +448,7 @@ describe("SignalCommandMap", () => {
 
         injector.bind(ISignalCommandMap).toConstantValue(signalCommandMap);
 
-        signalCommandMap
-            .map(SupportSignal)
-            .toCommand(CascadingCommand)
-            .once();
+        signalCommandMap.map(SupportSignal).toCommand(CascadingCommand).once();
         let signal: SupportSignal = injector.get(SupportSignal);
 
         signal.dispatch();
@@ -473,20 +457,11 @@ describe("SignalCommandMap", () => {
     });
 
     it("test_execution_sequence_is_guard_command_guard_command_for_multiple_mappings_to_same_signal", () => {
-        injector
-            .bind("Function")
-            .toFunction(reportingFunction)
-            .whenTargetNamed("executeCallback");
+        injector.bind("Function").toFunction(reportingFunction).whenTargetNamed("executeCallback");
 
-        injector
-            .bind("Function")
-            .toFunction(reportingFunction)
-            .whenTargetNamed("approveCallback");
+        injector.bind("Function").toFunction(reportingFunction).whenTargetNamed("approveCallback");
 
-        signalCommandMap
-            .map(SupportSignal)
-            .toCommand(ReportingCommand)
-            .withGuards(ReportingGuard);
+        signalCommandMap.map(SupportSignal).toCommand(ReportingCommand).withGuards(ReportingGuard);
         signalCommandMap
             .map(SupportSignal)
             .toCommand(ReportingCommand2)
@@ -496,23 +471,19 @@ describe("SignalCommandMap", () => {
 
         signal.dispatch();
 
-        assert.deepEqual(reportedExecutions, [ReportingGuard, ReportingCommand, ReportingGuard2, ReportingCommand2]);
+        assert.deepEqual(reportedExecutions, [
+            ReportingGuard,
+            ReportingCommand,
+            ReportingGuard2,
+            ReportingCommand2
+        ]);
     });
 
     it("test_previously_constructed_command_does_not_slip_through_the_loop", () => {
-        injector
-            .bind("Function")
-            .toFunction(reportingFunction)
-            .whenTargetNamed("executeCallback");
+        injector.bind("Function").toFunction(reportingFunction).whenTargetNamed("executeCallback");
 
-        signalCommandMap
-            .map(SupportSignal)
-            .toCommand(ReportingCommand)
-            .withGuards(HappyGuard);
-        signalCommandMap
-            .map(SupportSignal)
-            .toCommand(ReportingCommand2)
-            .withGuards(GrumpyGuard);
+        signalCommandMap.map(SupportSignal).toCommand(ReportingCommand).withGuards(HappyGuard);
+        signalCommandMap.map(SupportSignal).toCommand(ReportingCommand2).withGuards(GrumpyGuard);
 
         let signal: SupportSignal = injector.get(SupportSignal);
 
@@ -522,15 +493,9 @@ describe("SignalCommandMap", () => {
     });
 
     it("test_command_executes_when_signal_mapped_to_injector_up_front", () => {
-        injector
-            .bind("Function")
-            .toFunction(reportingFunction)
-            .whenTargetNamed("executeCallback");
+        injector.bind("Function").toFunction(reportingFunction).whenTargetNamed("executeCallback");
 
-        injector
-            .bind(SupportSignal)
-            .toSelf()
-            .inSingletonScope();
+        injector.bind(SupportSignal).toSelf().inSingletonScope();
 
         signalCommandMap.map(SupportSignal).toCommand(ReportingCommand);
 

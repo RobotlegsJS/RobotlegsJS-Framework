@@ -142,7 +142,15 @@ describe("SignalCommandTrigger", () => {
     });
 
     it("command_is_triggered_but_do_not_receives_parameters_from_signal_without_value_classes", () => {
-        const parameters: any[] = [true, 999, "I'm a string!", ISignal, { x: 5, y: 5 }, new Date(), [1, 2, 3, 4, 5, 6, 7, 8, 9]];
+        const parameters: any[] = [
+            true,
+            999,
+            "I'm a string!",
+            ISignal,
+            { x: 5, y: 5 },
+            new Date(),
+            [1, 2, 3, 4, 5, 6, 7, 8, 9]
+        ];
         const expected: any[] = [];
         let actual: any[] = [];
 
@@ -164,7 +172,15 @@ describe("SignalCommandTrigger", () => {
     });
 
     it("command_is_triggered_and_receives_parameters_from_signal_with_value_classes", () => {
-        const expected: any[] = [true, 999, "I'm a string!", ISignal, { x: 5, y: 5 }, new Date(), [1, 2, 3, 4, 5, 6, 7, 8, 9]];
+        const expected: any[] = [
+            true,
+            999,
+            "I'm a string!",
+            ISignal,
+            { x: 5, y: 5 },
+            new Date(),
+            [1, 2, 3, 4, 5, 6, 7, 8, 9]
+        ];
         let actual: any[] = [];
 
         let mapper: CommandMapper;
