@@ -8,7 +8,7 @@
   "trailingComma": "none",
   "bracketSpacing": true,
   "arrowParens": "always",
-  "endOfLine": "lf",
+  "endOfLine": "auto",
   "overrides": [
     {
       "files": "*.js",
