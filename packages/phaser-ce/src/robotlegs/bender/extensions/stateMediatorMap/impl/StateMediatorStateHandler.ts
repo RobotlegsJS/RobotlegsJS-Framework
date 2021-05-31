@@ -22,7 +22,10 @@ export class StateMediatorStateHandler implements IStateHandler {
 
     private _mappings: IStateMediatorMapping[] = [];
 
-    private _knownMappings: Map<IClass<any>, IStateMediatorMapping[] | boolean> = new Map<IClass<any>, IStateMediatorMapping[]>();
+    private _knownMappings: Map<IClass<any>, IStateMediatorMapping[] | boolean> = new Map<
+        IClass<any>,
+        IStateMediatorMapping[]
+    >();
 
     private _factory: StateMediatorFactory;
 

@@ -21,7 +21,10 @@ export class StateRegistry extends EventDispatcher {
 
     private _rootBindings: StateManagerBinding[] = [];
     private _bindings: StateManagerBinding[] = [];
-    private _bindingByStateManager: Map<Phaser.StateManager, StateManagerBinding> = new Map<Phaser.StateManager, StateManagerBinding>();
+    private _bindingByStateManager: Map<Phaser.StateManager, StateManagerBinding> = new Map<
+        Phaser.StateManager,
+        StateManagerBinding
+    >();
 
     /*============================================================================*/
     /* Public Properties                                                          */
@@ -105,7 +108,9 @@ export class StateRegistry extends EventDispatcher {
             this.addRootBinding(binding);
         }
 
-        this.dispatchEvent(new StateRegistryEvent(StateRegistryEvent.STATE_MANAGER_ADD, binding.stateManager));
+        this.dispatchEvent(
+            new StateRegistryEvent(StateRegistryEvent.STATE_MANAGER_ADD, binding.stateManager)
+        );
 
         return binding;
     }
@@ -124,18 +129,27 @@ export class StateRegistry extends EventDispatcher {
             this.removeRootBinding(binding);
         }
 
-        this.dispatchEvent(new StateRegistryEvent(StateRegistryEvent.STATE_MANAGER_REMOVE, binding.stateManager));
+        this.dispatchEvent(
+            new StateRegistryEvent(StateRegistryEvent.STATE_MANAGER_REMOVE, binding.stateManager)
+        );
     }
 
     private addRootBinding(binding: StateManagerBinding): void {
         this._rootBindings.push(binding);
-        this.dispatchEvent(new StateRegistryEvent(StateRegistryEvent.ROOT_STATE_MANAGER_ADD, binding.stateManager));
+        this.dispatchEvent(
+            new StateRegistryEvent(StateRegistryEvent.ROOT_STATE_MANAGER_ADD, binding.stateManager)
+        );
     }
 
     private removeRootBinding(binding: StateManagerBinding): void {
         let index: number = this._rootBindings.indexOf(binding);
         this._rootBindings.splice(index, 1);
-        this.dispatchEvent(new StateRegistryEvent(StateRegistryEvent.ROOT_STATE_MANAGER_REMOVE, binding.stateManager));
+        this.dispatchEvent(
+            new StateRegistryEvent(
+                StateRegistryEvent.ROOT_STATE_MANAGER_REMOVE,
+                binding.stateManager
+            )
+        );
     }
 
     private onBindingEmpty(event: StateManagerBindingEvent): void {

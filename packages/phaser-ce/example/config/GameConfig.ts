@@ -25,9 +25,6 @@ export class GameConfig implements IConfig {
     private mapManager(): void {}
 
     private mapModels(): void {
-        this.context.injector
-            .bind(GameModel)
-            .to(GameModel)
-            .inSingletonScope();
+        this.context.injector.bind(GameModel).to(GameModel).inSingletonScope();
     }
 }

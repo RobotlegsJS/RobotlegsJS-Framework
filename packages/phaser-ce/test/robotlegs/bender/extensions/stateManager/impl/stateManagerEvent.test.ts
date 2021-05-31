@@ -22,7 +22,11 @@ describe("StateManagerEvent", () => {
     beforeEach(() => {
         phaserStateManager = new Phaser.StateManager(null);
         handler = new CallbackStateHandler();
-        event = new StateManagerEvent(StateManagerEvent.STATE_MANAGER_ADD, phaserStateManager, handler);
+        event = new StateManagerEvent(
+            StateManagerEvent.STATE_MANAGER_ADD,
+            phaserStateManager,
+            handler
+        );
     });
 
     afterEach(() => {

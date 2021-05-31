@@ -5,7 +5,15 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import { injectable, inject, IClass, IContext, ILogger, ITypeMatcher, TypeMatcher } from "@robotlegsjs/core";
+import {
+    injectable,
+    inject,
+    IClass,
+    IContext,
+    ILogger,
+    ITypeMatcher,
+    TypeMatcher
+} from "@robotlegsjs/core";
 
 import { IStateMediatorMap } from "../api/IStateMediatorMap";
 import { IStateMediatorMapper } from "../dsl/IStateMediatorMapper";
@@ -124,6 +132,10 @@ export class StateMediatorMap implements IStateMediatorMap, IStateHandler {
     /*============================================================================*/
 
     private createMapper(matcher: ITypeMatcher): StateMediatorMapper {
-        return new StateMediatorMapper(matcher.createTypeFilter(), this._stateHandler, this._logger);
+        return new StateMediatorMapper(
+            matcher.createTypeFilter(),
+            this._stateHandler,
+            this._logger
+        );
     }
 }
