@@ -12,7 +12,7 @@
     "lint:src": "eslint -c .eslintrc.js --ext .ts ./src",
     "lint:test": "eslint -c .eslintrc.js --ext .ts ./test",
     "lint": "npm run lint:src && npm run lint:test",
-    "autoformat": "prettier --write --list-different \"{src,static,test,example,definitions}/{**,**/**}.{html,css,js,json,ts}\"",
+    "autoformat": "prettier --config ../../.prettierrc --ignore-path ../../.prettierignore --write --list-different .",
     "clean-up": "rimraf .nyc_output && rimraf coverage && rimraf lib && rimraf lib-test && rimraf dist-test",
     "compile:src": "tsc -d --importHelpers",
     "compile:test": "tsc -p tsconfig.test.json -d --importHelpers",
