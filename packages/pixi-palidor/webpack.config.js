@@ -2,13 +2,17 @@ const webpack = require("webpack");
 const path = require("path");
 const TerserPlugin = require("terser-webpack-plugin");
 
-module.exports = env => {
+module.exports = (env) => {
   if (!env) env = { production: false, karma: false };
 
   let mode = env.production ? "production" : "development";
   let tsconfig = !env.karma ? "tsconfig.json" : "tsconfig.test.json";
   let output = env.production ? "dist" : "dist-test";
-  let filename = env.karma ? "[name].[hash].js" : env.production ? "robotlegs-pixi-palidor.min.js" : "robotlegs-pixi-palidor.js";
+  let filename = env.karma
+    ? "[name].[hash].js"
+    : env.production
+    ? "robotlegs-pixi-palidor.min.js"
+    : "robotlegs-pixi-palidor.js";
 
   return {
     mode: mode,
@@ -34,7 +38,9 @@ module.exports = env => {
           use: [{ loader: "ts-loader", options: { configFile: tsconfig } }]
         },
         {
-          test: env.production /* disable this loader for production builds */ ? /^$/ : /^.*(src).*\.ts$/,
+          test: env.production /* disable this loader for production builds */
+            ? /^$/
+            : /^.*(src).*\.ts$/,
           loader: "istanbul-instrumenter-loader",
           enforce: "post"
         }
