@@ -2,7 +2,7 @@ const webpack = require("webpack");
 const path = require("path");
 const TerserPlugin = require("terser-webpack-plugin");
 
-module.exports = env => {
+module.exports = (env) => {
   if (!env) env = { production: false, karma: false };
 
   let mode = env.production ? "production" : "development";
@@ -38,7 +38,9 @@ module.exports = env => {
           use: [{ loader: "ts-loader", options: { configFile: tsconfig } }]
         },
         {
-          test: env.production /* disable this loader for production builds */ ? /^$/ : /^.*(src).*\.ts$/,
+          test: env.production /* disable this loader for production builds */
+            ? /^$/
+            : /^.*(src).*\.ts$/,
           loader: "istanbul-instrumenter-loader",
           enforce: "post"
         }
