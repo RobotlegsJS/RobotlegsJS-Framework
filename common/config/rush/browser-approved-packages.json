@@ -27,11 +27,7 @@
       "allowedCategories": [ "production" ]
     },
     {
-      "name": "@typescript-eslint/eslint-plugin",
-      "allowedCategories": [ "production" ]
-    },
-    {
-      "name": "@typescript-eslint/parser",
+      "name": "@rushstack/eslint-config",
       "allowedCategories": [ "production" ]
     },
     {
@@ -68,10 +64,6 @@
     },
     {
       "name": "eslint",
-      "allowedCategories": [ "production" ]
-    },
-    {
-      "name": "eslint-config-prettier",
       "allowedCategories": [ "production" ]
     },
     {
@@ -248,14 +240,6 @@
     },
     {
       "name": "tslib",
-      "allowedCategories": [ "production" ]
-    },
-    {
-      "name": "tslint",
-      "allowedCategories": [ "production" ]
-    },
-    {
-      "name": "tslint-config-prettier",
       "allowedCategories": [ "production" ]
     },
     {
