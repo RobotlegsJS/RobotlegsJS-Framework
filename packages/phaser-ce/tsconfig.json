@@ -21,9 +21,7 @@
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": [
-    "./src/**/*.ts"
-  ],
+  "include": ["./src/**/*.ts"],
   "files": [
     "./node_modules/phaser-ce/typescript/phaser.d.ts",
     "./node_modules/phaser-ce/typescript/pixi.d.ts"
