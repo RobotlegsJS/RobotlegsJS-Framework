@@ -82,14 +82,14 @@ export class EventCommandTrigger implements ICommandTrigger {
      * @inheritDoc
      */
     public activate(): void {
-        this._dispatcher.addEventListener(this._type, this.eventHandler, this);
+        this._dispatcher.addEventListener(this._type, this._eventHandler, this);
     }
 
     /**
      * @inheritDoc
      */
     public deactivate(): void {
-        this._dispatcher.removeEventListener(this._type, this.eventHandler, this);
+        this._dispatcher.removeEventListener(this._type, this._eventHandler, this);
     }
 
     public toString(): string {
@@ -102,7 +102,7 @@ export class EventCommandTrigger implements ICommandTrigger {
     /* Private Functions                                                          */
     /*============================================================================*/
 
-    private eventHandler(event: Event): void {
+    private _eventHandler(event: Event): void {
         let eventConstructor: IClass<IEvent> = <IClass<IEvent>>event.constructor;
         let payloadEventClass: IClass<IEvent>;
 

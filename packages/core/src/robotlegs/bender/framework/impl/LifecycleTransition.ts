@@ -155,8 +155,8 @@ export class LifecycleTransition {
         }
 
         // report invalid transition, and exit
-        if (this.invalidTransition()) {
-            this.reportError("Invalid transition", [callback]);
+        if (this._invalidTransition()) {
+            this._reportError("Invalid transition", [callback]);
             return;
         }
 
@@ -169,7 +169,7 @@ export class LifecycleTransition {
         }
 
         // put lifecycle into transition state
-        this.setState(this._transitionState);
+        this._setState(this._transitionState);
 
         // run before handlers
         this._dispatcher.dispatchMessage(
@@ -177,18 +177,18 @@ export class LifecycleTransition {
             (error: any): void => {
                 // revert state, report error, and exit
                 if (error) {
-                    this.setState(initialState);
-                    this.reportError(error, this._callbacks);
+                    this._setState(initialState);
+                    this._reportError(error, this._callbacks);
                     return;
                 }
 
                 // dispatch pre transition and transition events
-                this.dispatch(this._preTransitionEvent);
+                this._dispatch(this._preTransitionEvent);
 
-                this.dispatch(this._transitionEvent);
+                this._dispatch(this._transitionEvent);
 
                 // put lifecycle into final state
-                this.setState(this._finalState);
+                this._setState(this._finalState);
 
                 // process callback queue (dup and trash for safety)
                 let callbacks: any[] = this._callbacks.concat();
@@ -198,7 +198,7 @@ export class LifecycleTransition {
                 });
 
                 // dispatch post transition event
-                this.dispatch(this._postTransitionEvent);
+                this._dispatch(this._postTransitionEvent);
             },
             this._reverse
         );
@@ -208,25 +208,25 @@ export class LifecycleTransition {
     /* Private Functions                                                          */
     /*============================================================================*/
 
-    private invalidTransition(): boolean {
+    private _invalidTransition(): boolean {
         return (
             this._fromStates.length > 0 && this._fromStates.indexOf(this._lifecycle.state) === -1
         );
     }
 
-    private setState(state: string): void {
+    private _setState(state: string): void {
         if (state) {
             this._lifecycle.setCurrentState(state);
         }
     }
 
-    private dispatch(type: string): void {
+    private _dispatch(type: string): void {
         if (type && this._lifecycle.hasEventListener(type)) {
             this._lifecycle.dispatchEvent(new LifecycleEvent(type));
         }
     }
 
-    private reportError(message: any, callbacks?: any[]): void {
+    private _reportError(message: any, callbacks?: any[]): void {
         // turn message into Error
         let error: Error = message instanceof Error ? <Error>message : new Error(message);
 

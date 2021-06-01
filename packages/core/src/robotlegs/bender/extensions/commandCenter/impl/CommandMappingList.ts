@@ -66,7 +66,7 @@ export class CommandMappingList implements ICommandMappingList {
      */
     public getList(): ICommandMapping[] {
         if (!this._sorted) {
-            this.sortMappings();
+            this._sortMappings();
         }
         return this._mappings.concat();
     }
@@ -85,12 +85,12 @@ export class CommandMappingList implements ICommandMappingList {
      */
     public addMapping(mapping: ICommandMapping): void {
         this._sorted = false;
-        this.applyProcessors(mapping);
+        this._applyProcessors(mapping);
         let oldMapping: ICommandMapping = this._mappingsByCommand.get(mapping.commandClass);
         if (oldMapping) {
-            this.overwriteMapping(oldMapping, mapping);
+            this._overwriteMapping(oldMapping, mapping);
         } else {
-            this.storeMapping(mapping);
+            this._storeMapping(mapping);
             if (this._mappings.length === 1) {
                 this._trigger.activate();
             }
@@ -102,7 +102,7 @@ export class CommandMappingList implements ICommandMappingList {
      */
     public removeMapping(mapping: ICommandMapping): void {
         if (this._mappingsByCommand.has(mapping.commandClass)) {
-            this.deleteMapping(mapping);
+            this._deleteMapping(mapping);
             if (this._mappings.length === 0) {
                 this._trigger.deactivate();
             }
@@ -127,7 +127,7 @@ export class CommandMappingList implements ICommandMappingList {
             let list: ICommandMapping[] = this._mappings.concat();
             let length: number = list.length;
             while (length--) {
-                this.deleteMapping(list[length]);
+                this._deleteMapping(list[length]);
             }
             this._trigger.deactivate();
         }
@@ -137,7 +137,7 @@ export class CommandMappingList implements ICommandMappingList {
     /* Private Functions                                                          */
     /*============================================================================*/
 
-    private storeMapping(mapping: ICommandMapping): void {
+    private _storeMapping(mapping: ICommandMapping): void {
         this._mappingsByCommand.set(mapping.commandClass, mapping);
         this._mappings.push(mapping);
         if (this._logger) {
@@ -145,7 +145,7 @@ export class CommandMappingList implements ICommandMappingList {
         }
     }
 
-    private deleteMapping(mapping: ICommandMapping): void {
+    private _deleteMapping(mapping: ICommandMapping): void {
         this._mappingsByCommand.delete(mapping.commandClass);
         this._mappings.splice(this._mappings.indexOf(mapping), 1);
         if (this._logger) {
@@ -153,7 +153,7 @@ export class CommandMappingList implements ICommandMappingList {
         }
     }
 
-    private overwriteMapping(oldMapping: ICommandMapping, newMapping: ICommandMapping): void {
+    private _overwriteMapping(oldMapping: ICommandMapping, newMapping: ICommandMapping): void {
         if (this._logger) {
             this._logger.warn(
                 "{0} already mapped to {1}\n" +
@@ -162,18 +162,18 @@ export class CommandMappingList implements ICommandMappingList {
                 [this._trigger, oldMapping]
             );
         }
-        this.deleteMapping(oldMapping);
-        this.storeMapping(newMapping);
+        this._deleteMapping(oldMapping);
+        this._storeMapping(newMapping);
     }
 
-    private sortMappings(): void {
+    private _sortMappings(): void {
         if (this._compareFunction != null) {
             this._mappings = this._mappings.sort(this._compareFunction);
         }
         this._sorted = true;
     }
 
-    private applyProcessors(mapping: ICommandMapping): void {
+    private _applyProcessors(mapping: ICommandMapping): void {
         this._processors.forEach((processor: Function) => {
             processor(mapping);
         });

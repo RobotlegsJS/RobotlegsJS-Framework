@@ -50,7 +50,7 @@ export class EventRelay {
     public start(): EventRelay {
         if (!this._active) {
             this._active = true;
-            this.addListeners();
+            this._addListeners();
         }
         return this;
     }
@@ -62,7 +62,7 @@ export class EventRelay {
     public stop(): EventRelay {
         if (this._active) {
             this._active = false;
-            this.removeListeners();
+            this._removeListeners();
         }
         return this;
     }
@@ -74,7 +74,7 @@ export class EventRelay {
     public addType(eventType: string): void {
         this._types.push(eventType);
         if (this._active) {
-            this.addListener(eventType);
+            this._addListener(eventType);
         }
     }
 
@@ -86,7 +86,7 @@ export class EventRelay {
         let index: number = this._types.indexOf(eventType);
         if (index > -1) {
             this._types.splice(index, 1);
-            this.removeListener(eventType);
+            this._removeListener(eventType);
         }
     }
 
@@ -94,23 +94,23 @@ export class EventRelay {
     /* Private Functions                                                          */
     /*============================================================================*/
 
-    private addListener(type: string): void {
+    private _addListener(type: string): void {
         this._source.addEventListener(type, this._destination.dispatchEvent, this._destination);
     }
 
-    private removeListener(type: string): void {
+    private _removeListener(type: string): void {
         this._source.removeEventListener(type, this._destination.dispatchEvent, this._destination);
     }
 
-    private addListeners(): void {
+    private _addListeners(): void {
         this._types.forEach((type: string) => {
-            this.addListener(type);
+            this._addListener(type);
         });
     }
 
-    private removeListeners(): void {
+    private _removeListeners(): void {
         this._types.forEach((type: string) => {
-            this.removeListener(type);
+            this._removeListener(type);
         });
     }
 }

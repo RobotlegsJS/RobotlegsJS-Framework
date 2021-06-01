@@ -148,7 +148,7 @@ export class Context extends EventDispatcher implements IContext {
      */
     public constructor() {
         super();
-        this.setup();
+        this._setup();
     }
 
     /*============================================================================*/
@@ -317,7 +317,7 @@ export class Context extends EventDispatcher implements IContext {
             }
             this._children.push(child);
             child.injector.parent = this.injector;
-            child.addEventListener(LifecycleEvent.POST_DESTROY, this.onChildDestroy, this);
+            child.addEventListener(LifecycleEvent.POST_DESTROY, this._onChildDestroy, this);
         }
         return this;
     }
@@ -331,7 +331,7 @@ export class Context extends EventDispatcher implements IContext {
             this._logger.debug("Removing child context {0}", [child]);
             this._children.splice(childIndex, 1);
             child.injector.parent = null;
-            child.removeEventListener(LifecycleEvent.POST_DESTROY, this.onChildDestroy, this);
+            child.removeEventListener(LifecycleEvent.POST_DESTROY, this._onChildDestroy, this);
         } else {
             this._logger.warn("Child context {0} must be a child of {1}", [child, this]);
         }
@@ -395,7 +395,7 @@ export class Context extends EventDispatcher implements IContext {
     /**
      * Configures mandatory context dependencies
      */
-    private setup(): void {
+    private _setup(): void {
         this._logManager = new LogManager();
         this._injector = new RobotlegsInjector();
 
@@ -408,39 +408,39 @@ export class Context extends EventDispatcher implements IContext {
         this._configManager = new ConfigManager(this);
         this._extensionInstaller = new ExtensionInstaller(this);
 
-        this.beforeInitializing(this.beforeInitializingCallback.bind(this));
-        this.afterInitializing(this.afterInitializingCallback.bind(this));
-        this.beforeDestroying(this.beforeDestroyingCallback.bind(this));
-        this.afterDestroying(this.afterDestroyingCallback.bind(this));
+        this.beforeInitializing(this._beforeInitializingCallback.bind(this));
+        this.afterInitializing(this._afterInitializingCallback.bind(this));
+        this.beforeDestroying(this._beforeDestroyingCallback.bind(this));
+        this.afterDestroying(this._afterDestroyingCallback.bind(this));
     }
 
-    private beforeInitializingCallback(): void {
+    private _beforeInitializingCallback(): void {
         this._logger.debug("Initializing...");
     }
 
-    private afterInitializingCallback(): void {
+    private _afterInitializingCallback(): void {
         this._logger.debug("Initialize complete");
     }
 
-    private beforeDestroyingCallback(): void {
+    private _beforeDestroyingCallback(): void {
         this._logger.debug("Destroying...");
     }
 
-    private afterDestroyingCallback(): void {
+    private _afterDestroyingCallback(): void {
         this._extensionInstaller.destroy();
         this._configManager.destroy();
         this._pin.releaseAll();
         this._injector.unbindAll();
-        this.removeChildren();
+        this._removeChildren();
         this._logger.debug("Destroy complete");
         this._logManager.removeAllTargets();
     }
 
-    private onChildDestroy(event: LifecycleEvent): void {
+    private _onChildDestroy(event: LifecycleEvent): void {
         this.removeChild(<IContext>event.target);
     }
 
-    private removeChildren(): void {
+    private _removeChildren(): void {
         while (this._children.length > 0) {
             this.removeChild(this._children[this._children.length - 1]);
         }
