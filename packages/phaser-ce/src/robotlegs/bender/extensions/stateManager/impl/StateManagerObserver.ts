@@ -26,8 +26,16 @@ export class StateManagerObserver {
         this._registry = containerRegistry;
 
         // We only care about roots
-        this._registry.addEventListener(StateRegistryEvent.ROOT_STATE_MANAGER_ADD, this.onRootStateManagerAdd, this);
-        this._registry.addEventListener(StateRegistryEvent.ROOT_STATE_MANAGER_REMOVE, this.onRootStateManagerRemove, this);
+        this._registry.addEventListener(
+            StateRegistryEvent.ROOT_STATE_MANAGER_ADD,
+            this.onRootStateManagerAdd,
+            this
+        );
+        this._registry.addEventListener(
+            StateRegistryEvent.ROOT_STATE_MANAGER_REMOVE,
+            this.onRootStateManagerRemove,
+            this
+        );
 
         // We might have arrived late on the scene
         this._registry.rootBindings.forEach((binding: StateManagerBinding) => {
@@ -43,8 +51,16 @@ export class StateManagerObserver {
      * @private
      */
     public destroy(): void {
-        this._registry.removeEventListener(StateRegistryEvent.ROOT_STATE_MANAGER_ADD, this.onRootStateManagerAdd, this);
-        this._registry.removeEventListener(StateRegistryEvent.ROOT_STATE_MANAGER_REMOVE, this.onRootStateManagerRemove, this);
+        this._registry.removeEventListener(
+            StateRegistryEvent.ROOT_STATE_MANAGER_ADD,
+            this.onRootStateManagerAdd,
+            this
+        );
+        this._registry.removeEventListener(
+            StateRegistryEvent.ROOT_STATE_MANAGER_REMOVE,
+            this.onRootStateManagerRemove,
+            this
+        );
 
         this._registry.rootBindings.forEach((binding: StateManagerBinding) => {
             this.removeRootListener(binding.stateManager);
@@ -77,9 +93,14 @@ export class StateManagerObserver {
             stateManager = rootBinding.stateManager;
 
             if (stateManager && stateManager.states[currentStateKey]) {
-                let binding: StateManagerBinding = this._registry.getBinding(stateManager.states[currentStateKey]);
+                let binding: StateManagerBinding = this._registry.getBinding(
+                    stateManager.states[currentStateKey]
+                );
                 if (binding) {
-                    binding.handleState(stateManager.states[currentStateKey], stateManager.states[currentStateKey].constructor);
+                    binding.handleState(
+                        stateManager.states[currentStateKey],
+                        stateManager.states[currentStateKey].constructor
+                    );
                 }
             }
         });

@@ -7,7 +7,7 @@
   "scripts": {
     "test": "karma start --single-run",
     "mocha": "nyc mocha",
-    "autoformat": "prettier --config .prettierrc --write --list-different \"{src,static,test,example,definitions}{/**/,/}*.{html,css,js,json,ts}\"",
+    "autoformat": "prettier --config ../../.prettierrc --ignore-path ../../.prettierignore --write --list-different .",
     "tslint-check:src": "tslint-config-prettier-check ./tslint.json",
     "tslint-check:test": "tslint-config-prettier-check ./tslint.test.json",
     "tslint:src": "tslint --project tsconfig.json",
@@ -113,7 +113,7 @@
     "mocha": "^8.4.0",
     "nyc": "^15.1.0",
     "pixi.js": "^5.2.1",
-    "prettier": "^1.19.1",
+    "prettier": "^2.3.0",
     "puppeteer": "^9.1.1",
     "reflect-metadata": "^0.1.13",
     "remap-istanbul": "^0.13.0",

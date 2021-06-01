@@ -68,7 +68,10 @@ export class Lifecycle implements ILifecycle {
      * @inheritDoc
      */
     public get initialized(): boolean {
-        return this._state !== LifecycleState.UNINITIALIZED && this._state !== LifecycleState.INITIALIZING;
+        return (
+            this._state !== LifecycleState.UNINITIALIZED &&
+            this._state !== LifecycleState.INITIALIZING
+        );
     }
 
     /**
@@ -174,7 +177,10 @@ export class Lifecycle implements ILifecycle {
         if (this.initialized) {
             this.reportError(LifecycleError.LATE_HANDLER_ERROR_MESSAGE);
         }
-        this.addEventListener(LifecycleEvent.INITIALIZE, this.createSyncLifecycleListener(handler, true));
+        this.addEventListener(
+            LifecycleEvent.INITIALIZE,
+            this.createSyncLifecycleListener(handler, true)
+        );
         return this;
     }
 
@@ -185,7 +191,10 @@ export class Lifecycle implements ILifecycle {
         if (this.initialized) {
             this.reportError(LifecycleError.LATE_HANDLER_ERROR_MESSAGE);
         }
-        this.addEventListener(LifecycleEvent.POST_INITIALIZE, this.createSyncLifecycleListener(handler, true));
+        this.addEventListener(
+            LifecycleEvent.POST_INITIALIZE,
+            this.createSyncLifecycleListener(handler, true)
+        );
         return this;
     }
 
@@ -209,7 +218,10 @@ export class Lifecycle implements ILifecycle {
      * @inheritDoc
      */
     public afterSuspending(handler: Function): ILifecycle {
-        this.addEventListener(LifecycleEvent.POST_SUSPEND, this.createSyncLifecycleListener(handler));
+        this.addEventListener(
+            LifecycleEvent.POST_SUSPEND,
+            this.createSyncLifecycleListener(handler)
+        );
         return this;
     }
 
@@ -233,7 +245,10 @@ export class Lifecycle implements ILifecycle {
      * @inheritDoc
      */
     public afterResuming(handler: Function): ILifecycle {
-        this.addEventListener(LifecycleEvent.POST_RESUME, this.createSyncLifecycleListener(handler));
+        this.addEventListener(
+            LifecycleEvent.POST_RESUME,
+            this.createSyncLifecycleListener(handler)
+        );
         return this;
     }
 
@@ -249,7 +264,10 @@ export class Lifecycle implements ILifecycle {
      * @inheritDoc
      */
     public whenDestroying(handler: Function): ILifecycle {
-        this.addEventListener(LifecycleEvent.DESTROY, this.createSyncLifecycleListener(handler, true));
+        this.addEventListener(
+            LifecycleEvent.DESTROY,
+            this.createSyncLifecycleListener(handler, true)
+        );
         return this;
     }
 
@@ -257,7 +275,10 @@ export class Lifecycle implements ILifecycle {
      * @inheritDoc
      */
     public afterDestroying(handler: Function): ILifecycle {
-        this.addEventListener(LifecycleEvent.POST_DESTROY, this.createSyncLifecycleListener(handler, true));
+        this.addEventListener(
+            LifecycleEvent.POST_DESTROY,
+            this.createSyncLifecycleListener(handler, true)
+        );
         return this;
     }
 
@@ -279,7 +300,11 @@ export class Lifecycle implements ILifecycle {
     /**
      * @inheritDoc
      */
-    public removeEventListener(type: string, listener: Function, useCapture: boolean = false): void {
+    public removeEventListener(
+        type: string,
+        listener: Function,
+        useCapture: boolean = false
+    ): void {
         this._dispatcher.removeEventListener(type, listener);
     }
 
@@ -329,28 +354,46 @@ export class Lifecycle implements ILifecycle {
         this._initialize = new LifecycleTransition(LifecycleEvent.PRE_INITIALIZE, this)
             .fromStates(LifecycleState.UNINITIALIZED)
             .toStates(LifecycleState.INITIALIZING, LifecycleState.ACTIVE)
-            .withEvents(LifecycleEvent.PRE_INITIALIZE, LifecycleEvent.INITIALIZE, LifecycleEvent.POST_INITIALIZE);
+            .withEvents(
+                LifecycleEvent.PRE_INITIALIZE,
+                LifecycleEvent.INITIALIZE,
+                LifecycleEvent.POST_INITIALIZE
+            );
 
         this._suspend = new LifecycleTransition(LifecycleEvent.PRE_SUSPEND, this)
             .fromStates(LifecycleState.ACTIVE)
             .toStates(LifecycleState.SUSPENDING, LifecycleState.SUSPENDED)
-            .withEvents(LifecycleEvent.PRE_SUSPEND, LifecycleEvent.SUSPEND, LifecycleEvent.POST_SUSPEND)
+            .withEvents(
+                LifecycleEvent.PRE_SUSPEND,
+                LifecycleEvent.SUSPEND,
+                LifecycleEvent.POST_SUSPEND
+            )
             .inReverse();
 
         this._resume = new LifecycleTransition(LifecycleEvent.PRE_RESUME, this)
             .fromStates(LifecycleState.SUSPENDED)
             .toStates(LifecycleState.RESUMING, LifecycleState.ACTIVE)
-            .withEvents(LifecycleEvent.PRE_RESUME, LifecycleEvent.RESUME, LifecycleEvent.POST_RESUME);
+            .withEvents(
+                LifecycleEvent.PRE_RESUME,
+                LifecycleEvent.RESUME,
+                LifecycleEvent.POST_RESUME
+            );
 
         this._destroy = new LifecycleTransition(LifecycleEvent.PRE_DESTROY, this)
             .fromStates(LifecycleState.SUSPENDED, LifecycleState.ACTIVE)
             .toStates(LifecycleState.DESTROYING, LifecycleState.DESTROYED)
-            .withEvents(LifecycleEvent.PRE_DESTROY, LifecycleEvent.DESTROY, LifecycleEvent.POST_DESTROY)
+            .withEvents(
+                LifecycleEvent.PRE_DESTROY,
+                LifecycleEvent.DESTROY,
+                LifecycleEvent.POST_DESTROY
+            )
             .inReverse();
     }
 
     private flipPriority(type: string, priority: number): number {
-        return priority === 0 && this._reversedEventTypes.get(type) ? this._reversePriority++ : priority;
+        return priority === 0 && this._reversedEventTypes.get(type)
+            ? this._reversePriority++
+            : priority;
     }
 
     private createSyncLifecycleListener(handler: Function, once: boolean = false): Function {
@@ -361,7 +404,7 @@ export class Lifecycle implements ILifecycle {
 
         // A handler that accepts 1 argument is provided with the event type
         if (handler.length === 1) {
-            return function(event: LifecycleEvent): void {
+            return function (event: LifecycleEvent): void {
                 if (once) {
                     // (<IEventDispatcher>event.target).removeEventListener(event.type, arguments.callee);
                     (<IEventDispatcher>event.target).removeEventListener(event.type, handler);
@@ -371,7 +414,7 @@ export class Lifecycle implements ILifecycle {
         }
 
         // Or, just call the handler
-        return function(event: LifecycleEvent): void {
+        return function (event: LifecycleEvent): void {
             if (once) {
                 // (<IEventDispatcher>event.target).removeEventListener(event.type, arguments.callee);
                 (<IEventDispatcher>event.target).removeEventListener(event.type, handler);

@@ -34,7 +34,11 @@ export class PrioritySignal extends Signal implements IPrioritySignal {
         return this.registerListenerWithPriority(listener, once);
     }
 
-    protected registerListenerWithPriority(listener: Function, once: boolean, priority: number = 0): ISlot {
+    protected registerListenerWithPriority(
+        listener: Function,
+        once: boolean,
+        priority: number = 0
+    ): ISlot {
         if (this.registrationPossible(listener, once)) {
             let slot: ISlot = new Slot(listener, this, once, priority);
             this.slots = this.slots.insertWithPriority(slot);

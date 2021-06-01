@@ -61,53 +61,39 @@ describe("TypeMatcher", () => {
     it("supplying_all_any_and_none_in_different_order_populates_them_in_typeFilter", () => {
         const expectedFilter: TypeFilter = new TypeFilter(ALL_OF, ANY_OF, NONE_OF);
         matcher = new TypeMatcher();
-        matcher
-            .noneOf(NONE_OF)
-            .anyOf(ANY_OF)
-            .allOf(ALL_OF);
+        matcher.noneOf(NONE_OF).anyOf(ANY_OF).allOf(ALL_OF);
         assertMatchesTypeFilter(matcher.createTypeFilter(), expectedFilter);
     });
 
     it("supplying_all_any_and_none_populates_them_in_typeFilter", () => {
         const expectedFilter: TypeFilter = new TypeFilter(ALL_OF, ANY_OF, NONE_OF);
         matcher = new TypeMatcher();
-        matcher
-            .allOf(ALL_OF)
-            .anyOf(ANY_OF)
-            .noneOf(NONE_OF);
+        matcher.allOf(ALL_OF).anyOf(ANY_OF).noneOf(NONE_OF);
         assertMatchesTypeFilter(matcher.createTypeFilter(), expectedFilter);
     });
 
     it("supplying_multiple_all_values_includes_all_given_in_typeFilter", () => {
         const expectedFilter: TypeFilter = new TypeFilter(ALL_OF.concat(ALL_OF_2), ANY_OF, NONE_OF);
         matcher = new TypeMatcher();
-        matcher
-            .allOf(ALL_OF)
-            .anyOf(ANY_OF)
-            .noneOf(NONE_OF)
-            .allOf(ALL_OF_2);
+        matcher.allOf(ALL_OF).anyOf(ANY_OF).noneOf(NONE_OF).allOf(ALL_OF_2);
         assertMatchesTypeFilter(matcher.createTypeFilter(), expectedFilter);
     });
 
     it("supplying_multiple_any_values_includes_all_given_in_typeFilter", () => {
         const expectedFilter: TypeFilter = new TypeFilter(ALL_OF, ANY_OF.concat(ANY_OF_2), NONE_OF);
         matcher = new TypeMatcher();
-        matcher
-            .allOf(ALL_OF)
-            .anyOf(ANY_OF)
-            .noneOf(NONE_OF)
-            .anyOf(ANY_OF_2);
+        matcher.allOf(ALL_OF).anyOf(ANY_OF).noneOf(NONE_OF).anyOf(ANY_OF_2);
         assertMatchesTypeFilter(matcher.createTypeFilter(), expectedFilter);
     });
 
     it("supplying_multiple_none_values_includes_all_given_in_typeFilter", () => {
-        const expectedFilter: TypeFilter = new TypeFilter(ALL_OF, ANY_OF, NONE_OF.concat(NONE_OF_2));
+        const expectedFilter: TypeFilter = new TypeFilter(
+            ALL_OF,
+            ANY_OF,
+            NONE_OF.concat(NONE_OF_2)
+        );
         matcher = new TypeMatcher();
-        matcher
-            .allOf(ALL_OF)
-            .anyOf(ANY_OF)
-            .noneOf(NONE_OF)
-            .noneOf(NONE_OF_2);
+        matcher.allOf(ALL_OF).anyOf(ANY_OF).noneOf(NONE_OF).noneOf(NONE_OF_2);
         assertMatchesTypeFilter(matcher.createTypeFilter(), expectedFilter);
     });
 
@@ -174,10 +160,7 @@ describe("TypeMatcher", () => {
     it("throws_TypeMatcherError_if_conditions_empty_and_filter_requested", () => {
         function createTypeFilter(): void {
             matcher = new TypeMatcher();
-            matcher
-                .allOf([])
-                .anyOf([])
-                .noneOf([]);
+            matcher.allOf([]).anyOf([]).noneOf([]);
             matcher.createTypeFilter();
         }
         assert.throws(createTypeFilter, Error);
@@ -207,20 +190,14 @@ describe("TypeMatcher", () => {
     it("supplying_all_any_and_none_as_normal_arguments_also_works", () => {
         const expectedFilter: TypeFilter = new TypeFilter(ALL_OF, ANY_OF, NONE_OF);
         matcher = new TypeMatcher();
-        matcher
-            .allOf(BaseType, ExtendedType)
-            .anyOf(Boolean, Number)
-            .noneOf(Error, TypeError);
+        matcher.allOf(BaseType, ExtendedType).anyOf(Boolean, Number).noneOf(Error, TypeError);
         assertMatchesTypeFilter(matcher.createTypeFilter(), expectedFilter);
     });
 
     it("mixing_all_any_and_none_arguments_also_works", () => {
         const expectedFilter: TypeFilter = new TypeFilter(ALL_OF, ANY_OF, NONE_OF);
         matcher = new TypeMatcher();
-        matcher
-            .allOf([BaseType], ExtendedType)
-            .anyOf([Boolean], Number)
-            .noneOf([Error], TypeError);
+        matcher.allOf([BaseType], ExtendedType).anyOf([Boolean], Number).noneOf([Error], TypeError);
         assertMatchesTypeFilter(matcher.createTypeFilter(), expectedFilter);
     });
 

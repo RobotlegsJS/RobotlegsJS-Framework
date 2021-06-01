@@ -33,8 +33,16 @@ export class StageObserver {
         this._registry = containerRegistry;
 
         // We only care about roots
-        this._registry.addEventListener(ContainerRegistryEvent.ROOT_CONTAINER_ADD, this.onRootContainerAdd, this);
-        this._registry.addEventListener(ContainerRegistryEvent.ROOT_CONTAINER_REMOVE, this.onRootContainerRemove, this);
+        this._registry.addEventListener(
+            ContainerRegistryEvent.ROOT_CONTAINER_ADD,
+            this.onRootContainerAdd,
+            this
+        );
+        this._registry.addEventListener(
+            ContainerRegistryEvent.ROOT_CONTAINER_REMOVE,
+            this.onRootContainerRemove,
+            this
+        );
 
         // We might have arrived late on the scene
         this._registry.rootBindings.forEach((binding: ContainerBinding) => {
@@ -50,8 +58,16 @@ export class StageObserver {
      * @private
      */
     public destroy(): void {
-        this._registry.removeEventListener(ContainerRegistryEvent.ROOT_CONTAINER_ADD, this.onRootContainerAdd, this);
-        this._registry.removeEventListener(ContainerRegistryEvent.ROOT_CONTAINER_REMOVE, this.onRootContainerRemove, this);
+        this._registry.removeEventListener(
+            ContainerRegistryEvent.ROOT_CONTAINER_ADD,
+            this.onRootContainerAdd,
+            this
+        );
+        this._registry.removeEventListener(
+            ContainerRegistryEvent.ROOT_CONTAINER_REMOVE,
+            this.onRootContainerRemove,
+            this
+        );
 
         this._registry.rootBindings.forEach((binding: ContainerBinding) => {
             this.removeRootListener(binding.container);

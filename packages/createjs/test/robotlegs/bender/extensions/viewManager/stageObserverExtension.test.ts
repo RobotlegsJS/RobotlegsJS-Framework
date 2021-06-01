@@ -42,10 +42,12 @@ describe("StageObserverExtension", () => {
         let logTarget: CallbackLogTarget = new CallbackLogTarget((log: LogParams) => {
             if (log.source instanceof StageObserverExtension && log.level === LogLevel.DEBUG) {
                 if (!whenInitializingLogged) {
-                    whenInitializingLogged = log.message === "Creating genuine StageObserver Singleton";
+                    whenInitializingLogged =
+                        log.message === "Creating genuine StageObserver Singleton";
                 }
                 if (!whenDestroyingLogged) {
-                    whenDestroyingLogged = log.message === "Destroying genuine StageObserver Singleton";
+                    whenDestroyingLogged =
+                        log.message === "Destroying genuine StageObserver Singleton";
                 }
             }
         });

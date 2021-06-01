@@ -104,7 +104,11 @@ describe("Lifecycle", () => {
     // ----- Invalid transitions
 
     it("from uninitialized state: suspend, resume and destroy throw errors", () => {
-        let methods: Function[] = [lifecycle.suspend.bind(lifecycle), lifecycle.resume.bind(lifecycle), lifecycle.destroy.bind(lifecycle)];
+        let methods: Function[] = [
+            lifecycle.suspend.bind(lifecycle),
+            lifecycle.resume.bind(lifecycle),
+            lifecycle.destroy.bind(lifecycle)
+        ];
         assert.equal(methodErrorCount(methods), 3);
     });
 
@@ -146,7 +150,7 @@ describe("Lifecycle", () => {
             LifecycleEvent.DESTROY,
             LifecycleEvent.POST_DESTROY
         ];
-        let listener: Function = function(event: LifecycleEvent): void {
+        let listener: Function = function (event: LifecycleEvent): void {
             actual.push(event.type);
         };
 
@@ -166,16 +170,24 @@ describe("Lifecycle", () => {
 
     it("whenHandler with more than 1 argument throws", () => {
         function whenInitializingWrongHandler(): void {
-            lifecycle.whenInitializing(function(phase: string, callback: Function): void {});
+            lifecycle.whenInitializing(function (phase: string, callback: Function): void {});
         }
-        assert.throws(whenInitializingWrongHandler, Error, "When and After handlers must accept 0 or 1 arguments");
+        assert.throws(
+            whenInitializingWrongHandler,
+            Error,
+            "When and After handlers must accept 0 or 1 arguments"
+        );
     });
 
     it("afterHandler with more than 1 argument throws", () => {
         function afterInitializingWrongHandler(): void {
-            lifecycle.afterInitializing(function(phase: string, callback: Function): void {});
+            lifecycle.afterInitializing(function (phase: string, callback: Function): void {});
         }
-        assert.throws(afterInitializingWrongHandler, Error, "When and After handlers must accept 0 or 1 arguments");
+        assert.throws(
+            afterInitializingWrongHandler,
+            Error,
+            "When and After handlers must accept 0 or 1 arguments"
+        );
     });
 
     it("when and afterHandlers with single arguments receive event types", () => {
@@ -190,7 +202,7 @@ describe("Lifecycle", () => {
             LifecycleEvent.POST_DESTROY
         ];
         let actual: string[] = [];
-        let handler: Function = function(type: string): void {
+        let handler: Function = function (type: string): void {
             actual.push(type);
         };
         lifecycle
@@ -211,7 +223,7 @@ describe("Lifecycle", () => {
 
     it("when and afterHandlers with no arguments are called", () => {
         let callCount: number = 0;
-        let handler: Function = function(): void {
+        let handler: Function = function (): void {
             callCount++;
         };
         lifecycle
@@ -232,7 +244,7 @@ describe("Lifecycle", () => {
 
     it("before handlers are executed", () => {
         let callCount: number = 0;
-        let handler: Function = function(): void {
+        let handler: Function = function (): void {
             callCount++;
         };
         lifecycle
@@ -249,7 +261,7 @@ describe("Lifecycle", () => {
 
     it("async before handlers are executed", (done: Function) => {
         let callCount: number = 0;
-        let handler: Function = function(message: any, callback: Function): void {
+        let handler: Function = function (message: any, callback: Function): void {
             callCount++;
             setTimeout(callback.bind(this), 1);
         };
@@ -258,14 +270,14 @@ describe("Lifecycle", () => {
             .beforeSuspending(handler)
             .beforeResuming(handler)
             .beforeDestroying(handler);
-        lifecycle.initialize(function(): void {
-            lifecycle.suspend(function(): void {
-                lifecycle.resume(function(): void {
+        lifecycle.initialize(function (): void {
+            lifecycle.suspend(function (): void {
+                lifecycle.resume(function (): void {
                     lifecycle.destroy();
                 });
             });
         });
-        setTimeout(function(): void {
+        setTimeout(function (): void {
             assert.equal(callCount, 4);
             done();
         }, 50);
@@ -274,7 +286,17 @@ describe("Lifecycle", () => {
     // ----- Suspend and Destroy run backwards
 
     it("suspend runs backwards", () => {
-        let expected: string[] = ["before3", "before2", "before1", "when3", "when2", "when1", "after3", "after2", "after1"];
+        let expected: string[] = [
+            "before3",
+            "before2",
+            "before1",
+            "when3",
+            "when2",
+            "when1",
+            "after3",
+            "after2",
+            "after1"
+        ];
         let actual: string[] = [];
         lifecycle.beforeSuspending(createValuePusher(actual, "before1"));
         lifecycle.beforeSuspending(createValuePusher(actual, "before2"));
@@ -291,7 +313,17 @@ describe("Lifecycle", () => {
     });
 
     it("destroy runs backwards", () => {
-        let expected: string[] = ["before3", "before2", "before1", "when3", "when2", "when1", "after3", "after2", "after1"];
+        let expected: string[] = [
+            "before3",
+            "before2",
+            "before1",
+            "when3",
+            "when2",
+            "when1",
+            "after3",
+            "after2",
+            "after1"
+        ];
         let actual: string[] = [];
         lifecycle.beforeDestroying(createValuePusher(actual, "before1"));
         lifecycle.beforeDestroying(createValuePusher(actual, "before2"));
@@ -348,7 +380,7 @@ describe("Lifecycle", () => {
 
     it("stateChange triggers event", () => {
         let event: LifecycleEvent = null;
-        lifecycle.addEventListener(LifecycleEvent.STATE_CHANGE, function(e: LifecycleEvent): void {
+        lifecycle.addEventListener(LifecycleEvent.STATE_CHANGE, function (e: LifecycleEvent): void {
             event = e;
         });
         lifecycle.initialize();
@@ -362,7 +394,11 @@ describe("Lifecycle", () => {
             lifecycle.initialize();
             lifecycle.beforeInitializing(nop);
         }
-        assert.throws(beforeInitializingWrongHandler, Error, "Handler added late and will never fire");
+        assert.throws(
+            beforeInitializingWrongHandler,
+            Error,
+            "Handler added late and will never fire"
+        );
     });
 
     it("adding whenInitializing handler after initialization throws error", () => {
@@ -370,16 +406,20 @@ describe("Lifecycle", () => {
             lifecycle.initialize();
             lifecycle.whenInitializing(nop);
         }
-        assert.throws(whenInitializingWrongHandler, Error, "Handler added late and will never fire");
+        assert.throws(
+            whenInitializingWrongHandler,
+            Error,
+            "Handler added late and will never fire"
+        );
     });
 
     it("adding whenInitializing handler during initialization does NOT throw error", (done: Function) => {
         let callCount: number = 0;
-        lifecycle.beforeInitializing(function(message: any, callback: Function): void {
+        lifecycle.beforeInitializing(function (message: any, callback: Function): void {
             setTimeout(callback, 50);
         });
         lifecycle.initialize();
-        lifecycle.whenInitializing(function(): void {
+        lifecycle.whenInitializing(function (): void {
             callCount++;
             assert.equal(callCount, 1);
             done();
@@ -391,13 +431,17 @@ describe("Lifecycle", () => {
             lifecycle.initialize();
             lifecycle.afterInitializing(nop);
         }
-        assert.throws(afterInitializingWrongHandler, Error, "Handler added late and will never fire");
+        assert.throws(
+            afterInitializingWrongHandler,
+            Error,
+            "Handler added late and will never fire"
+        );
     });
 
     it("adding afterInitializing handler during initialization does NOT throw error", () => {
         let callCount: number = 0;
-        lifecycle.whenInitializing(function(): void {
-            lifecycle.afterInitializing(function(): void {
+        lifecycle.whenInitializing(function (): void {
+            lifecycle.afterInitializing(function (): void {
                 callCount++;
             });
         });
@@ -422,13 +466,13 @@ describe("Lifecycle", () => {
     }
 
     function createValuePusher(array: any[], value: any): Function {
-        return function(): void {
+        return function (): void {
             array.push(value);
         };
     }
 
     function createMessagePusher(array: any[]): Function {
-        return function(message: any): void {
+        return function (message: any): void {
             array.push(message);
         };
     }

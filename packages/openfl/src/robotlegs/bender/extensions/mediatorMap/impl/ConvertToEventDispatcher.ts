@@ -20,16 +20,33 @@ export class ConvertToEventDispatcher implements IEventDispatcher {
         this._openflEventDispatcher = openflEventDispatcher;
     }
 
-    public addEventListener(type: string, listener: Function, thisObject?: any, useCapture?: boolean, priority?: number): void {
+    public addEventListener(
+        type: string,
+        listener: Function,
+        thisObject?: any,
+        useCapture?: boolean,
+        priority?: number
+    ): void {
         this._openflEventDispatcher.addEventListener(type, <any>listener, useCapture, priority);
     }
 
-    public once(type: string, listener: Function, thisObject?: any, useCapture?: boolean, priority?: number): void {
+    public once(
+        type: string,
+        listener: Function,
+        thisObject?: any,
+        useCapture?: boolean,
+        priority?: number
+    ): void {
         console.warn("unsuported method on OpenFL, the listener will not be removed automatically");
         this._openflEventDispatcher.addEventListener(type, <any>listener, useCapture, priority);
     }
 
-    public removeEventListener(type: string, listener: Function, thisObject?: any, useCapture?: boolean): void {
+    public removeEventListener(
+        type: string,
+        listener: Function,
+        thisObject?: any,
+        useCapture?: boolean
+    ): void {
         this._openflEventDispatcher.removeEventListener(type, <any>listener, useCapture);
     }
 

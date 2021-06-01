@@ -29,7 +29,7 @@ describe("ExtensionInstaller", () => {
     it("extension instance is installed", () => {
         let callCount: number = 0;
         installer.install(
-            new CallbackExtension(function(): void {
+            new CallbackExtension(function (): void {
                 callCount++;
             })
         );
@@ -38,7 +38,7 @@ describe("ExtensionInstaller", () => {
 
     it("extension class is installed", () => {
         let callCount: number = 0;
-        CallbackExtension.staticCallback = function(): void {
+        CallbackExtension.staticCallback = function (): void {
             callCount++;
         };
         installer.install(CallbackExtension);
@@ -47,7 +47,7 @@ describe("ExtensionInstaller", () => {
 
     it("extension is installed once for same instance", () => {
         let callCount: number = 0;
-        let callback: Function = function(): void {
+        let callback: Function = function (): void {
             callCount++;
         };
         let extension: IExtension = new CallbackExtension(callback);
@@ -58,7 +58,7 @@ describe("ExtensionInstaller", () => {
 
     it("extension is installed once for same class", () => {
         let callCount: number = 0;
-        CallbackExtension.staticCallback = function(): void {
+        CallbackExtension.staticCallback = function (): void {
             callCount++;
         };
         installer.install(CallbackExtension);

@@ -30,7 +30,7 @@ describe("DirectCommandMapExtension", () => {
 
     it("directCommandMap_is_mapped_into_injector", () => {
         let actual: IDirectCommandMap = null;
-        context.whenInitializing(function(): void {
+        context.whenInitializing(function (): void {
             actual = context.injector.get<IDirectCommandMap>(IDirectCommandMap);
         });
         context.initialize();

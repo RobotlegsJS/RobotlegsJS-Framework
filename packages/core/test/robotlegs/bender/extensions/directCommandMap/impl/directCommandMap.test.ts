@@ -54,15 +54,12 @@ describe("DirectCommandMap", () => {
 
         injector
             .bind("Function")
-            .toFunction(function(): void {
+            .toFunction(function (): void {
                 executionCount++;
             })
             .whenTargetNamed("executeCallback");
 
-        subject
-            .map(CallbackCommand)
-            .map(CallbackCommand2)
-            .execute();
+        subject.map(CallbackCommand).map(CallbackCommand2).execute();
 
         assert.equal(executionCount, 2);
     });
@@ -90,7 +87,7 @@ describe("DirectCommandMap", () => {
 
         injector
             .bind("Function")
-            .toFunction(function(passed: IDirectCommandMap): void {
+            .toFunction(function (passed: IDirectCommandMap): void {
                 actual = passed;
             })
             .whenTargetNamed("reportingFunction");
@@ -105,7 +102,7 @@ describe("DirectCommandMap", () => {
 
         injector
             .bind("Function")
-            .toFunction(function(): void {
+            .toFunction(function (): void {
                 executionCount++;
             })
             .whenTargetNamed("executeCallback");
@@ -125,7 +122,7 @@ describe("DirectCommandMap", () => {
     it("detains_command", () => {
         let command: IClass<ICommand> = NullCommand;
         let wasDetained: boolean = false;
-        let handler: Function = function(...params: any[]): void {
+        let handler: Function = function (...params: any[]): void {
             wasDetained = true;
         };
 
@@ -139,7 +136,7 @@ describe("DirectCommandMap", () => {
     it("releases_command", () => {
         let command: IClass<ICommand> = NullCommand;
         let wasReleased: boolean = false;
-        let handler: Function = function(...params: any[]): void {
+        let handler: Function = function (...params: any[]): void {
             wasReleased = true;
         };
 
@@ -156,7 +153,7 @@ describe("DirectCommandMap", () => {
 
         injector
             .bind("Function")
-            .toFunction(function(): void {
+            .toFunction(function (): void {
                 executionCount++;
             })
             .whenTargetNamed("executeCallback");
@@ -169,7 +166,7 @@ describe("DirectCommandMap", () => {
 
     it("mapping_processor_is_called", () => {
         let callCount: number = 0;
-        subject.addMappingProcessor(function(mapping: ICommandMapping): void {
+        subject.addMappingProcessor(function (mapping: ICommandMapping): void {
             callCount++;
         });
         subject.map(NullCommand);
@@ -178,10 +175,10 @@ describe("DirectCommandMap", () => {
 
     it("mapping_processors_are_called", () => {
         let callCount: number = 0;
-        subject.addMappingProcessor(function(mapping: ICommandMapping): void {
+        subject.addMappingProcessor(function (mapping: ICommandMapping): void {
             callCount++;
         });
-        subject.addMappingProcessor(function(mapping: ICommandMapping): void {
+        subject.addMappingProcessor(function (mapping: ICommandMapping): void {
             callCount++;
         });
         subject.map(NullCommand);

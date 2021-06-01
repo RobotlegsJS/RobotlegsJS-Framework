@@ -33,21 +33,36 @@ export class EventEmitterMap extends EventMap implements IEventEmitterMap {
     /**
      * @inheritDoc
      */
-    public on(emitter: Phaser.Events.EventEmitter, event: string | symbol, listener: Function, context?: any): void {
+    public on(
+        emitter: Phaser.Events.EventEmitter,
+        event: string | symbol,
+        listener: Function,
+        context?: any
+    ): void {
         this._registerEventEmitterListener(emitter, event, listener, context);
     }
 
     /**
      * @inheritDoc
      */
-    public once(emitter: Phaser.Events.EventEmitter, event: string | symbol, listener: Function, context?: any): void {
+    public once(
+        emitter: Phaser.Events.EventEmitter,
+        event: string | symbol,
+        listener: Function,
+        context?: any
+    ): void {
         this._registerEventEmitterListener(emitter, event, listener, context, true);
     }
 
     /**
      * @inheritDoc
      */
-    public off(emitter: Phaser.Events.EventEmitter, event: string | symbol, listener: Function, context?: any): void {
+    public off(
+        emitter: Phaser.Events.EventEmitter,
+        event: string | symbol,
+        listener: Function,
+        context?: any
+    ): void {
         this._unregisterEventEmitterListener(emitter, event, listener, context);
     }
 
@@ -58,8 +73,14 @@ export class EventEmitterMap extends EventMap implements IEventEmitterMap {
         let eventConfig: EventEmitterMapConfig;
 
         while (this._currentEventEmitterListeners.length) {
-            eventConfig = this._currentEventEmitterListeners[this._currentEventEmitterListeners.length - 1];
-            this._unregisterEventEmitterListener(eventConfig.emitter, eventConfig.event, eventConfig.listener, eventConfig.context);
+            eventConfig =
+                this._currentEventEmitterListeners[this._currentEventEmitterListeners.length - 1];
+            this._unregisterEventEmitterListener(
+                eventConfig.emitter,
+                eventConfig.event,
+                eventConfig.listener,
+                eventConfig.context
+            );
         }
     }
 
@@ -86,9 +107,19 @@ export class EventEmitterMap extends EventMap implements IEventEmitterMap {
         this._eventEmitterListeners.forEach((eventConfig: EventEmitterMapConfig) => {
             emitter = eventConfig.emitter;
             if (eventConfig.once) {
-                emitter.off(eventConfig.event, eventConfig.calback, eventConfig.context, eventConfig.once);
+                emitter.off(
+                    eventConfig.event,
+                    eventConfig.calback,
+                    eventConfig.context,
+                    eventConfig.once
+                );
             } else {
-                emitter.off(eventConfig.event, eventConfig.listener, eventConfig.context, eventConfig.once);
+                emitter.off(
+                    eventConfig.event,
+                    eventConfig.listener,
+                    eventConfig.context,
+                    eventConfig.once
+                );
             }
             this._suspendedEventEmitterListeners.push(eventConfig);
         });
@@ -169,7 +200,14 @@ export class EventEmitterMap extends EventMap implements IEventEmitterMap {
 
             while (i--) {
                 let config: EventEmitterMapConfig = this._currentEventEmitterListeners[i];
-                if (config.equalTo(eventConfig.emitter, eventConfig.event, eventConfig.listener, eventConfig.context)) {
+                if (
+                    config.equalTo(
+                        eventConfig.emitter,
+                        eventConfig.event,
+                        eventConfig.listener,
+                        eventConfig.context
+                    )
+                ) {
                     this._currentEventEmitterListeners.splice(i, 1);
                     eventConfig.listener.apply(eventConfig.context, args);
                     return;

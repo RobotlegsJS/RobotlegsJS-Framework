@@ -108,7 +108,9 @@ export class SceneRegistry extends EventDispatcher {
             this.addRootBinding(binding);
         }
 
-        this.dispatchEvent(new SceneRegistryEvent(SceneRegistryEvent.SCENE_MANAGER_ADD, binding.sceneManager));
+        this.dispatchEvent(
+            new SceneRegistryEvent(SceneRegistryEvent.SCENE_MANAGER_ADD, binding.sceneManager)
+        );
 
         return binding;
     }
@@ -120,25 +122,38 @@ export class SceneRegistry extends EventDispatcher {
         this._bindings.splice(index, 1);
 
         // Drop the empty binding listener
-        binding.removeEventListener(SceneManagerBindingEvent.BINDING_EMPTY, this.onBindingEmpty, this);
+        binding.removeEventListener(
+            SceneManagerBindingEvent.BINDING_EMPTY,
+            this.onBindingEmpty,
+            this
+        );
 
         if (!binding.parent) {
             // This binding didn't have a parent, so it was a Root
             this.removeRootBinding(binding);
         }
 
-        this.dispatchEvent(new SceneRegistryEvent(SceneRegistryEvent.SCENE_MANAGER_REMOVE, binding.sceneManager));
+        this.dispatchEvent(
+            new SceneRegistryEvent(SceneRegistryEvent.SCENE_MANAGER_REMOVE, binding.sceneManager)
+        );
     }
 
     private addRootBinding(binding: SceneManagerBinding): void {
         this._rootBindings.push(binding);
-        this.dispatchEvent(new SceneRegistryEvent(SceneRegistryEvent.ROOT_SCENE_MANAGER_ADD, binding.sceneManager));
+        this.dispatchEvent(
+            new SceneRegistryEvent(SceneRegistryEvent.ROOT_SCENE_MANAGER_ADD, binding.sceneManager)
+        );
     }
 
     private removeRootBinding(binding: SceneManagerBinding): void {
         let index: number = this._rootBindings.indexOf(binding);
         this._rootBindings.splice(index, 1);
-        this.dispatchEvent(new SceneRegistryEvent(SceneRegistryEvent.ROOT_SCENE_MANAGER_REMOVE, binding.sceneManager));
+        this.dispatchEvent(
+            new SceneRegistryEvent(
+                SceneRegistryEvent.ROOT_SCENE_MANAGER_REMOVE,
+                binding.sceneManager
+            )
+        );
     }
 
     private onBindingEmpty(event: SceneManagerBindingEvent): void {

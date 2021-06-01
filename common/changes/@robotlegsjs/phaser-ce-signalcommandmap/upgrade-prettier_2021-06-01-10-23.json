@@ -1,0 +1,11 @@
+{
+  "changes": [
+    {
+      "packageName": "@robotlegsjs/phaser-ce-signalcommandmap",
+      "comment": "Update [prettier](https://www.npmjs.com/package/prettier) to version **2.3.0**, move configuration files to the root of mono repo structure and apply prettier changes (see [4](https://github.com/RobotlegsJS/Robotlegs/pull/4))",
+      "type": "patch"
+    }
+  ],
+  "packageName": "@robotlegsjs/phaser-ce-signalcommandmap",
+  "email": "tiago.schenkel@gmail.com"
+}

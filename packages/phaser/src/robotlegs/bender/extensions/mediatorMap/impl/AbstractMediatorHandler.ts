@@ -21,7 +21,10 @@ export abstract class AbstractMediatorHandler {
 
     protected _mappings: IMediatorMapping[] = [];
 
-    protected _knownMappings: Map<IClass<any>, IMediatorMapping[] | boolean> = new Map<IClass<any>, IMediatorMapping[]>();
+    protected _knownMappings: Map<IClass<any>, IMediatorMapping[] | boolean> = new Map<
+        IClass<any>,
+        IMediatorMapping[]
+    >();
 
     protected _factory: AbstractMediatorFactory;
 

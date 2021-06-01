@@ -40,12 +40,17 @@ describe("ManualStageObserverExtension", () => {
         let whenInitializingLogged: boolean = false;
         let whenDestroyingLogged: boolean = false;
         let logTarget: CallbackLogTarget = new CallbackLogTarget((log: LogParams) => {
-            if (log.source instanceof ManualStageObserverExtension && log.level === LogLevel.DEBUG) {
+            if (
+                log.source instanceof ManualStageObserverExtension &&
+                log.level === LogLevel.DEBUG
+            ) {
                 if (!whenInitializingLogged) {
-                    whenInitializingLogged = log.message === "Creating genuine ManualStageObserver Singleton";
+                    whenInitializingLogged =
+                        log.message === "Creating genuine ManualStageObserver Singleton";
                 }
                 if (!whenDestroyingLogged) {
-                    whenDestroyingLogged = log.message === "Destroying genuine ManualStageObserver Singleton";
+                    whenDestroyingLogged =
+                        log.message === "Destroying genuine ManualStageObserver Singleton";
                 }
             }
         });

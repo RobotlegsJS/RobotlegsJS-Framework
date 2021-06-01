@@ -23,10 +23,7 @@ export class SignalMediatorExtension implements IExtension {
     /*============================================================================*/
 
     public extend(context: IContext): void {
-        context.injector
-            .bind(ISignalMap)
-            .to(SignalMap)
-            .inSingletonScope();
+        context.injector.bind(ISignalMap).to(SignalMap).inSingletonScope();
     }
 
     public toString(): string {

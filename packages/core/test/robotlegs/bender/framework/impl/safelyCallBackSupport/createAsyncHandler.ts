@@ -15,8 +15,8 @@
  * (if provided) and finally calls back.
  */
 export function createAsyncHandler(closure: Function = null, ...params: any[]): Function {
-    return function(message: any, callback: Function): void {
-        setTimeout(function(): void {
+    return function (message: any, callback: Function): void {
+        setTimeout(function (): void {
             if (closure) {
                 closure.apply(null, params);
             }

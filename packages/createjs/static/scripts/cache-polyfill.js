@@ -15,7 +15,7 @@
  *
  */
 
-(function() {
+(function () {
   var nativeAddAll = Cache.prototype.addAll;
   var userAgent = navigator.userAgent.match(/(Firefox|Chrome)\/(\d+\.)/);
 
@@ -25,7 +25,10 @@
     var version = parseInt(userAgent[2]);
   }
 
-  if (nativeAddAll && (!userAgent || (agent === "Firefox" && version >= 46) || (agent === "Chrome" && version >= 50))) {
+  if (
+    nativeAddAll &&
+    (!userAgent || (agent === "Firefox" && version >= 46) || (agent === "Chrome" && version >= 50))
+  ) {
     return;
   }
 
@@ -42,13 +45,13 @@
     NetworkError.prototype = Object.create(Error.prototype);
 
     return Promise.resolve()
-      .then(function() {
+      .then(function () {
         if (arguments.length < 1) throw new TypeError();
 
         // Simulate sequence<(Request or USVString)> binding:
         var sequence = [];
 
-        requests = requests.map(function(request) {
+        requests = requests.map(function (request) {
           if (request instanceof Request) {
             return request;
           } else {
@@ -57,7 +60,7 @@
         });
 
         return Promise.all(
-          requests.map(function(request) {
+          requests.map(function (request) {
             if (typeof request === "string") {
               request = new Request(request);
             }
@@ -72,11 +75,11 @@
           })
         );
       })
-      .then(function(responses) {
+      .then(function (responses) {
         // If some of the responses has not OK-eish status,
         // then whole operation should reject
         if (
-          responses.some(function(response) {
+          responses.some(function (response) {
             return !response.ok;
           })
         ) {
@@ -86,12 +89,12 @@
         // TODO: check that requests don't overwrite one another
         // (don't think this is possible to polyfill due to opaque responses)
         return Promise.all(
-          responses.map(function(response, i) {
+          responses.map(function (response, i) {
             return cache.put(requests[i], response);
           })
         );
       })
-      .then(function() {
+      .then(function () {
         return undefined;
       });
   };

@@ -61,7 +61,10 @@ export class EventCommandTrigger implements ICommandTrigger {
         this._type = type;
         this._eventClass = eventClass;
         this._mappings = new CommandMappingList(this, processors ? processors : [], logger);
-        this._executor = new CommandExecutor(injector, this._mappings.removeMapping.bind(this._mappings));
+        this._executor = new CommandExecutor(
+            injector,
+            this._mappings.removeMapping.bind(this._mappings)
+        );
     }
 
     /*============================================================================*/
@@ -111,6 +114,9 @@ export class EventCommandTrigger implements ICommandTrigger {
         } else {
             return;
         }
-        this._executor.executeCommands(this._mappings.getList(), new CommandPayload([event], [payloadEventClass]));
+        this._executor.executeCommands(
+            this._mappings.getList(),
+            new CommandPayload([event], [payloadEventClass])
+        );
     }
 }

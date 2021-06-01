@@ -61,16 +61,24 @@ describe("StageCrawlerExtension", () => {
         let logTarget: CallbackLogTarget = new CallbackLogTarget((log: LogParams) => {
             if (log.source instanceof StageCrawlerExtension && log.level === LogLevel.DEBUG) {
                 if (!viewManagerIsInstalledLogged) {
-                    viewManagerIsInstalledLogged = log.message === "ViewManager is installed. Checking for managed containers...";
+                    viewManagerIsInstalledLogged =
+                        log.message ===
+                        "ViewManager is installed. Checking for managed containers...";
                 }
 
                 if (!scanningContainerLogged) {
-                    scanningContainerLogged = log.message === "StageCrawler scanning container {0} ...";
+                    scanningContainerLogged =
+                        log.message === "StageCrawler scanning container {0} ...";
                 }
             }
         });
         context.logLevel = LogLevel.DEBUG;
-        context.install(ContextViewExtension, ViewManagerExtension, MediatorMapExtension, StageCrawlerExtension);
+        context.install(
+            ContextViewExtension,
+            ViewManagerExtension,
+            MediatorMapExtension,
+            StageCrawlerExtension
+        );
         context.configure(new ContextView(container));
         context.configure(ContextViewListenerConfig);
         context.addLogTarget(logTarget);
@@ -85,11 +93,13 @@ describe("StageCrawlerExtension", () => {
         let logTarget: CallbackLogTarget = new CallbackLogTarget((log: LogParams) => {
             if (log.source instanceof StageCrawlerExtension && log.level === LogLevel.DEBUG) {
                 if (!viewManagerIsNotInstalledLogged) {
-                    viewManagerIsNotInstalledLogged = log.message === "ViewManager is not installed. Checking the ContextView...";
+                    viewManagerIsNotInstalledLogged =
+                        log.message === "ViewManager is not installed. Checking the ContextView...";
                 }
 
                 if (!scanningContainerLogged) {
-                    scanningContainerLogged = log.message === "StageCrawler scanning container {0} ...";
+                    scanningContainerLogged =
+                        log.message === "StageCrawler scanning container {0} ...";
                 }
             }
         });
@@ -114,7 +124,8 @@ describe("StageCrawlerExtension", () => {
             if (log.source instanceof StageCrawlerExtension && log.level === LogLevel.ERROR) {
                 if (!contextViewIsNotInstalledLogged) {
                     contextViewIsNotInstalledLogged =
-                        log.message === "A ContextView must be installed if you install the StageCrawlerExtension.";
+                        log.message ===
+                        "A ContextView must be installed if you install the StageCrawlerExtension.";
                 }
             }
         });

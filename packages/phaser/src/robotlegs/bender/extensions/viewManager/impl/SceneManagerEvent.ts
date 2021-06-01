@@ -73,7 +73,12 @@ export class SceneManagerEvent extends Event {
      * @param sceneHandler The scene handler associated with this event
      * @param viewHandler The view handler associated with this event
      */
-    constructor(type: string, sceneManager?: Phaser.Scenes.SceneManager, sceneHandler?: ISceneHandler, viewHandler?: IViewHandler) {
+    constructor(
+        type: string,
+        sceneManager?: Phaser.Scenes.SceneManager,
+        sceneHandler?: ISceneHandler,
+        viewHandler?: IViewHandler
+    ) {
         super(type, true);
         this._sceneManager = sceneManager;
         this._sceneHandler = sceneHandler;
@@ -88,6 +93,11 @@ export class SceneManagerEvent extends Event {
      * @inheritDoc
      */
     public clone(): SceneManagerEvent {
-        return new SceneManagerEvent(this.type, this._sceneManager, this._sceneHandler, this._viewHandler);
+        return new SceneManagerEvent(
+            this.type,
+            this._sceneManager,
+            this._sceneHandler,
+            this._viewHandler
+        );
     }
 }

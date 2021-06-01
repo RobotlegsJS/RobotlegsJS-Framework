@@ -86,7 +86,13 @@ export interface IEventDispatcher {
      * @platform Web,Native
      * @language en_US
      */
-    addEventListener(type: string, listener: Function, thisObject?: any, useCapture?: boolean, priority?: number): void;
+    addEventListener(
+        type: string,
+        listener: Function,
+        thisObject?: any,
+        useCapture?: boolean,
+        priority?: number
+    ): void;
 
     /**
      * Registers an event listener object with an EventDispatcher object so that the listener receives notification of an
@@ -111,7 +117,13 @@ export interface IEventDispatcher {
      * @platform Web,Native
      * @language en_US
      */
-    once(type: string, listener: Function, thisObject?: any, useCapture?: boolean, priority?: number): void;
+    once(
+        type: string,
+        listener: Function,
+        thisObject?: any,
+        useCapture?: boolean,
+        priority?: number
+    ): void;
 
     /**
      * Removes a listener from the EventDispatcher object. If there is no matching listener registered with the
@@ -126,7 +138,12 @@ export interface IEventDispatcher {
      * @platform Web,Native
      * @language en_US
      */
-    removeEventListener(type: string, listener: Function, thisObject?: any, useCapture?: boolean): void;
+    removeEventListener(
+        type: string,
+        listener: Function,
+        thisObject?: any,
+        useCapture?: boolean
+    ): void;
 
     /**
      * Checks whether the EventDispatcher object has any listeners registered for a specific type of event. This allows

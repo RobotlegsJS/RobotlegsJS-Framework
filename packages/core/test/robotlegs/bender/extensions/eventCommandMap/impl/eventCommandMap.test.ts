@@ -68,10 +68,7 @@ describe("EventCommandMap", () => {
             })
             .whenTargetNamed("executeCallback");
 
-        subject
-            .map(SupportEvent.TYPE1, SupportEvent)
-            .toCommand(CallbackCommand)
-            .once(oneshot);
+        subject.map(SupportEvent.TYPE1, SupportEvent).toCommand(CallbackCommand).once(oneshot);
 
         while (totalEvents--) {
             dispatcher.dispatchEvent(new SupportEvent(SupportEvent.TYPE1));
@@ -93,10 +90,7 @@ describe("EventCommandMap", () => {
                 executionCount++;
             })
             .whenTargetNamed("reportingFunction");
-        subject
-            .map(SupportEvent.TYPE1)
-            .toCommand(NullCommand)
-            .withHooks(hooks);
+        subject.map(SupportEvent.TYPE1).toCommand(NullCommand).withHooks(hooks);
         dispatcher.dispatchEvent(new SupportEvent(SupportEvent.TYPE1));
         return executionCount;
     }
@@ -111,10 +105,7 @@ describe("EventCommandMap", () => {
             })
             .whenTargetNamed("executeCallback");
 
-        subject
-            .map(SupportEvent.TYPE1)
-            .toCommand(CallbackCommand)
-            .withGuards(guards);
+        subject.map(SupportEvent.TYPE1).toCommand(CallbackCommand).withGuards(guards);
         dispatcher.dispatchEvent(new SupportEvent(SupportEvent.TYPE1));
         return executionCount;
     }
@@ -228,7 +219,9 @@ describe("EventCommandMap", () => {
             })
             .whenTargetNamed("executeCallback");
 
-        subject.map(SupportEvent.TYPE1, SupportEvent).toCommand(SupportEventTriggeredSelfReportingCallbackCommand);
+        subject
+            .map(SupportEvent.TYPE1, SupportEvent)
+            .toCommand(SupportEventTriggeredSelfReportingCallbackCommand);
 
         dispatcher.dispatchEvent(expectedEvent);
 
@@ -249,7 +242,9 @@ describe("EventCommandMap", () => {
             })
             .whenTargetNamed("executeCallback");
 
-        subject.map(SupportEvent.TYPE1, Event).toCommand(SupportEventTriggeredSelfReportingCallbackCommand);
+        subject
+            .map(SupportEvent.TYPE1, Event)
+            .toCommand(SupportEventTriggeredSelfReportingCallbackCommand);
 
         dispatcher.dispatchEvent(expectedEvent);
 
@@ -270,7 +265,9 @@ describe("EventCommandMap", () => {
             })
             .whenTargetNamed("executeCallback");
 
-        subject.map(SupportEvent.TYPE1).toCommand(SupportEventTriggeredSelfReportingCallbackCommand);
+        subject
+            .map(SupportEvent.TYPE1)
+            .toCommand(SupportEventTriggeredSelfReportingCallbackCommand);
 
         dispatcher.dispatchEvent(expectedEvent);
 
@@ -381,14 +378,8 @@ describe("EventCommandMap", () => {
             })
             .whenTargetNamed("executeCallback");
 
-        subject
-            .map(SupportEvent.TYPE1, SupportEvent)
-            .toCommand(CallbackCommand)
-            .once();
-        subject
-            .map(SupportEvent.TYPE1, SupportEvent)
-            .toCommand(CallbackCommand2)
-            .once();
+        subject.map(SupportEvent.TYPE1, SupportEvent).toCommand(CallbackCommand).once();
+        subject.map(SupportEvent.TYPE1, SupportEvent).toCommand(CallbackCommand2).once();
         dispatcher.dispatchEvent(new SupportEvent(SupportEvent.TYPE1));
 
         assert.equal(executeCount, 2);
@@ -405,10 +396,7 @@ describe("EventCommandMap", () => {
             })
             .whenTargetNamed("executeCallback");
 
-        subject
-            .map(SupportEvent.TYPE1)
-            .toCommand(CallbackCommand)
-            .once();
+        subject.map(SupportEvent.TYPE1).toCommand(CallbackCommand).once();
         dispatcher.dispatchEvent(new SupportEvent(SupportEvent.TYPE1));
 
         assert.equal(executeCount, 1);
@@ -426,10 +414,7 @@ describe("EventCommandMap", () => {
             .whenTargetNamed("executeCallback");
 
         subject.map(SupportEvent.TYPE1).toCommand(CallbackCommand);
-        subject
-            .map(SupportEvent.TYPE2)
-            .toCommand(CallbackCommand)
-            .once();
+        subject.map(SupportEvent.TYPE2).toCommand(CallbackCommand).once();
         dispatcher.dispatchEvent(new SupportEvent(SupportEvent.TYPE1));
 
         assert.equal(executeCount, 2);
@@ -439,7 +424,10 @@ describe("EventCommandMap", () => {
         subject.map(SupportEvent.TYPE1).toCommand(ClassReportingCallbackCommand);
         subject.map(SupportEvent.TYPE1).toCommand(ClassReportingCallbackCommand2);
         dispatcher.dispatchEvent(new SupportEvent(SupportEvent.TYPE1));
-        assert.deepEqual(reportedExecutions, [ClassReportingCallbackCommand, ClassReportingCallbackCommand2]);
+        assert.deepEqual(reportedExecutions, [
+            ClassReportingCallbackCommand,
+            ClassReportingCallbackCommand2
+        ]);
     });
 
     it("hooks_are_called", () => {
@@ -488,10 +476,7 @@ describe("EventCommandMap", () => {
     it("cascading_events_do_not_throw_unmap_errors", () => {
         injector.bind(IEventDispatcher).toConstantValue(dispatcher);
         injector.bind(IEventCommandMap).toConstantValue(subject);
-        subject
-            .map(CascadingCommand.EVENT_TYPE)
-            .toCommand(CascadingCommand)
-            .once();
+        subject.map(CascadingCommand.EVENT_TYPE).toCommand(CascadingCommand).once();
         dispatcher.dispatchEvent(new Event(CascadingCommand.EVENT_TYPE));
     });
 
@@ -534,10 +519,7 @@ describe("EventCommandMap", () => {
             .bind(ICommand)
             .toConstantValue(ClassReportingCallbackCommand)
             .whenTargetNamed("nestedCommand");
-        subject
-            .map(SupportEvent.TYPE1, Event)
-            .toCommand(CommandMappingCommand)
-            .once();
+        subject.map(SupportEvent.TYPE1, Event).toCommand(CommandMappingCommand).once();
         dispatcher.dispatchEvent(new SupportEvent(SupportEvent.TYPE1));
         assert.deepEqual(reportedExecutions, []);
     });
@@ -548,14 +530,8 @@ describe("EventCommandMap", () => {
             .bind(ICommand)
             .toConstantValue(ClassReportingCallbackCommand)
             .whenTargetNamed("nestedCommand");
-        subject
-            .map(SupportEvent.TYPE1, Event)
-            .toCommand(CommandUnmappingCommand)
-            .once();
-        subject
-            .map(SupportEvent.TYPE1, Event)
-            .toCommand(ClassReportingCallbackCommand)
-            .once();
+        subject.map(SupportEvent.TYPE1, Event).toCommand(CommandUnmappingCommand).once();
+        subject.map(SupportEvent.TYPE1, Event).toCommand(ClassReportingCallbackCommand).once();
         dispatcher.dispatchEvent(new SupportEvent(SupportEvent.TYPE1));
         assert.deepEqual(reportedExecutions, [ClassReportingCallbackCommand]);
     });

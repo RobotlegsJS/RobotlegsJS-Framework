@@ -55,7 +55,9 @@ export class StateManagerObserverExtension implements IExtension {
         if (!StateManagerObserverExtension._stageObserver) {
             let containerRegistry: StateRegistry = this._injector.get<StateRegistry>(StateRegistry);
             this._logger.debug("Creating genuine StateManagerObserver Singleton");
-            StateManagerObserverExtension._stageObserver = new StateManagerObserver(containerRegistry);
+            StateManagerObserverExtension._stageObserver = new StateManagerObserver(
+                containerRegistry
+            );
         }
     }
 

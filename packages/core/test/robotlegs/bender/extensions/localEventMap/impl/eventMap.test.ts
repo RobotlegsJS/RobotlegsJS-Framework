@@ -78,16 +78,46 @@ describe("EventMap", () => {
     });
 
     it("listener_mapped_twice_only_fires_once", () => {
-        eventMap.mapListener(eventDispatcher, CustomEvent.STARTED, listenerWithCounter, this, CustomEvent);
-        eventMap.mapListener(eventDispatcher, CustomEvent.STARTED, listenerWithCounter, this, CustomEvent);
+        eventMap.mapListener(
+            eventDispatcher,
+            CustomEvent.STARTED,
+            listenerWithCounter,
+            this,
+            CustomEvent
+        );
+        eventMap.mapListener(
+            eventDispatcher,
+            CustomEvent.STARTED,
+            listenerWithCounter,
+            this,
+            CustomEvent
+        );
         eventDispatcher.dispatchEvent(new CustomEvent(CustomEvent.STARTED));
         assert.equal(listenerExecutedCount, 1);
     });
 
     it("listener_mapped_twice_and_removed_once_doesnt_fire", () => {
-        eventMap.mapListener(eventDispatcher, CustomEvent.STARTED, listenerWithCounter, this, CustomEvent);
-        eventMap.mapListener(eventDispatcher, CustomEvent.STARTED, listenerWithCounter, this, CustomEvent);
-        eventMap.unmapListener(eventDispatcher, CustomEvent.STARTED, listenerWithCounter, this, CustomEvent);
+        eventMap.mapListener(
+            eventDispatcher,
+            CustomEvent.STARTED,
+            listenerWithCounter,
+            this,
+            CustomEvent
+        );
+        eventMap.mapListener(
+            eventDispatcher,
+            CustomEvent.STARTED,
+            listenerWithCounter,
+            this,
+            CustomEvent
+        );
+        eventMap.unmapListener(
+            eventDispatcher,
+            CustomEvent.STARTED,
+            listenerWithCounter,
+            this,
+            CustomEvent
+        );
         eventDispatcher.dispatchEvent(new CustomEvent(CustomEvent.STARTED));
         assert.equal(listenerExecutedCount, 0);
     });
@@ -404,7 +434,13 @@ describe("EventMap", () => {
     it("EventMap_can_be_extended_allowing_internal_properties_to_be_acessed", () => {
         let mockEventMap: MockEventMap = new MockEventMap();
 
-        mockEventMap.mapListener(eventDispatcher, CustomEvent.STARTED, listenerWithCounter, this, CustomEvent);
+        mockEventMap.mapListener(
+            eventDispatcher,
+            CustomEvent.STARTED,
+            listenerWithCounter,
+            this,
+            CustomEvent
+        );
 
         assert.equal(mockEventMap.listeners.length, 1);
         assert.equal(mockEventMap.suspendedListeners.length, 0);

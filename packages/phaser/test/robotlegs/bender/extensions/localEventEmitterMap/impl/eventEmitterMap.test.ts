@@ -561,7 +561,13 @@ describe("EventEmitterMap", () => {
     });
 
     it("on_listeners_can_receive_parameters", () => {
-        const expected: string[] = ["started", "changed:0%", "changed:50%", "changed:100%", "completed"];
+        const expected: string[] = [
+            "started",
+            "changed:0%",
+            "changed:50%",
+            "changed:100%",
+            "completed"
+        ];
         let current: string[] = [];
 
         eventEmitterMap.on(eventEmitter, STARTED, (status: string) => {

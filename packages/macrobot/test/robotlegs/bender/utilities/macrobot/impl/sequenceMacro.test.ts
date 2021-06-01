@@ -92,7 +92,12 @@ describe("SequenceMacro", () => {
         dispatcher.dispatchEvent(new Event("trigger"));
 
         setTimeout(() => {
-            assert.deepEqual(reported, ["Command 1", "Command 2", "Command 3", "All commands have been executed!"]);
+            assert.deepEqual(reported, [
+                "Command 1",
+                "Command 2",
+                "Command 3",
+                "All commands have been executed!"
+            ]);
 
             done();
         }, 250);
@@ -101,7 +106,12 @@ describe("SequenceMacro", () => {
     it("change_atomic_property_after_execution_of_sub_commands_have_no_effect", () => {
         eventCommandMap.map("trigger", Event).toCommand(TestSequenceAnChangeAtomicLaterCommand);
         dispatcher.dispatchEvent(new Event("trigger"));
-        assert.deepEqual(reported, [1, 2, 3, "Atomic property changed after execution of sequence."]);
+        assert.deepEqual(reported, [
+            1,
+            2,
+            3,
+            "Atomic property changed after execution of sequence."
+        ]);
     });
 
     it("payloads_are_mapped", () => {
@@ -119,13 +129,30 @@ describe("SequenceMacro", () => {
     it("hooks_are_called", () => {
         eventCommandMap.map("trigger", Event).toCommand(TestSequenceWithHooksCommand);
         dispatcher.dispatchEvent(new Event("trigger"));
-        assert.deepEqual(reported, ["Hook", "Command 1", "Hook", "Hook", "Command 2", "Hook", "Hook", "Hook", "Command 3"]);
+        assert.deepEqual(reported, [
+            "Hook",
+            "Command 1",
+            "Hook",
+            "Hook",
+            "Command 2",
+            "Hook",
+            "Hook",
+            "Hook",
+            "Command 3"
+        ]);
     });
 
     it("command_is_injected_into_hooks", () => {
         eventCommandMap.map("trigger", Event).toCommand(TestSequenceWithInjectedHooksCommand);
         dispatcher.dispatchEvent(new Event("trigger"));
-        assert.deepEqual(reported, ["Hook of Command 1", "Command 1", "Hook of Command 2", "Command 2", "Hook of Command 3", "Command 3"]);
+        assert.deepEqual(reported, [
+            "Hook of Command 1",
+            "Command 1",
+            "Hook of Command 2",
+            "Command 2",
+            "Hook of Command 3",
+            "Command 3"
+        ]);
     });
 
     it("commands_are_executed_when_the_guard_allows", () => {
@@ -141,7 +168,9 @@ describe("SequenceMacro", () => {
     });
 
     it("payloads_are_injected_into_guards", () => {
-        eventCommandMap.map("trigger", Event).toCommand(TestSequenceWithPayloadInjectedIntoGuardsCommand);
+        eventCommandMap
+            .map("trigger", Event)
+            .toCommand(TestSequenceWithPayloadInjectedIntoGuardsCommand);
         dispatcher.dispatchEvent(new Event("trigger"));
         assert.deepEqual(reported, [
             "Guard of Command 1",
@@ -154,9 +183,18 @@ describe("SequenceMacro", () => {
     });
 
     it("payloads_are_injected_into_hooks", () => {
-        eventCommandMap.map("trigger", Event).toCommand(TestSequenceWithPayloadInjectedIntoHooksCommand);
+        eventCommandMap
+            .map("trigger", Event)
+            .toCommand(TestSequenceWithPayloadInjectedIntoHooksCommand);
         dispatcher.dispatchEvent(new Event("trigger"));
-        assert.deepEqual(reported, ["Hook of Command 1", "Command 1", "Hook of Command 2", "Command 2", "Hook of Command 3", "Command 3"]);
+        assert.deepEqual(reported, [
+            "Hook of Command 1",
+            "Command 1",
+            "Hook of Command 2",
+            "Command 2",
+            "Hook of Command 3",
+            "Command 3"
+        ]);
     });
 
     it("async_commands_are_executed_in_order", (done: Function) => {
@@ -180,7 +218,9 @@ describe("SequenceMacro", () => {
     });
 
     it("async_commands_are_executed_in_order_and_complete_callback_is_called", (done: Function) => {
-        eventCommandMap.map("trigger", Event).toCommand(TestSequenceWithAsyncAndCompleteCallbackCommand);
+        eventCommandMap
+            .map("trigger", Event)
+            .toCommand(TestSequenceWithAsyncAndCompleteCallbackCommand);
         dispatcher.dispatchEvent(new Event("trigger"));
 
         setTimeout(() => {
@@ -219,7 +259,9 @@ describe("SequenceMacro", () => {
     });
 
     it("subsequent_async_commands_are_still_executed_when_a_command_fails_and_complete_callback_is_called", (done: Function) => {
-        eventCommandMap.map("trigger", Event).toCommand(TestAtomicSequenceWithAsyncAndCompleteCallbackCommand);
+        eventCommandMap
+            .map("trigger", Event)
+            .toCommand(TestAtomicSequenceWithAsyncAndCompleteCallbackCommand);
         dispatcher.dispatchEvent(new Event("trigger"));
 
         setTimeout(() => {

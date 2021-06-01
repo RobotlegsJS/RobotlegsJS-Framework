@@ -37,7 +37,10 @@ export class MonoSignal implements ISignal {
      */
     public constructor(...valueClasses: any[]) {
         // Cannot use super.apply(null, valueClasses), so allow the subclass to call super(valueClasses).
-        this.valueClasses = valueClasses.length === 1 && valueClasses[0] instanceof Array ? valueClasses[0] : valueClasses;
+        this.valueClasses =
+            valueClasses.length === 1 && valueClasses[0] instanceof Array
+                ? valueClasses[0]
+                : valueClasses;
     }
 
     /**
@@ -121,7 +124,12 @@ export class MonoSignal implements ISignal {
         // Cannot dispatch fewer objects than declared classes.
         if (numValueObjects < numValueClasses) {
             throw new Error(
-                "Incorrect number of arguments. " + "Expected at least " + numValueClasses + " but received " + numValueObjects + "."
+                "Incorrect number of arguments. " +
+                    "Expected at least " +
+                    numValueClasses +
+                    " but received " +
+                    numValueObjects +
+                    "."
             );
         }
 
@@ -136,7 +144,13 @@ export class MonoSignal implements ISignal {
                 continue;
             }
 
-            throw new Error("Value object <" + valueObjects[i] + "> is not an instance of <" + this._valueClasses[i] + ">.");
+            throw new Error(
+                "Value object <" +
+                    valueObjects[i] +
+                    "> is not an instance of <" +
+                    this._valueClasses[i] +
+                    ">."
+            );
         }
 
         // Broadcast to the one listener.
@@ -148,7 +162,9 @@ export class MonoSignal implements ISignal {
     protected registerListener(listener: Function, once: boolean = false): ISlot {
         if (this.slot) {
             // If the listener exits previously added, definitely don't add it.
-            throw new Error("You cannot add or addOnce with a listener already added, remove the current listener first.");
+            throw new Error(
+                "You cannot add or addOnce with a listener already added, remove the current listener first."
+            );
         }
 
         return (this.slot = new Slot(listener, this, once));

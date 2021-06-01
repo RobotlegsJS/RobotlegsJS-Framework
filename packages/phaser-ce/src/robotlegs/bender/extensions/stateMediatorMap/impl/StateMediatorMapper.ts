@@ -23,7 +23,10 @@ export class StateMediatorMapper implements IStateMediatorMapper, IStateMediator
     /* Private Properties                                                         */
     /*============================================================================*/
 
-    private _mappings: Map<IClass<any>, IStateMediatorMapping> = new Map<IClass<any>, IStateMediatorMapping>();
+    private _mappings: Map<IClass<any>, IStateMediatorMapping> = new Map<
+        IClass<any>,
+        IStateMediatorMapping
+    >();
 
     private _typeFilter: ITypeFilter;
 
@@ -79,7 +82,10 @@ export class StateMediatorMapper implements IStateMediatorMapper, IStateMediator
     /*============================================================================*/
 
     private createMapping(mediatorClass: IClass<any>): StateMediatorMapping {
-        let mapping: StateMediatorMapping = new StateMediatorMapping(this._typeFilter, mediatorClass);
+        let mapping: StateMediatorMapping = new StateMediatorMapping(
+            this._typeFilter,
+            mediatorClass
+        );
         this._handler.addMapping(mapping);
         this._mappings.set(mediatorClass, mapping);
 

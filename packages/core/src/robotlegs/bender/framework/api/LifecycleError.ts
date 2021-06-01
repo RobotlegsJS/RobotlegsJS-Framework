@@ -13,7 +13,8 @@ export class LifecycleError extends Error {
     /* Public Static Properties                                                   */
     /*============================================================================*/
 
-    public static SYNC_HANDLER_ARG_MISMATCH: string = "When and After handlers must accept 0 or 1 arguments";
+    public static SYNC_HANDLER_ARG_MISMATCH: string =
+        "When and After handlers must accept 0 or 1 arguments";
 
     public static LATE_HANDLER_ERROR_MESSAGE: string = "Handler added late and will never fire";
 

@@ -13,7 +13,13 @@ import { assert } from "chai";
 
 import { Container, Sprite } from "pixi.js";
 
-import { instantiateUnmapped, IInjector, ITypeFilter, RobotlegsInjector, TypeMatcher } from "@robotlegsjs/core";
+import {
+    instantiateUnmapped,
+    IInjector,
+    ITypeFilter,
+    RobotlegsInjector,
+    TypeMatcher
+} from "@robotlegsjs/core";
 
 import { applyPixiPatch } from "../../../../../../src/robotlegs/bender/extensions/contextView/pixiPatch/pixi-patch";
 
@@ -48,7 +54,11 @@ describe("MediatorManager", () => {
         container = null;
     });
 
-    function createTypeFilter(allOf: any[], anyOf: any[] = null, noneOf: any[] = null): ITypeFilter {
+    function createTypeFilter(
+        allOf: any[],
+        anyOf: any[] = null,
+        noneOf: any[] = null
+    ): ITypeFilter {
         const matcher: TypeMatcher = new TypeMatcher();
 
         if (allOf) {
@@ -69,7 +79,10 @@ describe("MediatorManager", () => {
         factoryMock.expects("removeMediators").once();
 
         const view: Sprite = new Sprite();
-        const mapping: IMediatorMapping = new MediatorMapping(createTypeFilter([Sprite]), CallbackMediator);
+        const mapping: IMediatorMapping = new MediatorMapping(
+            createTypeFilter([Sprite]),
+            CallbackMediator
+        );
         const mediator: IMediator = instantiateUnmapped<IMediator>(injector, CallbackMediator);
 
         container.addChild(view);
@@ -85,7 +98,10 @@ describe("MediatorManager", () => {
         factoryMock.expects("removeMediators").never();
 
         const view: Sprite = new Sprite();
-        const mapping: MediatorMapping = new MediatorMapping(createTypeFilter([Sprite]), CallbackMediator);
+        const mapping: MediatorMapping = new MediatorMapping(
+            createTypeFilter([Sprite]),
+            CallbackMediator
+        );
         mapping.autoRemove(false);
         const mediator: IMediator = instantiateUnmapped<IMediator>(injector, CallbackMediator);
 
@@ -98,7 +114,14 @@ describe("MediatorManager", () => {
     });
 
     it("mediator_lifecycle_methods_are_invoked", () => {
-        const expected: string[] = ["preInitialize", "initialize", "postInitialize", "preDestroy", "destroy", "postDestroy"];
+        const expected: string[] = [
+            "preInitialize",
+            "initialize",
+            "postInitialize",
+            "preDestroy",
+            "destroy",
+            "postDestroy"
+        ];
         const actual: string[] = [];
         expected.forEach((phase: string) => {
             injector
@@ -109,8 +132,14 @@ describe("MediatorManager", () => {
                 .whenTargetNamed(phase + "Callback");
         });
         const item: Sprite = new Sprite();
-        const mediator: IMediator = instantiateUnmapped<IMediator>(injector, LifecycleReportingMediator);
-        const mapping: IMediatorMapping = new MediatorMapping(createTypeFilter([Sprite]), LifecycleReportingMediator);
+        const mediator: IMediator = instantiateUnmapped<IMediator>(
+            injector,
+            LifecycleReportingMediator
+        );
+        const mapping: IMediatorMapping = new MediatorMapping(
+            createTypeFilter([Sprite]),
+            LifecycleReportingMediator
+        );
         manager.addMediator(mediator, item, mapping);
         manager.removeMediator(mediator, item, mapping);
         assert.deepEqual(actual, expected);
@@ -118,8 +147,12 @@ describe("MediatorManager", () => {
 
     it("mediator_is_given_view", () => {
         const view: Sprite = new Sprite();
-        const mapping: IMediatorMapping = new MediatorMapping(createTypeFilter([Sprite]), LifecycleReportingMediator);
-        const mediator: LifecycleReportingMediator = instantiateUnmapped<LifecycleReportingMediator>(injector, LifecycleReportingMediator);
+        const mapping: IMediatorMapping = new MediatorMapping(
+            createTypeFilter([Sprite]),
+            LifecycleReportingMediator
+        );
+        const mediator: LifecycleReportingMediator =
+            instantiateUnmapped<LifecycleReportingMediator>(injector, LifecycleReportingMediator);
         manager.addMediator(mediator, view, mapping);
         assert.equal(mediator.view, view);
     });
@@ -129,7 +162,10 @@ describe("MediatorManager", () => {
         managerMock.expects("initializeMediator").once();
 
         const view: Sprite = new Sprite();
-        const mapping: IMediatorMapping = new MediatorMapping(createTypeFilter([Sprite]), EmptyMediator);
+        const mapping: IMediatorMapping = new MediatorMapping(
+            createTypeFilter([Sprite]),
+            EmptyMediator
+        );
 
         factory.createMediators(view, Sprite, [mapping]);
 
@@ -144,7 +180,10 @@ describe("MediatorManager", () => {
 
         const view: Sprite = new Sprite();
 
-        const mapping: IMediatorMapping = new MediatorMapping(createTypeFilter([Sprite]), EmptyMediator);
+        const mapping: IMediatorMapping = new MediatorMapping(
+            createTypeFilter([Sprite]),
+            EmptyMediator
+        );
 
         factory.createMediators(view, Sprite, [mapping]);
 

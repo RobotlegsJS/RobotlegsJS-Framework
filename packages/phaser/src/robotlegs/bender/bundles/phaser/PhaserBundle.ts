@@ -53,7 +53,10 @@ export class PhaserBundle implements IBundle {
             ViewMediatorMapExtension
         );
 
-        this._context.addConfigHandler(instanceOfType(ContextSceneManager), this.handleContextSceneManager.bind(this));
+        this._context.addConfigHandler(
+            instanceOfType(ContextSceneManager),
+            this.handleContextSceneManager.bind(this)
+        );
         this._context.whenInitializing(this.whenInitializing.bind(this));
         this._context.afterDestroying(this.afterDestroying.bind(this));
     }

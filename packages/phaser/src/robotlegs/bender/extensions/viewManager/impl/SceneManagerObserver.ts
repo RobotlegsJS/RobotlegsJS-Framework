@@ -26,8 +26,16 @@ export class SceneManagerObserver {
         this._registry = sceneRegistry;
 
         // We only care about roots
-        this._registry.addEventListener(SceneRegistryEvent.ROOT_SCENE_MANAGER_ADD, this.onRootSceneManagerAdd, this);
-        this._registry.addEventListener(SceneRegistryEvent.ROOT_SCENE_MANAGER_REMOVE, this.onRootSceneManagerRemove, this);
+        this._registry.addEventListener(
+            SceneRegistryEvent.ROOT_SCENE_MANAGER_ADD,
+            this.onRootSceneManagerAdd,
+            this
+        );
+        this._registry.addEventListener(
+            SceneRegistryEvent.ROOT_SCENE_MANAGER_REMOVE,
+            this.onRootSceneManagerRemove,
+            this
+        );
 
         // We might have arrived late on the scene
         this._registry.rootBindings.forEach((binding: SceneManagerBinding) => {
@@ -43,8 +51,16 @@ export class SceneManagerObserver {
      * @private
      */
     public destroy(): void {
-        this._registry.removeEventListener(SceneRegistryEvent.ROOT_SCENE_MANAGER_ADD, this.onRootSceneManagerAdd, this);
-        this._registry.removeEventListener(SceneRegistryEvent.ROOT_SCENE_MANAGER_REMOVE, this.onRootSceneManagerRemove, this);
+        this._registry.removeEventListener(
+            SceneRegistryEvent.ROOT_SCENE_MANAGER_ADD,
+            this.onRootSceneManagerAdd,
+            this
+        );
+        this._registry.removeEventListener(
+            SceneRegistryEvent.ROOT_SCENE_MANAGER_REMOVE,
+            this.onRootSceneManagerRemove,
+            this
+        );
 
         this._registry.rootBindings.forEach((binding: SceneManagerBinding) => {
             this.removeRootListener(binding.sceneManager);
@@ -87,7 +103,7 @@ export class SceneManagerObserver {
 
         const self = this;
 
-        Phaser.GameObjects.GameObjectFactory.prototype.existing = function(child) {
+        Phaser.GameObjects.GameObjectFactory.prototype.existing = function (child) {
             if (child instanceof Phaser.GameObjects.Container) {
                 let binding: SceneManagerBinding = self._registry.getBinding(sceneManager);
                 if (binding) {
@@ -98,7 +114,10 @@ export class SceneManagerObserver {
         };
     }
 
-    private patchCreateSceneMethod(sceneManager: Phaser.Scenes.SceneManager, originalMethod: any): (...args: any[]) => Phaser.Scene {
+    private patchCreateSceneMethod(
+        sceneManager: Phaser.Scenes.SceneManager,
+        originalMethod: any
+    ): (...args: any[]) => Phaser.Scene {
         return (...args) => {
             const scene: Phaser.Scene = originalMethod.apply(sceneManager, args);
             this.onSceneInit(scene);

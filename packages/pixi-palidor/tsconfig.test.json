@@ -3,7 +3,5 @@
   "compilerOptions": {
     "outDir": "lib-test"
   },
-  "include": [
-    "./test/**/*.ts"
-  ]
+  "include": ["./test/**/*.ts"]
 }

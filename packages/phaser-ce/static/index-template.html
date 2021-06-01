@@ -10,10 +10,10 @@
             if (navigator.serviceWorker) {
                 navigator.serviceWorker
                     .register("service-worker.js")
-                    .then(function() {
+                    .then(function () {
                         console.log("service worker installed");
                     })
-                    .catch(function(err) {
+                    .catch(function (err) {
                         console.log("Error", err);
                     });
             }

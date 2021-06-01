@@ -15,7 +15,9 @@ import { AbstractMediator } from "./AbstractMediator";
  * <p>Override initialize and destroy to hook into the mediator lifecycle.</p>
  */
 @injectable()
-export abstract class ViewMediator<T extends Phaser.GameObjects.Container> extends AbstractMediator {
+export abstract class ViewMediator<
+    T extends Phaser.GameObjects.Container
+> extends AbstractMediator {
     protected _viewComponent: T;
 
     /*============================================================================*/

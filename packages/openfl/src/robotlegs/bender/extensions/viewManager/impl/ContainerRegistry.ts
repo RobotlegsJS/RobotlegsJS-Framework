@@ -48,7 +48,10 @@ export class ContainerRegistry extends EventDispatcher {
     /* Private Properties                                                         */
     /*============================================================================*/
 
-    private _bindingByContainer: Map<DisplayObjectContainer, ContainerBinding> = new Map<DisplayObjectContainer, ContainerBinding>();
+    private _bindingByContainer: Map<DisplayObjectContainer, ContainerBinding> = new Map<
+        DisplayObjectContainer,
+        ContainerBinding
+    >();
 
     /*============================================================================*/
     /* Public Functions                                                           */
@@ -112,7 +115,10 @@ export class ContainerRegistry extends EventDispatcher {
         this._bindings.push(binding);
 
         // Add a listener so that we can remove this binding when it has no handlers
-        binding.addEventListener(ContainerBindingEvent.BINDING_EMPTY, this.onBindingEmpty.bind(this));
+        binding.addEventListener(
+            ContainerBindingEvent.BINDING_EMPTY,
+            this.onBindingEmpty.bind(this)
+        );
 
         // If the new binding doesn't have a parent it is a Root
         binding.parent = this.findParentBinding(container);
@@ -123,7 +129,7 @@ export class ContainerRegistry extends EventDispatcher {
         // Reparent any bindings which are contained within the new binding AND
         // A. Don't have a parent, OR
         // B. Have a parent that is not contained within the new binding
-        this._bindingByContainer.forEach(childBinding => {
+        this._bindingByContainer.forEach((childBinding) => {
             if (container.contains(childBinding.container)) {
                 if (!childBinding.parent) {
                     this.removeRootBinding(childBinding);
@@ -134,7 +140,9 @@ export class ContainerRegistry extends EventDispatcher {
             }
         });
 
-        this.dispatchEvent(new ContainerRegistryEvent(ContainerRegistryEvent.CONTAINER_ADD, binding.container));
+        this.dispatchEvent(
+            new ContainerRegistryEvent(ContainerRegistryEvent.CONTAINER_ADD, binding.container)
+        );
         return binding;
     }
 
@@ -153,7 +161,7 @@ export class ContainerRegistry extends EventDispatcher {
         }
 
         // Re-parent the bindings
-        this._bindingByContainer.forEach(childBinding => {
+        this._bindingByContainer.forEach((childBinding) => {
             if (childBinding.parent === binding) {
                 childBinding.parent = binding.parent;
                 if (!childBinding.parent) {
@@ -164,18 +172,27 @@ export class ContainerRegistry extends EventDispatcher {
             }
         });
 
-        this.dispatchEvent(new ContainerRegistryEvent(ContainerRegistryEvent.CONTAINER_REMOVE, binding.container));
+        this.dispatchEvent(
+            new ContainerRegistryEvent(ContainerRegistryEvent.CONTAINER_REMOVE, binding.container)
+        );
     }
 
     private addRootBinding(binding: ContainerBinding): void {
         this._rootBindings.push(binding);
-        this.dispatchEvent(new ContainerRegistryEvent(ContainerRegistryEvent.ROOT_CONTAINER_ADD, binding.container));
+        this.dispatchEvent(
+            new ContainerRegistryEvent(ContainerRegistryEvent.ROOT_CONTAINER_ADD, binding.container)
+        );
     }
 
     private removeRootBinding(binding: ContainerBinding): void {
         let index: number = this._rootBindings.indexOf(binding);
         this._rootBindings.splice(index, 1);
-        this.dispatchEvent(new ContainerRegistryEvent(ContainerRegistryEvent.ROOT_CONTAINER_REMOVE, binding.container));
+        this.dispatchEvent(
+            new ContainerRegistryEvent(
+                ContainerRegistryEvent.ROOT_CONTAINER_REMOVE,
+                binding.container
+            )
+        );
     }
 
     private onBindingEmpty(event: ContainerBindingEvent): void {

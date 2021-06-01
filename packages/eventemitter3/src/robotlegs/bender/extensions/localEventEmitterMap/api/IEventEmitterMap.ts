@@ -24,7 +24,12 @@ export interface IEventEmitterMap extends IEventMap {
      * @param listener The <code>event</code> handler
      * @param context the listener function's "this"
      */
-    on(emitter: EventEmitter, event: string | symbol, listener: EventEmitter.ListenerFn, context?: any): void;
+    on(
+        emitter: EventEmitter,
+        event: string | symbol,
+        listener: EventEmitter.ListenerFn,
+        context?: any
+    ): void;
 
     /**
      * The same as calling <code>once</code> directly on the <code>EventEmitter</code>,
@@ -35,7 +40,12 @@ export interface IEventEmitterMap extends IEventMap {
      * @param listener The <code>event</code> handler
      * @param context the listener function's "this"
      */
-    once(emitter: EventEmitter, event: string | symbol, listener: EventEmitter.ListenerFn, context?: any): void;
+    once(
+        emitter: EventEmitter,
+        event: string | symbol,
+        listener: EventEmitter.ListenerFn,
+        context?: any
+    ): void;
 
     /**
      * The same as calling <code>off</code> or <code>removeListener</code> directly on the <code>EventEmitter</code>,
@@ -46,7 +56,12 @@ export interface IEventEmitterMap extends IEventMap {
      * @param listener The <code>event</code> handler
      * @param context the listener function's "this"
      */
-    off(emitter: EventEmitter, event: string | symbol, listener?: EventEmitter.ListenerFn, context?: any): void;
+    off(
+        emitter: EventEmitter,
+        event: string | symbol,
+        listener?: EventEmitter.ListenerFn,
+        context?: any
+    ): void;
 
     /**
      * Removes all listeners registered through <code>on</code> or <code>once</code>

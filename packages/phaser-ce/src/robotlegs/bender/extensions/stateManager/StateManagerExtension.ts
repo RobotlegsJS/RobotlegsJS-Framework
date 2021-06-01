@@ -45,14 +45,12 @@ export class StateManagerExtension implements IExtension {
         this._injector = context.injector;
 
         // Just one Container Registry
-        StateManagerExtension._stateRegistry = StateManagerExtension._stateRegistry || new StateRegistry();
+        StateManagerExtension._stateRegistry =
+            StateManagerExtension._stateRegistry || new StateRegistry();
         this._injector.bind(StateRegistry).toConstantValue(StateManagerExtension._stateRegistry);
 
         // But you get your own View Manager
-        this._injector
-            .bind(IStateManager)
-            .to(StateManager)
-            .inSingletonScope();
+        this._injector.bind(IStateManager).to(StateManager).inSingletonScope();
     }
 
     /*============================================================================*/

@@ -69,14 +69,8 @@ describe("MediatorMap", () => {
             .toMediator(RectangleMediator)
             .withHooks(HookWithMediatorAndViewInjectionReportFunction);
 
-        injector
-            .bind(Number)
-            .toConstantValue(expectedViewWidth)
-            .whenTargetNamed("width");
-        injector
-            .bind(Number)
-            .toConstantValue(expectedViewHeight)
-            .whenTargetNamed("height");
+        injector.bind(Number).toConstantValue(expectedViewWidth).whenTargetNamed("width");
+        injector.bind(Number).toConstantValue(expectedViewHeight).whenTargetNamed("height");
 
         injector
             .bind("Function")
@@ -105,7 +99,9 @@ describe("MediatorMap", () => {
     });
 
     it("doesnt_leave_view_and_mediator_mappings_lying_around", () => {
-        mediatorMap.mapMatcher(new TypeMatcher().anyOf(createjs.Container, ExampleView)).toMediator(ExampleMediator);
+        mediatorMap
+            .mapMatcher(new TypeMatcher().anyOf(createjs.Container, ExampleView))
+            .toMediator(ExampleMediator);
         mediatorMap.handleView(new ExampleView(), ExampleView);
 
         assert.isFalse(injector.isBound(createjs.Container));
@@ -114,7 +110,9 @@ describe("MediatorMap", () => {
     });
 
     it("handler_creates_mediator_for_view_mapped_by_matcher", () => {
-        mediatorMap.mapMatcher(new TypeMatcher().allOf(createjs.DisplayObject)).toMediator(ExampleDisplayObjectMediator);
+        mediatorMap
+            .mapMatcher(new TypeMatcher().allOf(createjs.DisplayObject))
+            .toMediator(ExampleDisplayObjectMediator);
 
         mediatorMap.handleView(new ExampleView(), ExampleView);
 
@@ -124,7 +122,9 @@ describe("MediatorMap", () => {
     });
 
     it("handler_doesnt_create_mediator_for_wrong_view_mapped_by_matcher", () => {
-        mediatorMap.mapMatcher(new TypeMatcher().allOf(createjs.Container)).toMediator(ExampleDisplayObjectMediator);
+        mediatorMap
+            .mapMatcher(new TypeMatcher().allOf(createjs.Container))
+            .toMediator(ExampleDisplayObjectMediator);
 
         mediatorMap.handleView(new createjs.DisplayObject(), null);
 

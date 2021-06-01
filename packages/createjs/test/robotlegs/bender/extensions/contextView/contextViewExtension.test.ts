@@ -40,7 +40,7 @@ describe("ContextViewExtension", () => {
         let stage: createjs.Stage = new createjs.Stage("canvas");
         let actual: ContextView = null;
         context.install(ContextViewExtension).configure(new ContextView(stage));
-        context.whenInitializing(function(): void {
+        context.whenInitializing(function (): void {
             actual = context.injector.get<ContextView>(IContextView);
         });
         context.initialize();
@@ -51,8 +51,10 @@ describe("ContextViewExtension", () => {
         let stage: createjs.Stage = new createjs.Stage("canvas");
         let actual: ContextView = null;
         let secondStage: createjs.Stage = new createjs.Stage("canvas2");
-        context.install(ContextViewExtension).configure(new ContextView(stage), new ContextView(secondStage));
-        context.whenInitializing(function(): void {
+        context
+            .install(ContextViewExtension)
+            .configure(new ContextView(stage), new ContextView(secondStage));
+        context.whenInitializing(function (): void {
             actual = context.injector.get<ContextView>(IContextView);
         });
         context.initialize();
@@ -61,7 +63,7 @@ describe("ContextViewExtension", () => {
 
     it("extension_logs_error_when_context_initialized_with_no_contextView", () => {
         let errorLogged: boolean = false;
-        let logTarget: CallbackLogTarget = new CallbackLogTarget(function(log: LogParams): void {
+        let logTarget: CallbackLogTarget = new CallbackLogTarget(function (log: LogParams): void {
             if (log.source instanceof ContextViewExtension && log.level === LogLevel.ERROR) {
                 errorLogged = true;
             }

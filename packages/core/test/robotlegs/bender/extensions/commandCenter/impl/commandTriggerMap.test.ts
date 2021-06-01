@@ -36,10 +36,7 @@ describe("CommandTriggerMap", () => {
 
     it("keyFactory_is_called_with_params", () => {
         let subjectMock = sinon.mock(subject);
-        subjectMock
-            .expects("_keyFactory")
-            .once()
-            .withArgs("hi", 5);
+        subjectMock.expects("_keyFactory").once().withArgs("hi", 5);
         subject.getTrigger("hi", 5);
         subjectMock.restore();
         subjectMock.verify();
@@ -47,10 +44,7 @@ describe("CommandTriggerMap", () => {
 
     it("triggerFactory_is_called_with_params", () => {
         let subjectMock = sinon.mock(subject);
-        subjectMock
-            .expects("_triggerFactory")
-            .once()
-            .withArgs("hi", 5);
+        subjectMock.expects("_triggerFactory").once().withArgs("hi", 5);
         subject.getTrigger("hi", 5);
         subjectMock.restore();
         subjectMock.verify();

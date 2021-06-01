@@ -1,21 +1,16 @@
 {
-  "extends": [
-    "tslint:latest",
-    "tslint-config-prettier"
-  ],
+  "extends": ["tslint:latest", "tslint-config-prettier"],
   "rules": {
-    "ban-types": [ false ],
+    "ban-types": [false],
     "class-name": true,
-    "comment-format": [
-      true,
-      "check-space"
-    ],
+    "comment-format": [true, "check-space"],
     "curly": true,
     "forin": true,
     "label-position": true,
     "member-access": true,
     "member-ordering": [
-      true, {
+      true,
+      {
         "order": [
           "static-field",
           "instance-field",
@@ -29,14 +24,7 @@
     "no-angle-bracket-type-assertion": false,
     "no-arg": true,
     "no-bitwise": true,
-    "no-console": [
-      true,
-      "debug",
-      "info",
-      "time",
-      "timeEnd",
-      "trace"
-    ],
+    "no-console": [true, "debug", "info", "time", "timeEnd", "trace"],
     "no-construct": true,
     "no-debugger": true,
     "no-duplicate-variable": true,
@@ -54,16 +42,11 @@
     "no-var-keyword": true,
     "object-literal-sort-keys": true,
     "ordered-imports": false,
-    "only-arrow-functions": [ false ],
+    "only-arrow-functions": [false],
     "prefer-const": false,
-    "radix":true,
-    "trailing-comma": [
-      false
-    ],
-    "triple-equals": [
-      true,
-      "allow-null-check"
-    ],
+    "radix": true,
+    "trailing-comma": [false],
+    "triple-equals": [true, "allow-null-check"],
     "variable-name": false
   }
 }

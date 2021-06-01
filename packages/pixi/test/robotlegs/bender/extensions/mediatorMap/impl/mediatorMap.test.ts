@@ -73,8 +73,12 @@ describe("MediatorMap", () => {
     });
 
     it("unmapMatcher_returns_mapper", () => {
-        const mapper: MediatorMapper = <MediatorMapper>mediatorMap.mapMatcher(new TypeMatcher().allOf(Sprite));
-        const unmappedMapper: MediatorMapper = <MediatorMapper>mediatorMap.unmapMatcher(new TypeMatcher().allOf(Sprite));
+        const mapper: MediatorMapper = <MediatorMapper>(
+            mediatorMap.mapMatcher(new TypeMatcher().allOf(Sprite))
+        );
+        const unmappedMapper: MediatorMapper = <MediatorMapper>(
+            mediatorMap.unmapMatcher(new TypeMatcher().allOf(Sprite))
+        );
         assert.equal(unmappedMapper, mapper);
     });
 

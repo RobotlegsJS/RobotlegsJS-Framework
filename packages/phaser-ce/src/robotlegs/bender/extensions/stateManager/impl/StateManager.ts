@@ -71,7 +71,9 @@ export class StateManager extends EventDispatcher implements IStateManager {
             this._registry.addStateManager(stateManager).addHandler(handler);
         });
 
-        this.dispatchEvent(new StateManagerEvent(StateManagerEvent.STATE_MANAGER_ADD, stateManager));
+        this.dispatchEvent(
+            new StateManagerEvent(StateManagerEvent.STATE_MANAGER_ADD, stateManager)
+        );
     }
 
     /**
@@ -92,7 +94,9 @@ export class StateManager extends EventDispatcher implements IStateManager {
             binding.removeHandler(handler);
         });
 
-        this.dispatchEvent(new StateManagerEvent(StateManagerEvent.STATE_MANAGER_REMOVE, stateManager));
+        this.dispatchEvent(
+            new StateManagerEvent(StateManagerEvent.STATE_MANAGER_REMOVE, stateManager)
+        );
     }
 
     /**

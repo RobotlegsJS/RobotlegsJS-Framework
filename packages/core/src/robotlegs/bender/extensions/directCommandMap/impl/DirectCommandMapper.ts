@@ -38,7 +38,11 @@ export class DirectCommandMapper implements IDirectCommandConfigurator {
     /**
      * @private
      */
-    constructor(executor: ICommandExecutor, mappings: ICommandMappingList, commandClass: IClass<ICommand>) {
+    constructor(
+        executor: ICommandExecutor,
+        mappings: ICommandMappingList,
+        commandClass: IClass<ICommand>
+    ) {
         this._executor = executor;
         this._mappings = mappings;
         this._mapping = new CommandMapping(commandClass);

@@ -24,7 +24,10 @@ export class CommandMappingList implements ICommandMappingList {
     /* Private Properties                                                         */
     /*============================================================================*/
 
-    private _mappingsByCommand: Map<IClass<ICommand>, ICommandMapping> = new Map<IClass<ICommand>, ICommandMapping>();
+    private _mappingsByCommand: Map<IClass<ICommand>, ICommandMapping> = new Map<
+        IClass<ICommand>,
+        ICommandMapping
+    >();
 
     private _mappings: ICommandMapping[] = [];
 

@@ -27,7 +27,9 @@ export class ReportDelayAsyncCommand extends AsyncCommand {
 
     public execute(): void {
         this._succeed = this._succeed === undefined ? true : this._succeed;
-        this._report("Start execution of " + this._name + " and await " + this._delay + " milliseconds");
+        this._report(
+            "Start execution of " + this._name + " and await " + this._delay + " milliseconds"
+        );
         setTimeout(this.onTimeout.bind(this), this._delay);
     }
 

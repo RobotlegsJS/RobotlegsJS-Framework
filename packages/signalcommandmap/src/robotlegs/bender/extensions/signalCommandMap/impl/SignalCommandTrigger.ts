@@ -44,11 +44,19 @@ export class SignalCommandTrigger implements ICommandTrigger {
     /**
      * @private
      */
-    constructor(injector: IInjector, signalClass: IClass<ISignal>, processors?: Function[], logger?: ILogger) {
+    constructor(
+        injector: IInjector,
+        signalClass: IClass<ISignal>,
+        processors?: Function[],
+        logger?: ILogger
+    ) {
         this._injector = injector;
         this._signalClass = signalClass;
         this._mappings = new CommandMappingList(this, processors ? processors : [], logger);
-        this._executor = new CommandExecutor(injector, this._mappings.removeMapping.bind(this._mappings));
+        this._executor = new CommandExecutor(
+            injector,
+            this._mappings.removeMapping.bind(this._mappings)
+        );
     }
 
     /*============================================================================*/
@@ -67,10 +75,7 @@ export class SignalCommandTrigger implements ICommandTrigger {
      */
     public activate(): void {
         if (!this._injector.isBound(this._signalClass)) {
-            this._injector
-                .bind(this._signalClass)
-                .to(this._signalClass)
-                .inSingletonScope();
+            this._injector.bind(this._signalClass).to(this._signalClass).inSingletonScope();
         }
         this._signal = this._injector.get<ISignal>(this._signalClass);
         this._signal.add(this.routePayloadToCommands);

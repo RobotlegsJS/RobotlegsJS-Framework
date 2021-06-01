@@ -15,7 +15,7 @@
  * (if provided).
  */
 export function createHandler(closure: Function = null, ...params: any[]): Function {
-    return function(): void {
+    return function (): void {
         if (closure) {
             closure.apply(null, params);
         }

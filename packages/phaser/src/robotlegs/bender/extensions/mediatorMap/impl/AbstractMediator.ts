@@ -66,7 +66,12 @@ export abstract class AbstractMediator implements IMediator {
      * @param listener The `event` handler
      * @param context The listener function's "this"
      */
-    protected on(emitter: Phaser.Events.EventEmitter, event: string | symbol, listener: Function, context?: any): void {
+    protected on(
+        emitter: Phaser.Events.EventEmitter,
+        event: string | symbol,
+        listener: Function,
+        context?: any
+    ): void {
         this._eventEmitterMap.on(emitter, event, listener, context || this);
     }
 
@@ -84,7 +89,12 @@ export abstract class AbstractMediator implements IMediator {
      * @param listener The `event` handler
      * @param context The listener function's "this"
      */
-    protected once(emitter: Phaser.Events.EventEmitter, event: string | symbol, listener: Function, context?: any): void {
+    protected once(
+        emitter: Phaser.Events.EventEmitter,
+        event: string | symbol,
+        listener: Function,
+        context?: any
+    ): void {
         this._eventEmitterMap.once(emitter, event, listener, context || this);
     }
 
@@ -101,7 +111,12 @@ export abstract class AbstractMediator implements IMediator {
      * @param listener The `event` handler
      * @param contextt The listener function's "this"
      */
-    protected off(emitter: Phaser.Events.EventEmitter, event: string | symbol, listener: Function, context?: any): void {
+    protected off(
+        emitter: Phaser.Events.EventEmitter,
+        event: string | symbol,
+        listener: Function,
+        context?: any
+    ): void {
         this._eventEmitterMap.off(emitter, event, listener, context || this);
     }
 
@@ -128,7 +143,15 @@ export abstract class AbstractMediator implements IMediator {
         useCapture?: boolean,
         priority?: number
     ): void {
-        this._eventEmitterMap.mapListener(this._eventDispatcher, event, listener, context || this, eventClass, useCapture, priority);
+        this._eventEmitterMap.mapListener(
+            this._eventDispatcher,
+            event,
+            listener,
+            context || this,
+            eventClass,
+            useCapture,
+            priority
+        );
     }
 
     /**
@@ -153,7 +176,14 @@ export abstract class AbstractMediator implements IMediator {
         eventClass?: IClass<IEvent>,
         useCapture?: boolean
     ): void {
-        this._eventEmitterMap.unmapListener(this._eventDispatcher, event, listener, context || this, eventClass, useCapture);
+        this._eventEmitterMap.unmapListener(
+            this._eventDispatcher,
+            event,
+            listener,
+            context || this,
+            eventClass,
+            useCapture
+        );
     }
 
     /**
@@ -187,7 +217,11 @@ export abstract class AbstractMediator implements IMediator {
      * @param listener The `Event` handler
      * @param options An options object that specifies characteristics about the event listener
      */
-    protected removeDomListener(eventTarget: EventTarget, event: string, listener: EventListenerOrEventListenerObject): void {
+    protected removeDomListener(
+        eventTarget: EventTarget,
+        event: string,
+        listener: EventListenerOrEventListenerObject
+    ): void {
         this._eventEmitterMap.unmapDomListener(eventTarget, event, listener);
     }
 

@@ -48,7 +48,7 @@ export class StageCrawler {
     private scanContainer(container: createjs.Container): void {
         this.processView(container);
 
-        container.children.forEach(child => {
+        container.children.forEach((child) => {
             if (child instanceof createjs.Container) {
                 this.scanContainer(child);
             } else {

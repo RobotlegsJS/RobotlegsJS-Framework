@@ -27,9 +27,13 @@ export class FloatingViewMediator extends Mediator<FloatingView> {
         this.eventDispatcher.dispatchEvent(new Event("floatingView"));
     }
     private onCloseAll(e: any): void {
-        this.eventDispatcher.dispatchEvent(new PalidorEvent(PalidorEvent.REMOVE_ALL_FLOATING_VIEWS));
+        this.eventDispatcher.dispatchEvent(
+            new PalidorEvent(PalidorEvent.REMOVE_ALL_FLOATING_VIEWS)
+        );
     }
     private onClose(e: any): void {
-        this.eventDispatcher.dispatchEvent(new PalidorEvent(PalidorEvent.REMOVE_LAST_FLOATING_VIEW_ADDED));
+        this.eventDispatcher.dispatchEvent(
+            new PalidorEvent(PalidorEvent.REMOVE_LAST_FLOATING_VIEW_ADDED)
+        );
     }
 }

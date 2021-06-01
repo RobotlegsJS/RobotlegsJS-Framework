@@ -50,14 +50,8 @@ describe("SubCommandMappingList", () => {
     it("addMapping_stores_mapping_for_same_command_with_different_configurations", () => {
         let mapping1: SubCommandMapping = new SubCommandMapping(NullCommand);
         let mapping2: SubCommandMapping = new SubCommandMapping(NullCommand);
-        mapping1
-            .withPayloads("Command 1", 50)
-            .withGuards(HappyGuard)
-            .withHooks(ReportHook);
-        mapping1
-            .withPayloads("Command 2", 100)
-            .withGuards(GrumpyGuard)
-            .withHooks(ReportHook);
+        mapping1.withPayloads("Command 1", 50).withGuards(HappyGuard).withHooks(ReportHook);
+        mapping1.withPayloads("Command 2", 100).withGuards(GrumpyGuard).withHooks(ReportHook);
         subject.addMapping(mapping1);
         subject.addMapping(mapping2);
         assert.deepEqual(subject.getList(), [mapping1, mapping2]);
@@ -66,14 +60,8 @@ describe("SubCommandMappingList", () => {
     it("addMapping_stores_mapping_for_different_commands_with_different_configurations", () => {
         let mapping1: SubCommandMapping = new SubCommandMapping(NullCommand);
         let mapping2: SubCommandMapping = new SubCommandMapping(NullCommand2);
-        mapping1
-            .withPayloads("Command 1", 50)
-            .withGuards(HappyGuard)
-            .withHooks(ReportHook);
-        mapping1
-            .withPayloads("Command 2", 100)
-            .withGuards(GrumpyGuard)
-            .withHooks(ReportHook);
+        mapping1.withPayloads("Command 1", 50).withGuards(HappyGuard).withHooks(ReportHook);
+        mapping1.withPayloads("Command 2", 100).withGuards(GrumpyGuard).withHooks(ReportHook);
         subject.addMapping(mapping1);
         subject.addMapping(mapping2);
         assert.deepEqual(subject.getList(), [mapping1, mapping2]);

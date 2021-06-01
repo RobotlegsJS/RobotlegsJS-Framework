@@ -45,7 +45,9 @@ export class ContextViewExtension implements IExtension {
 
     private handleContextView(contextView: IContextView): void {
         if (this._injector.isBound(IContextView)) {
-            this._logger.warn("A contextView has already been installed, ignoring {0}", [contextView.view]);
+            this._logger.warn("A contextView has already been installed, ignoring {0}", [
+                contextView.view
+            ]);
         } else {
             this._logger.debug("Mapping {0} as contextView", [contextView.view]);
 
@@ -55,7 +57,9 @@ export class ContextViewExtension implements IExtension {
 
     private beforeInitializing(): void {
         if (!this._injector.isBound(IContextView)) {
-            this._logger.error("A ContextView must be installed if you install the ContextViewExtension.");
+            this._logger.error(
+                "A ContextView must be installed if you install the ContextViewExtension."
+            );
         }
     }
 }

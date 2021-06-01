@@ -11,7 +11,13 @@ import { assert } from "chai";
 
 import { IContext, Context, LogLevel } from "@robotlegsjs/core";
 
-import { IContextView, IMediatorMap, IViewManager, ContextView, OpenFLBundle } from "../../../../../src";
+import {
+    IContextView,
+    IMediatorMap,
+    IViewManager,
+    ContextView,
+    OpenFLBundle
+} from "../../../../../src";
 
 import { ContainerRegistry } from "../../../../../src/robotlegs/bender/extensions/viewManager/impl/ContainerRegistry";
 
@@ -32,10 +38,7 @@ describe("OpenFLBundle", () => {
 
     it("bundle_is_properly_installed_into_context", () => {
         context = new Context();
-        context
-            .install(OpenFLBundle)
-            .configure(new ContextView(new Stage()))
-            .initialize();
+        context.install(OpenFLBundle).configure(new ContextView(new Stage())).initialize();
 
         // Verify if all extensions are installed
         assert.isTrue(context.injector.isBound(IContextView));

@@ -44,14 +44,14 @@ export class SceneManagerExtension implements IExtension {
         this._injector = context.injector;
 
         // Just one Container Registry
-        SceneManagerExtension._containerRegistry = SceneManagerExtension._containerRegistry || new SceneRegistry();
-        this._injector.bind(SceneRegistry).toConstantValue(SceneManagerExtension._containerRegistry);
+        SceneManagerExtension._containerRegistry =
+            SceneManagerExtension._containerRegistry || new SceneRegistry();
+        this._injector
+            .bind(SceneRegistry)
+            .toConstantValue(SceneManagerExtension._containerRegistry);
 
         // But you get your own View Manager
-        this._injector
-            .bind(ISceneManager)
-            .to(SceneManager)
-            .inSingletonScope();
+        this._injector.bind(ISceneManager).to(SceneManager).inSingletonScope();
     }
 
     /*============================================================================*/

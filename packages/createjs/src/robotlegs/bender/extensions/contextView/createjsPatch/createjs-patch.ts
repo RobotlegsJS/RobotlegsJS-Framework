@@ -22,7 +22,7 @@ function emitAddedEvent(stage: createjs.Stage, target: createjs.DisplayObject): 
     stage.dispatchEvent(event);
 
     if (target instanceof createjs.Container) {
-        target.children.forEach(child => emitAddedEvent(stage, child));
+        target.children.forEach((child) => emitAddedEvent(stage, child));
     }
 }
 
@@ -34,7 +34,7 @@ function emitRemovedEvent(stage: createjs.Stage, target: createjs.DisplayObject)
     stage.dispatchEvent(event);
 
     if (target instanceof createjs.Container) {
-        target.children.forEach(child => emitRemovedEvent(stage, child));
+        target.children.forEach((child) => emitRemovedEvent(stage, child));
     }
 }
 
@@ -45,10 +45,9 @@ export function applyCreateJSPatch(stage: createjs.Stage) {
     let removeChildAt = createjs.Container.prototype.removeChildAt;
     let removeAllChildren = createjs.Container.prototype.removeAllChildren;
 
-    createjs.Container.prototype.addChild = function patchedAddChild<T extends createjs.DisplayObject>(
-        child: T,
-        ...additionalChildren: T[]
-    ): T {
+    createjs.Container.prototype.addChild = function patchedAddChild<
+        T extends createjs.DisplayObject
+    >(child: T, ...additionalChildren: T[]): T {
         for (let i = 0, len = arguments.length; i < len; i++) {
             const object = arguments[i];
             addChild.call(this, object);
@@ -61,9 +60,9 @@ export function applyCreateJSPatch(stage: createjs.Stage) {
         return arguments[arguments.length - 1];
     };
 
-    createjs.Container.prototype.addChildAt = function patchedAddChildAt<T extends createjs.DisplayObject>(
-        ...childOrIndex: T[] | number[]
-    ): T {
+    createjs.Container.prototype.addChildAt = function patchedAddChildAt<
+        T extends createjs.DisplayObject
+    >(...childOrIndex: T[] | number[]): T {
         for (let i = 0, len = arguments.length - 1; i < len; i++) {
             const object = arguments[i];
             addChildAt.call(this, object, arguments[len] + i);
@@ -76,7 +75,9 @@ export function applyCreateJSPatch(stage: createjs.Stage) {
         return arguments[arguments.length - 2];
     };
 
-    createjs.Container.prototype.removeChild = function patchedRemoveChild<T extends createjs.DisplayObject>(...child: T[]): boolean {
+    createjs.Container.prototype.removeChild = function patchedRemoveChild<
+        T extends createjs.DisplayObject
+    >(...child: T[]): boolean {
         let removed: boolean = true;
 
         for (let i = 0, len = child.length; i < len; i++) {
@@ -90,7 +91,9 @@ export function applyCreateJSPatch(stage: createjs.Stage) {
         return removed;
     };
 
-    createjs.Container.prototype.removeChildAt = function patchedRemoveChildAt(...index: number[]): boolean {
+    createjs.Container.prototype.removeChildAt = function patchedRemoveChildAt(
+        ...index: number[]
+    ): boolean {
         let removed: boolean = true;
 
         for (let i = 0, len = arguments.length; i < len; i++) {

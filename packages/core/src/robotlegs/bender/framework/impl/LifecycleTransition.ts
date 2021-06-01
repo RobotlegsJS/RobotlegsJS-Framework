@@ -91,12 +91,20 @@ export class LifecycleTransition {
      * @param postTransitionEvent
      * @return Self
      */
-    public withEvents(preTransitionEvent: string, transitionEvent: string, postTransitionEvent: string): LifecycleTransition {
+    public withEvents(
+        preTransitionEvent: string,
+        transitionEvent: string,
+        postTransitionEvent: string
+    ): LifecycleTransition {
         this._preTransitionEvent = preTransitionEvent;
         this._transitionEvent = transitionEvent;
         this._postTransitionEvent = postTransitionEvent;
         if (this._reverse) {
-            this._lifecycle.addReversedEventTypes(preTransitionEvent, transitionEvent, postTransitionEvent);
+            this._lifecycle.addReversedEventTypes(
+                preTransitionEvent,
+                transitionEvent,
+                postTransitionEvent
+            );
         }
         return this;
     }
@@ -107,7 +115,11 @@ export class LifecycleTransition {
      */
     public inReverse(): LifecycleTransition {
         this._reverse = true;
-        this._lifecycle.addReversedEventTypes(this._preTransitionEvent, this._transitionEvent, this._postTransitionEvent);
+        this._lifecycle.addReversedEventTypes(
+            this._preTransitionEvent,
+            this._transitionEvent,
+            this._postTransitionEvent
+        );
         return this;
     }
 
@@ -197,7 +209,9 @@ export class LifecycleTransition {
     /*============================================================================*/
 
     private invalidTransition(): boolean {
-        return this._fromStates.length > 0 && this._fromStates.indexOf(this._lifecycle.state) === -1;
+        return (
+            this._fromStates.length > 0 && this._fromStates.indexOf(this._lifecycle.state) === -1
+        );
     }
 
     private setState(state: string): void {

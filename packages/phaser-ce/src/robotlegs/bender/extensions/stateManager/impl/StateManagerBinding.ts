@@ -84,7 +84,9 @@ export class StateManagerBinding extends EventDispatcher {
         if (index > -1) {
             this._handlers.splice(index, 1);
             if (this._handlers.length === 0) {
-                this.dispatchEvent(new StateManagerBindingEvent(StateManagerBindingEvent.BINDING_EMPTY));
+                this.dispatchEvent(
+                    new StateManagerBindingEvent(StateManagerBindingEvent.BINDING_EMPTY)
+                );
             }
         }
     }

@@ -96,7 +96,10 @@ export class CommandExecutor implements ICommandExecutor {
 
         if (command) {
             let executeMethod: Function = command.execute.bind(command);
-            let result: any = hasPayload && executeMethod.length > 0 ? executeMethod.apply(command, payload.values) : executeMethod();
+            let result: any =
+                hasPayload && executeMethod.length > 0
+                    ? executeMethod.apply(command, payload.values)
+                    : executeMethod();
             if (this._handleResult) {
                 this._handleResult(result, command, mapping);
             }

@@ -11,7 +11,11 @@ import { assert } from "chai";
 
 import { IContext, Context, LogLevel } from "@robotlegsjs/core";
 
-import { IContextStateManager, ContextStateManager, ContextStateManagerExtension } from "../../../../../src";
+import {
+    IContextStateManager,
+    ContextStateManager,
+    ContextStateManagerExtension
+} from "../../../../../src";
 
 import { CallbackLogTarget } from "./support/CallbackLogTarget";
 import { LogParams } from "./support/LogParams";
@@ -39,7 +43,9 @@ describe("ContextStateManagerExtension", () => {
     it("contextStateManager_is_mapped", () => {
         let phaserStateManager: Phaser.StateManager = new Phaser.StateManager(null);
         let actual: ContextStateManager = null;
-        context.install(ContextStateManagerExtension).configure(new ContextStateManager(phaserStateManager));
+        context
+            .install(ContextStateManagerExtension)
+            .configure(new ContextStateManager(phaserStateManager));
         context.whenInitializing(() => {
             actual = context.injector.get<ContextStateManager>(IContextStateManager);
         });
@@ -53,7 +59,10 @@ describe("ContextStateManagerExtension", () => {
         let secondPhaserStateManager: Phaser.StateManager = new Phaser.StateManager(null);
         context
             .install(ContextStateManagerExtension)
-            .configure(new ContextStateManager(phaserStateManager), new ContextStateManager(secondPhaserStateManager));
+            .configure(
+                new ContextStateManager(phaserStateManager),
+                new ContextStateManager(secondPhaserStateManager)
+            );
         context.whenInitializing(() => {
             actual = context.injector.get<ContextStateManager>(IContextStateManager);
         });
@@ -63,8 +72,11 @@ describe("ContextStateManagerExtension", () => {
 
     it("extension_logs_error_when_context_initialized_with_no_ContextStateManager", () => {
         let errorLogged: boolean = false;
-        let logTarget: CallbackLogTarget = new CallbackLogTarget(function(log: LogParams): void {
-            if (log.source instanceof ContextStateManagerExtension && log.level === LogLevel.ERROR) {
+        let logTarget: CallbackLogTarget = new CallbackLogTarget(function (log: LogParams): void {
+            if (
+                log.source instanceof ContextStateManagerExtension &&
+                log.level === LogLevel.ERROR
+            ) {
                 errorLogged = true;
             }
         });

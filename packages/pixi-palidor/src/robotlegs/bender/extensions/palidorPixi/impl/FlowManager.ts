@@ -67,9 +67,24 @@ export class FlowManager implements IFlowManager {
     }
 
     private mapPalidorListeners(): void {
-        this._eventMap.mapListener(this._dispatcher, PalidorEvent.REMOVE_CURRENT_VIEW, this.onRemoveCurrentView, this);
-        this._eventMap.mapListener(this._dispatcher, PalidorEvent.REMOVE_LAST_FLOATING_VIEW_ADDED, this.onRemoveLastFloatingView, this);
-        this._eventMap.mapListener(this._dispatcher, PalidorEvent.REMOVE_ALL_FLOATING_VIEWS, this.onRemoveAllFloatingView, this);
+        this._eventMap.mapListener(
+            this._dispatcher,
+            PalidorEvent.REMOVE_CURRENT_VIEW,
+            this.onRemoveCurrentView,
+            this
+        );
+        this._eventMap.mapListener(
+            this._dispatcher,
+            PalidorEvent.REMOVE_LAST_FLOATING_VIEW_ADDED,
+            this.onRemoveLastFloatingView,
+            this
+        );
+        this._eventMap.mapListener(
+            this._dispatcher,
+            PalidorEvent.REMOVE_ALL_FLOATING_VIEWS,
+            this.onRemoveAllFloatingView,
+            this
+        );
     }
 
     private onChangeView(e: Event): void {

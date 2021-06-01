@@ -27,10 +27,7 @@ export class CascadingCommand implements ICommand {
     public execute(): void {
         this.callback();
 
-        this.signalCommandMap
-            .map(SupportSignal)
-            .toCommand(NullCommand)
-            .once();
+        this.signalCommandMap.map(SupportSignal).toCommand(NullCommand).once();
 
         let signal: SupportSignal = this.injector.get(SupportSignal);
         signal.dispatch();

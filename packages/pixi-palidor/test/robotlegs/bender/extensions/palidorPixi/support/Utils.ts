@@ -5,7 +5,13 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import { IContainerController, IFlowManager, FlowManager, PixiContainerController, PalidorPixiExtension } from "./../../../../../../src";
+import {
+    IContainerController,
+    IFlowManager,
+    FlowManager,
+    PixiContainerController,
+    PalidorPixiExtension
+} from "./../../../../../../src";
 
 import { Container } from "pixi.js";
 

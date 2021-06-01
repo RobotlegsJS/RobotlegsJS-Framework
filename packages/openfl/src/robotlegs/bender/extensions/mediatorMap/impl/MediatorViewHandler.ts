@@ -24,7 +24,10 @@ export class MediatorViewHandler implements IViewHandler {
 
     private _mappings: IMediatorMapping[] = [];
 
-    private _knownMappings: Map<IClass<any>, IMediatorMapping[] | boolean> = new Map<IClass<any>, IMediatorMapping[]>();
+    private _knownMappings: Map<IClass<any>, IMediatorMapping[] | boolean> = new Map<
+        IClass<any>,
+        IMediatorMapping[]
+    >();
 
     private _factory: MediatorFactory;
 

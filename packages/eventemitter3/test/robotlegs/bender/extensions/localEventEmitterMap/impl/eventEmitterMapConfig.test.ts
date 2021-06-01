@@ -121,6 +121,13 @@ describe("EventEmitterMapConfig", () => {
             {},
             false
         );
-        assert.isFalse(instance.equalTo(anotherInstance.emitter, anotherInstance.event, anotherInstance.listener, anotherInstance.context));
+        assert.isFalse(
+            instance.equalTo(
+                anotherInstance.emitter,
+                anotherInstance.event,
+                anotherInstance.listener,
+                anotherInstance.context
+            )
+        );
     });
 });

@@ -38,7 +38,7 @@ describe("MediatorMapExtension", () => {
     it("mediatorMap_is_mapped_into_injector_on_initialize", () => {
         let mediatorMap: IMediatorMap = null;
         context.install(ViewManagerExtension, MediatorMapExtension);
-        context.whenInitializing(function(): void {
+        context.whenInitializing(function (): void {
             mediatorMap = context.injector.get<IMediatorMap>(IMediatorMap);
         });
         context.initialize();
@@ -49,7 +49,7 @@ describe("MediatorMapExtension", () => {
     it("mediatorMap_is_mapped_into_injector_on_initialize_when_view_manager_is_not_installed", () => {
         let mediatorMap: IMediatorMap = null;
         context.install(MediatorMapExtension);
-        context.whenInitializing(function(): void {
+        context.whenInitializing(function (): void {
             mediatorMap = context.injector.get<IMediatorMap>(IMediatorMap);
         });
         context.initialize();
@@ -59,7 +59,7 @@ describe("MediatorMapExtension", () => {
 
     it("mediatorMap_is_unmapped_from_injector_on_destroy", () => {
         context.install(ViewManagerExtension, MediatorMapExtension);
-        context.afterDestroying(function(): void {
+        context.afterDestroying(function (): void {
             assert.isFalse(context.injector.isBound(IMediatorMap));
         });
         context.initialize();

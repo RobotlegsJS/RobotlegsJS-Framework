@@ -35,7 +35,7 @@ describe("SignalCommandMapExtension", () => {
     it("signalCommandMap is mapped into injector", () => {
         let actual: Object = null;
         context.install(SignalCommandMapExtension);
-        context.whenInitializing(function(): void {
+        context.whenInitializing(function (): void {
             actual = context.injector.get(ISignalCommandMap);
         });
         context.initialize();
@@ -46,7 +46,8 @@ describe("SignalCommandMapExtension", () => {
         context.install(SignalCommandMapExtension);
         context.initialize();
 
-        let instance: ISignalCommandMap = context.injector.get<ISignalCommandMap>(ISignalCommandMap);
+        let instance: ISignalCommandMap =
+            context.injector.get<ISignalCommandMap>(ISignalCommandMap);
 
         instance.map(RelaySignal).toCommand(RelayCommand);
         instance.map(TargetSignal).toCommand(TargetCommand);

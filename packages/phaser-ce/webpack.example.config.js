@@ -16,7 +16,7 @@ const concatPluginConfigGenerator = (name, files) => {
   };
 };
 
-module.exports = options => {
+module.exports = (options) => {
   return {
     mode: "development",
 
@@ -46,7 +46,11 @@ module.exports = options => {
         inject: false
       }),
 
-      new ConcatPlugin(concatPluginConfigGenerator("phaser", [path.resolve(__dirname, "node_modules/phaser-ce/build/phaser.js")]))
+      new ConcatPlugin(
+        concatPluginConfigGenerator("phaser", [
+          path.resolve(__dirname, "node_modules/phaser-ce/build/phaser.js")
+        ])
+      )
     ],
 
     resolve: {

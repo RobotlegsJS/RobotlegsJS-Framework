@@ -70,15 +70,27 @@ export abstract class StateMediator<T extends Phaser.State> implements IStateMed
         // this.eventMap.mapListener(this._stateComponent, eventString, listener, eventClass);
     }
 
-    protected addContextListener(eventString: string, listener: Function, eventClass?: Object): void {
+    protected addContextListener(
+        eventString: string,
+        listener: Function,
+        eventClass?: Object
+    ): void {
         // this.eventMap.mapListener(this.eventDispatcher, eventString, listener, eventClass);
     }
 
-    protected removeViewListener(eventString: string, listener: Function, eventClass?: Object): void {
+    protected removeViewListener(
+        eventString: string,
+        listener: Function,
+        eventClass?: Object
+    ): void {
         // this.eventMap.unmapListener(this._stateComponent, eventString, listener, eventClass);
     }
 
-    protected removeContextListener(eventString: string, listener: Function, eventClass?: Object): void {
+    protected removeContextListener(
+        eventString: string,
+        listener: Function,
+        eventClass?: Object
+    ): void {
         // this.eventMap.unmapListener(this.eventDispatcher, eventString, listener, eventClass);
     }
 

@@ -27,7 +27,11 @@ describe("DeluxeSignalWithGenericEventTest", () => {
         assert.isTrue(e instanceof GenericEvent, "instance of GenericEvent");
         assert.equal(completed, e.signal, "event.signal points to the originating Signal");
         assert.equal(e.target, self, "event.target points to object containing the Signal");
-        assert.equal(e.target, e.currentTarget, "event.target is e.currentTarget because event does not bubble");
+        assert.equal(
+            e.target,
+            e.currentTarget,
+            "event.target is e.currentTarget because event does not bubble"
+        );
     }
 
     function removeMyselfFromSignal(e: IEvent): void {

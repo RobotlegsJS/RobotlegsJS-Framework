@@ -45,14 +45,14 @@ export class ViewManagerExtension implements IExtension {
         this._injector = context.injector;
 
         // Just one Container Registry
-        ViewManagerExtension._containerRegistry = ViewManagerExtension._containerRegistry || new ContainerRegistry();
-        this._injector.bind(ContainerRegistry).toConstantValue(ViewManagerExtension._containerRegistry);
+        ViewManagerExtension._containerRegistry =
+            ViewManagerExtension._containerRegistry || new ContainerRegistry();
+        this._injector
+            .bind(ContainerRegistry)
+            .toConstantValue(ViewManagerExtension._containerRegistry);
 
         // But you get your own View Manager
-        this._injector
-            .bind(IViewManager)
-            .to(ViewManager)
-            .inSingletonScope();
+        this._injector.bind(IViewManager).to(ViewManager).inSingletonScope();
     }
 
     /*============================================================================*/

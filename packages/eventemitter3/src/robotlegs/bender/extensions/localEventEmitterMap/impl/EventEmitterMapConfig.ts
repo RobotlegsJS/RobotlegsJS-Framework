@@ -83,7 +83,13 @@ export class EventEmitterMapConfig {
     /**
      * @private
      */
-    constructor(emitter: EventEmitter, event: string | symbol, listener: EventEmitter.ListenerFn, context: any, once?: boolean) {
+    constructor(
+        emitter: EventEmitter,
+        event: string | symbol,
+        listener: EventEmitter.ListenerFn,
+        context: any,
+        once?: boolean
+    ) {
         this._emitter = emitter;
         this._event = event;
         this._listener = listener;
@@ -91,7 +97,17 @@ export class EventEmitterMapConfig {
         this._once = once;
     }
 
-    public equalTo(emitter: EventEmitter, event: string | symbol, listener: EventEmitter.ListenerFn, context: any): boolean {
-        return this._emitter === emitter && this._event === event && this._listener === listener && this._context === context;
+    public equalTo(
+        emitter: EventEmitter,
+        event: string | symbol,
+        listener: EventEmitter.ListenerFn,
+        context: any
+    ): boolean {
+        return (
+            this._emitter === emitter &&
+            this._event === event &&
+            this._listener === listener &&
+            this._context === context
+        );
     }
 }

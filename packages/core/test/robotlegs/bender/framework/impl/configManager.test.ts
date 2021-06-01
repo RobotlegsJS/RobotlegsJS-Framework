@@ -48,9 +48,12 @@ describe("ConfigManager", () => {
     it("handler is called", () => {
         let expected: TestObject = new TestObject("config");
         let actual: TestObject = null;
-        configManager.addConfigHandler(instanceOfType(TestObject), function(config: TestObject): void {
-            actual = config;
-        });
+        configManager.addConfigHandler(
+            instanceOfType(TestObject),
+            function (config: TestObject): void {
+                actual = config;
+            }
+        );
         configManager.addConfig(expected);
         assert.equal(actual, expected);
     });
@@ -59,7 +62,7 @@ describe("ConfigManager", () => {
         let actual: IConfig = null;
         injector
             .bind("Function")
-            .toConstantValue(function(config: IConfig): void {
+            .toConstantValue(function (config: IConfig): void {
                 actual = config;
             })
             .whenTargetNamed("callback");
@@ -73,7 +76,7 @@ describe("ConfigManager", () => {
         let actual: IConfig = null;
         injector
             .bind("Function")
-            .toConstantValue(function(config: IConfig): void {
+            .toConstantValue(function (config: IConfig): void {
                 actual = config;
             })
             .whenTargetNamed("callback");
@@ -86,15 +89,15 @@ describe("ConfigManager", () => {
         let actual: string[] = [];
         injector
             .bind("Function")
-            .toConstantValue(function(config: IConfig): void {
+            .toConstantValue(function (config: IConfig): void {
                 actual.push("config");
             })
             .whenTargetNamed("callback");
         configManager.addConfig(TypedConfig);
-        context.whenInitializing(function(): void {
+        context.whenInitializing(function (): void {
             actual.push("listener1");
         });
-        context.whenInitializing(function(): void {
+        context.whenInitializing(function (): void {
             actual.push("listener2");
         });
         context.initialize();
@@ -102,7 +105,7 @@ describe("ConfigManager", () => {
     });
 
     it("destroy", () => {
-        configManager.addConfigHandler(instanceOfType(String), function(config: TestObject): void {
+        configManager.addConfigHandler(instanceOfType(String), function (config: TestObject): void {
             throw new Error("Handler should not fire after call to destroy");
         });
         configManager.destroy();

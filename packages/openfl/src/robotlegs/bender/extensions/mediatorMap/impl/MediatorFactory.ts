@@ -5,7 +5,15 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import { IClass, IType, IInjector, applyHooks, guardsApprove, instantiateUnmapped, ITypeFilter } from "@robotlegsjs/core";
+import {
+    IClass,
+    IType,
+    IInjector,
+    applyHooks,
+    guardsApprove,
+    instantiateUnmapped,
+    ITypeFilter
+} from "@robotlegsjs/core";
 
 import { IMediatorMapping } from "../api/IMediatorMapping";
 

@@ -39,17 +39,17 @@ describe("LogManager", () => {
         let expected: string[] = ["target1", "target2", "target3"];
         let actual: string[] = [];
         logManager.addLogTarget(
-            new CallbackLogTarget(function(result: LogParams): void {
+            new CallbackLogTarget(function (result: LogParams): void {
                 actual.push("target1");
             })
         );
         logManager.addLogTarget(
-            new CallbackLogTarget(function(result: LogParams): void {
+            new CallbackLogTarget(function (result: LogParams): void {
                 actual.push("target2");
             })
         );
         logManager.addLogTarget(
-            new CallbackLogTarget(function(result: LogParams): void {
+            new CallbackLogTarget(function (result: LogParams): void {
                 actual.push("target3");
             })
         );
@@ -59,10 +59,16 @@ describe("LogManager", () => {
 
     it("DEBUG log level logs only debug messages", () => {
         logManager.logLevel = LogLevel.DEBUG;
-        let expected: number[] = [LogLevel.FATAL, LogLevel.ERROR, LogLevel.WARN, LogLevel.INFO, LogLevel.DEBUG];
+        let expected: number[] = [
+            LogLevel.FATAL,
+            LogLevel.ERROR,
+            LogLevel.WARN,
+            LogLevel.INFO,
+            LogLevel.DEBUG
+        ];
         let actual: number[] = [];
         logManager.addLogTarget(
-            new CallbackLogTarget(function(result: LogParams): void {
+            new CallbackLogTarget(function (result: LogParams): void {
                 actual.push(result.level);
             })
         );
@@ -80,7 +86,7 @@ describe("LogManager", () => {
         let expected: number[] = [LogLevel.FATAL, LogLevel.ERROR, LogLevel.WARN, LogLevel.INFO];
         let actual: number[] = [];
         logManager.addLogTarget(
-            new CallbackLogTarget(function(result: LogParams): void {
+            new CallbackLogTarget(function (result: LogParams): void {
                 actual.push(result.level);
             })
         );
@@ -98,7 +104,7 @@ describe("LogManager", () => {
         let expected: number[] = [LogLevel.FATAL, LogLevel.ERROR, LogLevel.WARN];
         let actual: number[] = [];
         logManager.addLogTarget(
-            new CallbackLogTarget(function(result: LogParams): void {
+            new CallbackLogTarget(function (result: LogParams): void {
                 actual.push(result.level);
             })
         );
@@ -116,7 +122,7 @@ describe("LogManager", () => {
         let expected: number[] = [LogLevel.FATAL, LogLevel.ERROR];
         let actual: number[] = [];
         logManager.addLogTarget(
-            new CallbackLogTarget(function(result: LogParams): void {
+            new CallbackLogTarget(function (result: LogParams): void {
                 actual.push(result.level);
             })
         );
@@ -134,7 +140,7 @@ describe("LogManager", () => {
         let expected: number[] = [LogLevel.FATAL];
         let actual: number[] = [];
         logManager.addLogTarget(
-            new CallbackLogTarget(function(result: LogParams): void {
+            new CallbackLogTarget(function (result: LogParams): void {
                 actual.push(result.level);
             })
         );

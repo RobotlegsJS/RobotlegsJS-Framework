@@ -50,7 +50,7 @@ describe("CommandMappingList", () => {
         processors = [];
         logger = new Logger(
             {},
-            new CallbackLogTarget(function(result: LogParams): void {
+            new CallbackLogTarget(function (result: LogParams): void {
                 if (result.level === LogLevel.DEBUG) {
                     debugLogParams = result;
                 } else if (result.level === LogLevel.WARN) {
@@ -233,7 +233,7 @@ describe("CommandMappingList", () => {
     });
 
     it("sortFunction_is_used", () => {
-        subject.withSortFunction(function(a: PriorityMapping, b: PriorityMapping): number {
+        subject.withSortFunction(function (a: PriorityMapping, b: PriorityMapping): number {
             if (a.priority === b.priority) {
                 return 0;
             }
@@ -250,7 +250,7 @@ describe("CommandMappingList", () => {
 
     it("sortFunction_is_called_after_mappings_are_added", () => {
         let called: boolean = false;
-        subject.withSortFunction(function(a: PriorityMapping, b: PriorityMapping): number {
+        subject.withSortFunction(function (a: PriorityMapping, b: PriorityMapping): number {
             called = true;
             return 0;
         });
@@ -261,7 +261,7 @@ describe("CommandMappingList", () => {
 
     it("sortFunction_is_only_called_once_after_mappings_are_added", () => {
         let called: boolean = false;
-        subject.withSortFunction(function(a: PriorityMapping, b: PriorityMapping): number {
+        subject.withSortFunction(function (a: PriorityMapping, b: PriorityMapping): number {
             called = true;
             return 0;
         });
@@ -274,7 +274,7 @@ describe("CommandMappingList", () => {
 
     it("sortFunction_is_not_called_after_a_mapping_is_removed", () => {
         let called: boolean = false;
-        subject.withSortFunction(function(a: PriorityMapping, b: PriorityMapping): number {
+        subject.withSortFunction(function (a: PriorityMapping, b: PriorityMapping): number {
             called = true;
             return 0;
         });
@@ -288,7 +288,7 @@ describe("CommandMappingList", () => {
 
     it("mapping_processor_is_called", () => {
         let callCount: number = 0;
-        processors.push(function(mapping: CommandMapping): void {
+        processors.push(function (mapping: CommandMapping): void {
             callCount++;
         });
         subject.addMapping(mapping1);
@@ -297,7 +297,7 @@ describe("CommandMappingList", () => {
 
     it("mapping_processor_is_given_mappings", () => {
         let mappings: any[] = [];
-        processors.push(function(mapping: CommandMapping): void {
+        processors.push(function (mapping: CommandMapping): void {
             mappings.push(mapping);
         });
         subject.addMapping(mapping1);

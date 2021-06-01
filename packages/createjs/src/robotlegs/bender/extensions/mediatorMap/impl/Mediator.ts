@@ -5,7 +5,15 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import { injectable, inject, IClass, IEvent, IEventMap, IEventDispatcher, Event } from "@robotlegsjs/core";
+import {
+    injectable,
+    inject,
+    IClass,
+    IEvent,
+    IEventMap,
+    IEventDispatcher,
+    Event
+} from "@robotlegsjs/core";
 
 import { IMediator } from "../api/IMediator";
 
@@ -83,7 +91,15 @@ export abstract class Mediator<T extends createjs.EventDispatcher> implements IM
         useCapture?: boolean,
         priority?: number
     ): void {
-        this._eventMap.mapListener(this._viewConverted, eventString, listener, thisObject, eventClass, useCapture, priority);
+        this._eventMap.mapListener(
+            this._viewConverted,
+            eventString,
+            listener,
+            thisObject,
+            eventClass,
+            useCapture,
+            priority
+        );
     }
 
     protected addContextListener(
@@ -94,7 +110,15 @@ export abstract class Mediator<T extends createjs.EventDispatcher> implements IM
         useCapture?: boolean,
         priority?: number
     ): void {
-        this._eventMap.mapListener(this._eventDispatcher, eventString, listener, thisObject, eventClass, useCapture, priority);
+        this._eventMap.mapListener(
+            this._eventDispatcher,
+            eventString,
+            listener,
+            thisObject,
+            eventClass,
+            useCapture,
+            priority
+        );
     }
 
     protected addDomListener(
@@ -113,7 +137,14 @@ export abstract class Mediator<T extends createjs.EventDispatcher> implements IM
         eventClass?: IClass<IEvent>,
         useCapture?: boolean
     ): void {
-        this._eventMap.unmapListener(this._viewConverted, eventString, listener, thisObject, eventClass, useCapture);
+        this._eventMap.unmapListener(
+            this._viewConverted,
+            eventString,
+            listener,
+            thisObject,
+            eventClass,
+            useCapture
+        );
     }
 
     protected removeContextListener(
@@ -123,10 +154,21 @@ export abstract class Mediator<T extends createjs.EventDispatcher> implements IM
         eventClass?: IClass<IEvent>,
         useCapture?: boolean
     ): void {
-        this._eventMap.unmapListener(this._eventDispatcher, eventString, listener, thisObject, eventClass, useCapture);
+        this._eventMap.unmapListener(
+            this._eventDispatcher,
+            eventString,
+            listener,
+            thisObject,
+            eventClass,
+            useCapture
+        );
     }
 
-    protected removeDomListener(eventTarget: EventTarget, eventString: string, listener: EventListenerOrEventListenerObject): void {
+    protected removeDomListener(
+        eventTarget: EventTarget,
+        eventString: string,
+        listener: EventListenerOrEventListenerObject
+    ): void {
         this._eventMap.unmapDomListener(eventTarget, eventString, listener);
     }
 

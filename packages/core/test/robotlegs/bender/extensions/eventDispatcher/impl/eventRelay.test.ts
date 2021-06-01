@@ -84,17 +84,13 @@ describe("EventRelay", () => {
     });
 
     it("call_start_when_relay_is_active_have_no_effect", () => {
-        createRelayFor(["test1"])
-            .start()
-            .start();
+        createRelayFor(["test1"]).start().start();
         source.dispatchEvent(new Event("test1"));
         assert.deepEqual(reportedTypes, ["test1"]);
     });
 
     it("no_relay_after_stop", () => {
-        createRelayFor(["test1"])
-            .start()
-            .stop();
+        createRelayFor(["test1"]).start().stop();
         source.dispatchEvent(new Event("test1"));
         assert.isEmpty(reportedTypes);
     });
@@ -106,10 +102,7 @@ describe("EventRelay", () => {
     });
 
     it("relay_resumes", () => {
-        createRelayFor(["test1"])
-            .start()
-            .stop()
-            .start();
+        createRelayFor(["test1"]).start().stop().start();
         source.dispatchEvent(new Event("test1"));
         assert.deepEqual(reportedTypes, ["test1"]);
     });

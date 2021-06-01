@@ -9,7 +9,11 @@ import "../../../../../entry";
 
 import { assert } from "chai";
 
-import { IContextStateManager, ContextStateManager, ContextStateManagerListenerConfig } from "../../../../../../src";
+import {
+    IContextStateManager,
+    ContextStateManager,
+    ContextStateManagerListenerConfig
+} from "../../../../../../src";
 
 import { StateRegistry } from "../../../../../../src/robotlegs/bender/extensions/stateManager/impl/StateRegistry";
 import { StateManager } from "../../../../../../src/robotlegs/bender/extensions/stateManager/impl/StateManager";
@@ -26,7 +30,10 @@ describe("ContextStateManagerListenerConfig", () => {
         contextStateManager = new ContextStateManager(phaserStateManager);
         stateRegistry = new StateRegistry();
         stateManager = new StateManager(stateRegistry);
-        contextStateManagerListenerConfig = new ContextStateManagerListenerConfig(contextStateManager, stateManager);
+        contextStateManagerListenerConfig = new ContextStateManagerListenerConfig(
+            contextStateManager,
+            stateManager
+        );
     });
 
     afterEach(() => {

@@ -27,8 +27,16 @@ describe("DeluxeSignalWithBubblingEventTest", () => {
 
     function onEventBubbled(e: IEvent): boolean {
         cancelTimeout();
-        assert.equal(theGrandChild, e.target, "e.target should be the object that originally dispatched event");
-        assert.equal(theParent, e.currentTarget, "e.currentTarget should be the object receiving the bubbled event");
+        assert.equal(
+            theGrandChild,
+            e.target,
+            "e.target should be the object that originally dispatched event"
+        );
+        assert.equal(
+            theParent,
+            e.currentTarget,
+            "e.currentTarget should be the object receiving the bubbled event"
+        );
         doneFunc();
         return false;
     }

@@ -17,15 +17,32 @@ export class ConvertToEventDispatcher implements IEventDispatcher {
         this._createjsEventDispatcher = createjsEventDispatcher;
     }
 
-    public addEventListener(type: string, listener: Function, thisObject?: any, useCapture?: boolean, priority?: number): void {
+    public addEventListener(
+        type: string,
+        listener: Function,
+        thisObject?: any,
+        useCapture?: boolean,
+        priority?: number
+    ): void {
         this._createjsEventDispatcher.on(type, <any>listener, thisObject, false, null, useCapture);
     }
 
-    public once(type: string, listener: Function, thisObject?: any, useCapture?: boolean, priority?: number): void {
+    public once(
+        type: string,
+        listener: Function,
+        thisObject?: any,
+        useCapture?: boolean,
+        priority?: number
+    ): void {
         this._createjsEventDispatcher.on(type, <any>listener, thisObject, true, null, useCapture);
     }
 
-    public removeEventListener(type: string, listener: Function, thisObject?: any, useCapture?: boolean): void {
+    public removeEventListener(
+        type: string,
+        listener: Function,
+        thisObject?: any,
+        useCapture?: boolean
+    ): void {
         this._createjsEventDispatcher.off(type, <any>listener, useCapture);
     }
 

@@ -33,7 +33,12 @@ export class Slot implements ISlot {
      * @throws ArgumentError <code>ArgumentError</code>: Given listener is <code>null</code>.
      * @throws Error <code>Error</code>: Internal signal reference has not been set yet.
      */
-    public constructor(listener: Function, signal: IOnceSignal, once: boolean = false, priority: number = 0) {
+    public constructor(
+        listener: Function,
+        signal: IOnceSignal,
+        once: boolean = false,
+        priority: number = 0
+    ) {
         this._listener = listener;
         this._once = once;
         this._signal = signal;
@@ -124,7 +129,9 @@ export class Slot implements ISlot {
 
     public set listener(value: Function) {
         if (null == value) {
-            throw new Error("Given listener is null.\nDid you want to set enabled to false instead?");
+            throw new Error(
+                "Given listener is null.\nDid you want to set enabled to false instead?"
+            );
         }
 
         this.verifyListener(value);

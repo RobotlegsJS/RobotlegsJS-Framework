@@ -51,7 +51,10 @@ export class EventCommandMap implements IEventCommandMap {
     /**
      * @private
      */
-    constructor(@inject(IContext) context: IContext, @inject(IEventDispatcher) dispatcher: IEventDispatcher) {
+    constructor(
+        @inject(IContext) context: IContext,
+        @inject(IEventDispatcher) dispatcher: IEventDispatcher
+    ) {
         this._injector = context.injector;
         this._logger = context.getLogger(this);
         this._dispatcher = dispatcher;
@@ -99,6 +102,13 @@ export class EventCommandMap implements IEventCommandMap {
     }
 
     private createTrigger(type: string, eventClass: IClass<IEvent>): EventCommandTrigger {
-        return new EventCommandTrigger(this._injector, this._dispatcher, type, eventClass, this._mappingProcessors, this._logger);
+        return new EventCommandTrigger(
+            this._injector,
+            this._dispatcher,
+            type,
+            eventClass,
+            this._mappingProcessors,
+            this._logger
+        );
     }
 }

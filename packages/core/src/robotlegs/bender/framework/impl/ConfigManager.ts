@@ -137,10 +137,14 @@ export class ConfigManager {
                 let config: any = this._queue[i];
                 if (typeof config === "function") {
                     // instanceof Class
-                    this._logger.debug("Now initializing. Instantiating config class {0}", [config]);
+                    this._logger.debug("Now initializing. Instantiating config class {0}", [
+                        config
+                    ]);
                     this.processClass(config);
                 } else {
-                    this._logger.debug("Now initializing. Injecting into config object {0}", [config]);
+                    this._logger.debug("Now initializing. Injecting into config object {0}", [
+                        config
+                    ]);
                     this.processObject(config);
                 }
             }
