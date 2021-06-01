@@ -34,7 +34,9 @@ module.exports = (env) => {
           use: [{ loader: "ts-loader", options: { configFile: tsconfig } }]
         },
         {
-          test: env.production /* disable this loader for production builds */ ? /^$/ : /^.*(src).*\.ts$/,
+          test: env.production /* disable this loader for production builds */
+            ? /^$/
+            : /^.*(src).*\.ts$/,
           loader: "istanbul-instrumenter-loader",
           enforce: "post"
         }

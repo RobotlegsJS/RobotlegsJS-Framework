@@ -41,9 +41,9 @@ module.exports = (config) => {
     },
     reporters: config.singleRun ? ["dots", "mocha", "coverage-istanbul"] : ["dots", "mocha"],
     coverageIstanbulReporter: {
-      reports: ["html", "lcov", "lcovonly", "text-summary"],
-      dir: "coverage",
-      fixWebpackSourcePaths: true,
+      "reports": ["html", "lcov", "lcovonly", "text-summary"],
+      "dir": "coverage",
+      "fixWebpackSourcePaths": true,
       "report-config": {
         html: {
           subdir: "html-report"
