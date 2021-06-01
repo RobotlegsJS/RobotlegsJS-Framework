@@ -17,7 +17,7 @@ const concatPluginConfigGenerator = (name, files) => {
   };
 };
 
-module.exports = options => {
+module.exports = (options) => {
   return {
     mode: "development",
 
@@ -47,7 +47,11 @@ module.exports = options => {
         inject: false
       }),
 
-      new ConcatPlugin(concatPluginConfigGenerator("createjs", [path.resolve(__dirname, "./node_modules/easeljs/lib/easeljs.js")])),
+      new ConcatPlugin(
+        concatPluginConfigGenerator("createjs", [
+          path.resolve(__dirname, "./node_modules/easeljs/lib/easeljs.js")
+        ])
+      ),
 
       new CopyPlugin({ patterns: [{ from: path.resolve("./static"), to: "." }] })
     ],
