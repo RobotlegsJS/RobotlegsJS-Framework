@@ -17,7 +17,7 @@ const concatPluginConfigGenerator = (name, files) => {
   };
 };
 
-module.exports = options => {
+module.exports = (options) => {
   return {
     mode: "development",
 
@@ -47,7 +47,11 @@ module.exports = options => {
         inject: false
       }),
 
-      new ConcatPlugin(concatPluginConfigGenerator("phaser", [path.resolve(__dirname, "./node_modules/phaser/dist/phaser.js")])),
+      new ConcatPlugin(
+        concatPluginConfigGenerator("phaser", [
+          path.resolve(__dirname, "./node_modules/phaser/dist/phaser.js")
+        ])
+      ),
 
       new CopyPlugin({ patterns: [{ from: path.resolve("./static"), to: "." }] })
     ],
