@@ -8,7 +8,7 @@
 export class BossGuard {
     protected _approve: boolean;
 
-    constructor(approve: boolean) {
+    public constructor(approve: boolean) {
         this._approve = approve;
     }
 

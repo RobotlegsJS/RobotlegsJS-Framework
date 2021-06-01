@@ -18,7 +18,7 @@ export class CallbackConfig implements IConfig {
     /* Constructor                                                                */
     /*============================================================================*/
 
-    constructor(callback: Function) {
+    public constructor(callback: Function) {
         this._callback = callback;
     }
 

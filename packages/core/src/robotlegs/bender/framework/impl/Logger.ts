@@ -32,7 +32,7 @@ export class Logger implements ILogger {
      * @param source The log source object
      * @param target The log target
      */
-    constructor(source: any, target: ILogTarget) {
+    public constructor(source: any, target: ILogTarget) {
         this._source = source;
         this._target = target;
     }

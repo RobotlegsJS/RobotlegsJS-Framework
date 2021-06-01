@@ -14,7 +14,7 @@ export class SelfReportingCallbackHook {
     protected _callback: Function;
     protected _command: SelfReportingCallbackCommand;
 
-    constructor(
+    public constructor(
         @inject("Function")
         @named("hookCallback")
         callback: Function,

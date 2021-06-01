@@ -30,7 +30,7 @@ export class CommandTriggerMap {
      * @param keyFactory Factory function to creates keys
      * @param triggerFactory Factory function to create triggers
      */
-    constructor(keyFactory: Function, triggerFactory: Function) {
+    public constructor(keyFactory: Function, triggerFactory: Function) {
         this._keyFactory = keyFactory;
         this._triggerFactory = triggerFactory;
     }

@@ -35,7 +35,7 @@ export class EventDispatcherExtension implements IExtension {
      * Creates an Event Dispatcher Extension
      * @param eventDispatcher Optional IEventDispatcher instance to share
      */
-    constructor(eventDispatcher: IEventDispatcher = null) {
+    public constructor(eventDispatcher: IEventDispatcher = null) {
         this._eventDispatcher = eventDispatcher || new EventDispatcher();
     }
 

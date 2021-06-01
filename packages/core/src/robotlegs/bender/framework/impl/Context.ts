@@ -146,7 +146,7 @@ export class Context extends EventDispatcher implements IContext {
     /**
      * Creates a new Context
      */
-    constructor() {
+    public constructor() {
         super();
         this.setup();
     }

@@ -38,7 +38,7 @@ export class DirectCommandMapper implements IDirectCommandConfigurator {
     /**
      * @private
      */
-    constructor(
+    public constructor(
         executor: ICommandExecutor,
         mappings: ICommandMappingList,
         commandClass: IClass<ICommand>

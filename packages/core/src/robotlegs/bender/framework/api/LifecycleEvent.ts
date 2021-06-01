@@ -83,7 +83,7 @@ export class LifecycleEvent {
      * @param type The event type
      * @param error Optional error
      */
-    constructor(type: string, error?: Error) {
+    public constructor(type: string, error?: Error) {
         this._type = type;
         this._error = error;
     }

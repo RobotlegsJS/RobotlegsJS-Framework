@@ -121,7 +121,7 @@ export class Lifecycle implements ILifecycle {
      * Creates a lifecycle for a given target object
      * @param target The target object
      */
-    constructor(target: IEventDispatcher) {
+    public constructor(target: IEventDispatcher) {
         this._target = target;
         this._dispatcher = target; // || new EventDispatcher(this);
         this.configureTransitions();

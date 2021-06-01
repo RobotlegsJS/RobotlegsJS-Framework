@@ -16,7 +16,7 @@ export class EventCallbackCommand implements ICommand {
     protected _callback: Function;
     protected _event: Event;
 
-    constructor(
+    public constructor(
         @inject("Function")
         @named("reportEvent")
         callback: Function,

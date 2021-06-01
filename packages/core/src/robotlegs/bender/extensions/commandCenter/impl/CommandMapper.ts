@@ -37,7 +37,7 @@ export class CommandMapper implements ICommandMapper, ICommandUnmapper, ICommand
      * Creates a Command Mapper
      * @param mappings The command mapping list to add mappings to
      */
-    constructor(mappings: ICommandMappingList) {
+    public constructor(mappings: ICommandMappingList) {
         this._mappings = mappings;
     }
 

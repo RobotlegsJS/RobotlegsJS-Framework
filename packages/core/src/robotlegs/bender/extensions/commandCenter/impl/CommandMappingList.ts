@@ -51,7 +51,7 @@ export class CommandMappingList implements ICommandMappingList {
      * @param processors A reference to the mapping processors for this command map
      * @param logger Optional logger
      */
-    constructor(trigger: ICommandTrigger, processors: Function[], logger?: ILogger) {
+    public constructor(trigger: ICommandTrigger, processors: Function[], logger?: ILogger) {
         this._trigger = trigger;
         this._processors = processors;
         this._logger = logger;

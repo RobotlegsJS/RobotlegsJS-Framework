@@ -13,7 +13,7 @@ import { ICommand } from "../../../../../../src/robotlegs/bender/extensions/comm
 export class ClassReportingCallbackCommand2 implements ICommand {
     protected _reportingFunction: Function;
 
-    constructor(
+    public constructor(
         @inject("Function")
         @named("reportingFunction")
         reportingFunction: Function

@@ -25,7 +25,7 @@ export class MessageRunner {
     /**
      * @private
      */
-    constructor(message: string, handlers: Function[], callback: Function) {
+    public constructor(message: string, handlers: Function[], callback: Function) {
         this._message = message;
         this._handlers = handlers;
         this._callback = callback;

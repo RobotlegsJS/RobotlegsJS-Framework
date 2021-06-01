@@ -29,7 +29,7 @@ export class Pin {
     /**
      * @private
      */
-    constructor(dispatcher: IEventDispatcher) {
+    public constructor(dispatcher: IEventDispatcher) {
         this._dispatcher = dispatcher;
     }
 

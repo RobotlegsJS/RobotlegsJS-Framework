@@ -31,7 +31,7 @@ export class ExtensionInstaller {
     /**
      * @private
      */
-    constructor(context: IContext) {
+    public constructor(context: IContext) {
         this._context = context;
         this._logger = this._context.getLogger(this);
     }

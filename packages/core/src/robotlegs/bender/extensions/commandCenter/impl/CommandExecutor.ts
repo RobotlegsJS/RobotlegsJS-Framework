@@ -42,7 +42,7 @@ export class CommandExecutor implements ICommandExecutor {
      * @param removeMapping Remove mapping handler (optional)
      * @param handleResult Result handler (optional)
      */
-    constructor(injector: IInjector, removeMapping?: Function, handleResult?: Function) {
+    public constructor(injector: IInjector, removeMapping?: Function, handleResult?: Function) {
         this._injector = injector.createChild();
         this._removeMapping = removeMapping;
         this._handleResult = handleResult;

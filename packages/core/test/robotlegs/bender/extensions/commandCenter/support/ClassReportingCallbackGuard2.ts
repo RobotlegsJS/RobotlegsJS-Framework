@@ -11,7 +11,7 @@ import { injectable, inject, named } from "inversify";
 export class ClassReportingCallbackGuard2 {
     protected _reportingFunction: Function;
 
-    constructor(
+    public constructor(
         @inject("Function")
         @named("reportingFunction")
         reportingFunction: Function

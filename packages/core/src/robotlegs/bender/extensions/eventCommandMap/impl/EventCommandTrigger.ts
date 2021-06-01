@@ -49,7 +49,7 @@ export class EventCommandTrigger implements ICommandTrigger {
     /**
      * @private
      */
-    constructor(
+    public constructor(
         injector: IInjector,
         dispatcher: IEventDispatcher,
         type: string,

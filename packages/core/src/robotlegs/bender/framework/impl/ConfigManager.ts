@@ -53,7 +53,7 @@ export class ConfigManager {
     /**
      * @private
      */
-    constructor(context: IContext) {
+    public constructor(context: IContext) {
         this._context = context;
         this._injector = context.injector;
         this._logger = context.getLogger(this);

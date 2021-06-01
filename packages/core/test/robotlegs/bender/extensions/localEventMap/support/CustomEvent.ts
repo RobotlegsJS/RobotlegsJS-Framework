@@ -26,7 +26,7 @@ export class CustomEvent extends Event {
      * Creates a view configuration event
      * @param type The event type
      */
-    constructor(type: string) {
+    public constructor(type: string) {
         super(type, true);
     }
 

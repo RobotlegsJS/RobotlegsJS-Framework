@@ -13,7 +13,7 @@ import { IHook } from "../../../../../../src/robotlegs/bender/framework/api/IHoo
 export class CallbackHook implements IHook {
     private _callback: Function;
 
-    constructor(
+    public constructor(
         @inject("Function")
         @named("hookCallback")
         callback: Function

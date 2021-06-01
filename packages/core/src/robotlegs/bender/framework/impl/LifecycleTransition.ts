@@ -51,7 +51,7 @@ export class LifecycleTransition {
      * @param name The name of the transition
      * @param lifecycle The associated lifecycle instance
      */
-    constructor(name: string, lifecycle: Lifecycle) {
+    public constructor(name: string, lifecycle: Lifecycle) {
         this._name = name;
         this._lifecycle = lifecycle;
     }

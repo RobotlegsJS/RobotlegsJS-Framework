@@ -74,7 +74,7 @@ export class CommandMapping implements ICommandMapping {
      * Creates a Command Mapping
      * @param commandClass The concrete Command class
      */
-    constructor(commandClass: IClass<ICommand>) {
+    public constructor(commandClass: IClass<ICommand>) {
         this._commandClass = commandClass;
     }
 

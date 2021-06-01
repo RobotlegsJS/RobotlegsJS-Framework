@@ -62,7 +62,7 @@ export class TypeFilter implements ITypeFilter {
     /**
      * @private
      */
-    constructor(allOf: IType<any>[], anyOf: IType<any>[], noneOf: IType<any>[]) {
+    public constructor(allOf: IType<any>[], anyOf: IType<any>[], noneOf: IType<any>[]) {
         if (!allOf || !anyOf || !noneOf) {
             throw Error("TypeFilter parameters can not be null");
         }

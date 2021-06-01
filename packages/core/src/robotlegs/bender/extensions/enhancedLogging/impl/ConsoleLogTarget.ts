@@ -31,7 +31,7 @@ export class ConsoleLogTarget implements ILogTarget {
      * Creates a Trace Log Target
      * @param context Context
      */
-    constructor(context: IContext) {
+    public constructor(context: IContext) {
         this._context = context;
     }
 

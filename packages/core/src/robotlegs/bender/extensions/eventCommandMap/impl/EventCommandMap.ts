@@ -51,7 +51,7 @@ export class EventCommandMap implements IEventCommandMap {
     /**
      * @private
      */
-    constructor(
+    public constructor(
         @inject(IContext) context: IContext,
         @inject(IEventDispatcher) dispatcher: IEventDispatcher
     ) {

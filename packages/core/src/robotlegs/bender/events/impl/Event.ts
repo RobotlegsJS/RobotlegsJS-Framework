@@ -105,7 +105,7 @@ export class Event implements IEvent {
      * @platform Web,Native
      * @language en_US
      */
-    constructor(type: string, bubbles?: boolean, cancelable?: boolean, data?: any) {
+    public constructor(type: string, bubbles?: boolean, cancelable?: boolean, data?: any) {
         this._type = type;
         this._bubbles = !!bubbles;
         this._cancelable = !!cancelable;
