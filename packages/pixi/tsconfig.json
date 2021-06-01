@@ -21,10 +21,6 @@
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": [
-    "./src/**/*.ts"
-  ],
-  "files": [
-    "./definitions/pixi.d.ts"
-  ]
+  "include": ["./src/**/*.ts"],
+  "files": ["./definitions/pixi.d.ts"]
 }
