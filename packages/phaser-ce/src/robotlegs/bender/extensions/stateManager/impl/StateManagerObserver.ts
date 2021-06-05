@@ -22,7 +22,7 @@ export class StateManagerObserver {
     /**
      * @private
      */
-    constructor(containerRegistry: StateRegistry) {
+    public constructor(containerRegistry: StateRegistry) {
         this._registry = containerRegistry;
 
         // We only care about roots

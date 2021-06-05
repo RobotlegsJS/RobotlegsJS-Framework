@@ -48,7 +48,7 @@ export class StateManager extends EventDispatcher implements IStateManager {
     /**
      * @private
      */
-    constructor(stateRegistry: StateRegistry) {
+    public constructor(stateRegistry: StateRegistry) {
         super();
         this._registry = stateRegistry;
     }

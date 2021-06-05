@@ -36,7 +36,7 @@ export class StateMediatorStateHandler implements IStateHandler {
     /**
      * @private
      */
-    constructor(factory: StateMediatorFactory) {
+    public constructor(factory: StateMediatorFactory) {
         this._factory = factory;
     }
 

@@ -58,7 +58,7 @@ export class StateManagerEvent extends Event {
      * @param stateManager The Phaser.StateManager associated with this event
      * @param handler The state handler associated with this event
      */
-    constructor(type: string, stateManager?: Phaser.StateManager, handler?: IStateHandler) {
+    public constructor(type: string, stateManager?: Phaser.StateManager, handler?: IStateHandler) {
         super(type, true);
         this._stateManager = stateManager;
         this._handler = handler;

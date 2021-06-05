@@ -40,7 +40,7 @@ export class ConfigureStateEvent extends Event {
      * @param type The event type
      * @param state The associated state instance
      */
-    constructor(type: string, state?: Phaser.State) {
+    public constructor(type: string, state?: Phaser.State) {
         super(type, true);
         this._state = state;
     }

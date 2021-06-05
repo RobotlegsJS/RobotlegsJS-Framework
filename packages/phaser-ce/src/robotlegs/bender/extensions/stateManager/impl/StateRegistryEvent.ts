@@ -46,7 +46,7 @@ export class StateRegistryEvent extends Event {
      * @param type The event type
      * @param stateManager The stateManager associated with this event
      */
-    constructor(type: string, stateManager: Phaser.StateManager) {
+    public constructor(type: string, stateManager: Phaser.StateManager) {
         super(type);
         this._stateManager = stateManager;
     }

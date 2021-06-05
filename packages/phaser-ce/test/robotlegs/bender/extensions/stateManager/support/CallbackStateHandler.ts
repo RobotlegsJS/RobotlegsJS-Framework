@@ -15,7 +15,7 @@ import { IStateHandler } from "../../../../../../src/robotlegs/bender/extensions
 export class CallbackStateHandler implements IStateHandler {
     private _callback: Function;
 
-    constructor(callback: Function = null) {
+    public constructor(callback: Function = null) {
         this._callback = callback;
     }
 

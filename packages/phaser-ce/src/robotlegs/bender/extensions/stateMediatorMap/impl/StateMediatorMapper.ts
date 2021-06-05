@@ -41,7 +41,11 @@ export class StateMediatorMapper implements IStateMediatorMapper, IStateMediator
     /**
      * @private
      */
-    constructor(typeFilter: ITypeFilter, handler: StateMediatorStateHandler, logger?: ILogger) {
+    public constructor(
+        typeFilter: ITypeFilter,
+        handler: StateMediatorStateHandler,
+        logger?: ILogger
+    ) {
         this._typeFilter = typeFilter;
         this._handler = handler;
         this._logger = logger;

@@ -52,7 +52,7 @@ export class StateMediatorMap implements IStateMediatorMap, IStateHandler {
     /**
      * @private
      */
-    constructor(@inject(IContext) context: IContext) {
+    public constructor(@inject(IContext) context: IContext) {
         this._logger = context.getLogger(this);
         this._factory = new StateMediatorFactory(context.injector);
         this._stateHandler = new StateMediatorStateHandler(this._factory);
