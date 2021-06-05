@@ -49,6 +49,13 @@ export class Logger implements ILogger {
         this._source = source;
     }
 
+    /**
+     * @inheritDoc
+     */
+    public get source(): any {
+        return this._source;
+    }
+
     /*============================================================================*/
     /* Public Functions                                                           */
     /*============================================================================*/
