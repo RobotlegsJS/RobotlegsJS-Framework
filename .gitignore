@@ -111,3 +111,9 @@ common/deploy/
 common/temp/
 common/autoinstallers/*/.npmrc
 **/.rush/temp/
+
+# RobotlegsJS temporary files
+**/dist-test/
+**/lib/
+**/lib-example/
+**/lib-test/
