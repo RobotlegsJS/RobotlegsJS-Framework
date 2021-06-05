@@ -10,6 +10,7 @@
     "autoformat": "prettier --config ../../.prettierrc --ignore-path ../../.prettierignore --write --list-different .",
     "lint-fix:src": "eslint -c .eslintrc.js --ext .ts ./src --fix",
     "lint-fix:test": "eslint -c .eslintrc.js --ext .ts ./test --fix",
+    "lint-fix": "npm run lint-fix:src && npm run lint-fix:test",
     "lint:src": "eslint -c .eslintrc.js --ext .ts ./src",
     "lint:test": "eslint -c .eslintrc.js --ext .ts ./test",
     "lint": "npm run lint:src && npm run lint:test",

@@ -192,6 +192,14 @@
       "description": "This command will run `npm run lint` on all packages",
       "safeForSimultaneousRushProcesses": false,
       "enableParallelism": true
+    },
+    {
+      "name": "lint-fix",
+      "commandKind": "bulk",
+      "summary": "Used to apply automatic eslint fixes on all packages",
+      "description": "This command will run `npm run lint-fix` on all packages",
+      "safeForSimultaneousRushProcesses": false,
+      "enableParallelism": true
     }
   ],
 

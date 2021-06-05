@@ -13,6 +13,7 @@
     "lint-fix:src": "eslint -c .eslintrc.js --ext .ts ./src --fix",
     "lint-fix:test": "eslint -c .eslintrc.js --ext .ts ./test --fix",
     "lint-fix:example": "eslint -c .eslintrc.js --ext .ts ./example --fix",
+    "lint-fix": "npm run lint-fix:src && npm run lint-fix:test && npm run lint-fix:example",
     "lint:src": "eslint -c .eslintrc.js --ext .ts ./src",
     "lint:test": "eslint -c .eslintrc.js --ext .ts ./test",
     "lint:example": "eslint -c .eslintrc.js --ext .ts ./example",
