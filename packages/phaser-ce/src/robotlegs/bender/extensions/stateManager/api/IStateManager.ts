@@ -8,10 +8,12 @@
 import { IEventDispatcher } from "@robotlegsjs/core";
 import { IStateHandler } from "./IStateHandler";
 
+// eslint-disable-next-line @rushstack/typedef-var
+export const IStateManager = Symbol("IStateManager");
+
 /**
  * The State Manager allows you to add multiple "state managers" to a context
  */
-export let IStateManager = Symbol("IStateManager");
 export interface IStateManager extends IEventDispatcher {
     /**
      * A list of currently registered StateManagers

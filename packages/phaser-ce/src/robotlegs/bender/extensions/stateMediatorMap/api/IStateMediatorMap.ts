@@ -10,10 +10,12 @@ import { IClass, ITypeMatcher } from "@robotlegsjs/core";
 import { IStateMediatorMapper } from "../dsl/IStateMediatorMapper";
 import { IStateMediatorUnmapper } from "../dsl/IStateMediatorUnmapper";
 
+// eslint-disable-next-line @rushstack/typedef-var
+export const IStateMediatorMap = Symbol("IStateMediatorMap");
+
 /**
  * The StateMediator Map allows you to bind Mediators to Phaser.State objects
  */
-export let IStateMediatorMap = Symbol("IStateMediatorMap");
 export interface IStateMediatorMap {
     /**
      * Maps a matcher that will be tested against incoming items to be handled.
