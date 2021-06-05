@@ -27,16 +27,6 @@ describe("EventMap", () => {
     let listenerExecuted: boolean = false;
     let listenerExecutedCount: number = 0;
 
-    beforeEach(() => {
-        eventDispatcher = new EventDispatcher();
-        eventMap = new EventMap();
-    });
-
-    afterEach(() => {
-        resetListenerExecuted();
-        resetListenerExecutedCount();
-    });
-
     function listener(e: Event): void {
         listenerExecuted = true;
     }
@@ -52,6 +42,16 @@ describe("EventMap", () => {
     function resetListenerExecutedCount(): void {
         listenerExecutedCount = 0;
     }
+
+    beforeEach(() => {
+        eventDispatcher = new EventDispatcher();
+        eventMap = new EventMap();
+    });
+
+    afterEach(() => {
+        resetListenerExecuted();
+        resetListenerExecutedCount();
+    });
 
     it("listener_mapped_without_type_is_triggered_by_plain_Event", () => {
         eventMap.mapListener(eventDispatcher, CustomEvent.STARTED, listener);
