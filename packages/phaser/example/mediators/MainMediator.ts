@@ -25,14 +25,14 @@ export class MainMediator extends SceneMediator<Main> {
 
         this.dispatch(new MainEvent(MainEvent.GAME_START, true, false, { data: this.gameModel }));
 
-        this.on(this.scene.input, "pointerdown", this.onPointerdown);
+        this.on(this.scene.input, "pointerdown", this._onPointerdown);
     }
 
     public destroy(): void {
         console.log("MainMediator: destroy");
     }
 
-    private onPointerdown(pointer: Phaser.Geom.Point): void {
+    private _onPointerdown(pointer: Phaser.Geom.Point): void {
         this.scene.addRobotlesgImage(pointer.x, pointer.y, "robotlegs");
 
         this.dispatch(new MainEvent(MainEvent.ADD_ROBOTLEGS_IMAGE));

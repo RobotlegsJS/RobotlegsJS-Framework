@@ -6,7 +6,7 @@
 // ------------------------------------------------------------------------------
 
 export abstract class BaseScene extends Phaser.Scene {
-    constructor(scene: string) {
+    public constructor(scene: string) {
         super({ key: scene });
     }
 

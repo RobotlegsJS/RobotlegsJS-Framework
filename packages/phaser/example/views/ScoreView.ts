@@ -8,7 +8,7 @@
 export class ScoreView extends Phaser.GameObjects.Container {
     public text: Phaser.GameObjects.Text;
 
-    constructor(
+    public constructor(
         scene: Phaser.Scene,
         x?: number,
         y?: number,

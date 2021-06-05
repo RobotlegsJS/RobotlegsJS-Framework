@@ -21,19 +21,19 @@ export class GameConfig implements IConfig {
     public commandMap: IEventCommandMap;
 
     public configure(): void {
-        this.mapCommands();
-        this.mapManager();
-        this.mapModels();
+        this._mapCommands();
+        this._mapManager();
+        this._mapModels();
     }
 
-    private mapCommands(): void {
+    private _mapCommands(): void {
         this.commandMap.map(MainEvent.GAME_START).toCommand(MainCommand);
         this.commandMap.map(MainEvent.ADD_ROBOTLEGS_IMAGE).toCommand(AddRobotlegsScoreCommand);
     }
 
-    private mapManager(): void {}
+    private _mapManager(): void {}
 
-    private mapModels(): void {
+    private _mapModels(): void {
         this.context.injector.bind(GameModel).to(GameModel).inSingletonScope();
     }
 }

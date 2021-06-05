@@ -21,14 +21,14 @@ export class ScoreViewMediator extends ViewMediator<ScoreView> {
         console.log("PlayerViewMediator: initialize");
         console.log("score: " + this.gameModel.robotlegsScore);
         this.view.setText(0);
-        this.addContextListener(MainEvent.ADDED_ROBOTLEGS_IMAGE, this.onRobotlegsImageAdded, this);
+        this.addContextListener(MainEvent.ADDED_ROBOTLEGS_IMAGE, this._onRobotlegsImageAdded, this);
     }
 
     public destroy(): void {
         console.log("PlayerViewMediator: destroy");
     }
 
-    private onRobotlegsImageAdded(): void {
+    private _onRobotlegsImageAdded(): void {
         this.view.setText(this.gameModel.robotlegsScore);
     }
 }
