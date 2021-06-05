@@ -7,10 +7,12 @@
 
 import { ICommandMapper, ICommandUnmapper } from "@robotlegsjs/core";
 
+// eslint-disable-next-line @rushstack/typedef-var
+export const ISignalCommandMap = Symbol("ISignalCommandMap");
+
 /**
  * The Signal Command Map allows you to bind Phaser.Signal to Commands
  */
-export let ISignalCommandMap = Symbol("ISignalCommandMap");
 export interface ISignalCommandMap {
     /**
      * Creates a mapping for a Phaser.Signals based trigger
