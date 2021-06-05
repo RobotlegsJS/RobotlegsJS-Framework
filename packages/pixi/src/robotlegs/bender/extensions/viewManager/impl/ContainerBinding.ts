@@ -13,7 +13,8 @@ import { IViewHandler } from "../api/IViewHandler";
 
 import { ContainerBindingEvent } from "./ContainerBindingEvent";
 
-/*[Event(name="bindingEmpty", type="robotlegs.bender.extensions.viewManager.impl.ContainerBindingEvent")]*/
+// [Event(name="bindingEmpty", type="robotlegs.bender.extensions.viewManager.impl.ContainerBindingEvent")]
+
 /**
  * @private
  */
