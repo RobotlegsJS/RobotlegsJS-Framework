@@ -10,10 +10,12 @@ import { IClass, ITypeMatcher } from "@robotlegsjs/core";
 import { IMediatorMapper } from "../dsl/IMediatorMapper";
 import { IMediatorUnmapper } from "../dsl/IMediatorUnmapper";
 
+// eslint-disable-next-line @rushstack/typedef-var
+export const ISceneMediatorMap = Symbol("ISceneMediatorMap");
+
 /**
  * The SceneMediator Map allows you to bind Mediators to Phaser.Scene objects
  */
-export const ISceneMediatorMap = Symbol("ISceneMediatorMap");
 export interface ISceneMediatorMap {
     /**
      * Maps a matcher that will be tested against incoming items to be handled.

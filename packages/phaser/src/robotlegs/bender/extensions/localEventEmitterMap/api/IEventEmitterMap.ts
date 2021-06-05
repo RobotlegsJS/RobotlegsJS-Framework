@@ -7,11 +7,13 @@
 
 import { IEventMap } from "@robotlegsjs/core";
 
+// eslint-disable-next-line @rushstack/typedef-var
+export const IEventEmitterMap = Symbol("IEventEmitterMap");
+
 /**
  * The Event Emitter Map keeps track of listeners and provides the ability
  * to unregister all Phaser.Events.EventEmitter listeners with a single method call.
  */
-export const IEventEmitterMap = Symbol("IEventEmitterMap");
 export interface IEventEmitterMap extends IEventMap {
     /**
      * The same as calling `on` or `addListener` directly on the `Phaser.Events.EventEmitter`,
