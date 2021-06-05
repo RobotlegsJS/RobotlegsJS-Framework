@@ -5,20 +5,20 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-/*[Event(name="destroy", type="robotlegs.bender.framework.api.LifecycleEvent")]*/
-/*[Event(name="error", type="robotlegs.bender.framework.api.LifecycleEvent")]*/
-/*[Event(name="initialize", type="robotlegs.bender.framework.api.LifecycleEvent")]*/
-/*[Event(name="postDestroy", type="robotlegs.bender.framework.api.LifecycleEvent")]*/
-/*[Event(name="postInitialize", type="robotlegs.bender.framework.api.LifecycleEvent")]*/
-/*[Event(name="postResume", type="robotlegs.bender.framework.api.LifecycleEvent")]*/
-/*[Event(name="postSuspend", type="robotlegs.bender.framework.api.LifecycleEvent")]*/
-/*[Event(name="preDestroy", type="robotlegs.bender.framework.api.LifecycleEvent")]*/
-/*[Event(name="preInitialize", type="robotlegs.bender.framework.api.LifecycleEvent")]*/
-/*[Event(name="preResume", type="robotlegs.bender.framework.api.LifecycleEvent")]*/
-/*[Event(name="preSuspend", type="robotlegs.bender.framework.api.LifecycleEvent")]*/
-/*[Event(name="resume", type="robotlegs.bender.framework.api.LifecycleEvent")]*/
-/*[Event(name="stateChange", type="robotlegs.bender.framework.api.LifecycleEvent")]*/
-/*[Event(name="suspend", type="robotlegs.bender.framework.api.LifecycleEvent")]*/
+// [Event(name="destroy", type="robotlegs.bender.framework.api.LifecycleEvent")]
+// [Event(name="error", type="robotlegs.bender.framework.api.LifecycleEvent")]
+// [Event(name="initialize", type="robotlegs.bender.framework.api.LifecycleEvent")]
+// [Event(name="postDestroy", type="robotlegs.bender.framework.api.LifecycleEvent")]
+// [Event(name="postInitialize", type="robotlegs.bender.framework.api.LifecycleEvent")]
+// [Event(name="postResume", type="robotlegs.bender.framework.api.LifecycleEvent")]
+// [Event(name="postSuspend", type="robotlegs.bender.framework.api.LifecycleEvent")]
+// [Event(name="preDestroy", type="robotlegs.bender.framework.api.LifecycleEvent")]
+// [Event(name="preInitialize", type="robotlegs.bender.framework.api.LifecycleEvent")]
+// [Event(name="preResume", type="robotlegs.bender.framework.api.LifecycleEvent")]
+// [Event(name="preSuspend", type="robotlegs.bender.framework.api.LifecycleEvent")]
+// [Event(name="resume", type="robotlegs.bender.framework.api.LifecycleEvent")]
+// [Event(name="stateChange", type="robotlegs.bender.framework.api.LifecycleEvent")]
+// [Event(name="suspend", type="robotlegs.bender.framework.api.LifecycleEvent")]
 
 /**
  * The Robotlegs object lifecycle contract
