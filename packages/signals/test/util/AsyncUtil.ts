@@ -6,13 +6,8 @@
  */
 
 export class AsyncUtil {
-    public add(
-        callback: Function,
-        delay: number,
-        doneCallback?: Function,
-        ...args: any[]
-    ): Function {
-        return () => {
+    public add(callback: Function, delay: number, doneCallback?: Function): Function {
+        return (...args: any[]) => {
             this._createTimeout(callback, delay, doneCallback, ...args);
         };
     }
