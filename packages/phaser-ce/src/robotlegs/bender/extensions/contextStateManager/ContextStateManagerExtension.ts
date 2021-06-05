@@ -35,10 +35,10 @@ export class ContextStateManagerExtension implements IExtension {
     public extend(context: IContext): void {
         this._injector = context.injector;
         this._logger = context.getLogger(this);
-        context.beforeInitializing(this.beforeInitializing.bind(this));
+        context.beforeInitializing(this._beforeInitializing.bind(this));
         context.addConfigHandler(
             instanceOfType(ContextStateManager),
-            this.handleContextStateManager.bind(this)
+            this._handleContextStateManager.bind(this)
         );
     }
 
@@ -46,7 +46,7 @@ export class ContextStateManagerExtension implements IExtension {
     /* Private Functions                                                          */
     /*============================================================================*/
 
-    private handleContextStateManager(contextStateManager: IContextStateManager): void {
+    private _handleContextStateManager(contextStateManager: IContextStateManager): void {
         if (this._injector.isBound(IContextStateManager)) {
             this._logger.warn("A contextStateManager has already been installed, ignoring {0}", [
                 contextStateManager.stateManager
@@ -60,7 +60,7 @@ export class ContextStateManagerExtension implements IExtension {
         }
     }
 
-    private beforeInitializing(): void {
+    private _beforeInitializing(): void {
         if (!this._injector.isBound(IContextStateManager)) {
             this._logger.error(
                 "A ContextStateManager must be installed if you install the ContextStateManagerExtension."

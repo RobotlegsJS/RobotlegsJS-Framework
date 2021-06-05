@@ -60,7 +60,7 @@ export class StateMediatorMapper implements IStateMediatorMapper, IStateMediator
      */
     public toMediator(mediatorClass: IClass<any>): IStateMediatorConfigurator {
         let mapping: IStateMediatorMapping = this._mappings.get(mediatorClass);
-        return mapping ? this.overwriteMapping(mapping) : this.createMapping(mediatorClass);
+        return mapping ? this._overwriteMapping(mapping) : this._createMapping(mediatorClass);
     }
 
     /**
@@ -70,7 +70,7 @@ export class StateMediatorMapper implements IStateMediatorMapper, IStateMediator
         let mapping: IStateMediatorMapping = this._mappings.get(mediatorClass);
 
         if (mapping) {
-            this.deleteMapping(mapping);
+            this._deleteMapping(mapping);
         }
     }
 
@@ -78,14 +78,14 @@ export class StateMediatorMapper implements IStateMediatorMapper, IStateMediator
      * @inheritDoc
      */
     public fromAll(): void {
-        this._mappings.forEach(this.deleteMapping, this);
+        this._mappings.forEach(this._deleteMapping, this);
     }
 
     /*============================================================================*/
     /* Private Functions                                                          */
     /*============================================================================*/
 
-    private createMapping(mediatorClass: IClass<any>): StateMediatorMapping {
+    private _createMapping(mediatorClass: IClass<any>): StateMediatorMapping {
         let mapping: StateMediatorMapping = new StateMediatorMapping(
             this._typeFilter,
             mediatorClass
@@ -100,7 +100,7 @@ export class StateMediatorMapper implements IStateMediatorMapper, IStateMediator
         return mapping;
     }
 
-    private deleteMapping(mapping: IStateMediatorMapping): void {
+    private _deleteMapping(mapping: IStateMediatorMapping): void {
         this._handler.removeMapping(mapping);
         this._mappings.delete(mapping.mediatorClass);
 
@@ -109,7 +109,7 @@ export class StateMediatorMapper implements IStateMediatorMapper, IStateMediator
         }
     }
 
-    private overwriteMapping(mapping: IStateMediatorMapping): IStateMediatorConfigurator {
+    private _overwriteMapping(mapping: IStateMediatorMapping): IStateMediatorConfigurator {
         if (this._logger) {
             this._logger.warn(
                 "{0} already mapped to {1}\n" +
@@ -118,7 +118,7 @@ export class StateMediatorMapper implements IStateMediatorMapper, IStateMediator
                 [this._typeFilter, mapping]
             );
         }
-        this.deleteMapping(mapping);
-        return this.createMapping(mapping.mediatorClass);
+        this._deleteMapping(mapping);
+        return this._createMapping(mapping.mediatorClass);
     }
 }
