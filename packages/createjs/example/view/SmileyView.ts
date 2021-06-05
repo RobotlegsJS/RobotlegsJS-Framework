@@ -8,7 +8,7 @@
 export class SmileyView extends createjs.Container {
     private _radius: number;
 
-    constructor(radius: number) {
+    public constructor(radius: number) {
         super();
 
         this._radius = Math.max(radius, 50);

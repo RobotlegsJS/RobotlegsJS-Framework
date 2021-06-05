@@ -19,7 +19,7 @@ export class Game {
 
     private _context: Context;
 
-    constructor() {
+    public constructor() {
         this.init();
     }
 

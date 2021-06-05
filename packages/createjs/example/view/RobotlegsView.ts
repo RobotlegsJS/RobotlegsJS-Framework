@@ -6,7 +6,7 @@
 // ------------------------------------------------------------------------------
 
 export class RobotlegsView extends createjs.Container {
-    constructor() {
+    public constructor() {
         super();
 
         this.loadLogo();
