@@ -29,24 +29,28 @@ export interface IViewManager extends IEventDispatcher {
 
     /**
      * Adds a container as a "view root" into the context
+     *
      * @param container
      */
     addContainer(container: Container): void;
 
     /**
      * Removes a container from this context
+     *
      * @param container
      */
     removeContainer(container: Container): void;
 
     /**
      * Registers a view handler
+     *
      * @param handler
      */
     addViewHandler(handler: IViewHandler): void;
 
     /**
      * Removes a view handler
+     *
      * @param handler
      */
     removeViewHandler(handler: IViewHandler): void;
