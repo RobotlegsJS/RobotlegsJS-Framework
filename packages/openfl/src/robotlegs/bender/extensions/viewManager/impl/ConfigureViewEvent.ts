@@ -11,6 +11,7 @@ import DisplayObjectContainer from "openfl/display/DisplayObjectContainer";
 
 /**
  * View Configuration Event
+ *
  * @private
  */
 export class ConfigureViewEvent extends Event {
@@ -39,6 +40,7 @@ export class ConfigureViewEvent extends Event {
 
     /**
      * Creates a view configuration event
+     *
      * @param type The event type
      * @param view The associated view instance
      */
