@@ -18,10 +18,10 @@ import { SmileyView } from "../view/SmileyView";
 @injectable()
 export class MyConfig implements IConfig {
     @inject(IMediatorMap)
-    private mediatorMap: IMediatorMap;
+    private _mediatorMap: IMediatorMap;
 
     public configure(): void {
-        this.mediatorMap.map(RobotlegsView).toMediator(RobotlegsMediator);
-        this.mediatorMap.map(SmileyView).toMediator(SmileyMediator);
+        this._mediatorMap.map(RobotlegsView).toMediator(RobotlegsMediator);
+        this._mediatorMap.map(SmileyView).toMediator(SmileyMediator);
     }
 }

@@ -15,12 +15,12 @@ export class SmileyView extends Container {
 
         this._radius = Math.max(radius, 50);
 
-        this.drawSmiley();
-        this.move();
-        this.enable();
+        this._drawSmiley();
+        this._move();
+        this._enable();
     }
 
-    private drawSmiley(): void {
+    private _drawSmiley(): void {
         let graphics: Graphics = new Graphics();
 
         // Head
@@ -46,7 +46,7 @@ export class SmileyView extends Container {
         this.addChild(graphics);
     }
 
-    private move(): void {
+    private _move(): void {
         this.x = Math.random() * 960;
         this.y = Math.random() * 400;
 
@@ -57,7 +57,7 @@ export class SmileyView extends Container {
         this.y = Math.min(this.y, 400 - this._radius);
     }
 
-    private enable(): void {
+    private _enable(): void {
         // Opt-in to interactivity
         this.interactive = true;
 

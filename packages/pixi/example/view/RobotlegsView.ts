@@ -13,12 +13,12 @@ export class RobotlegsView extends Container {
     constructor() {
         super();
 
-        this.loadLogo();
-        this.move();
-        this.enable();
+        this._loadLogo();
+        this._move();
+        this._enable();
     }
 
-    private loadLogo(): void {
+    private _loadLogo(): void {
         // create a PIXI sprite from an image path
         this.robotlegsLogo = Sprite.from("images/robotlegs.png");
 
@@ -26,7 +26,7 @@ export class RobotlegsView extends Container {
         this.addChild(this.robotlegsLogo);
     }
 
-    private move(): void {
+    private _move(): void {
         // center the sprite's anchor point
         this.robotlegsLogo.anchor.set(0.5);
 
@@ -35,7 +35,7 @@ export class RobotlegsView extends Container {
         this.robotlegsLogo.y = 400 * 0.5;
     }
 
-    private enable(): void {
+    private _enable(): void {
         // Opt-in to interactivity
         this.interactive = true;
 
