@@ -8,12 +8,12 @@
 import { ISlot } from "./ISlot";
 import { IOnceSignal } from "./IOnceSignal";
 
+// eslint-disable-next-line @rushstack/typedef-var
+export const ISignal = Symbol("ISignal");
+
 /**
  *
  */
-// eslint-disable-next-line @typescript-eslint/naming-convention
-export const ISignal = Symbol("ISignal");
-// eslint-disable-next-line no-redeclare
 export interface ISignal extends IOnceSignal {
     /**
      * Subscribes a listener for the signal.

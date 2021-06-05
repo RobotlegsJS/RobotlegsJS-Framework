@@ -8,12 +8,12 @@
 import { ISlot } from "./ISlot";
 import { ISignal } from "./ISignal";
 
+// eslint-disable-next-line @rushstack/typedef-var
+export const IPrioritySignal = Symbol("IPrioritySignal");
+
 /**
  *
  */
-// eslint-disable-next-line @typescript-eslint/naming-convention
-export const IPrioritySignal = Symbol("IPrioritySignal");
-// eslint-disable-next-line no-redeclare
 export interface IPrioritySignal extends ISignal {
     /**
      * Subscribes a listener for the signal.
