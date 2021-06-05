@@ -56,7 +56,7 @@ export class MediatorMapper implements IMediatorMapper, IMediatorUnmapper {
      */
     public toMediator(mediatorClass: IClass<any>): IMediatorConfigurator {
         const mapping: IMediatorMapping = this._mappings.get(mediatorClass);
-        return mapping ? this.overwriteMapping(mapping) : this._createMapping(mediatorClass);
+        return mapping ? this._overwriteMapping(mapping) : this._createMapping(mediatorClass);
     }
 
     /**
@@ -102,7 +102,7 @@ export class MediatorMapper implements IMediatorMapper, IMediatorUnmapper {
         }
     }
 
-    private overwriteMapping(mapping: IMediatorMapping): IMediatorConfigurator {
+    private _overwriteMapping(mapping: IMediatorMapping): IMediatorConfigurator {
         if (this._logger) {
             this._logger.warn(
                 "{0} already mapped to {1}\n" +

@@ -45,7 +45,7 @@ export class MediatorMap implements IMediatorMap, IViewHandler {
 
     private _viewHandler: MediatorViewHandler;
 
-    private NULL_UNMAPPER: IMediatorUnmapper = new NullMediatorUnmapper();
+    private _NULL_UNMAPPER: IMediatorUnmapper = new NullMediatorUnmapper();
 
     /*============================================================================*/
     /* Constructor                                                                */
@@ -91,7 +91,7 @@ export class MediatorMap implements IMediatorMap, IViewHandler {
      * @inheritDoc
      */
     public unmapMatcher(matcher: ITypeMatcher): IMediatorUnmapper {
-        return this._mappers.get(matcher.createTypeFilter().descriptor) || this.NULL_UNMAPPER;
+        return this._mappers.get(matcher.createTypeFilter().descriptor) || this._NULL_UNMAPPER;
     }
 
     /**
