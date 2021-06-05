@@ -50,9 +50,12 @@ export class StageCrawlerExtension implements IExtension {
 
     private _afterInitializing(): void {
         this._containerRegistry = this._injector.get<ContainerRegistry>(ContainerRegistry);
-        this._injector.isBound(IViewManager)
-            ? this._scanViewManagedContainers()
-            : this._scanContextView();
+
+        if (this._injector.isBound(IViewManager)) {
+            this._scanViewManagedContainers();
+        } else {
+            this._scanContextView();
+        }
     }
 
     private _scanViewManagedContainers(): void {
