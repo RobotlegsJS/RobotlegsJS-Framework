@@ -13,7 +13,7 @@ export class Promise extends OnceSignal {
     private _valueObjects: any[];
 
     /** @inheritDoc */
-    /* override*/
+    /* override */
     public addOnce(listener: Function): ISlot {
         let slot: ISlot = super.addOnce(listener);
         if (this._isDispatched) {
@@ -28,7 +28,7 @@ export class Promise extends OnceSignal {
      * @inheritDoc
      * @throws flash.errors.IllegalOperationError <code>IllegalOperationError</code>: You cannot dispatch() a Promise more than once
      */
-    /* override*/
+    /* override */
     public dispatch(...valueObjects: any[]): void {
         if (this._isDispatched) {
             throw new Error("You cannot dispatch() a Promise more than once");

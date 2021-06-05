@@ -73,7 +73,7 @@ export class DeluxeSignal extends PrioritySignal {
      * @throws ArgumentError <code>ArgumentError</code>: Incorrect number of arguments.
      * @throws ArgumentError <code>ArgumentError</code>: Value object is not an instance of the appropriate valueClasses Class.
      */
-    /* override*/
+    /* override */
     public dispatch(...valueObjects: any[]): void {
         // Validate value objects against pre-defined value classes.
         let numValueClasses: number = this._valueClasses.length;
