@@ -23,16 +23,6 @@ describe("EventEmitterMap", () => {
     let listenerExecuted: boolean = false;
     let listenerExecutedCount: number = 0;
 
-    beforeEach(() => {
-        eventEmitter = new Phaser.Events.EventEmitter();
-        eventEmitterMap = new EventEmitterMap();
-    });
-
-    afterEach(() => {
-        resetListenerExecuted();
-        resetListenerExecutedCount();
-    });
-
     function listener(): void {
         listenerExecuted = true;
     }
@@ -48,6 +38,16 @@ describe("EventEmitterMap", () => {
     function resetListenerExecutedCount(): void {
         listenerExecutedCount = 0;
     }
+
+    beforeEach(() => {
+        eventEmitter = new Phaser.Events.EventEmitter();
+        eventEmitterMap = new EventEmitterMap();
+    });
+
+    afterEach(() => {
+        resetListenerExecuted();
+        resetListenerExecutedCount();
+    });
 
     it("listener_mapped_is_triggered", () => {
         eventEmitterMap.on(eventEmitter, STARTED, listener);
