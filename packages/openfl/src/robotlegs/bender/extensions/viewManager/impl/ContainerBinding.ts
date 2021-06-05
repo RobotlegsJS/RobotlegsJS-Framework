@@ -14,7 +14,8 @@ import { ContainerBindingEvent } from "./ContainerBindingEvent";
 import DisplayObject from "openfl/display/DisplayObject";
 import DisplayObjectContainer from "openfl/display/DisplayObjectContainer";
 
-/*[Event(name="bindingEmpty", type="robotlegs.bender.extensions.viewManager.impl.ContainerBindingEvent")]*/
+// [Event(name="bindingEmpty", type="robotlegs.bender.extensions.viewManager.impl.ContainerBindingEvent")]
+
 /**
  * @private
  */
