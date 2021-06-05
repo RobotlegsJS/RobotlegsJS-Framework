@@ -38,26 +38,26 @@ export class StageCrawler {
      * @private
      */
     public scan(container: createjs.Container): void {
-        this.scanContainer(container);
+        this._scanContainer(container);
     }
 
     /*============================================================================*/
     /* Private Functions                                                          */
     /*============================================================================*/
 
-    private scanContainer(container: createjs.Container): void {
-        this.processView(container);
+    private _scanContainer(container: createjs.Container): void {
+        this._processView(container);
 
         container.children.forEach((child) => {
             if (child instanceof createjs.Container) {
-                this.scanContainer(child);
+                this._scanContainer(child);
             } else {
-                this.processView(child);
+                this._processView(child);
             }
         });
     }
 
-    private processView(view: createjs.DisplayObject): void {
+    private _processView(view: createjs.DisplayObject): void {
         this._binding.handleView(view, <IClass<any>>view.constructor);
     }
 }

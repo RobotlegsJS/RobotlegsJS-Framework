@@ -66,7 +66,7 @@ export class ViewManager extends EventDispatcher implements IViewManager {
      * @inheritDoc
      */
     public addContainer(container: createjs.Container): void {
-        if (!this.validContainer(container)) {
+        if (!this._validContainer(container)) {
             return;
         }
 
@@ -151,7 +151,7 @@ export class ViewManager extends EventDispatcher implements IViewManager {
     /* Private Functions                                                          */
     /*============================================================================*/
 
-    private validContainer(container: createjs.Container): boolean {
+    private _validContainer(container: createjs.Container): boolean {
         let isValid: boolean = this._containers.indexOf(container) < 0;
 
         if (isValid) {

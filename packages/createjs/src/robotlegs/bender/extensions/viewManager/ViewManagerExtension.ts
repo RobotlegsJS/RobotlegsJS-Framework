@@ -39,8 +39,8 @@ export class ViewManagerExtension implements IExtension {
      * @inheritDoc
      */
     public extend(context: IContext): void {
-        context.whenInitializing(this.whenInitializing.bind(this));
-        context.whenDestroying(this.whenDestroying.bind(this));
+        context.whenInitializing(this._whenInitializing.bind(this));
+        context.whenDestroying(this._whenDestroying.bind(this));
 
         this._injector = context.injector;
 
@@ -59,11 +59,11 @@ export class ViewManagerExtension implements IExtension {
     /* Private Functions                                                          */
     /*============================================================================*/
 
-    private whenInitializing(): void {
+    private _whenInitializing(): void {
         this._viewManager = this._injector.get<IViewManager>(IViewManager);
     }
 
-    private whenDestroying(): void {
+    private _whenDestroying(): void {
         this._viewManager.removeAllHandlers();
         this._injector.unbind(IViewManager);
         this._injector.unbind(ContainerRegistry);
