@@ -28,7 +28,7 @@ export abstract class ParallelMacro extends AbstractMacro implements IMacro {
 
         this._commands = this._mappings.getList();
 
-        if (this.hasCommands) {
+        if (this._hasCommands) {
             let numCommands: number = this._commands.length;
             let i: number = 0;
 
@@ -43,7 +43,7 @@ export abstract class ParallelMacro extends AbstractMacro implements IMacro {
         }
     }
 
-    private get hasCommands(): boolean {
+    private get _hasCommands(): boolean {
         return this._mappings && this._commands.length > 0;
     }
 

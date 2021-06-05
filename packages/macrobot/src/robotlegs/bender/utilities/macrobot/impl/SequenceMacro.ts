@@ -51,7 +51,7 @@ export abstract class SequenceMacro extends AbstractMacro implements IMacro {
     }
 
     protected executeNext(): void {
-        if (this.hasCommands) {
+        if (this._hasCommands) {
             let mapping: ISubCommandMapping = this._commands[this._executionIndex++];
             this.executeCommand(mapping);
         } else {
@@ -59,7 +59,7 @@ export abstract class SequenceMacro extends AbstractMacro implements IMacro {
         }
     }
 
-    private get hasCommands(): boolean {
+    private get _hasCommands(): boolean {
         return this._commands && this._executionIndex < this._commands.length;
     }
 
