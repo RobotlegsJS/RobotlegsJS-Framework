@@ -15,10 +15,12 @@ import DisplayObjectContainer from "openfl/display/DisplayObjectContainer";
 /*[Event(name="handlerAdd", type="robotlegs.bender.extensions.viewManager.impl.ViewManagerEvent")]*/
 /*[Event(name="handlerRemove", type="robotlegs.bender.extensions.viewManager.impl.ViewManagerEvent")]*/
 
+// eslint-disable-next-line @rushstack/typedef-var
+export const IViewManager = Symbol("IViewManager");
+
 /**
  * The View Manager allows you to add multiple "view root" containers to a context
  */
-export let IViewManager = Symbol("IViewManager");
 export interface IViewManager extends IEventDispatcher {
     /**
      * A list of currently registered containers
