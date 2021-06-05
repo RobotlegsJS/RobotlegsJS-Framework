@@ -15,6 +15,7 @@ import { IStateMediatorConfigurator } from "./IStateMediatorConfigurator";
 export interface IStateMediatorMapper {
     /**
      * Maps a matcher to a concrete StateMediator class
+     *
      * @param mediatorClass The concrete mediator class
      * @return Mapping configurator
      */

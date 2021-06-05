@@ -9,6 +9,7 @@ import { Event } from "@robotlegsjs/core";
 
 /**
  * State Configuration Event
+ *
  * @private
  */
 export class ConfigureStateEvent extends Event {
@@ -37,6 +38,7 @@ export class ConfigureStateEvent extends Event {
 
     /**
      * Creates a state configuration event
+     *
      * @param type The event type
      * @param state The associated state instance
      */

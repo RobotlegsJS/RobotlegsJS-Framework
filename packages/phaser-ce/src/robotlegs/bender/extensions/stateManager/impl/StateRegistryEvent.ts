@@ -7,6 +7,7 @@
 
 /**
  * StateManager existence event
+ *
  * @private
  */
 import { Event } from "@robotlegsjs/core";
@@ -43,6 +44,7 @@ export class StateRegistryEvent extends Event {
 
     /**
      * Creates a new stateManager existence event
+     *
      * @param type The event type
      * @param stateManager The stateManager associated with this event
      */

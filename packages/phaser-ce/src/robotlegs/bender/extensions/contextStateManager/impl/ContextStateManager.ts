@@ -32,6 +32,7 @@ export class ContextStateManager implements IContextStateManager, IConfig {
 
     /**
      * The StateManager represents the root Phaser.StateManager for a Context
+     *
      * @param stateManager The root State Manager for this Context
      */
     public constructor(stateManager: Phaser.StateManager) {

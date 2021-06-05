@@ -22,24 +22,28 @@ export interface IStateManager extends IEventDispatcher {
 
     /**
      * Adds a StateManager as a "state root" into the context
+     *
      * @param stateManager
      */
     addStateManager(stateManager: Phaser.StateManager): void;
 
     /**
      * Removes a StateManager from this context
+     *
      * @param stateManager
      */
     removeStateManager(stateManager: Phaser.StateManager): void;
 
     /**
      * Registers a state handler
+     *
      * @param handler
      */
     addStateHandler(handler: IStateHandler): void;
 
     /**
      * Removes a state handler
+     *
      * @param handler
      */
     removeStateHandler(handler: IStateHandler): void;

@@ -11,6 +11,7 @@ import { IStateHandler } from "../api/IStateHandler";
 
 /**
  * StateManager existence event
+ *
  * @private
  */
 export class StateManagerEvent extends Event {
@@ -54,6 +55,7 @@ export class StateManagerEvent extends Event {
 
     /**
      * Creates a state manager event
+     *
      * @param type The event type
      * @param stateManager The Phaser.StateManager associated with this event
      * @param handler The state handler associated with this event
