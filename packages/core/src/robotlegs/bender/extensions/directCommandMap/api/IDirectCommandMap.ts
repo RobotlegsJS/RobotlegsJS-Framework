@@ -11,10 +11,12 @@ import { ICommand } from "../../commandCenter/api/ICommand";
 
 import { IDirectCommandMapper } from "./IDirectCommandMapper";
 
+// eslint-disable-next-line @rushstack/typedef-var
+export const IDirectCommandMap = Symbol("IDirectCommandMap");
+
 /**
  * Maps commands for direct (manual) execution
  */
-export const IDirectCommandMap = Symbol("IDirectCommandMap");
 export interface IDirectCommandMap extends IDirectCommandMapper {
     /**
      * Pins a command in memory

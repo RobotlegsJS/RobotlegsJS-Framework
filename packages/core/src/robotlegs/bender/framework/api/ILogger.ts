@@ -5,10 +5,12 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
+// eslint-disable-next-line @rushstack/typedef-var
+export const ILogger = Symbol("ILogger");
+
 /**
  * The Robotlegs logger contract
  */
-export const ILogger = Symbol("ILogger");
 export interface ILogger {
     /**
      * Source indentifier

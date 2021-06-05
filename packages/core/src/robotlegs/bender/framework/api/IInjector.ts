@@ -7,9 +7,11 @@
 
 import { interfaces } from "inversify";
 
+// eslint-disable-next-line @rushstack/typedef-var
+export const IInjector = Symbol("IInjector");
+
 /**
  * The <code>Injector</code> manages the mappings and acts as the central hub from which all
  * injections are started.
  */
-export const IInjector = Symbol("IInjector");
 export interface IInjector extends interfaces.Container {}

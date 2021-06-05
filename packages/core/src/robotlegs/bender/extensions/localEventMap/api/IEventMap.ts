@@ -10,11 +10,13 @@ import { IClass } from "../../../extensions/matching/IClass";
 import { IEvent } from "../../../events/api/IEvent";
 import { IEventDispatcher } from "../../../events/api/IEventDispatcher";
 
+// eslint-disable-next-line @rushstack/typedef-var
+export const IEventMap = Symbol("IEventMap");
+
 /**
  * The Event Map keeps track of listeners and provides the ability
  * to unregister all listeners with a single method call.
  */
-export const IEventMap = Symbol("IEventMap");
 export interface IEventMap {
     /**
      * The same as calling <code>addEventListener</code> directly on the <code>IEventDispatcher</code>,

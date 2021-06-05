@@ -33,10 +33,12 @@ import { IClass } from "../../extensions/matching/IClass";
 // [Event(name="stateChange", type="robotlegs.bender.framework.api.LifecycleEvent")]
 // [Event(name="suspend", type="robotlegs.bender.framework.api.LifecycleEvent")]
 
+// eslint-disable-next-line @rushstack/typedef-var
+export const IContext = Symbol("IContext");
+
 /**
  * The Robotlegs context contract
  */
-export const IContext = Symbol("IContext");
 export interface IContext extends IEventDispatcher {
     /**
      * The context dependency injector

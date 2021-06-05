@@ -29,6 +29,7 @@
 
 import { IEvent } from "./IEvent";
 
+// eslint-disable-next-line @rushstack/typedef-var
 export const IEventDispatcher = Symbol("IEventDispatcher");
 
 /**
