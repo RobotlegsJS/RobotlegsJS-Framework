@@ -9,11 +9,13 @@ import { IEventMap } from "@robotlegsjs/core";
 
 import EventEmitter = require("eventemitter3");
 
+// eslint-disable-next-line @rushstack/typedef-var
+export const IEventEmitterMap = Symbol("IEventEmitterMap");
+
 /**
  * The Event Emitter Map keeps track of listeners and provides the ability
  * to unregister all EventEmitter listeners with a single method call.
  */
-export const IEventEmitterMap = Symbol("IEventEmitterMap");
 export interface IEventEmitterMap extends IEventMap {
     /**
      * The same as calling <code>on</code> or <code>addListener</code> directly on the <code>EventEmitter</code>,
