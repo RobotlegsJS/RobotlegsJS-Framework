@@ -7,6 +7,7 @@
 
 /// <reference types="mocha" />
 
+/* eslint-disable import/no-internal-modules */
 import "jsdom-global";
 import "reflect-metadata";
 import "bluebird/js/browser/bluebird";
