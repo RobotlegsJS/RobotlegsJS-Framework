@@ -1,0 +1,11 @@
+{
+  "changes": [
+    {
+      "packageName": "@robotlegsjs/core",
+      "comment": "Update [prettier](https://www.npmjs.com/package/prettier) to version **2.3.1**, update prettier badge and add project specific files to global `.gitignore` and `.prettierignore` files (see [7](https://github.com/RobotlegsJS/Robotlegs/pull/7))",
+      "type": "patch"
+    }
+  ],
+  "packageName": "@robotlegsjs/core",
+  "email": "tiago.schenkel@gmail.com"
+}
