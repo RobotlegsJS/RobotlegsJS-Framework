@@ -178,6 +178,14 @@
       "shellCommand": "pretty-quick --staged"
     },
     {
+      "name": "autoformat",
+      "commandKind": "bulk",
+      "summary": "Used to run autoformat on all packages.",
+      "description": "This command will run `npm run autoformat` on all packages",
+      "safeForSimultaneousRushProcesses": false,
+      "enableParallelism": true
+    },
+    {
       "name": "test",
       "commandKind": "bulk",
       "summary": "Used to run test on all packages.",
