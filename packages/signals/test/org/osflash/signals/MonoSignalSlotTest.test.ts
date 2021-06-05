@@ -207,7 +207,7 @@ describe("MonoSignalSlotTest", () => {
         completed.dispatch();
     });
 
-    /* [Test(expects="ArgumentError")]*/
+    // [Test(expects="ArgumentError")]
     it("addOnce_listener_then_set_listener_to_null_should_throw_ArgumentError()", () => {
         assert.throws(() => {
             let slot: ISlot = completed.addOnce(newEmptyHandler());
