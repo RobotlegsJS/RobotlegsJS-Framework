@@ -15,7 +15,7 @@
     "lint:src": "eslint -c .eslintrc.js --ext .ts ./src",
     "lint:test": "eslint -c .eslintrc.js --ext .ts ./test",
     "lint:example": "eslint -c .eslintrc.js --ext .ts ./example",
-    "lint": "npm run lint:src && npm run lint:test && lint:example",
+    "lint": "npm run lint:src && npm run lint:test && npm run lint:example",
     "clean-up": "rimraf .nyc_output && rimraf coverage && rimraf lib && rimraf lib-test && rimraf lib-example && rimraf dist && rimraf dist-test",
     "compile:src": "tsc -d --importHelpers",
     "compile:test": "tsc -p tsconfig.test.json -d --importHelpers",
