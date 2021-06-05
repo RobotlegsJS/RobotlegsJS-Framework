@@ -43,33 +43,33 @@ export class StageCrawlerExtension implements IExtension {
     public extend(context: IContext): void {
         this._injector = context.injector;
         this._logger = context.getLogger(this);
-        context.afterInitializing(this.afterInitializing.bind(this));
+        context.afterInitializing(this._afterInitializing.bind(this));
     }
 
     /*============================================================================*/
     /* Private Functions                                                          */
     /*============================================================================*/
 
-    private afterInitializing(): void {
+    private _afterInitializing(): void {
         this._containerRegistry = this._injector.get<ContainerRegistry>(ContainerRegistry);
         this._injector.isBound(IViewManager)
-            ? this.scanViewManagedContainers()
-            : this.scanContextView();
+            ? this._scanViewManagedContainers()
+            : this._scanContextView();
     }
 
-    private scanViewManagedContainers(): void {
+    private _scanViewManagedContainers(): void {
         this._logger.debug("ViewManager is installed. Checking for managed containers...");
         let viewManager: IViewManager = this._injector.get<IViewManager>(IViewManager);
         viewManager.containers.forEach((container: Container) => {
-            this.scanContainer(container);
+            this._scanContainer(container);
         });
     }
 
-    private scanContextView(): void {
+    private _scanContextView(): void {
         if (this._injector.isBound(IContextView)) {
             this._logger.debug("ViewManager is not installed. Checking the ContextView...");
             let contextView: IContextView = this._injector.get<IContextView>(IContextView);
-            this.scanContainer(contextView.view);
+            this._scanContainer(contextView.view);
         } else {
             this._logger.error(
                 "A ContextView must be installed if you install the StageCrawlerExtension."
@@ -77,7 +77,7 @@ export class StageCrawlerExtension implements IExtension {
         }
     }
 
-    private scanContainer(container: Container): void {
+    private _scanContainer(container: Container): void {
         let binding: ContainerBinding = this._containerRegistry.getBinding(container);
         this._logger.debug("StageCrawler scanning container {0} ...", [container]);
         new StageCrawler(binding).scan(container);

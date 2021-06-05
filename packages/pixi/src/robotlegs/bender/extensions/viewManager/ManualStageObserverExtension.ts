@@ -39,8 +39,8 @@ export class ManualStageObserverExtension implements IExtension {
      * @inheritDoc
      */
     public extend(context: IContext): void {
-        context.whenInitializing(this.whenInitializing.bind(this));
-        context.whenDestroying(this.whenDestroying.bind(this));
+        context.whenInitializing(this._whenInitializing.bind(this));
+        context.whenDestroying(this._whenDestroying.bind(this));
         installCount++;
         this._injector = context.injector;
         this._logger = context.getLogger(this);
@@ -50,7 +50,7 @@ export class ManualStageObserverExtension implements IExtension {
     /* Private Functions                                                          */
     /*============================================================================*/
 
-    private whenInitializing(): void {
+    private _whenInitializing(): void {
         // Hark, an actual Singleton!
         if (!ManualStageObserverExtension._manualStageObserver) {
             let containerRegistry: ContainerRegistry =
@@ -62,7 +62,7 @@ export class ManualStageObserverExtension implements IExtension {
         }
     }
 
-    private whenDestroying(): void {
+    private _whenDestroying(): void {
         installCount--;
         if (installCount === 0) {
             this._logger.debug("Destroying genuine ManualStageObserver Singleton");

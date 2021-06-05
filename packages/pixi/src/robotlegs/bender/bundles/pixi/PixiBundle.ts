@@ -52,27 +52,27 @@ export class PixiBundle implements IBundle {
 
         this._context.addConfigHandler(
             instanceOfType(ContextView),
-            this.handleContextView.bind(this)
+            this._handleContextView.bind(this)
         );
-        this._context.whenInitializing(this.whenInitializing.bind(this));
-        this._context.afterDestroying(this.afterDestroying.bind(this));
+        this._context.whenInitializing(this._whenInitializing.bind(this));
+        this._context.afterDestroying(this._afterDestroying.bind(this));
     }
 
     /*============================================================================*/
     /* Private Functions                                                          */
     /*============================================================================*/
 
-    private handleContextView(): void {
+    private _handleContextView(): void {
         this._context.configure(ContextViewListenerConfig);
     }
 
-    private whenInitializing(): void {
+    private _whenInitializing(): void {
         if (!this._context.injector.isBound(IContextView)) {
             this._logger.error("PixiBundle requires IContextView.");
         }
     }
 
-    private afterDestroying(): void {
+    private _afterDestroying(): void {
         this._context = null;
         this._logger = null;
     }
