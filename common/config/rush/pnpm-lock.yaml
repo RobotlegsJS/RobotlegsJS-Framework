@@ -65,7 +65,7 @@ specifiers:
   mocha: ^8.4.0
   nyc: ^15.1.0
   phaser: ^3.22.0
-  phaser-ce: 2.8.1
+  phaser-ce: 2.15.0
   pixi.js: 5.0.0
   prettier: ^2.3.0
   puppeteer: ^10.0.0
@@ -150,7 +150,7 @@ dependencies:
   mocha: 8.4.0
   nyc: 15.1.0
   phaser: 3.22.0
-  phaser-ce: 2.8.1
+  phaser-ce: 2.15.0
   pixi.js: 5.0.0
   prettier: 2.3.0
   puppeteer: 10.0.0
@@ -6245,8 +6245,8 @@ packages:
     resolution: {integrity: sha1-elfrVQpng/kRUzH89GY9XI4AelA=}
     dev: false
 
-  /phaser-ce/2.8.1:
-    resolution: {integrity: sha1-rBOHMvk41lInjuSVXNctLsndIEw=}
+  /phaser-ce/2.15.0:
+    resolution: {integrity: sha512-oKJIG+6MgTlTkJkAcSg3eSmg8X+B6fTXjWDCPXfpEFOvFeeB0wjnCif9jzAXBpRRJTIGoe1bruzjmD2qnGUSRw==}
     dev: false
 
   /phaser/3.22.0:
@@ -8822,7 +8822,7 @@ packages:
     dev: false
 
   file:projects/phaser-ce-signalcommandmap.tgz:
-    resolution: {integrity: sha512-GltXRVzhdlFnPwsV83ZTTYlQVRcCfZ8Oa+QmUglGE8/HBJ5TOv6U0BuEMnWA3DIFdADGsnbSZKNHuoDoEB0rFw==, tarball: file:projects/phaser-ce-signalcommandmap.tgz}
+    resolution: {integrity: sha512-kb6kUCYk/YB0wgNaLg5hFmxGvdoqZm3iP02xF6smbYeKma8KCUIud8opM3VZguOmdKDZ5SNS00SsdN5O5qYqAw==, tarball: file:projects/phaser-ce-signalcommandmap.tgz}
     name: '@rush-temp/phaser-ce-signalcommandmap'
     version: 0.0.0
     dependencies:
@@ -8857,7 +8857,7 @@ packages:
       karma-sourcemap-writer: 0.1.2
       karma-webpack: 5.0.0_webpack@5.38.1
       mocha: 8.4.0
-      phaser-ce: 2.8.1
+      phaser-ce: 2.15.0
       prettier: 2.3.0
       puppeteer: 10.0.0
       reflect-metadata: 0.1.13
@@ -8886,7 +8886,7 @@ packages:
     dev: false
 
   file:projects/phaser-ce.tgz:
-    resolution: {integrity: sha512-yTyqtsjgFON9OF+PuqJZI8xcMTy249FTzbi09PfPEpRMeXG3m+zeO1KBHTwcrdx4Ck9/y+/lZ+0nIWZb2ZezRA==, tarball: file:projects/phaser-ce.tgz}
+    resolution: {integrity: sha512-olGeovIR5bnM5pvicvP+fkZBvi4f+rqvqQCmE9L2sn83jZNGnFiD4xPCJrOkdwUnbXLyGZydxDX9kG/NWP3Cug==, tarball: file:projects/phaser-ce.tgz}
     name: '@rush-temp/phaser-ce'
     version: 0.0.0
     dependencies:
@@ -8924,7 +8924,7 @@ packages:
       karma-sourcemap-writer: 0.1.2
       karma-webpack: 5.0.0_webpack@5.38.1
       mocha: 8.4.0
-      phaser-ce: 2.8.1
+      phaser-ce: 2.15.0
       prettier: 2.3.0
       puppeteer: 10.0.0
       reflect-metadata: 0.1.13
