@@ -19,28 +19,32 @@ import { RobotlegsView } from "./../views/RobotlegsView";
 @injectable()
 export class ExampleConfig implements IConfig {
     @inject(IFlowManager)
-    private flowManager: IFlowManager;
+    private _flowManager: IFlowManager;
+
     @inject(IEventDispatcher)
-    private dispatcher: IEventDispatcher;
+    private _dispatcher: IEventDispatcher;
+
     @inject(IMediatorMap)
-    private mediatorMap: IMediatorMap;
+    private _mediatorMap: IMediatorMap;
 
     public configure(): void {
-        this.mapPalidor();
-        this.mapMediators();
+        this._mapPalidor();
+        this._mapMediators();
 
-        this.dispatcher.dispatchEvent(new Event("palidorView"));
+        this._dispatcher.dispatchEvent(new Event("palidorView"));
     }
-    private mapPalidor(): void {
-        this.flowManager.map("palidorView").toView(PalidorView);
-        this.flowManager.map("robotlegsjsView").toView(RobotlegsView);
 
-        this.flowManager.map("floatingView").toFloatingView(FloatingView);
+    private _mapPalidor(): void {
+        this._flowManager.map("palidorView").toView(PalidorView);
+        this._flowManager.map("robotlegsjsView").toView(RobotlegsView);
+
+        this._flowManager.map("floatingView").toFloatingView(FloatingView);
     }
-    private mapMediators(): void {
-        this.mediatorMap.map(PalidorView).toMediator(PalidorViewMediator);
-        this.mediatorMap.map(RobotlegsView).toMediator(RobotlegsViewMediator);
 
-        this.mediatorMap.map(FloatingView).toMediator(FloatingViewMediator);
+    private _mapMediators(): void {
+        this._mediatorMap.map(PalidorView).toMediator(PalidorViewMediator);
+        this._mediatorMap.map(RobotlegsView).toMediator(RobotlegsViewMediator);
+
+        this._mediatorMap.map(FloatingView).toMediator(FloatingViewMediator);
     }
 }

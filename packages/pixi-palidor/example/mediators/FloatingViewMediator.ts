@@ -16,22 +16,26 @@ export class FloatingViewMediator extends Mediator<FloatingView> {
     public initialize(): void {
         this.view.interactive = true;
         this.view.setTitle(this.view.parent.children.length);
-        this.eventMap.mapListener(this.view.addViewButton, "click", this.onAddView, this);
-        this.eventMap.mapListener(this.view.closeAllButton, "click", this.onCloseAll, this);
-        this.eventMap.mapListener(this.view.closeButton, "click", this.onClose, this);
+        this.eventMap.mapListener(this.view.addViewButton, "click", this._onAddView, this);
+        this.eventMap.mapListener(this.view.closeAllButton, "click", this._onCloseAll, this);
+        this.eventMap.mapListener(this.view.closeButton, "click", this._onClose, this);
     }
+
     public destroy(): void {
         this.eventMap.unmapListeners();
     }
-    private onAddView(e: any): void {
+
+    private _onAddView(e: any): void {
         this.eventDispatcher.dispatchEvent(new Event("floatingView"));
     }
-    private onCloseAll(e: any): void {
+
+    private _onCloseAll(e: any): void {
         this.eventDispatcher.dispatchEvent(
             new PalidorEvent(PalidorEvent.REMOVE_ALL_FLOATING_VIEWS)
         );
     }
-    private onClose(e: any): void {
+
+    private _onClose(e: any): void {
         this.eventDispatcher.dispatchEvent(
             new PalidorEvent(PalidorEvent.REMOVE_LAST_FLOATING_VIEW_ADDED)
         );

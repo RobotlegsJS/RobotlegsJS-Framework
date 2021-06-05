@@ -13,12 +13,13 @@ export class FloatingView extends Container {
     private _closeAllButton: ColorButton;
     private _addViewButton: ColorButton;
 
-    constructor() {
+    public constructor() {
         super();
-        this.createBackground();
-        this.createButtons();
-        this.createTexts();
+        this._createBackground();
+        this._createButtons();
+        this._createTexts();
     }
+
     public setTitle(index: number): void {
         const style = new TextStyle({
             align: "center",
@@ -32,7 +33,8 @@ export class FloatingView extends Container {
         titleText.position.set(480, 185);
         this.addChild(titleText);
     }
-    private createTexts(): void {
+
+    private _createTexts(): void {
         const style = new TextStyle({
             fill: 0xffffff,
             fontFamily: "Arial",
@@ -47,7 +49,8 @@ export class FloatingView extends Container {
         info.position.set(280 + 50, 250);
         this.addChild(info);
     }
-    private createButtons(): void {
+
+    private _createButtons(): void {
         const fontSize = 18;
         const bgWidth = 100;
         const bgHeight = 50;
@@ -65,7 +68,8 @@ export class FloatingView extends Container {
         this._closeAllButton.position.set(280 + 305, posY);
         this.addChild(this._closeAllButton);
     }
-    private createBackground(): void {
+
+    private _createBackground(): void {
         const graphic: Graphics = new Graphics();
         const colorDark = 0x2b3b47;
         const colorLight = 0x56768f;
@@ -81,12 +85,15 @@ export class FloatingView extends Container {
 
         this.addChild(graphic);
     }
+
     public get closeButton(): ColorButton {
         return this._closeButton;
     }
+
     public get closeAllButton(): ColorButton {
         return this._closeAllButton;
     }
+
     public get addViewButton(): ColorButton {
         return this._addViewButton;
     }
