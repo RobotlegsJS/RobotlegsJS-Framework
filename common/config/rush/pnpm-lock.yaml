@@ -65,8 +65,7 @@ specifiers:
   mocha: ^8.4.0
   nyc: ^15.1.0
   phaser: ^3.22.0
-  pixi.js: 5.2.1
-  prettier: ^2.3.0
+  prettier: ^2.3.1
   puppeteer: ^10.0.0
   reflect-metadata: ^0.1.13
   remap-istanbul: ^0.13.0
@@ -149,8 +148,7 @@ dependencies:
   mocha: 8.4.0
   nyc: 15.1.0
   phaser: 3.22.0
-  pixi.js: 5.2.1
-  prettier: 2.3.0
+  prettier: 2.3.1
   puppeteer: 10.0.0
   reflect-metadata: 0.1.13
   remap-istanbul: 0.13.0
@@ -6395,8 +6393,8 @@ packages:
     engines: {node: '>= 0.8.0'}
     dev: false
 
-  /prettier/2.3.0:
-    resolution: {integrity: sha512-kXtO4s0Lz/DW/IJ9QdWhAf7/NmPWQXkFr/r/WkR3vyI+0v8amTDxiaQSLzs8NBlytfLWX/7uQUMIW677yLKl4w==}
+  /prettier/2.3.1:
+    resolution: {integrity: sha512-p+vNbgpLjif/+D+DwAZAbndtRrR0md0MwfmOVN9N+2RgyACMT+7tfaRnT+WDPkqnuVwleyuBIG2XBxKDme3hPA==}
     engines: {node: '>=10.13.0'}
     hasBin: true
     dev: false
@@ -8467,7 +8465,7 @@ packages:
     dev: false
 
   file:projects/core.tgz:
-    resolution: {integrity: sha512-xSv9hiNJlPSq0N1vAEU/8Z/1396uxnZywdmL5gCJKDxLTZCbyNLDn89noqJ7QZfxwocgkYRh1YmUC51POrRqNg==, tarball: file:projects/core.tgz}
+    resolution: {integrity: sha512-qq2oqUBQI/LDp6ADEJBxuWHLrKqbBuO8NH4QHvNZXyxd2HlkWN8YzTXa/PiuqT+nPxc/lI0PLooEK9HlaMMwRg==, tarball: file:projects/core.tgz}
     name: '@rush-temp/core'
     version: 0.0.0
     dependencies:
@@ -8508,7 +8506,7 @@ packages:
       karma-webpack: 5.0.0_webpack@5.38.1
       mocha: 8.4.0
       nyc: 15.1.0
-      prettier: 2.3.0
+      prettier: 2.3.1
       puppeteer: 10.0.0
       reflect-metadata: 0.1.13
       rimraf: 3.0.2
@@ -8538,7 +8536,7 @@ packages:
     dev: false
 
   file:projects/createjs.tgz:
-    resolution: {integrity: sha512-GSk0u69ybnoBrfbSaCTAsC5o+1OUZnuv6/Pso2db19Jll2ObfvVN+bmWN6pzTIqht/yQfk+9CZFYEBpB0xx/ag==, tarball: file:projects/createjs.tgz}
+    resolution: {integrity: sha512-aC0rBwDunNSAsbdKdTm4+zq4tLIRMyT1Xy5WpQQ44QTXtBAvw7DxN4+lVNdg1tLzNb9GlxZ7vw1BS3bVVi+gZA==, tarball: file:projects/createjs.tgz}
     name: '@rush-temp/createjs'
     version: 0.0.0
     dependencies:
@@ -8581,7 +8579,7 @@ packages:
       karma-sourcemap-writer: 0.1.2
       karma-webpack: 5.0.0_webpack@5.38.1
       mocha: 8.4.0
-      prettier: 2.3.0
+      prettier: 2.3.1
       puppeteer: 10.0.0
       reflect-metadata: 0.1.13
       remap-istanbul: 0.13.0
@@ -8611,7 +8609,7 @@ packages:
     dev: false
 
   file:projects/eventemitter3.tgz:
-    resolution: {integrity: sha512-86bHVcAx4D6xnkigP5qSGB/r3zcwd/4OeRPr7jqJbZcgjfjxjPuAX2yl9JAc7FKAB4f6af+cOPAEKUG+/IOdfg==, tarball: file:projects/eventemitter3.tgz}
+    resolution: {integrity: sha512-xZwgOKb9anSVrZWgT11U8PV1SzG/mDL4aYzstZOCZWT41+ceSDRSBjabgBZr/aXY3Gd4jHGwRKmbwN0bqDo4pw==, tarball: file:projects/eventemitter3.tgz}
     name: '@rush-temp/eventemitter3'
     version: 0.0.0
     dependencies:
@@ -8651,7 +8649,7 @@ packages:
       karma-webpack: 5.0.0_webpack@5.38.1
       mocha: 8.4.0
       nyc: 15.1.0
-      prettier: 2.3.0
+      prettier: 2.3.1
       puppeteer: 10.0.0
       reflect-metadata: 0.1.13
       rimraf: 3.0.2
@@ -8681,7 +8679,7 @@ packages:
     dev: false
 
   file:projects/macrobot.tgz:
-    resolution: {integrity: sha512-TKhoLQZTnGKY9Og7CxKLMNb7sG1B++7sLGdBlD4rDg6FWFa49hq1EqfOip8JGfmMACptwlDA9/GqcglA04jnyQ==, tarball: file:projects/macrobot.tgz}
+    resolution: {integrity: sha512-8mNzasVdvkdTWljuLiJumz+seTf3n4fHsnEZBwoDnmGFGEtBynxImJ8VFG6Qe+DjO5k+fxjV2DeR3Ef9zL6Vtg==, tarball: file:projects/macrobot.tgz}
     name: '@rush-temp/macrobot'
     version: 0.0.0
     dependencies:
@@ -8721,7 +8719,7 @@ packages:
       karma-webpack: 5.0.0_webpack@5.38.1
       mocha: 8.4.0
       nyc: 15.1.0
-      prettier: 2.3.0
+      prettier: 2.3.1
       puppeteer: 10.0.0
       reflect-metadata: 0.1.13
       rimraf: 3.0.2
@@ -8750,7 +8748,7 @@ packages:
     dev: false
 
   file:projects/openfl.tgz:
-    resolution: {integrity: sha512-FY5tCKxjF5oeerAR4bEL7Ij4QVRX0/nalM+i2yRwxHalGXI6qavRVAPGooaD8wsVu1LTO0kNlh6iC8OAAmKu/g==, tarball: file:projects/openfl.tgz}
+    resolution: {integrity: sha512-BmyPMs1IfY2O7OVY9KDLI5aPxDPBNuT7QtEU2qQwb0G5A3jVMXenSysTEhgL0xD9FVg6iewydCOGnFSPPn8oEw==, tarball: file:projects/openfl.tgz}
     name: '@rush-temp/openfl'
     version: 0.0.0
     dependencies:
@@ -8790,7 +8788,7 @@ packages:
       karma-webpack: 5.0.0_webpack@5.38.1
       mocha: 8.4.0
       openfl: 8.9.6
-      prettier: 2.3.0
+      prettier: 2.3.1
       puppeteer: 10.0.0
       reflect-metadata: 0.1.13
       rimraf: 3.0.2
@@ -8819,7 +8817,7 @@ packages:
     dev: false
 
   file:projects/phaser-ce-signalcommandmap.tgz:
-    resolution: {integrity: sha512-kwjIt3gw1WLRgp4JF5wnBIwKARDcS8drjV1+mjBBBdy1c20/caDTwvhcqNHhvZQLOapX3KMZ1QQuWfTCCIo4ZA==, tarball: file:projects/phaser-ce-signalcommandmap.tgz}
+    resolution: {integrity: sha512-dhmglOYFYdFrCZz/mvUEseYNHqPLs3Euncuf3vZA+zuHIEQp7zKUIlKqi1GoSzg8o9jUFS7SxovAXERQkikGFA==, tarball: file:projects/phaser-ce-signalcommandmap.tgz}
     name: '@rush-temp/phaser-ce-signalcommandmap'
     version: 0.0.0
     dependencies:
@@ -8855,7 +8853,7 @@ packages:
       karma-webpack: 5.0.0_webpack@5.38.1
       mocha: 8.4.0
       phaser-ce: 2.15.0
-      prettier: 2.3.0
+      prettier: 2.3.1
       puppeteer: 10.0.0
       reflect-metadata: 0.1.13
       rimraf: 3.0.2
@@ -8883,7 +8881,7 @@ packages:
     dev: false
 
   file:projects/phaser-ce.tgz:
-    resolution: {integrity: sha512-VtBSdpWyfdUt+iCZlKeIBOcumG2cL2qgCl69vNmQN+H2gymDs9CyfaeebaLEeMJxEMCMrff0MiD3CpEMWZC4hQ==, tarball: file:projects/phaser-ce.tgz}
+    resolution: {integrity: sha512-c2LUEXfCBBM84l6ZldZL4/FmuTupCJE9OysfSwZ0jPlCq4LKU5P3fYwGvjhXA2dPSUjArXxsjF5teqhEL9w6IQ==, tarball: file:projects/phaser-ce.tgz}
     name: '@rush-temp/phaser-ce'
     version: 0.0.0
     dependencies:
@@ -8922,7 +8920,7 @@ packages:
       karma-webpack: 5.0.0_webpack@5.38.1
       mocha: 8.4.0
       phaser-ce: 2.15.0
-      prettier: 2.3.0
+      prettier: 2.3.1
       puppeteer: 10.0.0
       reflect-metadata: 0.1.13
       rimraf: 3.0.2
@@ -8951,7 +8949,7 @@ packages:
     dev: false
 
   file:projects/phaser.tgz:
-    resolution: {integrity: sha512-3Uzkc+P5woKO/SVBo+6tu2c206IhDNnaUrHdYw5XKPQvAelMwTORVWms5uOXRAqUqkloMfnjcVP6KhD64AqWTA==, tarball: file:projects/phaser.tgz}
+    resolution: {integrity: sha512-OicVy58y3mm0UpWzHINIqLyzt/0/fz+cz5MLX8CtKpe5e0vtygjgmxbDWj/E7FsFahWPVGefxDYwfNf7mwgSDA==, tarball: file:projects/phaser.tgz}
     name: '@rush-temp/phaser'
     version: 0.0.0
     dependencies:
@@ -8991,7 +8989,7 @@ packages:
       karma-webpack: 5.0.0_webpack@5.38.1
       mocha: 8.4.0
       phaser: 3.22.0
-      prettier: 2.3.0
+      prettier: 2.3.1
       puppeteer: 10.0.0
       reflect-metadata: 0.1.13
       rimraf: 3.0.2
@@ -9020,7 +9018,7 @@ packages:
     dev: false
 
   file:projects/pixi-palidor.tgz:
-    resolution: {integrity: sha512-aOZfk97phB8ym8++K2pOrFUqZFSVQ3fRnMQR2qS5ecdybcFrw6x01OsAJZatlq8jfQcp29tpPvBPhPoACtSI+w==, tarball: file:projects/pixi-palidor.tgz}
+    resolution: {integrity: sha512-fFUpMPApdKPzE8YUDJpQlaAiY3jZRj5lO8uWYEJtv8H/PtdacBc5M2sJYaasJLtwAQIbQZ5qUNtFr1gSClmhDg==, tarball: file:projects/pixi-palidor.tgz}
     name: '@rush-temp/pixi-palidor'
     version: 0.0.0
     dependencies:
@@ -9059,7 +9057,7 @@ packages:
       karma-webpack: 5.0.0_webpack@5.38.1
       mocha: 8.4.0
       pixi.js: 5.2.1
-      prettier: 2.3.0
+      prettier: 2.3.1
       puppeteer: 10.0.0
       reflect-metadata: 0.1.13
       remap-istanbul: 0.13.0
@@ -9088,7 +9086,7 @@ packages:
     dev: false
 
   file:projects/pixi-signalmediator.tgz:
-    resolution: {integrity: sha512-9ut7NwHkoSHHkwbIUf8JEa3sMAxGBTruxH5UHW+0MQhyYs3mtdOL3c76Tb4pRa12R3d8E1dG71XTRXiJkrg4gA==, tarball: file:projects/pixi-signalmediator.tgz}
+    resolution: {integrity: sha512-z/XpF7xhRI0lFfRaFXkt7Bec/LY9j0RPBTdGjIXMjrP1kiRz7MlOHic1An+RgzjVKKhe7TDfwnE2YnaZPGibDw==, tarball: file:projects/pixi-signalmediator.tgz}
     name: '@rush-temp/pixi-signalmediator'
     version: 0.0.0
     dependencies:
@@ -9127,7 +9125,7 @@ packages:
       mocha: 8.4.0
       nyc: 15.1.0
       pixi.js: 5.2.1
-      prettier: 2.3.0
+      prettier: 2.3.1
       puppeteer: 10.0.0
       reflect-metadata: 0.1.13
       remap-istanbul: 0.13.0
@@ -9157,7 +9155,7 @@ packages:
     dev: false
 
   file:projects/pixi.tgz:
-    resolution: {integrity: sha512-kvpgXVIEVXVJvHhMJ8T+EbTSVR8WGqCcqjyZrKLEDaRaGPH8fUw3NLOxZrqmUQbUrv9Zue/tyDC2NtzcLIqRXA==, tarball: file:projects/pixi.tgz}
+    resolution: {integrity: sha512-I97j3dYdmhAYxMn+WW6BlUlKg+iXMj4fZ88Js9YaclSHbF29lbv+6/Ie3j6R1/CnM4DkDm0aFlvsqgpLpIRPFA==, tarball: file:projects/pixi.tgz}
     name: '@rush-temp/pixi'
     version: 0.0.0
     dependencies:
@@ -9196,7 +9194,7 @@ packages:
       karma-webpack: 5.0.0_webpack@5.38.1
       mocha: 8.4.0
       pixi.js: 5.2.1
-      prettier: 2.3.0
+      prettier: 2.3.1
       puppeteer: 10.0.0
       reflect-metadata: 0.1.13
       rimraf: 3.0.2
@@ -9224,7 +9222,7 @@ packages:
     dev: false
 
   file:projects/signalcommandmap.tgz:
-    resolution: {integrity: sha512-aWbUXCNwxY04zxxcFfLb//MFZuX/u6zAF/VfVIhb5IxrSUxD+MZKwfy5CgeRB/4JSwJW04EDb2HCJoEDfLCm8A==, tarball: file:projects/signalcommandmap.tgz}
+    resolution: {integrity: sha512-PTb3r6jTLHb0howc7zfdQrBFDVw5rAhJ1yv/TrY0g3rlDRAyyCt4+o2f18grMvER6ZkvwKM8KUOM7qEZYDVa5w==, tarball: file:projects/signalcommandmap.tgz}
     name: '@rush-temp/signalcommandmap'
     version: 0.0.0
     dependencies:
@@ -9261,7 +9259,7 @@ packages:
       karma-webpack: 5.0.0_webpack@5.38.1
       mocha: 8.4.0
       nyc: 15.1.0
-      prettier: 2.3.0
+      prettier: 2.3.1
       puppeteer: 10.0.0
       reflect-metadata: 0.1.13
       rimraf: 3.0.2
@@ -9290,7 +9288,7 @@ packages:
     dev: false
 
   file:projects/signals.tgz:
-    resolution: {integrity: sha512-3NHGKDs1xcCu/Nfk0YMMWNNk5GQeVIjqRhFbsfF0FKkvu8KOdZgqL+h5dj0IetBXzoGnTyuw6tH/ui0cEOe2mg==, tarball: file:projects/signals.tgz}
+    resolution: {integrity: sha512-KHFlTXT04UEuWLo6UpK/GUi1xmedzkpGJbISPFAcr5d7cv8NDqCFZBKeAHz26PPxghXOVUDLLseqSEv2XCFf+w==, tarball: file:projects/signals.tgz}
     name: '@rush-temp/signals'
     version: 0.0.0
     dependencies:
@@ -9328,7 +9326,7 @@ packages:
       karma-webpack: 5.0.0_webpack@5.38.1
       mocha: 8.4.0
       nyc: 15.1.0
-      prettier: 2.3.0
+      prettier: 2.3.1
       puppeteer: 10.0.0
       reflect-metadata: 0.1.13
       rimraf: 3.0.2
