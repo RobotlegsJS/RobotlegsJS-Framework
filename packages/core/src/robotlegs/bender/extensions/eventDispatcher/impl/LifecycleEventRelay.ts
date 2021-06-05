@@ -18,7 +18,7 @@ export class LifecycleEventRelay {
     /* Private Static Properties                                                  */
     /*============================================================================*/
 
-    private static TYPES: string[] = [
+    private static _TYPES: string[] = [
         LifecycleEvent.STATE_CHANGE,
         LifecycleEvent.PRE_INITIALIZE,
         LifecycleEvent.INITIALIZE,
@@ -48,7 +48,7 @@ export class LifecycleEventRelay {
      * @private
      */
     public constructor(source: IEventDispatcher, destination: IEventDispatcher) {
-        this._relay = new EventRelay(source, destination, LifecycleEventRelay.TYPES).start();
+        this._relay = new EventRelay(source, destination, LifecycleEventRelay._TYPES).start();
     }
 
     /*============================================================================*/
