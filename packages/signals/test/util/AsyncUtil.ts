@@ -12,17 +12,17 @@ export class AsyncUtil {
         doneCallback?: Function,
         ...args: any[]
     ): Function {
-        return (..._args: any[]) => {
-            this.createTimeout(callback, delay, doneCallback, ..._args);
+        return () => {
+            this._createTimeout(callback, delay, doneCallback, ...args);
         };
     }
 
-    private createTimeout(
+    private _createTimeout(
         callback: Function,
         delay: number,
         doneCallback?: Function,
         ...args: any[]
-    ) {
+    ): void {
         setTimeout(function () {
             if (callback) {
                 callback(...args);
