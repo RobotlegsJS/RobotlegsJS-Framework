@@ -15,16 +15,16 @@ export class GameConfig implements IConfig {
     public context: IContext;
 
     public configure(): void {
-        this.mapCommands();
-        this.mapManager();
-        this.mapModels();
+        this._mapCommands();
+        this._mapManager();
+        this._mapModels();
     }
 
-    private mapCommands(): void {}
+    private _mapCommands(): void {}
 
-    private mapManager(): void {}
+    private _mapManager(): void {}
 
-    private mapModels(): void {
+    private _mapModels(): void {
         this.context.injector.bind(GameModel).to(GameModel).inSingletonScope();
     }
 }
