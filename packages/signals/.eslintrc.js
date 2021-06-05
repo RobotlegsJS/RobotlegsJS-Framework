@@ -66,7 +66,7 @@ module.exports = {
     "@typescript-eslint/member-ordering": "error",
     "@typescript-eslint/naming-convention": "error",
     "@typescript-eslint/no-empty-function": "off",
-    "@typescript-eslint/no-empty-interface": "error",
+    "@typescript-eslint/no-empty-interface": "off",
     "@typescript-eslint/no-explicit-any": "off",
     "@typescript-eslint/no-inferrable-types": "off",
     "@typescript-eslint/no-misused-new": "error",
@@ -97,6 +97,7 @@ module.exports = {
     "complexity": "off",
     "constructor-super": "error",
     "curly": "error",
+    "dot-notation": "error",
     "eol-last": "off",
     "eqeqeq": ["error", "smart"],
     "guard-for-in": "error",
@@ -105,6 +106,7 @@ module.exports = {
     "import/no-extraneous-dependencies": "error",
     "import/no-internal-modules": "error",
     "import/order": "off",
+    "indent": "off",
     "jsdoc/check-alignment": "error",
     "jsdoc/check-indentation": "error",
     "jsdoc/newline-after-description": "error",
@@ -131,6 +133,7 @@ module.exports = {
           "group",
           "groupEnd",
           "table",
+          "info",
           "dirxml",
           "error",
           "groupCollapsed",
@@ -146,6 +149,7 @@ module.exports = {
     "no-duplicate-case": "error",
     "no-duplicate-imports": "error",
     "no-empty": "off",
+    "no-empty-function": "off",
     "no-eval": "error",
     "no-extra-bind": "error",
     "no-extra-semi": "off",
@@ -158,6 +162,7 @@ module.exports = {
     "no-redeclare": "error",
     "no-return-await": "error",
     "no-sequences": "error",
+    "no-shadow": "error",
     "no-sparse-arrays": "error",
     "no-template-curly-in-string": "error",
     "no-throw-literal": "error",
@@ -165,14 +170,26 @@ module.exports = {
     "no-undef-init": "error",
     "no-underscore-dangle": "off",
     "no-unsafe-finally": "error",
+    "no-unused-expressions": "error",
     "no-unused-labels": "error",
+    "no-use-before-define": "error",
     "no-var": "error",
     "object-shorthand": "error",
     "one-var": ["error", "never"],
+    "padded-blocks": [
+      "off",
+      {
+        blocks: "never"
+      },
+      {
+        allowSingleLineBlocks: true
+      }
+    ],
     "prefer-arrow/prefer-arrow-functions": "off",
     "prefer-const": "off",
     "prefer-object-spread": "error",
     "quote-props": "off",
+    "quotes": "off",
     "radix": "error",
     "react/jsx-curly-spacing": "off",
     "react/jsx-equals-spacing": "off",
@@ -184,6 +201,7 @@ module.exports = {
       }
     ],
     "react/jsx-wrap-multilines": "off",
+    "semi": "off",
     "space-before-function-paren": "off",
     "space-in-parens": ["off", "never"],
     "spaced-comment": [
