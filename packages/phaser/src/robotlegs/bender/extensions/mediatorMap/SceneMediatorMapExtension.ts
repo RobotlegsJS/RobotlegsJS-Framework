@@ -35,9 +35,9 @@ export class SceneMediatorMapExtension implements IExtension {
      */
     public extend(context: IContext): void {
         context
-            .beforeInitializing(this.beforeInitializing.bind(this))
-            .beforeDestroying(this.beforeDestroying.bind(this))
-            .whenDestroying(this.whenDestroying.bind(this));
+            .beforeInitializing(this._beforeInitializing.bind(this))
+            .beforeDestroying(this._beforeDestroying.bind(this))
+            .whenDestroying(this._whenDestroying.bind(this));
         this._injector = context.injector;
         this._injector.bind(ISceneMediatorMap).to(SceneMediatorMap).inSingletonScope();
     }
@@ -46,7 +46,7 @@ export class SceneMediatorMapExtension implements IExtension {
     /* Private Functions                                                          */
     /*============================================================================*/
 
-    private beforeInitializing(): void {
+    private _beforeInitializing(): void {
         this._mediatorMap = this._injector.get<SceneMediatorMap>(ISceneMediatorMap);
         if (this._injector.isBound(ISceneManager)) {
             this._sceneManager = this._injector.get<ISceneManager>(ISceneManager);
@@ -54,7 +54,7 @@ export class SceneMediatorMapExtension implements IExtension {
         }
     }
 
-    private beforeDestroying(): void {
+    private _beforeDestroying(): void {
         this._mediatorMap.unmediateAll();
         if (this._injector.isBound(ISceneManager)) {
             this._sceneManager = this._injector.get<ISceneManager>(ISceneManager);
@@ -62,7 +62,7 @@ export class SceneMediatorMapExtension implements IExtension {
         }
     }
 
-    private whenDestroying(): void {
+    private _whenDestroying(): void {
         if (this._injector.isBound(ISceneMediatorMap)) {
             this._injector.unbind(ISceneMediatorMap);
         }

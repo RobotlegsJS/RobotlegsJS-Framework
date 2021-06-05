@@ -73,7 +73,7 @@ export class ViewMediatorMap implements IViewMediatorMap, IViewHandler {
             return mapper;
         }
 
-        mapper = this.createMapper(matcher) as MediatorMapper;
+        mapper = this._createMapper(matcher) as MediatorMapper;
         this._mappers.set(desc, mapper);
         return mapper;
     }
@@ -131,7 +131,7 @@ export class ViewMediatorMap implements IViewMediatorMap, IViewHandler {
     /* Private Functions                                                          */
     /*============================================================================*/
 
-    private createMapper(matcher: ITypeMatcher): IMediatorMapper {
+    private _createMapper(matcher: ITypeMatcher): IMediatorMapper {
         return new MediatorMapper(matcher.createTypeFilter(), this._viewHandler, this._logger);
     }
 }

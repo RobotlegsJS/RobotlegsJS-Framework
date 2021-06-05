@@ -34,10 +34,10 @@ export class ContextSceneManagerExtension implements IExtension {
     public extend(context: IContext): void {
         this._injector = context.injector;
         this._logger = context.getLogger(this);
-        context.beforeInitializing(this.beforeInitializing.bind(this));
+        context.beforeInitializing(this._beforeInitializing.bind(this));
         context.addConfigHandler(
             instanceOfType(ContextSceneManager),
-            this.handleContextSceneManager.bind(this)
+            this._handleContextSceneManager.bind(this)
         );
     }
 
@@ -45,7 +45,7 @@ export class ContextSceneManagerExtension implements IExtension {
     /* Private Functions                                                          */
     /*============================================================================*/
 
-    private handleContextSceneManager(contextSceneManager: IContextSceneManager): void {
+    private _handleContextSceneManager(contextSceneManager: IContextSceneManager): void {
         if (this._injector.isBound(IContextSceneManager)) {
             this._logger.warn("A contextSceneManager has already been installed, ignoring {0}", [
                 contextSceneManager.sceneManager
@@ -59,7 +59,7 @@ export class ContextSceneManagerExtension implements IExtension {
         }
     }
 
-    private beforeInitializing(): void {
+    private _beforeInitializing(): void {
         if (!this._injector.isBound(IContextSceneManager)) {
             this._logger.error(
                 "A ContextSceneManager must be installed if you install the ContextSceneManagerExtension."

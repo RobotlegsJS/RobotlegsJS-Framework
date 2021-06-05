@@ -52,40 +52,40 @@ export class SceneMediatorManager implements IMediatorManager {
             if (!this._autoRemoveMap.has(scene.sys.settings.key)) {
                 this._autoRemoveMap.set(scene.sys.settings.key, scene);
             }
-            scene.sys.events.on("destroy", this.onSceneDestroy, this);
-            scene.sys.events.on("shutdown", this.onSceneDestroy, this);
+            scene.sys.events.on("destroy", this._onSceneDestroy, this);
+            scene.sys.events.on("shutdown", this._onSceneDestroy, this);
             // scene.sys.events.on("sleep", this.onSceneDestroy, this);
             // scene.sys.events.on("pause", this.onSceneDestroy, this);
         }
 
         // Synchronize with item life-cycle
-        this.initializeMediator(mediator, item);
+        this._initializeMediator(mediator, item);
     }
 
     /**
      * @private
      */
     public removeMediator(mediator: any, item: any, mapping: IMediatorMapping): void {
-        this.destroyMediator(mediator);
+        this._destroyMediator(mediator);
     }
 
     /*============================================================================*/
     /* Private Functions                                                          */
     /*============================================================================*/
 
-    private onSceneDestroy(sys: Phaser.Scenes.Systems): void {
+    private _onSceneDestroy(sys: Phaser.Scenes.Systems): void {
         if (this._autoRemoveMap.has(sys.settings.key)) {
             let scene: Phaser.Scene = this._autoRemoveMap.get(sys.settings.key);
             this._autoRemoveMap.delete(sys.settings.key);
             this._factory.removeMediators(scene);
             if (this._autoRemoveMap.size === 0) {
-                scene.sys.events.off("destroy", this.onSceneDestroy, this, false);
-                scene.sys.events.off("shutdown", this.onSceneDestroy, this, false);
+                scene.sys.events.off("destroy", this._onSceneDestroy, this, false);
+                scene.sys.events.off("shutdown", this._onSceneDestroy, this, false);
             }
         }
     }
 
-    private initializeMediator(mediator: any, mediatedItem: any): void {
+    private _initializeMediator(mediator: any, mediatedItem: any): void {
         if ("preInitialize" in mediator) {
             mediator.preInitialize();
         }
@@ -103,7 +103,7 @@ export class SceneMediatorManager implements IMediatorManager {
         }
     }
 
-    private destroyMediator(mediator: any): void {
+    private _destroyMediator(mediator: any): void {
         if ("preDestroy" in mediator) {
             mediator.preDestroy();
         }
