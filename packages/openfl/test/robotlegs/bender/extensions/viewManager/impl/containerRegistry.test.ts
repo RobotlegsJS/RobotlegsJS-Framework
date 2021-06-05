@@ -22,6 +22,15 @@ import { TreeContainer } from "../support/TreeContainer";
 describe("ContainerRegistry", () => {
     let registry: ContainerRegistry = null;
 
+    function createTrees(treeDepth: number, treeWidth: number): TreeContainer[] {
+        const trees: TreeContainer[] = [];
+        for (let i: number = 0; i < treeWidth; i++) {
+            let treeContainer: TreeContainer = new TreeContainer(treeDepth, treeWidth);
+            trees.push(treeContainer);
+        }
+        return trees;
+    }
+
     beforeEach(() => {
         registry = new ContainerRegistry();
     });
@@ -337,13 +346,4 @@ describe("ContainerRegistry", () => {
         registry.getBinding(container).removeHandler(handler);
         assert.isUndefined(registry.getBinding(container));
     });
-
-    function createTrees(treeDepth: number, treeWidth: number): TreeContainer[] {
-        const trees: TreeContainer[] = [];
-        for (let i: number = 0; i < treeWidth; i++) {
-            let treeContainer: TreeContainer = new TreeContainer(treeDepth, treeWidth);
-            trees.push(treeContainer);
-        }
-        return trees;
-    }
 });
