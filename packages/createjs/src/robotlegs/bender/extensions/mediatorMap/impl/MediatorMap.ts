@@ -52,7 +52,7 @@ export class MediatorMap implements IMediatorMap, IViewHandler {
     /**
      * @private
      */
-    constructor(@inject(IContext) context: IContext) {
+    public constructor(@inject(IContext) context: IContext) {
         this._logger = context.getLogger(this);
         this._factory = new MediatorFactory(context.injector);
         this._viewHandler = new MediatorViewHandler(this._factory);

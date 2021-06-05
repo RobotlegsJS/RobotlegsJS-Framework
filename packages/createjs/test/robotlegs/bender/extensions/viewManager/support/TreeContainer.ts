@@ -13,7 +13,7 @@ export class TreeContainer extends createjs.Container {
     private _treeWidth: number = 0;
     private _treeChildren: TreeContainer[] = [];
 
-    constructor(treeDetpth: number, treeWidth: number) {
+    public constructor(treeDetpth: number, treeWidth: number) {
         super();
 
         this._treeDepth = treeDetpth;

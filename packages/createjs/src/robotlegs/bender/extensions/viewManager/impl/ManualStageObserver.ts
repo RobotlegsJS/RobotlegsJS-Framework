@@ -32,7 +32,7 @@ export class ManualStageObserver {
     /**
      * @private
      */
-    constructor(containerRegistry: ContainerRegistry) {
+    public constructor(containerRegistry: ContainerRegistry) {
         this._registry = containerRegistry;
 
         // We care about all containers (not just roots)
