@@ -129,22 +129,22 @@ export class TypeFilter implements ITypeFilter {
     }
 
     protected createDescriptor(): string {
-        let allOf_FCQNs: string[] = this.alphabetiseCaseInsensitiveFCQNs(this.allOfTypes);
-        let anyOf_FCQNs: string[] = this.alphabetiseCaseInsensitiveFCQNs(this.anyOfTypes);
-        let noneOf_FQCNs: string[] = this.alphabetiseCaseInsensitiveFCQNs(this.noneOfTypes);
+        let allOfFCQNs: string[] = this.alphabetiseCaseInsensitiveFCQNs(this.allOfTypes);
+        let anyOfFCQNs: string[] = this.alphabetiseCaseInsensitiveFCQNs(this.anyOfTypes);
+        let noneOfFQCNs: string[] = this.alphabetiseCaseInsensitiveFCQNs(this.noneOfTypes);
 
         let description: string[] = [];
 
-        if (allOf_FCQNs.length) {
-            description.push("all of: " + allOf_FCQNs.toString());
+        if (allOfFCQNs.length) {
+            description.push("all of: " + allOfFCQNs.toString());
         }
 
-        if (anyOf_FCQNs.length) {
-            description.push("any of: " + anyOf_FCQNs.toString());
+        if (anyOfFCQNs.length) {
+            description.push("any of: " + anyOfFCQNs.toString());
         }
 
-        if (noneOf_FQCNs.length) {
-            description.push("none of: " + noneOf_FQCNs.toString());
+        if (noneOfFQCNs.length) {
+            description.push("none of: " + noneOfFQCNs.toString());
         }
 
         return description.join("; ");
