@@ -16,7 +16,7 @@ export class ReportPayloadHook {
     @inject(String)
     protected _str: string;
 
-    public hook() {
+    public hook(): void {
         this._report("Hook of " + this._str);
     }
 }

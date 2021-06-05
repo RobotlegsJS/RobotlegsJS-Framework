@@ -18,7 +18,7 @@ export class ReportCommandHook {
     @inject(ReportStringCommand)
     protected _command: ReportStringCommand;
 
-    public hook() {
+    public hook(): void {
         this._report("Hook of " + this._command.str);
     }
 }
