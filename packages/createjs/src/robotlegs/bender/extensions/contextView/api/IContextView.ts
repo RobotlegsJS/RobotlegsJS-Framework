@@ -5,6 +5,7 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
+// eslint-disable-next-line @rushstack/typedef-var
 export const IContextView = Symbol("IContextView");
 export interface IContextView {
     view: createjs.Stage;
