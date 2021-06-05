@@ -19,7 +19,7 @@ export class Game {
     private _renderer: PIXI.Renderer;
     private _context: Context;
 
-    constructor() {
+    public constructor() {
         this._canvas = <HTMLCanvasElement>document.getElementById("canvas");
         this._renderer = PIXI.autoDetectRenderer({
             width: 960,
@@ -43,7 +43,7 @@ export class Game {
         this.render();
     }
 
-    public render = () => {
+    public render = (): void => {
         this._renderer.render(this._stage);
         window.requestAnimationFrame(this.render);
     };

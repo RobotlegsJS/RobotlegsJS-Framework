@@ -10,7 +10,7 @@ import { Container, Graphics } from "pixi.js";
 export class SmileyView extends Container {
     private _radius: number;
 
-    constructor(radius: number) {
+    public constructor(radius: number) {
         super();
 
         this._radius = Math.max(radius, 50);
