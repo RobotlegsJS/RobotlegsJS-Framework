@@ -208,7 +208,13 @@ module.exports = {
       "error",
       "always",
       {
-        markers: ["/"]
+        line: {
+          exceptions: ["-", "/"]
+        },
+        block: {
+          exceptions: ["="],
+          balanced: true
+        }
       }
     ],
     "unicorn/prefer-ternary": "error",
