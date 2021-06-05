@@ -16,14 +16,14 @@ export class SmileyMediator extends Mediator<SmileyView> {
     public initialize(): void {
         console.log("SmileyMediator initialized!");
 
-        this.view.addEventListener(MouseEvent.CLICK, this.onClick);
+        this.view.addEventListener(MouseEvent.CLICK, this._onClick);
     }
 
     public destroy(): void {
         console.log("SmileyMediator destroyed!");
     }
 
-    private onClick = (event: Event): void => {
+    private _onClick = (event: Event): void => {
         this.view.parent.removeChild(this.view);
     };
 }

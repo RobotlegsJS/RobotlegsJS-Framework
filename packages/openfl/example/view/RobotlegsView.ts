@@ -11,26 +11,26 @@ import URLRequest from "openfl/net/URLRequest";
 import Event from "openfl/events/Event";
 
 export class RobotlegsView extends Sprite {
-    constructor() {
+    public constructor() {
         super();
 
-        this.addEventListener(Event.ADDED_TO_STAGE, this.onAddedToStage);
+        this.addEventListener(Event.ADDED_TO_STAGE, this._onAddedToStage);
     }
 
-    private onAddedToStage = (event: Event): void => {
+    private _onAddedToStage = (event: Event): void => {
         if (event.target === this) {
-            this.loadLogo();
-            this.enableButtonMode();
+            this._loadLogo();
+            this._enableButtonMode();
         }
     };
 
-    private loadLogo(): void {
+    private _loadLogo(): void {
         let loader = new Loader();
-        loader.contentLoaderInfo.addEventListener(Event.COMPLETE, this.logoLoaded);
+        loader.contentLoaderInfo.addEventListener(Event.COMPLETE, this._logoLoaded);
         loader.load(new URLRequest("images/robotlegs.png"));
     }
 
-    private logoLoaded = (event: Event): void => {
+    private _logoLoaded = (event: Event): void => {
         let bitmap = event.target.loader.content;
 
         bitmap.x = (this.stage.stageWidth - bitmap.width) / 2;
@@ -39,7 +39,7 @@ export class RobotlegsView extends Sprite {
         this.addChild(bitmap);
     };
 
-    private enableButtonMode(): void {
+    private _enableButtonMode(): void {
         this.useHandCursor = true;
         this.mouseEnabled = true;
         this.mouseChildren = false;
