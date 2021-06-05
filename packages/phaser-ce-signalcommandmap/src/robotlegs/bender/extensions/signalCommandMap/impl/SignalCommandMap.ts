@@ -43,7 +43,7 @@ export class SignalCommandMap implements ISignalCommandMap {
      */
     public constructor(@inject(IContext) context: IContext) {
         this._injector = context.injector;
-        this._triggerMap = new CommandTriggerMap(this.getKey, this.createTrigger.bind(this));
+        this._triggerMap = new CommandTriggerMap(this._getKey, this._createTrigger.bind(this));
     }
 
     /*============================================================================*/
@@ -54,14 +54,14 @@ export class SignalCommandMap implements ISignalCommandMap {
      * @inheritDoc
      */
     public map(signalClass: Object): ICommandMapper {
-        return this.getTrigger(signalClass).createMapper();
+        return this._getTrigger(signalClass).createMapper();
     }
 
     /**
      * @inheritDoc
      */
     public unmap(signalClass: Object): ICommandUnmapper {
-        return this.getTrigger(signalClass).createMapper();
+        return this._getTrigger(signalClass).createMapper();
     }
 
     public addMappingProcessor(handler: Function): ISignalCommandMap {
@@ -75,15 +75,15 @@ export class SignalCommandMap implements ISignalCommandMap {
     /* Private Functions                                                          */
     /*============================================================================*/
 
-    private createTrigger(signalClass: Object): ICommandTrigger {
+    private _createTrigger(signalClass: Object): ICommandTrigger {
         return new SignalCommandTrigger(this._injector, signalClass, this._mappingProcessors);
     }
 
-    private getTrigger(signalClass: Object): SignalCommandTrigger {
+    private _getTrigger(signalClass: Object): SignalCommandTrigger {
         return <SignalCommandTrigger>this._triggerMap.getTrigger(signalClass);
     }
 
-    private getKey(signalClass: Object): Object {
+    private _getKey(signalClass: Object): Object {
         return signalClass;
     }
 }
