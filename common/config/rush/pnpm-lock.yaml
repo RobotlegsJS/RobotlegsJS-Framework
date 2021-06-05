@@ -65,8 +65,7 @@ specifiers:
   mocha: ^8.4.0
   nyc: ^15.1.0
   phaser: ^3.22.0
-  phaser-ce: 2.15.0
-  pixi.js: 5.0.0
+  pixi.js: 5.2.1
   prettier: ^2.3.0
   puppeteer: ^10.0.0
   reflect-metadata: ^0.1.13
@@ -150,8 +149,7 @@ dependencies:
   mocha: 8.4.0
   nyc: 15.1.0
   phaser: 3.22.0
-  phaser-ce: 2.15.0
-  pixi.js: 5.0.0
+  pixi.js: 5.2.1
   prettier: 2.3.0
   puppeteer: 10.0.0
   reflect-metadata: 0.1.13
@@ -6291,9 +6289,8 @@ packages:
     engines: {node: '>=0.10.0'}
     dev: false
 
-  /pixi.js/5.0.0:
-    resolution: {integrity: sha512-15G8+96Tcp2KtsWt8/ceqFOp42zmd0Lm3hH+b3IQfxrX7PNIYpZozyGY4JTz1eCm05+N3fZBgGYSON5xt4OUng==}
-    requiresBuild: true
+  /pixi.js/5.2.1:
+    resolution: {integrity: sha512-jmkxchTmotiJN/mOS6+kGEjBOhHxAfx4JuWsJGe+uix1J88wdM9iNYFjuib+ITXrLxo0OrC6EhQgNE9jzZWgcg==}
     dependencies:
       '@pixi/accessibility': 5.2.1
       '@pixi/app': 5.2.1
@@ -8822,7 +8819,7 @@ packages:
     dev: false
 
   file:projects/phaser-ce-signalcommandmap.tgz:
-    resolution: {integrity: sha512-kb6kUCYk/YB0wgNaLg5hFmxGvdoqZm3iP02xF6smbYeKma8KCUIud8opM3VZguOmdKDZ5SNS00SsdN5O5qYqAw==, tarball: file:projects/phaser-ce-signalcommandmap.tgz}
+    resolution: {integrity: sha512-kwjIt3gw1WLRgp4JF5wnBIwKARDcS8drjV1+mjBBBdy1c20/caDTwvhcqNHhvZQLOapX3KMZ1QQuWfTCCIo4ZA==, tarball: file:projects/phaser-ce-signalcommandmap.tgz}
     name: '@rush-temp/phaser-ce-signalcommandmap'
     version: 0.0.0
     dependencies:
@@ -8886,7 +8883,7 @@ packages:
     dev: false
 
   file:projects/phaser-ce.tgz:
-    resolution: {integrity: sha512-olGeovIR5bnM5pvicvP+fkZBvi4f+rqvqQCmE9L2sn83jZNGnFiD4xPCJrOkdwUnbXLyGZydxDX9kG/NWP3Cug==, tarball: file:projects/phaser-ce.tgz}
+    resolution: {integrity: sha512-VtBSdpWyfdUt+iCZlKeIBOcumG2cL2qgCl69vNmQN+H2gymDs9CyfaeebaLEeMJxEMCMrff0MiD3CpEMWZC4hQ==, tarball: file:projects/phaser-ce.tgz}
     name: '@rush-temp/phaser-ce'
     version: 0.0.0
     dependencies:
@@ -9023,7 +9020,7 @@ packages:
     dev: false
 
   file:projects/pixi-palidor.tgz:
-    resolution: {integrity: sha512-3+dBrkhRzOUNrKibYbmQKGbWewh1BxBewWO+MZFxEDqy2YbfnRtEKXdJ7HODgd76sQuFg3rmiZwAXOZheB1Urw==, tarball: file:projects/pixi-palidor.tgz}
+    resolution: {integrity: sha512-aOZfk97phB8ym8++K2pOrFUqZFSVQ3fRnMQR2qS5ecdybcFrw6x01OsAJZatlq8jfQcp29tpPvBPhPoACtSI+w==, tarball: file:projects/pixi-palidor.tgz}
     name: '@rush-temp/pixi-palidor'
     version: 0.0.0
     dependencies:
@@ -9061,7 +9058,7 @@ packages:
       karma-sourcemap-writer: 0.1.2
       karma-webpack: 5.0.0_webpack@5.38.1
       mocha: 8.4.0
-      pixi.js: 5.0.0
+      pixi.js: 5.2.1
       prettier: 2.3.0
       puppeteer: 10.0.0
       reflect-metadata: 0.1.13
@@ -9091,7 +9088,7 @@ packages:
     dev: false
 
   file:projects/pixi-signalmediator.tgz:
-    resolution: {integrity: sha512-t2I3Q/FqrCh3RnAql7erIHUln7CZNFNlQ0bcB8YgDKWffyjTeALYJqFQRZ9bwlj+DBB9Hx0kX2k55yrb8IpEKw==, tarball: file:projects/pixi-signalmediator.tgz}
+    resolution: {integrity: sha512-9ut7NwHkoSHHkwbIUf8JEa3sMAxGBTruxH5UHW+0MQhyYs3mtdOL3c76Tb4pRa12R3d8E1dG71XTRXiJkrg4gA==, tarball: file:projects/pixi-signalmediator.tgz}
     name: '@rush-temp/pixi-signalmediator'
     version: 0.0.0
     dependencies:
@@ -9129,7 +9126,7 @@ packages:
       karma-webpack: 5.0.0_webpack@5.38.1
       mocha: 8.4.0
       nyc: 15.1.0
-      pixi.js: 5.0.0
+      pixi.js: 5.2.1
       prettier: 2.3.0
       puppeteer: 10.0.0
       reflect-metadata: 0.1.13
@@ -9160,7 +9157,7 @@ packages:
     dev: false
 
   file:projects/pixi.tgz:
-    resolution: {integrity: sha512-un6pAVsehXRfeFg8FwBdqMXwyZwEC1VrPogABTAMp5XuaWRb54D1YiZv3cu05rAONvWxM2YOO2BHRS7G/yLIXw==, tarball: file:projects/pixi.tgz}
+    resolution: {integrity: sha512-kvpgXVIEVXVJvHhMJ8T+EbTSVR8WGqCcqjyZrKLEDaRaGPH8fUw3NLOxZrqmUQbUrv9Zue/tyDC2NtzcLIqRXA==, tarball: file:projects/pixi.tgz}
     name: '@rush-temp/pixi'
     version: 0.0.0
     dependencies:
@@ -9198,7 +9195,7 @@ packages:
       karma-sourcemap-writer: 0.1.2
       karma-webpack: 5.0.0_webpack@5.38.1
       mocha: 8.4.0
-      pixi.js: 5.0.0
+      pixi.js: 5.2.1
       prettier: 2.3.0
       puppeteer: 10.0.0
       reflect-metadata: 0.1.13
