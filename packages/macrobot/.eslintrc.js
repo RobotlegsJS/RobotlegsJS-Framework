@@ -209,7 +209,8 @@ module.exports = {
       "always",
       {
         line: {
-          exceptions: ["-", "/"]
+          exceptions: ["-", "/"],
+          markers: ["/"]
         },
         block: {
           exceptions: ["="],
