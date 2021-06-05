@@ -42,11 +42,11 @@ export class MediatorManager {
     public addMediator(mediator: any, item: any, mapping: IMediatorMapping): void {
         // Watch Display Object for removal
         if (item instanceof DisplayObject && mapping.autoRemoveEnabled) {
-            item.addEventListener(Event.REMOVED_FROM_STAGE, this.onRemovedFromStage);
+            item.addEventListener(Event.REMOVED_FROM_STAGE, this._onRemovedFromStage);
         }
 
         // Synchronize with item life-cycle
-        this.initializeMediator(mediator, item);
+        this._initializeMediator(mediator, item);
     }
 
     /**
@@ -54,21 +54,21 @@ export class MediatorManager {
      */
     public removeMediator(mediator: any, item: any, mapping: IMediatorMapping): void {
         if (item instanceof DisplayObject) {
-            item.removeEventListener(Event.REMOVED_FROM_STAGE, this.onRemovedFromStage);
+            item.removeEventListener(Event.REMOVED_FROM_STAGE, this._onRemovedFromStage);
         }
 
-        this.destroyMediator(mediator);
+        this._destroyMediator(mediator);
     }
 
     /*============================================================================*/
     /* Private Functions                                                          */
     /*============================================================================*/
 
-    private onRemovedFromStage = (event: Event): void => {
+    private _onRemovedFromStage = (event: Event): void => {
         this._factory.removeMediators(event.target);
     };
 
-    private initializeMediator(mediator: any, mediatedItem: any): void {
+    private _initializeMediator(mediator: any, mediatedItem: any): void {
         if ("preInitialize" in mediator) {
             mediator.preInitialize();
         }
@@ -86,7 +86,7 @@ export class MediatorManager {
         }
     }
 
-    private destroyMediator(mediator: any): void {
+    private _destroyMediator(mediator: any): void {
         if ("preDestroy" in mediator) {
             mediator.preDestroy();
         }

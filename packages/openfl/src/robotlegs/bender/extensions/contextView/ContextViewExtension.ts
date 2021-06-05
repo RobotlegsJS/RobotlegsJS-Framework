@@ -35,15 +35,15 @@ export class ContextViewExtension implements IExtension {
     public extend(context: IContext): void {
         this._injector = context.injector;
         this._logger = context.getLogger(this);
-        context.beforeInitializing(this.beforeInitializing.bind(this));
-        context.addConfigHandler(instanceOfType(ContextView), this.handleContextView.bind(this));
+        context.beforeInitializing(this._beforeInitializing.bind(this));
+        context.addConfigHandler(instanceOfType(ContextView), this._handleContextView.bind(this));
     }
 
     /*============================================================================*/
     /* Private Functions                                                          */
     /*============================================================================*/
 
-    private handleContextView(contextView: IContextView): void {
+    private _handleContextView(contextView: IContextView): void {
         if (this._injector.isBound(IContextView)) {
             this._logger.warn("A contextView has already been installed, ignoring {0}", [
                 contextView.view
@@ -55,7 +55,7 @@ export class ContextViewExtension implements IExtension {
         }
     }
 
-    private beforeInitializing(): void {
+    private _beforeInitializing(): void {
         if (!this._injector.isBound(IContextView)) {
             this._logger.error(
                 "A ContextView must be installed if you install the ContextViewExtension."
