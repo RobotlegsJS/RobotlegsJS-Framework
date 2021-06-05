@@ -5,7 +5,8 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-export let IContextStateManager = Symbol("IContextStateManager");
+// eslint-disable-next-line @rushstack/typedef-var
+export const IContextStateManager = Symbol("IContextStateManager");
 export interface IContextStateManager {
     stateManager: Phaser.StateManager;
 }

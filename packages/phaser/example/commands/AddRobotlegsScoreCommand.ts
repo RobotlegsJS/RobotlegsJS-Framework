@@ -12,14 +12,14 @@ import { MainEvent } from "../events/MainEvent";
 @injectable()
 export class AddRobotlegsScoreCommand implements ICommand {
     @inject(GameModel)
-    private gameModel: GameModel;
+    private _gameModel: GameModel;
 
     @inject(IEventDispatcher)
-    private eventDispatcher: IEventDispatcher;
+    private _eventDispatcher: IEventDispatcher;
 
     public execute(event: Event): void {
         console.log(event.type, event.data);
-        this.gameModel.robotlegsScore += 1;
-        this.eventDispatcher.dispatchEvent(new MainEvent(MainEvent.ADDED_ROBOTLEGS_IMAGE));
+        this._gameModel.robotlegsScore += 1;
+        this._eventDispatcher.dispatchEvent(new MainEvent(MainEvent.ADDED_ROBOTLEGS_IMAGE));
     }
 }

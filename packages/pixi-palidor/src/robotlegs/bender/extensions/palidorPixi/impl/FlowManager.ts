@@ -35,7 +35,7 @@ export class FlowManager implements IFlowManager {
         return this._views;
     }
 
-    constructor(
+    public constructor(
         @inject(IEventMap) eventMap: IEventMap,
         @inject(IContainerController) controller: IContainerController,
         @inject(IEventDispatcher) eventDispatcher: IEventDispatcher
@@ -45,7 +45,7 @@ export class FlowManager implements IFlowManager {
         this._controller = controller;
 
         this._views = new Map<string, IClass<Container>>();
-        this.mapPalidorListeners();
+        this._mapPalidorListeners();
     }
 
     public map(event: string): IFlowViewMapping {
@@ -58,55 +58,55 @@ export class FlowManager implements IFlowManager {
 
     public mapView(eventString: string, viewClass: IClass<Container>): void {
         this._views.set(eventString, viewClass);
-        this._eventMap.mapListener(this._dispatcher, eventString, this.onChangeView, this);
+        this._eventMap.mapListener(this._dispatcher, eventString, this._onChangeView, this);
     }
 
     public mapFloatingView(eventString: string, viewClass: IClass<Container>): void {
         this._views.set(eventString, viewClass);
-        this._eventMap.mapListener(this._dispatcher, eventString, this.onAddFloatingView, this);
+        this._eventMap.mapListener(this._dispatcher, eventString, this._onAddFloatingView, this);
     }
 
-    private mapPalidorListeners(): void {
+    private _mapPalidorListeners(): void {
         this._eventMap.mapListener(
             this._dispatcher,
             PalidorEvent.REMOVE_CURRENT_VIEW,
-            this.onRemoveCurrentView,
+            this._onRemoveCurrentView,
             this
         );
         this._eventMap.mapListener(
             this._dispatcher,
             PalidorEvent.REMOVE_LAST_FLOATING_VIEW_ADDED,
-            this.onRemoveLastFloatingView,
+            this._onRemoveLastFloatingView,
             this
         );
         this._eventMap.mapListener(
             this._dispatcher,
             PalidorEvent.REMOVE_ALL_FLOATING_VIEWS,
-            this.onRemoveAllFloatingView,
+            this._onRemoveAllFloatingView,
             this
         );
     }
 
-    private onChangeView(e: Event): void {
+    private _onChangeView(e: Event): void {
         let clazz = this._views.get(e.type);
         this._controller.removeCurrentView();
         this._controller.changeView(new clazz());
     }
 
-    private onAddFloatingView(e: Event): void {
+    private _onAddFloatingView(e: Event): void {
         let clazz = this._views.get(e.type);
         this._controller.addView(new clazz());
     }
 
-    private onRemoveCurrentView(e: Event): void {
+    private _onRemoveCurrentView(e: Event): void {
         this._controller.removeCurrentView();
     }
 
-    private onRemoveLastFloatingView(): void {
+    private _onRemoveLastFloatingView(): void {
         this._controller.removeLastFloatingViewAdded();
     }
 
-    private onRemoveAllFloatingView(e: Event): void {
+    private _onRemoveAllFloatingView(e: Event): void {
         this._controller.removeAllFloatingViews();
     }
 }

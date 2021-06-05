@@ -16,7 +16,7 @@ export class DirectCommandMapReportingCommand implements ICommand {
     protected _directCommandMap: IDirectCommandMap;
     protected _reportingFunction: Function;
 
-    constructor(
+    public constructor(
         @inject(IDirectCommandMap) directCommandMap: IDirectCommandMap,
         @inject("Function")
         @named("reportingFunction")

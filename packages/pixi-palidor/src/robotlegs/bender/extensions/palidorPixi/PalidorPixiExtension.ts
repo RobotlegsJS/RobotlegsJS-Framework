@@ -21,10 +21,10 @@ export class PalidorPixiExtension implements IExtension {
     public extend(context: IContext): void {
         this._injector = context.injector;
 
-        context.addConfigHandler(instanceOfType(ContextView), this.handleContextView.bind(this));
+        context.addConfigHandler(instanceOfType(ContextView), this._handleContextView.bind(this));
     }
 
-    private handleContextView(contextView: IContextView): void {
+    private _handleContextView(contextView: IContextView): void {
         this._injector.bind(IContainerController).to(PixiContainerController).inSingletonScope();
         this._injector.bind(IFlowManager).to(FlowManager).inSingletonScope();
     }

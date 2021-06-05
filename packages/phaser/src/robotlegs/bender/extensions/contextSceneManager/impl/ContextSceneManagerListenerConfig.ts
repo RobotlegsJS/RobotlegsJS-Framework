@@ -30,7 +30,7 @@ export class ContextSceneManagerListenerConfig implements IConfig {
     /* Public Functions                                                           */
     /*============================================================================*/
 
-    constructor(
+    public constructor(
         @inject(IContextSceneManager) contextSceneManager: IContextSceneManager,
         @inject(ISceneManager) sceneManager: ISceneManager
     ) {

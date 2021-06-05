@@ -59,7 +59,7 @@ export class SceneManagerBinding extends EventDispatcher {
     /**
      * @private
      */
-    constructor(sceneManager: Phaser.Scenes.SceneManager) {
+    public constructor(sceneManager: Phaser.Scenes.SceneManager) {
         super();
         this._sceneManager = sceneManager;
     }
@@ -86,7 +86,7 @@ export class SceneManagerBinding extends EventDispatcher {
         if (index > -1) {
             this._sceneHandlers.splice(index, 1);
 
-            this.dispatchBindingEmpty();
+            this._dispatchBindingEmpty();
         }
     }
 
@@ -108,7 +108,7 @@ export class SceneManagerBinding extends EventDispatcher {
         if (index > -1) {
             this._viewHandlers.splice(index, 1);
 
-            this.dispatchBindingEmpty();
+            this._dispatchBindingEmpty();
         }
     }
 
@@ -137,7 +137,7 @@ export class SceneManagerBinding extends EventDispatcher {
     /**
      * @private
      */
-    private dispatchBindingEmpty(): void {
+    private _dispatchBindingEmpty(): void {
         if (this._sceneHandlers.length === 0 && this._viewHandlers.length === 0) {
             this.dispatchEvent(
                 new SceneManagerBindingEvent(SceneManagerBindingEvent.BINDING_EMPTY)

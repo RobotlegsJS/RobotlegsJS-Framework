@@ -13,6 +13,7 @@ import DisplayObjectContainer from "openfl/display/DisplayObjectContainer";
 
 /**
  * Container existence event
+ *
  * @private
  */
 export class ViewManagerEvent extends Event {
@@ -56,11 +57,12 @@ export class ViewManagerEvent extends Event {
 
     /**
      * Creates a view manager event
+     *
      * @param type The event type
      * @param container The container associated with this event
      * @param handler The view handler associated with this event
      */
-    constructor(type: string, container?: DisplayObjectContainer, handler?: IViewHandler) {
+    public constructor(type: string, container?: DisplayObjectContainer, handler?: IViewHandler) {
         super(type);
         this._container = container;
         this._handler = handler;

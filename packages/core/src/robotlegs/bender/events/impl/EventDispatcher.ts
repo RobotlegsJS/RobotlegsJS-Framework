@@ -74,6 +74,7 @@ let ONCE_EVENT_LIST: IEventBin[] = [];
  * dispatching capabilities is to extend EventDispatcher. If this is impossible (that is, if the class is already extending
  * another class), you can instead implement the IEventDispatcher interface, create an EventDispatcher member, and write simple
  * hooks to route calls into the aggregated EventDispatcher.
+ *
  * @see egret.IEventDispatcher
  * @version Egret 2.4
  * @platform Web,Native
@@ -89,6 +90,7 @@ export class EventDispatcher implements IEventDispatcher {
 
     /**
      * create an instance of the EventDispatcher class.
+     *
      * @param target The target object for events dispatched to the EventDispatcher object. This parameter is used when
      * the EventDispatcher instance is aggregated by a class that implements IEventDispatcher; it is necessary so that the
      * containing object can be the target for events. Do not use this parameter in simple cases in which a class extends EventDispatcher.
@@ -196,6 +198,7 @@ export class EventDispatcher implements IEventDispatcher {
 
     /**
      * Distribute a specified event parameters.
+     *
      * @param type The type of the event. Event listeners can access this information through the inherited type property.
      * @param bubbles Determines whether the Event object bubbles. Event listeners can access this information through
      * the inherited bubbles property.
@@ -224,7 +227,7 @@ export class EventDispatcher implements IEventDispatcher {
      *
      * @param useCapture
      */
-    private _getEventMap(useCapture?: boolean) {
+    private _getEventMap(useCapture?: boolean): any {
         let values = this._eventDispatcher;
         let eventMap: any = useCapture ? values[Keys.captureEventsMap] : values[Keys.eventsMap];
         return eventMap;

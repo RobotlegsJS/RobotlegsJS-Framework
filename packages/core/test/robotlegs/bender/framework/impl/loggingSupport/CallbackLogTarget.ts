@@ -12,7 +12,7 @@ import { LogParams } from "./LogParams";
 export class CallbackLogTarget implements ILogTarget {
     protected _callback: Function;
 
-    constructor(callback: Function) {
+    public constructor(callback: Function) {
         this._callback = callback;
     }
 

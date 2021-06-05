@@ -20,6 +20,24 @@ describe("EventRelay", () => {
     let subject: EventRelay;
     let reportedTypes: string[];
 
+    function catchEvent(event: Event): void {
+        reportedTypes.push(event.type);
+    }
+
+    function captureEventsOf(types: string[]): void {
+        if (types) {
+            types.forEach((type: string) => {
+                destination.addEventListener(type, catchEvent);
+            });
+        }
+    }
+
+    function createRelayFor(types?: string[]): EventRelay {
+        subject = new EventRelay(source, destination, types);
+        captureEventsOf(types);
+        return subject;
+    }
+
     beforeEach(() => {
         source = new EventDispatcher();
         destination = new EventDispatcher();
@@ -32,24 +50,6 @@ describe("EventRelay", () => {
         subject = null;
         reportedTypes = null;
     });
-
-    function createRelayFor(types?: string[]): EventRelay {
-        subject = new EventRelay(source, destination, types);
-        captureEventsOf(types);
-        return subject;
-    }
-
-    function captureEventsOf(types: string[]): void {
-        if (types) {
-            types.forEach((type: string) => {
-                destination.addEventListener(type, catchEvent);
-            });
-        }
-    }
-
-    function catchEvent(event: Event): void {
-        reportedTypes.push(event.type);
-    }
 
     it("no_relay_before_start_when_types_are_not_defined", () => {
         createRelayFor();

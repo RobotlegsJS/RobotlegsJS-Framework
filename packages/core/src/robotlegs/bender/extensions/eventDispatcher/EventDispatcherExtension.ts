@@ -33,9 +33,10 @@ export class EventDispatcherExtension implements IExtension {
 
     /**
      * Creates an Event Dispatcher Extension
+     *
      * @param eventDispatcher Optional IEventDispatcher instance to share
      */
-    constructor(eventDispatcher: IEventDispatcher = null) {
+    public constructor(eventDispatcher: IEventDispatcher = null) {
         this._eventDispatcher = eventDispatcher || new EventDispatcher();
     }
 
@@ -49,19 +50,19 @@ export class EventDispatcherExtension implements IExtension {
     public extend(context: IContext): void {
         this._context = context;
         this._context.injector.bind(IEventDispatcher).toConstantValue(this._eventDispatcher);
-        this._context.beforeInitializing(this.configureLifecycleEventRelay.bind(this));
-        this._context.afterDestroying(this.destroyLifecycleEventRelay.bind(this));
+        this._context.beforeInitializing(this._configureLifecycleEventRelay.bind(this));
+        this._context.afterDestroying(this._destroyLifecycleEventRelay.bind(this));
     }
 
     /*============================================================================*/
     /* Private Functions                                                          */
     /*============================================================================*/
 
-    private configureLifecycleEventRelay(): void {
+    private _configureLifecycleEventRelay(): void {
         this._lifecycleRelay = new LifecycleEventRelay(this._context, this._eventDispatcher);
     }
 
-    private destroyLifecycleEventRelay(): void {
+    private _destroyLifecycleEventRelay(): void {
         this._lifecycleRelay.destroy();
     }
 }

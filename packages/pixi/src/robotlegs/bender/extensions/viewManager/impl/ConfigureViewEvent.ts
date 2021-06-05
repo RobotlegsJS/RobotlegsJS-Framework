@@ -11,6 +11,7 @@ import { Container } from "pixi.js";
 
 /**
  * View Configuration Event
+ *
  * @private
  */
 export class ConfigureViewEvent extends Event {
@@ -39,10 +40,11 @@ export class ConfigureViewEvent extends Event {
 
     /**
      * Creates a view configuration event
+     *
      * @param type The event type
      * @param view The associated view instance
      */
-    constructor(type: string, view: Container) {
+    public constructor(type: string, view: Container) {
         super(type, true);
         this._view = view;
     }

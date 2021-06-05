@@ -11,6 +11,7 @@ import { Event } from "@robotlegsjs/core";
 
 /**
  * Container existence event
+ *
  * @private
  */
 export class ContainerRegistryEvent extends Event {
@@ -45,10 +46,11 @@ export class ContainerRegistryEvent extends Event {
 
     /**
      * Creates a new container existence event
+     *
      * @param type The event type
      * @param container The container associated with this event
      */
-    constructor(type: string, container: Container) {
+    public constructor(type: string, container: Container) {
         super(type);
         this._container = container;
     }

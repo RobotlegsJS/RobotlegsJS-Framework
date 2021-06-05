@@ -12,7 +12,7 @@ export class GameModel {
     public score: number;
     public level: number;
 
-    constructor() {
+    public constructor() {
         this.clear();
     }
 

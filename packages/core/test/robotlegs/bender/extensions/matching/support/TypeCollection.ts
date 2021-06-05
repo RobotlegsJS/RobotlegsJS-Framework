@@ -14,7 +14,7 @@ export class TypeCollection<T> {
     private _subTypeOf: IType<T>[];
     private _items: T[];
 
-    constructor(type: IType<T>, subTypeOf: IType<T>[], items: T[]) {
+    public constructor(type: IType<T>, subTypeOf: IType<T>[], items: T[]) {
         this._type = type;
         this._subTypeOf = subTypeOf;
         this._items = items;

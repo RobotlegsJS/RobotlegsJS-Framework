@@ -24,7 +24,7 @@ export class SignalMap implements ISignalMap {
     /* Constructor                                                                */
     /*============================================================================*/
 
-    constructor() {
+    public constructor() {
         this._handlersBySignal = new Map();
     }
 

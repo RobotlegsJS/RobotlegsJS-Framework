@@ -11,13 +11,16 @@ import { IEvent } from "../../../events/api/IEvent";
 import { ICommandMapper } from "../../commandCenter/dsl/ICommandMapper";
 import { ICommandUnmapper } from "../../commandCenter/dsl/ICommandUnmapper";
 
+// eslint-disable-next-line @rushstack/typedef-var
+export const IEventCommandMap = Symbol("IEventCommandMap");
+
 /**
  * The Event Command Map allows you to bind Events to Commands
  */
-export let IEventCommandMap = Symbol("IEventCommandMap");
 export interface IEventCommandMap {
     /**
      * Creates a mapping for an Event based trigger
+     *
      * @param type The Event type
      * @param eventClass The concrete Event class
      * @return Command Mapper
@@ -26,6 +29,7 @@ export interface IEventCommandMap {
 
     /**
      * Unmaps an Event based trigger from a Command
+     *
      * @param type The Event type
      * @param eventClass The concrete Event class
      * @return Command Unmapper
@@ -34,6 +38,7 @@ export interface IEventCommandMap {
 
     /**
      * Adds a handler to process mappings
+     *
      * @param handler Function that accepts a mapping
      * @return Self
      */

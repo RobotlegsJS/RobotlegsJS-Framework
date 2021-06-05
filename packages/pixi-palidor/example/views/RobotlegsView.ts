@@ -8,7 +8,7 @@
 import { AbstractView } from "./AbstractView";
 
 export class RobotlegsView extends AbstractView {
-    constructor() {
+    public constructor() {
         super("RobotlegsJS", "images/robotlegsjs.png", 0x007acd, 0x005c9a);
     }
 }

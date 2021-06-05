@@ -9,6 +9,7 @@ import { Event } from "@robotlegsjs/core";
 
 /**
  * SceneManager existence event
+ *
  * @private
  */
 export class SceneRegistryEvent extends Event {
@@ -43,10 +44,11 @@ export class SceneRegistryEvent extends Event {
 
     /**
      * Creates a new sceneManager existence event
+     *
      * @param type The event type
      * @param sceneManager The sceneManager associated with this event
      */
-    constructor(type: string, sceneManager: Phaser.Scenes.SceneManager) {
+    public constructor(type: string, sceneManager: Phaser.Scenes.SceneManager) {
         super(type);
         this._sceneManager = sceneManager;
     }

@@ -26,9 +26,10 @@ export class TypeMatcherError extends Error {
 
     /**
      * Creates a Type Matcher Error
+     *
      * @param message The error message
      */
-    constructor(message: string) {
+    public constructor(message: string) {
         super(message);
     }
 }

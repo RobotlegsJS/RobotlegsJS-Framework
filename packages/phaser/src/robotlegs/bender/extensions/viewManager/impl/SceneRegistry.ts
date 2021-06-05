@@ -55,7 +55,7 @@ export class SceneRegistry extends EventDispatcher {
         let binding: SceneManagerBinding = this._bindingBySceneManager.get(sceneManager);
 
         if (!binding) {
-            binding = this.createBinding(sceneManager);
+            binding = this._createBinding(sceneManager);
             this._bindingBySceneManager.set(sceneManager, binding);
         }
 
@@ -69,7 +69,7 @@ export class SceneRegistry extends EventDispatcher {
         let binding: SceneManagerBinding = this._bindingBySceneManager.get(sceneManager);
 
         if (binding) {
-            this.removeBinding(binding);
+            this._removeBinding(binding);
         }
 
         return binding;
@@ -95,17 +95,21 @@ export class SceneRegistry extends EventDispatcher {
     /* Private Functions                                                          */
     /*============================================================================*/
 
-    private createBinding(sceneManager: Phaser.Scenes.SceneManager): SceneManagerBinding {
+    private _createBinding(sceneManager: Phaser.Scenes.SceneManager): SceneManagerBinding {
         let binding: SceneManagerBinding = new SceneManagerBinding(sceneManager);
         this._bindings.push(binding);
 
         // Add a listener so that we can remove this binding when it has no handlers
-        binding.addEventListener(SceneManagerBindingEvent.BINDING_EMPTY, this.onBindingEmpty, this);
+        binding.addEventListener(
+            SceneManagerBindingEvent.BINDING_EMPTY,
+            this._onBindingEmpty,
+            this
+        );
 
         // If the new binding doesn't have a parent it is a Root
         binding.parent = this.findParentBinding(sceneManager);
         if (binding.parent == null) {
-            this.addRootBinding(binding);
+            this._addRootBinding(binding);
         }
 
         this.dispatchEvent(
@@ -115,7 +119,7 @@ export class SceneRegistry extends EventDispatcher {
         return binding;
     }
 
-    private removeBinding(binding: SceneManagerBinding): void {
+    private _removeBinding(binding: SceneManagerBinding): void {
         // Remove the binding itself
         this._bindingBySceneManager.delete(binding.sceneManager);
         let index: number = this._bindings.indexOf(binding);
@@ -124,13 +128,13 @@ export class SceneRegistry extends EventDispatcher {
         // Drop the empty binding listener
         binding.removeEventListener(
             SceneManagerBindingEvent.BINDING_EMPTY,
-            this.onBindingEmpty,
+            this._onBindingEmpty,
             this
         );
 
         if (!binding.parent) {
             // This binding didn't have a parent, so it was a Root
-            this.removeRootBinding(binding);
+            this._removeRootBinding(binding);
         }
 
         this.dispatchEvent(
@@ -138,14 +142,14 @@ export class SceneRegistry extends EventDispatcher {
         );
     }
 
-    private addRootBinding(binding: SceneManagerBinding): void {
+    private _addRootBinding(binding: SceneManagerBinding): void {
         this._rootBindings.push(binding);
         this.dispatchEvent(
             new SceneRegistryEvent(SceneRegistryEvent.ROOT_SCENE_MANAGER_ADD, binding.sceneManager)
         );
     }
 
-    private removeRootBinding(binding: SceneManagerBinding): void {
+    private _removeRootBinding(binding: SceneManagerBinding): void {
         let index: number = this._rootBindings.indexOf(binding);
         this._rootBindings.splice(index, 1);
         this.dispatchEvent(
@@ -156,7 +160,7 @@ export class SceneRegistry extends EventDispatcher {
         );
     }
 
-    private onBindingEmpty(event: SceneManagerBindingEvent): void {
-        this.removeBinding(<any>event.target);
+    private _onBindingEmpty(event: SceneManagerBindingEvent): void {
+        this._removeBinding(<any>event.target);
     }
 }

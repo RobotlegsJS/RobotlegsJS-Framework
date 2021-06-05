@@ -43,7 +43,7 @@ export class StateMediatorMap implements IStateMediatorMap, IStateHandler {
 
     private _stateHandler: StateMediatorStateHandler;
 
-    private NULL_UNMAPPER: IStateMediatorUnmapper = new NullStateMediatorUnmapper();
+    private _NULL_UNMAPPER: IStateMediatorUnmapper = new NullStateMediatorUnmapper();
 
     /*============================================================================*/
     /* Constructor                                                                */
@@ -52,7 +52,7 @@ export class StateMediatorMap implements IStateMediatorMap, IStateHandler {
     /**
      * @private
      */
-    constructor(@inject(IContext) context: IContext) {
+    public constructor(@inject(IContext) context: IContext) {
         this._logger = context.getLogger(this);
         this._factory = new StateMediatorFactory(context.injector);
         this._stateHandler = new StateMediatorStateHandler(this._factory);
@@ -73,7 +73,7 @@ export class StateMediatorMap implements IStateMediatorMap, IStateHandler {
             return mapper;
         }
 
-        mapper = this.createMapper(matcher);
+        mapper = this._createMapper(matcher);
         this._mappers.set(desc, mapper);
         return mapper;
     }
@@ -89,7 +89,7 @@ export class StateMediatorMap implements IStateMediatorMap, IStateHandler {
      * @inheritDoc
      */
     public unmapMatcher(matcher: ITypeMatcher): IStateMediatorUnmapper {
-        return this._mappers.get(matcher.createTypeFilter().descriptor) || this.NULL_UNMAPPER;
+        return this._mappers.get(matcher.createTypeFilter().descriptor) || this._NULL_UNMAPPER;
     }
 
     /**
@@ -131,7 +131,7 @@ export class StateMediatorMap implements IStateMediatorMap, IStateHandler {
     /* Private Functions                                                          */
     /*============================================================================*/
 
-    private createMapper(matcher: ITypeMatcher): StateMediatorMapper {
+    private _createMapper(matcher: ITypeMatcher): StateMediatorMapper {
         return new StateMediatorMapper(
             matcher.createTypeFilter(),
             this._stateHandler,

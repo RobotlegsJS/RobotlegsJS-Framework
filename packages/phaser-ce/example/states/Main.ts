@@ -18,5 +18,5 @@ export class Main extends BaseState {
         this.game.stage.backgroundColor = "#cecece";
     }
 
-    public update() {}
+    public update(): void {}
 }

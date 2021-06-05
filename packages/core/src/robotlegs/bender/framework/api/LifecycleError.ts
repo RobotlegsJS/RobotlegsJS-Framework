@@ -24,9 +24,10 @@ export class LifecycleError extends Error {
 
     /**
      * Creates a Lifecycle Error
+     *
      * @param message The error message
      */
-    constructor(message: string) {
+    public constructor(message: string) {
         super();
         this.name = "LifecycleError";
         this.message = message;

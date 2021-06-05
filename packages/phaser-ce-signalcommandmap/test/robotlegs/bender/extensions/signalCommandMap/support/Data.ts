@@ -11,7 +11,7 @@ import { injectable } from "@robotlegsjs/core";
 export class Data {
     protected _value: number;
 
-    constructor(value: number) {
+    public constructor(value: number) {
         this._value = value;
     }
 

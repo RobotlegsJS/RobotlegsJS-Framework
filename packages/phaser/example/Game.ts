@@ -22,7 +22,7 @@ import { Preload } from "./scenes/Preload";
 export class Game extends Phaser.Game {
     private _context: IContext;
 
-    constructor() {
+    public constructor() {
         super({
             type: Phaser.CANVAS,
             width: 960,

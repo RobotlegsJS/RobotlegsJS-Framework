@@ -11,7 +11,7 @@ import { injectable, inject } from "inversify";
 export class MessageReturningCommand {
     protected _message: string;
 
-    constructor(@inject(String) message: string) {
+    public constructor(@inject(String) message: string) {
         this._message = message;
     }
 

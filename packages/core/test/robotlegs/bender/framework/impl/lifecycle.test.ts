@@ -20,6 +20,36 @@ describe("Lifecycle", () => {
     let target: IEventDispatcher;
     let lifecycle: Lifecycle;
 
+    // ----- Auxiliar methods
+
+    function methodErrorCount(methods: Function[]): number {
+        let errorCount: number = 0;
+
+        for (const method of methods) {
+            try {
+                method();
+            } catch (error) {
+                errorCount++;
+            }
+        }
+
+        return errorCount;
+    }
+
+    function createValuePusher(array: any[], value: any): Function {
+        return function (): void {
+            array.push(value);
+        };
+    }
+
+    function createMessagePusher(array: any[]): Function {
+        return function (message: any): void {
+            array.push(message);
+        };
+    }
+
+    function nop(): void {}
+
     beforeEach(() => {
         target = new EventDispatcher();
         lifecycle = new Lifecycle(target);
@@ -448,34 +478,4 @@ describe("Lifecycle", () => {
         lifecycle.initialize();
         assert.equal(callCount, 1);
     });
-
-    // ----- Auxiliar methods
-
-    function methodErrorCount(methods: Function[]): number {
-        let errorCount: number = 0;
-
-        for (const method of methods) {
-            try {
-                method();
-            } catch (error) {
-                errorCount++;
-            }
-        }
-
-        return errorCount;
-    }
-
-    function createValuePusher(array: any[], value: any): Function {
-        return function (): void {
-            array.push(value);
-        };
-    }
-
-    function createMessagePusher(array: any[]): Function {
-        return function (message: any): void {
-            array.push(message);
-        };
-    }
-
-    function nop(): void {}
 });

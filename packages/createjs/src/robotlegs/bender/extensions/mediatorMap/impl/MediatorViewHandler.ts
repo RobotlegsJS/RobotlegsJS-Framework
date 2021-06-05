@@ -36,7 +36,7 @@ export class MediatorViewHandler implements IViewHandler {
     /**
      * @private
      */
-    constructor(factory: MediatorFactory) {
+    public constructor(factory: MediatorFactory) {
         this._factory = factory;
     }
 
@@ -72,7 +72,7 @@ export class MediatorViewHandler implements IViewHandler {
      * @private
      */
     public handleView(view: createjs.DisplayObject, type: IClass<any>): void {
-        let interestedMappings = this.getInterestedMappingsFor(view, type);
+        let interestedMappings = this._getInterestedMappingsFor(view, type);
         if (interestedMappings) {
             this._factory.createMediators(view, type, interestedMappings);
         }
@@ -82,7 +82,7 @@ export class MediatorViewHandler implements IViewHandler {
      * @private
      */
     public handleItem(item: any, type: IClass<any>): void {
-        let interestedMappings = this.getInterestedMappingsFor(item, type);
+        let interestedMappings = this._getInterestedMappingsFor(item, type);
         if (interestedMappings) {
             this._factory.createMediators(item, type, interestedMappings);
         }
@@ -92,7 +92,7 @@ export class MediatorViewHandler implements IViewHandler {
     /* Private Functions                                                          */
     /*============================================================================*/
 
-    private getInterestedMappingsFor(item: any, type: IClass<any>): IMediatorMapping[] {
+    private _getInterestedMappingsFor(item: any, type: IClass<any>): IMediatorMapping[] {
         // we've seen this type before and nobody was interested
         if (this._knownMappings.get(type) === false) {
             return null;

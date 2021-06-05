@@ -32,24 +32,24 @@ export class ManualStageObserver {
     /**
      * @private
      */
-    constructor(containerRegistry: ContainerRegistry) {
+    public constructor(containerRegistry: ContainerRegistry) {
         this._registry = containerRegistry;
 
         // We care about all containers (not just roots)
         this._registry.addEventListener(
             ContainerRegistryEvent.CONTAINER_ADD,
-            this.onContainerAdd,
+            this._onContainerAdd,
             this
         );
         this._registry.addEventListener(
             ContainerRegistryEvent.CONTAINER_REMOVE,
-            this.onContainerRemove,
+            this._onContainerRemove,
             this
         );
 
         // We might have arrived late on the scene
         this._registry.bindings.forEach((binding: ContainerBinding) => {
-            this.addContainerListener(binding.container);
+            this._addContainerListener(binding.container);
         });
     }
 
@@ -63,17 +63,17 @@ export class ManualStageObserver {
     public destroy(): void {
         this._registry.removeEventListener(
             ContainerRegistryEvent.CONTAINER_ADD,
-            this.onContainerAdd,
+            this._onContainerAdd,
             this
         );
         this._registry.removeEventListener(
             ContainerRegistryEvent.CONTAINER_REMOVE,
-            this.onContainerRemove,
+            this._onContainerRemove,
             this
         );
 
         this._registry.rootBindings.forEach((binding: ContainerBinding) => {
-            this.removeContainerListener(binding.container);
+            this._removeContainerListener(binding.container);
         });
     }
 
@@ -81,26 +81,26 @@ export class ManualStageObserver {
     /* Private Functions                                                          */
     /*============================================================================*/
 
-    private onContainerAdd(event: ContainerRegistryEvent): void {
-        this.addContainerListener(event.container);
+    private _onContainerAdd(event: ContainerRegistryEvent): void {
+        this._addContainerListener(event.container);
     }
 
-    private onContainerRemove(event: ContainerRegistryEvent): void {
-        this.removeContainerListener(event.container);
+    private _onContainerRemove(event: ContainerRegistryEvent): void {
+        this._removeContainerListener(event.container);
     }
 
-    private addContainerListener(container: createjs.Container): void {
+    private _addContainerListener(container: createjs.Container): void {
         // We're interested in ALL container bindings
         // but just for normal, bubbling events
-        this._eventListener = this.onConfigureView.bind(this);
+        this._eventListener = this._onConfigureView.bind(this);
         container.addEventListener(ConfigureViewEvent.CONFIGURE_VIEW, this._eventListener);
     }
 
-    private removeContainerListener(container: createjs.Container): void {
+    private _removeContainerListener(container: createjs.Container): void {
         container.removeEventListener(ConfigureViewEvent.CONFIGURE_VIEW, this._eventListener);
     }
 
-    private onConfigureView(event: ConfigureViewEvent): void {
+    private _onConfigureView(event: ConfigureViewEvent): void {
         // Stop that event!
         event.stopPropagation();
 

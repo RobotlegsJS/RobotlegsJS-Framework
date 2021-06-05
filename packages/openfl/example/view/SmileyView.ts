@@ -12,23 +12,23 @@ import Event from "openfl/events/Event";
 export class SmileyView extends Sprite {
     private _radius: number;
 
-    constructor(radius: number) {
+    public constructor(radius: number) {
         super();
 
         this._radius = Math.max(radius, 50);
 
-        this.addEventListener(Event.ADDED_TO_STAGE, this.onAddedToStage);
+        this.addEventListener(Event.ADDED_TO_STAGE, this._onAddedToStage);
     }
 
-    private onAddedToStage = (event: Event): void => {
+    private _onAddedToStage = (event: Event): void => {
         if (event.target === this) {
-            this.drawSmiley();
-            this.move();
-            this.enableButtonMode();
+            this._drawSmiley();
+            this._move();
+            this._enableButtonMode();
         }
     };
 
-    private drawSmiley(): void {
+    private _drawSmiley(): void {
         let graphics: Graphics = this.graphics;
 
         // Head
@@ -40,7 +40,7 @@ export class SmileyView extends Sprite {
         // Mouth
         graphics.lineStyle(10, 0x000000);
         graphics.beginFill(0xffcc00);
-        this.drawArc(graphics, 0, 0, this._radius * 0.6, 0, 180, 1);
+        this._drawArc(graphics, 0, 0, this._radius * 0.6, 0, 180, 1);
         graphics.endFill();
 
         // Right eye
@@ -56,7 +56,7 @@ export class SmileyView extends Sprite {
         graphics.endFill();
     }
 
-    private drawArc(
+    private _drawArc(
         graphics: Graphics,
         centerX: number,
         centerY: number,
@@ -64,7 +64,7 @@ export class SmileyView extends Sprite {
         angleFrom: number,
         angleTo: number,
         precision: number
-    ) {
+    ): void {
         const degToRad = 0.0174532925;
 
         let angleDiff = angleTo - angleFrom;
@@ -84,7 +84,7 @@ export class SmileyView extends Sprite {
         }
     }
 
-    private move(): void {
+    private _move(): void {
         this.x = Math.random() * 960;
         this.y = Math.random() * 400;
 
@@ -95,7 +95,7 @@ export class SmileyView extends Sprite {
         this.y = Math.min(this.y, 400 - this.height / 2);
     }
 
-    private enableButtonMode(): void {
+    private _enableButtonMode(): void {
         this.useHandCursor = true;
         this.mouseEnabled = true;
         this.mouseChildren = false;

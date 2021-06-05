@@ -36,7 +36,7 @@ export class StateMediatorStateHandler implements IStateHandler {
     /**
      * @private
      */
-    constructor(factory: StateMediatorFactory) {
+    public constructor(factory: StateMediatorFactory) {
         this._factory = factory;
     }
 
@@ -53,7 +53,7 @@ export class StateMediatorStateHandler implements IStateHandler {
             return;
         }
         this._mappings.push(mapping);
-        this.flushCache();
+        this._flushCache();
     }
 
     /**
@@ -65,14 +65,14 @@ export class StateMediatorStateHandler implements IStateHandler {
             return;
         }
         this._mappings.splice(index, 1);
-        this.flushCache();
+        this._flushCache();
     }
 
     /**
      * @private
      */
     public handleState(state: Phaser.State, type: IClass<any>): void {
-        let interestedMappings = this.getInterestedMappingsFor(state, type);
+        let interestedMappings = this._getInterestedMappingsFor(state, type);
         if (interestedMappings) {
             this._factory.createMediators(state, type, interestedMappings);
         }
@@ -82,7 +82,7 @@ export class StateMediatorStateHandler implements IStateHandler {
      * @private
      */
     public handleItem(item: any, type: IClass<any>): void {
-        let interestedMappings = this.getInterestedMappingsFor(item, type);
+        let interestedMappings = this._getInterestedMappingsFor(item, type);
         if (interestedMappings) {
             this._factory.createMediators(item, type, interestedMappings);
         }
@@ -92,11 +92,11 @@ export class StateMediatorStateHandler implements IStateHandler {
     /* Private Functions                                                          */
     /*============================================================================*/
 
-    private flushCache(): void {
+    private _flushCache(): void {
         this._knownMappings = new Map<IClass<any>, IStateMediatorMapping[]>();
     }
 
-    private getInterestedMappingsFor(item: any, type: any): IStateMediatorMapping[] {
+    private _getInterestedMappingsFor(item: any, type: any): IStateMediatorMapping[] {
         // we've seen this type before and nobody was interested
         if (this._knownMappings.get(type) === false) {
             return null;

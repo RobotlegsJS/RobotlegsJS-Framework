@@ -13,7 +13,8 @@ import { IEvent } from "./events/IEvent";
  * Allows the valueClasses to be set in MXML, e.g.
  * <signals:Signal id="nameChanged">{[String, uint]}</signals:Signal>
  */
-/* [DefaultProperty("valueClasses")]*/
+// [DefaultProperty("valueClasses")]
+
 /**
  * Signal dispatches events to multiple listeners.
  * It is inspired by C# events and delegates, and by
@@ -72,7 +73,7 @@ export class DeluxeSignal extends PrioritySignal {
      * @throws ArgumentError <code>ArgumentError</code>: Incorrect number of arguments.
      * @throws ArgumentError <code>ArgumentError</code>: Value object is not an instance of the appropriate valueClasses Class.
      */
-    /* override*/
+    /* override */
     public dispatch(...valueObjects: any[]): void {
         // Validate value objects against pre-defined value classes.
         let numValueClasses: number = this._valueClasses.length;

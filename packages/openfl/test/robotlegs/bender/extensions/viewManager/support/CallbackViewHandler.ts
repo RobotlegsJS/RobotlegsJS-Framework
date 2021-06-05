@@ -17,7 +17,7 @@ import { IViewHandler } from "../../../../../../src/robotlegs/bender/extensions/
 export class CallbackViewHandler implements IViewHandler {
     private _callback: Function;
 
-    constructor(callback: Function = null) {
+    public constructor(callback: Function = null) {
         this._callback = callback;
     }
 

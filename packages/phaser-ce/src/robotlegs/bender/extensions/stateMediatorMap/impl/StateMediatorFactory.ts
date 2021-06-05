@@ -40,7 +40,7 @@ export class StateMediatorFactory {
     /**
      * @private
      */
-    constructor(injector: IInjector, manager?: StateMediatorManager) {
+    public constructor(injector: IInjector, manager?: StateMediatorManager) {
         this._injector = injector;
         this._manager = manager || new StateMediatorManager(this);
     }
@@ -67,9 +67,9 @@ export class StateMediatorFactory {
             mediator = this.getMediator(item, mapping);
 
             if (!mediator) {
-                this.mapTypeForFilterBinding(mapping.matcher, type, item);
-                mediator = this.createMediator(item, mapping);
-                this.unmapTypeForFilterBinding(mapping.matcher, type, item);
+                this._mapTypeForFilterBinding(mapping.matcher, type, item);
+                mediator = this._createMediator(item, mapping);
+                this._unmapTypeForFilterBinding(mapping.matcher, type, item);
             }
 
             if (mediator) {
@@ -105,7 +105,7 @@ export class StateMediatorFactory {
     /* Private Functions                                                          */
     /*============================================================================*/
 
-    private createMediator(item: any, mapping: IStateMediatorMapping): any {
+    private _createMediator(item: any, mapping: IStateMediatorMapping): any {
         let mediator: any = this.getMediator(item, mapping);
 
         if (mediator) {
@@ -120,27 +120,27 @@ export class StateMediatorFactory {
                 applyHooks(mapping.hooks, this._injector);
                 this._injector.unbind(mediatorClass);
             }
-            this.addMediator(mediator, item, mapping);
+            this._addMediator(mediator, item, mapping);
         }
         return mediator;
     }
 
-    private addMediator(mediator: any, item: any, mapping: IStateMediatorMapping): void {
+    private _addMediator(mediator: any, item: any, mapping: IStateMediatorMapping): void {
         let mediatorMap = this._mediators.get(item) || new Map<any, IStateMediatorMapping>();
         this._mediators.set(item, mediatorMap);
         mediatorMap.set(<any>mapping, mediator);
         this._manager.addMediator(mediator, item, mapping);
     }
 
-    private mapTypeForFilterBinding(filter: ITypeFilter, type: IClass<any>, item: any): void {
-        let requiredTypes = this.requiredTypesFor(filter, type);
+    private _mapTypeForFilterBinding(filter: ITypeFilter, type: IClass<any>, item: any): void {
+        let requiredTypes = this._requiredTypesFor(filter, type);
         requiredTypes.forEach((requiredType: IType<any>) => {
             this._injector.bind(requiredType).toConstantValue(item);
         });
     }
 
-    private unmapTypeForFilterBinding(filter: ITypeFilter, type: IClass<any>, item: any): void {
-        let requiredTypes = this.requiredTypesFor(filter, type);
+    private _unmapTypeForFilterBinding(filter: ITypeFilter, type: IClass<any>, item: any): void {
+        let requiredTypes = this._requiredTypesFor(filter, type);
 
         requiredTypes.forEach((requiredType: IType<any>) => {
             if (this._injector.isBound(requiredType)) {
@@ -149,7 +149,7 @@ export class StateMediatorFactory {
         });
     }
 
-    private requiredTypesFor(filter: ITypeFilter, type: IClass<any>): IType<any>[] {
+    private _requiredTypesFor(filter: ITypeFilter, type: IClass<any>): IType<any>[] {
         let requiredTypes: IType<any>[] = filter.allOfTypes.concat(filter.anyOfTypes);
 
         if (requiredTypes.indexOf(type) === -1) {

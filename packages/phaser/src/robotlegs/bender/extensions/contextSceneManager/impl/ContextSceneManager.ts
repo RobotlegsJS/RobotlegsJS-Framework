@@ -32,9 +32,10 @@ export class ContextSceneManager implements IContextSceneManager, IConfig {
 
     /**
      * The SceneManager represents the root Phaser.Scenes.SceneManager for a Context
+     *
      * @param sceneManager The root Scene Manager for this Context
      */
-    constructor(sceneManager: Phaser.Scenes.SceneManager) {
+    public constructor(sceneManager: Phaser.Scenes.SceneManager) {
         if (sceneManager !== null && sceneManager !== undefined) {
             this._sceneManager = sceneManager;
         } else {

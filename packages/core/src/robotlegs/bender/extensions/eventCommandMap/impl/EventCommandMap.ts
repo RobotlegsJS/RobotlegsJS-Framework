@@ -51,14 +51,14 @@ export class EventCommandMap implements IEventCommandMap {
     /**
      * @private
      */
-    constructor(
+    public constructor(
         @inject(IContext) context: IContext,
         @inject(IEventDispatcher) dispatcher: IEventDispatcher
     ) {
         this._injector = context.injector;
         this._logger = context.getLogger(this);
         this._dispatcher = dispatcher;
-        this._triggerMap = new CommandTriggerMap(this.getKey, this.createTrigger.bind(this));
+        this._triggerMap = new CommandTriggerMap(this._getKey, this._createTrigger.bind(this));
     }
 
     /*============================================================================*/
@@ -69,14 +69,14 @@ export class EventCommandMap implements IEventCommandMap {
      * @inheritDoc
      */
     public map(type: string, eventClass?: IClass<IEvent>): ICommandMapper {
-        return this.getTrigger(type, eventClass).createMapper();
+        return this._getTrigger(type, eventClass).createMapper();
     }
 
     /**
      * @inheritDoc
      */
     public unmap(type: string, eventClass?: IClass<IEvent>): ICommandUnmapper {
-        return this.getTrigger(type, eventClass).createMapper();
+        return this._getTrigger(type, eventClass).createMapper();
     }
 
     /**
@@ -93,15 +93,15 @@ export class EventCommandMap implements IEventCommandMap {
     /* Private Functions                                                          */
     /*============================================================================*/
 
-    private getKey(type: string, eventClass: IClass<IEvent>): string {
+    private _getKey(type: string, eventClass: IClass<IEvent>): string {
         return type + eventClass;
     }
 
-    private getTrigger(type: string, eventClass: IClass<IEvent>): EventCommandTrigger {
+    private _getTrigger(type: string, eventClass: IClass<IEvent>): EventCommandTrigger {
         return <EventCommandTrigger>this._triggerMap.getTrigger(type, eventClass);
     }
 
-    private createTrigger(type: string, eventClass: IClass<IEvent>): EventCommandTrigger {
+    private _createTrigger(type: string, eventClass: IClass<IEvent>): EventCommandTrigger {
         return new EventCommandTrigger(
             this._injector,
             this._dispatcher,

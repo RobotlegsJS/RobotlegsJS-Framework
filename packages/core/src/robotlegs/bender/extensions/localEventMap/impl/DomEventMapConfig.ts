@@ -56,7 +56,7 @@ export class DomEventMapConfig {
     /**
      * @private
      */
-    constructor(
+    public constructor(
         dispatcher: EventTarget,
         eventString: string,
         listener: EventListenerOrEventListenerObject,

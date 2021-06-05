@@ -13,7 +13,7 @@ import { ICommand } from "../../../../../../src/robotlegs/bender/extensions/comm
 export class CallbackCommand2 implements ICommand {
     protected _callback: Function;
 
-    constructor(
+    public constructor(
         @inject("Function")
         @named("executeCallback")
         callback: Function

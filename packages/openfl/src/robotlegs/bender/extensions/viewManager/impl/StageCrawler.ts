@@ -29,7 +29,7 @@ export class StageCrawler {
     /**
      * @private
      */
-    constructor(containerBinding: ContainerBinding) {
+    public constructor(containerBinding: ContainerBinding) {
         this._binding = containerBinding;
     }
 
@@ -41,28 +41,28 @@ export class StageCrawler {
      * @private
      */
     public scan(container: DisplayObjectContainer): void {
-        this.scanContainer(container);
+        this._scanContainer(container);
     }
 
     /*============================================================================*/
     /* Private Functions                                                          */
     /*============================================================================*/
 
-    private scanContainer(container: DisplayObjectContainer): void {
-        this.processView(container);
+    private _scanContainer(container: DisplayObjectContainer): void {
+        this._processView(container);
 
         for (let i: number = 0; i < container.numChildren; i++) {
             let child: DisplayObject = container.getChildAt(i);
 
             if (child instanceof DisplayObjectContainer) {
-                this.scanContainer(child);
+                this._scanContainer(child);
             } else {
-                this.processView(child);
+                this._processView(child);
             }
         }
     }
 
-    private processView(view: DisplayObject): void {
+    private _processView(view: DisplayObject): void {
         this._binding.handleView(view, <IClass<any>>view.constructor);
     }
 }

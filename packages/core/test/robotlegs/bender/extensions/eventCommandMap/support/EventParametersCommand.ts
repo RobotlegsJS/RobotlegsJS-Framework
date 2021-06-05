@@ -15,7 +15,7 @@ import { SupportEvent } from "./SupportEvent";
 export class EventParametersCommand implements ICommand {
     protected _callback: Function;
 
-    constructor(
+    public constructor(
         @inject("Function")
         @named("executeCallback")
         callback: Function

@@ -17,7 +17,6 @@ export class SlotList {
     /**
      * Represents an empty list. Used as the list terminator.
      */
-    // eslint-disable-next-line @typescript-eslint/naming-convention
     public static NIL: SlotList = new SlotList(null, null);
 
     // Although those variables are not const, they would be if AS3 would handle it correctly.

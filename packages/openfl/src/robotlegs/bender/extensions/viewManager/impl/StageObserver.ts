@@ -31,24 +31,24 @@ export class StageObserver {
     /**
      * @private
      */
-    constructor(containerRegistry: ContainerRegistry) {
+    public constructor(containerRegistry: ContainerRegistry) {
         this._registry = containerRegistry;
 
         // We only care about roots
         this._registry.addEventListener(
             ContainerRegistryEvent.ROOT_CONTAINER_ADD,
-            this.onRootContainerAdd,
+            this._onRootContainerAdd,
             this
         );
         this._registry.addEventListener(
             ContainerRegistryEvent.ROOT_CONTAINER_REMOVE,
-            this.onRootContainerRemove,
+            this._onRootContainerRemove,
             this
         );
 
         // We might have arrived late on the scene
         this._registry.rootBindings.forEach((binding: ContainerBinding) => {
-            this.addRootListener(binding.container);
+            this._addRootListener(binding.container);
         });
     }
 
@@ -62,17 +62,17 @@ export class StageObserver {
     public destroy(): void {
         this._registry.removeEventListener(
             ContainerRegistryEvent.ROOT_CONTAINER_ADD,
-            this.onRootContainerAdd,
+            this._onRootContainerAdd,
             this
         );
         this._registry.removeEventListener(
             ContainerRegistryEvent.ROOT_CONTAINER_REMOVE,
-            this.onRootContainerRemove,
+            this._onRootContainerRemove,
             this
         );
 
         this._registry.rootBindings.forEach((binding: ContainerBinding) => {
-            this.removeRootListener(binding.container);
+            this._removeRootListener(binding.container);
         });
     }
 
@@ -80,23 +80,23 @@ export class StageObserver {
     /* Private Functions                                                          */
     /*============================================================================*/
 
-    private onRootContainerAdd(event: ContainerRegistryEvent): void {
-        this.addRootListener(event.container);
+    private _onRootContainerAdd(event: ContainerRegistryEvent): void {
+        this._addRootListener(event.container);
     }
 
-    private onRootContainerRemove(event: ContainerRegistryEvent): void {
-        this.removeRootListener(event.container);
+    private _onRootContainerRemove(event: ContainerRegistryEvent): void {
+        this._removeRootListener(event.container);
     }
 
-    private addRootListener(container: DisplayObjectContainer): void {
-        container.addEventListener(Event.ADDED_TO_STAGE, this.onViewAddedToStage, true);
+    private _addRootListener(container: DisplayObjectContainer): void {
+        container.addEventListener(Event.ADDED_TO_STAGE, this._onViewAddedToStage, true);
     }
 
-    private removeRootListener(container: DisplayObjectContainer): void {
-        container.removeEventListener(Event.ADDED_TO_STAGE, this.onViewAddedToStage, true);
+    private _removeRootListener(container: DisplayObjectContainer): void {
+        container.removeEventListener(Event.ADDED_TO_STAGE, this._onViewAddedToStage, true);
     }
 
-    private onViewAddedToStage = (event: Event): void => {
+    private _onViewAddedToStage = (event: Event): void => {
         let view: DisplayObjectContainer = event.target;
         let type: IClass<any> = <IClass<any>>view.constructor;
 

@@ -13,7 +13,7 @@ import { Payload } from "./Payload";
 
 @injectable()
 export class StrictPayloadCarryingSignal extends Signal {
-    constructor() {
+    public constructor() {
         super(Payload);
     }
 }

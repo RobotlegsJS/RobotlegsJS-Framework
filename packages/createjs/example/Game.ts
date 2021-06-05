@@ -19,11 +19,11 @@ export class Game {
 
     private _context: Context;
 
-    constructor() {
-        this.init();
+    public constructor() {
+        this._init();
     }
 
-    private init(): void {
+    private _init(): void {
         this._canvas = <HTMLCanvasElement>document.getElementById("canvas");
         this._stage = new createjs.Stage(this._canvas);
 
@@ -48,15 +48,15 @@ export class Game {
 
         this._stage.addChild(robotlegs);
 
-        window.addEventListener("resize", this.handleResize.bind(this));
-        createjs.Ticker.addEventListener("tick", this.tick.bind(this));
+        window.addEventListener("resize", this._handleResize.bind(this));
+        createjs.Ticker.addEventListener("tick", this._tick.bind(this));
     }
 
-    private handleResize(): void {
+    private _handleResize(): void {
         this._stage.update();
     }
 
-    private tick(event: Object): void {
+    private _tick(event: Object): void {
         this._stage.update(event);
     }
 }

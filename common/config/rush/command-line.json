@@ -176,6 +176,30 @@
 
       // This will invoke common/autoinstallers/rush-prettier/node_modules/.bin/pretty-quick
       "shellCommand": "pretty-quick --staged"
+    },
+    {
+      "name": "test",
+      "commandKind": "bulk",
+      "summary": "Used to run test on all packages.",
+      "description": "This command will run `npm test` on all packages",
+      "safeForSimultaneousRushProcesses": false,
+      "enableParallelism": true
+    },
+    {
+      "name": "lint",
+      "commandKind": "bulk",
+      "summary": "Used to run eslint on all packages.",
+      "description": "This command will run `npm run lint` on all packages",
+      "safeForSimultaneousRushProcesses": false,
+      "enableParallelism": true
+    },
+    {
+      "name": "lint-fix",
+      "commandKind": "bulk",
+      "summary": "Used to apply automatic eslint fixes on all packages",
+      "description": "This command will run `npm run lint-fix` on all packages",
+      "safeForSimultaneousRushProcesses": false,
+      "enableParallelism": true
     }
   ],
 

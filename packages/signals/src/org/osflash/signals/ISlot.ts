@@ -5,6 +5,9 @@
  * LICENSE file in the root directory of this source tree.
  */
 
+// eslint-disable-next-line @rushstack/typedef-var
+export const ISlot = Symbol("ISlot");
+
 /**
  * The ISlot interface defines the basic properties of a
  * listener associated with a Signal.
@@ -12,9 +15,6 @@
  * @author Joa Ebert
  * @author Robert Penner
  */
-// eslint-disable-next-line @typescript-eslint/naming-convention
-export const ISlot = Symbol("ISlot");
-// eslint-disable-next-line no-redeclare
 export interface ISlot {
     /**
      * The listener associated with this slot.

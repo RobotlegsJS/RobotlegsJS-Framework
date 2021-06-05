@@ -48,7 +48,7 @@ export class StateManager extends EventDispatcher implements IStateManager {
     /**
      * @private
      */
-    constructor(stateRegistry: StateRegistry) {
+    public constructor(stateRegistry: StateRegistry) {
         super();
         this._registry = stateRegistry;
     }
@@ -61,7 +61,7 @@ export class StateManager extends EventDispatcher implements IStateManager {
      * @inheritDoc
      */
     public addStateManager(stateManager: Phaser.StateManager): void {
-        if (!this.validStateManager(stateManager)) {
+        if (!this._validStateManager(stateManager)) {
             return;
         }
 
@@ -152,7 +152,7 @@ export class StateManager extends EventDispatcher implements IStateManager {
     /* Private Functions                                                          */
     /*============================================================================*/
 
-    private validStateManager(stateManager: Phaser.StateManager): boolean {
+    private _validStateManager(stateManager: Phaser.StateManager): boolean {
         let valid: boolean = true;
 
         this._stateManagers.forEach((registeredStateManager: Phaser.StateManager) => {

@@ -25,11 +25,11 @@ export class Game {
 
     private _context: Context;
 
-    constructor() {
-        this.init();
+    public constructor() {
+        this._init();
     }
 
-    private init(): void {
+    private _init(): void {
         // remove loader
         this._loading = <HTMLDivElement>document.getElementById("loading");
         this._loading.remove();

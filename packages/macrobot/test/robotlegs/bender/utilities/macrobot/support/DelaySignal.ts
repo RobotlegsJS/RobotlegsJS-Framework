@@ -11,7 +11,7 @@ import { Signal } from "@robotlegsjs/signals";
 
 @injectable()
 export class DelaySignal extends Signal {
-    constructor() {
+    public constructor() {
         super(Symbol, Number);
     }
 }

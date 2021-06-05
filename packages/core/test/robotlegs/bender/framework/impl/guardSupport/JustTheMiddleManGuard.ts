@@ -15,7 +15,7 @@ import { BossGuard } from "./BossGuard";
 export class JustTheMiddleManGuard implements IGuard {
     private _bossDecision: BossGuard;
 
-    constructor(@inject(BossGuard) bossDecision: BossGuard) {
+    public constructor(@inject(BossGuard) bossDecision: BossGuard) {
         this._bossDecision = bossDecision;
     }
 

@@ -48,6 +48,7 @@ export class LogManager implements ILogTarget {
 
     /**
      * Retrieves a logger for a given source
+     *
      * @param source Logging source
      * @return Logger
      */
@@ -57,6 +58,7 @@ export class LogManager implements ILogTarget {
 
     /**
      * Adds a custom log target
+     *
      * @param target Log target
      * @return this
      */

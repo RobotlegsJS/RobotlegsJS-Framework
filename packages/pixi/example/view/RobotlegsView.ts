@@ -8,34 +8,34 @@
 import { Container, Sprite } from "pixi.js";
 
 export class RobotlegsView extends Container {
-    private robotlegsLogo: Sprite;
+    private _robotlegsLogo: Sprite;
 
-    constructor() {
+    public constructor() {
         super();
 
-        this.loadLogo();
-        this.move();
-        this.enable();
+        this._loadLogo();
+        this._move();
+        this._enable();
     }
 
-    private loadLogo(): void {
+    private _loadLogo(): void {
         // create a PIXI sprite from an image path
-        this.robotlegsLogo = Sprite.from("images/robotlegs.png");
+        this._robotlegsLogo = Sprite.from("images/robotlegs.png");
 
         // add logo
-        this.addChild(this.robotlegsLogo);
+        this.addChild(this._robotlegsLogo);
     }
 
-    private move(): void {
+    private _move(): void {
         // center the sprite's anchor point
-        this.robotlegsLogo.anchor.set(0.5);
+        this._robotlegsLogo.anchor.set(0.5);
 
         // move the sprite to the center of the canvas
-        this.robotlegsLogo.x = 960 * 0.5;
-        this.robotlegsLogo.y = 400 * 0.5;
+        this._robotlegsLogo.x = 960 * 0.5;
+        this._robotlegsLogo.y = 400 * 0.5;
     }
 
-    private enable(): void {
+    private _enable(): void {
         // Opt-in to interactivity
         this.interactive = true;
 

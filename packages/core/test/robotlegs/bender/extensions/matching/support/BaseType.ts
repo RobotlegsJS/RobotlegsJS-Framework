@@ -8,7 +8,7 @@
 export class BaseType {
     private _content: string;
 
-    constructor(content: string) {
+    public constructor(content: string) {
         this._content = content;
     }
 

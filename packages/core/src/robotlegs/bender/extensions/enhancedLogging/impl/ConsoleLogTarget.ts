@@ -12,6 +12,7 @@ import { LogMessageParser } from "./LogMessageParser";
 
 /**
  * A simple trace logger
+ *
  * @private
  */
 export class ConsoleLogTarget implements ILogTarget {
@@ -29,9 +30,10 @@ export class ConsoleLogTarget implements ILogTarget {
 
     /**
      * Creates a Trace Log Target
+     *
      * @param context Context
      */
-    constructor(context: IContext) {
+    public constructor(context: IContext) {
         this._context = context;
     }
 

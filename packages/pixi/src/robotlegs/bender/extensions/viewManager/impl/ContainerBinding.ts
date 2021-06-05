@@ -13,7 +13,8 @@ import { IViewHandler } from "../api/IViewHandler";
 
 import { ContainerBindingEvent } from "./ContainerBindingEvent";
 
-/*[Event(name="bindingEmpty", type="robotlegs.bender.extensions.viewManager.impl.ContainerBindingEvent")]*/
+// [Event(name="bindingEmpty", type="robotlegs.bender.extensions.viewManager.impl.ContainerBindingEvent")]
+
 /**
  * @private
  */
@@ -60,7 +61,7 @@ export class ContainerBinding extends EventDispatcher {
     /**
      * @private
      */
-    constructor(container: Container) {
+    public constructor(container: Container) {
         super();
         this._container = container;
     }

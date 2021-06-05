@@ -32,7 +32,7 @@ export class StateMediatorManager {
     /**
      * @private
      */
-    constructor(factory: StateMediatorFactory) {
+    public constructor(factory: StateMediatorFactory) {
         this._factory = factory;
     }
 
@@ -51,38 +51,38 @@ export class StateMediatorManager {
             if (!this._autoRemoveMap.has(state.key)) {
                 this._autoRemoveMap.set(state.key, state);
             }
-            if (!state.game.state.onStateChange.has(this.onStateChange, this)) {
-                state.game.state.onStateChange.add(this.onStateChange, this);
+            if (!state.game.state.onStateChange.has(this._onStateChange, this)) {
+                state.game.state.onStateChange.add(this._onStateChange, this);
             }
         }
 
         // Synchronize with item life-cycle
-        this.initializeMediator(mediator, item);
+        this._initializeMediator(mediator, item);
     }
 
     /**
      * @private
      */
     public removeMediator(mediator: any, item: any, mapping: IStateMediatorMapping): void {
-        this.destroyMediator(mediator);
+        this._destroyMediator(mediator);
     }
 
     /*============================================================================*/
     /* Private Functions                                                          */
     /*============================================================================*/
 
-    private onStateChange(currentStateKey: string, previousStateKey: string): void {
+    private _onStateChange(currentStateKey: string, previousStateKey: string): void {
         if (this._autoRemoveMap.has(previousStateKey)) {
             let state: Phaser.State = this._autoRemoveMap.get(previousStateKey);
             this._autoRemoveMap.delete(previousStateKey);
             this._factory.removeMediators(state);
             if (this._autoRemoveMap.size === 0) {
-                state.game.state.onStateChange.remove(this.onStateChange, this);
+                state.game.state.onStateChange.remove(this._onStateChange, this);
             }
         }
     }
 
-    private initializeMediator(mediator: any, mediatedItem: any): void {
+    private _initializeMediator(mediator: any, mediatedItem: any): void {
         if ("preInitialize" in mediator) {
             mediator.preInitialize();
         }
@@ -100,7 +100,7 @@ export class StateMediatorManager {
         }
     }
 
-    private destroyMediator(mediator: any): void {
+    private _destroyMediator(mediator: any): void {
         if ("preDestroy" in mediator) {
             mediator.preDestroy();
         }

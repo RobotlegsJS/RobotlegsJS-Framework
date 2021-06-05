@@ -13,14 +13,15 @@ export class AbstractView extends Container {
     protected _setViewButton: ColorButton;
     protected _addViewButton: ColorButton;
 
-    constructor(title: string, imgUrl: string, lightColor: number, darkColor: number) {
+    public constructor(title: string, imgUrl: string, lightColor: number, darkColor: number) {
         super();
-        this.createBackground(lightColor, darkColor);
-        this.createImages(imgUrl);
-        this.createText(title);
-        this.createButtons();
+        this._createBackground(lightColor, darkColor);
+        this._createImages(imgUrl);
+        this._createText(title);
+        this._createButtons();
     }
-    private createButtons(): void {
+
+    private _createButtons(): void {
         const posY = 550;
 
         this._setViewButton = new ColorButton("View");
@@ -31,7 +32,8 @@ export class AbstractView extends Container {
         this._addViewButton.position.set(720, posY);
         this.addChild(this._addViewButton);
     }
-    private createText(title: string): void {
+
+    private _createText(title: string): void {
         const style = new TextStyle({
             align: "center",
             fill: 0xffffff,
@@ -44,13 +46,15 @@ export class AbstractView extends Container {
         titleText.position.set(480, 60);
         this.addChild(titleText);
     }
-    private createImages(imgUrl: string): void {
+
+    private _createImages(imgUrl: string): void {
         const logo: Sprite = TilingSprite.from(imgUrl, { width: 230, height: 230 });
         logo.anchor.set(0.5);
         logo.position.set(480, 300);
         this.addChild(logo);
     }
-    private createBackground(lightColor: number, darkColor: number): void {
+
+    private _createBackground(lightColor: number, darkColor: number): void {
         const graphic: Graphics = new Graphics();
         graphic.beginFill(lightColor);
         graphic.drawRect(0, 0, 960, 600);
@@ -60,9 +64,11 @@ export class AbstractView extends Container {
 
         this.addChild(graphic);
     }
+
     public get setViewButton(): ColorButton {
         return this._setViewButton;
     }
+
     public get addViewButton(): ColorButton {
         return this._addViewButton;
     }

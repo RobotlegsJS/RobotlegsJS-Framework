@@ -13,33 +13,33 @@ import { PalidorBundle } from "../src/robotlegs/bender/bundles/palidor/PalidorBu
 import { ExampleConfig } from "./config/ExampleConfig";
 
 export class Game {
-    private canvas: HTMLCanvasElement;
-    private stage: Container;
-    private renderer: Renderer;
-    private context: Context;
+    private _canvas: HTMLCanvasElement;
+    private _stage: Container;
+    private _renderer: Renderer;
+    private _context: Context;
 
-    constructor() {
-        this.canvas = <HTMLCanvasElement>document.getElementById("canvas");
-        this.renderer = autoDetectRenderer({
+    public constructor() {
+        this._canvas = <HTMLCanvasElement>document.getElementById("canvas");
+        this._renderer = autoDetectRenderer({
             width: 960,
             height: 600,
             backgroundColor: 0xffffff,
-            view: this.canvas
+            view: this._canvas
         });
-        this.stage = new Container();
-        this.context = new Context();
-        this.context
+        this._stage = new Container();
+        this._context = new Context();
+        this._context
             .install(PalidorBundle)
-            .configure(new ContextView(this.stage))
+            .configure(new ContextView(this._stage))
             .configure(ExampleConfig)
             .initialize();
 
-        document.body.appendChild(this.renderer.view);
+        document.body.appendChild(this._renderer.view);
 
         this.render();
     }
-    public render = () => {
-        this.renderer.render(this.stage);
+    public render = (): void => {
+        this._renderer.render(this._stage);
         window.requestAnimationFrame(this.render);
     };
 }

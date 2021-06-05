@@ -29,7 +29,8 @@
 
 import { IEvent } from "./IEvent";
 
-export let IEventDispatcher = Symbol("IEventDispatcher");
+// eslint-disable-next-line @rushstack/typedef-var
+export const IEventDispatcher = Symbol("IEventDispatcher");
 
 /**
  * The IEventDispatcher interface defines methods for adding or removing event listeners, checks whether specific types
@@ -43,6 +44,7 @@ export let IEventDispatcher = Symbol("IEventDispatcher");
  * dispatching capabilities is to extend EventDispatcher. If this is impossible (that is, if the class is already
  * extending another class), you can instead implement the IEventDispatcher interface, create an EventDispatcher member,
  * and write simple hooks to route calls into the aggregated EventDispatcher.
+ *
  * @see egret.EventDispatcher
  * @version Egret 2.4
  * @platform Web,Native
@@ -67,6 +69,7 @@ export interface IEventDispatcher {
      * in the event flow, such as the bubbling phase.If an event listener is removed from a node while an event is being
      * processed on the node, it is still triggered by the current actions. After it is removed, the event listener is
      * never invoked again (unless it is registered again for future processing).
+     *
      * @param type The type of event.
      * @param listener The listener function that processes the event. This function must accept an event object as
      * its only parameter and must return nothing, as this example shows: function(evt:Event):void  The function can
@@ -98,6 +101,7 @@ export interface IEventDispatcher {
      * Registers an event listener object with an EventDispatcher object so that the listener receives notification of an
      * event. Different from the on() method,the listener receives notification only once,and then it will be removed
      * automatically.
+     *
      * @param type The type of event.
      * @param listener The listener function that processes the event. This function must accept an event object as
      * its only parameter and must return nothing, as this example shows: function(evt:Event):void  The function can
@@ -128,6 +132,7 @@ export interface IEventDispatcher {
     /**
      * Removes a listener from the EventDispatcher object. If there is no matching listener registered with the
      * EventDispatcher object, a call to this method has no effect.
+     *
      * @param type The type of event.
      * @param listener The listener object to remove.
      * @param thisObject the listener function's "this"
@@ -151,6 +156,7 @@ export interface IEventDispatcher {
      * To determine whether a specific event type will actually trigger an event listener, use IEventDispatcher.willTrigger().
      * The difference between hasEventListener() and willTrigger() is that hasEventListener() examines only the object to
      * which it belongs, whereas willTrigger() examines the entire event flow for the event specified by the type parameter.
+     *
      * @param type The type of event.
      * @returns A value of true if a listener of the specified type is registered; false otherwise.
      * @see #willTrigger()
@@ -162,6 +168,7 @@ export interface IEventDispatcher {
 
     /**
      * Dispatches an event into the event flow. The event target is the EventDispatcher object upon which dispatchEvent() is called.
+     *
      * @param event The event object dispatched into the event flow.
      * @returns A value of true unless preventDefault() is called on the event, in which case it returns false.
      * @version Egret 2.4
@@ -174,6 +181,7 @@ export interface IEventDispatcher {
      * Checks whether an event listener is registered with this EventDispatcher object or any of its ancestors for the
      * specified event type. This method returns true if an event listener is triggered during any phase of the event
      * flow when an event of the specified type is dispatched to this EventDispatcher object or any of its descendants.
+     *
      * @param type The type of event.
      * @returns A value of true if a listener of the specified type will be triggered; false otherwise.
      * @see #hasEventListener()

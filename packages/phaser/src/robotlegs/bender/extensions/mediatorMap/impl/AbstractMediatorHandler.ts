@@ -35,7 +35,7 @@ export abstract class AbstractMediatorHandler {
     /**
      * @private
      */
-    constructor(factory: AbstractMediatorFactory) {
+    public constructor(factory: AbstractMediatorFactory) {
         this._factory = factory;
     }
 

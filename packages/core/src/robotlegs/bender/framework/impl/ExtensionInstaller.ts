@@ -31,7 +31,7 @@ export class ExtensionInstaller {
     /**
      * @private
      */
-    constructor(context: IContext) {
+    public constructor(context: IContext) {
         this._context = context;
         this._logger = this._context.getLogger(this);
     }
@@ -42,6 +42,7 @@ export class ExtensionInstaller {
 
     /**
      * Installs the supplied extension
+     *
      * @param extension An object or class implementing IExtension
      */
     public install(extension: any): void {

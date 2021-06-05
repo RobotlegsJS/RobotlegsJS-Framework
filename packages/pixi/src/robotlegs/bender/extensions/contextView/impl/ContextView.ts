@@ -23,9 +23,10 @@ export class ContextView implements IContextView, IConfig {
 
     /**
      * The Context View represents the root Container for a Context
+     *
      * @param view The root Container for this Context
      */
-    constructor(view: Container) {
+    public constructor(view: Container) {
         if (view !== null && view !== undefined) {
             this._view = view;
         } else {

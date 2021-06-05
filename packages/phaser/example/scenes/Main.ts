@@ -11,18 +11,18 @@ import { BaseScene } from "./BaseScene";
 import { ScoreView } from "../views/ScoreView";
 
 export class Main extends BaseScene {
-    private scoreView: ScoreView;
+    private _scoreView: ScoreView;
 
-    constructor() {
+    public constructor() {
         super(SceneKey.MAIN);
     }
 
     public create(): void {
         super.create();
 
-        this.scoreView = new ScoreView(this);
+        this._scoreView = new ScoreView(this);
         // initializing ScoreViewMediator
-        this.add.existing(this.scoreView);
+        this.add.existing(this._scoreView);
 
         this.add.image(20, 30, "koreez");
     }

@@ -45,7 +45,7 @@ describe("SignalDispatchArgsTest", () => {
 
     it("dispatch_more_value_objects_than_value_classes_should_succeed()", () => {
         let signal: Signal = new Signal(Date, Array);
-        signal.dispatch(new Date(), new Array(), "extra value object");
+        signal.dispatch(new Date(), [], "extra value object");
     });
 
     it("dispatch_values_with_no_value_classes_defined_should_pass_to_listener()", () => {

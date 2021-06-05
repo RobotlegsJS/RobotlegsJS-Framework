@@ -8,10 +8,12 @@
 
 import { ISignal } from "@robotlegsjs/signals";
 
+// eslint-disable-next-line @rushstack/typedef-var
+export const ISignalMap = Symbol("ISignalMap");
+
 /**
  * The Signal Map allows you to bind Signals to functions
  */
-export let ISignalMap = Symbol("ISignalMap");
 export interface ISignalMap {
     addToSignal(signal: ISignal, handler: Function): void;
 

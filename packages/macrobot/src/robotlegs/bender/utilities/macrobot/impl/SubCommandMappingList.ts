@@ -22,11 +22,11 @@ export class SubCommandMappingList implements ISubCommandMappingList {
     }
 
     public addMapping(mapping: ISubCommandMapping): void {
-        this.storeMapping(mapping);
+        this._storeMapping(mapping);
     }
 
     public removeMapping(mapping: ISubCommandMapping): void {
-        this.deleteMapping(mapping);
+        this._deleteMapping(mapping);
     }
 
     public removeMappingsFor(commandClass: IClass<ICommand>): void {
@@ -35,7 +35,7 @@ export class SubCommandMappingList implements ISubCommandMappingList {
                 .get(commandClass)
                 .concat();
             while (subCommandList.length > 0) {
-                this.deleteMapping(subCommandList.pop());
+                this._deleteMapping(subCommandList.pop());
             }
         }
     }
@@ -44,12 +44,12 @@ export class SubCommandMappingList implements ISubCommandMappingList {
         if (this._mappings.length > 0) {
             let subCommandList: ISubCommandMapping[] = this._mappings.concat();
             while (subCommandList.length > 0) {
-                this.deleteMapping(subCommandList.pop());
+                this._deleteMapping(subCommandList.pop());
             }
         }
     }
 
-    private storeMapping(mapping: ISubCommandMapping): void {
+    private _storeMapping(mapping: ISubCommandMapping): void {
         let subCommandList: ISubCommandMapping[];
 
         if (!this._mappingsByCommand.has(mapping.commandClass)) {
@@ -64,7 +64,7 @@ export class SubCommandMappingList implements ISubCommandMappingList {
         this._mappings.push(mapping);
     }
 
-    private deleteMapping(mapping: ISubCommandMapping): void {
+    private _deleteMapping(mapping: ISubCommandMapping): void {
         if (this._mappingsByCommand.has(mapping.commandClass)) {
             let subCommandList: ISubCommandMapping[] = this._mappingsByCommand.get(
                 mapping.commandClass

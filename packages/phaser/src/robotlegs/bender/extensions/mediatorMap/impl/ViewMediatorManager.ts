@@ -33,7 +33,7 @@ export class ViewMediatorManager implements IMediatorManager {
     /**
      * @private
      */
-    constructor(factory: ViewMediatorFactory) {
+    public constructor(factory: ViewMediatorFactory) {
         this._factory = factory;
     }
 
@@ -49,29 +49,29 @@ export class ViewMediatorManager implements IMediatorManager {
 
         // Watch view for destroy
         if (view && mapping.autoRemoveEnabled) {
-            view.on("destroy", this.onViewDestroy, this);
+            view.on("destroy", this._onViewDestroy, this);
         }
 
         // Synchronize with item life-cycle
-        this.initializeMediator(mediator, item);
+        this._initializeMediator(mediator, item);
     }
 
     /**
      * @private
      */
     public removeMediator(mediator: any, item: any, mapping: IMediatorMapping): void {
-        this.destroyMediator(mediator);
+        this._destroyMediator(mediator);
     }
 
     /*============================================================================*/
     /* Private Functions                                                          */
     /*============================================================================*/
 
-    private onViewDestroy(view: Phaser.GameObjects.Container): void {
+    private _onViewDestroy(view: Phaser.GameObjects.Container): void {
         this._factory.removeMediators(view);
     }
 
-    private initializeMediator(mediator: any, mediatedItem: any): void {
+    private _initializeMediator(mediator: any, mediatedItem: any): void {
         if ("preInitialize" in mediator) {
             mediator.preInitialize();
         }
@@ -89,7 +89,7 @@ export class ViewMediatorManager implements IMediatorManager {
         }
     }
 
-    private destroyMediator(mediator: any): void {
+    private _destroyMediator(mediator: any): void {
         if ("preDestroy" in mediator) {
             mediator.preDestroy();
         }

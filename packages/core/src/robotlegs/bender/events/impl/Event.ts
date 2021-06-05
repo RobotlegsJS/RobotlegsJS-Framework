@@ -42,6 +42,7 @@ import { IEvent } from "../api/IEvent";
  * object. Some events have an associated default behavior. Your event listener can cancel this behavior by calling the
  * preventDefault() method. You can also make the current event listener the last one to process an event by calling
  * the stopPropagation() or stopImmediatePropagation() method.
+ *
  * @see egret.EventDispatcher
  * @version Egret 2.4
  * @platform Web,Native
@@ -97,6 +98,7 @@ export class Event implements IEvent {
 
     /**
      * Creates an Event object to pass as a parameter to event listeners.
+     *
      * @param type  The type of the event, accessible as Event.type.
      * @param bubbles  Determines whether the Event object participates in the bubbling stage of the event flow. The default value is false.
      * @param cancelable Determines whether the Event object can be canceled. The default values is false.
@@ -105,7 +107,7 @@ export class Event implements IEvent {
      * @platform Web,Native
      * @language en_US
      */
-    constructor(type: string, bubbles?: boolean, cancelable?: boolean, data?: any) {
+    public constructor(type: string, bubbles?: boolean, cancelable?: boolean, data?: any) {
         this._type = type;
         this._bubbles = !!bubbles;
         this._cancelable = !!cancelable;
@@ -120,6 +122,7 @@ export class Event implements IEvent {
      * You can use the Event.cancelable property to check whether you can prevent the default behavior associated with
      * a particular event. If the value of Event.cancelable is true, then preventDefault() can be used to cancel the event;
      * otherwise, preventDefault() has no effect.
+     *
      * @see #cancelable
      * @see #isDefaultPrevented
      * @version Egret 2.4
@@ -138,6 +141,7 @@ export class Event implements IEvent {
      * method prevents processing of event listeners in both the current node and subsequent nodes. Additional calls to this
      * method have no effect. This method can be called in any phase of the event flow.<br/>
      * Note: This method does not cancel the behavior associated with this event; see preventDefault() for that functionality.
+     *
      * @see #stopImmediatePropagation()
      * @see #preventDefault()
      * @version Egret 2.4
@@ -155,6 +159,7 @@ export class Event implements IEvent {
      * This method takes effect immediately, and it affects event listeners in the current node. In contrast, the
      * stopPropagation() method doesn't take effect until all the event listeners in the current node finish processing.<br/>
      * Note: This method does not cancel the behavior associated with this event; see preventDefault() for that functionality.
+     *
      * @see #stopPropagation()
      * @see #preventDefault()
      * @version Egret 2.4
@@ -169,6 +174,7 @@ export class Event implements IEvent {
 
     /**
      * The type of event. The type is case-sensitive.
+     *
      * @version Egret 2.4
      * @platform Web,Native
      * @language en_US
@@ -179,6 +185,7 @@ export class Event implements IEvent {
 
     /**
      * Indicates whether an event is a bubbling event.
+     *
      * @version Egret 2.4
      * @platform Web,Native
      * @language en_US
@@ -190,6 +197,7 @@ export class Event implements IEvent {
     /**
      * Indicates whether the behavior associated with the event can be prevented. If the behavior can be
      * canceled, this value is true; otherwise it is false.
+     *
      * @see #preventDefault()
      * @version Egret 2.4
      * @platform Web,Native
@@ -202,6 +210,7 @@ export class Event implements IEvent {
     /**
      * Checks whether the preventDefault() method has been called on the event. If the preventDefault() method has been
      * called, returns true; otherwise, returns false.
+     *
      * @returns If preventDefault() has been called, returns true; otherwise, returns false.
      * @see #preventDefault()
      * @version Egret 2.4
@@ -224,6 +233,7 @@ export class Event implements IEvent {
      * The object that is actively processing the Event object with an event listener. For example, if a
      * user clicks an OK button, the current target could be the node containing that button or one of its ancestors
      * that has registered an event listener for that event.
+     *
      * @version Egret 2.4
      * @platform Web,Native
      * @language en_US
@@ -239,6 +249,7 @@ export class Event implements IEvent {
     /**
      * The event target. This property contains the target node. For example, if a user clicks an OK button,
      * the target node is the display list node containing that button.
+     *
      * @version Egret 2.4
      * @platform Web,Native
      * @language en_US
@@ -253,6 +264,7 @@ export class Event implements IEvent {
 
     /**
      * the optional data associated with this event
+     *
      * @version Egret 2.4
      * @platform Web,Native
      * @language en_US

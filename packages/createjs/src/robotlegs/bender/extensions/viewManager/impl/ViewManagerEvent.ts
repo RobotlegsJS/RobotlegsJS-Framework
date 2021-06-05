@@ -11,6 +11,7 @@ import { IViewHandler } from "../api/IViewHandler";
 
 /**
  * Container existence event
+ *
  * @private
  */
 export class ViewManagerEvent extends Event {
@@ -54,11 +55,12 @@ export class ViewManagerEvent extends Event {
 
     /**
      * Creates a view manager event
+     *
      * @param type The event type
      * @param container The container associated with this event
      * @param handler The view handler associated with this event
      */
-    constructor(type: string, container?: createjs.Container, handler?: IViewHandler) {
+    public constructor(type: string, container?: createjs.Container, handler?: IViewHandler) {
         super(type);
         this._container = container;
         this._handler = handler;

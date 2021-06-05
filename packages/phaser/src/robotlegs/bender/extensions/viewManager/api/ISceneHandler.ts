@@ -13,6 +13,7 @@ import { IClass } from "@robotlegsjs/core";
 export interface ISceneHandler {
     /**
      * View handler method
+     *
      * @param scene The scene instance to handle
      * @param type The class of the scene instance
      */

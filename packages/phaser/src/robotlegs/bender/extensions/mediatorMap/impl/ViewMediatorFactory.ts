@@ -11,7 +11,7 @@ import { AbstractMediatorFactory } from "./AbstractMediatorFactory";
 import { ViewMediatorManager } from "./ViewMediatorManager";
 
 export class ViewMediatorFactory extends AbstractMediatorFactory {
-    constructor(injector: IInjector, manager?: ViewMediatorManager) {
+    public constructor(injector: IInjector, manager?: ViewMediatorManager) {
         super(injector);
         this._manager = manager || new ViewMediatorManager(this);
     }

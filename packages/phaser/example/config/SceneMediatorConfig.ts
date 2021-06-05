@@ -29,17 +29,17 @@ export class SceneMediatorConfig implements IConfig {
     public viewMediatorMap: IViewMediatorMap;
 
     public configure(): void {
-        this.mapSceneMediators();
-        this.mapViewMediators();
+        this._mapSceneMediators();
+        this._mapViewMediators();
     }
 
-    private mapSceneMediators(): void {
+    private _mapSceneMediators(): void {
         this.sceneMediatorMap.map(Boot).toMediator(BootMediator);
         this.sceneMediatorMap.map(Preload).toMediator(PreloadMediator);
         this.sceneMediatorMap.map(Main).toMediator(MainMediator);
     }
 
-    private mapViewMediators(): void {
+    private _mapViewMediators(): void {
         this.viewMediatorMap.map(ScoreView).toMediator(ScoreViewMediator);
     }
 }

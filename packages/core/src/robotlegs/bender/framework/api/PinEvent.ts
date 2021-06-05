@@ -38,10 +38,11 @@ export class PinEvent extends Event {
 
     /**
      * Create a Pin Event
+     *
      * @param type The event type
      * @param instance The associated instance
      */
-    constructor(type: string, instance: any) {
+    public constructor(type: string, instance: any) {
         super(type);
         this._instance = instance;
     }

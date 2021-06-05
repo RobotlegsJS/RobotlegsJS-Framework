@@ -97,7 +97,7 @@ export class EventMapConfig {
     /**
      * @private
      */
-    constructor(
+    public constructor(
         dispatcher: IEventDispatcher,
         eventString: string,
         listener: Function,

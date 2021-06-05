@@ -14,7 +14,7 @@ export abstract class AsyncCommand implements IAsyncCommand {
     protected _context: IContext;
     protected _listeners: any[] = [];
 
-    constructor(@inject(IContext) context: IContext) {
+    public constructor(@inject(IContext) context: IContext) {
         this._context = context;
 
         this._context.detain(this);

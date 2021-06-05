@@ -13,7 +13,7 @@ import { IEvent, IEventDispatcher } from "@robotlegsjs/core";
 export class ConvertToEventDispatcher implements IEventDispatcher {
     private _createjsEventDispatcher: createjs.EventDispatcher;
 
-    constructor(createjsEventDispatcher: createjs.EventDispatcher) {
+    public constructor(createjsEventDispatcher: createjs.EventDispatcher) {
         this._createjsEventDispatcher = createjsEventDispatcher;
     }
 

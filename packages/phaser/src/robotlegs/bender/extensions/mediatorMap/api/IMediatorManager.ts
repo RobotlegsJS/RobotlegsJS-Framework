@@ -7,6 +7,7 @@
 
 import { IMediatorMapping } from "./IMediatorMapping";
 
+// eslint-disable-next-line @rushstack/typedef-var
 export const IMediatorManager = Symbol("IMediatorManager");
 export interface IMediatorManager {
     addMediator(mediator: any, item: any, mapping: IMediatorMapping): void;

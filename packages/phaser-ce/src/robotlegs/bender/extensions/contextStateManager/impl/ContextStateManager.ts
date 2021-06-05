@@ -32,9 +32,10 @@ export class ContextStateManager implements IContextStateManager, IConfig {
 
     /**
      * The StateManager represents the root Phaser.StateManager for a Context
+     *
      * @param stateManager The root State Manager for this Context
      */
-    constructor(stateManager: Phaser.StateManager) {
+    public constructor(stateManager: Phaser.StateManager) {
         if (stateManager !== null && stateManager !== undefined) {
             this._stateManager = stateManager;
         } else {

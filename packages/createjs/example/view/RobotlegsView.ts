@@ -6,21 +6,21 @@
 // ------------------------------------------------------------------------------
 
 export class RobotlegsView extends createjs.Container {
-    constructor() {
+    public constructor() {
         super();
 
-        this.loadLogo();
+        this._loadLogo();
     }
 
-    private loadLogo(): void {
+    private _loadLogo(): void {
         let logo: HTMLImageElement = new Image();
 
-        logo.onload = this.logoLoaded.bind(this);
+        logo.onload = this._logoLoaded.bind(this);
         logo.crossOrigin = "anonymous";
         logo.src = "images/robotlegs.png";
     }
 
-    private logoLoaded(event: Event): void {
+    private _logoLoaded(event: Event): void {
         let logo: HTMLImageElement = <HTMLImageElement>event.target;
         let bitmap: createjs.Bitmap = new createjs.Bitmap(event.target);
 

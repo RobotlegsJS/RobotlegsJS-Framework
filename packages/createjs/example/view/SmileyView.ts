@@ -8,16 +8,16 @@
 export class SmileyView extends createjs.Container {
     private _radius: number;
 
-    constructor(radius: number) {
+    public constructor(radius: number) {
         super();
 
         this._radius = Math.max(radius, 50);
 
-        this.drawSmiley();
-        this.move();
+        this._drawSmiley();
+        this._move();
     }
 
-    private drawSmiley(): void {
+    private _drawSmiley(): void {
         let shape: createjs.Shape = new createjs.Shape();
         let graphics: createjs.Graphics = shape.graphics;
 
@@ -44,7 +44,7 @@ export class SmileyView extends createjs.Container {
         this.addChild(shape);
     }
 
-    private move(): void {
+    private _move(): void {
         this.x = Math.random() * 960;
         this.y = Math.random() * 400;
 

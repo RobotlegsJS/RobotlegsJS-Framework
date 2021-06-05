@@ -31,7 +31,7 @@ class InstanceOfTypeMatcher<T> implements IMatcher {
     /**
      * @private
      */
-    constructor(type: IType<T>) {
+    public constructor(type: IType<T>) {
         this._type = type;
     }
 
@@ -53,6 +53,7 @@ class InstanceOfTypeMatcher<T> implements IMatcher {
 
 /**
  * Creates a matcher that matches objects of the given type
+ *
  * @param type The type to match
  * @return A matcher
  */

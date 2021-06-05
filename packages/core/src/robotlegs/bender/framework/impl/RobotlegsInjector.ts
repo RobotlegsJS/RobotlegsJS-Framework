@@ -20,7 +20,7 @@ export class RobotlegsInjector extends Container implements IInjector {
     /**
      * Creates a new Injector
      */
-    constructor() {
+    public constructor() {
         super();
     }
 }

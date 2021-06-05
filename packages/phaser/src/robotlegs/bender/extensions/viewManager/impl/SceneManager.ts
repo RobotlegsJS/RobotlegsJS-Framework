@@ -49,7 +49,7 @@ export class SceneManager extends EventDispatcher implements ISceneManager {
     /**
      * @private
      */
-    constructor(sceneRegistry: SceneRegistry) {
+    public constructor(sceneRegistry: SceneRegistry) {
         super();
         this._registry = sceneRegistry;
     }
@@ -62,7 +62,7 @@ export class SceneManager extends EventDispatcher implements ISceneManager {
      * @inheritDoc
      */
     public addSceneManager(sceneManager: Phaser.Scenes.SceneManager): void {
-        if (!this.validSceneManager(sceneManager)) {
+        if (!this._validSceneManager(sceneManager)) {
             return;
         }
 
@@ -207,7 +207,7 @@ export class SceneManager extends EventDispatcher implements ISceneManager {
     /* Private Functions                                                          */
     /*============================================================================*/
 
-    private validSceneManager(sceneManager: Phaser.Scenes.SceneManager): boolean {
+    private _validSceneManager(sceneManager: Phaser.Scenes.SceneManager): boolean {
         let valid: boolean = true;
 
         this._sceneManagers.forEach((registeredSceneManager: Phaser.Scenes.SceneManager) => {

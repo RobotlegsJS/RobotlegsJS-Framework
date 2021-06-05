@@ -9,6 +9,7 @@ import { Event } from "@robotlegsjs/core";
 
 /**
  * Scene Configuration Event
+ *
  * @private
  */
 export class ConfigureSceneEvent extends Event {
@@ -37,10 +38,11 @@ export class ConfigureSceneEvent extends Event {
 
     /**
      * Creates a scene configuration event
+     *
      * @param type The event type
      * @param scene The associated scene instance
      */
-    constructor(type: string, scene?: Phaser.Scene) {
+    public constructor(type: string, scene?: Phaser.Scene) {
         super(type, true);
         this._scene = scene;
     }

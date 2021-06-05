@@ -10,10 +10,12 @@ import { IEventDispatcher } from "@robotlegsjs/core";
 import { ISceneHandler } from "./ISceneHandler";
 import { IViewHandler } from "./IViewHandler";
 
+// eslint-disable-next-line @rushstack/typedef-var
+export const ISceneManager = Symbol("ISceneManager");
+
 /**
  * The Scene Manager allows you to add multiple "scene managers" to a context
  */
-export const ISceneManager = Symbol("ISceneManager");
 export interface ISceneManager extends IEventDispatcher {
     /**
      * A list of currently registered SceneManagers
@@ -22,36 +24,42 @@ export interface ISceneManager extends IEventDispatcher {
 
     /**
      * Adds a SceneManager as a "scene root" into the context
+     *
      * @param sceneManager
      */
     addSceneManager(sceneManager: Phaser.Scenes.SceneManager): void;
 
     /**
      * Removes a sceneManager from this context
+     *
      * @param sceneManager
      */
     removeSceneManager(sceneManager: Phaser.Scenes.SceneManager): void;
 
     /**
      * Registers a scene handler
+     *
      * @param handler
      */
     addSceneHandler(handler: ISceneHandler): void;
 
     /**
      * Removes a scene handler
+     *
      * @param handler
      */
     removeSceneHandler(handler: ISceneHandler): void;
 
     /**
      * Registers a view handler
+     *
      * @param handler
      */
     addViewHandler(handler: IViewHandler): void;
 
     /**
      * Removes a view handler
+     *
      * @param handler
      */
     removeViewHandler(handler: IViewHandler): void;

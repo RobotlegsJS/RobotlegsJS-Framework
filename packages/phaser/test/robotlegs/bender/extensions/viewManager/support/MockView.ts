@@ -6,7 +6,7 @@
 // ------------------------------------------------------------------------------
 
 export class MockView extends Phaser.GameObjects.Container {
-    constructor(
+    public constructor(
         scene: Phaser.Scene,
         x?: number,
         y?: number,

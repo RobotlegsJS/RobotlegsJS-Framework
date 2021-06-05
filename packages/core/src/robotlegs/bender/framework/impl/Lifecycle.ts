@@ -14,20 +14,20 @@ import { LifecycleState } from "../api/LifecycleState";
 
 import { LifecycleTransition } from "./LifecycleTransition";
 
-/*[Event(name="destroy", type="robotlegs.bender.framework.api.LifecycleEvent")]*/
-/*[Event(name="error", type="robotlegs.bender.framework.api.LifecycleEvent")]*/
-/*[Event(name="initialize", type="robotlegs.bender.framework.api.LifecycleEvent")]*/
-/*[Event(name="postDestroy", type="robotlegs.bender.framework.api.LifecycleEvent")]*/
-/*[Event(name="postInitialize", type="robotlegs.bender.framework.api.LifecycleEvent")]*/
-/*[Event(name="postResume", type="robotlegs.bender.framework.api.LifecycleEvent")]*/
-/*[Event(name="postSuspend", type="robotlegs.bender.framework.api.LifecycleEvent")]*/
-/*[Event(name="preDestroy", type="robotlegs.bender.framework.api.LifecycleEvent")]*/
-/*[Event(name="preInitialize", type="robotlegs.bender.framework.api.LifecycleEvent")]*/
-/*[Event(name="preResume", type="robotlegs.bender.framework.api.LifecycleEvent")]*/
-/*[Event(name="preSuspend", type="robotlegs.bender.framework.api.LifecycleEvent")]*/
-/*[Event(name="resume", type="robotlegs.bender.framework.api.LifecycleEvent")]*/
-/*[Event(name="stateChange", type="robotlegs.bender.framework.api.LifecycleEvent")]*/
-/*[Event(name="suspend", type="robotlegs.bender.framework.api.LifecycleEvent")]*/
+// [Event(name="destroy", type="robotlegs.bender.framework.api.LifecycleEvent")]
+// [Event(name="error", type="robotlegs.bender.framework.api.LifecycleEvent")]
+// [Event(name="initialize", type="robotlegs.bender.framework.api.LifecycleEvent")]
+// [Event(name="postDestroy", type="robotlegs.bender.framework.api.LifecycleEvent")]
+// [Event(name="postInitialize", type="robotlegs.bender.framework.api.LifecycleEvent")]
+// [Event(name="postResume", type="robotlegs.bender.framework.api.LifecycleEvent")]
+// [Event(name="postSuspend", type="robotlegs.bender.framework.api.LifecycleEvent")]
+// [Event(name="preDestroy", type="robotlegs.bender.framework.api.LifecycleEvent")]
+// [Event(name="preInitialize", type="robotlegs.bender.framework.api.LifecycleEvent")]
+// [Event(name="preResume", type="robotlegs.bender.framework.api.LifecycleEvent")]
+// [Event(name="preSuspend", type="robotlegs.bender.framework.api.LifecycleEvent")]
+// [Event(name="resume", type="robotlegs.bender.framework.api.LifecycleEvent")]
+// [Event(name="stateChange", type="robotlegs.bender.framework.api.LifecycleEvent")]
+// [Event(name="suspend", type="robotlegs.bender.framework.api.LifecycleEvent")]
 
 /**
  * Default object lifecycle
@@ -119,12 +119,13 @@ export class Lifecycle implements ILifecycle {
 
     /**
      * Creates a lifecycle for a given target object
+     *
      * @param target The target object
      */
-    constructor(target: IEventDispatcher) {
+    public constructor(target: IEventDispatcher) {
         this._target = target;
         this._dispatcher = target; // || new EventDispatcher(this);
-        this.configureTransitions();
+        this._configureTransitions();
     }
 
     /*============================================================================*/
@@ -164,7 +165,7 @@ export class Lifecycle implements ILifecycle {
      */
     public beforeInitializing(handler: Function): ILifecycle {
         if (!this.uninitialized) {
-            this.reportError(LifecycleError.LATE_HANDLER_ERROR_MESSAGE);
+            this._reportError(LifecycleError.LATE_HANDLER_ERROR_MESSAGE);
         }
         this._initialize.addBeforeHandler(handler);
         return this;
@@ -175,11 +176,11 @@ export class Lifecycle implements ILifecycle {
      */
     public whenInitializing(handler: Function): ILifecycle {
         if (this.initialized) {
-            this.reportError(LifecycleError.LATE_HANDLER_ERROR_MESSAGE);
+            this._reportError(LifecycleError.LATE_HANDLER_ERROR_MESSAGE);
         }
         this.addEventListener(
             LifecycleEvent.INITIALIZE,
-            this.createSyncLifecycleListener(handler, true)
+            this._createSyncLifecycleListener(handler, true)
         );
         return this;
     }
@@ -189,11 +190,11 @@ export class Lifecycle implements ILifecycle {
      */
     public afterInitializing(handler: Function): ILifecycle {
         if (this.initialized) {
-            this.reportError(LifecycleError.LATE_HANDLER_ERROR_MESSAGE);
+            this._reportError(LifecycleError.LATE_HANDLER_ERROR_MESSAGE);
         }
         this.addEventListener(
             LifecycleEvent.POST_INITIALIZE,
-            this.createSyncLifecycleListener(handler, true)
+            this._createSyncLifecycleListener(handler, true)
         );
         return this;
     }
@@ -210,7 +211,7 @@ export class Lifecycle implements ILifecycle {
      * @inheritDoc
      */
     public whenSuspending(handler: Function): ILifecycle {
-        this.addEventListener(LifecycleEvent.SUSPEND, this.createSyncLifecycleListener(handler));
+        this.addEventListener(LifecycleEvent.SUSPEND, this._createSyncLifecycleListener(handler));
         return this;
     }
 
@@ -220,7 +221,7 @@ export class Lifecycle implements ILifecycle {
     public afterSuspending(handler: Function): ILifecycle {
         this.addEventListener(
             LifecycleEvent.POST_SUSPEND,
-            this.createSyncLifecycleListener(handler)
+            this._createSyncLifecycleListener(handler)
         );
         return this;
     }
@@ -237,7 +238,7 @@ export class Lifecycle implements ILifecycle {
      * @inheritDoc
      */
     public whenResuming(handler: Function): ILifecycle {
-        this.addEventListener(LifecycleEvent.RESUME, this.createSyncLifecycleListener(handler));
+        this.addEventListener(LifecycleEvent.RESUME, this._createSyncLifecycleListener(handler));
         return this;
     }
 
@@ -247,7 +248,7 @@ export class Lifecycle implements ILifecycle {
     public afterResuming(handler: Function): ILifecycle {
         this.addEventListener(
             LifecycleEvent.POST_RESUME,
-            this.createSyncLifecycleListener(handler)
+            this._createSyncLifecycleListener(handler)
         );
         return this;
     }
@@ -266,7 +267,7 @@ export class Lifecycle implements ILifecycle {
     public whenDestroying(handler: Function): ILifecycle {
         this.addEventListener(
             LifecycleEvent.DESTROY,
-            this.createSyncLifecycleListener(handler, true)
+            this._createSyncLifecycleListener(handler, true)
         );
         return this;
     }
@@ -277,7 +278,7 @@ export class Lifecycle implements ILifecycle {
     public afterDestroying(handler: Function): ILifecycle {
         this.addEventListener(
             LifecycleEvent.POST_DESTROY,
-            this.createSyncLifecycleListener(handler, true)
+            this._createSyncLifecycleListener(handler, true)
         );
         return this;
     }
@@ -292,7 +293,7 @@ export class Lifecycle implements ILifecycle {
         priority: number = 0,
         useWeakReference: boolean = false
     ): void {
-        priority = this.flipPriority(type, priority);
+        priority = this._flipPriority(type, priority);
         // this._dispatcher.addEventListener(type, listener, useCapture, priority, useWeakReference);
         this._dispatcher.addEventListener(type, listener, undefined, useCapture, priority);
     }
@@ -350,7 +351,7 @@ export class Lifecycle implements ILifecycle {
     /* Private Functions                                                          */
     /*============================================================================*/
 
-    private configureTransitions(): void {
+    private _configureTransitions(): void {
         this._initialize = new LifecycleTransition(LifecycleEvent.PRE_INITIALIZE, this)
             .fromStates(LifecycleState.UNINITIALIZED)
             .toStates(LifecycleState.INITIALIZING, LifecycleState.ACTIVE)
@@ -390,13 +391,13 @@ export class Lifecycle implements ILifecycle {
             .inReverse();
     }
 
-    private flipPriority(type: string, priority: number): number {
+    private _flipPriority(type: string, priority: number): number {
         return priority === 0 && this._reversedEventTypes.get(type)
             ? this._reversePriority++
             : priority;
     }
 
-    private createSyncLifecycleListener(handler: Function, once: boolean = false): Function {
+    private _createSyncLifecycleListener(handler: Function, once: boolean = false): Function {
         // When and After handlers can not be asynchronous
         if (handler.length > 1) {
             throw new LifecycleError(LifecycleError.SYNC_HANDLER_ARG_MISMATCH);
@@ -423,7 +424,7 @@ export class Lifecycle implements ILifecycle {
         };
     }
 
-    private reportError(message: string): void {
+    private _reportError(message: string): void {
         let error: LifecycleError = new LifecycleError(message);
         if (this.hasEventListener(LifecycleEvent.ERROR)) {
             let event: LifecycleEvent = new LifecycleEvent(LifecycleEvent.ERROR, error);

@@ -13,7 +13,7 @@ import { IConfig } from "../../../../../../src/robotlegs/bender/framework/api/IC
 export class TypedConfig implements IConfig {
     protected _callback: Function;
 
-    constructor(
+    public constructor(
         @inject("Function")
         @named("callback")
         callback: Function

@@ -25,7 +25,7 @@ export class MessageRunner {
     /**
      * @private
      */
-    constructor(message: string, handlers: Function[], callback: Function) {
+    public constructor(message: string, handlers: Function[], callback: Function) {
         this._message = message;
         this._handlers = handlers;
         this._callback = callback;
@@ -39,14 +39,14 @@ export class MessageRunner {
      * @private
      */
     public run(): void {
-        this.next();
+        this._next();
     }
 
     /*============================================================================*/
     /* Private Functions                                                          */
     /*============================================================================*/
 
-    private next(): void {
+    private _next(): void {
         // Try to keep things synchronous with a simple loop,
         // forcefully breaking out for async handlers and recursing.
         // We do this to avoid increasing the stack depth unnecessarily.
@@ -76,7 +76,7 @@ export class MessageRunner {
                             safelyCallBack(this._callback, error, this._message);
                         }
                     } else {
-                        this.next();
+                        this._next();
                     }
                 });
                 // IMPORTANT: MUST break this loop with a RETURN. See top.

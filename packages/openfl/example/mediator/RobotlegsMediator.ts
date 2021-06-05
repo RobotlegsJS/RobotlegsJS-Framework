@@ -17,14 +17,14 @@ export class RobotlegsMediator extends Mediator<RobotlegsView> {
     public initialize(): void {
         console.log("RobotlegsMediator initialized!");
 
-        this.view.addEventListener(MouseEvent.CLICK, this.onClick);
+        this.view.addEventListener(MouseEvent.CLICK, this._onClick);
     }
 
     public destroy(): void {
         console.log("RobotlegsMediator destroyed!");
     }
 
-    private onClick = (event: Event): void => {
+    private _onClick = (event: Event): void => {
         let radius: number = 50 + Math.random() * 50;
         this.view.stage.addChild(new SmileyView(radius));
     };

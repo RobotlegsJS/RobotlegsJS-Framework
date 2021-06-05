@@ -10,15 +10,17 @@ import { Container } from "pixi.js";
 import { IEventDispatcher } from "@robotlegsjs/core";
 import { IViewHandler } from "./IViewHandler";
 
-/*[Event(name="containerAdd", type="robotlegs.bender.extensions.viewManager.impl.ViewManagerEvent")]*/
-/*[Event(name="containerRemove", type="robotlegs.bender.extensions.viewManager.impl.ViewManagerEvent")]*/
-/*[Event(name="handlerAdd", type="robotlegs.bender.extensions.viewManager.impl.ViewManagerEvent")]*/
-/*[Event(name="handlerRemove", type="robotlegs.bender.extensions.viewManager.impl.ViewManagerEvent")]*/
+// [Event(name="containerAdd", type="robotlegs.bender.extensions.viewManager.impl.ViewManagerEvent")]
+// [Event(name="containerRemove", type="robotlegs.bender.extensions.viewManager.impl.ViewManagerEvent")]
+// [Event(name="handlerAdd", type="robotlegs.bender.extensions.viewManager.impl.ViewManagerEvent")]
+// [Event(name="handlerRemove", type="robotlegs.bender.extensions.viewManager.impl.ViewManagerEvent")]
+
+// eslint-disable-next-line @rushstack/typedef-var
+export const IViewManager = Symbol("IViewManager");
 
 /**
  * The View Manager allows you to add multiple "view root" containers to a context
  */
-export let IViewManager = Symbol("IViewManager");
 export interface IViewManager extends IEventDispatcher {
     /**
      * A list of currently registered containers
@@ -27,24 +29,28 @@ export interface IViewManager extends IEventDispatcher {
 
     /**
      * Adds a container as a "view root" into the context
+     *
      * @param container
      */
     addContainer(container: Container): void;
 
     /**
      * Removes a container from this context
+     *
      * @param container
      */
     removeContainer(container: Container): void;
 
     /**
      * Registers a view handler
+     *
      * @param handler
      */
     addViewHandler(handler: IViewHandler): void;
 
     /**
      * Removes a view handler
+     *
      * @param handler
      */
     removeViewHandler(handler: IViewHandler): void;

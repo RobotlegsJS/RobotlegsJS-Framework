@@ -14,37 +14,37 @@ import { MyConfig } from "./config/MyConfig";
 import { RobotlegsView } from "./view/RobotlegsView";
 
 export class Game {
-    private canvas: HTMLCanvasElement;
-    private stage: PIXI.Container;
-    private renderer: PIXI.Renderer;
-    private context: Context;
+    private _canvas: HTMLCanvasElement;
+    private _stage: PIXI.Container;
+    private _renderer: PIXI.Renderer;
+    private _context: Context;
 
-    constructor() {
-        this.canvas = <HTMLCanvasElement>document.getElementById("canvas");
-        this.renderer = PIXI.autoDetectRenderer({
+    public constructor() {
+        this._canvas = <HTMLCanvasElement>document.getElementById("canvas");
+        this._renderer = PIXI.autoDetectRenderer({
             width: 960,
             height: 400,
-            view: this.canvas,
+            view: this._canvas,
             backgroundColor: 0xffffff
         });
-        this.stage = new PIXI.Container();
+        this._stage = new PIXI.Container();
 
-        this.context = new Context();
-        this.context
+        this._context = new Context();
+        this._context
             .install(MVCSBundle, PixiBundle)
-            .configure(new ContextView(this.stage))
+            .configure(new ContextView(this._stage))
             .configure(MyConfig)
             .initialize();
 
-        this.stage.addChild(new RobotlegsView());
+        this._stage.addChild(new RobotlegsView());
 
-        document.body.appendChild(this.renderer.view);
+        document.body.appendChild(this._renderer.view);
 
         this.render();
     }
 
-    public render = () => {
-        this.renderer.render(this.stage);
+    public render = (): void => {
+        this._renderer.render(this._stage);
         window.requestAnimationFrame(this.render);
     };
 }

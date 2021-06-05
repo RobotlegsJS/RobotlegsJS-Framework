@@ -11,7 +11,7 @@ import { injectable, inject, named, IHook } from "@robotlegsjs/core";
 export class CallbackHook implements IHook {
     private _callback: Function;
 
-    constructor(
+    public constructor(
         @inject("Function")
         @named("hookCallback")
         callback: Function

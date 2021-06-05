@@ -38,8 +38,8 @@ export class SceneManagerExtension implements IExtension {
      * @inheritDoc
      */
     public extend(context: IContext): void {
-        context.whenInitializing(this.whenInitializing.bind(this));
-        context.whenDestroying(this.whenDestroying.bind(this));
+        context.whenInitializing(this._whenInitializing.bind(this));
+        context.whenDestroying(this._whenDestroying.bind(this));
 
         this._injector = context.injector;
 
@@ -58,11 +58,11 @@ export class SceneManagerExtension implements IExtension {
     /* Private Functions                                                          */
     /*============================================================================*/
 
-    private whenInitializing(): void {
+    private _whenInitializing(): void {
         this._sceneManager = this._injector.get<ISceneManager>(ISceneManager);
     }
 
-    private whenDestroying(): void {
+    private _whenDestroying(): void {
         this._sceneManager.removeAllHandlers();
         this._injector.unbind(ISceneManager);
         this._injector.unbind(SceneRegistry);

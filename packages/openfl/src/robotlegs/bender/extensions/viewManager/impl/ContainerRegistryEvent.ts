@@ -11,6 +11,7 @@ import DisplayObjectContainer from "openfl/display/DisplayObjectContainer";
 
 /**
  * Container existence event
+ *
  * @private
  */
 export class ContainerRegistryEvent extends Event {
@@ -45,10 +46,11 @@ export class ContainerRegistryEvent extends Event {
 
     /**
      * Creates a new container existence event
+     *
      * @param type The event type
      * @param container The container associated with this event
      */
-    constructor(type: string, container: DisplayObjectContainer) {
+    public constructor(type: string, container: DisplayObjectContainer) {
         super(type);
         this._container = container;
     }

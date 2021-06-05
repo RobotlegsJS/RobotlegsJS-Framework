@@ -13,7 +13,7 @@ export class PayloadInjectionPointsHook {
     protected _code: number;
     protected _reportingFunction: Function;
 
-    constructor(
+    public constructor(
         @inject("Function")
         @named("reportingFunction")
         reportingFunction: Function,

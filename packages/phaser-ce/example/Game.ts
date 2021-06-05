@@ -23,7 +23,7 @@ import { StateMediatorConfig } from "./config/StateMediatorConfig";
 export class Game extends Phaser.Game {
     private _context: IContext;
 
-    constructor(
+    public constructor(
         width?: number | string,
         height?: number | string,
         renderer?: number,

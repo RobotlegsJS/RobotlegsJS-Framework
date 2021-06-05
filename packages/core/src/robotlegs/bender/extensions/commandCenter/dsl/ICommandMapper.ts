@@ -17,6 +17,7 @@ import { ICommandConfigurator } from "./ICommandConfigurator";
 export interface ICommandMapper {
     /**
      * Creates a command mapping
+     *
      * @param commandClass The Command Class to map
      * @return Mapping configurator
      */

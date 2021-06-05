@@ -28,6 +28,12 @@ describe("TypeMatcher", () => {
 
     let matcher: TypeMatcher;
 
+    function assertMatchesTypeFilter(expected: ITypeFilter, actual: ITypeFilter): void {
+        assert.deepEqual(expected.allOfTypes, actual.allOfTypes);
+        assert.deepEqual(expected.anyOfTypes, actual.anyOfTypes);
+        assert.deepEqual(expected.noneOfTypes, actual.noneOfTypes);
+    }
+
     afterEach(() => {
         matcher = null;
     });
@@ -200,10 +206,4 @@ describe("TypeMatcher", () => {
         matcher.allOf([BaseType], ExtendedType).anyOf([Boolean], Number).noneOf([Error], TypeError);
         assertMatchesTypeFilter(matcher.createTypeFilter(), expectedFilter);
     });
-
-    function assertMatchesTypeFilter(expected: ITypeFilter, actual: ITypeFilter): void {
-        assert.deepEqual(expected.allOfTypes, actual.allOfTypes);
-        assert.deepEqual(expected.anyOfTypes, actual.anyOfTypes);
-        assert.deepEqual(expected.noneOfTypes, actual.noneOfTypes);
-    }
 });

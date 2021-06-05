@@ -43,7 +43,7 @@ export class ViewMediatorMap implements IViewMediatorMap, IViewHandler {
 
     private _viewHandler: ViewMediatorHandler;
 
-    private NULL_UNMAPPER: IMediatorUnmapper = new NullMediatorUnmapper();
+    private _NULL_UNMAPPER: IMediatorUnmapper = new NullMediatorUnmapper();
 
     /*============================================================================*/
     /* Constructor                                                                */
@@ -52,7 +52,7 @@ export class ViewMediatorMap implements IViewMediatorMap, IViewHandler {
     /**
      * @private
      */
-    constructor(@inject(IContext) context: IContext) {
+    public constructor(@inject(IContext) context: IContext) {
         this._logger = context.getLogger(this);
         this._factory = new ViewMediatorFactory(context.injector);
         this._viewHandler = new ViewMediatorHandler(this._factory);
@@ -73,7 +73,7 @@ export class ViewMediatorMap implements IViewMediatorMap, IViewHandler {
             return mapper;
         }
 
-        mapper = this.createMapper(matcher) as MediatorMapper;
+        mapper = this._createMapper(matcher) as MediatorMapper;
         this._mappers.set(desc, mapper);
         return mapper;
     }
@@ -89,7 +89,7 @@ export class ViewMediatorMap implements IViewMediatorMap, IViewHandler {
      * @inheritDoc
      */
     public unmapMatcher(matcher: ITypeMatcher): IMediatorUnmapper {
-        return this._mappers.get(matcher.createTypeFilter().descriptor) || this.NULL_UNMAPPER;
+        return this._mappers.get(matcher.createTypeFilter().descriptor) || this._NULL_UNMAPPER;
     }
 
     /**
@@ -131,7 +131,7 @@ export class ViewMediatorMap implements IViewMediatorMap, IViewHandler {
     /* Private Functions                                                          */
     /*============================================================================*/
 
-    private createMapper(matcher: ITypeMatcher): IMediatorMapper {
+    private _createMapper(matcher: ITypeMatcher): IMediatorMapper {
         return new MediatorMapper(matcher.createTypeFilter(), this._viewHandler, this._logger);
     }
 }

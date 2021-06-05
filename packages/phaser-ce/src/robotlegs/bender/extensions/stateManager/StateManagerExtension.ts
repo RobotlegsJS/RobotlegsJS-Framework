@@ -39,8 +39,8 @@ export class StateManagerExtension implements IExtension {
      * @inheritDoc
      */
     public extend(context: IContext): void {
-        context.whenInitializing(this.whenInitializing.bind(this));
-        context.whenDestroying(this.whenDestroying.bind(this));
+        context.whenInitializing(this._whenInitializing.bind(this));
+        context.whenDestroying(this._whenDestroying.bind(this));
 
         this._injector = context.injector;
 
@@ -57,11 +57,11 @@ export class StateManagerExtension implements IExtension {
     /* Private Functions                                                          */
     /*============================================================================*/
 
-    private whenInitializing(): void {
+    private _whenInitializing(): void {
         this._viewManager = this._injector.get<IStateManager>(IStateManager);
     }
 
-    private whenDestroying(): void {
+    private _whenDestroying(): void {
         this._viewManager.removeAllHandlers();
         this._injector.unbind(IStateManager);
         this._injector.unbind(StateRegistry);

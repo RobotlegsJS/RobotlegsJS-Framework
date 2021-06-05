@@ -157,7 +157,7 @@ describe("MediatorManager", () => {
 
     it("empty_mediator_is_created", () => {
         let managerMock = sinon.mock(manager);
-        managerMock.expects("initializeMediator").once();
+        managerMock.expects("_initializeMediator").once();
 
         const view: createjs.Container = new createjs.Container();
         const mapping: IMediatorMapping = new MediatorMapping(
@@ -173,8 +173,8 @@ describe("MediatorManager", () => {
 
     it("empty_mediator_is_destroyed", () => {
         let managerMock = sinon.mock(manager);
-        managerMock.expects("initializeMediator").once();
-        managerMock.expects("destroyMediator").once();
+        managerMock.expects("_initializeMediator").once();
+        managerMock.expects("_destroyMediator").once();
 
         const view: createjs.Container = new createjs.Container();
 

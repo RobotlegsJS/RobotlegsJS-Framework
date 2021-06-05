@@ -27,10 +27,11 @@ export class CommandTriggerMap {
 
     /**
      * Creates a command trigger map
+     *
      * @param keyFactory Factory function to creates keys
      * @param triggerFactory Factory function to create triggers
      */
-    constructor(keyFactory: Function, triggerFactory: Function) {
+    public constructor(keyFactory: Function, triggerFactory: Function) {
         this._keyFactory = keyFactory;
         this._triggerFactory = triggerFactory;
     }
@@ -43,10 +44,10 @@ export class CommandTriggerMap {
      * @private
      */
     public getTrigger(...params: any[]): ICommandTrigger {
-        let key: any = this.getKey(params);
+        let key: any = this._getKey(params);
         let trigger = this._triggers.get(key);
         if (!trigger) {
-            trigger = this.createTrigger(params);
+            trigger = this._createTrigger(params);
             this._triggers.set(key, trigger);
         }
         return trigger;
@@ -56,22 +57,22 @@ export class CommandTriggerMap {
      * @private
      */
     public removeTrigger(...params: any[]): ICommandTrigger {
-        return this.destroyTrigger(this.getKey(params));
+        return this._destroyTrigger(this._getKey(params));
     }
 
     /*============================================================================*/
     /* Private Functions                                                          */
     /*============================================================================*/
 
-    private getKey(mapperArgs: any[]): any {
+    private _getKey(mapperArgs: any[]): any {
         return this._keyFactory.apply(null, mapperArgs);
     }
 
-    private createTrigger(mapperArgs: any[]): ICommandTrigger {
+    private _createTrigger(mapperArgs: any[]): ICommandTrigger {
         return this._triggerFactory.apply(null, mapperArgs);
     }
 
-    private destroyTrigger(key: any): ICommandTrigger {
+    private _destroyTrigger(key: any): ICommandTrigger {
         let trigger: ICommandTrigger = this._triggers.get(key);
         if (trigger) {
             trigger.deactivate();

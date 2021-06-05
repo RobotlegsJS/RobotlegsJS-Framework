@@ -7,7 +7,8 @@
 
 import { IFlowViewMapping } from "./IFlowViewMapping";
 
-export let IFlowManager = Symbol("IFlowManager");
+// eslint-disable-next-line @rushstack/typedef-var
+export const IFlowManager = Symbol("IFlowManager");
 export interface IFlowManager {
     map(event: string): IFlowViewMapping;
 }

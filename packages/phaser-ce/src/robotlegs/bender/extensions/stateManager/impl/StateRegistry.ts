@@ -55,7 +55,7 @@ export class StateRegistry extends EventDispatcher {
         let binding: StateManagerBinding = this._bindingByStateManager.get(stateManager);
 
         if (!binding) {
-            binding = this.createBinding(stateManager);
+            binding = this._createBinding(stateManager);
             this._bindingByStateManager.set(stateManager, binding);
         }
 
@@ -69,7 +69,7 @@ export class StateRegistry extends EventDispatcher {
         let binding: StateManagerBinding = this._bindingByStateManager.get(stateManager);
 
         if (binding) {
-            this.removeBinding(binding);
+            this._removeBinding(binding);
         }
 
         return binding;
@@ -95,17 +95,17 @@ export class StateRegistry extends EventDispatcher {
     /* Private Functions                                                          */
     /*============================================================================*/
 
-    private createBinding(stateManager: Phaser.StateManager): StateManagerBinding {
+    private _createBinding(stateManager: Phaser.StateManager): StateManagerBinding {
         let binding: StateManagerBinding = new StateManagerBinding(stateManager);
         this._bindings.push(binding);
 
         // Add a listener so that we can remove this binding when it has no handlers
-        binding.addEventListener(StateManagerBindingEvent.BINDING_EMPTY, this.onBindingEmpty);
+        binding.addEventListener(StateManagerBindingEvent.BINDING_EMPTY, this._onBindingEmpty);
 
         // If the new binding doesn't have a parent it is a Root
         binding.parent = this.findParentBinding(stateManager);
         if (binding.parent == null) {
-            this.addRootBinding(binding);
+            this._addRootBinding(binding);
         }
 
         this.dispatchEvent(
@@ -115,18 +115,18 @@ export class StateRegistry extends EventDispatcher {
         return binding;
     }
 
-    private removeBinding(binding: StateManagerBinding): void {
+    private _removeBinding(binding: StateManagerBinding): void {
         // Remove the binding itself
         this._bindingByStateManager.delete(binding.stateManager);
         let index: number = this._bindings.indexOf(binding);
         this._bindings.splice(index, 1);
 
         // Drop the empty binding listener
-        binding.removeEventListener(StateManagerBindingEvent.BINDING_EMPTY, this.onBindingEmpty);
+        binding.removeEventListener(StateManagerBindingEvent.BINDING_EMPTY, this._onBindingEmpty);
 
         if (!binding.parent) {
             // This binding didn't have a parent, so it was a Root
-            this.removeRootBinding(binding);
+            this._removeRootBinding(binding);
         }
 
         this.dispatchEvent(
@@ -134,14 +134,14 @@ export class StateRegistry extends EventDispatcher {
         );
     }
 
-    private addRootBinding(binding: StateManagerBinding): void {
+    private _addRootBinding(binding: StateManagerBinding): void {
         this._rootBindings.push(binding);
         this.dispatchEvent(
             new StateRegistryEvent(StateRegistryEvent.ROOT_STATE_MANAGER_ADD, binding.stateManager)
         );
     }
 
-    private removeRootBinding(binding: StateManagerBinding): void {
+    private _removeRootBinding(binding: StateManagerBinding): void {
         let index: number = this._rootBindings.indexOf(binding);
         this._rootBindings.splice(index, 1);
         this.dispatchEvent(
@@ -152,7 +152,7 @@ export class StateRegistry extends EventDispatcher {
         );
     }
 
-    private onBindingEmpty(event: StateManagerBindingEvent): void {
-        this.removeBinding(<any>event.target);
+    private _onBindingEmpty(event: StateManagerBindingEvent): void {
+        this._removeBinding(<any>event.target);
     }
 }

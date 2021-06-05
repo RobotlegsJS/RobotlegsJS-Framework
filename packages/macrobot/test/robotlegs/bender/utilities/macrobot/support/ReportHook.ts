@@ -13,7 +13,7 @@ export class ReportHook {
     @named("reportingFunction")
     protected _report: Function;
 
-    public hook() {
+    public hook(): void {
         this._report("Hook");
     }
 }

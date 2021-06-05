@@ -11,13 +11,13 @@ import Sprite from "openfl/display/Sprite";
 import Event from "openfl/events/Event";
 
 export class GameView extends Sprite {
-    constructor() {
+    public constructor() {
         super();
 
-        this.addEventListener(Event.ADDED_TO_STAGE, this.onAddedToStage);
+        this.addEventListener(Event.ADDED_TO_STAGE, this._onAddedToStage);
     }
 
-    private onAddedToStage = (event: Event): void => {
+    private _onAddedToStage = (event: Event): void => {
         if (event.target === this) {
             let robotlegs: RobotlegsView = new RobotlegsView();
             this.addChild(robotlegs);

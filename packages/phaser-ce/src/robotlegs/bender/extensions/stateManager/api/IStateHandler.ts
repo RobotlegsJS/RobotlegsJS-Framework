@@ -13,6 +13,7 @@ import { IClass } from "@robotlegsjs/core";
 export interface IStateHandler {
     /**
      * View handler method
+     *
      * @param state The state instance to handle
      * @param type The class of the state instance
      */

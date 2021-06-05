@@ -11,7 +11,7 @@ import { AbstractMediatorFactory } from "./AbstractMediatorFactory";
 import { SceneMediatorManager } from "./SceneMediatorManager";
 
 export class SceneMediatorFactory extends AbstractMediatorFactory {
-    constructor(injector: IInjector, manager?: SceneMediatorManager) {
+    public constructor(injector: IInjector, manager?: SceneMediatorManager) {
         super(injector);
         this._manager = manager || new SceneMediatorManager(this);
     }

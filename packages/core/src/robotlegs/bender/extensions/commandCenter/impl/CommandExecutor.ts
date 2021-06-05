@@ -38,11 +38,12 @@ export class CommandExecutor implements ICommandExecutor {
 
     /**
      * Creates a Command Executor
+     *
      * @param injector The Injector to use. A child injector will be created from it.
      * @param removeMapping Remove mapping handler (optional)
      * @param handleResult Result handler (optional)
      */
-    constructor(injector: IInjector, removeMapping?: Function, handleResult?: Function) {
+    public constructor(injector: IInjector, removeMapping?: Function, handleResult?: Function) {
         this._injector = injector.createChild();
         this._removeMapping = removeMapping;
         this._handleResult = handleResult;
@@ -71,7 +72,7 @@ export class CommandExecutor implements ICommandExecutor {
         let command: ICommand = null;
 
         if (injectionEnabled) {
-            this.mapPayload(payload);
+            this._mapPayload(payload);
         }
 
         if (mapping.guards.length === 0 || guardsApprove(mapping.guards, this._injector)) {
@@ -91,7 +92,7 @@ export class CommandExecutor implements ICommandExecutor {
         }
 
         if (injectionEnabled) {
-            this.unmapPayload(payload);
+            this._unmapPayload(payload);
         }
 
         if (command) {
@@ -110,14 +111,14 @@ export class CommandExecutor implements ICommandExecutor {
     /* Private Functions                                                          */
     /*============================================================================*/
 
-    private mapPayload(payload: CommandPayload): void {
+    private _mapPayload(payload: CommandPayload): void {
         let i: number = payload.length;
         while (i--) {
             this._injector.bind(payload.classes[i]).toConstantValue(payload.values[i]);
         }
     }
 
-    private unmapPayload(payload: CommandPayload): void {
+    private _unmapPayload(payload: CommandPayload): void {
         let i: number = payload.length;
         while (i--) {
             this._injector.unbind(payload.classes[i]);

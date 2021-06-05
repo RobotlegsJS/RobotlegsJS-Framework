@@ -15,7 +15,7 @@ export class EventInjectedCallbackGuard implements IGuard {
     protected _callback: Function;
     protected _event: Event;
 
-    constructor(
+    public constructor(
         @inject("Function")
         @named("approveCallback")
         callback: Function,

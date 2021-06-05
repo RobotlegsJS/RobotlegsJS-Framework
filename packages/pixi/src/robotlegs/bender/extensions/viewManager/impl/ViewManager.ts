@@ -17,10 +17,10 @@ import { ViewManagerEvent } from "./ViewManagerEvent";
 import { ContainerRegistry } from "../impl/ContainerRegistry";
 import { ContainerBinding } from "../impl/ContainerBinding";
 
-/*[Event(name="containerAdd", type="robotlegs.bender.extensions.viewManager.impl.ViewManagerEvent")]*/
-/*[Event(name="containerRemove", type="robotlegs.bender.extensions.viewManager.impl.ViewManagerEvent")]*/
-/*[Event(name="handlerAdd", type="robotlegs.bender.extensions.viewManager.impl.ViewManagerEvent")]*/
-/*[Event(name="handlerRemove", type="robotlegs.bender.extensions.viewManager.impl.ViewManagerEvent")]*/
+// [Event(name="containerAdd", type="robotlegs.bender.extensions.viewManager.impl.ViewManagerEvent")]
+// [Event(name="containerRemove", type="robotlegs.bender.extensions.viewManager.impl.ViewManagerEvent")]
+// [Event(name="handlerAdd", type="robotlegs.bender.extensions.viewManager.impl.ViewManagerEvent")]
+// [Event(name="handlerRemove", type="robotlegs.bender.extensions.viewManager.impl.ViewManagerEvent")]
 
 /**
  * @private
@@ -55,7 +55,7 @@ export class ViewManager extends EventDispatcher implements IViewManager {
     /**
      * @private
      */
-    constructor(@inject(ContainerRegistry) containerRegistry: ContainerRegistry) {
+    public constructor(@inject(ContainerRegistry) containerRegistry: ContainerRegistry) {
         super();
         this._registry = containerRegistry;
     }
@@ -68,7 +68,7 @@ export class ViewManager extends EventDispatcher implements IViewManager {
      * @inheritDoc
      */
     public addContainer(container: Container): void {
-        if (!this.validContainer(container)) {
+        if (!this._validContainer(container)) {
             return;
         }
 
@@ -153,7 +153,7 @@ export class ViewManager extends EventDispatcher implements IViewManager {
     /* Private Functions                                                          */
     /*============================================================================*/
 
-    private validContainer(container: Container): boolean {
+    private _validContainer(container: Container): boolean {
         let isValid: boolean = this._containers.indexOf(container) < 0;
 
         if (isValid) {

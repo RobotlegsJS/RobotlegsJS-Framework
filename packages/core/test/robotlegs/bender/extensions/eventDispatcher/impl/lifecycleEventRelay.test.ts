@@ -38,6 +38,16 @@ describe("LifecycleEventRelay", () => {
     let subject: LifecycleEventRelay;
     let reportedTypes: string[];
 
+    function catchEvent(event: Event): void {
+        reportedTypes.push(event.type);
+    }
+
+    function listenFor(types: string[]): void {
+        types.forEach((type: string) => {
+            dispatcher.addEventListener(type, catchEvent);
+        });
+    }
+
     beforeEach(() => {
         context = new Context();
         dispatcher = new EventDispatcher();
@@ -52,16 +62,6 @@ describe("LifecycleEventRelay", () => {
         subject = null;
         reportedTypes = null;
     });
-
-    function listenFor(types: string[]): void {
-        types.forEach((type: string) => {
-            dispatcher.addEventListener(type, catchEvent);
-        });
-    }
-
-    function catchEvent(event: Event): void {
-        reportedTypes.push(event.type);
-    }
 
     it("state_change_is_relayed", () => {
         listenFor([LifecycleEvent.STATE_CHANGE]);

@@ -48,17 +48,17 @@ export class PalidorBundle implements IBundle {
             PalidorPixiExtension
         );
 
-        this._context.whenInitializing(this.whenInitializing.bind(this));
-        this._context.afterDestroying(this.afterDestroying.bind(this));
+        this._context.whenInitializing(this._whenInitializing.bind(this));
+        this._context.afterDestroying(this._afterDestroying.bind(this));
     }
 
-    private whenInitializing(): void {
+    private _whenInitializing(): void {
         if (this._context.injector.isBound(IContextView)) {
             this._context.configure(ContextViewListenerConfig);
         }
     }
 
-    private afterDestroying(): void {
+    private _afterDestroying(): void {
         this._context = null;
     }
 }

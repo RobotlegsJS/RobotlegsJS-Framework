@@ -55,27 +55,27 @@ export class PhaserBundle implements IBundle {
 
         this._context.addConfigHandler(
             instanceOfType(ContextSceneManager),
-            this.handleContextSceneManager.bind(this)
+            this._handleContextSceneManager.bind(this)
         );
-        this._context.whenInitializing(this.whenInitializing.bind(this));
-        this._context.afterDestroying(this.afterDestroying.bind(this));
+        this._context.whenInitializing(this._whenInitializing.bind(this));
+        this._context.afterDestroying(this._afterDestroying.bind(this));
     }
 
     /*============================================================================*/
     /* Private Functions                                                          */
     /*============================================================================*/
 
-    private handleContextSceneManager(contextSceneManager: ContextSceneManager): void {
+    private _handleContextSceneManager(contextSceneManager: ContextSceneManager): void {
         this._context.configure(ContextSceneManagerListenerConfig);
     }
 
-    private whenInitializing(): void {
+    private _whenInitializing(): void {
         if (!this._context.injector.isBound(IContextSceneManager)) {
             this._logger.error("PhaserBundle requires IContextSceneManager.");
         }
     }
 
-    private afterDestroying(): void {
+    private _afterDestroying(): void {
         this._context = null;
         this._logger = null;
     }

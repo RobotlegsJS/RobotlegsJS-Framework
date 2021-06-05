@@ -100,7 +100,7 @@ describe("instanceOfType", () => {
     let objectCollection: TypeCollection<Object> = new TypeCollection(
         Object,
         [Function, Array, Date, BaseType, ExtendedType],
-        [{}, { data: "I'm not a empty object" }, new Object()]
+        [{}, { data: "I'm not a empty object" }, {}]
     );
     let arrayCollection: TypeCollection<any[]> = new TypeCollection(
         Array,

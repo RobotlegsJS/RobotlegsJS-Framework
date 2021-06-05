@@ -30,7 +30,7 @@ export class ContextStateManagerListenerConfig implements IConfig {
     /* Public Functions                                                           */
     /*============================================================================*/
 
-    constructor(
+    public constructor(
         @inject(IContextStateManager) contextStateManager: IContextStateManager,
         @inject(IStateManager) stateManager: IStateManager
     ) {

@@ -14,7 +14,7 @@ export class SubCommandPayload<T> implements ISubCommandPayload<T> {
     private _type: IType<T>;
     private _name: string;
 
-    constructor(data: T, type: IType<T> = null) {
+    public constructor(data: T, type: IType<T> = null) {
         if (data === undefined || data === null) {
             throw new Error("Payload data can't be null");
         }

@@ -49,10 +49,11 @@ export class CommandPayload {
 
     /**
      * Creates a command payload
+     *
      * @param values Optional values
      * @param classes Optional classes
      */
-    constructor(values?: any[], classes?: IType<any>[]) {
+    public constructor(values?: any[], classes?: IType<any>[]) {
         this._values = values;
         this._classes = classes;
     }
@@ -63,6 +64,7 @@ export class CommandPayload {
 
     /**
      * Adds an item to this payload
+     *
      * @param payloadValue The value
      * @param payloadClass The class of the value
      * @return Self
@@ -84,6 +86,7 @@ export class CommandPayload {
 
     /**
      * Does this payload have any items?
+     *
      * @return boolean
      */
     public hasPayload(): boolean {

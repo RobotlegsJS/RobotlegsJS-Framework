@@ -13,6 +13,7 @@ import { IClass } from "@robotlegsjs/core";
 export interface IViewHandler {
     /**
      * View handler method
+     *
      * @param view The view (Phaser.GameObjects.Container) instance to handle
      * @param type The class of the view instance
      */

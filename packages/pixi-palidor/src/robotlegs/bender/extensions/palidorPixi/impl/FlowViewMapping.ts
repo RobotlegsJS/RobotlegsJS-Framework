@@ -23,7 +23,7 @@ export class FlowViewMapping implements IFlowViewMapping {
         return this._flowManager;
     }
 
-    constructor(event: string, flowManager: FlowManager) {
+    public constructor(event: string, flowManager: FlowManager) {
         this._event = event;
         this._flowManager = flowManager;
     }

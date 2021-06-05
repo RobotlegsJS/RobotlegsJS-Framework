@@ -23,7 +23,7 @@ export class ObjectHandler {
     /**
      * @private
      */
-    constructor(matcher: IMatcher, handler: Function) {
+    public constructor(matcher: IMatcher, handler: Function) {
         this._matcher = matcher;
         this._handler = handler;
     }

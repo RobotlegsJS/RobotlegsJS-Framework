@@ -17,13 +17,13 @@ import { ILogger } from "../../framework/api/ILogger";
  * * Using the literal string "ILogger":
  *
  * <code>
- *     constructor( @inject("ILogger") logger: ILogger ) { ... }
+ * constructor( @inject("ILogger") logger: ILogger ) { ... }
  * </code>
  *
  * * Using the ILogger Symbol:
  *
  * <code>
- *     constructor( @inject(ILogger) logger: ILogger ) { ... }
+ * constructor( @inject(ILogger) logger: ILogger ) { ... }
  * </code>
  */
 export class InjectableLoggerExtension implements IExtension {

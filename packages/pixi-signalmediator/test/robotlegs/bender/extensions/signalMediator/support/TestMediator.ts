@@ -8,14 +8,12 @@
 
 import { ISignal } from "@robotlegsjs/signals";
 
-import { EventDispatcher } from "@robotlegsjs/core";
-
-import { EventMap } from "@robotlegsjs/core/lib/robotlegs/bender/extensions/localEventMap/impl/EventMap";
+import { EventDispatcher, EventMap } from "@robotlegsjs/core";
 
 import { SignalMediator } from "../../../../../../src/robotlegs/bender/extensions/signalMediator/impl/SignalMediator";
 
 export class TestMediator extends SignalMediator<EventDispatcher> {
-    constructor() {
+    public constructor() {
         super();
 
         this.eventMap = new EventMap();

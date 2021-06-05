@@ -41,7 +41,11 @@ export class MediatorMapper implements IMediatorMapper, IMediatorUnmapper {
     /**
      * @private
      */
-    constructor(typeFilter: ITypeFilter, handler: AbstractMediatorHandler, logger?: ILogger) {
+    public constructor(
+        typeFilter: ITypeFilter,
+        handler: AbstractMediatorHandler,
+        logger?: ILogger
+    ) {
         this._typeFilter = typeFilter;
         this._handler = handler;
         this._logger = logger;

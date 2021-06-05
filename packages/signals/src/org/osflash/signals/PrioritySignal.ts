@@ -29,7 +29,7 @@ export class PrioritySignal extends Signal implements IPrioritySignal {
         return this.registerListenerWithPriority(listener, true, priority);
     }
 
-    /* override*/
+    /* override */
     protected registerListener(listener: Function, once: boolean = false): ISlot {
         return this.registerListenerWithPriority(listener, once);
     }

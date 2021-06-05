@@ -16,6 +16,7 @@ import { DisplayObject, utils } from "pixi.js";
 import EventEmitter = utils.EventEmitter;
 import { IEvent } from "@robotlegsjs/core";
 
+// eslint-disable-next-line @rushstack/typedef-var
 const EventDispatcherMixin = {
     addEventListener(
         this: EventEmitter,

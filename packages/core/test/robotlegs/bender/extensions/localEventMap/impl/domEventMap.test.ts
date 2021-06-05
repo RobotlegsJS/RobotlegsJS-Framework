@@ -23,21 +23,6 @@ describe("DomEventMap", () => {
     let listenerExecuted: boolean = false;
     let listenerExecutedCount: number = 0;
 
-    beforeEach(() => {
-        eventDispatcher = window;
-        eventMap = new EventMap();
-    });
-
-    afterEach(() => {
-        resetListenerExecuted();
-        resetListenerExecutedCount();
-
-        eventMap.unmapAllListeners();
-
-        eventDispatcher = null;
-        eventMap = null;
-    });
-
     function createDomEvemt(eventInterface: string, eventType: string): Event {
         let event: Event = document.createEvent(eventInterface);
         event.initEvent(eventType, true, true);
@@ -59,6 +44,21 @@ describe("DomEventMap", () => {
     function resetListenerExecutedCount(): void {
         listenerExecutedCount = 0;
     }
+
+    beforeEach(() => {
+        eventDispatcher = window;
+        eventMap = new EventMap();
+    });
+
+    afterEach(() => {
+        resetListenerExecuted();
+        resetListenerExecutedCount();
+
+        eventMap.unmapAllListeners();
+
+        eventDispatcher = null;
+        eventMap = null;
+    });
 
     it("listener_mapped_is_triggered_by_plain_event", () => {
         eventMap.mapDomListener(eventDispatcher, STARTED, listener);

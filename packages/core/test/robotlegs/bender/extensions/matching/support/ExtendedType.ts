@@ -10,7 +10,7 @@ import { BaseType } from "./BaseType";
 export class ExtendedType extends BaseType {
     private _data: number;
 
-    constructor(content: string, data: number) {
+    public constructor(content: string, data: number) {
         super(content);
         this._data = data;
     }

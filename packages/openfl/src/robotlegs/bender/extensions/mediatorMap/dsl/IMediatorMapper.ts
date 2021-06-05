@@ -15,6 +15,7 @@ import { IMediatorConfigurator } from "./IMediatorConfigurator";
 export interface IMediatorMapper {
     /**
      * Maps a matcher to a concrete Mediator class
+     *
      * @param mediatorClass The concrete mediator class
      * @return Mapping configurator
      */

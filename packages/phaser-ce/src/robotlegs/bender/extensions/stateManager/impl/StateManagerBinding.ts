@@ -57,7 +57,7 @@ export class StateManagerBinding extends EventDispatcher {
     /**
      * @private
      */
-    constructor(stateManager: Phaser.StateManager) {
+    public constructor(stateManager: Phaser.StateManager) {
         super();
         this._stateManager = stateManager;
     }

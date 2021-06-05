@@ -6,7 +6,7 @@
 // ------------------------------------------------------------------------------
 
 export class LogParams {
-    constructor(
+    public constructor(
         public source: any,
         public level: number,
         public timestamp: number,

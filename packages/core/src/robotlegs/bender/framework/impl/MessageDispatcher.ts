@@ -24,6 +24,7 @@ export class MessageDispatcher {
 
     /**
      * Registers a message handler with a MessageDispatcher.
+     *
      * @param message The interesting message
      * @param handler The handler function
      */
@@ -40,6 +41,7 @@ export class MessageDispatcher {
 
     /**
      * Checks whether the MessageDispatcher has any handlers registered for a specific message.
+     *
      * @param message The interesting message
      * @return A value of true if a handler of the specified message is registered; false otherwise.
      */
@@ -49,6 +51,7 @@ export class MessageDispatcher {
 
     /**
      * Removes a message handler from a MessageDispatcher
+     *
      * @param message The interesting message
      * @param handler The handler function
      */
@@ -65,6 +68,7 @@ export class MessageDispatcher {
 
     /**
      * Dispatches a message into the message flow.
+     *
      * @param message The interesting message
      * @param callback The completion callback function
      * @param reverse Should handlers be called in reverse order
