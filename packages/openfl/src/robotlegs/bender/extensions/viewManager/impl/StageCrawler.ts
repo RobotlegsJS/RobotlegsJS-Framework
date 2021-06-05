@@ -29,7 +29,7 @@ export class StageCrawler {
     /**
      * @private
      */
-    constructor(containerBinding: ContainerBinding) {
+    public constructor(containerBinding: ContainerBinding) {
         this._binding = containerBinding;
     }
 

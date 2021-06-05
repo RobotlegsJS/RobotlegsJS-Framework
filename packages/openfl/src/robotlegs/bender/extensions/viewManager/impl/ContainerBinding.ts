@@ -61,7 +61,7 @@ export class ContainerBinding extends EventDispatcher {
     /**
      * @private
      */
-    constructor(container: DisplayObjectContainer) {
+    public constructor(container: DisplayObjectContainer) {
         super();
         this._container = container;
     }

@@ -16,7 +16,7 @@ import Event from "openfl/events/Event";
 export class ConvertToEventDispatcher implements IEventDispatcher {
     private _openflEventDispatcher: EventDispatcher;
 
-    constructor(openflEventDispatcher: EventDispatcher) {
+    public constructor(openflEventDispatcher: EventDispatcher) {
         this._openflEventDispatcher = openflEventDispatcher;
     }
 

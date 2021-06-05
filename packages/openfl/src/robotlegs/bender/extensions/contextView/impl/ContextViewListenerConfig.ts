@@ -30,7 +30,7 @@ export class ContextViewListenerConfig implements IConfig {
     /* Public Functions                                                           */
     /*============================================================================*/
 
-    constructor(
+    public constructor(
         @inject(IContextView) contextView: IContextView,
         @inject(IViewManager) viewManager: IViewManager
     ) {

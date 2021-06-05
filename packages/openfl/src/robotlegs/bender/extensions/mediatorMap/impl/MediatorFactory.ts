@@ -40,7 +40,7 @@ export class MediatorFactory {
     /**
      * @private
      */
-    constructor(injector: IInjector, manager?: MediatorManager) {
+    public constructor(injector: IInjector, manager?: MediatorManager) {
         this._injector = injector;
         this._manager = manager || new MediatorManager(this);
     }

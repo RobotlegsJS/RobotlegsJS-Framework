@@ -55,7 +55,7 @@ export class ViewManager extends EventDispatcher implements IViewManager {
     /**
      * @private
      */
-    constructor(@inject(ContainerRegistry) containerRegistry: ContainerRegistry) {
+    public constructor(@inject(ContainerRegistry) containerRegistry: ContainerRegistry) {
         super();
         this._registry = containerRegistry;
     }

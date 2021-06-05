@@ -48,7 +48,7 @@ export class ContainerRegistryEvent extends Event {
      * @param type The event type
      * @param container The container associated with this event
      */
-    constructor(type: string, container: DisplayObjectContainer) {
+    public constructor(type: string, container: DisplayObjectContainer) {
         super(type);
         this._container = container;
     }

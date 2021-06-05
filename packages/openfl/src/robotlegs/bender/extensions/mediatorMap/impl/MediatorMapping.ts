@@ -70,7 +70,7 @@ export class MediatorMapping implements IMediatorMapping, IMediatorConfigurator 
     /**
      * @private
      */
-    constructor(matcher: ITypeFilter, mediatorClass: IClass<any>) {
+    public constructor(matcher: ITypeFilter, mediatorClass: IClass<any>) {
         this._matcher = matcher;
         this._mediatorClass = mediatorClass;
     }
