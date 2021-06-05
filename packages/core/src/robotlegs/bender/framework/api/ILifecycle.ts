@@ -62,24 +62,28 @@ export interface ILifecycle {
 
     /**
      * Initializes the lifecycle
+     *
      * @param callback Initialization callback
      */
     initialize(callback?: Function): void;
 
     /**
      * Suspends the lifecycle
+     *
      * @param callback Suspension callback
      */
     suspend(callback?: Function): void;
 
     /**
      * Resumes a suspended lifecycle
+     *
      * @param callback Resumption callback
      */
     resume(callback?: Function): void;
 
     /**
      * Destroys an active lifecycle
+     *
      * @param callback Destruction callback
      */
     destroy(callback?: Function): void;
@@ -98,6 +102,7 @@ export interface ILifecycle {
      * A handler to run during initialization
      *
      * <p>Note: The handler must be synchronous.</p>
+     *
      * @param handler Initialization handler
      * @return Self
      */
@@ -107,6 +112,7 @@ export interface ILifecycle {
      * A handler to run after initialization
      *
      * <p>Note: The handler must be synchronous.</p>
+     *
      * @param handler Post-initialize handler
      * @return Self
      */
@@ -126,6 +132,7 @@ export interface ILifecycle {
      * A handler to run during suspension
      *
      * <p>Note: The handler must be synchronous.</p>
+     *
      * @param handler Suspension handler
      * @return Self
      */
@@ -135,6 +142,7 @@ export interface ILifecycle {
      * A handler to run after suspension
      *
      * <p>Note: The handler must be synchronous.</p>
+     *
      * @param handler Post-suspend handler
      * @return Self
      */
@@ -154,6 +162,7 @@ export interface ILifecycle {
      * A handler to run during resumption
      *
      * <p>Note: The handler must be synchronous.</p>
+     *
      * @param handler Resumption handler
      * @return Self
      */
@@ -163,6 +172,7 @@ export interface ILifecycle {
      * A handler to run after resumption
      *
      * <p>Note: The handler must be synchronous.</p>
+     *
      * @param handler Post-resume handler
      * @return Self
      */
@@ -182,6 +192,7 @@ export interface ILifecycle {
      * A handler to run during destruction
      *
      * <p>Note: The handler must be synchronous.</p>
+     *
      * @param handler Destruction handler
      * @return Self
      */
@@ -191,6 +202,7 @@ export interface ILifecycle {
      * A handler to run after destruction
      *
      * <p>Note: The handler must be synchronous.</p>
+     *
      * @param handler Post-destroy handler
      * @return Self
      */

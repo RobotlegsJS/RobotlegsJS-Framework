@@ -80,6 +80,7 @@ export interface IContext extends IEventDispatcher {
 
     /**
      * Installs custom extensions or bundles into the context
+     *
      * @param extensions Objects or classes implementing IExtension or IBundle
      * @return this
      */
@@ -89,6 +90,7 @@ export interface IContext extends IEventDispatcher {
 
     /**
      * Configures the context with custom configurations
+     *
      * @param configs Configuration objects or classes of any type
      * @return this
      */
@@ -106,6 +108,7 @@ export interface IContext extends IEventDispatcher {
 
     /**
      * Removes a child context from this context
+     *
      * @param child The child context to remove
      * @return this
      */
@@ -113,6 +116,7 @@ export interface IContext extends IEventDispatcher {
 
     /**
      * Adds a custom configuration handler
+     *
      * @param matcher Pattern to match configurations
      * @param handler Handler to process matching configurations
      * @return this
@@ -121,6 +125,7 @@ export interface IContext extends IEventDispatcher {
 
     /**
      * Retrieves a logger for a given source
+     *
      * @param source Logging source
      * @return Logger
      */
@@ -128,6 +133,7 @@ export interface IContext extends IEventDispatcher {
 
     /**
      * Adds a custom log target
+     *
      * @param target Log target
      * @return this
      */
@@ -135,6 +141,7 @@ export interface IContext extends IEventDispatcher {
 
     /**
      * Pins instances in memory
+     *
      * @param instances Instances to pin
      * @return this
      */
@@ -142,6 +149,7 @@ export interface IContext extends IEventDispatcher {
 
     /**
      * Unpins instances from memory
+     *
      * @param instances Instances to unpin
      * @return this
      */
@@ -149,24 +157,28 @@ export interface IContext extends IEventDispatcher {
 
     /**
      * Initializes this context
+     *
      * @param callback Initialization callback
      */
     initialize(callback?: Function): void;
 
     /**
      * Suspends this context
+     *
      * @param callback Suspension callback
      */
     suspend(callback?: Function): void;
 
     /**
      * Resumes a suspended context
+     *
      * @param callback Resumption callback
      */
     resume(callback?: Function): void;
 
     /**
      * Destroys an active context
+     *
      * @param callback Destruction callback
      */
     destroy(callback?: Function): void;
@@ -185,6 +197,7 @@ export interface IContext extends IEventDispatcher {
      * A handler to run during initialization
      *
      * <p>Note: The handler must be synchronous.</p>
+     *
      * @param handler Initialization handler
      * @return this
      */
@@ -194,6 +207,7 @@ export interface IContext extends IEventDispatcher {
      * A handler to run after initialization
      *
      * <p>Note: The handler must be synchronous.</p>
+     *
      * @param handler Post-initialize handler
      * @return this
      */
@@ -213,6 +227,7 @@ export interface IContext extends IEventDispatcher {
      * A handler to run during suspension
      *
      * <p>Note: The handler must be synchronous.</p>
+     *
      * @param handler Suspension handler
      * @return this
      */
@@ -222,6 +237,7 @@ export interface IContext extends IEventDispatcher {
      * A handler to run after suspension
      *
      * <p>Note: The handler must be synchronous.</p>
+     *
      * @param handler Post-suspend handler
      * @return this
      */
@@ -241,6 +257,7 @@ export interface IContext extends IEventDispatcher {
      * A handler to run during resumption
      *
      * <p>Note: The handler must be synchronous.</p>
+     *
      * @param handler Resumption handler
      * @return this
      */
@@ -250,6 +267,7 @@ export interface IContext extends IEventDispatcher {
      * A handler to run after resumption
      *
      * <p>Note: The handler must be synchronous.</p>
+     *
      * @param handler Post-resume handler
      * @return Self
      */
@@ -269,6 +287,7 @@ export interface IContext extends IEventDispatcher {
      * A handler to run during destruction
      *
      * <p>Note: The handler must be synchronous.</p>
+     *
      * @param handler Destruction handler
      * @return this
      */
@@ -278,6 +297,7 @@ export interface IContext extends IEventDispatcher {
      * A handler to run after destruction
      *
      * <p>Note: The handler must be synchronous.</p>
+     *
      * @param handler Post-destroy handler
      * @return this
      */

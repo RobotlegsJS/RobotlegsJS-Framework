@@ -119,6 +119,7 @@ export class Lifecycle implements ILifecycle {
 
     /**
      * Creates a lifecycle for a given target object
+     *
      * @param target The target object
      */
     public constructor(target: IEventDispatcher) {
