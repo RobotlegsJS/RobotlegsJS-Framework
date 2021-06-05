@@ -9,7 +9,7 @@ import { injectable } from "@robotlegsjs/core";
 
 @injectable()
 export class TargetSignal extends Phaser.Signal {
-    constructor() {
+    public constructor() {
         super();
     }
 }

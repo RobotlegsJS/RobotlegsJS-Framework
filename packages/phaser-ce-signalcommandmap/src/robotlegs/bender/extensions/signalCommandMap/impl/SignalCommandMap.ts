@@ -41,7 +41,7 @@ export class SignalCommandMap implements ISignalCommandMap {
     /**
      * @private
      */
-    constructor(@inject(IContext) context: IContext) {
+    public constructor(@inject(IContext) context: IContext) {
         this._injector = context.injector;
         this._triggerMap = new CommandTriggerMap(this.getKey, this.createTrigger.bind(this));
     }
