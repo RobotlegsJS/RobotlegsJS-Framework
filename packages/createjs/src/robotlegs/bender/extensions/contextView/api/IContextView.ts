@@ -5,7 +5,7 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-export let IContextView = Symbol("IContextView");
+export const IContextView = Symbol("IContextView");
 export interface IContextView {
     view: createjs.Stage;
 }
