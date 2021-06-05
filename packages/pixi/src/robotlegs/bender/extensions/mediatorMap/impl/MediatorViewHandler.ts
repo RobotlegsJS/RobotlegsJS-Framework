@@ -38,7 +38,7 @@ export class MediatorViewHandler implements IViewHandler {
     /**
      * @private
      */
-    constructor(factory: MediatorFactory) {
+    public constructor(factory: MediatorFactory) {
         this._factory = factory;
     }
 

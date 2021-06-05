@@ -30,7 +30,7 @@ export class StageObserver {
     /**
      * @private
      */
-    constructor(containerRegistry: ContainerRegistry) {
+    public constructor(containerRegistry: ContainerRegistry) {
         this._registry = containerRegistry;
 
         // We only care about roots

@@ -27,7 +27,7 @@ export class MediatorManager {
     /**
      * @private
      */
-    constructor(factory: MediatorFactory) {
+    public constructor(factory: MediatorFactory) {
         this._factory = factory;
     }
 
