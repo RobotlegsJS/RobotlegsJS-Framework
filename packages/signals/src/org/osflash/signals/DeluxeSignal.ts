@@ -13,7 +13,8 @@ import { IEvent } from "./events/IEvent";
  * Allows the valueClasses to be set in MXML, e.g.
  * <signals:Signal id="nameChanged">{[String, uint]}</signals:Signal>
  */
-/* [DefaultProperty("valueClasses")]*/
+// [DefaultProperty("valueClasses")]
+
 /**
  * Signal dispatches events to multiple listeners.
  * It is inspired by C# events and delegates, and by
