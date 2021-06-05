@@ -78,7 +78,7 @@ export class SignalCommandTrigger implements ICommandTrigger {
             this._injector.bind(this._signalClass).to(this._signalClass).inSingletonScope();
         }
         this._signal = this._injector.get<ISignal>(this._signalClass);
-        this._signal.add(this.routePayloadToCommands);
+        this._signal.add(this._routePayloadToCommands);
     }
 
     /**
@@ -86,7 +86,7 @@ export class SignalCommandTrigger implements ICommandTrigger {
      */
     public deactivate(): void {
         if (this._signal) {
-            this._signal.remove(this.routePayloadToCommands);
+            this._signal.remove(this._routePayloadToCommands);
         }
     }
 
@@ -98,7 +98,7 @@ export class SignalCommandTrigger implements ICommandTrigger {
     /* Private Functions                                                          */
     /*============================================================================*/
 
-    private routePayloadToCommands = (...valueObjects: any[]): void => {
+    private _routePayloadToCommands = (...valueObjects: any[]): void => {
         let valueClasses: any[] = this._signal.valueClasses;
 
         let payload: CommandPayload = new CommandPayload(valueObjects, valueClasses);
