@@ -41,7 +41,10 @@ export abstract class AbstractMacro extends AsyncCommand implements IMacro {
     protected _commandPayloads: ISubCommandPayload<any>[] = [];
     protected _commandPayloadsModule: ContainerModule;
 
-    constructor(@inject(IContext) context: IContext, @inject(IInjector) injector: IInjector) {
+    public constructor(
+        @inject(IContext) context: IContext,
+        @inject(IInjector) injector: IInjector
+    ) {
         super(context);
 
         this._injector = injector.createChild();

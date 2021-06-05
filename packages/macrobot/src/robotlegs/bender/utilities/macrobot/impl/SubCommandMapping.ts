@@ -20,7 +20,7 @@ export class SubCommandMapping implements ISubCommandMapping, ISubCommandConfigu
     private _payloads: ISubCommandPayload<any>[] = [];
     private _hooks: any[] = [];
 
-    constructor(commandClass: IClass<ICommand>) {
+    public constructor(commandClass: IClass<ICommand>) {
         this._commandClass = commandClass;
     }
 
