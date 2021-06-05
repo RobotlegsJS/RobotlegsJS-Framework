@@ -134,23 +134,17 @@ export class ConfigManager {
     }
 
     private _processQueue(): void {
-        for (let i in this._queue) {
-            if (this._queue.hasOwnProperty(i)) {
-                let config: any = this._queue[i];
-                if (typeof config === "function") {
-                    // instanceof Class
-                    this._logger.debug("Now initializing. Instantiating config class {0}", [
-                        config
-                    ]);
-                    this._processClass(config);
-                } else {
-                    this._logger.debug("Now initializing. Injecting into config object {0}", [
-                        config
-                    ]);
-                    this._processObject(config);
-                }
+        this._queue.forEach((config) => {
+            if (typeof config === "function") {
+                // instanceof Class
+                this._logger.debug("Now initializing. Instantiating config class {0}", [config]);
+                this._processClass(config);
+            } else {
+                this._logger.debug("Now initializing. Injecting into config object {0}", [config]);
+                this._processObject(config);
             }
-        }
+        });
+
         this._queue.length = 0;
     }
 
