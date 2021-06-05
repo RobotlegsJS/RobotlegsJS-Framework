@@ -11,6 +11,7 @@
 
 import { Container, DisplayObject } from "pixi.js";
 
+// eslint-disable-next-line @rushstack/typedef-var
 const ContainerMixin = {
     /**
      * Determines whether the specified child object is a child of the Container instance or the instance itself.
