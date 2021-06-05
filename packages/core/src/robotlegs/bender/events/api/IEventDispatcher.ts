@@ -29,7 +29,7 @@
 
 import { IEvent } from "./IEvent";
 
-export let IEventDispatcher = Symbol("IEventDispatcher");
+export const IEventDispatcher = Symbol("IEventDispatcher");
 
 /**
  * The IEventDispatcher interface defines methods for adding or removing event listeners, checks whether specific types

@@ -14,7 +14,7 @@ import { IEventDispatcher } from "../../../events/api/IEventDispatcher";
  * The Event Map keeps track of listeners and provides the ability
  * to unregister all listeners with a single method call.
  */
-export let IEventMap = Symbol("IEventMap");
+export const IEventMap = Symbol("IEventMap");
 export interface IEventMap {
     /**
      * The same as calling <code>addEventListener</code> directly on the <code>IEventDispatcher</code>,

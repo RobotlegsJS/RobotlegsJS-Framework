@@ -14,7 +14,7 @@ import { ICommandUnmapper } from "../../commandCenter/dsl/ICommandUnmapper";
 /**
  * The Event Command Map allows you to bind Events to Commands
  */
-export let IEventCommandMap = Symbol("IEventCommandMap");
+export const IEventCommandMap = Symbol("IEventCommandMap");
 export interface IEventCommandMap {
     /**
      * Creates a mapping for an Event based trigger

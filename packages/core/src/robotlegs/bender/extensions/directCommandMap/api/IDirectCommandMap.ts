@@ -14,7 +14,7 @@ import { IDirectCommandMapper } from "./IDirectCommandMapper";
 /**
  * Maps commands for direct (manual) execution
  */
-export let IDirectCommandMap = Symbol("IDirectCommandMap");
+export const IDirectCommandMap = Symbol("IDirectCommandMap");
 export interface IDirectCommandMap extends IDirectCommandMapper {
     /**
      * Pins a command in memory

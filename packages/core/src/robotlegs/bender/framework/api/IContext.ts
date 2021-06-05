@@ -36,7 +36,7 @@ import { IClass } from "../../extensions/matching/IClass";
 /**
  * The Robotlegs context contract
  */
-export let IContext = Symbol("IContext");
+export const IContext = Symbol("IContext");
 export interface IContext extends IEventDispatcher {
     /**
      * The context dependency injector

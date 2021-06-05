@@ -8,7 +8,7 @@
 /**
  * The Robotlegs logger contract
  */
-export let ILogger = Symbol("ILogger");
+export const ILogger = Symbol("ILogger");
 export interface ILogger {
     /**
      * Source indentifier
