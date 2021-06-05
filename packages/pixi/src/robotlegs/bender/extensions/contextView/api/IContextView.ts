@@ -7,7 +7,8 @@
 
 import { Container } from "pixi.js";
 
-export let IContextView = Symbol("IContextView");
+// eslint-disable-next-line @rushstack/typedef-var
+export const IContextView = Symbol("IContextView");
 export interface IContextView {
     view: Container;
 }
