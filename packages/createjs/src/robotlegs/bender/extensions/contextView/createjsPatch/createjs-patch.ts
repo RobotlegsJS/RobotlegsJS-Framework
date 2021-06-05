@@ -38,7 +38,7 @@ function emitRemovedEvent(stage: createjs.Stage, target: createjs.DisplayObject)
     }
 }
 
-export function applyCreateJSPatch(stage: createjs.Stage) {
+export function applyCreateJSPatch(stage: createjs.Stage): void {
     let addChild = createjs.Container.prototype.addChild;
     let addChildAt = createjs.Container.prototype.addChildAt;
     let removeChild = createjs.Container.prototype.removeChild;
