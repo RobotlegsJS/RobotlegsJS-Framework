@@ -227,7 +227,7 @@ export class EventDispatcher implements IEventDispatcher {
      *
      * @param useCapture
      */
-    private _getEventMap(useCapture?: boolean) {
+    private _getEventMap(useCapture?: boolean): any {
         let values = this._eventDispatcher;
         let eventMap: any = useCapture ? values[Keys.captureEventsMap] : values[Keys.eventsMap];
         return eventMap;
