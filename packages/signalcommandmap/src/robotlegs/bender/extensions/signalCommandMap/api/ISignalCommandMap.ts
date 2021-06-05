@@ -18,6 +18,7 @@ export const ISignalCommandMap = Symbol("ISignalCommandMap");
 export interface ISignalCommandMap {
     /**
      * Creates a mapping for a Signal based trigger
+     *
      * @param signalClass The concrete Signal class
      * @return Command mapper
      */
@@ -25,6 +26,7 @@ export interface ISignalCommandMap {
 
     /**
      * Unmaps a Signal based trigger from a command
+     *
      * @param signalClass The concrete Signal class
      * @return Command unmapper
      */
@@ -32,6 +34,7 @@ export interface ISignalCommandMap {
 
     /**
      * Adds a handler to process mappings
+     *
      * @param handler Function that accepts a mapping
      * @return Self
      */
