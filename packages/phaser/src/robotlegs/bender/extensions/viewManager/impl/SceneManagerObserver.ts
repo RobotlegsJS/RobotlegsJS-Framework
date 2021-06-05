@@ -22,7 +22,7 @@ export class SceneManagerObserver {
     /**
      * @private
      */
-    constructor(sceneRegistry: SceneRegistry) {
+    public constructor(sceneRegistry: SceneRegistry) {
         this._registry = sceneRegistry;
 
         // We only care about roots

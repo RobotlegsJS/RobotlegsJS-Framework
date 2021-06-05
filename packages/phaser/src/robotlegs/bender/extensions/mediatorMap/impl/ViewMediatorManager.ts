@@ -33,7 +33,7 @@ export class ViewMediatorManager implements IMediatorManager {
     /**
      * @private
      */
-    constructor(factory: ViewMediatorFactory) {
+    public constructor(factory: ViewMediatorFactory) {
         this._factory = factory;
     }
 

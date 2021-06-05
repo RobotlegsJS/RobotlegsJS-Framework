@@ -59,7 +59,7 @@ export class SceneManagerBinding extends EventDispatcher {
     /**
      * @private
      */
-    constructor(sceneManager: Phaser.Scenes.SceneManager) {
+    public constructor(sceneManager: Phaser.Scenes.SceneManager) {
         super();
         this._sceneManager = sceneManager;
     }

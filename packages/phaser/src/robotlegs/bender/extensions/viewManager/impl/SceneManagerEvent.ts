@@ -73,7 +73,7 @@ export class SceneManagerEvent extends Event {
      * @param sceneHandler The scene handler associated with this event
      * @param viewHandler The view handler associated with this event
      */
-    constructor(
+    public constructor(
         type: string,
         sceneManager?: Phaser.Scenes.SceneManager,
         sceneHandler?: ISceneHandler,

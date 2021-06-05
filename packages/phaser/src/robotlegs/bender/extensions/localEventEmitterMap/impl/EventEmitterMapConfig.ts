@@ -81,7 +81,7 @@ export class EventEmitterMapConfig {
     /**
      * @private
      */
-    constructor(
+    public constructor(
         emitter: Phaser.Events.EventEmitter,
         event: string | symbol,
         listener: Function,

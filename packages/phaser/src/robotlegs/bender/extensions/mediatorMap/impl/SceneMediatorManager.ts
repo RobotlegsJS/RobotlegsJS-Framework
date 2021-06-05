@@ -33,7 +33,7 @@ export class SceneMediatorManager implements IMediatorManager {
     /**
      * @private
      */
-    constructor(factory: SceneMediatorFactory) {
+    public constructor(factory: SceneMediatorFactory) {
         this._factory = factory;
     }
 

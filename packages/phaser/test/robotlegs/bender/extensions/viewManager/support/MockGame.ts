@@ -6,7 +6,7 @@
 // ------------------------------------------------------------------------------
 
 export class MockGame extends Phaser.Game {
-    constructor() {
+    public constructor() {
         super({
             type: Phaser.CANVAS,
             width: 600,

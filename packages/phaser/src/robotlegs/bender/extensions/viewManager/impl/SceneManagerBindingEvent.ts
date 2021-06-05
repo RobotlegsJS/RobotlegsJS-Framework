@@ -24,7 +24,7 @@ export class SceneManagerBindingEvent extends Event {
     /**
      * @private
      */
-    constructor(type: string) {
+    public constructor(type: string) {
         super(type);
     }
 

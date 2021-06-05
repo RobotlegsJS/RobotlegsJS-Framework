@@ -52,7 +52,7 @@ export class SceneMediatorMap implements ISceneMediatorMap, ISceneHandler {
     /**
      * @private
      */
-    constructor(@inject(IContext) context: IContext) {
+    public constructor(@inject(IContext) context: IContext) {
         this._logger = context.getLogger(this);
         this._factory = new SceneMediatorFactory(context.injector);
         this._sceneHandler = new SceneMediatorHandler(this._factory);

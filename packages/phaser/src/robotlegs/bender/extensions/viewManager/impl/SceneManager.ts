@@ -49,7 +49,7 @@ export class SceneManager extends EventDispatcher implements ISceneManager {
     /**
      * @private
      */
-    constructor(sceneRegistry: SceneRegistry) {
+    public constructor(sceneRegistry: SceneRegistry) {
         super();
         this._registry = sceneRegistry;
     }

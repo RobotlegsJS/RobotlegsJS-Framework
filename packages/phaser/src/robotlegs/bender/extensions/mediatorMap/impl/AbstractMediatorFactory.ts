@@ -39,7 +39,7 @@ export abstract class AbstractMediatorFactory {
     /**
      * @private
      */
-    constructor(injector: IInjector) {
+    public constructor(injector: IInjector) {
         this._injector = injector;
     }
 

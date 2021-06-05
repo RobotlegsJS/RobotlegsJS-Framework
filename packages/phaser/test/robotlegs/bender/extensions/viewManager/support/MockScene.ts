@@ -12,7 +12,7 @@ export class MockScene extends Phaser.Scene {
 
     public view: MockView;
 
-    constructor(sceneId: string) {
+    public constructor(sceneId: string) {
         super({ key: sceneId });
 
         this.sceneId = sceneId;
