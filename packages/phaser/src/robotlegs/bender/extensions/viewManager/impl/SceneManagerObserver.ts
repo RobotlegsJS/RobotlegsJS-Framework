@@ -98,11 +98,14 @@ export class SceneManagerObserver {
         }
     }
 
-    private _patchGameObjectFactoryAddExistingMethod(sceneManager: Phaser.Scenes.SceneManager) {
+    private _patchGameObjectFactoryAddExistingMethod(
+        sceneManager: Phaser.Scenes.SceneManager
+    ): void {
         const originalMethod = Phaser.GameObjects.GameObjectFactory.prototype.existing;
 
         const self = this;
 
+        // eslint-disable-next-line @typescript-eslint/typedef
         Phaser.GameObjects.GameObjectFactory.prototype.existing = function (child) {
             if (child instanceof Phaser.GameObjects.Container) {
                 let binding: SceneManagerBinding = self._registry.getBinding(sceneManager);
