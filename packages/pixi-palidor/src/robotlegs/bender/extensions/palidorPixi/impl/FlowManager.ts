@@ -35,7 +35,7 @@ export class FlowManager implements IFlowManager {
         return this._views;
     }
 
-    constructor(
+    public constructor(
         @inject(IEventMap) eventMap: IEventMap,
         @inject(IContainerController) controller: IContainerController,
         @inject(IEventDispatcher) eventDispatcher: IEventDispatcher
