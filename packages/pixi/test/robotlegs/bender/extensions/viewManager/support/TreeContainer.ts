@@ -21,10 +21,10 @@ export class TreeContainer extends Sprite {
         this._treeDepth = treeDetpth;
         this._treeWidth = treeWidth;
 
-        this.populate();
+        this._populate();
     }
 
-    private populate(): void {
+    private _populate(): void {
         if (this._treeDepth > 0) {
             for (let i: number = 0; i < this._treeWidth; i++) {
                 let child: TreeContainer = new TreeContainer(this._treeDepth - 1, this._treeWidth);
