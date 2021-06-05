@@ -7,7 +7,8 @@
 
 import { Container } from "pixi.js";
 
-export let IContainerController = Symbol("IContainerController");
+// eslint-disable-next-line @rushstack/typedef-var
+export const IContainerController = Symbol("IContainerController");
 export interface IContainerController {
     addView(view: Container): void;
 
