@@ -83,7 +83,7 @@ export class EventEmitterMapConfig {
     /**
      * @private
      */
-    constructor(
+    public constructor(
         emitter: EventEmitter,
         event: string | symbol,
         listener: EventEmitter.ListenerFn,
