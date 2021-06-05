@@ -9,6 +9,7 @@ import { Event } from "@robotlegsjs/core";
 
 /**
  * Scene Configuration Event
+ *
  * @private
  */
 export class ConfigureSceneEvent extends Event {
@@ -37,6 +38,7 @@ export class ConfigureSceneEvent extends Event {
 
     /**
      * Creates a scene configuration event
+     *
      * @param type The event type
      * @param scene The associated scene instance
      */

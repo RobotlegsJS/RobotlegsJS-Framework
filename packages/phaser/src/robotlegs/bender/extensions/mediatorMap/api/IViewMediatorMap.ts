@@ -19,6 +19,7 @@ export const IViewMediatorMap = Symbol("IViewMediatorMap");
 export interface IViewMediatorMap {
     /**
      * Maps a matcher that will be tested against incoming items to be handled.
+     *
      * @param matcher The type or package matcher specifying the rules for matching.
      * @return the mapper so that you can continue the mapping.
      */
@@ -27,6 +28,7 @@ export interface IViewMediatorMap {
     /**
      * Maps a Phaser.GameObjects.Container that will be tested against incoming items to be handled.
      * Under the hood this will create a TypeMatcher for this view container.
+     *
      * @param view The class or interface to be matched against.
      * @return the mapper so that you can continue the mapping.
      */
@@ -35,6 +37,7 @@ export interface IViewMediatorMap {
     /**
      * Removes a mapping that was made against a matcher.
      * No error will be thrown if there isn't a mapping to remove.
+     *
      * @param matcher The type or package matcher specifying the rules for matching.
      * @return the unmapper so that you can continue the unmapping.
      */
@@ -43,6 +46,7 @@ export interface IViewMediatorMap {
     /**
      * Removes a mapping that was made against a view.
      * No error will be thrown if there isn't a mapping to remove.
+     *
      * @param view The class or interface to be matched against.
      * @return the unmapper so that you can continue the unmapping.
      */
@@ -50,12 +54,14 @@ export interface IViewMediatorMap {
 
     /**
      * Mediates an view directly. If the view matches any mapped matchers or types then it will be mediated according to those mappings.
+     *
      * @param view The view to create mediators for.
      */
     mediate(view: IClass<Phaser.GameObjects.Container>): void;
 
     /**
      * Removes the mediators for an scene if there are any.
+     *
      * @param view The view to remove mediators for.
      */
     unmediate(view: IClass<Phaser.GameObjects.Container>): void;

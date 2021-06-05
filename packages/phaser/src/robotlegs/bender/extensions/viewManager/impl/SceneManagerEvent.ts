@@ -12,6 +12,7 @@ import { IViewHandler } from "../api/IViewHandler";
 
 /**
  * SceneManager existence event
+ *
  * @private
  */
 export class SceneManagerEvent extends Event {
@@ -68,6 +69,7 @@ export class SceneManagerEvent extends Event {
 
     /**
      * Creates a scene manager event
+     *
      * @param type The event type
      * @param sceneManager The  Phaser.Scenes.SceneManager associated with this event
      * @param sceneHandler The scene handler associated with this event

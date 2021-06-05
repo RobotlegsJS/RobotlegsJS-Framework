@@ -11,6 +11,7 @@
 export interface IMediatorConfigurator {
     /**
      * Guards to check before allowing a mediator to be created
+     *
      * @param guards Guards
      * @return Self
      */
@@ -18,6 +19,7 @@ export interface IMediatorConfigurator {
 
     /**
      * Hooks to run before a mediator is created
+     *
      * @param hooks Hooks
      * @return Self
      */
