@@ -43,7 +43,7 @@ export class SceneMediatorMap implements ISceneMediatorMap, ISceneHandler {
 
     private _sceneHandler: SceneMediatorHandler;
 
-    private NULL_UNMAPPER: IMediatorUnmapper = new NullMediatorUnmapper();
+    private _NULL_UNMAPPER: IMediatorUnmapper = new NullMediatorUnmapper();
 
     /*============================================================================*/
     /* Constructor                                                                */
@@ -89,7 +89,7 @@ export class SceneMediatorMap implements ISceneMediatorMap, ISceneHandler {
      * @inheritDoc
      */
     public unmapMatcher(matcher: ITypeMatcher): IMediatorUnmapper {
-        return this._mappers.get(matcher.createTypeFilter().descriptor) || this.NULL_UNMAPPER;
+        return this._mappers.get(matcher.createTypeFilter().descriptor) || this._NULL_UNMAPPER;
     }
 
     /**
