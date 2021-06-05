@@ -48,6 +48,7 @@ export class DirectCommandMap implements IDirectCommandMap {
 
     /**
      * Creates a Direct Command Map
+     *
      * @param context The context that owns this map
      */
     public constructor(@inject(IContext) context: IContext) {

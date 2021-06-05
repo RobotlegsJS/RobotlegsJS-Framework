@@ -14,6 +14,7 @@ import { TypeMatcher } from "./TypeMatcher";
 export interface ITypeMatcherFactory extends ITypeMatcher {
     /**
      * Creates a clone of this matcher
+     *
      * @return The clone
      */
     clone(): TypeMatcher;

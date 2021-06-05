@@ -78,6 +78,7 @@ export class TypeMatcher implements ITypeMatcher, ITypeMatcherFactory {
 
     /**
      * Locks this type matcher
+     *
      * @return
      */
     public lock(): ITypeMatcherFactory {

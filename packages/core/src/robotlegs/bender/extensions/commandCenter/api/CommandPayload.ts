@@ -49,6 +49,7 @@ export class CommandPayload {
 
     /**
      * Creates a command payload
+     *
      * @param values Optional values
      * @param classes Optional classes
      */
@@ -63,6 +64,7 @@ export class CommandPayload {
 
     /**
      * Adds an item to this payload
+     *
      * @param payloadValue The value
      * @param payloadClass The class of the value
      * @return Self
@@ -84,6 +86,7 @@ export class CommandPayload {
 
     /**
      * Does this payload have any items?
+     *
      * @return boolean
      */
     public hasPayload(): boolean {

@@ -38,6 +38,7 @@ export class CommandExecutor implements ICommandExecutor {
 
     /**
      * Creates a Command Executor
+     *
      * @param injector The Injector to use. A child injector will be created from it.
      * @param removeMapping Remove mapping handler (optional)
      * @param handleResult Result handler (optional)

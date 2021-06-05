@@ -14,6 +14,7 @@ import { CommandPayload } from "./CommandPayload";
 export interface ICommandExecutor {
     /**
      * Execute a command for a given mapping
+     *
      * @param mapping The Command Mapping
      * @param payload The Command Payload
      */
@@ -21,6 +22,7 @@ export interface ICommandExecutor {
 
     /**
      * Execute a list of commands for a given list of mappings
+     *
      * @param mappings The Command Mappings
      * @param payload The Command Payload
      */

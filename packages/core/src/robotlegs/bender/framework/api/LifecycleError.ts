@@ -24,6 +24,7 @@ export class LifecycleError extends Error {
 
     /**
      * Creates a Lifecycle Error
+     *
      * @param message The error message
      */
     public constructor(message: string) {

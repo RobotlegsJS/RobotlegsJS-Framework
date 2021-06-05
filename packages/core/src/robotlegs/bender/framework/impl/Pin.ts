@@ -39,6 +39,7 @@ export class Pin {
 
     /**
      * Pin an object in memory
+     *
      * @param instance Instance to pin
      */
     public detain(instance: any): void {
@@ -50,6 +51,7 @@ export class Pin {
 
     /**
      * Unpins an object
+     *
      * @param instance Instance to unpin
      */
     public release(instance: any): void {

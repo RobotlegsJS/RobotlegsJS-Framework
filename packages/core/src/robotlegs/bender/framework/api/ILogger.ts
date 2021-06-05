@@ -49,6 +49,7 @@ export interface ILogger {
 
     /**
      * Logs a fatal error message
+     *
      * @param message Message to log
      * @param params Message parameters
      */

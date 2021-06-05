@@ -27,6 +27,7 @@ export class ObjectProcessor {
 
     /**
      * Add a handler to process objects that match a given matcher.
+     *
      * @param matcher The matcher
      * @param handler The handler function
      */
@@ -36,6 +37,7 @@ export class ObjectProcessor {
 
     /**
      * Process an object by running it through all registered handlers
+     *
      * @param object The object instance to process.
      */
     public processObject(object: any): void {

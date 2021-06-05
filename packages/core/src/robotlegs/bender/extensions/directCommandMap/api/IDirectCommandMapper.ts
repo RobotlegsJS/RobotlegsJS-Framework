@@ -18,6 +18,7 @@ import { IDirectCommandConfigurator } from "../dsl/IDirectCommandConfigurator";
 export interface IDirectCommandMapper {
     /**
      * Creates a mapping for a command class
+     *
      * @param commandClass The concrete Command class
      * @return Mapping configurator
      */
@@ -25,6 +26,7 @@ export interface IDirectCommandMapper {
 
     /**
      * Execute the configured command(s)
+     *
      * @param payload The Command Payload
      */
     execute(payload?: CommandPayload): void;

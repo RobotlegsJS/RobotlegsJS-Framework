@@ -13,6 +13,7 @@ import { id } from "inversify";
 export class UID {
     /**
      * Generates a UID for a given source object or class
+     *
      * @param source The source object or class
      * @return Generated UID
      */

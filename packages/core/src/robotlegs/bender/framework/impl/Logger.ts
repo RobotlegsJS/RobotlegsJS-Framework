@@ -29,6 +29,7 @@ export class Logger implements ILogger {
 
     /**
      * Creates a new logger
+     *
      * @param source The log source object
      * @param target The log target
      */

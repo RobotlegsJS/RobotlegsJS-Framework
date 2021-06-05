@@ -72,6 +72,7 @@ export class CommandMapping implements ICommandMapping {
 
     /**
      * Creates a Command Mapping
+     *
      * @param commandClass The concrete Command class
      */
     public constructor(commandClass: IClass<ICommand>) {

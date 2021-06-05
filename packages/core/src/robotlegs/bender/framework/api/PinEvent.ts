@@ -38,6 +38,7 @@ export class PinEvent extends Event {
 
     /**
      * Create a Pin Event
+     *
      * @param type The event type
      * @param instance The associated instance
      */

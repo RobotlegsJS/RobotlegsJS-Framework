@@ -9,6 +9,7 @@ import { Event } from "../../../../../../src/robotlegs/bender/events/impl/Event"
 
 /**
  * Custom Event
+ *
  * @private
  */
 export class CustomEvent extends Event {
@@ -24,6 +25,7 @@ export class CustomEvent extends Event {
 
     /**
      * Creates a view configuration event
+     *
      * @param type The event type
      */
     public constructor(type: string) {

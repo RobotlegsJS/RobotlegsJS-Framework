@@ -33,6 +33,7 @@ export class EventDispatcherExtension implements IExtension {
 
     /**
      * Creates an Event Dispatcher Extension
+     *
      * @param eventDispatcher Optional IEventDispatcher instance to share
      */
     public constructor(eventDispatcher: IEventDispatcher = null) {

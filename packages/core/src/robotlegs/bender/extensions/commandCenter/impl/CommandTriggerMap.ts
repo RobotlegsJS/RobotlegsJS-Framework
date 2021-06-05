@@ -27,6 +27,7 @@ export class CommandTriggerMap {
 
     /**
      * Creates a command trigger map
+     *
      * @param keyFactory Factory function to creates keys
      * @param triggerFactory Factory function to create triggers
      */

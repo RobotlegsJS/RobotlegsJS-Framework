@@ -72,6 +72,7 @@ export class ConfigManager {
     /**
      * Process a given configuration object by running it through registered handlers.
      * <p>If the manager is not initialized the configuration will be queued.</p>
+     *
      * @param config The configuration object or class
      */
     public addConfig(config: any): void {
@@ -83,6 +84,7 @@ export class ConfigManager {
 
     /**
      * Adds a custom configuration handlers
+     *
      * @param matcher Pattern to match configuration objects
      * @param handler Handler to process matching configurations
      */

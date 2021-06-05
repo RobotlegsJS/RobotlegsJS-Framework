@@ -80,6 +80,7 @@ export class LifecycleEvent {
 
     /**
      * Creates a Lifecycle Event
+     *
      * @param type The event type
      * @param error Optional error
      */

@@ -15,6 +15,7 @@ import { ICommand } from "../api/ICommand";
 export interface ICommandUnmapper {
     /**
      * Unmaps a Command
+     *
      * @param commandClass Command to unmap
      */
     fromCommand(commandClass: IClass<ICommand>): void;

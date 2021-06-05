@@ -42,6 +42,7 @@ export class ExtensionInstaller {
 
     /**
      * Installs the supplied extension
+     *
      * @param extension An object or class implementing IExtension
      */
     public install(extension: any): void {

@@ -29,6 +29,7 @@ export class EventRelay {
 
     /**
      * Relays events from the source to the destination
+     *
      * @param source Event Dispatcher
      * @param destination Event Dispatcher
      * @param types The list of event types to relay
@@ -45,6 +46,7 @@ export class EventRelay {
 
     /**
      * Start relaying events
+     *
      * @return Self
      */
     public start(): EventRelay {
@@ -57,6 +59,7 @@ export class EventRelay {
 
     /**
      * Stop relaying events
+     *
      * @return Self
      */
     public stop(): EventRelay {
@@ -69,6 +72,7 @@ export class EventRelay {
 
     /**
      * Add a new event type to relay
+     *
      * @param eventType
      */
     public addType(eventType: string): void {
@@ -80,6 +84,7 @@ export class EventRelay {
 
     /**
      * Remove a relay event type
+     *
      * @param eventType
      */
     public removeType(eventType: string): void {

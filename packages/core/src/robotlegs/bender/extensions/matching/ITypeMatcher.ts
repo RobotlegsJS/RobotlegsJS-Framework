@@ -13,6 +13,7 @@ import { ITypeFilter } from "./ITypeFilter";
 export interface ITypeMatcher {
     /**
      * Creates a Type Filter for this Type Matcher
+     *
      * @return The Type Filter
      */
     createTypeFilter(): ITypeFilter;

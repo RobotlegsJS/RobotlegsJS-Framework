@@ -11,6 +11,7 @@
 export interface ICommandConfigurator {
     /**
      * Guards to check before allowing a command to execute
+     *
      * @param guards Guards
      * @return Self
      */
@@ -18,6 +19,7 @@ export interface ICommandConfigurator {
 
     /**
      * Hooks to run before command execution
+     *
      * @param hooks Hooks
      * @return Self
      */
@@ -25,6 +27,7 @@ export interface ICommandConfigurator {
 
     /**
      * Should this command only run once?
+     *
      * @param value Toggle
      * @return Self
      */
@@ -32,6 +35,7 @@ export interface ICommandConfigurator {
 
     /**
      * Should the payload values be injected into the command instance?
+     *
      * @param value Toggle
      * @return Self
      */

@@ -13,6 +13,7 @@ import { IDirectCommandMapper } from "../api/IDirectCommandMapper";
 export interface IDirectCommandConfigurator extends IDirectCommandMapper {
     /**
      * Guards to check before allowing a command to execute
+     *
      * @param guards Guards
      * @return Self
      */
@@ -20,6 +21,7 @@ export interface IDirectCommandConfigurator extends IDirectCommandMapper {
 
     /**
      * Hooks to run before command execution
+     *
      * @param hooks Hooks
      * @return Self
      */
@@ -27,6 +29,7 @@ export interface IDirectCommandConfigurator extends IDirectCommandMapper {
 
     /**
      * Should the payload values be injected into the command instance?
+     *
      * @param value Toggle
      * @return Self
      */

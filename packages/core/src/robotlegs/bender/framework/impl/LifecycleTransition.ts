@@ -48,6 +48,7 @@ export class LifecycleTransition {
 
     /**
      * Creates a lifecycle transition
+     *
      * @param name The name of the transition
      * @param lifecycle The associated lifecycle instance
      */
@@ -62,6 +63,7 @@ export class LifecycleTransition {
 
     /**
      * States that this transition is allowed to enter from
+     *
      * @param states Allowed states
      * @return Self
      */
@@ -74,6 +76,7 @@ export class LifecycleTransition {
 
     /**
      * The states that this transition applies
+     *
      * @param transitionState The state that the target is put into during the transition
      * @param finalState The state that the target is put into after the transition
      * @return
@@ -86,6 +89,7 @@ export class LifecycleTransition {
 
     /**
      * The events that the lifecycle will dispatch
+     *
      * @param preTransitionEvent
      * @param transitionEvent
      * @param postTransitionEvent
@@ -111,6 +115,7 @@ export class LifecycleTransition {
 
     /**
      * Reverse the dispatch order of this transition
+     *
      * @return Self
      */
     public inReverse(): LifecycleTransition {
@@ -125,6 +130,7 @@ export class LifecycleTransition {
 
     /**
      * A handler to run before the transition runs
+     *
      * @param handler Possibly asynchronous before handler
      * @return Self
      */
@@ -135,6 +141,7 @@ export class LifecycleTransition {
 
     /**
      * Attempts to enter the transition
+     *
      * @param callback Completion callback
      */
     public enter(callback?: Function): void {

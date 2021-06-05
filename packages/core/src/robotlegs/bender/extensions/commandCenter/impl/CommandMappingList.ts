@@ -47,6 +47,7 @@ export class CommandMappingList implements ICommandMappingList {
 
     /**
      * Create a command mapping list
+     *
      * @param trigger The trigger that owns this list
      * @param processors A reference to the mapping processors for this command map
      * @param logger Optional logger

@@ -11,6 +11,7 @@ import { EventMapConfig } from "../../../../../../src/robotlegs/bender/extension
 
 /**
  * Custom Event
+ *
  * @private
  */
 export class MockEventMap extends EventMap {

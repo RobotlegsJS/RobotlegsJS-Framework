@@ -18,6 +18,7 @@ export let IEventCommandMap = Symbol("IEventCommandMap");
 export interface IEventCommandMap {
     /**
      * Creates a mapping for an Event based trigger
+     *
      * @param type The Event type
      * @param eventClass The concrete Event class
      * @return Command Mapper
@@ -26,6 +27,7 @@ export interface IEventCommandMap {
 
     /**
      * Unmaps an Event based trigger from a Command
+     *
      * @param type The Event type
      * @param eventClass The concrete Event class
      * @return Command Unmapper
@@ -34,6 +36,7 @@ export interface IEventCommandMap {
 
     /**
      * Adds a handler to process mappings
+     *
      * @param handler Function that accepts a mapping
      * @return Self
      */

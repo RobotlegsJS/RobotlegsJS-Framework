@@ -14,6 +14,7 @@
 export interface IGuard {
     /**
      * Does this guard approve of this action?
+     *
      * @return Approval
      */
     approve(): boolean;
