@@ -44,7 +44,7 @@ export class SignalCommandTrigger implements ICommandTrigger {
     /**
      * @private
      */
-    constructor(
+    public constructor(
         injector: IInjector,
         signalClass: IClass<ISignal>,
         processors?: Function[],

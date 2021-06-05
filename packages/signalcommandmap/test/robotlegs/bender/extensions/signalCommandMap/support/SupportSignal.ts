@@ -11,7 +11,7 @@ import { Signal } from "@robotlegsjs/signals";
 
 @injectable()
 export class SupportSignal extends Signal {
-    constructor() {
+    public constructor() {
         super();
     }
 }

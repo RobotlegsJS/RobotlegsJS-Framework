@@ -13,7 +13,7 @@ import { Data } from "./Data";
 
 @injectable()
 export class RelaySignal extends Signal {
-    constructor() {
+    public constructor() {
         super(Data);
     }
 }

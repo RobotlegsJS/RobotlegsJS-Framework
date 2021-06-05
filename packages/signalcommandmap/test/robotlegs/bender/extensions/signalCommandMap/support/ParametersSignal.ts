@@ -11,7 +11,7 @@ import { Signal } from "@robotlegsjs/signals";
 
 @injectable()
 export class ParametersSignal extends Signal {
-    constructor() {
+    public constructor() {
         super(Boolean, Number, String, Symbol, Object, Date, Array);
     }
 }
