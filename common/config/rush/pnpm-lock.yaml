@@ -45,7 +45,7 @@ specifiers:
   glslify: ^7.1.1
   html-webpack-plugin: ^5.3.1
   imports-loader: ^3.0.0
-  inversify: ^5.0.1
+  inversify: ^5.1.1
   istanbul-instrumenter-loader: ^3.0.1
   jsdom: ^16.6.0
   jsdom-global: ^3.0.2
@@ -128,7 +128,7 @@ dependencies:
   glslify: 7.1.1
   html-webpack-plugin: 5.3.1_webpack@5.38.1
   imports-loader: 3.0.0_webpack@5.38.1
-  inversify: 5.0.1
+  inversify: 5.1.1
   istanbul-instrumenter-loader: 3.0.1_webpack@5.38.1
   jsdom: 16.6.0
   jsdom-global: 3.0.2_jsdom@16.6.0
@@ -784,7 +784,7 @@ packages:
   /@robotlegsjs/core/2.0.0:
     resolution: {integrity: sha512-yucJHS2aWoCQejV4SOKAfh61wVZXjjD2AX7fgIlYkRNErTHxtliISDla95AW5AhlpNuymTXA63afkbqqsysTyw==}
     dependencies:
-      inversify: 5.0.1
+      inversify: 5.1.1
       tslib: 1.14.1
     dev: false
 
@@ -4494,8 +4494,8 @@ packages:
       loose-envify: 1.4.0
     dev: false
 
-  /inversify/5.0.1:
-    resolution: {integrity: sha512-Ieh06s48WnEYGcqHepdsJUIJUXpwH5o5vodAX+DK2JA/gjy4EbEcQZxw+uFfzysmKjiLXGYwNG3qDZsKVMcINQ==}
+  /inversify/5.1.1:
+    resolution: {integrity: sha512-j8grHGDzv1v+8T1sAQ+3boTCntFPfvxLCkNcxB1J8qA0lUN+fAlSyYd+RXKvaPRL4AGyPxViutBEJHNXOyUdFQ==}
     dev: false
 
   /ip-regex/2.1.0:
@@ -8465,7 +8465,7 @@ packages:
     dev: false
 
   file:projects/core.tgz:
-    resolution: {integrity: sha512-qq2oqUBQI/LDp6ADEJBxuWHLrKqbBuO8NH4QHvNZXyxd2HlkWN8YzTXa/PiuqT+nPxc/lI0PLooEK9HlaMMwRg==, tarball: file:projects/core.tgz}
+    resolution: {integrity: sha512-d3tMZ/GqnFoec+subcxwXRCUm05wvZMhq00R914Vtar0Sl+lVZMEgIHKiJmD6OJYrElolZ3wOSS1oBR3sxR2ag==, tarball: file:projects/core.tgz}
     name: '@rush-temp/core'
     version: 0.0.0
     dependencies:
@@ -8489,7 +8489,7 @@ packages:
       eslint-plugin-unicorn: 33.0.1_eslint@7.28.0
       glslify: 7.1.1
       imports-loader: 3.0.0_webpack@5.38.1
-      inversify: 5.0.1
+      inversify: 5.1.1
       istanbul-instrumenter-loader: 3.0.1_webpack@5.38.1
       jsdom: 16.6.0
       jsdom-global: 3.0.2_jsdom@16.6.0
@@ -8817,7 +8817,7 @@ packages:
     dev: false
 
   file:projects/phaser-ce-signalcommandmap.tgz:
-    resolution: {integrity: sha512-dhmglOYFYdFrCZz/mvUEseYNHqPLs3Euncuf3vZA+zuHIEQp7zKUIlKqi1GoSzg8o9jUFS7SxovAXERQkikGFA==, tarball: file:projects/phaser-ce-signalcommandmap.tgz}
+    resolution: {integrity: sha512-JoNU1ynJtlsIJhx7bUmpFFLJQafoGZIfbZBSb9OG7R6xO6qRwqCfFqbmdzZsp5A761UZTuNiVr0cofD5pX5veg==, tarball: file:projects/phaser-ce-signalcommandmap.tgz}
     name: '@rush-temp/phaser-ce-signalcommandmap'
     version: 0.0.0
     dependencies:
@@ -8881,7 +8881,7 @@ packages:
     dev: false
 
   file:projects/phaser-ce.tgz:
-    resolution: {integrity: sha512-c2LUEXfCBBM84l6ZldZL4/FmuTupCJE9OysfSwZ0jPlCq4LKU5P3fYwGvjhXA2dPSUjArXxsjF5teqhEL9w6IQ==, tarball: file:projects/phaser-ce.tgz}
+    resolution: {integrity: sha512-Sz0bLsSH5mXOlU5OnjC+p7J6jiCEWN8IWBTxzQOrrbJV3lw0FwL4ukvD5z2YtRVfFqkRmijCTSnZW2vw2lurJQ==, tarball: file:projects/phaser-ce.tgz}
     name: '@rush-temp/phaser-ce'
     version: 0.0.0
     dependencies:
@@ -8949,7 +8949,7 @@ packages:
     dev: false
 
   file:projects/phaser.tgz:
-    resolution: {integrity: sha512-OicVy58y3mm0UpWzHINIqLyzt/0/fz+cz5MLX8CtKpe5e0vtygjgmxbDWj/E7FsFahWPVGefxDYwfNf7mwgSDA==, tarball: file:projects/phaser.tgz}
+    resolution: {integrity: sha512-cR5WchA8piYWOPYpQNOYuklR4KDxKV2h/R1YEKL1xjqRCnLLop6vLDBRxSk63eYQ6aG0xiWDgFxaB/qGi8pzIw==, tarball: file:projects/phaser.tgz}
     name: '@rush-temp/phaser'
     version: 0.0.0
     dependencies:
@@ -9018,7 +9018,7 @@ packages:
     dev: false
 
   file:projects/pixi-palidor.tgz:
-    resolution: {integrity: sha512-fFUpMPApdKPzE8YUDJpQlaAiY3jZRj5lO8uWYEJtv8H/PtdacBc5M2sJYaasJLtwAQIbQZ5qUNtFr1gSClmhDg==, tarball: file:projects/pixi-palidor.tgz}
+    resolution: {integrity: sha512-CiqpSQ0clnbNIJHCgQgANzT5BrMh+h9NoMJvDbNZTxHJX37NXmpNYH4193AV8RZhe2WYw4og7w5MvfcElaGhVA==, tarball: file:projects/pixi-palidor.tgz}
     name: '@rush-temp/pixi-palidor'
     version: 0.0.0
     dependencies:
@@ -9086,7 +9086,7 @@ packages:
     dev: false
 
   file:projects/pixi-signalmediator.tgz:
-    resolution: {integrity: sha512-z/XpF7xhRI0lFfRaFXkt7Bec/LY9j0RPBTdGjIXMjrP1kiRz7MlOHic1An+RgzjVKKhe7TDfwnE2YnaZPGibDw==, tarball: file:projects/pixi-signalmediator.tgz}
+    resolution: {integrity: sha512-yUbxZHszoSQLZAQA+iac6giWlckIg0B20rsjT8COPRVugimKSto41Adx0kTJzKlavYOkIhOz0qjBNYvsFl8B7Q==, tarball: file:projects/pixi-signalmediator.tgz}
     name: '@rush-temp/pixi-signalmediator'
     version: 0.0.0
     dependencies:
@@ -9155,7 +9155,7 @@ packages:
     dev: false
 
   file:projects/pixi.tgz:
-    resolution: {integrity: sha512-I97j3dYdmhAYxMn+WW6BlUlKg+iXMj4fZ88Js9YaclSHbF29lbv+6/Ie3j6R1/CnM4DkDm0aFlvsqgpLpIRPFA==, tarball: file:projects/pixi.tgz}
+    resolution: {integrity: sha512-YsyD3BNNVPPzXIvvSTpwOmLLO/WT3fIjGJpqpGOPiF2szBbwi08u7kTZ5J3eAvSyMnONqESoyoz8lRBm5kCqLg==, tarball: file:projects/pixi.tgz}
     name: '@rush-temp/pixi'
     version: 0.0.0
     dependencies:

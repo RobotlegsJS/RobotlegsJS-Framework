@@ -75,7 +75,7 @@
     "lib": "./lib"
   },
   "dependencies": {
-    "inversify": "^5.0.1",
+    "inversify": "^5.1.1",
     "tslib": "^2.2.0"
   },
   "devDependencies": {
