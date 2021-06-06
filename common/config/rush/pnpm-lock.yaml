@@ -38,7 +38,7 @@ specifiers:
   es6-symbol: ^3.1.3
   eslint: ^7.28.0
   eslint-plugin-import: ^2.23.4
-  eslint-plugin-jsdoc: ^35.1.2
+  eslint-plugin-jsdoc: ^35.1.3
   eslint-plugin-prefer-arrow: ^1.2.3
   eslint-plugin-react: ^7.24.0
   eslint-plugin-unicorn: ^33.0.1
@@ -64,7 +64,9 @@ specifiers:
   karma-webpack: ^5.0.0
   mocha: ^8.4.0
   nyc: ^15.1.0
-  phaser: ^3.22.0
+  phaser: 3.22.0
+  phaser-ce: 2.15.0
+  pixi.js: 5.2.1
   prettier: ^2.3.1
   puppeteer: ^10.0.0
   reflect-metadata: ^0.1.13
@@ -74,7 +76,7 @@ specifiers:
   sinon-chai: ^3.7.0
   source-map-support: ^0.5.19
   terser-webpack-plugin: ^5.1.3
-  ts-loader: ^9.2.2
+  ts-loader: ^9.2.3
   ts-node: ^10.0.0
   tslib: ^2.2.0
   typescript: ~4.2.4
@@ -121,7 +123,7 @@ dependencies:
   es6-symbol: 3.1.3
   eslint: 7.28.0
   eslint-plugin-import: 2.23.4_eslint@7.28.0
-  eslint-plugin-jsdoc: 35.1.2_eslint@7.28.0
+  eslint-plugin-jsdoc: 35.1.3_eslint@7.28.0
   eslint-plugin-prefer-arrow: 1.2.3_eslint@7.28.0
   eslint-plugin-react: 7.24.0_eslint@7.28.0
   eslint-plugin-unicorn: 33.0.1_eslint@7.28.0
@@ -148,6 +150,8 @@ dependencies:
   mocha: 8.4.0
   nyc: 15.1.0
   phaser: 3.22.0
+  phaser-ce: 2.15.0
+  pixi.js: 5.2.1
   prettier: 2.3.1
   puppeteer: 10.0.0
   reflect-metadata: 0.1.13
@@ -157,7 +161,7 @@ dependencies:
   sinon-chai: 3.7.0_chai@4.3.4+sinon@11.1.1
   source-map-support: 0.5.19
   terser-webpack-plugin: 5.1.3_webpack@5.38.1
-  ts-loader: 9.2.2_typescript@4.2.4+webpack@5.38.1
+  ts-loader: 9.2.3_typescript@4.2.4+webpack@5.38.1
   ts-node: 10.0.0_typescript@4.2.4
   tslib: 2.2.0
   typescript: 4.2.4
@@ -1918,7 +1922,7 @@ packages:
     engines: {node: ^6 || ^7 || ^8 || ^9 || ^10 || ^11 || ^12 || >=13.7}
     hasBin: true
     dependencies:
-      caniuse-lite: 1.0.30001234
+      caniuse-lite: 1.0.30001235
       colorette: 1.2.2
       electron-to-chromium: 1.3.749
       escalade: 3.1.1
@@ -2017,8 +2021,8 @@ packages:
     engines: {node: '>=10'}
     dev: false
 
-  /caniuse-lite/1.0.30001234:
-    resolution: {integrity: sha512-a3gjUVKkmwLdNysa1xkUAwN2VfJUJyVW47rsi3aCbkRCtbHAfo+rOsCqVw29G6coQ8gzAPb5XBXwiGHwme3isA==}
+  /caniuse-lite/1.0.30001235:
+    resolution: {integrity: sha512-zWEwIVqnzPkSAXOUlQnPW2oKoYb2aLQ4Q5ejdjBcnH63rfypaW34CxaeBn1VMya2XaEU3P/R2qHpWyj+l0BT1A==}
     dev: false
 
   /chai/4.3.4:
@@ -3078,8 +3082,8 @@ packages:
       tsconfig-paths: 3.9.0
     dev: false
 
-  /eslint-plugin-jsdoc/35.1.2_eslint@7.28.0:
-    resolution: {integrity: sha512-IPChTbaL9rWe6DCinKOpUdqsBV7r2dKEId1nweSKsjJqZp1VAQyzQJ5N6ogji2AWmrPU1jdjfHA5HIG2RaiRBA==}
+  /eslint-plugin-jsdoc/35.1.3_eslint@7.28.0:
+    resolution: {integrity: sha512-9AVpCssb7+cfEx3GJtnhJ8yLOVsHDKGMgngcfvwFBxdcOVPFhLENReL5aX1R2gNiG3psqIWFVBpSPnPQTrMZUA==}
     engines: {node: '>=12'}
     peerDependencies:
       eslint: ^6.0.0 || ^7.0.0
@@ -7713,8 +7717,8 @@ packages:
     engines: {node: '>=0.10.0'}
     dev: false
 
-  /ts-loader/9.2.2_typescript@4.2.4+webpack@5.38.1:
-    resolution: {integrity: sha512-hNIhGTQHtNKjOzR2ZtQ2OSVbXPykOae+zostf1IlHCf61Mt41GMJurKNqrYUbzHgpmj6UWRu8eBfb7q0XliV0g==}
+  /ts-loader/9.2.3_typescript@4.2.4+webpack@5.38.1:
+    resolution: {integrity: sha512-sEyWiU3JMHBL55CIeC4iqJQadI0U70A5af0kvgbNLHVNz2ACztQg0j/9x10bjjIht8WfFYLKfn4L6tkZ+pu+8Q==}
     engines: {node: '>=12.0.0'}
     peerDependencies:
       typescript: '*'
@@ -8465,7 +8469,7 @@ packages:
     dev: false
 
   file:projects/core.tgz:
-    resolution: {integrity: sha512-d3tMZ/GqnFoec+subcxwXRCUm05wvZMhq00R914Vtar0Sl+lVZMEgIHKiJmD6OJYrElolZ3wOSS1oBR3sxR2ag==, tarball: file:projects/core.tgz}
+    resolution: {integrity: sha512-5VBGNrQ/evFmsvxj8eHv/7nbiMRpG8GcvoZgjHWE9rRKYzppLhxpzVrSshfhOKomKgKJ5mWq56mxBC4+EYxGcw==, tarball: file:projects/core.tgz}
     name: '@rush-temp/core'
     version: 0.0.0
     dependencies:
@@ -8483,7 +8487,7 @@ packages:
       es6-symbol: 3.1.3
       eslint: 7.28.0
       eslint-plugin-import: 2.23.4_eslint@7.28.0
-      eslint-plugin-jsdoc: 35.1.2_eslint@7.28.0
+      eslint-plugin-jsdoc: 35.1.3_eslint@7.28.0
       eslint-plugin-prefer-arrow: 1.2.3_eslint@7.28.0
       eslint-plugin-react: 7.24.0_eslint@7.28.0
       eslint-plugin-unicorn: 33.0.1_eslint@7.28.0
@@ -8514,7 +8518,7 @@ packages:
       sinon-chai: 3.7.0_chai@4.3.4+sinon@11.1.1
       source-map-support: 0.5.19
       terser-webpack-plugin: 5.1.3_webpack@5.38.1
-      ts-loader: 9.2.2_typescript@4.2.4+webpack@5.38.1
+      ts-loader: 9.2.3_typescript@4.2.4+webpack@5.38.1
       ts-node: 10.0.0_typescript@4.2.4
       tslib: 2.2.0
       typescript: 4.2.4
@@ -8536,7 +8540,7 @@ packages:
     dev: false
 
   file:projects/createjs.tgz:
-    resolution: {integrity: sha512-aC0rBwDunNSAsbdKdTm4+zq4tLIRMyT1Xy5WpQQ44QTXtBAvw7DxN4+lVNdg1tLzNb9GlxZ7vw1BS3bVVi+gZA==, tarball: file:projects/createjs.tgz}
+    resolution: {integrity: sha512-+rrVQ6xiEHHqJ8vXtQsmhwOSo81Hny3PBSRz/Ic+q9omlAb73sPTHgTuRPLh1ZmdpZDAm/VqDcvxuoS+xL8e1g==, tarball: file:projects/createjs.tgz}
     name: '@rush-temp/createjs'
     version: 0.0.0
     dependencies:
@@ -8560,7 +8564,7 @@ packages:
       es6-symbol: 3.1.3
       eslint: 7.28.0
       eslint-plugin-import: 2.23.4_eslint@7.28.0
-      eslint-plugin-jsdoc: 35.1.2_eslint@7.28.0
+      eslint-plugin-jsdoc: 35.1.3_eslint@7.28.0
       eslint-plugin-prefer-arrow: 1.2.3_eslint@7.28.0
       eslint-plugin-react: 7.24.0_eslint@7.28.0
       eslint-plugin-unicorn: 33.0.1_eslint@7.28.0
@@ -8587,7 +8591,7 @@ packages:
       sinon: 11.1.1
       sinon-chai: 3.7.0_chai@4.3.4+sinon@11.1.1
       terser-webpack-plugin: 5.1.3_webpack@5.38.1
-      ts-loader: 9.2.2_typescript@4.2.4+webpack@5.38.1
+      ts-loader: 9.2.3_typescript@4.2.4+webpack@5.38.1
       ts-node: 10.0.0_typescript@4.2.4
       tslib: 2.2.0
       typescript: 4.2.4
@@ -8609,7 +8613,7 @@ packages:
     dev: false
 
   file:projects/eventemitter3.tgz:
-    resolution: {integrity: sha512-xZwgOKb9anSVrZWgT11U8PV1SzG/mDL4aYzstZOCZWT41+ceSDRSBjabgBZr/aXY3Gd4jHGwRKmbwN0bqDo4pw==, tarball: file:projects/eventemitter3.tgz}
+    resolution: {integrity: sha512-0NpPLfpMcxy0nX6achIQwWijUdOSWD0I9bKEZXh2gwp0YY2nlEVGG7fG5WF/jKWrhfSFX4esw+wCd95Nie29IA==, tarball: file:projects/eventemitter3.tgz}
     name: '@rush-temp/eventemitter3'
     version: 0.0.0
     dependencies:
@@ -8627,7 +8631,7 @@ packages:
       es6-symbol: 3.1.3
       eslint: 7.28.0
       eslint-plugin-import: 2.23.4_eslint@7.28.0
-      eslint-plugin-jsdoc: 35.1.2_eslint@7.28.0
+      eslint-plugin-jsdoc: 35.1.3_eslint@7.28.0
       eslint-plugin-prefer-arrow: 1.2.3_eslint@7.28.0
       eslint-plugin-react: 7.24.0_eslint@7.28.0
       eslint-plugin-unicorn: 33.0.1_eslint@7.28.0
@@ -8657,7 +8661,7 @@ packages:
       sinon-chai: 3.7.0_chai@4.3.4+sinon@11.1.1
       source-map-support: 0.5.19
       terser-webpack-plugin: 5.1.3_webpack@5.38.1
-      ts-loader: 9.2.2_typescript@4.2.4+webpack@5.38.1
+      ts-loader: 9.2.3_typescript@4.2.4+webpack@5.38.1
       ts-node: 10.0.0_typescript@4.2.4
       tslib: 2.2.0
       typescript: 4.2.4
@@ -8679,7 +8683,7 @@ packages:
     dev: false
 
   file:projects/macrobot.tgz:
-    resolution: {integrity: sha512-8mNzasVdvkdTWljuLiJumz+seTf3n4fHsnEZBwoDnmGFGEtBynxImJ8VFG6Qe+DjO5k+fxjV2DeR3Ef9zL6Vtg==, tarball: file:projects/macrobot.tgz}
+    resolution: {integrity: sha512-Dldwq5t44pI9qZ1PY3kbF9pizm+V7nIxJlmJhDXcSieDcGlgnGRXSG3nZBLtw/N38iolk+72IBkT6etHkuI9SA==, tarball: file:projects/macrobot.tgz}
     name: '@rush-temp/macrobot'
     version: 0.0.0
     dependencies:
@@ -8699,7 +8703,7 @@ packages:
       es6-symbol: 3.1.3
       eslint: 7.28.0
       eslint-plugin-import: 2.23.4_eslint@7.28.0
-      eslint-plugin-jsdoc: 35.1.2_eslint@7.28.0
+      eslint-plugin-jsdoc: 35.1.3_eslint@7.28.0
       eslint-plugin-prefer-arrow: 1.2.3_eslint@7.28.0
       eslint-plugin-react: 7.24.0_eslint@7.28.0
       eslint-plugin-unicorn: 33.0.1_eslint@7.28.0
@@ -8727,7 +8731,7 @@ packages:
       sinon-chai: 3.7.0_chai@4.3.4+sinon@11.1.1
       source-map-support: 0.5.19
       terser-webpack-plugin: 5.1.3_webpack@5.38.1
-      ts-loader: 9.2.2_typescript@4.2.4+webpack@5.38.1
+      ts-loader: 9.2.3_typescript@4.2.4+webpack@5.38.1
       ts-node: 10.0.0_typescript@4.2.4
       tslib: 2.2.0
       typescript: 4.2.4
@@ -8748,7 +8752,7 @@ packages:
     dev: false
 
   file:projects/openfl.tgz:
-    resolution: {integrity: sha512-BmyPMs1IfY2O7OVY9KDLI5aPxDPBNuT7QtEU2qQwb0G5A3jVMXenSysTEhgL0xD9FVg6iewydCOGnFSPPn8oEw==, tarball: file:projects/openfl.tgz}
+    resolution: {integrity: sha512-qlVbvUwYFLYsBoo9CRl8UmAHXauqsYhkdKC7ccn1L54V0RB3g9Wlo6/+BeqKTRDqh0oxNjUb0tm6jt8XYX4TAQ==, tarball: file:projects/openfl.tgz}
     name: '@rush-temp/openfl'
     version: 0.0.0
     dependencies:
@@ -8768,7 +8772,7 @@ packages:
       es6-symbol: 3.1.3
       eslint: 7.28.0
       eslint-plugin-import: 2.23.4_eslint@7.28.0
-      eslint-plugin-jsdoc: 35.1.2_eslint@7.28.0
+      eslint-plugin-jsdoc: 35.1.3_eslint@7.28.0
       eslint-plugin-prefer-arrow: 1.2.3_eslint@7.28.0
       eslint-plugin-react: 7.24.0_eslint@7.28.0
       eslint-plugin-unicorn: 33.0.1_eslint@7.28.0
@@ -8795,7 +8799,7 @@ packages:
       sinon: 11.1.1
       sinon-chai: 3.7.0_chai@4.3.4+sinon@11.1.1
       terser-webpack-plugin: 5.1.3_webpack@5.38.1
-      ts-loader: 9.2.2_typescript@4.2.4+webpack@5.38.1
+      ts-loader: 9.2.3_typescript@4.2.4+webpack@5.38.1
       ts-node: 10.0.0_typescript@4.2.4
       tslib: 2.2.0
       typescript: 4.2.4
@@ -8817,7 +8821,7 @@ packages:
     dev: false
 
   file:projects/phaser-ce-signalcommandmap.tgz:
-    resolution: {integrity: sha512-JoNU1ynJtlsIJhx7bUmpFFLJQafoGZIfbZBSb9OG7R6xO6qRwqCfFqbmdzZsp5A761UZTuNiVr0cofD5pX5veg==, tarball: file:projects/phaser-ce-signalcommandmap.tgz}
+    resolution: {integrity: sha512-5YjnUfdF0qsS/3lOIkEVsQjxsMO5SsUkUUkdvDGUM3UmNDKmABkt6Ld1EIEl6T0oAtocsk1H0j1v+Ir5Tim1kg==, tarball: file:projects/phaser-ce-signalcommandmap.tgz}
     name: '@rush-temp/phaser-ce-signalcommandmap'
     version: 0.0.0
     dependencies:
@@ -8834,7 +8838,7 @@ packages:
       es6-symbol: 3.1.3
       eslint: 7.28.0
       eslint-plugin-import: 2.23.4_eslint@7.28.0
-      eslint-plugin-jsdoc: 35.1.2_eslint@7.28.0
+      eslint-plugin-jsdoc: 35.1.3_eslint@7.28.0
       eslint-plugin-prefer-arrow: 1.2.3_eslint@7.28.0
       eslint-plugin-react: 7.24.0_eslint@7.28.0
       eslint-plugin-unicorn: 33.0.1_eslint@7.28.0
@@ -8860,7 +8864,7 @@ packages:
       sinon: 11.1.1
       sinon-chai: 3.7.0_chai@4.3.4+sinon@11.1.1
       terser-webpack-plugin: 5.1.3_webpack@5.38.1
-      ts-loader: 9.2.2_typescript@4.2.4+webpack@5.38.1
+      ts-loader: 9.2.3_typescript@4.2.4+webpack@5.38.1
       ts-node: 10.0.0_typescript@4.2.4
       tslib: 2.2.0
       typescript: 4.2.4
@@ -8881,7 +8885,7 @@ packages:
     dev: false
 
   file:projects/phaser-ce.tgz:
-    resolution: {integrity: sha512-Sz0bLsSH5mXOlU5OnjC+p7J6jiCEWN8IWBTxzQOrrbJV3lw0FwL4ukvD5z2YtRVfFqkRmijCTSnZW2vw2lurJQ==, tarball: file:projects/phaser-ce.tgz}
+    resolution: {integrity: sha512-CdprBpa4lj9ErmLVUmqiyRvcS9ePfZvWK0a6zNsJKKkFDXe2BzxwyedtfgZnuyVRwrDevbFSSvJ4iE3oW3d22A==, tarball: file:projects/phaser-ce.tgz}
     name: '@rush-temp/phaser-ce'
     version: 0.0.0
     dependencies:
@@ -8900,7 +8904,7 @@ packages:
       es6-symbol: 3.1.3
       eslint: 7.28.0
       eslint-plugin-import: 2.23.4_eslint@7.28.0
-      eslint-plugin-jsdoc: 35.1.2_eslint@7.28.0
+      eslint-plugin-jsdoc: 35.1.3_eslint@7.28.0
       eslint-plugin-prefer-arrow: 1.2.3_eslint@7.28.0
       eslint-plugin-react: 7.24.0_eslint@7.28.0
       eslint-plugin-unicorn: 33.0.1_eslint@7.28.0
@@ -8927,7 +8931,7 @@ packages:
       sinon: 11.1.1
       sinon-chai: 3.7.0_chai@4.3.4+sinon@11.1.1
       terser-webpack-plugin: 5.1.3_webpack@5.38.1
-      ts-loader: 9.2.2_typescript@4.2.4+webpack@5.38.1
+      ts-loader: 9.2.3_typescript@4.2.4+webpack@5.38.1
       ts-node: 10.0.0_typescript@4.2.4
       tslib: 2.2.0
       typescript: 4.2.4
@@ -8949,7 +8953,7 @@ packages:
     dev: false
 
   file:projects/phaser.tgz:
-    resolution: {integrity: sha512-cR5WchA8piYWOPYpQNOYuklR4KDxKV2h/R1YEKL1xjqRCnLLop6vLDBRxSk63eYQ6aG0xiWDgFxaB/qGi8pzIw==, tarball: file:projects/phaser.tgz}
+    resolution: {integrity: sha512-+o+5HWBHCl87CGIj9Qg0LBnCym3W4elzUm2beEktpQdfDEZ2mA0T3wyYPCn8t2KJezmiljNDXBPe+oH3Hb2WLA==, tarball: file:projects/phaser.tgz}
     name: '@rush-temp/phaser'
     version: 0.0.0
     dependencies:
@@ -8969,7 +8973,7 @@ packages:
       es6-symbol: 3.1.3
       eslint: 7.28.0
       eslint-plugin-import: 2.23.4_eslint@7.28.0
-      eslint-plugin-jsdoc: 35.1.2_eslint@7.28.0
+      eslint-plugin-jsdoc: 35.1.3_eslint@7.28.0
       eslint-plugin-prefer-arrow: 1.2.3_eslint@7.28.0
       eslint-plugin-react: 7.24.0_eslint@7.28.0
       eslint-plugin-unicorn: 33.0.1_eslint@7.28.0
@@ -8996,7 +9000,7 @@ packages:
       sinon: 11.1.1
       sinon-chai: 3.7.0_chai@4.3.4+sinon@11.1.1
       terser-webpack-plugin: 5.1.3_webpack@5.38.1
-      ts-loader: 9.2.2_typescript@4.2.4+webpack@5.38.1
+      ts-loader: 9.2.3_typescript@4.2.4+webpack@5.38.1
       ts-node: 10.0.0_typescript@4.2.4
       tslib: 2.2.0
       typescript: 4.2.4
@@ -9018,7 +9022,7 @@ packages:
     dev: false
 
   file:projects/pixi-palidor.tgz:
-    resolution: {integrity: sha512-CiqpSQ0clnbNIJHCgQgANzT5BrMh+h9NoMJvDbNZTxHJX37NXmpNYH4193AV8RZhe2WYw4og7w5MvfcElaGhVA==, tarball: file:projects/pixi-palidor.tgz}
+    resolution: {integrity: sha512-nRx4rBTGX13raLo80ZK9DHZef8QZ8BsivWHV3y168jqIs0BN02snMF1Mvt9x3b+BnQBYYndl9xMKetEnWhhM6g==, tarball: file:projects/pixi-palidor.tgz}
     name: '@rush-temp/pixi-palidor'
     version: 0.0.0
     dependencies:
@@ -9037,7 +9041,7 @@ packages:
       es6-symbol: 3.1.3
       eslint: 7.28.0
       eslint-plugin-import: 2.23.4_eslint@7.28.0
-      eslint-plugin-jsdoc: 35.1.2_eslint@7.28.0
+      eslint-plugin-jsdoc: 35.1.3_eslint@7.28.0
       eslint-plugin-prefer-arrow: 1.2.3_eslint@7.28.0
       eslint-plugin-react: 7.24.0_eslint@7.28.0
       eslint-plugin-unicorn: 33.0.1_eslint@7.28.0
@@ -9065,7 +9069,7 @@ packages:
       sinon: 11.1.1
       sinon-chai: 3.7.0_chai@4.3.4+sinon@11.1.1
       terser-webpack-plugin: 5.1.3_webpack@5.38.1
-      ts-loader: 9.2.2_typescript@4.2.4+webpack@5.38.1
+      ts-loader: 9.2.3_typescript@4.2.4+webpack@5.38.1
       ts-node: 10.0.0_typescript@4.2.4
       tslib: 2.2.0
       typescript: 4.2.4
@@ -9086,7 +9090,7 @@ packages:
     dev: false
 
   file:projects/pixi-signalmediator.tgz:
-    resolution: {integrity: sha512-yUbxZHszoSQLZAQA+iac6giWlckIg0B20rsjT8COPRVugimKSto41Adx0kTJzKlavYOkIhOz0qjBNYvsFl8B7Q==, tarball: file:projects/pixi-signalmediator.tgz}
+    resolution: {integrity: sha512-icOCO8i05Vvc3yl35YzY/HREgVIYmWOdgtuyIuAz31nIIYJ882HOAzC+LarZWRbJ3RiQ+nzo/aYuVb3W3RteqA==, tarball: file:projects/pixi-signalmediator.tgz}
     name: '@rush-temp/pixi-signalmediator'
     version: 0.0.0
     dependencies:
@@ -9104,7 +9108,7 @@ packages:
       es6-symbol: 3.1.3
       eslint: 7.28.0
       eslint-plugin-import: 2.23.4_eslint@7.28.0
-      eslint-plugin-jsdoc: 35.1.2_eslint@7.28.0
+      eslint-plugin-jsdoc: 35.1.3_eslint@7.28.0
       eslint-plugin-prefer-arrow: 1.2.3_eslint@7.28.0
       eslint-plugin-react: 7.24.0_eslint@7.28.0
       eslint-plugin-unicorn: 33.0.1_eslint@7.28.0
@@ -9134,7 +9138,7 @@ packages:
       sinon-chai: 3.7.0_chai@4.3.4+sinon@11.1.1
       source-map-support: 0.5.19
       terser-webpack-plugin: 5.1.3_webpack@5.38.1
-      ts-loader: 9.2.2_typescript@4.2.4+webpack@5.38.1
+      ts-loader: 9.2.3_typescript@4.2.4+webpack@5.38.1
       ts-node: 10.0.0_typescript@4.2.4
       tslib: 2.2.0
       typescript: 4.2.4
@@ -9155,7 +9159,7 @@ packages:
     dev: false
 
   file:projects/pixi.tgz:
-    resolution: {integrity: sha512-YsyD3BNNVPPzXIvvSTpwOmLLO/WT3fIjGJpqpGOPiF2szBbwi08u7kTZ5J3eAvSyMnONqESoyoz8lRBm5kCqLg==, tarball: file:projects/pixi.tgz}
+    resolution: {integrity: sha512-UkIQZCq5sVudhzyGivl0XLq5gju3EkuEOUp7bi7HycgWzLFLXnL2v6h+OWc9BIFFNek0HNGZhk1VVV59y3BWYQ==, tarball: file:projects/pixi.tgz}
     name: '@rush-temp/pixi'
     version: 0.0.0
     dependencies:
@@ -9174,7 +9178,7 @@ packages:
       es6-symbol: 3.1.3
       eslint: 7.28.0
       eslint-plugin-import: 2.23.4_eslint@7.28.0
-      eslint-plugin-jsdoc: 35.1.2_eslint@7.28.0
+      eslint-plugin-jsdoc: 35.1.3_eslint@7.28.0
       eslint-plugin-prefer-arrow: 1.2.3_eslint@7.28.0
       eslint-plugin-react: 7.24.0_eslint@7.28.0
       eslint-plugin-unicorn: 33.0.1_eslint@7.28.0
@@ -9201,7 +9205,7 @@ packages:
       sinon: 11.1.1
       sinon-chai: 3.7.0_chai@4.3.4+sinon@11.1.1
       terser-webpack-plugin: 5.1.3_webpack@5.38.1
-      ts-loader: 9.2.2_typescript@4.2.4+webpack@5.38.1
+      ts-loader: 9.2.3_typescript@4.2.4+webpack@5.38.1
       ts-node: 10.0.0_typescript@4.2.4
       tslib: 2.2.0
       typescript: 4.2.4
@@ -9222,7 +9226,7 @@ packages:
     dev: false
 
   file:projects/signalcommandmap.tgz:
-    resolution: {integrity: sha512-PTb3r6jTLHb0howc7zfdQrBFDVw5rAhJ1yv/TrY0g3rlDRAyyCt4+o2f18grMvER6ZkvwKM8KUOM7qEZYDVa5w==, tarball: file:projects/signalcommandmap.tgz}
+    resolution: {integrity: sha512-oqPDW1idkn1iWY2piNki9WCKo6NFIB+wFuIj5tV4ujLU6+qlaGtbKztm6acCFazxSGcU5IROSPwrgOtPOgtcIQ==, tarball: file:projects/signalcommandmap.tgz}
     name: '@rush-temp/signalcommandmap'
     version: 0.0.0
     dependencies:
@@ -9240,7 +9244,7 @@ packages:
       es6-symbol: 3.1.3
       eslint: 7.28.0
       eslint-plugin-import: 2.23.4_eslint@7.28.0
-      eslint-plugin-jsdoc: 35.1.2_eslint@7.28.0
+      eslint-plugin-jsdoc: 35.1.3_eslint@7.28.0
       eslint-plugin-prefer-arrow: 1.2.3_eslint@7.28.0
       eslint-plugin-react: 7.24.0_eslint@7.28.0
       eslint-plugin-unicorn: 33.0.1_eslint@7.28.0
@@ -9267,7 +9271,7 @@ packages:
       sinon-chai: 3.7.0_chai@4.3.4+sinon@11.1.1
       source-map-support: 0.5.19
       terser-webpack-plugin: 5.1.3_webpack@5.38.1
-      ts-loader: 9.2.2_typescript@4.2.4+webpack@5.38.1
+      ts-loader: 9.2.3_typescript@4.2.4+webpack@5.38.1
       ts-node: 10.0.0_typescript@4.2.4
       tslib: 2.2.0
       typescript: 4.2.4
@@ -9288,7 +9292,7 @@ packages:
     dev: false
 
   file:projects/signals.tgz:
-    resolution: {integrity: sha512-KHFlTXT04UEuWLo6UpK/GUi1xmedzkpGJbISPFAcr5d7cv8NDqCFZBKeAHz26PPxghXOVUDLLseqSEv2XCFf+w==, tarball: file:projects/signals.tgz}
+    resolution: {integrity: sha512-6l/O5JrQJMZ4C0mRQhGpm6h/+0eVevxyUYBSEJCxEbmmbOTOFID7CNQr2NtXRogUuKAmZou6DGxSpeIBQOJciA==, tarball: file:projects/signals.tgz}
     name: '@rush-temp/signals'
     version: 0.0.0
     dependencies:
@@ -9306,7 +9310,7 @@ packages:
       es6-symbol: 3.1.3
       eslint: 7.28.0
       eslint-plugin-import: 2.23.4_eslint@7.28.0
-      eslint-plugin-jsdoc: 35.1.2_eslint@7.28.0
+      eslint-plugin-jsdoc: 35.1.3_eslint@7.28.0
       eslint-plugin-prefer-arrow: 1.2.3_eslint@7.28.0
       eslint-plugin-react: 7.24.0_eslint@7.28.0
       eslint-plugin-unicorn: 33.0.1_eslint@7.28.0
@@ -9334,7 +9338,7 @@ packages:
       sinon-chai: 3.7.0_chai@4.3.4+sinon@11.1.1
       source-map-support: 0.5.19
       terser-webpack-plugin: 5.1.3_webpack@5.38.1
-      ts-loader: 9.2.2_typescript@4.2.4+webpack@5.38.1
+      ts-loader: 9.2.3_typescript@4.2.4+webpack@5.38.1
       ts-node: 10.0.0_typescript@4.2.4
       tslib: 2.2.0
       typescript: 4.2.4
