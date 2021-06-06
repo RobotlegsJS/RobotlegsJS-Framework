@@ -105,7 +105,7 @@ In the Second step, you must map all views that you need. Palidor works with two
 
 Palidor splits the Main Container into two distinct Layers, one to each type of View. The FloatingView always will be in a layer above the others Views.
 
-<img src="https://raw.githubusercontent.com/RobotlegsJS/RobotlegsJS-Pixi-Palidor/master/media/layers.png" />
+<img src="https://raw.githubusercontent.com/RobotlegsJS/Robotlegs/master/packages/pixi-palidor/media/layers.png" />
 
 + **View:** A View is a screen added into the Static Layer which is behind all FloatingViews. Palidor allows only one View per time and will remove the current view before to add a new View.
 

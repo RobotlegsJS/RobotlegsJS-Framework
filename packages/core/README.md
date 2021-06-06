@@ -1,4 +1,4 @@
-# RobotlegsJS <img src="https://raw.githubusercontent.com/RobotlegsJS/RobotlegsJS/master/media/robotlegs.png" width="30" height="30" />
+# RobotlegsJS <img src="https://raw.githubusercontent.com/RobotlegsJS/Robotlegs/master/packages/core/media/robotlegs.png" width="30" height="30" />
 
 [![GitHub license](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/RobotlegsJS/Robotlegs/tree/master/packages/core/LICENSE)
 [![Gitter chat](https://badges.gitter.im/RobotlegsJS/RobotlegsJS.svg)](https://gitter.im/RobotlegsJS/RobotlegsJS)
@@ -82,7 +82,12 @@ RobotlegsJS requires a modern JavaScript engine with support for:
 
 If your environment doesn't support one of these you will need to import a shim or polyfill.
 
-> :warning: **The `reflect-metadata` polyfill should be imported only once in your entire application** because the Reflect object is mean to be a global singleton. More details about this can be found [here](https://github.com/inversify/InversifyJS/issues/262#issuecomment-227593844).
+> :warning: **The `reflect-metadata` polyfill should be imported only once in your entire application** because the Reflect object is meant to be a global singleton. More details about this can be found [here](https://github.com/inversify/InversifyJS/issues/262#issuecomment-227593844).
+
+Check out the [Environment support and polyfills](https://github.com/inversify/InversifyJS/blob/master/wiki/environment.md)
+page in the [InversifyJS](https://github.com/inversify/InversifyJS) wiki and their [Basic example](https://github.com/inversify/inversify-basic-example) to learn more.
+
+To learn more about the basic usage and APIs provided by [InversifyJS](https://github.com/inversify/InversifyJS), follow [The Basics](https://github.com/inversify/InversifyJS/blob/master/README.md#the-basics) and [The InversifyJS Features and API](https://github.com/inversify/InversifyJS#the-inversifyjs-features-and-api).
 
 ## Quickstart
 

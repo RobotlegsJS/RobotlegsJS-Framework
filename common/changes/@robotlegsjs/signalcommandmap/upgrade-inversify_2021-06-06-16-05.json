@@ -1,0 +1,11 @@
+{
+  "changes": [
+    {
+      "packageName": "@robotlegsjs/signalcommandmap",
+      "comment": "Update [inversify](https://www.npmjs.com/package/inversify) to version **5.1.1** (see [8](https://github.com/RobotlegsJS/Robotlegs/pull/8))",
+      "type": "major"
+    }
+  ],
+  "packageName": "@robotlegsjs/signalcommandmap",
+  "email": "tiago.schenkel@gmail.com"
+}
