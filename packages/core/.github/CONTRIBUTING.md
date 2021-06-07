@@ -1,46 +1,76 @@
 # Contributing to RobotlegsJS
 
-## Setup
+The RobotlegsJS projects are all developed in the **Robotlegs** monorepo on GitHub:
 
-1 - Clone your fork of the repository:
+[https://github.com/RobotlegsJS/Robotlegs](https://github.com/RobotlegsJS/Robotlegs)
+
+## Setting up your machine
+
+- **Node.js 14**: We recommend to use [nvm](https://github.com/creationix/nvm) (for Mac/Linux) or [nvm-windows](https://github.com/coreybutler/nvm-windows) (for Windows) so that you can easily switch between different Node.js engine verisons.
+
+- **PNPM**: We use [PNPM](https://pnpm.io) as the package manager. But you don't need to install it globaly, rush installs its own local copy of the package manager to ensure that your build process is fully isolated from whatever tools are present in the local environment.
+
+- **Visual Studio Code** (recommended): You can use any editor, but we suggest [VS Code](https://code.visualstudio.com).
+
+## Building the projects
+
+We use the [Rush](http://rushjs.io) tool for building projects in the **Robotlegs** monorepo.
+
+1. Make sure you have the latest release of Rush:
 ```
-$ git clone https://github.com/YOUR_USERNAME/RobotlegsJS.git
+npm install -g @microsoft/rush
 ```
 
-2 - Install npm dependencies using yarn:
+2. Clone the repo:
 ```
-$ yarn install
-```
-
-3 - Run start process
-```
-$ yarn start
+git clone https://github.com/RobotlegsJS/Robotlegs.git
 ```
 
-4 - Run test process
+3. Use rush to install the package dependencies:
 ```
-$ yarn test
+cd Robotlegs
+rush install
 ```
 
-## Guidelines
+4. Rebuild all the projects in the repo:
+```
+rush rebuild
+```
 
-- Please try to [combine multiple commits before
-pushing](http://stackoverflow.com/questions/6934752/combining-multiple-commits-before-pushing-in-git).
+5. If you want to build just one project:
+```
+cd Robotlegs\packages\core
+rushx build
+```
 
-- Please use `TDD` when fixing bugs. This means that you should write a unit
-test that fails because it reproduces the issue, then fix the issue and finally run
-the test to ensure that the issue has been resolved. This helps us to prevent
-fixed bugs from happening again in the future.
+**Important**: You generally should **not** use commands like `npm install` or `yarn install` in a Rush repo.
+See the [Rush documentation](https://rushjs.io/pages/developer/new_developer/) for more information about this tool.
 
-- Always format your code using `yarn run autoformat`.
+## Submitting a Pull Request
 
-- Please keep the test coverage at 100%. Write additional unit test if
-necessary.
+We welcome contributions! To submit a feature for one of the **RobotlegsJS** projects:
 
--  Please create an issue before sending a PR if your commit is going to change the
-public interface of the package or it includes significant architecture
-changes.
+1. Fork the repo.
 
-- Feel free to ask for help from other members of the RobotlegsJS team via the
-[gitter chat](https://gitter.im/RobotlegsJS/RobotlegsJS) or
-[github issues](https://github.com/RobotlegsJS/Robotlegs/issues).
+2. Create a Git branch and commit your changes.
+
+3. If you modified any `package.json` files, run `rush update` to make sure your **shrinkwrap file** (or **lock file**) is up to date.
+   This file is located in the following path: `common/config/rush/pnpm-lock.yaml`.
+   Commit any changes made to that file.
+
+4. Before creating your PR, run `rush change`; if prompted, [enter a change log message](https://rushjs.io/pages/best_practices/change_logs/) and select the type of your change.
+   The possible types of changes are: 
+   - **MAJOR** - these are breaking changes that are not backwards compatible. Examples are: renaming a public class, adding/removing a non-optional parameter from a public API, or renaming an variable or function that is exported.
+   - **MINOR** - these are changes that are backwards compatible (but not forwards compatible). Examples are: adding a new public API or adding an optional parameter to a public API.
+   - **PATCH** - these are changes that are backwards and forwards compatible. Examples are: Modifying a private API or fixing a bug in the logic of how an existing API works.
+
+   Later, remember to commit the files that get created.
+
+5. Create a [pull request](https://help.github.com/articles/creating-a-pull-request/)
+
+6. If your PR primarily affects a single project, add the project name as a prefix to your PR title.
+   For example: "**[core] Added a new API feature**" or "**[pixi] Fixed a bug in the library**".
+
+Someone should review your PR within a few days.
+
+We greatly appreciate community contributions and do want to get your PR reviewed!
