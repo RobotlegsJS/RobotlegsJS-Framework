@@ -2,7 +2,7 @@
  * This configuration file specifies NPM dependency version selections that affect all projects
  * in a Rush repo.  More documentation is available on the Rush website: https://rushjs.io
  */
-{
+ {
   "$schema": "https://developer.microsoft.com/json-schemas/rush/v5/common-versions.schema.json",
 
   /**
@@ -23,7 +23,9 @@
      * When someone asks for "^1.0.0" make sure they get "1.2.3" when working in this repo,
      * instead of the latest version.
      */
-    // "some-library": "1.2.3"
+    "phaser": "3.22.0",
+    "phaser-ce": "2.15.0",
+    "pixi.js": "5.2.1"
   },
 
   /**
@@ -38,7 +40,7 @@
    * After modifying this field, it's recommended to run "rush update --full" so that the package manager
    * will recalculate all version selections.
    */
-  // "implicitlyPreferredVersions": false,
+  "implicitlyPreferredVersions": true,
 
   /**
    * The "rush check" command can be used to enforce that every project in the repo must specify
