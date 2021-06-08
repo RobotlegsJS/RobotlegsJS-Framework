@@ -257,10 +257,6 @@
     {
       "name": "webpack-dev-server",
       "allowedCategories": [ "production" ]
-    },
-    {
-      "name": "webpack-merge",
-      "allowedCategories": [ "production" ]
     }
   ]
 }
