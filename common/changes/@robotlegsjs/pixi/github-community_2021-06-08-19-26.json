@@ -1,0 +1,11 @@
+{
+  "changes": [
+    {
+      "packageName": "@robotlegsjs/pixi",
+      "comment": "Setup `.github` community profile files for the **monorepo** structure and remove local `packages/**/.github` folders (see [9](https://github.com/RobotlegsJS/Robotlegs/pull/9))",
+      "type": "minor"
+    }
+  ],
+  "packageName": "@robotlegsjs/pixi",
+  "email": "tiago.schenkel@gmail.com"
+}
