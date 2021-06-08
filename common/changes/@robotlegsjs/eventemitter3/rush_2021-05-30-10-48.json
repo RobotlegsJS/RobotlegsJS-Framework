@@ -3,12 +3,12 @@
     {
       "packageName": "@robotlegsjs/eventemitter3",
       "comment": "Setup [rush](https://rushjs.io/) to be used as monorepo manager (see [1](https://github.com/RobotlegsJS/Robotlegs/pull/1))",
-      "type": "patch"
+      "type": "minor"
     },
     {
       "packageName": "@robotlegsjs/eventemitter3",
       "comment": "For the changelog of older versions, check the following [changelog](https://github.com/RobotlegsJS/RobotlegsJS-EventEmitter3/tree/master/CHANGELOG.md)",
-      "type": "patch"
+      "type": "minor"
     }
   ],
   "packageName": "@robotlegsjs/eventemitter3",
