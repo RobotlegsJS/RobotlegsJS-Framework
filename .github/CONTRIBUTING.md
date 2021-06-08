@@ -6,7 +6,7 @@ The RobotlegsJS projects are all developed in the **Robotlegs** monorepo on GitH
 
 ## Setting up your machine
 
-- **Node.js 14**: We recommend you to use [nvm](https://github.com/creationix/nvm) (for Mac/Linux) or [nvm-windows](https://github.com/coreybutler/nvm-windows) (for Windows) so that you can easily switch between different Node.js engine versions.
+- **Node.js 14**: We recommend you to use [nvm](https://github.com/creationix/nvm) (for Mac/Linux) or [nvm-windows](https://github.com/coreybutler/nvm-windows) (for Windows) so that you can easily switch between different [Node.js](https://nodejs.org/en/) engine versions.
 
 - **PNPM**: We use [PNPM](https://pnpm.io) as the package manager. But you don't need to install it globally, rush installs its own local copy of the package manager to ensure that your build process is fully isolated from whatever tools are present in your local environment.
 
