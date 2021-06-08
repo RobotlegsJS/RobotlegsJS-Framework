@@ -2,4 +2,4 @@ blank_issues_enabled: false
 contact_links:
   - name: "👉  READ FIRST: Contributing to RobotlegsJS"
     about: Instructions for building the projects, debugging, and submitting a PR.
-    url: https://github.com/RobotlegsJS/Robotlegs/tree/master/.github/CONTRIBUTING.md
+    url: https://github.com/RobotlegsJS/RobotlegsJS-Framework/tree/master/.github/CONTRIBUTING.md

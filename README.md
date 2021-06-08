@@ -1,9 +1,9 @@
-# RobotlegsJS
+# RobotlegsJS Framework
 
 **RobotlegsJS** is a architecture-based IoC framework for JavaScript/TypeScript. This
 version is a direct port from the [ActionScript 3.0 codebase](https://github.com/robotlegs/robotlegs-framework).
 
-This is the home for all packages maintained by **RobotlegsJS**.
+This repository is the home for all packages maintained by **RobotlegsJS**.
 
 ## Published Packages
 
@@ -29,11 +29,11 @@ The main purpose of this repository is to continue evolving **RobotlegsJS** core
 
 ### Code of Conduct
 
-**RobotlegsJS** has adopted a Code of Conduct that we expect project participants to adhere to. Please read [the full text](https://github.com/RobotlegsJS/Robotlegs/tree/master/.github/CODE_OF_CONDUCT.md) so that you can understand what actions will and will not be tolerated.
+**RobotlegsJS** has adopted a Code of Conduct that we expect project participants to adhere to. Please read [the full text](https://github.com/RobotlegsJS/RobotlegsJS-Framework/tree/master/.github/CODE_OF_CONDUCT.md) so that you can understand what actions will and will not be tolerated.
 
 ### Contributing Guide
 
-Read our [contributing guide](https://github.com/RobotlegsJS/Robotlegs/tree/master/.github/CONTRIBUTING.md) to learn about our development process, how to propose bugfixes and improvements, and how to build and test your changes to **RobotlegsJS**.
+Read our [contributing guide](https://github.com/RobotlegsJS/RobotlegsJS-Framework/tree/master/.github/CONTRIBUTING.md) to learn about our development process, how to propose bugfixes and improvements, and how to build and test your changes to **RobotlegsJS**.
 
 ## License
 

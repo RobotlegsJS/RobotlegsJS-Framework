@@ -1,11 +1,11 @@
 # RobotlegsJS CreateJS Extension
 
-[![GitHub license](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/RobotlegsJS/Robotlegs/tree/master/packages/createjs/LICENSE)
+[![GitHub license](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/RobotlegsJS/RobotlegsJS-Framework/tree/master/packages/createjs/LICENSE)
 [![Gitter chat](https://badges.gitter.im/RobotlegsJS/RobotlegsJS.svg)](https://gitter.im/RobotlegsJS/RobotlegsJS)
 [![npm version](https://badge.fury.io/js/%40robotlegsjs%2Fcreatejs.svg)](https://badge.fury.io/js/%40robotlegsjs%2Fcreatejs)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 
-Integrate [RobotlegsJS](https://github.com/RobotlegsJS/Robotlegs/tree/master/packages/core)
+Integrate [RobotlegsJS](https://github.com/RobotlegsJS/RobotlegsJS-Framework/tree/master/packages/core)
 framework with [CreateJS](https://createjs.com).
 
 ## Installation
@@ -39,11 +39,11 @@ or
 yarn add easeljs@1.0.2 reflect-metadata
 ```
 
-Then follow the [installation instructions](https://github.com/RobotlegsJS/Robotlegs/tree/master/packages/core#installation) of **RobotlegsJS** library to complete the setup of your project.
+Then follow the [installation instructions](https://github.com/RobotlegsJS/RobotlegsJS-Framework/tree/master/packages/core#installation) of **RobotlegsJS** library to complete the setup of your project.
 
 **Dependencies**
 
-+ [RobotlegsJS](https://github.com/RobotlegsJS/Robotlegs/tree/master/packages/core)
++ [RobotlegsJS](https://github.com/RobotlegsJS/RobotlegsJS-Framework/tree/master/packages/core)
 + [tslib](https://github.com/Microsoft/tslib)
 
 **Peer Dependencies**
@@ -137,7 +137,7 @@ You can check our example project [here](http://robotlegsjs.io/RobotlegsJS-Creat
 
 Available as part of the Tidelift Subscription
 
-The maintainers of [@robotlegsjs/createjs](https://github.com/RobotlegsJS/Robotlegs/tree/master/packages/createjs) and thousands of other packages are working with Tidelift to deliver commercial support and maintenance for the open source dependencies you use to build your applications. Save time, reduce risk, and improve code health, while paying the maintainers of the exact dependencies you use. [Learn more.](https://tidelift.com/subscription/pkg/npm-robotlegsjs-createjs?utm_source=npm-robotlegsjs-createjs&utm_medium=referral&utm_campaign=enterprise&utm_term=repo)
+The maintainers of [@robotlegsjs/createjs](https://github.com/RobotlegsJS/RobotlegsJS-Framework/tree/master/packages/createjs) and thousands of other packages are working with Tidelift to deliver commercial support and maintenance for the open source dependencies you use to build your applications. Save time, reduce risk, and improve code health, while paying the maintainers of the exact dependencies you use. [Learn more.](https://tidelift.com/subscription/pkg/npm-robotlegsjs-createjs?utm_source=npm-robotlegsjs-createjs&utm_medium=referral&utm_campaign=enterprise&utm_term=repo)
 
 ## License
 

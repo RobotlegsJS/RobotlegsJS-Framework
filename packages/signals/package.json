@@ -47,7 +47,7 @@
     "instrument": true
   },
   "repository": {
-    "url": "https://github.com/RobotlegsJS/Robotlegs/tree/master/packages/signals"
+    "url": "https://github.com/RobotlegsJS/RobotlegsJS-Framework/tree/master/packages/signals"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org"
@@ -63,9 +63,9 @@
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/RobotlegsJS/Robotlegs/issues"
+    "url": "https://github.com/RobotlegsJS/RobotlegsJS-Framework/issues"
   },
-  "homepage": "https://github.com/RobotlegsJS/Robotlegs/tree/master/packages/signals#readme",
+  "homepage": "https://github.com/RobotlegsJS/RobotlegsJS-Framework/tree/master/packages/signals#readme",
   "files": [
     "lib"
   ],

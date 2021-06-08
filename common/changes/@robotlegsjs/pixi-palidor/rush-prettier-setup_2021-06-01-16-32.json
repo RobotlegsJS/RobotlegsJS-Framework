@@ -2,7 +2,7 @@
   "changes": [
     {
       "packageName": "@robotlegsjs/pixi-palidor",
-      "comment": "Enable **rush-prettier** git hook based on [Enabling Prettier](https://rushjs.io/pages/maintainer/enabling_prettier/) (see [5](https://github.com/RobotlegsJS/Robotlegs/pull/5))",
+      "comment": "Enable **rush-prettier** git hook based on [Enabling Prettier](https://rushjs.io/pages/maintainer/enabling_prettier/) (see [5](https://github.com/RobotlegsJS/RobotlegsJS-Framework/pull/5))",
       "type": "minor"
     }
   ],

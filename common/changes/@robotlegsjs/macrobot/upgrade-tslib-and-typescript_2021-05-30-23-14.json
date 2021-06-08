@@ -2,7 +2,7 @@
   "changes": [
     {
       "packageName": "@robotlegsjs/macrobot",
-      "comment": "Update [tslib](https://www.npmjs.com/package/tslib) to version **2.2.0** and [typescript](https://www.npmjs.com/package/typescript) to version **4.2.4** (see [3](https://github.com/RobotlegsJS/Robotlegs/pull/3))",
+      "comment": "Update [tslib](https://www.npmjs.com/package/tslib) to version **2.2.0** and [typescript](https://www.npmjs.com/package/typescript) to version **4.2.4** (see [3](https://github.com/RobotlegsJS/RobotlegsJS-Framework/pull/3))",
       "type": "major"
     }
   ],

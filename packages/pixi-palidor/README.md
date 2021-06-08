@@ -1,6 +1,6 @@
 # RobotlegsJS Pixi Palidor Extension
 
-[![GitHub license](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/RobotlegsJS/Robotlegs/tree/master/packages/pixi-palidor/LICENSE)
+[![GitHub license](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/RobotlegsJS/RobotlegsJS-Framework/tree/master/packages/pixi-palidor/LICENSE)
 [![Gitter chat](https://badges.gitter.im/RobotlegsJS/RobotlegsJS.svg)](https://gitter.im/RobotlegsJS/RobotlegsJS)
 [![npm version](https://badge.fury.io/js/%40robotlegsjs%2Fpixi-palidor.svg)](https://badge.fury.io/js/%40robotlegsjs%2Fpixi-palidor)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
@@ -62,12 +62,12 @@ or
 yarn add pixi.js@4.2.1 eventemitter3@^2.0.0 reflect-metadata
 ```
 
-Then follow the [installation instructions](https://github.com/RobotlegsJS/Robotlegs/tree/master/packages/core#installation) of **RobotlegsJS** library to complete the setup of your project.
+Then follow the [installation instructions](https://github.com/RobotlegsJS/RobotlegsJS-Framework/tree/master/packages/core#installation) of **RobotlegsJS** library to complete the setup of your project.
 
 **Dependencies**
 
-+ [RobotlegsJS](https://github.com/RobotlegsJS/Robotlegs/tree/master/packages/core)
-+ [RobotlegsJS-Pixi](https://github.com/RobotlegsJS/Robotlegs/tree/master/packages/pixi)
++ [RobotlegsJS](https://github.com/RobotlegsJS/RobotlegsJS-Framework/tree/master/packages/core)
++ [RobotlegsJS-Pixi](https://github.com/RobotlegsJS/RobotlegsJS-Framework/tree/master/packages/pixi)
 + [tslib](https://github.com/Microsoft/tslib)
 
 **Peer Dependencies**
@@ -94,8 +94,8 @@ let context = new Context()
     .initialize();
 ```
 
-+ **MVCSBundle:** Installs a number of extensions and configurations for developers who are comfortable with the typical [RobotlegsJS](https://github.com/RobotlegsJS/Robotlegs/tree/master/packages/core) setup.
-+ **PixiBundle:** Installs a view / mediator layer provided by [RobotlegsJS-Pixi](https://github.com/RobotlegsJS/Robotlegs/tree/master/packages/pixi).
++ **MVCSBundle:** Installs a number of extensions and configurations for developers who are comfortable with the typical [RobotlegsJS](https://github.com/RobotlegsJS/RobotlegsJS-Framework/tree/master/packages/core) setup.
++ **PixiBundle:** Installs a view / mediator layer provided by [RobotlegsJS-Pixi](https://github.com/RobotlegsJS/RobotlegsJS-Framework/tree/master/packages/pixi).
 + **PalidorPixiExtension:** It is the extension itself.
 + **MyPalidorConfig:** The Class that implements the Robotlegs's IConfig and will be responsible for map all your Views and FloatingViews.
 
@@ -105,7 +105,7 @@ In the Second step, you must map all views that you need. Palidor works with two
 
 Palidor splits the Main Container into two distinct Layers, one to each type of View. The FloatingView always will be in a layer above the others Views.
 
-<img src="https://raw.githubusercontent.com/RobotlegsJS/Robotlegs/master/packages/pixi-palidor/media/layers.png" />
+<img src="https://raw.githubusercontent.com/RobotlegsJS/RobotlegsJS-Framework/master/packages/pixi-palidor/media/layers.png" />
 
 + **View:** A View is a screen added into the Static Layer which is behind all FloatingViews. Palidor allows only one View per time and will remove the current view before to add a new View.
 
@@ -179,7 +179,7 @@ You can check our example project [here](http://robotlegsjs.io/RobotlegsJS-Pixi-
 
 Available as part of the Tidelift Subscription
 
-The maintainers of [@robotlegsjs/pixi-palidor](https://github.com/RobotlegsJS/Robotlegs/tree/master/packages/pixi-palidor) and thousands of other packages are working with Tidelift to deliver commercial support and maintenance for the open source dependencies you use to build your applications. Save time, reduce risk, and improve code health, while paying the maintainers of the exact dependencies you use. [Learn more.](https://tidelift.com/subscription/pkg/npm-robotlegsjs-pixi-palidor?utm_source=npm-robotlegsjs-pixi-palidor&utm_medium=referral&utm_campaign=enterprise&utm_term=repo)
+The maintainers of [@robotlegsjs/pixi-palidor](https://github.com/RobotlegsJS/RobotlegsJS-Framework/tree/master/packages/pixi-palidor) and thousands of other packages are working with Tidelift to deliver commercial support and maintenance for the open source dependencies you use to build your applications. Save time, reduce risk, and improve code health, while paying the maintainers of the exact dependencies you use. [Learn more.](https://tidelift.com/subscription/pkg/npm-robotlegsjs-pixi-palidor?utm_source=npm-robotlegsjs-pixi-palidor&utm_medium=referral&utm_campaign=enterprise&utm_term=repo)
 
 ## License
 

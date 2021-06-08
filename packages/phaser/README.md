@@ -1,11 +1,11 @@
 # RobotlegsJS Phaser Extension
 
-[![GitHub license](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/RobotlegsJS/Robotlegs/tree/master/packages/phaser/blob/master/LICENSE)
+[![GitHub license](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/RobotlegsJS/RobotlegsJS-Framework/tree/master/packages/phaser/blob/master/LICENSE)
 [![Gitter chat](https://badges.gitter.im/RobotlegsJS/RobotlegsJS.svg)](https://gitter.im/RobotlegsJS/RobotlegsJS)
 [![npm version](https://badge.fury.io/js/%40robotlegsjs%2Fphaser.svg)](https://badge.fury.io/js/%40robotlegsjs%2Fphaser)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 
-Integrate [RobotlegsJS](https://github.com/RobotlegsJS/Robotlegs/tree/master/packages/core)
+Integrate [RobotlegsJS](https://github.com/RobotlegsJS/RobotlegsJS-Framework/tree/master/packages/core)
 framework with [Phaser](https://github.com/photonstorm/phaser).
 
 ## Installation
@@ -39,11 +39,11 @@ or
 yarn add phaser@3.22.0 reflect-metadata
 ```
 
-Then follow the [installation instructions](https://github.com/RobotlegsJS/Robotlegs/tree/master/packages/core#installation) of **RobotlegsJS** library to complete the setup of your project.
+Then follow the [installation instructions](https://github.com/RobotlegsJS/RobotlegsJS-Framework/tree/master/packages/core#installation) of **RobotlegsJS** library to complete the setup of your project.
 
 **Dependencies**
 
-+ [RobotlegsJS](https://github.com/RobotlegsJS/Robotlegs/tree/master/packages/core)
++ [RobotlegsJS](https://github.com/RobotlegsJS/RobotlegsJS-Framework/tree/master/packages/core)
 + [tslib](https://github.com/Microsoft/tslib)
 
 **Peer Dependencies**
@@ -126,13 +126,13 @@ You can check our example project [here](http://robotlegsjs.io/RobotlegsJS-Phase
 
 The `@robotlegsjs/phaser` package was updated to support [Phaser v3](https://www.npmjs.com/package/phaser) plugin.
 
-If you are looking for integration with [Phaser CE](https://github.com/photonstorm/phaser-ce) you can use the [RobotlegsJS-Phaser-CE](https://github.com/RobotlegsJS/Robotlegs/tree/master/packages/phaser-ce) plugin.
+If you are looking for integration with [Phaser CE](https://github.com/photonstorm/phaser-ce) you can use the [RobotlegsJS-Phaser-CE](https://github.com/RobotlegsJS/RobotlegsJS-Framework/tree/master/packages/phaser-ce) plugin.
 
 ## RobotlegsJS Phaser for enterprise
 
 Available as part of the Tidelift Subscription
 
-The maintainers of [@robotlegsjs/phaser](https://github.com/RobotlegsJS/Robotlegs/tree/master/packages/phaser) and thousands of other packages are working with Tidelift to deliver commercial support and maintenance for the open source dependencies you use to build your applications. Save time, reduce risk, and improve code health, while paying the maintainers of the exact dependencies you use. [Learn more.](https://tidelift.com/subscription/pkg/npm-robotlegsjs-phaser?utm_source=npm-robotlegsjs-phaser&utm_medium=referral&utm_campaign=enterprise&utm_term=repo)
+The maintainers of [@robotlegsjs/phaser](https://github.com/RobotlegsJS/RobotlegsJS-Framework/tree/master/packages/phaser) and thousands of other packages are working with Tidelift to deliver commercial support and maintenance for the open source dependencies you use to build your applications. Save time, reduce risk, and improve code health, while paying the maintainers of the exact dependencies you use. [Learn more.](https://tidelift.com/subscription/pkg/npm-robotlegsjs-phaser?utm_source=npm-robotlegsjs-phaser&utm_medium=referral&utm_campaign=enterprise&utm_term=repo)
 
 ## License
 
