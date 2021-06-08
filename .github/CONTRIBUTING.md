@@ -6,11 +6,11 @@ The RobotlegsJS projects are all developed in the **Robotlegs** monorepo on GitH
 
 ## Setting up your machine
 
-- **Node.js 14**: We recommend to use [nvm](https://github.com/creationix/nvm) (for Mac/Linux) or [nvm-windows](https://github.com/coreybutler/nvm-windows) (for Windows) so that you can easily switch between different Node.js engine verisons.
+- **Node.js 14**: We recommend you to use [nvm](https://github.com/creationix/nvm) (for Mac/Linux) or [nvm-windows](https://github.com/coreybutler/nvm-windows) (for Windows) so that you can easily switch between different Node.js engine versions.
 
-- **PNPM**: We use [PNPM](https://pnpm.io) as the package manager. But you don't need to install it globaly, rush installs its own local copy of the package manager to ensure that your build process is fully isolated from whatever tools are present in the local environment.
+- **PNPM**: We use [PNPM](https://pnpm.io) as the package manager. But you don't need to install it globally, rush installs its own local copy of the package manager to ensure that your build process is fully isolated from whatever tools are present in your local environment.
 
-- **Visual Studio Code** (recommended): You can use any editor, but we suggest [VS Code](https://code.visualstudio.com).
+- **Visual Studio Code** (recommended): You can use any editor, but we suggest [VS Code](https://code.visualstudio.com). For this case, we recommend the installation of the [Prettier - Code formatter](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) and [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) plugins as well.
 
 ## Building the projects
 
@@ -58,7 +58,7 @@ We welcome contributions! To submit a feature for one of the **RobotlegsJS** pro
    This file is located in the following path: `common/config/rush/pnpm-lock.yaml`.
    Commit any changes made to that file.
 
-4. Before creating your PR, run `rush change`; if prompted, [enter a change log message](https://rushjs.io/pages/best_practices/change_logs/) and select the type of your change.
+4. Before creating your PR, run `rush change`; if prompted, [enter a changelog message](https://rushjs.io/pages/best_practices/change_logs/) and select the type of your change.
    The possible types of changes are: 
    - **MAJOR** - these are breaking changes that are not backwards compatible. Examples are: renaming a public class, adding/removing a non-optional parameter from a public API, or renaming an variable or function that is exported.
    - **MINOR** - these are changes that are backwards compatible (but not forwards compatible). Examples are: adding a new public API or adding an optional parameter to a public API.
@@ -66,11 +66,11 @@ We welcome contributions! To submit a feature for one of the **RobotlegsJS** pro
 
    Later, remember to commit the files that get created.
 
-5. Create a [pull request](https://help.github.com/articles/creating-a-pull-request/)
+5. Create a [pull request](https://help.github.com/articles/creating-a-pull-request/).
 
 6. If your PR primarily affects a single project, add the project name as a prefix to your PR title.
    For example: "**[core] Added a new API feature**" or "**[pixi] Fixed a bug in the library**".
 
-Someone should review your PR within a few days.
+Someone should review your PR within a few days. If nobody’s responding to PR comments, try to send us one email to contact@robotlegsjs.io with the link of your PR.
 
 We greatly appreciate community contributions and do want to get your PR reviewed!
