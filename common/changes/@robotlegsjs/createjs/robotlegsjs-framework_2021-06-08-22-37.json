@@ -1,0 +1,11 @@
+{
+  "changes": [
+    {
+      "packageName": "@robotlegsjs/createjs",
+      "comment": "Use the **RobotlegsJS-Framework** name for the monorepo approach. (see [11](https://github.com/RobotlegsJS/RobotlegsJS-Framework/pull/11))",
+      "type": "minor"
+    }
+  ],
+  "packageName": "@robotlegsjs/createjs",
+  "email": "tiago.schenkel@gmail.com"
+}

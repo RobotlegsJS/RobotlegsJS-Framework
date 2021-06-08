@@ -2,7 +2,7 @@
   "changes": [
     {
       "packageName": "@robotlegsjs/pixi",
-      "comment": "Update [inversify](https://www.npmjs.com/package/inversify) to version **5.1.1** (see [8](https://github.com/RobotlegsJS/Robotlegs/pull/8))",
+      "comment": "Update [inversify](https://www.npmjs.com/package/inversify) to version **5.1.1** (see [8](https://github.com/RobotlegsJS/RobotlegsJS-Framework/pull/8))",
       "type": "major"
     }
   ],

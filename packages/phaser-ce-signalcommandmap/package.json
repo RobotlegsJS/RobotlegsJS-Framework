@@ -24,7 +24,7 @@
     "publish-please": "npm run lint && npm run autoformat && npm run clean-up && npm run test && publish-please"
   },
   "repository": {
-    "url": "https://github.com/RobotlegsJS/Robotlegs/tree/master/packages/phaser-ce-signalcommandmap"
+    "url": "https://github.com/RobotlegsJS/RobotlegsJS-Framework/tree/master/packages/phaser-ce-signalcommandmap"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org"
@@ -43,9 +43,9 @@
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/RobotlegsJS/Robotlegs/issues"
+    "url": "https://github.com/RobotlegsJS/RobotlegsJS-Framework/issues"
   },
-  "homepage": "https://github.com/RobotlegsJS/Robotlegs/tree/master/packages/phaser-ce-signalcommandmap#readme",
+  "homepage": "https://github.com/RobotlegsJS/RobotlegsJS-Framework/tree/master/packages/phaser-ce-signalcommandmap#readme",
   "files": [
     "lib"
   ],
