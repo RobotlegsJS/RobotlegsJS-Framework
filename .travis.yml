@@ -20,6 +20,6 @@ script:
   - node common/scripts/install-run-rush.js rebuild --verbose
   - echo -en 'travis_fold:end:build\\r'
 
-  - echo 'Testing...' && echo -en 'travis_fold:start:build\\r'
+  - echo 'Testing...' && echo -en 'travis_fold:start:test\\r'
   - node common/scripts/install-run-rush.js test --verbose
-  - echo -en 'travis_fold:end:build\\r'
+  - echo -en 'travis_fold:end:test\\r'
