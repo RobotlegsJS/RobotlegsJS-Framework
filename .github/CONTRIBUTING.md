@@ -23,7 +23,7 @@ npm install -g @microsoft/rush
 
 2. Clone the repo:
 ```
-git clone https://github.com/RobotlegsJS/Robotlegs.git
+git clone https://github.com/RobotlegsJS/RobotlegsJS-Framework.git
 ```
 
 3. Use rush to install the package dependencies:
