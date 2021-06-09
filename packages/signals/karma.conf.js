@@ -7,6 +7,7 @@ process.env.CHROME_BIN = puppeteer.executablePath();
 const webpackConfig = require("./webpack.config.js")({ production: false, karma: true });
 
 delete webpackConfig.entry;
+delete webpackConfig.output.filename;
 
 module.exports = (config) => {
   "use strict";
