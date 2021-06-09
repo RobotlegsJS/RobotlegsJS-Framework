@@ -20,6 +20,10 @@ script:
   - node common/scripts/install-run-rush.js rebuild --verbose
   - echo -en 'travis_fold:end:build\\r'
 
+  - echo 'Linting...' && echo -en 'travis_fold:start:lint\\r'
+  - node common/scripts/install-run-rush.js lint --verbose
+  - echo -en 'travis_fold:end:lint\\r'
+
   - echo 'Testing...' && echo -en 'travis_fold:start:test\\r'
   - node common/scripts/install-run-rush.js test --verbose
   - echo -en 'travis_fold:end:test\\r'
