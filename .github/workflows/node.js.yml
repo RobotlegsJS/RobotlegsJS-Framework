@@ -24,14 +24,10 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
 
-      - run: echo 'Installing...'
       - run: node common/scripts/install-run-rush.js install
 
-      - run: echo 'Building...'
       - run: node common/scripts/install-run-rush.js rebuild --verbose
 
-      - run: echo 'Linting...'
       - run: node common/scripts/install-run-rush.js lint --verbose
 
-      - run: echo 'Testing...'
       - run: node common/scripts/install-run-rush.js test --verbose
