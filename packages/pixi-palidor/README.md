@@ -163,10 +163,6 @@ yarn start
 
 [See full example here](example/index.ts)
 
-## Checking the example
-
-You can check our example project [here](http://robotlegsjs.io/RobotlegsJS-Pixi-Palidor).
-
 ## Examples
 
 + [Game - Battleship](https://github.com/RonaldoSetzer/GAME-Battleship)
