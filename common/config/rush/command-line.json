@@ -208,6 +208,14 @@
       "description": "This command will run `npm run lint-fix` on all packages",
       "safeForSimultaneousRushProcesses": false,
       "enableParallelism": true
+    },
+    {
+      "name": "cleanup",
+      "commandKind": "bulk",
+      "summary": "Used to clean up build files of all packages",
+      "description": "This command will run `npm run cleanup` on all packages",
+      "safeForSimultaneousRushProcesses": false,
+      "enableParallelism": true
     }
   ],
 
