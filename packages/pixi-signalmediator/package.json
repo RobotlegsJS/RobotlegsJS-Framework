@@ -76,7 +76,7 @@
     "lib": "./lib"
   },
   "dependencies": {
-    "@robotlegsjs/core": "^2.0.0",
+    "@robotlegsjs/core": "^3.0.0",
     "@robotlegsjs/pixi": "^2.0.0",
     "@robotlegsjs/signals": "^1.1.0",
     "tslib": "^2.2.0"
