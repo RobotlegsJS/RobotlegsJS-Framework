@@ -1,6 +1,13 @@
 # Change Log - @robotlegsjs/macrobot
 
-This log was last generated on Thu, 10 Jun 2021 22:29:30 GMT and should not be manually modified.
+This log was last generated on Thu, 10 Jun 2021 23:06:09 GMT and should not be manually modified.
+
+## 3.0.1
+Thu, 10 Jun 2021 23:06:09 GMT
+
+### Patches
+
+- Update dev dependencies of [@robotlegsjs/macrobot](https://www.npmjs.com/package/@robotlegsjs/macrobot) to fix build (see [16](https://github.com/RobotlegsJS/RobotlegsJS-Framework/pull/16))
 
 ## 3.0.0
 Thu, 10 Jun 2021 22:29:30 GMT

@@ -2,6 +2,18 @@
   "name": "@robotlegsjs/macrobot",
   "entries": [
     {
+      "version": "3.0.1",
+      "tag": "@robotlegsjs/macrobot_v3.0.1",
+      "date": "Thu, 10 Jun 2021 23:06:09 GMT",
+      "comments": {
+        "patch": [
+          {
+            "comment": "Update dev dependencies of [@robotlegsjs/macrobot](https://www.npmjs.com/package/@robotlegsjs/macrobot) to fix build (see [16](https://github.com/RobotlegsJS/RobotlegsJS-Framework/pull/16))"
+          }
+        ]
+      }
+    },
+    {
       "version": "3.0.0",
       "tag": "@robotlegsjs/macrobot_v3.0.0",
       "date": "Thu, 10 Jun 2021 22:29:30 GMT",
