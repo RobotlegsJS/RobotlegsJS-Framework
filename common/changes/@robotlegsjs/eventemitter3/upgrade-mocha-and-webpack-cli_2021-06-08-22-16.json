@@ -3,7 +3,7 @@
     {
       "packageName": "@robotlegsjs/eventemitter3",
       "comment": "Update [mocha](https://www.npmjs.com/package/mocha) to version **9.0.0** and [webpack-cli](https://www.npmjs.com/package/webpack-cli) to version **4.7.2** (see [10](https://github.com/RobotlegsJS/RobotlegsJS-Framework/pull/10))",
-      "type": "minor"
+      "type": "patch"
     }
   ],
   "packageName": "@robotlegsjs/eventemitter3",
