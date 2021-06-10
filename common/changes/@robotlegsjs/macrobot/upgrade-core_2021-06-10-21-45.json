@@ -1,0 +1,11 @@
+{
+  "changes": [
+    {
+      "packageName": "@robotlegsjs/macrobot",
+      "comment": "Update [@robotlegsjs/core](https://www.npmjs.com/package/@robotlegsjs/core) to version **3.0.0** (see [15](https://github.com/RobotlegsJS/RobotlegsJS-Framework/pull/15))",
+      "type": "major"
+    }
+  ],
+  "packageName": "@robotlegsjs/macrobot",
+  "email": "tiago.schenkel@gmail.com"
+}
