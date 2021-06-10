@@ -20,7 +20,7 @@
     "dist:dev": "webpack",
     "dist:production": "webpack --env production",
     "build": "npm run cleanup && npm run compile:src",
-    "prepare": "npm run cleanup",
+    "prepare": "npm run build",
     "prepublishOnly": "npm run autoformat && npm run lint && npm run test && npm run build"
   },
   "nyc": {
