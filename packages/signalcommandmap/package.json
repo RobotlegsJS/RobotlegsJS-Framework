@@ -1,6 +1,6 @@
 {
   "name": "@robotlegsjs/signalcommandmap",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "description": "TypeScript port of Robotlegs Extensions SignalCommandMap",
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
@@ -75,7 +75,7 @@
   },
   "dependencies": {
     "@robotlegsjs/core": "^3.0.0",
-    "@robotlegsjs/signals": "^1.1.0",
+    "@robotlegsjs/signals": "^2.0.0",
     "tslib": "^2.2.0"
   },
   "devDependencies": {

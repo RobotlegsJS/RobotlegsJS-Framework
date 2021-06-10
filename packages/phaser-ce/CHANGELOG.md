@@ -1,214 +1,31 @@
-# RobotlegsJS Phaser-CE Changelog
+# Change Log - @robotlegsjs/phaser-ce
 
-All notable changes to this project will be documented in this file.
+This log was last generated on Thu, 10 Jun 2021 22:11:54 GMT and should not be manually modified.
 
-The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
-and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+## 3.0.0
+Thu, 10 Jun 2021 22:11:54 GMT
 
-## Suggestions or improvements for further versions
+### Breaking changes
 
-- [x] Add instructions of how to install the **@robotlegsjs/phaser-ce** package into **README.md**.
+- Update [@robotlegsjs/core](https://www.npmjs.com/package/@robotlegsjs/core) to version **3.0.0** (see [15](https://github.com/RobotlegsJS/RobotlegsJS-Framework/pull/15))
+- Update [inversify](https://www.npmjs.com/package/inversify) to version **5.1.1** (see [8](https://github.com/RobotlegsJS/RobotlegsJS-Framework/pull/8))
+- Update [tslib](https://www.npmjs.com/package/tslib) to version **2.2.0** and [typescript](https://www.npmjs.com/package/typescript) to version **4.2.4** (see [3](https://github.com/RobotlegsJS/RobotlegsJS-Framework/pull/3))
 
-- [ ] Use [**Function Types**](https://www.typescriptlang.org/docs/handbook/functions.html) for handlers and callbacks instead of generic **Function** type.
+### Minor changes
 
-- [x] Update **Prettier** rules:
+- Update readmes and contributing guidelines, remove outdated references, fix broken links and update publish scripts (see [13](https://github.com/RobotlegsJS/RobotlegsJS-Framework/pull/13))
+- Setup `.github` community profile files for the **monorepo** structure and remove local `packages/**/.github` folders (see [9](https://github.com/RobotlegsJS/RobotlegsJS-Framework/pull/9))
+- Migrate from **TSLint** to **ESLint** version **7.28.0** (see [6](https://github.com/RobotlegsJS/RobotlegsJS-Framework/pull/6))
+- Use the **RobotlegsJS-Framework** name for the monorepo approach. (see [11](https://github.com/RobotlegsJS/RobotlegsJS-Framework/pull/11))
+- Setup [rush](https://rushjs.io/) to be used as monorepo manager (see [1](https://github.com/RobotlegsJS/RobotlegsJS-Framework/pull/1))
+- For the changelog of older versions, check the following [changelog](https://github.com/RobotlegsJS/RobotlegsJS-Phaser-CE/tree/master/CHANGELOG.md)
+- Enable **rush-prettier** git hook based on [Enabling Prettier](https://rushjs.io/pages/maintainer/enabling_prettier/) (see [5](https://github.com/RobotlegsJS/RobotlegsJS-Framework/pull/5))
+- Setup continuous integration (CI) workflow using [GitHub Actions](https://docs.github.com/en/actions) (see [12](https://github.com/RobotlegsJS/RobotlegsJS-Framework/pull/12))
 
-  - [x] **printWidth** should be around **140** characters per line.
+### Patches
 
-- [ ] Improve Code Coverage to reach 100%.
+- Update [karma](https://www.npmjs.com/package/karma) to version **6.3.2** and [webpack](https://www.npmjs.com/package/webpack) to version **5.38.1** (see [2](https://github.com/RobotlegsJS/RobotlegsJS-Framework/pull/2))
+- Update [mocha](https://www.npmjs.com/package/mocha) to version **9.0.0** and [webpack-cli](https://www.npmjs.com/package/webpack-cli) to version **4.7.2** (see [10](https://github.com/RobotlegsJS/RobotlegsJS-Framework/pull/10))
+- Update [prettier](https://www.npmjs.com/package/prettier) to version **2.3.0**, move configuration files to the root of mono repo structure and apply prettier changes (see [4](https://github.com/RobotlegsJS/RobotlegsJS-Framework/pull/4))
+- Update [prettier](https://www.npmjs.com/package/prettier) to version **2.3.1**, update prettier badge and add project-specific files to global `.gitignore` and `.prettierignore` files (see [7](https://github.com/RobotlegsJS/RobotlegsJS-Framework/pull/7))
 
-## [Unreleased]
-
-<!--
-Types of changes:
-
-#### Added
-- for new features.
-
-#### Changed
-- for changes in existing functionality.
-
-#### Deprecated
-- for soon-to-be removed features.
-
-#### Removed
-- for now removed features.
-
-#### Fixed
-- for any bug fixes.
-
-#### Security
-- in case of vulnerabilities.
--->
-
-## RobotlegsJS Phaser-CE 2.0.0
-
-### [v2.0.0](https://github.com/RobotlegsJS/RobotlegsJS-Phaser-CE/releases/tag/2.0.0) - 2020-03-14
-
-#### Breaking Change
-
-- Update [`@robotlegsjs/core`](https://github.com/RobotlegsJS/RobotlegsJS) to version `^2.0.0` (see #49 and #54).
-
-  - Migrate array notation from `Array<SomeType>` to `SomeType[]`.
-
-  - The rest of the `Public API` remains unchanged.
-
-#### Added
-
-- Add **Tidelift** as funding option (see #50).
-
-- Add **Enterprise Support** information (see #51).
-
-#### Changed
-
-- Update `phaser-ce` to version `2.15.0` (see #55).
-
-- Update `tslib` to version `1.11.1` (see #53).
-
-- Update dev dependencies to latest version.
-
-#### Security
-
-- Migrate to [terser-webpack-plugin](https://github.com/webpack-contrib/terser-webpack-plugin) to solve security vulnerability (see #49).
-
-## RobotlegsJS Phaser-CE 1.0.0
-
-### [v1.0.1](https://github.com/RobotlegsJS/RobotlegsJS-Phaser-CE/releases/tag/1.0.1) - 2019-10-31
-
-#### Changed
-
-- Update `@robotlegsjs/core` to version `1.0.3` (see #43).
-
-- Improve `prettier` rules and `autoformat` script (see #23).
-
-- Enable `"editor.formatOnSave"` rule for `VS Code` (see #23).
-
-- Migrate project to `travis-ci.com`.
-
-- Update `codebeat` Project UUID.
-
-- Update dev dependencies to latest version.
-
-### [v1.0.0](https://github.com/RobotlegsJS/RobotlegsJS-Phaser-CE/releases/tag/1.0.0) - 2018-11-26
-
-#### Changed
-
-- Update `@robotlegsjs/core` to version `1.0.0` (see #16).
-
-- Update `karma` setup to generate code coverage report only for `src` folder (see #5).
-
-- Migrate to Headless Chrome and improve performance of `karma` (see #13).
-
-- Prepare package for stable version (see #14).
-
-- Update GitHub Templates (see #15).
-
-- Update dev dependencies to latest version.
-
-## RobotlegsJS Phaser-CE 0.2.0
-
-### [v0.2.1](https://github.com/RobotlegsJS/RobotlegsJS-Phaser-CE/releases/tag/0.2.1) - 2018-08-03
-
-#### Changed
-
-- Update NPM Version badge and ignore `static` folder when publishing package to **NPM** (see #4).
-
-### [v0.2.0](https://github.com/RobotlegsJS/RobotlegsJS-Phaser-CE/releases/tag/0.2.0) - 2018-08-03
-
-#### Added
-
-- Add changelog (see [35](https://github.com/RobotlegsJS/RobotlegsJS-Phaser/pull/35)).
-
-- Add code of conduct (see [36](https://github.com/RobotlegsJS/RobotlegsJS-Phaser/pull/36)).
-
-- Add issue template (see [38](https://github.com/RobotlegsJS/RobotlegsJS-Phaser/pull/38)).
-
-- Add pull request template (see [39](https://github.com/RobotlegsJS/RobotlegsJS-Phaser/pull/39)).
-
-#### Changed
-
-- Rename package to `@robotlegsjs/phaser-ce` and move to [RobotlegsJS-Phaser-CE](https://github.com/RobotlegsJS/RobotlegsJS-Phaser-CE) (see #2).
-
-- Move `phaser-ce` library to **peerDependencies**, allowing the final user to choose the desired version of the `phaser-ce` library on each project (see #3).
-
-- Update `@robotlegsjs/core` to version `0.2.0` (see [51](https://github.com/RobotlegsJS/RobotlegsJS-Phaser/pull/51)).
-
-- Update `phaser-ce` to version `2.11.0` (see [46](https://github.com/RobotlegsJS/RobotlegsJS-Phaser/pull/46)).
-
-- Update codeclimate settings (see [40](https://github.com/RobotlegsJS/RobotlegsJS-Phaser/pull/40)).
-
-- Update Prettier rules (see [41](https://github.com/RobotlegsJS/RobotlegsJS-Phaser/pull/41)).
-
-- Use `rimraf` instead of `rm -rf` (see [42](https://github.com/RobotlegsJS/RobotlegsJS-Phaser/pull/42)).
-
-- Update TypeScript Compiler Options (see [43](https://github.com/RobotlegsJS/RobotlegsJS-Phaser/pull/43), [49](https://github.com/RobotlegsJS/RobotlegsJS-Phaser/pull/49)).
-
-- Use [tslib](https://github.com/Microsoft/tslib) library to avoid duplicated declarations (see [49](https://github.com/RobotlegsJS/RobotlegsJS-Phaser/pull/49)).
-
-- Enforce TSLint rules (see [44](https://github.com/RobotlegsJS/RobotlegsJS-Phaser/pull/44)).
-
-- Adopts year-agnostic copyright message (see [47](https://github.com/RobotlegsJS/RobotlegsJS-Phaser/pull/47)).
-
-- Update dev dependencies to latest version.
-
-#### Removed
-
-- Remove `eventemitter3` dependency (see [45](https://github.com/RobotlegsJS/RobotlegsJS-Phaser/pull/45)).
-
-## RobotlegsJS Phaser-CE 0.0.1 (published as `@robotlegsjs/phaser`)
-
-### [v0.0.5](https://github.com/RobotlegsJS/RobotlegsJS-Phaser/releases/tag/0.0.5) - 2017-09-26
-
-#### Changed
-
-- Update `@robotlegsjs/core` to version `0.0.6` (see [9](https://github.com/RobotlegsJS/RobotlegsJS-Phaser/pull/9)).
-
-- Update `phaser-ce` to version `2.8.8` (see [10](https://github.com/RobotlegsJS/RobotlegsJS-Phaser/pull/10)).
-
-- Adapt to NPM [v5.0.0](http://blog.npmjs.org/post/161081169345/v500) (see [7](https://github.com/RobotlegsJS/RobotlegsJS-Phaser/pull/7)).
-
-- Update dev dependencies to latest version.
-
-### [v0.0.4](https://github.com/RobotlegsJS/RobotlegsJS-Phaser/releases/tag/0.0.4) - 2017-09-15
-
-#### Added
-
-- Add support to [Prettier](https://prettier.io) code formatter (see [6](https://github.com/RobotlegsJS/RobotlegsJS-Phaser/pull/6)).
-
-- Add integration with [CodeBeat](https://codebeat.co) (see [6](https://github.com/RobotlegsJS/RobotlegsJS-Phaser/pull/6)).
-
-#### Changed
-
-- Update `@robotlegsjs/core` to version `0.0.5` (see [5](https://github.com/RobotlegsJS/RobotlegsJS-Phaser/pull/5)).
-
-- Update `phaser-ce` to version `2.8.7` (see [6](https://github.com/RobotlegsJS/RobotlegsJS-Phaser/pull/6)).
-
-- Update TSLint rules (see [6](https://github.com/RobotlegsJS/RobotlegsJS-Phaser/pull/6)).
-
-- Update dev dependencies to latest version.
-
-### [v0.0.3](https://github.com/RobotlegsJS/RobotlegsJS-Phaser/releases/tag/0.0.3) - 2017-08-30
-
-#### Changed
-
-- Update `@robotlegsjs/core` to version `0.0.4` (see [4](https://github.com/RobotlegsJS/RobotlegsJS-Phaser/pull/4)).
-
-- Update `phaser-ce` to version `2.8.4`.
-
-- Enable GreenKeeper.
-
-- Update dev dependencies to latest version.
-
-### [v0.0.2](https://github.com/RobotlegsJS/RobotlegsJS-Phaser/releases/tag/0.0.2) - 2017-08-12
-
-#### Changed
-
-- Update `@robotlegsjs/core` to version `0.0.3`.
-
-- Update contributing guidelines.
-
-- Update dev dependencies to latest version.
-
-### [v0.0.1](https://github.com/RobotlegsJS/RobotlegsJS-Phaser/releases/tag/0.0.1) - 2017-08-06
-
-- The version **0.0.1** integrated version **2.8.3** of [**phaser-ce**](https://www.npmjs.com/package/phaser-ce) package.
