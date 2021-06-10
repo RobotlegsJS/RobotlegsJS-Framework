@@ -1,0 +1,60 @@
+{
+  "name": "@robotlegsjs/core",
+  "entries": [
+    {
+      "version": "3.0.0",
+      "tag": "@robotlegsjs/core_v3.0.0",
+      "date": "Thu, 10 Jun 2021 20:53:33 GMT",
+      "comments": {
+        "minor": [
+          {
+            "comment": "Update readmes and contributing guidelines, remove outdated references, fix broken links and update publish scripts (see [13](https://github.com/RobotlegsJS/RobotlegsJS-Framework/pull/13))"
+          },
+          {
+            "comment": "Setup `.github` community profile files for the **monorepo** structure and remove local `packages/**/.github` folders (see [9](https://github.com/RobotlegsJS/RobotlegsJS-Framework/pull/9))"
+          },
+          {
+            "comment": "Migrate from **TSLint** to **ESLint** version **7.28.0** (see [6](https://github.com/RobotlegsJS/RobotlegsJS-Framework/pull/6))"
+          },
+          {
+            "comment": "Use the **RobotlegsJS-Framework** name for the monorepo approach (see [11](https://github.com/RobotlegsJS/RobotlegsJS-Framework/pull/11))"
+          },
+          {
+            "comment": "Setup [rush](https://rushjs.io/) to be used as monorepo manager (see [1](https://github.com/RobotlegsJS/RobotlegsJS-Framework/pull/1))"
+          },
+          {
+            "comment": "For the changelog of older versions, check the following [changelog](https://github.com/RobotlegsJS/RobotlegsJS/tree/master/CHANGELOG.md)"
+          },
+          {
+            "comment": "Enable **rush-prettier** git hook based on [Enabling Prettier](https://rushjs.io/pages/maintainer/enabling_prettier/) (see [5](https://github.com/RobotlegsJS/RobotlegsJS-Framework/pull/5))"
+          },
+          {
+            "comment": "Setup continuous integration (CI) workflow using [GitHub Actions](https://docs.github.com/en/actions) (see [12](https://github.com/RobotlegsJS/RobotlegsJS-Framework/pull/12))"
+          }
+        ],
+        "major": [
+          {
+            "comment": "Update [inversify](https://www.npmjs.com/package/inversify) to version **5.1.1** (see [8](https://github.com/RobotlegsJS/RobotlegsJS-Framework/pull/8))"
+          },
+          {
+            "comment": "Update [tslib](https://www.npmjs.com/package/tslib) to version **2.2.0** and [typescript](https://www.npmjs.com/package/typescript) to version **4.2.4** (see [3](https://github.com/RobotlegsJS/RobotlegsJS-Framework/pull/3))"
+          }
+        ],
+        "patch": [
+          {
+            "comment": "Update [karma](https://www.npmjs.com/package/karma) to version **6.3.2** and [webpack](https://www.npmjs.com/package/webpack) to version **5.38.1** (see [2](https://github.com/RobotlegsJS/RobotlegsJS-Framework/pull/2))"
+          },
+          {
+            "comment": "Update [mocha](https://www.npmjs.com/package/mocha) to version **9.0.0** and [webpack-cli](https://www.npmjs.com/package/webpack-cli) to version **4.7.2** (see [10](https://github.com/RobotlegsJS/RobotlegsJS-Framework/pull/10))"
+          },
+          {
+            "comment": "Update [prettier](https://www.npmjs.com/package/prettier) to version **2.3.0**, move configuration files to the root of mono repo structure and apply prettier changes (see [4](https://github.com/RobotlegsJS/RobotlegsJS-Framework/pull/4))"
+          },
+          {
+            "comment": "Update [prettier](https://www.npmjs.com/package/prettier) to version **2.3.1**, update prettier badge and add project-specific files to global `.gitignore` and `.prettierignore` files (see [7](https://github.com/RobotlegsJS/RobotlegsJS-Framework/pull/7))"
+          }
+        ]
+      }
+    }
+  ]
+}

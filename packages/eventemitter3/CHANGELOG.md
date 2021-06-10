@@ -1,108 +1,30 @@
-# RobotlegsJS EventEmitter3 Changelog
+# Change Log - @robotlegsjs/eventemitter3
 
-All notable changes to this project will be documented in this file.
+This log was last generated on Thu, 10 Jun 2021 20:53:33 GMT and should not be manually modified.
 
-The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
-and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+## 3.0.0
+Thu, 10 Jun 2021 20:53:33 GMT
 
-## [Unreleased]
+### Breaking changes
 
-<!--
-Types of changes:
+- Update [inversify](https://www.npmjs.com/package/inversify) to version **5.1.1** (see [8](https://github.com/RobotlegsJS/RobotlegsJS-Framework/pull/8))
+- Update [tslib](https://www.npmjs.com/package/tslib) to version **2.2.0** and [typescript](https://www.npmjs.com/package/typescript) to version **4.2.4** (see [3](https://github.com/RobotlegsJS/RobotlegsJS-Framework/pull/3))
 
-#### Added
-- for new features.
+### Minor changes
 
-#### Changed
-- for changes in existing functionality.
+- Update readmes and contributing guidelines, remove outdated references, fix broken links and update publish scripts (see [13](https://github.com/RobotlegsJS/RobotlegsJS-Framework/pull/13))
+- Setup `.github` community profile files for the **monorepo** structure and remove local `packages/**/.github` folders (see [9](https://github.com/RobotlegsJS/RobotlegsJS-Framework/pull/9))
+- Migrate from **TSLint** to **ESLint** version **7.28.0** (see [6](https://github.com/RobotlegsJS/RobotlegsJS-Framework/pull/6))
+- Use the **RobotlegsJS-Framework** name for the monorepo approach. (see [11](https://github.com/RobotlegsJS/RobotlegsJS-Framework/pull/11))
+- Setup [rush](https://rushjs.io/) to be used as monorepo manager (see [1](https://github.com/RobotlegsJS/RobotlegsJS-Framework/pull/1))
+- For the changelog of older versions, check the following [changelog](https://github.com/RobotlegsJS/RobotlegsJS-EventEmitter3/tree/master/CHANGELOG.md)
+- Enable **rush-prettier** git hook based on [Enabling Prettier](https://rushjs.io/pages/maintainer/enabling_prettier/) (see [5](https://github.com/RobotlegsJS/RobotlegsJS-Framework/pull/5))
+- Setup continuous integration (CI) workflow using [GitHub Actions](https://docs.github.com/en/actions) (see [12](https://github.com/RobotlegsJS/RobotlegsJS-Framework/pull/12))
 
-#### Deprecated
-- for soon-to-be removed features.
+### Patches
 
-#### Removed
-- for now removed features.
+- Update [karma](https://www.npmjs.com/package/karma) to version **6.3.2** and [webpack](https://www.npmjs.com/package/webpack) to version **5.38.1** (see [2](https://github.com/RobotlegsJS/RobotlegsJS-Framework/pull/2))
+- Update [mocha](https://www.npmjs.com/package/mocha) to version **9.0.0** and [webpack-cli](https://www.npmjs.com/package/webpack-cli) to version **4.7.2** (see [10](https://github.com/RobotlegsJS/RobotlegsJS-Framework/pull/10))
+- Update [prettier](https://www.npmjs.com/package/prettier) to version **2.3.0**, move configuration files to the root of mono repo structure and apply prettier changes (see [4](https://github.com/RobotlegsJS/RobotlegsJS-Framework/pull/4))
+- Update [prettier](https://www.npmjs.com/package/prettier) to version **2.3.1**, update prettier badge and add project-specific files to global `.gitignore` and `.prettierignore` files (see [7](https://github.com/RobotlegsJS/RobotlegsJS-Framework/pull/7))
 
-#### Fixed
-- for any bug fixes.
-
-#### Security
-- in case of vulnerabilities.
--->
-
-## Robotlegs-EventEmitter3 2.0.0
-
-### [v2.0.0](https://github.com/RobotlegsJS/RobotlegsJS-EventEmitter3/releases/tag/2.0.0) - 2020-03-03
-
-#### Breaking Change
-
-- Update [`@robotlegsjs/core`](https://github.com/RobotlegsJS/RobotlegsJS) to version `^2.0.0` (see #50).
-
-  - Migrate array notation from `Array<SomeType>` to `SomeType[]`.
-
-  - The rest of the `Public API` remains unchanged.
-
-#### Added
-
-- Add **Tidelift** as funding option (see #46).
-
-- Add **Enterprise Support** information (see #47).
-
-#### Changed
-
-- Update `tslib` to version `1.11.1` (see #49).
-
-- Update dev dependencies to latest version.
-
-#### Security
-
-- Migrate to [terser-webpack-plugin](https://github.com/webpack-contrib/terser-webpack-plugin) to solve security vulnerability (see #45).
-
-## Robotlegs-EventEmitter3 1.0.0
-
-### [v1.0.2](https://github.com/RobotlegsJS/RobotlegsJS-EventEmitter3/releases/tag/1.0.2) - 2019-10-24
-
-#### Changed
-
-- Update `@robotlegsjs/core` to version `1.0.3` (see #37).
-
-- Update `instanbul` settings (see #36).
-
-- Migrate project to `travis-ci.com`.
-
-- Update `codebeat` Project UUID.
-
-- Update dev dependencies to latest version.
-
-### [v1.0.1](https://github.com/RobotlegsJS/RobotlegsJS-EventEmitter3/releases/tag/1.0.1) - 2019-03-21
-
-#### Changed
-
-- Update [`@robotlegsjs/core`](https://github.com/RobotlegsJS/RobotlegsJS) to version `1.0.1` (see #23).
-
-- Improve `prettier` rules and `autoformat` script (see #22).
-
-- Enable `"editor.formatOnSave"` rule for `VS Code` (see #22).
-
-- Update dev dependencies to latest version.
-
-### [v1.0.0](https://github.com/RobotlegsJS/RobotlegsJS-EventEmitter3/releases/tag/1.0.0) - 2018-11-25
-
-#### Changed
-
-- Update `@robotlegsjs/core` to version `1.0.0` (see #14).
-
-- Enable `greenkeeper` (see #2).
-
-- Migrate to Headless Chrome and improve performance of `karma` (see #10).
-
-- Prepare package for stable version (see #11).
-
-- Update GitHub Templates (see #13).
-
-- Update dev dependencies to latest version.
-
-## Robotlegs-EventEmitter3 0.0.1
-
-### [v0.0.1](https://github.com/RobotlegsJS/RobotlegsJS-EventEmitter3/releases/tag/0.0.1) - 2018-09-14
-
-- Extends `IEventMap` to support `EventEmitter3` events (see #1).

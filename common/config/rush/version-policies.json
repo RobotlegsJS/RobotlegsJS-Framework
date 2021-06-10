@@ -89,7 +89,6 @@
   // }
   {
     "policyName": "robotlegsjs",
-    "definitionName": "individualVersion",
-    "exemptFromRushChange": false
+    "definitionName": "individualVersion"
   }
 ]
