@@ -3,8 +3,8 @@ lockfileVersion: 5.3
 specifiers:
   '@istanbuljs/nyc-config-typescript': ^1.0.1
   '@mcler/webpack-concat-plugin': ^4.1.3
-  '@robotlegsjs/signalcommandmap': ^2.0.0
-  '@robotlegsjs/signals': ^1.1.0
+  '@robotlegsjs/signalcommandmap': ^3.0.0
+  '@robotlegsjs/signals': ^2.0.0
   '@rush-temp/core': file:./projects/core.tgz
   '@rush-temp/createjs': file:./projects/createjs.tgz
   '@rush-temp/eventemitter3': file:./projects/eventemitter3.tgz
@@ -87,8 +87,8 @@ specifiers:
 dependencies:
   '@istanbuljs/nyc-config-typescript': 1.0.1_40f74ebf3b42f8d97356b2262606f547
   '@mcler/webpack-concat-plugin': 4.1.3_113243b053f7620383bd9a5a80771064
-  '@robotlegsjs/signalcommandmap': 2.0.0
-  '@robotlegsjs/signals': 1.1.0
+  '@robotlegsjs/signalcommandmap': 3.0.0
+  '@robotlegsjs/signals': 2.0.0
   '@rush-temp/core': file:projects/core.tgz
   '@rush-temp/createjs': file:projects/createjs.tgz
   '@rush-temp/eventemitter3': file:projects/eventemitter3.tgz
@@ -811,25 +811,25 @@ packages:
       url: 0.11.0
     dev: false
 
-  /@robotlegsjs/core/2.0.0:
-    resolution: {integrity: sha512-yucJHS2aWoCQejV4SOKAfh61wVZXjjD2AX7fgIlYkRNErTHxtliISDla95AW5AhlpNuymTXA63afkbqqsysTyw==}
+  /@robotlegsjs/core/3.0.0:
+    resolution: {integrity: sha512-U5vkN+XlGpKuiXL6ljgORf0SZq7sfFK0T5DsQRdGQFwgT7Gnyfu5VUCJg0imLxw/kWX9DpT4AGmv9M1wKceRaw==}
     dependencies:
       inversify: 5.1.1
-      tslib: 1.14.1
+      tslib: 2.2.0
     dev: false
 
-  /@robotlegsjs/signalcommandmap/2.0.0:
-    resolution: {integrity: sha512-XVii9maxNoz6ArpgF3Kgg54XpPnsjmoSOaGui3X0MbtTj/INS0z2xSagE9DVDnzFrg1b4rVQC3XWLZJD5mfLUA==}
+  /@robotlegsjs/signalcommandmap/3.0.0:
+    resolution: {integrity: sha512-b/R/iBbA1LhAHoDdTej9pbf5Z/RsAKekcmHqCHpvx6QeCySBfl1qpFoLfFdezdnw9Tm3S43zxEULvTY4CuGlZQ==}
     dependencies:
-      '@robotlegsjs/core': 2.0.0
-      '@robotlegsjs/signals': 1.1.0
-      tslib: 1.14.1
+      '@robotlegsjs/core': 3.0.0
+      '@robotlegsjs/signals': 2.0.0
+      tslib: 2.2.0
     dev: false
 
-  /@robotlegsjs/signals/1.1.0:
-    resolution: {integrity: sha512-2fFN87/IFSZSnO3TiA+xzRVP6Ift8+/3R6vafcpzu4HYtF86158xFZt2LAMdjb8RLTnIM+Ftbrbq+iGlsmmDtQ==}
+  /@robotlegsjs/signals/2.0.0:
+    resolution: {integrity: sha512-1SHNMqcJ2+sCxh8M2FreEGfAOiCObv63ZW41lnAnWO0FB3kiLBCUte63Unv9PpAoaGzEpofFxcNm2iaw+z4wAg==}
     dependencies:
-      tslib: 1.14.1
+      tslib: 2.2.0
     dev: false
 
   /@rushstack/eslint-config/2.3.4_eslint@7.28.0+typescript@4.2.4:
@@ -8555,7 +8555,7 @@ packages:
     dev: false
 
   file:projects/createjs.tgz:
-    resolution: {integrity: sha512-bFvkP0DlZYJMrXDUZjFSOuIRCnoQUdFpFjpRUhqIDUx1ecb3b3w4DPAvkZDJJuB7ggs3zRiHquU6eXMnxS1wHw==, tarball: file:projects/createjs.tgz}
+    resolution: {integrity: sha512-Ptu0QI3uGC4u7orpleIQwg7Xv8/XvUvz5DO8vRRxxiL84ycjOccA/R9SEsEAO+OFPm/EYLHu3bZGRQjfWnDL+Q==, tarball: file:projects/createjs.tgz}
     name: '@rush-temp/createjs'
     version: 0.0.0
     dependencies:
@@ -8628,7 +8628,7 @@ packages:
     dev: false
 
   file:projects/eventemitter3.tgz:
-    resolution: {integrity: sha512-a4pmQw8kH/yr/8xM9lbg1ZelLTo/3Q9Jt/u4pEMi3HgCjFNhtVQQ1J5j+bF7txc/64xYwtelmtgVK8zSAqqpIw==, tarball: file:projects/eventemitter3.tgz}
+    resolution: {integrity: sha512-1Hu2omBL5W+7rMuLufddg5nVyhz+Igs4FHoJIw3I6tu7QM2GPMzdeN0qYQjgr2h59dg4cyD2hAtXHYfH/ZHnxw==, tarball: file:projects/eventemitter3.tgz}
     name: '@rush-temp/eventemitter3'
     version: 0.0.0
     dependencies:
@@ -8698,13 +8698,13 @@ packages:
     dev: false
 
   file:projects/macrobot.tgz:
-    resolution: {integrity: sha512-jDu0NE3s2qaDfQZUvDu5oCD4a5LeljGoL/M/9NoAfNpoF8JbuhHI89bpS7rZa6t3KyRZlggABBoDDrp/pBYhBg==, tarball: file:projects/macrobot.tgz}
+    resolution: {integrity: sha512-uwhYVzYgrATvKD4lP31c1uzovuXS9ihASE0Db8v+SIvvPon9B2vY0vPxm8+UBM+x6BpaNXYCcb0NjSn09yFY0Q==, tarball: file:projects/macrobot.tgz}
     name: '@rush-temp/macrobot'
     version: 0.0.0
     dependencies:
       '@istanbuljs/nyc-config-typescript': 1.0.1_40f74ebf3b42f8d97356b2262606f547
-      '@robotlegsjs/signalcommandmap': 2.0.0
-      '@robotlegsjs/signals': 1.1.0
+      '@robotlegsjs/signalcommandmap': 3.0.0
+      '@robotlegsjs/signals': 2.0.0
       '@rushstack/eslint-config': 2.3.4_eslint@7.28.0+typescript@4.2.4
       '@types/bluebird': 3.5.35
       '@types/chai': 4.2.18
@@ -8767,7 +8767,7 @@ packages:
     dev: false
 
   file:projects/openfl.tgz:
-    resolution: {integrity: sha512-dVm77sZRbz5pslIEZiGv4Wc7e8aNCSTAd/Gt8aNkHMt4aZTTRajmFrlJbEpyWrU6CSiqr6T7M5CNaeuy47COBA==, tarball: file:projects/openfl.tgz}
+    resolution: {integrity: sha512-X1OJxkg7zgEfZYAKz6xAL1g0UrBhgZZ4eVBusozRovtZi0xEHkHqV/Cqvyc0HL4xbCa92Di1X6qZW0qo0AgBWA==, tarball: file:projects/openfl.tgz}
     name: '@rush-temp/openfl'
     version: 0.0.0
     dependencies:
@@ -8835,7 +8835,7 @@ packages:
     dev: false
 
   file:projects/phaser-ce-signalcommandmap.tgz:
-    resolution: {integrity: sha512-HL6nelmLkm5zB1srqAxShvRL14S2KkV+2pr72x6VLBD+1umu7wYGU1UIWSCzkS3/VriWRw0kBBbah48TSyWpRw==, tarball: file:projects/phaser-ce-signalcommandmap.tgz}
+    resolution: {integrity: sha512-6fHYMxtib2gOofK/DgLEur7hJNtnB3i+p2eGvrcs5WAfZG4Onzo+9whZBKOK2Bjr/ryx4KXgAxhLTr6fVqn8Jw==, tarball: file:projects/phaser-ce-signalcommandmap.tgz}
     name: '@rush-temp/phaser-ce-signalcommandmap'
     version: 0.0.0
     dependencies:
@@ -8899,7 +8899,7 @@ packages:
     dev: false
 
   file:projects/phaser-ce.tgz:
-    resolution: {integrity: sha512-2Bw6UuyRL5H0lVDQmhhWxcsQJ41i4A23gMmIM4WZFT2vAJ6VpQXHs7LjgOB6HuyXDw1aMX8U+GHbl978rzycEg==, tarball: file:projects/phaser-ce.tgz}
+    resolution: {integrity: sha512-tteDMqGREvAkhUr9M1dHy7zjDl0b19d1A55qvTX1ZLG5hZqrQgW3YjqliCsX9vmsTk2OUrMu71YvXSoAqBGHXw==, tarball: file:projects/phaser-ce.tgz}
     name: '@rush-temp/phaser-ce'
     version: 0.0.0
     dependencies:
@@ -8967,7 +8967,7 @@ packages:
     dev: false
 
   file:projects/phaser.tgz:
-    resolution: {integrity: sha512-vDiYs5w5cHQSqUGOdr0gWzmSV/qdUOC0fuXjI1dR2pCvCnOM6xTRm1tQNLzvkWpNwHvmXGz4ehj8eKGmuNOheQ==, tarball: file:projects/phaser.tgz}
+    resolution: {integrity: sha512-9ywIgeCYRkjCldM/5Cs+IY4vCTSSsAduRR7hKQQQCGTqo3IWNMfu38sKxzjhtcOLGWGhOdFykq8JXmjYSlp1Qw==, tarball: file:projects/phaser.tgz}
     name: '@rush-temp/phaser'
     version: 0.0.0
     dependencies:
@@ -9036,7 +9036,7 @@ packages:
     dev: false
 
   file:projects/pixi-palidor.tgz:
-    resolution: {integrity: sha512-c+YLKm2iSIowou+p0sv78U6z8WB/V6pihDHnxMiVnTV8XzvUDyNAIJFW13sjvjhO3GAL34erIg/2yiHBgkpcsw==, tarball: file:projects/pixi-palidor.tgz}
+    resolution: {integrity: sha512-BIS0IJTJ7QGgL6+pKFg9vcJ5ghClTZ8O96+Ws6Oe1PFtRLvYEg8A67MVxiSzBojvuKQVs0R+h2dqBfalPaJUuw==, tarball: file:projects/pixi-palidor.tgz}
     name: '@rush-temp/pixi-palidor'
     version: 0.0.0
     dependencies:
@@ -9104,7 +9104,7 @@ packages:
     dev: false
 
   file:projects/pixi-signalmediator.tgz:
-    resolution: {integrity: sha512-XQYJoLG+1l15hjvhUsFOFS1xj7w5AjZxCC7q5Z05sBCgFYIB0y13ISARlTn5dbTT7cmoprDlfHsuF1HSk9zrFQ==, tarball: file:projects/pixi-signalmediator.tgz}
+    resolution: {integrity: sha512-249HU/0IqG8xHXn423L2sEUahMqezoc3fDVc8e+dmBdMxapvy4ERi3MziktiBKZY9BuNSULX+4Ct2vfFMMdLzA==, tarball: file:projects/pixi-signalmediator.tgz}
     name: '@rush-temp/pixi-signalmediator'
     version: 0.0.0
     dependencies:
@@ -9173,7 +9173,7 @@ packages:
     dev: false
 
   file:projects/pixi.tgz:
-    resolution: {integrity: sha512-oAYmuewrYNxQwKdASudvr3Rh9wCMENvfWrFaL5KPF4AMtsH0aIfrpH6U5PTUvXiFQBQjlYjGJOwXQHBud58KFQ==, tarball: file:projects/pixi.tgz}
+    resolution: {integrity: sha512-S6MxalekbWOyb1TSh0esw+w+9U9aMwGvkxaMpv3o69CWpgY0zxN4V3DiQ5kS95yTJM1fogsDk02+6IQ5rYazEQ==, tarball: file:projects/pixi.tgz}
     name: '@rush-temp/pixi'
     version: 0.0.0
     dependencies:
@@ -9240,7 +9240,7 @@ packages:
     dev: false
 
   file:projects/signalcommandmap.tgz:
-    resolution: {integrity: sha512-CTznTryQDzG8hEzDcu0e2SMBZb2VgCOy2pz//nbtQW5x4ykcZ5pfCMyOz07P1gTzX8KgXjGy+9fCnrDiedsDgg==, tarball: file:projects/signalcommandmap.tgz}
+    resolution: {integrity: sha512-iJd+A/CkfiDQo9F+naxSVUf6Vb6Q1atuRhRqZpjaOatCjNB/s0sxu5xF0oC6MfGD0/JM6KL+GCyhekPuJrxqCA==, tarball: file:projects/signalcommandmap.tgz}
     name: '@rush-temp/signalcommandmap'
     version: 0.0.0
     dependencies:
