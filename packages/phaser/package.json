@@ -27,7 +27,7 @@
     "deploy:example": "./deploy-example.sh",
     "build": "npm run cleanup && npm run compile:src",
     "prepare": "npm run build",
-    "prepublishOnly": "npm run autoformat && npm run lint && npm run test && npm run build"
+    "prepublishOnly": "npm run build"
   },
   "repository": {
     "url": "https://github.com/RobotlegsJS/RobotlegsJS-Framework/tree/master/packages/phaser"
@@ -61,7 +61,7 @@
     "lib": "./lib"
   },
   "dependencies": {
-    "@robotlegsjs/core": "^2.0.0",
+    "@robotlegsjs/core": "^3.0.0",
     "tslib": "^2.2.0"
   },
   "peerDependencies": {

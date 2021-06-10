@@ -1,0 +1,11 @@
+{
+  "changes": [
+    {
+      "packageName": "@robotlegsjs/pixi-signalmediator",
+      "comment": "Update [@robotlegsjs/core](https://www.npmjs.com/package/@robotlegsjs/core) to version **3.0.0** (see [15](https://github.com/RobotlegsJS/RobotlegsJS-Framework/pull/15))",
+      "type": "major"
+    }
+  ],
+  "packageName": "@robotlegsjs/pixi-signalmediator",
+  "email": "tiago.schenkel@gmail.com"
+}
