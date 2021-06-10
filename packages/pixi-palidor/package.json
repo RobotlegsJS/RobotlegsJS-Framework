@@ -28,7 +28,7 @@
     "deploy:example": "./deploy-example.sh",
     "build": "npm run cleanup && npm run compile:src",
     "prepare": "npm run build",
-    "prepublishOnly": "npm run autoformat && npm run lint && npm run test && npm run build"
+    "prepublishOnly": "npm run build"
   },
   "repository": {
     "url": "https://github.com/RobotlegsJS/RobotlegsJS-Framework/tree/master/packages/pixi-palidor"
