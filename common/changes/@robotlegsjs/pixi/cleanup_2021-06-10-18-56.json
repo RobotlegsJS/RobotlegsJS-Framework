@@ -1,0 +1,11 @@
+{
+  "changes": [
+    {
+      "packageName": "@robotlegsjs/pixi",
+      "comment": "Update readmes and contributing guidelines, remove outdated references, fix broken links and update publish scripts (see [13](https://github.com/RobotlegsJS/RobotlegsJS-Framework/pull/13))",
+      "type": "minor"
+    }
+  ],
+  "packageName": "@robotlegsjs/pixi",
+  "email": "tiago.schenkel@gmail.com"
+}
