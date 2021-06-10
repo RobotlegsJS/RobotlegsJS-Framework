@@ -118,10 +118,6 @@ yarn install
 yarn start
 ```
 
-## Checking the example
-
-You can check our example project [here](http://robotlegsjs.io/RobotlegsJS-Phaser).
-
 ## RobotlegsJS integration with Phaser CE (Community Edition)
 
 The `@robotlegsjs/phaser` package was updated to support [Phaser v3](https://www.npmjs.com/package/phaser) plugin.

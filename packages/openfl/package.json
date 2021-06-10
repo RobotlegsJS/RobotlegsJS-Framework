@@ -17,7 +17,7 @@
     "lint:test": "eslint -c .eslintrc.js --ext .ts ./test",
     "lint:example": "eslint -c .eslintrc.js --ext .ts ./example",
     "lint": "npm run lint:src && npm run lint:test && npm run lint:example",
-    "clean-up": "rimraf .nyc_output && rimraf coverage && rimraf lib && rimraf lib-test && rimraf lib-example && rimraf dist && rimraf dist-test",
+    "cleanup": "rimraf .nyc_output && rimraf coverage && rimraf lib && rimraf lib-test && rimraf lib-example && rimraf dist && rimraf dist-test",
     "compile:src": "tsc -d --importHelpers",
     "compile:test": "tsc -p tsconfig.test.json -d --importHelpers",
     "compile:example": "tsc -p tsconfig.example.json -d --importHelpers",
@@ -25,9 +25,9 @@
     "dist:production": "webpack --env production",
     "build:example": "webpack --config ./webpack.example.config.js --env.production",
     "deploy:example": "./deploy-example.sh",
-    "build": "npm run clean-up && npm run compile:src",
-    "prepare": "npm run clean-up && npm run compile:src",
-    "publish-please": "npm run lint && npm run autoformat && npm run clean-up && npm run test && publish-please"
+    "build": "npm run cleanup && npm run compile:src",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm run autoformat && npm run lint && npm run test && npm run build"
   },
   "repository": {
     "url": "https://github.com/RobotlegsJS/RobotlegsJS-Framework/tree/master/packages/openfl"

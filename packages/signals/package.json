@@ -14,14 +14,14 @@
     "lint:test": "eslint -c .eslintrc.js --ext .ts ./test",
     "lint": "npm run lint:src && npm run lint:test",
     "autoformat": "prettier --config ../../.prettierrc --ignore-path ../../.prettierignore --write --list-different .",
-    "clean-up": "rimraf .nyc_output && rimraf coverage && rimraf lib && rimraf lib-test && rimraf dist-test",
+    "cleanup": "rimraf .nyc_output && rimraf coverage && rimraf lib && rimraf lib-test && rimraf dist-test",
     "compile:src": "tsc -d --importHelpers",
     "compile:test": "tsc -p tsconfig.test.json -d --importHelpers",
     "dist:dev": "webpack",
     "dist:production": "webpack --env production",
-    "build": "npm run clean-up && npm run compile:src",
-    "prepare": "npm run clean-up && npm run compile:src",
-    "publish-please": "npm run lint && npm run autoformat && npm run clean-up && npm run dist:production && npm run test && publish-please"
+    "build": "npm run cleanup && npm run compile:src",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm run autoformat && npm run lint && npm run test && npm run build"
   },
   "nyc": {
     "extends": "@istanbuljs/nyc-config-typescript",
