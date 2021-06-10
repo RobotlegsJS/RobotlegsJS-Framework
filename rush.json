@@ -484,7 +484,6 @@
       "reviewCategory": "production",
       "versionPolicyName": "robotlegsjs"
     },
-    /*
     {
       "packageName": "@robotlegsjs/macrobot",
       "projectFolder": "packages/macrobot",
@@ -492,7 +491,6 @@
       "versionPolicyName": "robotlegsjs",
       "cyclicDependencyProjects": ["@robotlegsjs/signalcommandmap", "@robotlegsjs/signals"]
     },
-    */
     {
       "packageName": "@robotlegsjs/createjs",
       "projectFolder": "packages/createjs",
