@@ -17,47 +17,47 @@ The RobotlegsJS projects are all developed in the **RobotlegsJS-Framework** mono
 We use the [Rush](http://rushjs.io) tool for building projects in the **RobotlegsJS-Framework** monorepo.
 
 1. Make sure you have the latest release of Rush:
-```
+```bash
 npm install -g @microsoft/rush
 ```
 
 2. Clone the repo:
-```
+```bash
 git clone https://github.com/RobotlegsJS/RobotlegsJS-Framework.git
 ```
 
 or (when using your SSH key)
-```
+```bash
 git clone git@github.com:RobotlegsJS/RobotlegsJS-Framework.git
 ```
 
 3. Use rush to install the package dependencies:
-```
+```bash
 cd RobotlegsJS-Framework
 rush install
 ```
 
 4. Rebuild all the projects in the repo:
-```
+```bash
 rush rebuild
 ```
 
 Subsequent calls of `rush rebuild` might be faster, since the project is using the [build cache](https://rushjs.io/pages/maintainer/build_cache) configuration.
 
 When you would like to force the rebuild of all packages, you can use the following command:
-```
+```bash
 rush rebuild --disable-build-cache
 ```
 
 
 5. If you want to build just one project:
-```
+```bash
 cd RobotlegsJS-Framework\packages\core
 rushx build
 ```
 
 6. After implementing your changes, please run the following commands and have sure that they are still passing:
-```
+```bash
 rush autoformat --verbose
 rush rebuild --verbose
 rush lint --verbose
