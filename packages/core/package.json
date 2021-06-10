@@ -20,8 +20,8 @@
     "dist:dev": "webpack",
     "dist:production": "webpack --env production",
     "build": "npm run cleanup && npm run compile:src",
-    "prepare": "npm run cleanup && npm run compile:src",
-    "publish-please": "npm run lint && npm run autoformat && npm run cleanup && npm run test && publish-please"
+    "prepare": "npm run cleanup",
+    "prepublishOnly": "npm run autoformat && npm run lint && npm run test && npm run build"
   },
   "nyc": {
     "extends": "@istanbuljs/nyc-config-typescript",

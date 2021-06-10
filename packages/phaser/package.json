@@ -26,8 +26,8 @@
     "build:example": "webpack --config ./webpack.example.config.js --env.production",
     "deploy:example": "./deploy-example.sh",
     "build": "npm run cleanup && npm run compile:src",
-    "prepare": "npm run cleanup && npm run compile:src",
-    "publish-please": "npm run lint && npm run autoformat && npm run cleanup && npm run test && publish-please"
+    "prepare": "npm run cleanup",
+    "prepublishOnly": "npm run autoformat && npm run lint && npm run test && npm run build"
   },
   "repository": {
     "url": "https://github.com/RobotlegsJS/RobotlegsJS-Framework/tree/master/packages/phaser"
