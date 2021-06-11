@@ -227,7 +227,10 @@
   //   // "ignoredNpmScopes": ["@types"]
   // },
   "approvedPackagesPolicy": {
-    "reviewCategories": ["production"],
+    "reviewCategories": [
+      "production", // library projects that ship
+      "tests" // non-shipping test projects
+    ],
     // We don't need to review @types packages, because we can assume
     // the untyped package should already have been approved
     "ignoredNpmScopes": ["@types"]
@@ -488,8 +491,7 @@
       "packageName": "@robotlegsjs/macrobot",
       "projectFolder": "packages/macrobot",
       "reviewCategory": "production",
-      "versionPolicyName": "robotlegsjs",
-      "cyclicDependencyProjects": ["@robotlegsjs/signalcommandmap", "@robotlegsjs/signals"]
+      "versionPolicyName": "robotlegsjs"
     },
     {
       "packageName": "@robotlegsjs/createjs",
@@ -538,6 +540,13 @@
       "projectFolder": "packages/phaser",
       "reviewCategory": "production",
       "versionPolicyName": "robotlegsjs"
+    },
+    // "integration-tests" folder (alphabetical order)
+    {
+      "packageName": "integration-macrobot-signalcommandmap",
+      "projectFolder": "integration-tests/macrobot-signalcommandmap",
+      "reviewCategory": "tests",
+      "shouldPublish": false
     }
   ]
 }
