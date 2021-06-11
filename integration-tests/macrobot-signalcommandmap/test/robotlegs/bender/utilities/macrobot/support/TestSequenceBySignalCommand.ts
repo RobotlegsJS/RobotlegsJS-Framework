@@ -7,14 +7,14 @@
 
 import { injectable } from "@robotlegsjs/core";
 
-import { SequenceMacro } from "../../../../../../src/robotlegs/bender/utilities/macrobot/impl/SequenceMacro";
+import { SequenceMacro } from "@robotlegsjs/macrobot";
 
-import { CallbackParametersSequenceCommand } from "./CallbackParametersSequenceCommand";
+import { CallbackParametersCommand } from "./CallbackParametersCommand";
 
 @injectable()
-export class TestNestedSequenceBySignalCommand extends SequenceMacro {
+export class TestSequenceBySignalCommand extends SequenceMacro {
     public prepare(): void {
-        this.add(CallbackParametersSequenceCommand);
-        this.add(CallbackParametersSequenceCommand);
+        this.add(CallbackParametersCommand);
+        this.add(CallbackParametersCommand);
     }
 }

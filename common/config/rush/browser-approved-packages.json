@@ -4,7 +4,7 @@
   "packages": [
     {
       "name": "@istanbuljs/nyc-config-typescript",
-      "allowedCategories": [ "production" ]
+      "allowedCategories": [ "production", "tests" ]
     },
     {
       "name": "@mcler/webpack-concat-plugin",
@@ -12,7 +12,11 @@
     },
     {
       "name": "@robotlegsjs/core",
-      "allowedCategories": [ "production" ]
+      "allowedCategories": [ "production", "tests" ]
+    },
+    {
+      "name": "@robotlegsjs/macrobot",
+      "allowedCategories": [ "tests" ]
     },
     {
       "name": "@robotlegsjs/pixi",
@@ -20,27 +24,27 @@
     },
     {
       "name": "@robotlegsjs/signalcommandmap",
-      "allowedCategories": [ "production" ]
+      "allowedCategories": [ "tests" ]
     },
     {
       "name": "@robotlegsjs/signals",
-      "allowedCategories": [ "production" ]
+      "allowedCategories": [ "production", "tests" ]
     },
     {
       "name": "@rushstack/eslint-config",
-      "allowedCategories": [ "production" ]
+      "allowedCategories": [ "production", "tests" ]
     },
     {
       "name": "bluebird",
-      "allowedCategories": [ "production" ]
+      "allowedCategories": [ "production", "tests" ]
     },
     {
       "name": "browserify-versionify",
-      "allowedCategories": [ "production" ]
+      "allowedCategories": [ "production", "tests" ]
     },
     {
       "name": "chai",
-      "allowedCategories": [ "production" ]
+      "allowedCategories": [ "production", "tests" ]
     },
     {
       "name": "clean-webpack-plugin",
@@ -56,35 +60,35 @@
     },
     {
       "name": "es6-map",
-      "allowedCategories": [ "production" ]
+      "allowedCategories": [ "production", "tests" ]
     },
     {
       "name": "es6-symbol",
-      "allowedCategories": [ "production" ]
+      "allowedCategories": [ "production", "tests" ]
     },
     {
       "name": "eslint",
-      "allowedCategories": [ "production" ]
+      "allowedCategories": [ "production", "tests" ]
     },
     {
       "name": "eslint-plugin-import",
-      "allowedCategories": [ "production" ]
+      "allowedCategories": [ "production", "tests" ]
     },
     {
       "name": "eslint-plugin-jsdoc",
-      "allowedCategories": [ "production" ]
+      "allowedCategories": [ "production", "tests" ]
     },
     {
       "name": "eslint-plugin-prefer-arrow",
-      "allowedCategories": [ "production" ]
+      "allowedCategories": [ "production", "tests" ]
     },
     {
       "name": "eslint-plugin-react",
-      "allowedCategories": [ "production" ]
+      "allowedCategories": [ "production", "tests" ]
     },
     {
       "name": "eslint-plugin-unicorn",
-      "allowedCategories": [ "production" ]
+      "allowedCategories": [ "production", "tests" ]
     },
     {
       "name": "eventemitter3",
@@ -92,7 +96,7 @@
     },
     {
       "name": "glslify",
-      "allowedCategories": [ "production" ]
+      "allowedCategories": [ "production", "tests" ]
     },
     {
       "name": "html-webpack-plugin",
@@ -100,7 +104,7 @@
     },
     {
       "name": "imports-loader",
-      "allowedCategories": [ "production" ]
+      "allowedCategories": [ "production", "tests" ]
     },
     {
       "name": "inversify",
@@ -108,7 +112,7 @@
     },
     {
       "name": "istanbul-instrumenter-loader",
-      "allowedCategories": [ "production" ]
+      "allowedCategories": [ "production", "tests" ]
     },
     {
       "name": "jsdom",
@@ -120,15 +124,15 @@
     },
     {
       "name": "karma",
-      "allowedCategories": [ "production" ]
+      "allowedCategories": [ "production", "tests" ]
     },
     {
       "name": "karma-chai-sinon",
-      "allowedCategories": [ "production" ]
+      "allowedCategories": [ "production", "tests" ]
     },
     {
       "name": "karma-chrome-launcher",
-      "allowedCategories": [ "production" ]
+      "allowedCategories": [ "production", "tests" ]
     },
     {
       "name": "karma-commonjs",
@@ -140,43 +144,43 @@
     },
     {
       "name": "karma-coverage-istanbul-reporter",
-      "allowedCategories": [ "production" ]
+      "allowedCategories": [ "production", "tests" ]
     },
     {
       "name": "karma-es6-shim",
-      "allowedCategories": [ "production" ]
+      "allowedCategories": [ "production", "tests" ]
     },
     {
       "name": "karma-mocha",
-      "allowedCategories": [ "production" ]
+      "allowedCategories": [ "production", "tests" ]
     },
     {
       "name": "karma-mocha-reporter",
-      "allowedCategories": [ "production" ]
+      "allowedCategories": [ "production", "tests" ]
     },
     {
       "name": "karma-sinon-chai",
-      "allowedCategories": [ "production" ]
+      "allowedCategories": [ "production", "tests" ]
     },
     {
       "name": "karma-sourcemap-loader",
-      "allowedCategories": [ "production" ]
+      "allowedCategories": [ "production", "tests" ]
     },
     {
       "name": "karma-sourcemap-writer",
-      "allowedCategories": [ "production" ]
+      "allowedCategories": [ "production", "tests" ]
     },
     {
       "name": "karma-webpack",
-      "allowedCategories": [ "production" ]
+      "allowedCategories": [ "production", "tests" ]
     },
     {
       "name": "mocha",
-      "allowedCategories": [ "production" ]
+      "allowedCategories": [ "production", "tests" ]
     },
     {
       "name": "nyc",
-      "allowedCategories": [ "production" ]
+      "allowedCategories": [ "production", "tests" ]
     },
     {
       "name": "openfl",
@@ -196,15 +200,15 @@
     },
     {
       "name": "prettier",
-      "allowedCategories": [ "production" ]
+      "allowedCategories": [ "production", "tests" ]
     },
     {
       "name": "puppeteer",
-      "allowedCategories": [ "production" ]
+      "allowedCategories": [ "production", "tests" ]
     },
     {
       "name": "reflect-metadata",
-      "allowedCategories": [ "production" ]
+      "allowedCategories": [ "production", "tests" ]
     },
     {
       "name": "remap-istanbul",
@@ -212,51 +216,51 @@
     },
     {
       "name": "rimraf",
-      "allowedCategories": [ "production" ]
+      "allowedCategories": [ "production", "tests" ]
     },
     {
       "name": "sinon",
-      "allowedCategories": [ "production" ]
+      "allowedCategories": [ "production", "tests" ]
     },
     {
       "name": "sinon-chai",
-      "allowedCategories": [ "production" ]
+      "allowedCategories": [ "production", "tests" ]
     },
     {
       "name": "source-map-support",
-      "allowedCategories": [ "production" ]
+      "allowedCategories": [ "production", "tests" ]
     },
     {
       "name": "terser-webpack-plugin",
-      "allowedCategories": [ "production" ]
+      "allowedCategories": [ "production", "tests" ]
     },
     {
       "name": "ts-loader",
-      "allowedCategories": [ "production" ]
+      "allowedCategories": [ "production", "tests" ]
     },
     {
       "name": "ts-node",
-      "allowedCategories": [ "production" ]
+      "allowedCategories": [ "production", "tests" ]
     },
     {
       "name": "tslib",
-      "allowedCategories": [ "production" ]
+      "allowedCategories": [ "production", "tests" ]
     },
     {
       "name": "typescript",
-      "allowedCategories": [ "production" ]
+      "allowedCategories": [ "production", "tests" ]
     },
     {
       "name": "webpack",
-      "allowedCategories": [ "production" ]
+      "allowedCategories": [ "production", "tests" ]
     },
     {
       "name": "webpack-cli",
-      "allowedCategories": [ "production" ]
+      "allowedCategories": [ "production", "tests" ]
     },
     {
       "name": "webpack-dev-server",
-      "allowedCategories": [ "production" ]
+      "allowedCategories": [ "production", "tests" ]
     }
   ]
 }

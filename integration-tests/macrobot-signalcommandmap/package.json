@@ -1,7 +1,8 @@
 {
-  "name": "@robotlegsjs/macrobot",
-  "version": "3.0.1",
-  "description": "TypeScript port of Robotlegs Utilities Macrobot",
+  "name": "integration-macrobot-signalcommandmap",
+  "version": "0.0.1",
+  "private": true,
+  "description": "Integration tests between signals, macrobot, and signalcommandmap",
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
   "scripts": {
@@ -46,40 +47,22 @@
     "sourceMap": true,
     "instrument": true
   },
-  "repository": {
-    "url": "https://github.com/RobotlegsJS/RobotlegsJS-Framework/tree/master/packages/macrobot"
-  },
   "publishConfig": {
     "registry": "https://registry.npmjs.org"
   },
-  "keywords": [
-    "TypeScript",
-    "RobotlegsJS",
-    "IoC",
-    "Macrobot",
-    "AsyncCommand",
-    "SequenceMacro",
-    "ParallelMacro"
-  ],
   "author": "RobotlegsJS",
   "contributors": [
-    "Endel Dreyer <endel.dreyer@gmail.com>",
-    "Sargis Sargsyan <sargsyan.sargis.89@gmail.com>",
     "Tiago Schenkel <tiago.schenkel@gmail.com>"
   ],
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/RobotlegsJS/RobotlegsJS-Framework/issues"
-  },
-  "homepage": "https://github.com/RobotlegsJS/RobotlegsJS-Framework/tree/master/packages/macrobot#readme",
   "files": [
     "lib"
   ],
-  "directories": {
-    "lib": "./lib"
-  },
   "dependencies": {
+    "@robotlegsjs/signals": "^2.0.0",
     "@robotlegsjs/core": "^3.0.0",
+    "@robotlegsjs/signalcommandmap": "^3.0.0",
+    "@robotlegsjs/macrobot": "^3.0.1",
     "tslib": "^2.2.0"
   },
   "devDependencies": {

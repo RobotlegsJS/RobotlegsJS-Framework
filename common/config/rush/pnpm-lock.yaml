@@ -3,11 +3,10 @@ lockfileVersion: 5.3
 specifiers:
   '@istanbuljs/nyc-config-typescript': ^1.0.1
   '@mcler/webpack-concat-plugin': ^4.1.3
-  '@robotlegsjs/signalcommandmap': ^3.0.0
-  '@robotlegsjs/signals': ^2.0.0
   '@rush-temp/core': file:./projects/core.tgz
   '@rush-temp/createjs': file:./projects/createjs.tgz
   '@rush-temp/eventemitter3': file:./projects/eventemitter3.tgz
+  '@rush-temp/integration-macrobot-signalcommandmap': file:./projects/integration-macrobot-signalcommandmap.tgz
   '@rush-temp/macrobot': file:./projects/macrobot.tgz
   '@rush-temp/openfl': file:./projects/openfl.tgz
   '@rush-temp/phaser': file:./projects/phaser.tgz
@@ -87,11 +86,10 @@ specifiers:
 dependencies:
   '@istanbuljs/nyc-config-typescript': 1.0.1_40f74ebf3b42f8d97356b2262606f547
   '@mcler/webpack-concat-plugin': 4.1.3_113243b053f7620383bd9a5a80771064
-  '@robotlegsjs/signalcommandmap': 3.0.0
-  '@robotlegsjs/signals': 2.0.0
   '@rush-temp/core': file:projects/core.tgz
   '@rush-temp/createjs': file:projects/createjs.tgz
   '@rush-temp/eventemitter3': file:projects/eventemitter3.tgz
+  '@rush-temp/integration-macrobot-signalcommandmap': file:projects/integration-macrobot-signalcommandmap.tgz
   '@rush-temp/macrobot': file:projects/macrobot.tgz
   '@rush-temp/openfl': file:projects/openfl.tgz
   '@rush-temp/phaser': file:projects/phaser.tgz
@@ -811,27 +809,6 @@ packages:
       url: 0.11.0
     dev: false
 
-  /@robotlegsjs/core/3.0.0:
-    resolution: {integrity: sha512-U5vkN+XlGpKuiXL6ljgORf0SZq7sfFK0T5DsQRdGQFwgT7Gnyfu5VUCJg0imLxw/kWX9DpT4AGmv9M1wKceRaw==}
-    dependencies:
-      inversify: 5.1.1
-      tslib: 2.2.0
-    dev: false
-
-  /@robotlegsjs/signalcommandmap/3.0.0:
-    resolution: {integrity: sha512-b/R/iBbA1LhAHoDdTej9pbf5Z/RsAKekcmHqCHpvx6QeCySBfl1qpFoLfFdezdnw9Tm3S43zxEULvTY4CuGlZQ==}
-    dependencies:
-      '@robotlegsjs/core': 3.0.0
-      '@robotlegsjs/signals': 2.0.0
-      tslib: 2.2.0
-    dev: false
-
-  /@robotlegsjs/signals/2.0.0:
-    resolution: {integrity: sha512-1SHNMqcJ2+sCxh8M2FreEGfAOiCObv63ZW41lnAnWO0FB3kiLBCUte63Unv9PpAoaGzEpofFxcNm2iaw+z4wAg==}
-    dependencies:
-      tslib: 2.2.0
-    dev: false
-
   /@rushstack/eslint-config/2.3.4_eslint@7.28.0+typescript@4.2.4:
     resolution: {integrity: sha512-mwEfj3e260slxM57A2eMtkNpVM9J2iMGoqzWfD4hHtO+dcZT6rEeYG4djwj61ZriNJdAY8QIMMhfuID/xV+cyw==}
     peerDependencies:
@@ -1419,8 +1396,8 @@ packages:
     hasBin: true
     dev: false
 
-  /acorn/8.3.0:
-    resolution: {integrity: sha512-tqPKHZ5CaBJw0Xmy0ZZvLs1qTV+BNFSyvn77ASXkpBNfIRk8ev26fKrD9iLGwGA9zedPao52GSHzq8lyZG0NUw==}
+  /acorn/8.4.0:
+    resolution: {integrity: sha512-ULr0LDaEqQrMFGyQ3bhJkLsbtrQ8QibAseGZeaSUiT/6zb9IvIkomWHJIvgvwad+hinRAgsI51JcWk2yvwyL+w==}
     engines: {node: '>=0.4.0'}
     hasBin: true
     dev: false
@@ -5027,7 +5004,7 @@ packages:
         optional: true
     dependencies:
       abab: 2.0.5
-      acorn: 8.3.0
+      acorn: 8.4.0
       acorn-globals: 6.0.0
       cssom: 0.4.4
       cssstyle: 2.3.0
@@ -8190,7 +8167,7 @@ packages:
       '@webassemblyjs/ast': 1.11.0
       '@webassemblyjs/wasm-edit': 1.11.0
       '@webassemblyjs/wasm-parser': 1.11.0
-      acorn: 8.3.0
+      acorn: 8.4.0
       browserslist: 4.16.6
       chrome-trace-event: 1.0.3
       enhanced-resolve: 5.8.2
@@ -8697,14 +8674,79 @@ packages:
       - webpack-bundle-analyzer
     dev: false
 
+  file:projects/integration-macrobot-signalcommandmap.tgz:
+    resolution: {integrity: sha512-vDbLnJaurTgdDNoWdVi8UOrQFO8kvL+pLgv6ib4SsbbP3YbShtRkf0UVvB9872OSAZBXatqrXB5NWkoSVtNJ3Q==, tarball: file:projects/integration-macrobot-signalcommandmap.tgz}
+    name: '@rush-temp/integration-macrobot-signalcommandmap'
+    version: 0.0.0
+    dependencies:
+      '@istanbuljs/nyc-config-typescript': 1.0.1_40f74ebf3b42f8d97356b2262606f547
+      '@rushstack/eslint-config': 2.3.4_eslint@7.28.0+typescript@4.2.4
+      '@types/bluebird': 3.5.35
+      '@types/chai': 4.2.18
+      '@types/mocha': 8.2.2
+      '@types/sinon': 10.0.2
+      '@types/webpack-env': 1.16.0
+      bluebird: 3.7.2
+      browserify-versionify: 1.0.6
+      chai: 4.3.4
+      es6-map: 0.1.5
+      es6-symbol: 3.1.3
+      eslint: 7.28.0
+      eslint-plugin-import: 2.23.4_eslint@7.28.0
+      eslint-plugin-jsdoc: 35.1.3_eslint@7.28.0
+      eslint-plugin-prefer-arrow: 1.2.3_eslint@7.28.0
+      eslint-plugin-react: 7.24.0_eslint@7.28.0
+      eslint-plugin-unicorn: 33.0.1_eslint@7.28.0
+      glslify: 7.1.1
+      imports-loader: 3.0.0_webpack@5.38.1
+      istanbul-instrumenter-loader: 3.0.1_webpack@5.38.1
+      karma: 6.3.3
+      karma-chai-sinon: 0.1.5_0ac1271010ccb06096c9d8bf2f9efcc0
+      karma-chrome-launcher: 3.1.0
+      karma-coverage-istanbul-reporter: 3.0.3
+      karma-es6-shim: 1.0.0
+      karma-mocha: 2.0.1
+      karma-mocha-reporter: 2.2.5_karma@6.3.3
+      karma-sinon-chai: 2.0.2_603bade0eb2595e5f78e5d6c505e52bd
+      karma-sourcemap-loader: 0.3.8
+      karma-sourcemap-writer: 0.1.2
+      karma-webpack: 5.0.0_webpack@5.38.1
+      mocha: 9.0.0
+      nyc: 15.1.0
+      prettier: 2.3.1
+      puppeteer: 10.0.0
+      reflect-metadata: 0.1.13
+      rimraf: 3.0.2
+      sinon: 11.1.1
+      sinon-chai: 3.7.0_chai@4.3.4+sinon@11.1.1
+      source-map-support: 0.5.19
+      terser-webpack-plugin: 5.1.3_webpack@5.38.1
+      ts-loader: 9.2.3_typescript@4.2.4+webpack@5.38.1
+      ts-node: 10.0.0_typescript@4.2.4
+      tslib: 2.2.0
+      typescript: 4.2.4
+      webpack: 5.38.1_webpack-cli@4.7.2
+      webpack-cli: 4.7.2_4f38b4f344caeae135cc7debc9aac51b
+      webpack-dev-server: 3.11.2_webpack-cli@4.7.2+webpack@5.38.1
+    transitivePeerDependencies:
+      - '@swc/core'
+      - '@swc/wasm'
+      - '@types/node'
+      - '@webpack-cli/generators'
+      - '@webpack-cli/migrate'
+      - bufferutil
+      - debug
+      - supports-color
+      - utf-8-validate
+      - webpack-bundle-analyzer
+    dev: false
+
   file:projects/macrobot.tgz:
-    resolution: {integrity: sha512-uwhYVzYgrATvKD4lP31c1uzovuXS9ihASE0Db8v+SIvvPon9B2vY0vPxm8+UBM+x6BpaNXYCcb0NjSn09yFY0Q==, tarball: file:projects/macrobot.tgz}
+    resolution: {integrity: sha512-/E/hNW8r3ktOSr0GAqEHj1A6Kj4gD469Vw7I/Pr0oeiOdROy3dGn8PrUnN8e+epP3GfGoCUocENMv2UvOoUMeA==, tarball: file:projects/macrobot.tgz}
     name: '@rush-temp/macrobot'
     version: 0.0.0
     dependencies:
       '@istanbuljs/nyc-config-typescript': 1.0.1_40f74ebf3b42f8d97356b2262606f547
-      '@robotlegsjs/signalcommandmap': 3.0.0
-      '@robotlegsjs/signals': 2.0.0
       '@rushstack/eslint-config': 2.3.4_eslint@7.28.0+typescript@4.2.4
       '@types/bluebird': 3.5.35
       '@types/chai': 4.2.18
@@ -8835,7 +8877,7 @@ packages:
     dev: false
 
   file:projects/phaser-ce-signalcommandmap.tgz:
-    resolution: {integrity: sha512-6fHYMxtib2gOofK/DgLEur7hJNtnB3i+p2eGvrcs5WAfZG4Onzo+9whZBKOK2Bjr/ryx4KXgAxhLTr6fVqn8Jw==, tarball: file:projects/phaser-ce-signalcommandmap.tgz}
+    resolution: {integrity: sha512-QDBCcNbnEDDS7cF2wNF3M16ffHFDS3sAoB44Kyh0cFKjshsjOH3Ki2Qns9J4J+vfDWOMCxeeYYcdCzxiI9Bsjg==, tarball: file:projects/phaser-ce-signalcommandmap.tgz}
     name: '@rush-temp/phaser-ce-signalcommandmap'
     version: 0.0.0
     dependencies:
@@ -8899,7 +8941,7 @@ packages:
     dev: false
 
   file:projects/phaser-ce.tgz:
-    resolution: {integrity: sha512-tteDMqGREvAkhUr9M1dHy7zjDl0b19d1A55qvTX1ZLG5hZqrQgW3YjqliCsX9vmsTk2OUrMu71YvXSoAqBGHXw==, tarball: file:projects/phaser-ce.tgz}
+    resolution: {integrity: sha512-66uemwgaCR+WxHC1rAxV5ne5aecTJ09RGlFV5FQRnDFQ4GxYeY0g5xE70aAt1ir1kFQVbtG4WI6DjNGT2rs1Sw==, tarball: file:projects/phaser-ce.tgz}
     name: '@rush-temp/phaser-ce'
     version: 0.0.0
     dependencies:
@@ -8967,7 +9009,7 @@ packages:
     dev: false
 
   file:projects/phaser.tgz:
-    resolution: {integrity: sha512-9ywIgeCYRkjCldM/5Cs+IY4vCTSSsAduRR7hKQQQCGTqo3IWNMfu38sKxzjhtcOLGWGhOdFykq8JXmjYSlp1Qw==, tarball: file:projects/phaser.tgz}
+    resolution: {integrity: sha512-iz+hbHgcDMeO2TeLWFo3OuqH4kRpD4oKEZXxRwmGXadb0sHP7F0v4RgZ2lbJkv9mnvN+vs0Jb8tyxxPqfIwsww==, tarball: file:projects/phaser.tgz}
     name: '@rush-temp/phaser'
     version: 0.0.0
     dependencies:
@@ -9036,7 +9078,7 @@ packages:
     dev: false
 
   file:projects/pixi-palidor.tgz:
-    resolution: {integrity: sha512-BIS0IJTJ7QGgL6+pKFg9vcJ5ghClTZ8O96+Ws6Oe1PFtRLvYEg8A67MVxiSzBojvuKQVs0R+h2dqBfalPaJUuw==, tarball: file:projects/pixi-palidor.tgz}
+    resolution: {integrity: sha512-1Wvv00nmTflAeHcR7z2TFlZst0Ah+EshO4fffgRm3gZ4x33JOfvjTYLCKfdyLXioVdBoEMHyU2aIldWdR/m55A==, tarball: file:projects/pixi-palidor.tgz}
     name: '@rush-temp/pixi-palidor'
     version: 0.0.0
     dependencies:
@@ -9104,7 +9146,7 @@ packages:
     dev: false
 
   file:projects/pixi-signalmediator.tgz:
-    resolution: {integrity: sha512-249HU/0IqG8xHXn423L2sEUahMqezoc3fDVc8e+dmBdMxapvy4ERi3MziktiBKZY9BuNSULX+4Ct2vfFMMdLzA==, tarball: file:projects/pixi-signalmediator.tgz}
+    resolution: {integrity: sha512-q5O2SJDOe9Ww7qXsMvQpDAoqgxAC2GB5gNMHDKW7/cec9Rk1ie7OkXYZzQ78UeN0jQvXV9XZ2smaYhb3RUqdXw==, tarball: file:projects/pixi-signalmediator.tgz}
     name: '@rush-temp/pixi-signalmediator'
     version: 0.0.0
     dependencies:
@@ -9173,7 +9215,7 @@ packages:
     dev: false
 
   file:projects/pixi.tgz:
-    resolution: {integrity: sha512-S6MxalekbWOyb1TSh0esw+w+9U9aMwGvkxaMpv3o69CWpgY0zxN4V3DiQ5kS95yTJM1fogsDk02+6IQ5rYazEQ==, tarball: file:projects/pixi.tgz}
+    resolution: {integrity: sha512-KIJL6xEKHxxscziaFaKeGanr9A7jKHsK9wO3rWzz8d02oIJgruSlLwb0Qe9skdV/YoVLGa4QHALRGLV1hTxbUQ==, tarball: file:projects/pixi.tgz}
     name: '@rush-temp/pixi'
     version: 0.0.0
     dependencies:

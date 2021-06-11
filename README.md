@@ -23,6 +23,12 @@ This repository is the home for all packages maintained by **RobotlegsJS**.
 | [/packages/createjs](./packages/createjs/) | [![npm version](https://badge.fury.io/js/%40robotlegsjs%2Fcreatejs.svg)](https://badge.fury.io/js/%40robotlegsjs%2Fcreatejs) | [changelog](./packages/createjs/CHANGELOG.md) | [@robotlegsjs/createjs](https://www.npmjs.com/package/@robotlegsjs/createjs) |
 | [/packages/openfl](./packages/openfl/) | [![npm version](https://badge.fury.io/js/%40robotlegsjs%2Fopenfl.svg)](https://badge.fury.io/js/%40robotlegsjs%2Fopenfl) | [changelog](./packages/openfl/CHANGELOG.md) | [@robotlegsjs/openfl](https://www.npmjs.com/package/@robotlegsjs/openfl) |
 
+## Unpublished Local Projects
+
+| Folder | Description |
+| ------ | ----------- |
+| [/integration-tests/macrobot-signalcommandmap](./integration-tests/macrobot-signalcommandmap/) | Integration tests between signals, macrobot, and signalcommandmap |
+
 ## Contributing
 
 The main purpose of this repository is to continue evolving **RobotlegsJS** core and plugins, making them faster and easier to use. Development of **RobotlegsJS** happens in the open on GitHub, and we are grateful to the community for contributing bugfixes and improvements. Read below to learn how you can take part in improving **RobotlegsJS**.
