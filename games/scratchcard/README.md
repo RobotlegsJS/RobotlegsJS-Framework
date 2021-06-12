@@ -15,9 +15,13 @@ This is a TypeScript open-source game.
 
 ### Installation
 
-```
-npm install
-npm run start
+Follow the [building the projects](https://github.com/RobotlegsJS/RobotlegsJS-Framework/tree/master/.github/CONTRIBUTING.md#building-the-projects) section to know how to setup your local development environment.
+
+Then you can run this example using:
+
+```bash
+cd games/scratchcard
+npm start
 ```
 
 * * *
@@ -25,9 +29,9 @@ npm run start
 ### Dependencies
 
 + [PixiJS](http://www.pixijs.com/)
-+ [RobotlegsJS](https://github.com/RobotlegsJS/RobotlegsJS)
-+ [Robotlegs-Pixi](https://github.com/RobotlegsJS/RobotlegsJS-Pixi)
-+ [Robotlegs-Pixi-Palidor](https://github.com/RobotlegsJS/RobotlegsJS-Pixi-Palidor)
++ [RobotlegsJS](https://github.com/RobotlegsJS/RobotlegsJS-Framework/tree/master/packages/core)
++ [Robotlegs-Pixi](https://github.com/RobotlegsJS/RobotlegsJS-Framework/tree/master/packages/pixi)
++ [Robotlegs-Pixi-Palidor](https://github.com/RobotlegsJS/RobotlegsJS-Framework/tree/master/packages/pixi-palidor)
 
 * * *
 
