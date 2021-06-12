@@ -1,0 +1,39 @@
+{
+  "name": "typescript-spaceinvaders",
+  "version": "1.0.0",
+  "description": "OpenSource Game",
+  "main": "index.js",
+  "author": "Ronaldo Santiago",
+  "license": "MIT",
+  "dependencies": {
+    "@robotlegsjs/core": "^0.1.1",
+    "@robotlegsjs/pixi": "^0.1.2",
+    "@robotlegsjs/pixi-palidor": "^0.1.1",
+    "gsap": "^1.20.3",
+    "pixi.js": "^4.6.1",
+    "prettier": "^1.8.2",
+    "reflect-metadata": "^0.1.10",
+    "tslint-config-prettier": "^1.6.0"
+  },
+  "devDependencies": {
+    "@types/pixi.js": "^4.6.0",
+    "html-webpack-plugin": "^2.30.1",
+    "ts-loader": "^3.1.1",
+    "tslint": "^5.8.0",
+    "typescript": "^2.6.1",
+    "webpack": "^3.8.1",
+    "webpack-dev-server": "^2.9.4"
+  },
+  "scripts": {
+    "autoformat": "prettier --config .prettierrc --write {src,test}/**/*.ts",
+    "start": "webpack-dev-server --config ./webpack.config.js"
+  },
+  "keywords": [
+    "RobotlegsJs",
+    "RobotlegsJS-Pixi",
+    "RobotlegsJS-Pixi-Palidor",
+    "TypeScript",
+    "PixiJs",
+    "Game"
+  ]
+}
