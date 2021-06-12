@@ -1,8 +1,8 @@
-const webpack = require('webpack');
-const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+const webpack = require("webpack");
+const path = require("path");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 
-module.exports = (function(options) {
+module.exports = (function (options) {
   return {
     entry: {
       main: path.resolve("src/index.ts")
@@ -13,19 +13,16 @@ module.exports = (function(options) {
       filename: "bundle.js"
     },
 
-    devtool: 'source-map',
+    devtool: "source-map",
 
     module: {
-      rules: [
-        { test: /\.ts$/, loader: "ts-loader" }
-      ]
+      rules: [{ test: /\.ts$/, loader: "ts-loader" }]
     },
 
-    plugins: [ new HtmlWebpackPlugin() ],
+    plugins: [new HtmlWebpackPlugin()],
 
     resolve: {
-      extensions: ['.ts', '.js', '.json']
+      extensions: [".ts", ".js", ".json"]
     }
-
-  }
+  };
 })();

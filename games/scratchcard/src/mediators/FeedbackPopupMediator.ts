@@ -19,6 +19,8 @@ export class FeedbackPopupMediator extends Mediator<FeedbackPopup> {
         this.eventMap.unmapListeners();
     }
     private onClick(e: any): void {
-        this.eventDispatcher.dispatchEvent(new PalidorEvent(PalidorEvent.REMOVE_LAST_FLOATING_VIEW_ADDED));
+        this.eventDispatcher.dispatchEvent(
+            new PalidorEvent(PalidorEvent.REMOVE_LAST_FLOATING_VIEW_ADDED)
+        );
     }
 }

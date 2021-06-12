@@ -1,4 +1,11 @@
-import { IConfig, IContext, IEventCommandMap, IEventDispatcher, inject, injectable } from "@robotlegsjs/core";
+import {
+    IConfig,
+    IContext,
+    IEventCommandMap,
+    IEventDispatcher,
+    inject,
+    injectable
+} from "@robotlegsjs/core";
 import { IMediatorMap } from "@robotlegsjs/pixi";
 import { IFlowManager } from "@robotlegsjs/pixi-palidor";
 
@@ -58,9 +65,6 @@ export class ScratchConfig implements IConfig {
         this.mapSingleton(Model);
     }
     private mapSingleton(clazz: any): void {
-        this.context.injector
-            .bind(clazz)
-            .to(clazz)
-            .inSingletonScope();
+        this.context.injector.bind(clazz).to(clazz).inSingletonScope();
     }
 }

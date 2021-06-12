@@ -1,6 +1,6 @@
-import { Container, Graphics, Text } from 'pixi.js';
+import { Container, Graphics, Text } from "pixi.js";
 
-import { Colors } from '../../utils/Colors';
+import { Colors } from "../../utils/Colors";
 
 export class TextButton extends Container {
     private _isDown: boolean;

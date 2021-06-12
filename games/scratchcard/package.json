@@ -1,34 +1,38 @@
 {
   "name": "game-scratchcard",
   "version": "1.0.0",
-  "main": "index.js",
+  "private": true,
   "author": "Ronaldo Santiago <ronaldo.setzer@gmail.com>",
   "license": "MIT",
   "scripts": {
     "start": "webpack-dev-server --config ./webpack.config.js",
-    "autoformat": "prettier --config .prettierrc --write {src,test,example,definitions}/**/*.ts"
+    "autoformat": "prettier --config ../../.prettierrc --ignore-path ../../.prettierignore --write --list-different .",
+    "cleanup": "rimraf .nyc_output && rimraf coverage && rimraf dist",
+    "compile:src": "tsc -d --importHelpers",
+    "build": "npm run cleanup && npm run compile:src",
+    "prepare": "npm run build"
   },
   "dependencies": {
-    "@robotlegsjs/core": "^0.1.1",
-    "@robotlegsjs/pixi": "^0.1.2",
-    "@robotlegsjs/pixi-palidor": "^0.1.1",
-    "@robotlegsjs/signals": "^0.0.12",
-    "pixi.js": "^4.6.1",
-    "reflect-metadata": "0.1.10",
-    "typescript": "^2.6.1"
+    "@robotlegsjs/core": "^3.0.0",
+    "@robotlegsjs/pixi": "^3.0.0",
+    "@robotlegsjs/pixi-palidor": "^3.0.0",
+    "@robotlegsjs/signals": "^2.0.0",
+    "pixi.js": "^5.2.1",
+    "reflect-metadata": "^0.1.13",
+    "tslib": "^2.2.0"
   },
   "devDependencies": {
-    "@types/pixi.js": "^4.6.0",
     "es6-map": "^0.1.5",
     "es6-symbol": "^3.1.1",
     "html-webpack-plugin": "^2.30.1",
     "imports-loader": "^0.7.1",
-    "prettier": "^1.8.2",
+    "prettier": "^2.3.1",
     "rimraf": "^2.6.2",
     "ts-loader": "^3.1.1",
     "ts-node": "^3.3.0",
     "tslint": "^5.8.0",
     "tslint-config-prettier": "^1.6.0",
+    "typescript": "~4.2.4",
     "webpack": "^3.8.1",
     "webpack-dev-server": "^2.9.4"
   }

@@ -47,7 +47,11 @@ export class ScratchView extends Container {
     }
     private createBackground(): void {
         const { SCRATCH_BOX_HEIGHT, SCRATCH_BOX_WIDTH } = MagicValues;
-        const scratchArea = PixiFactory.getColorBox(SCRATCH_BOX_WIDTH, SCRATCH_BOX_HEIGHT, Colors.BACKGROUND_DARK);
+        const scratchArea = PixiFactory.getColorBox(
+            SCRATCH_BOX_WIDTH,
+            SCRATCH_BOX_HEIGHT,
+            Colors.BACKGROUND_DARK
+        );
         this.addChild(scratchArea);
     }
 }

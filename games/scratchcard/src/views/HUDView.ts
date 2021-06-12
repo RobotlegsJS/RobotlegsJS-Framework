@@ -33,7 +33,11 @@ export class HUDView extends Container {
     }
     private createComponents(): void {
         const { SCRATCH_BOX_HEIGHT, SCRATCH_BOX_WIDTH } = MagicValues;
-        this._scratchArea = PixiFactory.getColorBox(SCRATCH_BOX_WIDTH, SCRATCH_BOX_HEIGHT, Colors.BACKGROUND_DARK);
+        this._scratchArea = PixiFactory.getColorBox(
+            SCRATCH_BOX_WIDTH,
+            SCRATCH_BOX_HEIGHT,
+            Colors.BACKGROUND_DARK
+        );
         this._scratchArea.x = 10;
         this._scratchArea.y = 100;
         this._scratchArea.alpha = 0.1;

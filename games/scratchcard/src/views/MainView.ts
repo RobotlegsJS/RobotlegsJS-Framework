@@ -27,7 +27,11 @@ export class MainView extends Container {
         this.addChild(PixiFactory.getColorBackground(Colors.BACKGROUND_LIGHT));
 
         const { SCRATCH_BOX_HEIGHT, SCRATCH_BOX_WIDTH } = MagicValues;
-        const scratchArea = PixiFactory.getColorBox(SCRATCH_BOX_WIDTH, SCRATCH_BOX_HEIGHT, Colors.BACKGROUND_DARK);
+        const scratchArea = PixiFactory.getColorBox(
+            SCRATCH_BOX_WIDTH,
+            SCRATCH_BOX_HEIGHT,
+            Colors.BACKGROUND_DARK
+        );
         scratchArea.x = 10;
         scratchArea.y = 100;
         this.addChild(scratchArea);
