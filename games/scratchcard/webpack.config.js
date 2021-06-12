@@ -2,8 +2,10 @@ const webpack = require("webpack");
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
-module.exports = (function (options) {
+module.exports = (options) => {
   return {
+    mode: "development",
+
     entry: {
       main: path.resolve("src/index.ts")
     },
@@ -19,10 +21,10 @@ module.exports = (function (options) {
       rules: [{ test: /\.ts$/, loader: "ts-loader" }]
     },
 
-    plugins: [new HtmlWebpackPlugin()],
+    plugins: [new webpack.ProgressPlugin(), new HtmlWebpackPlugin()],
 
     resolve: {
       extensions: [".ts", ".js", ".json"]
     }
   };
-})();
+};

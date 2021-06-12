@@ -5,7 +5,7 @@
   "author": "Ronaldo Santiago <ronaldo.setzer@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "webpack-dev-server --config ./webpack.config.js",
+    "start": "webpack serve --config ./webpack.config.js",
     "autoformat": "prettier --config ../../.prettierrc --ignore-path ../../.prettierignore --write --list-different .",
     "cleanup": "rimraf .nyc_output && rimraf coverage && rimraf dist",
     "compile:src": "tsc -d --importHelpers",
@@ -22,18 +22,15 @@
     "tslib": "^2.2.0"
   },
   "devDependencies": {
-    "es6-map": "^0.1.5",
-    "es6-symbol": "^3.1.1",
-    "html-webpack-plugin": "^2.30.1",
-    "imports-loader": "^0.7.1",
+    "html-webpack-plugin": "^5.3.1",
+    "imports-loader": "^3.0.0",
     "prettier": "^2.3.1",
-    "rimraf": "^2.6.2",
-    "ts-loader": "^3.1.1",
-    "ts-node": "^3.3.0",
-    "tslint": "^5.8.0",
-    "tslint-config-prettier": "^1.6.0",
+    "rimraf": "^3.0.2",
+    "ts-loader": "^9.2.3",
+    "ts-node": "^10.0.0",
     "typescript": "~4.2.4",
-    "webpack": "^3.8.1",
-    "webpack-dev-server": "^2.9.4"
+    "webpack": "^5.38.1",
+    "webpack-cli": "^4.7.2",
+    "webpack-dev-server": "^3.11.2"
   }
 }
