@@ -6,46 +6,52 @@ import { PixiFactory } from "./../utils/PixiFactory";
 import { Item } from "./components/Item";
 
 export class ScratchView extends Container {
-    private coverMask: Graphics;
-    private items: Container;
+    private _coverMask: Graphics;
+    private _items: Container;
 
-    constructor() {
+    public constructor() {
         super();
-        this.createBackground();
-        this.createComponents();
+        this._createBackground();
+        this._createComponents();
     }
+
     public setupPrizes(prizes: string[], matched: string[]): void {
-        this.items.removeChildren();
+        this._items.removeChildren();
 
         for (let i = 0; i < prizes.length; i++) {
             const hightlight: boolean = matched.indexOf(prizes[i]) !== -1;
             const sprite = new Item(prizes[i], hightlight);
             sprite.x = Math.floor(i / 3) * MagicValues.ITEM_SIZE + 5;
             sprite.y = Math.floor(i % 3) * MagicValues.ITEM_SIZE + 5;
-            this.items.addChild(sprite);
+            this._items.addChild(sprite);
         }
-        this.setupMask();
+        this._setupMask();
     }
+
     public clearAll(): void {
-        this.coverMask.clear();
-        this.coverMask.drawRect(0, 0, MagicValues.MAX_WIDTH, MagicValues.MAX_HEIGHT);
+        this._coverMask.clear();
+        this._coverMask.drawRect(0, 0, MagicValues.MAX_WIDTH, MagicValues.MAX_HEIGHT);
     }
+
     public addScrach(x: number, y: number): void {
-        this.coverMask.drawRoundedRect(x - 20, y - 20, 40, 40, Math.random() * 50);
+        this._coverMask.drawRoundedRect(x - 20, y - 20, 40, 40, Math.random() * 50);
     }
-    private setupMask(): void {
-        if (this.coverMask) {
-            this.coverMask.clear();
+
+    private _setupMask(): void {
+        if (this._coverMask) {
+            this._coverMask.clear();
         }
-        this.coverMask = new Graphics();
-        this.coverMask.beginFill(0xff0000, 0.1);
-        this.mask = this.coverMask;
+        this._coverMask = new Graphics();
+        this._coverMask.beginFill(0xff0000, 0.1);
+        this.mask = this._coverMask;
     }
-    private createComponents(): void {
-        this.items = new Container();
-        this.addChild(this.items);
+
+    private _createComponents(): void {
+        this._items = new Container();
+        this.addChild(this._items);
     }
-    private createBackground(): void {
+
+    private _createBackground(): void {
         const { SCRATCH_BOX_HEIGHT, SCRATCH_BOX_WIDTH } = MagicValues;
         const scratchArea = PixiFactory.getColorBox(
             SCRATCH_BOX_WIDTH,

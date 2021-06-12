@@ -1,7 +1,7 @@
 import { AssetKeys } from "./AssetKeys";
 
 export class Prizes {
-    public static ALL = [
+    public static ALL: string[] = [
         AssetKeys.PRIZE_01,
         AssetKeys.PRIZE_02,
         AssetKeys.PRIZE_03,
@@ -23,6 +23,7 @@ export class Prizes {
         AssetKeys.PRIZE_19,
         AssetKeys.PRIZE_20
     ];
+
     public static getNine(): string[] {
         const result = [];
         for (let i = 0; i < 9; i++) {

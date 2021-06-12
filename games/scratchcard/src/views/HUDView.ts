@@ -11,27 +11,32 @@ export class HUDView extends Container {
     private _playButton: TextButton;
     private _endButton: TextButton;
     private _scratchArea: Graphics;
+
     public get playButton(): TextButton {
         return this._playButton;
     }
+
     public get endButton(): TextButton {
         return this._endButton;
     }
+
     public get scratchArea(): Graphics {
         return this._scratchArea;
     }
 
-    constructor() {
+    public constructor() {
         super();
-        this.createBackground();
-        this.createButtons();
-        this.createTexts();
-        this.createComponents();
+        this._createBackground();
+        this._createButtons();
+        this._createTexts();
+        this._createComponents();
     }
+
     public updateRemaining(value: number): void {
         this._remaining.text = `${Texts.HUD_SCRATCH_REMAINING} ${value}`;
     }
-    private createComponents(): void {
+
+    private _createComponents(): void {
         const { SCRATCH_BOX_HEIGHT, SCRATCH_BOX_WIDTH } = MagicValues;
         this._scratchArea = PixiFactory.getColorBox(
             SCRATCH_BOX_WIDTH,
@@ -43,11 +48,13 @@ export class HUDView extends Container {
         this._scratchArea.alpha = 0.1;
         this.addChild(this._scratchArea);
     }
-    private createBackground(): void {
+
+    private _createBackground(): void {
         const { MAX_WIDTH, HUD_HEIGHT } = MagicValues;
         this.addChild(PixiFactory.getColorBox(MAX_WIDTH, HUD_HEIGHT, Colors.BACKGROUND_DARK));
     }
-    private createButtons(): void {
+
+    private _createButtons(): void {
         this._playButton = new TextButton();
         this._playButton.setText(Texts.PLAY);
         this._playButton.x = MagicValues.HALF_WIDTH;
@@ -61,7 +68,8 @@ export class HUDView extends Container {
         this._endButton.visible = false;
         this.addChild(this._endButton);
     }
-    private createTexts(): void {
+
+    private _createTexts(): void {
         this._remaining = PixiFactory.getText("", Colors.TEXT);
         this._remaining.text = `${Texts.HUD_SCRATCH_REMAINING} 0`;
         this._remaining.position.set(5, 20);

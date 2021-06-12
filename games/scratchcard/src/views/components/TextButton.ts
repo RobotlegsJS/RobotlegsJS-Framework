@@ -15,13 +15,14 @@ export class TextButton extends Container {
         return this._textValue;
     }
 
-    constructor() {
+    public constructor() {
         super();
 
-        this.setInitialValues();
-        this.createBackground();
-        this.createInteractions();
+        this._setInitialValues();
+        this._createBackground();
+        this._createInteractions();
     }
+
     public setText(text: string): void {
         this._textValue = text;
         if (this._labelText) {
@@ -32,11 +33,13 @@ export class TextButton extends Container {
         this._labelText.pivot.y = this._labelText.height * 0.5;
         this.addChild(this._labelText);
     }
-    private setInitialValues(): void {
+
+    private _setInitialValues(): void {
         this.interactive = true;
         this.buttonMode = true;
     }
-    private createBackground(): void {
+
+    private _createBackground(): void {
         this._background = new Graphics();
         this._background.beginFill(Colors.BACKGROUND_DARK);
         this._background.drawRoundedRect(0, 0, 410, 80, 5);
@@ -44,25 +47,30 @@ export class TextButton extends Container {
         this._background.pivot.y = this._background.height * 0.5;
         this.addChild(this._background);
     }
-    private createInteractions(): void {
-        this.on("pointerup", this.onButtonUp);
-        this.on("pointerupoutside", this.onButtonUp);
-        this.on("pointerdown", this.onButtonDown);
-        this.on("pointerover", this.onButtonOver);
-        this.on("pointerout", this.onButtonOut);
+
+    private _createInteractions(): void {
+        this.on("pointerup", this._onButtonUp);
+        this.on("pointerupoutside", this._onButtonUp);
+        this.on("pointerdown", this._onButtonDown);
+        this.on("pointerover", this._onButtonOver);
+        this.on("pointerout", this._onButtonOut);
     }
-    private onButtonDown(): void {
+
+    private _onButtonDown(): void {
         this._isDown = true;
         this.scale.set(0.95, 0.95);
     }
-    private onButtonOut(): void {
+
+    private _onButtonOut(): void {
         this._isOver = false;
         this.scale.set(1, 1);
     }
-    private onButtonOver(): void {
+
+    private _onButtonOver(): void {
         this._isOver = true;
     }
-    private onButtonUp(): void {
+
+    private _onButtonUp(): void {
         this._isDown = false;
         this.scale.set(1, 1);
     }

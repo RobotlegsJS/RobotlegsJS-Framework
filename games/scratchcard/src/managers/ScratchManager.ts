@@ -7,44 +7,52 @@ import { Prizes } from "./../utils/Prizes";
 
 @injectable()
 export class ScratchManager {
-    @inject(IEventDispatcher) private eventDispatcher: IEventDispatcher;
-    @inject(Model) private model: Model;
+    @inject(IEventDispatcher)
+    private _eventDispatcher: IEventDispatcher;
 
-    private covered: Set<string>;
+    @inject(Model)
+    private _model: Model;
 
-    constructor() {
-        this.covered = new Set<string>();
+    private _covered: Set<string>;
+
+    public constructor() {
+        this._covered = new Set<string>();
     }
+
     public create(): void {
-        this.covered.clear();
-        this.model.posX = NaN;
-        this.model.posY = NaN;
-        this.model.pressed = false;
-        this.model.prizes = Prizes.getNine();
-        this.model.matchedPrizes = this.matchedPrizes();
+        this._covered.clear();
+        this._model.posX = NaN;
+        this._model.posY = NaN;
+        this._model.pressed = false;
+        this._model.prizes = Prizes.getNine();
+        this._model.matchedPrizes = this._matchedPrizes();
     }
+
     public scratchPosition(x: number, y: number): void {
-        this.model.posX = Math.min(x, MagicValues.SCRATCH_BOX_WIDTH + 50);
-        this.model.posY = Math.min(y, MagicValues.SCRATCH_BOX_HEIGHT + 100);
-        this.validate(x, y);
+        this._model.posX = Math.min(x, MagicValues.SCRATCH_BOX_WIDTH + 50);
+        this._model.posY = Math.min(y, MagicValues.SCRATCH_BOX_HEIGHT + 100);
+        this._validate(x, y);
     }
-    private validate(x: number, y: number): void {
+
+    private _validate(x: number, y: number): void {
         x = Math.floor(x / MagicValues.TILE_SQUARE);
         y = Math.floor(y / MagicValues.TILE_SQUARE);
-        this.covered.add(`${x}_${y}`);
+        this._covered.add(`${x}_${y}`);
 
-        if (this.covered.size >= this.mimPercent()) {
-            this.eventDispatcher.dispatchEvent(new GameEvent(GameEvent.END_GAME_COMMAND));
+        if (this._covered.size >= this._mimPercent()) {
+            this._eventDispatcher.dispatchEvent(new GameEvent(GameEvent.END_GAME_COMMAND));
         }
     }
-    private mimPercent(): number {
+
+    private _mimPercent(): number {
         const { SCRATCH_BOX_HEIGHT, SCRATCH_BOX_WIDTH, TILE_SQUARE } = MagicValues;
         const rows = SCRATCH_BOX_HEIGHT / TILE_SQUARE;
         const cols = SCRATCH_BOX_WIDTH / TILE_SQUARE;
         return rows * cols * 0.9;
     }
-    private matchedPrizes(): string[] {
-        const prizes = this.model.prizes;
+
+    private _matchedPrizes(): string[] {
+        const prizes = this._model.prizes;
         const count = {};
         const hightlight = [];
         for (const prize of prizes) {

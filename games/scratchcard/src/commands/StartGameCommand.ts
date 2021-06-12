@@ -6,16 +6,21 @@ import { Model } from "./../models/Model";
 
 @injectable()
 export class StartGameCommand implements ICommand {
-    @inject(IEventDispatcher) private eventDispatcher: IEventDispatcher;
-    @inject(ScratchManager) private scratchManager: ScratchManager;
-    @inject(Model) private model: Model;
+    @inject(IEventDispatcher)
+    private _eventDispatcher: IEventDispatcher;
+
+    @inject(ScratchManager)
+    private _scratchManager: ScratchManager;
+
+    @inject(Model)
+    private _model: Model;
 
     public execute(): void {
-        if (this.model.attempts === 0) {
+        if (this._model.attempts === 0) {
             return;
         }
-        this.model.decreaseAttemps();
-        this.scratchManager.create();
-        this.eventDispatcher.dispatchEvent(new GameEvent(GameEvent.START));
+        this._model.decreaseAttemps();
+        this._scratchManager.create();
+        this._eventDispatcher.dispatchEvent(new GameEvent(GameEvent.START));
     }
 }

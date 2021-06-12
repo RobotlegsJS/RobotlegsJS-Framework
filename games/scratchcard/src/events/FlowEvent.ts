@@ -1,11 +1,11 @@
 import { Event } from "@robotlegsjs/core";
 
 export class FlowEvent extends Event {
-    public static SHOW_INTRO_VIEW = "showIntroView";
-    public static SHOW_MAIN_VIEW = "showMainView";
-    public static SHOW_FEEDBACK = "showFeedback";
+    public static SHOW_INTRO_VIEW: string = "showIntroView";
+    public static SHOW_MAIN_VIEW: string = "showMainView";
+    public static SHOW_FEEDBACK: string = "showFeedback";
 
-    constructor(type: string) {
+    public constructor(type: string) {
         super(type);
     }
 }

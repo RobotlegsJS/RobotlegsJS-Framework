@@ -5,10 +5,11 @@ import { MagicValues } from "./../utils/MagicValues";
 import { PixiFactory } from "./../utils/PixiFactory";
 
 export class FeedbackPopup extends Container {
-    constructor() {
+    public constructor() {
         super();
-        this.createBackground();
+        this._createBackground();
     }
+
     public createMSG(msg: string): void {
         const text = PixiFactory.getText(msg, Colors.TEXT);
         text.x = MagicValues.HALF_WIDTH;
@@ -16,7 +17,8 @@ export class FeedbackPopup extends Container {
         text.anchor.set(0.5);
         this.addChild(text);
     }
-    private createBackground(): void {
+
+    private _createBackground(): void {
         const background = PixiFactory.getColorBackground(Colors.BACKGROUND_DARK);
         background.alpha = 0.6;
         this.addChild(background);

@@ -7,14 +7,17 @@ import { Texts } from "./../utils/Texts";
 
 @injectable()
 export class EndGameCommand implements ICommand {
-    @inject(IEventDispatcher) private eventDispatcher: IEventDispatcher;
-    @inject(Model) private model: Model;
+    @inject(IEventDispatcher)
+    private _eventDispatcher: IEventDispatcher;
+
+    @inject(Model)
+    private _model: Model;
 
     public execute(): void {
-        const isFail = this.model.matchedPrizes.length === 0;
-        this.model.feedback = isFail ? Texts.FAIL : Texts.SUCCESS;
+        const isFail = this._model.matchedPrizes.length === 0;
+        this._model.feedback = isFail ? Texts.FAIL : Texts.SUCCESS;
 
-        this.eventDispatcher.dispatchEvent(new GameEvent(GameEvent.END));
-        this.eventDispatcher.dispatchEvent(new FlowEvent(FlowEvent.SHOW_FEEDBACK));
+        this._eventDispatcher.dispatchEvent(new GameEvent(GameEvent.END));
+        this._eventDispatcher.dispatchEvent(new FlowEvent(FlowEvent.SHOW_FEEDBACK));
     }
 }

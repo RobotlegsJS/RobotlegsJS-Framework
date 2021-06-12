@@ -1,13 +1,13 @@
 import { Event } from "@robotlegsjs/core";
 
 export class GameEvent extends Event {
-    public static START_GAME_COMMAND = "startGameCommand";
-    public static END_GAME_COMMAND = "endGameCommand";
+    public static START_GAME_COMMAND: string = "startGameCommand";
+    public static END_GAME_COMMAND: string = "endGameCommand";
 
-    public static START = "start";
-    public static END = "end";
+    public static START: string = "start";
+    public static END: string = "end";
 
-    constructor(type: string) {
+    public constructor(type: string) {
         super(type);
     }
 }

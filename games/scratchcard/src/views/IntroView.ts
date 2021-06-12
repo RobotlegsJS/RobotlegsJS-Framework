@@ -7,24 +7,27 @@ import { PixiFactory } from "./../utils/PixiFactory";
 import { Texts } from "./../utils/Texts";
 
 export class IntroView extends Container {
-    constructor() {
+    public constructor() {
         super();
 
-        this.createBackground();
-        this.createImages();
-        this.createText();
+        this._createBackground();
+        this._createImages();
+        this._createText();
     }
-    private createBackground(): void {
+
+    private _createBackground(): void {
         this.addChild(PixiFactory.getColorBackground(Colors.BACKGROUND_DARK));
     }
-    private createImages(): void {
+
+    private _createImages(): void {
         const logoImg: Sprite = TilingSprite.from(AssetKeys.LOGO_TYPESCRIPT);
         logoImg.anchor.x = 0.5;
         logoImg.x = MagicValues.HALF_WIDTH;
         logoImg.y = MagicValues.MAX_HEIGHT - 64;
         this.addChild(logoImg);
     }
-    private createText(): void {
+
+    private _createText(): void {
         const style = new TextStyle({
             align: "center",
             fill: Colors.TEXT,

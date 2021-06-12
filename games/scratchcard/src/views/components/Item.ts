@@ -5,25 +5,27 @@ import { MagicValues } from "./../../utils/MagicValues";
 import { PixiFactory } from "./../../utils/PixiFactory";
 
 export class Item extends Container {
-    private border: Graphics;
+    private _border: Graphics;
     private _asset: string;
 
-    constructor(asset: string, hightlight: boolean) {
+    public constructor(asset: string, hightlight: boolean) {
         super();
         this._asset = asset;
         if (hightlight) {
-            this.createBorder();
+            this._createBorder();
         }
-        this.createSprite();
+        this._createSprite();
     }
-    private createBorder(): void {
+
+    private _createBorder(): void {
         const ITEM_SIZE = MagicValues.ITEM_SIZE + 5;
-        this.border = PixiFactory.getColorBox(ITEM_SIZE, ITEM_SIZE, Colors.HIGHLIGHT);
-        this.border.x = -5;
-        this.border.y = -5;
-        this.addChild(this.border);
+        this._border = PixiFactory.getColorBox(ITEM_SIZE, ITEM_SIZE, Colors.HIGHLIGHT);
+        this._border.x = -5;
+        this._border.y = -5;
+        this.addChild(this._border);
     }
-    private createSprite(): void {
+
+    private _createSprite(): void {
         this.addChild(PixiFactory.getSprite(this._asset));
     }
 }

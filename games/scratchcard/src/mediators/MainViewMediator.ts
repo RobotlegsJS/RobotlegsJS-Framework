@@ -8,6 +8,7 @@ export class MainViewMediator extends Mediator<MainView> {
     public initialize(): void {
         this.view.createComponents();
     }
+
     public destroy(): void {
         this.eventMap.unmapListeners();
     }
