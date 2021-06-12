@@ -10,7 +10,12 @@ export class HomeViewMediator extends Mediator<HomeView> {
 
     public initialize(): void {
         this.eventMap.mapListener(this.view.startButton, "click", this.startButton_onClick, this);
-        this.eventMap.mapListener(this.view.optionButton, "click", this.optionsButton_onClick, this);
+        this.eventMap.mapListener(
+            this.view.optionButton,
+            "click",
+            this.optionsButton_onClick,
+            this
+        );
     }
     public destroy(): void {
         this.eventMap.unmapListeners();

@@ -1,6 +1,8 @@
 import { inject, injectable } from "@robotlegsjs/core";
 import { Mediator } from "@robotlegsjs/pixi";
 
+import { Loader } from "pixi.js";
+
 import { IntroView } from "../views/IntroView";
 import { FlowService } from "./../services/FlowService";
 import { AtlasKeys } from "./../utils/AtlasKeys";
@@ -12,7 +14,7 @@ export class IntroViewMediator extends Mediator<IntroView> {
     public initialize(): void {
         setTimeout(this.onTimerOut.bind(this), 3000, this);
 
-        const loader = PIXI.loader
+        const loader = Loader.shared
             .add(AtlasKeys.ATLAS_PNG)
             .add(AtlasKeys.ATLAS_XML)
             .load(this.onLoad);

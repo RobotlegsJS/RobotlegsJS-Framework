@@ -1,4 +1,4 @@
-import { Container, Graphics, Sprite, Text, Texture } from "pixi.js";
+import { Container, Graphics, TextStyle, Sprite, Text, Texture } from "pixi.js";
 
 import { CustomButton } from "./../views/components/CustomButton";
 import { TileDisplay } from "./../views/components/TileDisplay";
@@ -13,12 +13,19 @@ export class PixiFactory {
         return this.getColorBox(ViewPortSize.MAX_WIDTH, ViewPortSize.MAX_HEIGHT, color);
     }
     public static getShadowBackground(): Graphics {
-        const background: Graphics = this.getColorBox(ViewPortSize.MAX_WIDTH, ViewPortSize.MAX_HEIGHT);
+        const background: Graphics = this.getColorBox(
+            ViewPortSize.MAX_WIDTH,
+            ViewPortSize.MAX_HEIGHT
+        );
         background.alpha = 0.6;
         return background;
     }
     public static getBoardBackground(): Container {
-        const boardBackground: Graphics = this.getColorBox(ViewPortSize.MAX_WIDTH, 102, Colors.STATIC_TEXT);
+        const boardBackground: Graphics = this.getColorBox(
+            ViewPortSize.MAX_WIDTH,
+            102,
+            Colors.STATIC_TEXT
+        );
         boardBackground.beginFill(Colors.BACKGROUND);
         boardBackground.drawRect(0, 1, ViewPortSize.MAX_WIDTH, 100);
 
@@ -45,7 +52,7 @@ export class PixiFactory {
         color: number = Colors.DYNAMIC_TEXT,
         fontSize: number = Texts.FONT_SIZE_DEFAULT
     ): Text {
-        const style = new PIXI.TextStyle({
+        const style = new TextStyle({
             align: "center",
             fill: color,
             fontFamily: "Arial",
@@ -53,7 +60,7 @@ export class PixiFactory {
             fontWeight: "bold"
         });
 
-        return new PIXI.Text(text, style);
+        return new Text(text, style);
     }
 
     public static getTileDisplay(typeId: number): TileDisplay {

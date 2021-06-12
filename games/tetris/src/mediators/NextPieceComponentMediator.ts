@@ -15,7 +15,12 @@ export class NextPieceComponentMediator extends Mediator<NextPieceComponent> {
     @inject(GameService) private gameService: GameService;
 
     public initialize(): void {
-        this.eventMap.mapListener(this.eventDispatcher, GameEvent.UPDATE_NEXT_PIECE, this.game_updateNextPiece, this);
+        this.eventMap.mapListener(
+            this.eventDispatcher,
+            GameEvent.UPDATE_NEXT_PIECE,
+            this.game_updateNextPiece,
+            this
+        );
     }
     public destroy(): void {
         this.eventMap.unmapListeners();

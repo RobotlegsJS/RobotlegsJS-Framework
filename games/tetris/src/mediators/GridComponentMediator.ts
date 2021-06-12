@@ -29,11 +29,36 @@ export class GridComponentMediator extends Mediator<GridComponent> {
     public initialize(): void {
         this._paused = false;
 
-        this.eventMap.mapListener(this.eventDispatcher, GameEvent.UPDATE_NEXT_PIECE, this.game_onUpdateNextPiece, this);
-        this.eventMap.mapListener(this.eventDispatcher, GameEvent.RESUME, this.game_onResumeGame, this);
-        this.eventMap.mapListener(this.eventDispatcher, GameEvent.PAUSE, this.game_onPauseGame, this);
-        this.eventMap.mapListener(this.eventDispatcher, GameEvent.GAME_OVER, this.game_onGameOVer, this);
-        this.eventMap.mapListener(this.eventDispatcher, GameEvent.CLEAR_GRID, this.game_onClearGrid, this);
+        this.eventMap.mapListener(
+            this.eventDispatcher,
+            GameEvent.UPDATE_NEXT_PIECE,
+            this.game_onUpdateNextPiece,
+            this
+        );
+        this.eventMap.mapListener(
+            this.eventDispatcher,
+            GameEvent.RESUME,
+            this.game_onResumeGame,
+            this
+        );
+        this.eventMap.mapListener(
+            this.eventDispatcher,
+            GameEvent.PAUSE,
+            this.game_onPauseGame,
+            this
+        );
+        this.eventMap.mapListener(
+            this.eventDispatcher,
+            GameEvent.GAME_OVER,
+            this.game_onGameOVer,
+            this
+        );
+        this.eventMap.mapListener(
+            this.eventDispatcher,
+            GameEvent.CLEAR_GRID,
+            this.game_onClearGrid,
+            this
+        );
     }
     public destroy(): void {
         this._paused = true;

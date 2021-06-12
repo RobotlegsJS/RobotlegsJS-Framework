@@ -9,21 +9,13 @@
     "preserveConstEnums": true,
     "target": "es5",
     "lib": ["es6", "dom"],
-    "types": ["reflect-metadata", "mocha"],
-    "declaration": true,
+    "types": ["reflect-metadata"],
+
     "moduleResolution": "node",
+    "declaration": true,
     "sourceMap": true,
-    "watch": true,
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true
   },
-  "include": [
-    "src/*",
-    "test/*",
-    "*"
-  ],
-  "exclude": [
-    "node_modules",
-    "**/*.spec.ts"
-  ]
+  "include": ["./src/**/*.ts"]
 }

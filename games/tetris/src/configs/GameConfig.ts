@@ -29,20 +29,11 @@ export class GameConfig implements IConfig {
         this.commandMap.map(GameEvent.INCREASE_POINTS).toCommand(IncreasePointsCommand);
     }
     private mapManager(): void {
-        this.context.injector
-            .bind(GameService)
-            .to(GameService)
-            .inSingletonScope();
-        this.context.injector
-            .bind(GameManager)
-            .to(GameManager)
-            .inSingletonScope();
+        this.context.injector.bind(GameService).to(GameService).inSingletonScope();
+        this.context.injector.bind(GameManager).to(GameManager).inSingletonScope();
         // this.context.injector.bind( SharedObjectManager ).to(SharedObjectManager).inSingletonScope();*
     }
     private mapModels(): void {
-        this.context.injector
-            .bind(GameModel)
-            .to(GameModel)
-            .inSingletonScope();
+        this.context.injector.bind(GameModel).to(GameModel).inSingletonScope();
     }
 }

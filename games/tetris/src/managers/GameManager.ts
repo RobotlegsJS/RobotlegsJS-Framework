@@ -136,6 +136,11 @@ export class GameManager {
         return !this._grid.isEmptyTile(tile.col, tile.row);
     }
     private isOffBounds(tile: Tile): boolean {
-        return tile.col < 0 || tile.col >= this._grid.maxCols || tile.row < 0 || tile.row >= this._grid.maxRows;
+        return (
+            tile.col < 0 ||
+            tile.col >= this._grid.maxCols ||
+            tile.row < 0 ||
+            tile.row >= this._grid.maxRows
+        );
     }
 }
