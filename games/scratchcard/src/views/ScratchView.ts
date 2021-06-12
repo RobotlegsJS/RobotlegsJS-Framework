@@ -29,6 +29,8 @@ export class ScratchView extends Container {
     }
 
     public clearAll(): void {
+        this._coverMask.clear();
+        this._coverMask.beginFill(0xff0000, 0.1);
         this._coverMask.drawRect(0, 0, MagicValues.MAX_WIDTH, MagicValues.MAX_HEIGHT);
     }
 
