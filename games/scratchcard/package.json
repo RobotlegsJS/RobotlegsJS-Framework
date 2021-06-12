@@ -6,14 +6,14 @@
   "license": "MIT",
   "scripts": {
     "start": "webpack serve --config ./webpack.config.js",
+    "bundle": "webpack --env production",
     "autoformat": "prettier --config ../../.prettierrc --ignore-path ../../.prettierignore --write --list-different .",
     "lint-fix:src": "eslint -c .eslintrc.js --ext .ts ./src --fix",
     "lint-fix": "npm run lint-fix:src",
     "lint:src": "eslint -c .eslintrc.js --ext .ts ./src",
     "lint": "npm run lint:src",
-    "cleanup": "rimraf .nyc_output && rimraf coverage && rimraf dist",
-    "compile:src": "tsc -d --importHelpers",
-    "build": "npm run cleanup && npm run compile:src",
+    "cleanup": "rimraf dist",
+    "build": "npm run cleanup && npm run bundle",
     "prepare": "npm run build"
   },
   "dependencies": {
@@ -37,6 +37,7 @@
     "imports-loader": "^3.0.0",
     "prettier": "^2.3.1",
     "rimraf": "^3.0.2",
+    "terser-webpack-plugin": "^5.1.3",
     "ts-loader": "^9.2.3",
     "ts-node": "^10.0.0",
     "typescript": "~4.2.4",
