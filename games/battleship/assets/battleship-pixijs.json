@@ -1,0 +1,108 @@
+{"frames": {
+
+"button_background.png":
+{
+	"frame": {"x":1,"y":1,"w":75,"h":75},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":75,"h":75},
+	"sourceSize": {"w":75,"h":75}
+},
+"icon_home.png":
+{
+	"frame": {"x":170,"y":1,"w":55,"h":48},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":55,"h":48},
+	"sourceSize": {"w":55,"h":48}
+},
+"icon_pause.png":
+{
+	"frame": {"x":78,"y":1,"w":47,"h":50},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":47,"h":50},
+	"sourceSize": {"w":47,"h":50}
+},
+"icon_resume.png":
+{
+	"frame": {"x":127,"y":1,"w":41,"h":50},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":41,"h":50},
+	"sourceSize": {"w":41,"h":50}
+},
+"icon_retry.png":
+{
+	"frame": {"x":227,"y":1,"w":54,"h":48},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":54,"h":48},
+	"sourceSize": {"w":54,"h":48}
+},
+"logo_battleship.png":
+{
+	"frame": {"x":78,"y":53,"w":312,"h":42},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":29,"y":0,"w":312,"h":42},
+	"sourceSize": {"w":376,"h":42}
+},
+"logo_setzer.png":
+{
+	"frame": {"x":452,"y":34,"w":12,"h":20},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":12,"h":20},
+	"sourceSize": {"w":12,"h":20}
+},
+"ship_2.png":
+{
+	"frame": {"x":421,"y":34,"w":29,"h":21},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":29,"h":21},
+	"sourceSize": {"w":29,"h":21}
+},
+"ship_3_1.png":
+{
+	"frame": {"x":421,"y":1,"w":43,"h":31},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":43,"h":31},
+	"sourceSize": {"w":43,"h":31}
+},
+"ship_3_2.png":
+{
+	"frame": {"x":392,"y":57,"w":45,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":45,"h":29},
+	"sourceSize": {"w":45,"h":29}
+},
+"ship_4.png":
+{
+	"frame": {"x":362,"y":1,"w":57,"h":37},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":57,"h":37},
+	"sourceSize": {"w":57,"h":37}
+},
+"ship_5.png":
+{
+	"frame": {"x":283,"y":1,"w":77,"h":46},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":77,"h":46},
+	"sourceSize": {"w":77,"h":46}
+}},
+"meta": {
+	"app": "http://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "battleship-pixijs.png",
+	"format": "RGBA8888",
+	"size": {"w":465,"h":96},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:5ac50a6d0ccebdfff21a71fb89e41aad:e370b126bc9ca333722b783ec9ac1d92:cec298cd30859c83f5fdfb1aff03e305$"
+}
+}
