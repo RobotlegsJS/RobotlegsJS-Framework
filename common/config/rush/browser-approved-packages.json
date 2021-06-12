@@ -12,7 +12,7 @@
     },
     {
       "name": "@robotlegsjs/core",
-      "allowedCategories": [ "production", "tests" ]
+      "allowedCategories": [ "games", "production", "tests" ]
     },
     {
       "name": "@robotlegsjs/macrobot",
@@ -20,7 +20,11 @@
     },
     {
       "name": "@robotlegsjs/pixi",
-      "allowedCategories": [ "production" ]
+      "allowedCategories": [ "games", "production" ]
+    },
+    {
+      "name": "@robotlegsjs/pixi-palidor",
+      "allowedCategories": [ "games" ]
     },
     {
       "name": "@robotlegsjs/signalcommandmap",
@@ -28,11 +32,11 @@
     },
     {
       "name": "@robotlegsjs/signals",
-      "allowedCategories": [ "production", "tests" ]
+      "allowedCategories": [ "games", "production", "tests" ]
     },
     {
       "name": "@rushstack/eslint-config",
-      "allowedCategories": [ "production", "tests" ]
+      "allowedCategories": [ "games", "production", "tests" ]
     },
     {
       "name": "bluebird",
@@ -68,27 +72,27 @@
     },
     {
       "name": "eslint",
-      "allowedCategories": [ "production", "tests" ]
+      "allowedCategories": [ "games", "production", "tests" ]
     },
     {
       "name": "eslint-plugin-import",
-      "allowedCategories": [ "production", "tests" ]
+      "allowedCategories": [ "games", "production", "tests" ]
     },
     {
       "name": "eslint-plugin-jsdoc",
-      "allowedCategories": [ "production", "tests" ]
+      "allowedCategories": [ "games", "production", "tests" ]
     },
     {
       "name": "eslint-plugin-prefer-arrow",
-      "allowedCategories": [ "production", "tests" ]
+      "allowedCategories": [ "games", "production", "tests" ]
     },
     {
       "name": "eslint-plugin-react",
-      "allowedCategories": [ "production", "tests" ]
+      "allowedCategories": [ "games", "production", "tests" ]
     },
     {
       "name": "eslint-plugin-unicorn",
-      "allowedCategories": [ "production", "tests" ]
+      "allowedCategories": [ "games", "production", "tests" ]
     },
     {
       "name": "eventemitter3",
@@ -100,11 +104,11 @@
     },
     {
       "name": "html-webpack-plugin",
-      "allowedCategories": [ "production" ]
+      "allowedCategories": [ "games", "production" ]
     },
     {
       "name": "imports-loader",
-      "allowedCategories": [ "production", "tests" ]
+      "allowedCategories": [ "games", "production", "tests" ]
     },
     {
       "name": "inversify",
@@ -196,11 +200,11 @@
     },
     {
       "name": "pixi.js",
-      "allowedCategories": [ "production" ]
+      "allowedCategories": [ "games", "production" ]
     },
     {
       "name": "prettier",
-      "allowedCategories": [ "production", "tests" ]
+      "allowedCategories": [ "games", "production", "tests" ]
     },
     {
       "name": "puppeteer",
@@ -208,7 +212,7 @@
     },
     {
       "name": "reflect-metadata",
-      "allowedCategories": [ "production", "tests" ]
+      "allowedCategories": [ "games", "production", "tests" ]
     },
     {
       "name": "remap-istanbul",
@@ -216,7 +220,7 @@
     },
     {
       "name": "rimraf",
-      "allowedCategories": [ "production", "tests" ]
+      "allowedCategories": [ "games", "production", "tests" ]
     },
     {
       "name": "sinon",
@@ -232,35 +236,35 @@
     },
     {
       "name": "terser-webpack-plugin",
-      "allowedCategories": [ "production", "tests" ]
+      "allowedCategories": [ "games", "production", "tests" ]
     },
     {
       "name": "ts-loader",
-      "allowedCategories": [ "production", "tests" ]
+      "allowedCategories": [ "games", "production", "tests" ]
     },
     {
       "name": "ts-node",
-      "allowedCategories": [ "production", "tests" ]
+      "allowedCategories": [ "games", "production", "tests" ]
     },
     {
       "name": "tslib",
-      "allowedCategories": [ "production", "tests" ]
+      "allowedCategories": [ "games", "production", "tests" ]
     },
     {
       "name": "typescript",
-      "allowedCategories": [ "production", "tests" ]
+      "allowedCategories": [ "games", "production", "tests" ]
     },
     {
       "name": "webpack",
-      "allowedCategories": [ "production", "tests" ]
+      "allowedCategories": [ "games", "production", "tests" ]
     },
     {
       "name": "webpack-cli",
-      "allowedCategories": [ "production", "tests" ]
+      "allowedCategories": [ "games", "production", "tests" ]
     },
     {
       "name": "webpack-dev-server",
-      "allowedCategories": [ "production", "tests" ]
+      "allowedCategories": [ "games", "production", "tests" ]
     }
   ]
 }
