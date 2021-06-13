@@ -17,27 +17,30 @@ export class ResetConfirmPopup extends Container {
         return this._confirmButton;
     }
 
-    constructor() {
+    public constructor() {
         super();
 
         this.interactive = true;
 
-        this.setupBackground();
-        this.setupTexts();
-        this.setupButtons();
+        this._setupBackground();
+        this._setupTexts();
+        this._setupButtons();
     }
-    private setupBackground(): void {
+
+    private _setupBackground(): void {
         this.addChild(PixiFactory.getShadowBackground());
         this.addChild(PixiFactory.getBoardBackground());
     }
-    private setupTexts(): void {
+
+    private _setupTexts(): void {
         const msg: Text = PixiFactory.getText(Texts.CONFIRM_RESET);
         msg.anchor.set(0.5);
         msg.x = ViewPortSize.HALF_WIDTH;
         msg.y = ViewPortSize.HALF_HEIGHT - 30;
         this.addChild(msg);
     }
-    private setupButtons(): void {
+
+    private _setupButtons(): void {
         this._cancelButton = PixiFactory.getButton(AtlasKeys.BUTTON_CANCEL);
         this._cancelButton.x = ViewPortSize.HALF_WIDTH + 25;
         this._cancelButton.y = ViewPortSize.HALF_HEIGHT + 15;

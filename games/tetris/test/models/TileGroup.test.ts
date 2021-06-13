@@ -6,8 +6,10 @@ import { Tile } from "./../../src/models/Tile";
 import { assert } from "chai";
 
 describe("TileGroup", () => {
-    function generateTilesBackup(tiles: Array<Tile>): Array<Tile> {
-        let bkpTiles: Array<Tile> = new Array<Tile>();
+    function generateTilesBackup(tiles: Tile[]): Tile[] {
+        let bkpTiles: Tile[] = [];
+
+        // eslint-disable-next-line @typescript-eslint/prefer-for-of
         for (let i = 0; i < tiles.length; i++) {
             bkpTiles.push(tiles[i].clone());
         }
@@ -15,10 +17,10 @@ describe("TileGroup", () => {
     }
 
     let tileGroup: TileGroup;
-    let tilesBackup: Array<Tile>;
+    let tilesBackup: Tile[];
     let tile: Tile;
     let tileBefore: Tile;
-    let result;
+    let result: boolean;
 
     beforeEach(() => {
         tileGroup = TileGroupFactory.getRandomTileGroup();

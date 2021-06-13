@@ -7,11 +7,12 @@ export class TileDisplay extends Sprite {
         return this._typeId;
     }
 
-    constructor(texture: Texture, typeId: number) {
+    public constructor(texture: Texture, typeId: number) {
         super(texture);
 
         this._typeId = typeId;
     }
+
     public removeFromParent(): void {
         this.parent.removeChild(this);
     }

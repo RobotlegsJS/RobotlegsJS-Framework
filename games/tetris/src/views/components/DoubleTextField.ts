@@ -12,7 +12,7 @@ export class DoubleTextField extends Container {
         this._text.text = value;
     }
 
-    constructor(label: string) {
+    public constructor(label: string) {
         super();
 
         const labelField: Text = PixiFactory.getText(label, Colors.STATIC_TEXT);

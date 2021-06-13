@@ -12,28 +12,34 @@ import { TilePool } from "./../utils/TilePool";
 
 @injectable()
 export class GameConfig implements IConfig {
-    @inject(IContext) private context: IContext;
-    @inject(IEventCommandMap) private commandMap: IEventCommandMap;
+    @inject(IContext)
+    private _context: IContext;
+
+    @inject(IEventCommandMap)
+    private _commandMap: IEventCommandMap;
 
     public configure(): void {
         TilePool.init();
 
-        this.mapCommands();
-        this.mapManager();
-        this.mapModels();
+        this._mapCommands();
+        this._mapManager();
+        this._mapModels();
     }
-    private mapCommands(): void {
-        this.commandMap.map(GameEvent.CREATE_LEVEL).toCommand(CreateLevelCommand);
-        this.commandMap.map(GameEvent.GAME_OVER).toCommand(GameOverCommand);
-        this.commandMap.map(GameEvent.GET_NEXT_PIECE).toCommand(GetNextPieceCommand);
-        this.commandMap.map(GameEvent.INCREASE_POINTS).toCommand(IncreasePointsCommand);
+
+    private _mapCommands(): void {
+        this._commandMap.map(GameEvent.CREATE_LEVEL).toCommand(CreateLevelCommand);
+        this._commandMap.map(GameEvent.GAME_OVER).toCommand(GameOverCommand);
+        this._commandMap.map(GameEvent.GET_NEXT_PIECE).toCommand(GetNextPieceCommand);
+        this._commandMap.map(GameEvent.INCREASE_POINTS).toCommand(IncreasePointsCommand);
     }
-    private mapManager(): void {
-        this.context.injector.bind(GameService).to(GameService).inSingletonScope();
-        this.context.injector.bind(GameManager).to(GameManager).inSingletonScope();
+
+    private _mapManager(): void {
+        this._context.injector.bind(GameService).to(GameService).inSingletonScope();
+        this._context.injector.bind(GameManager).to(GameManager).inSingletonScope();
         // this.context.injector.bind( SharedObjectManager ).to(SharedObjectManager).inSingletonScope();*
     }
-    private mapModels(): void {
-        this.context.injector.bind(GameModel).to(GameModel).inSingletonScope();
+
+    private _mapModels(): void {
+        this._context.injector.bind(GameModel).to(GameModel).inSingletonScope();
     }
 }

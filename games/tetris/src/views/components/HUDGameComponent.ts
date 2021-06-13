@@ -21,25 +21,28 @@ export class HUDGameComponent extends Container {
         return this._pauseButton;
     }
 
-    constructor() {
+    public constructor() {
         super();
 
-        this.createTextFields();
-        this.createButtons();
+        this._createTextFields();
+        this._createButtons();
     }
+
     public updateData(model: GameModel): void {
         this._linesText.text = String(model.lines);
         this._scoreText.text = String(model.score);
         this._levelText.text = String(model.level);
         this._hiScoreText.text = "0"; // String(model.hiScore);
     }
-    private createButtons(): void {
+
+    private _createButtons(): void {
         this._pauseButton = PixiFactory.getButton(AtlasKeys.BUTTON_PAUSE);
         this._pauseButton.x = ViewPortSize.MAX_WIDTH - 32;
         this._pauseButton.y = MagicValues.BORDER_OFFSET + 15;
         this.addChild(this._pauseButton);
     }
-    private createTextFields(): void {
+
+    private _createTextFields(): void {
         const gameLabel: Text = PixiFactory.getText(Texts.TETRIS, Colors.DYNAMIC_TEXT);
         gameLabel.x = MagicValues.BORDER_OFFSET;
         gameLabel.y = 24;

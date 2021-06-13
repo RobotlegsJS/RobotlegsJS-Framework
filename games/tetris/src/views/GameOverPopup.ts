@@ -17,27 +17,30 @@ export class GameOverPopup extends Container {
         return this._retryButton;
     }
 
-    constructor() {
+    public constructor() {
         super();
 
         this.interactive = true;
 
-        this.setupBackgrounds();
-        this.setupTexts();
-        this.setupButtons();
+        this._setupBackgrounds();
+        this._setupTexts();
+        this._setupButtons();
     }
-    private setupBackgrounds(): void {
+
+    private _setupBackgrounds(): void {
         this.addChild(PixiFactory.getShadowBackground());
         this.addChild(PixiFactory.getBoardBackground());
     }
-    private setupTexts(): void {
+
+    private _setupTexts(): void {
         const title: Text = PixiFactory.getText(Texts.GAME_OVER);
         title.x = ViewPortSize.HALF_WIDTH;
         title.y = ViewPortSize.HALF_HEIGHT - 30;
         title.anchor.set(0.5);
         this.addChild(title);
     }
-    private setupButtons(): void {
+
+    private _setupButtons(): void {
         this._homeButton = PixiFactory.getButton(AtlasKeys.BUTTON_HOME);
         this._homeButton.x = ViewPortSize.HALF_WIDTH + 25;
         this._homeButton.y = ViewPortSize.HALF_HEIGHT + 15;

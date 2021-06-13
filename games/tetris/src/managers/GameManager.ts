@@ -7,82 +7,95 @@ import { Tile } from "./../models/Tile";
 
 @injectable()
 export class GameManager {
-    @inject(GameService) private gameService: GameService;
+    @inject(GameService)
+    private _gameService: GameService;
 
     private _grid: Grid;
     private _currentPiece: TileGroup;
     private _tilesToUpdate: Tile[];
     private _tilesToRemove: Tile[];
 
-    public createEmpytGrid(cols = 10, rows = 20): void {
+    public createEmpytGrid(cols: number = 10, rows: number = 20): void {
         this._grid = new Grid(cols, rows);
-        this._tilesToUpdate = new Array<Tile>();
-        this._tilesToRemove = new Array<Tile>();
+        this._tilesToUpdate = [];
+        this._tilesToRemove = [];
     }
+
     public addPiece(currentPiece: TileGroup): void {
         this._currentPiece = currentPiece;
         this._currentPiece.moveHorizontal(4);
-        this.addTilesToUpdate(this._currentPiece.tiles);
+        this._addTilesToUpdate(this._currentPiece.tiles);
 
-        this.validateGameOver();
+        this._validateGameOver();
     }
+
     public tickUpdate(): void {
         this.moveCurrentPieceDown();
     }
+
     public rotateCurrentPiece(): void {
         this._currentPiece.rotate();
 
-        if (this.isMovementValid() === false) {
+        if (this._isMovementValid() === false) {
             this._currentPiece.rollback();
         } else {
-            this.addTilesToUpdate(this._currentPiece.tiles);
+            this._addTilesToUpdate(this._currentPiece.tiles);
         }
     }
+
     public getTilesToUpdate(): Tile[] {
         return this._tilesToUpdate;
     }
+
     public getTilesToRemove(): Tile[] {
         return this._tilesToRemove;
     }
+
     public moveCurrentPieceLeft(): void {
         this._currentPiece.moveHorizontal(-1);
 
-        if (this.isMovementValid() === false) {
+        if (this._isMovementValid() === false) {
             this._currentPiece.rollbackX();
         } else {
-            this.addTilesToUpdate(this._currentPiece.tiles);
+            this._addTilesToUpdate(this._currentPiece.tiles);
         }
     }
+
     public moveCurrentPieceRight(): void {
         this._currentPiece.moveHorizontal(1);
 
-        if (this.isMovementValid() === false) {
+        if (this._isMovementValid() === false) {
             this._currentPiece.rollbackX();
         } else {
-            this.addTilesToUpdate(this._currentPiece.tiles);
+            this._addTilesToUpdate(this._currentPiece.tiles);
         }
     }
+
     public moveCurrentPieceDown(): void {
         this._currentPiece.moveVertical();
 
-        if (this.isMovementValid() === false) {
+        if (this._isMovementValid() === false) {
             this._currentPiece.rollbackY();
 
             const tiles: Tile[] = this._currentPiece.tiles;
-            for (let i = 0; i < tiles.length; i++) {
+
+            // eslint-disable-next-line @typescript-eslint/prefer-for-of
+            for (let i: number = 0; i < tiles.length; i++) {
                 this._grid.setTile(tiles[i], tiles[i].col, tiles[i].row);
             }
-            this.solveCompletedRows();
-            this.gameService.getNextPiece();
+
+            this._solveCompletedRows();
+            this._gameService.getNextPiece();
         } else {
-            this.addTilesToUpdate(this._currentPiece.tiles);
+            this._addTilesToUpdate(this._currentPiece.tiles);
         }
     }
-    private solveCompletedRows(): void {
+
+    private _solveCompletedRows(): void {
         let linesRemoved = 0;
 
-        const updateTiles: Tile[] = new Array<Tile>();
-        let removeTiles: Tile[] = new Array<Tile>();
+        const updateTiles: Tile[] = [];
+        let removeTiles: Tile[] = [];
 
         let isToRemove: boolean;
         let hasToUpdate: boolean;
@@ -109,33 +122,39 @@ export class GameManager {
         }
 
         if (linesRemoved > 0) {
-            this.gameService.increasePoints(linesRemoved);
+            this._gameService.increasePoints(linesRemoved);
         }
 
         this._tilesToUpdate = this._tilesToUpdate.concat(updateTiles);
         this._tilesToRemove = this._tilesToRemove.concat(removeTiles);
     }
-    private isMovementValid(): boolean {
+
+    private _isMovementValid(): boolean {
+        // eslint-disable-next-line @typescript-eslint/prefer-for-of
         for (let i = 0; i < this._currentPiece.tiles.length; i++) {
             const tile = this._currentPiece.tiles[i];
-            if (this.isOffBounds(tile) || this.isNotEmptyTile(tile)) {
+            if (this._isOffBounds(tile) || this._isNotEmptyTile(tile)) {
                 return false;
             }
         }
         return true;
     }
-    private addTilesToUpdate(tiles: Tile[]): void {
+
+    private _addTilesToUpdate(tiles: Tile[]): void {
         this._tilesToUpdate = this._tilesToUpdate.concat(tiles);
     }
-    private validateGameOver(): void {
-        if (this.isMovementValid() === false) {
-            this.gameService.gameOver();
+
+    private _validateGameOver(): void {
+        if (this._isMovementValid() === false) {
+            this._gameService.gameOver();
         }
     }
-    private isNotEmptyTile(tile: Tile): boolean {
+
+    private _isNotEmptyTile(tile: Tile): boolean {
         return !this._grid.isEmptyTile(tile.col, tile.row);
     }
-    private isOffBounds(tile: Tile): boolean {
+
+    private _isOffBounds(tile: Tile): boolean {
         return (
             tile.col < 0 ||
             tile.col >= this._grid.maxCols ||

@@ -6,11 +6,14 @@ import { FlowService } from "./../services/FlowService";
 
 @injectable()
 export class GameOverCommand implements ICommand {
-    @inject(GameModel) private model: GameModel;
-    @inject(FlowService) private flowService: FlowService;
+    @inject(GameModel)
+    private _model: GameModel;
+
+    @inject(FlowService)
+    private _flowService: FlowService;
 
     public execute(): void {
-        this.model.status = GameStatus.GAMEOVER;
-        this.flowService.showGameOverPopup();
+        this._model.status = GameStatus.GAMEOVER;
+        this._flowService.showGameOverPopup();
     }
 }

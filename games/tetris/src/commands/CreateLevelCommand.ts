@@ -8,24 +8,30 @@ import { TileGroupFactory } from "./../utils/TileGroupFactory";
 
 @injectable()
 export class CreateLevelCommand implements ICommand {
-    @inject(GameModel) private model: GameModel;
-    @inject(GameService) private gameService: GameService;
-    @inject(FlowService) private flowService: FlowService;
+    @inject(GameModel)
+    private _model: GameModel;
+
+    @inject(GameService)
+    private _gameService: GameService;
+
+    @inject(FlowService)
+    private _flowService: FlowService;
 
     public execute(): void {
-        this.model.clear();
-        this.model.currentPiece = TileGroupFactory.getRandomTileGroup();
-        this.model.nextPiece = TileGroupFactory.getRandomTileGroup();
+        this._model.clear();
+        this._model.currentPiece = TileGroupFactory.getRandomTileGroup();
+        this._model.nextPiece = TileGroupFactory.getRandomTileGroup();
 
-        this.gameService.clearGrid();
-        this.gameService.updateNextPiece();
-        this.gameService.updateData();
+        this._gameService.clearGrid();
+        this._gameService.updateNextPiece();
+        this._gameService.updateData();
 
-        if (this.model.status) {
-            this.flowService.showStartingPopup();
+        if (this._model.status) {
+            this._flowService.showStartingPopup();
         } else {
-            this.flowService.showInfoPopup();
+            this._flowService.showInfoPopup();
         }
-        this.model.status = GameStatus.GAME;
+
+        this._model.status = GameStatus.GAME;
     }
 }

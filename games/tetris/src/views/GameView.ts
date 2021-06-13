@@ -13,9 +13,9 @@ export class GameView extends Container {
     private _nextPieceComponent: NextPieceComponent;
     private _hudComponent: HUDGameComponent;
 
-    constructor() {
+    public constructor() {
         super();
-        this.createBackgrounds();
+        this._createBackgrounds();
     }
 
     public destroy(): void {
@@ -42,7 +42,8 @@ export class GameView extends Container {
         this._hudComponent = new HUDGameComponent();
         this.addChild(this._hudComponent);
     }
-    private createBackgrounds(): void {
+
+    private _createBackgrounds(): void {
         this.addChild(PixiFactory.getColorBackground());
 
         const grid: Sprite = PixiFactory.getImage(AtlasKeys.GRID);

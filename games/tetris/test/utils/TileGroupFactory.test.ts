@@ -27,14 +27,14 @@ describe("TileGroupFactory", () => {
     });
 
     it("testGetTilesByTypeArray: Is not Null", () => {
-        let array: Array<number> = TileGroupType.getTypeArray(TileGroupType.TYPE_L);
-        let tiles: Array<Tile> = TileGroupFactory.getTilesByTypeArray(array);
+        let array: number[] = TileGroupType.getTypeArray(TileGroupType.TYPE_L);
+        let tiles: Tile[] = TileGroupFactory.getTilesByTypeArray(array);
         assert.isNotNull(tiles);
     });
 
     it("testGetTilesByTypeArray: right values", () => {
-        let array: Array<number> = TileGroupType.getTypeArray(TileGroupType.TYPE_L);
-        let tiles: Array<Tile> = TileGroupFactory.getTilesByTypeArray(array);
+        let array: number[] = TileGroupType.getTypeArray(TileGroupType.TYPE_L);
+        let tiles: Tile[] = TileGroupFactory.getTilesByTypeArray(array);
         let result = true;
 
         result = result && tiles.length === array.length;

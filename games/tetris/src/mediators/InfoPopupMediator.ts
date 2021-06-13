@@ -6,16 +6,19 @@ import { InfoPopup } from "./../views/InfoPopup";
 
 @injectable()
 export class InfoPopupMediator extends Mediator<InfoPopup> {
-    @inject(FlowService) private service: FlowService;
+    @inject(FlowService)
+    private _service: FlowService;
 
     public initialize(): void {
-        this.eventMap.mapListener(this.view.closeButton, "click", this.closeButton_onClick, this);
+        this.eventMap.mapListener(this.view.closeButton, "click", this._onClickCloseButton, this);
     }
+
     public destroy(): void {
         this.eventMap.unmapListeners();
     }
-    private closeButton_onClick(e: any): void {
-        this.service.closePopup();
-        this.service.showStartingPopup();
+
+    private _onClickCloseButton(e: any): void {
+        this._service.closePopup();
+        this._service.showStartingPopup();
     }
 }

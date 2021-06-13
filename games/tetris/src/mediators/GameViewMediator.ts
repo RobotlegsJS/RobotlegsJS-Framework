@@ -6,13 +6,15 @@ import { GameView } from "./../views/GameView";
 
 @injectable()
 export class GameViewMediator extends Mediator<GameView> {
-    @inject(GameService) private gameService: GameService;
+    @inject(GameService)
+    private _gameService: GameService;
 
     public initialize(): void {
         this.view.createComponents();
 
-        this.gameService.createLevel();
+        this._gameService.createLevel();
     }
+
     public destroy(): void {
         this.view.destroy();
     }

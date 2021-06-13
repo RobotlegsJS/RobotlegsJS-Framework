@@ -29,14 +29,14 @@ describe("Grid", () => {
     });
 
     it("RemoveRow: The method has to return the removed tiles", () => {
-        let tiles: Array<Tile> = new Array<Tile>();
+        let tiles: Tile[] = [];
         let row = 5;
         for (let col = 0; col < grid.maxCols; col++) {
             let tile = new Tile(col, row);
             grid.setTile(tile, col, row);
             tiles.push(tile);
         }
-        let removedRow: Array<Tile> = grid.removeRow(row);
+        let removedRow: Tile[] = grid.removeRow(row);
         let result = true;
         for (let i = 0; i < grid.maxCols; i++) {
             result = result && removedRow[i] === tiles[i];
@@ -46,14 +46,14 @@ describe("Grid", () => {
     });
 
     it("GetRow: Get the list of tiles from the row", () => {
-        let tiles: Array<Tile> = new Array<Tile>();
+        let tiles: Tile[] = [];
         let row = 5;
         for (let col = 0; col < grid.maxCols; col++) {
             let tile = new Tile(col, row);
             grid.setTile(tile, col, row);
             tiles.push(tile);
         }
-        let getRow: Array<Tile> = grid.getRow(row);
+        let getRow: Tile[] = grid.getRow(row);
         let result = true;
         for (let i = 0; i < grid.maxCols; i++) {
             result = result && getRow[i] === tiles[i];

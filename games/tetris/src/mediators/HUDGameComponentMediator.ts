@@ -9,27 +9,35 @@ import { HUDGameComponent } from "./../views/components/HUDGameComponent";
 
 @injectable()
 export class HUDGameComponentMediator extends Mediator<HUDGameComponent> {
-    @inject(GameModel) private model: GameModel;
-    @inject(GameService) private gameService: GameService;
-    @inject(FlowService) private flowService: FlowService;
+    @inject(GameModel)
+    private _model: GameModel;
+
+    @inject(GameService)
+    private _gameService: GameService;
+
+    @inject(FlowService)
+    private _flowService: FlowService;
 
     public initialize(): void {
-        this.eventMap.mapListener(this.view.pauseButton, "click", this.pauseButton_onClick, this);
+        this.eventMap.mapListener(this.view.pauseButton, "click", this._onClickPauseButton, this);
         this.eventMap.mapListener(
             this.eventDispatcher,
             GameEvent.UPDATE_DATA,
-            this.game_onUpdate,
+            this._onUpdateGame,
             this
         );
     }
+
     public destroy(): void {
         this.eventMap.unmapListeners();
     }
-    private game_onUpdate(e: any): void {
-        this.view.updateData(this.model);
+
+    private _onUpdateGame(e: any): void {
+        this.view.updateData(this._model);
     }
-    private pauseButton_onClick(e: any): void {
-        this.gameService.pause();
-        this.flowService.showPausePopup();
+
+    private _onClickPauseButton(e: any): void {
+        this._gameService.pause();
+        this._flowService.showPausePopup();
     }
 }

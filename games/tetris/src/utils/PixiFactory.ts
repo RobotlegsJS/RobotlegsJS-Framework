@@ -12,6 +12,7 @@ export class PixiFactory {
     public static getColorBackground(color: number = Colors.BACKGROUND_DARK): Graphics {
         return this.getColorBox(ViewPortSize.MAX_WIDTH, ViewPortSize.MAX_HEIGHT, color);
     }
+
     public static getShadowBackground(): Graphics {
         const background: Graphics = this.getColorBox(
             ViewPortSize.MAX_WIDTH,
@@ -20,6 +21,7 @@ export class PixiFactory {
         background.alpha = 0.6;
         return background;
     }
+
     public static getBoardBackground(): Container {
         const boardBackground: Graphics = this.getColorBox(
             ViewPortSize.MAX_WIDTH,
@@ -34,19 +36,23 @@ export class PixiFactory {
         board.addChild(boardBackground);
         return board;
     }
+
     public static getButton(atlasKey: string): CustomButton {
         return new CustomButton(atlasKey);
     }
-    public static getColorBox(width: number, heigth: number, color = 0x00000): Graphics {
+
+    public static getColorBox(width: number, heigth: number, color: number = 0x00000): Graphics {
         const background: Graphics = new Graphics();
         background.beginFill(color);
         background.drawRect(0, 0, width, heigth);
         return background;
     }
+
     public static getImage(atlasKey: string): Sprite {
         const texture: Texture = AtlasKeys.getTexture(atlasKey);
         return new Sprite(texture);
     }
+
     public static getText(
         text: string,
         color: number = Colors.DYNAMIC_TEXT,

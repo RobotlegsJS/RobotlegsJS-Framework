@@ -7,15 +7,20 @@ import { GameUtils } from "./../utils/GameUtils";
 
 @injectable()
 export class IncreasePointsCommand implements ICommand {
-    @inject(GameModel) private model: GameModel;
-    @inject(GameEvent) private event: GameEvent;
-    @inject(GameService) private gameService: GameService;
+    @inject(GameModel)
+    private _model: GameModel;
+
+    @inject(GameEvent)
+    private _event: GameEvent;
+
+    @inject(GameService)
+    private _gameService: GameService;
 
     public execute(): void {
-        this.model.score += GameUtils.getPointsByLines(this.event.lines);
-        this.model.level = GameUtils.getCurrentLevel(this.model.lines);
-        this.model.lines += this.event.lines;
+        this._model.score += GameUtils.getPointsByLines(this._event.lines);
+        this._model.level = GameUtils.getCurrentLevel(this._model.lines);
+        this._model.lines += this._event.lines;
 
-        this.gameService.updateData();
+        this._gameService.updateData();
     }
 }

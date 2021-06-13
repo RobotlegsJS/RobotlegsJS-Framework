@@ -7,7 +7,6 @@ import { GameManager } from "./../managers/GameManager";
 import { GameModel } from "./../models/GameModel";
 import { Tile } from "./../models/Tile";
 import { TileGroup } from "./../models/TileGroup";
-import { GameService } from "./../services/GameService";
 import { GameUtils } from "./../utils/GameUtils";
 import { PixiFactory } from "./../utils/PixiFactory";
 import { TilePool } from "./../utils/TilePool";
@@ -16,9 +15,11 @@ import { TileDisplay } from "./../views/components/TileDisplay";
 
 @injectable()
 export class GridComponentMediator extends Mediator<GridComponent> {
-    @inject(GameModel) private model: GameModel;
-    @inject(GameService) private gameService: GameService;
-    @inject(GameManager) private gameManager: GameManager;
+    @inject(GameModel)
+    private _model: GameModel;
+
+    @inject(GameManager)
+    private _gameManager: GameManager;
 
     private _displays: Map<Tile, Sprite>;
 
@@ -32,62 +33,59 @@ export class GridComponentMediator extends Mediator<GridComponent> {
         this.eventMap.mapListener(
             this.eventDispatcher,
             GameEvent.UPDATE_NEXT_PIECE,
-            this.game_onUpdateNextPiece,
+            this._onUpdateNextPiece,
             this
         );
-        this.eventMap.mapListener(
-            this.eventDispatcher,
-            GameEvent.RESUME,
-            this.game_onResumeGame,
-            this
-        );
-        this.eventMap.mapListener(
-            this.eventDispatcher,
-            GameEvent.PAUSE,
-            this.game_onPauseGame,
-            this
-        );
+        this.eventMap.mapListener(this.eventDispatcher, GameEvent.RESUME, this._onResumeGame, this);
+        this.eventMap.mapListener(this.eventDispatcher, GameEvent.PAUSE, this._onPauseGame, this);
         this.eventMap.mapListener(
             this.eventDispatcher,
             GameEvent.GAME_OVER,
-            this.game_onGameOVer,
+            this._onGameOVer,
             this
         );
         this.eventMap.mapListener(
             this.eventDispatcher,
             GameEvent.CLEAR_GRID,
-            this.game_onClearGrid,
+            this._onClearGrid,
             this
         );
     }
+
     public destroy(): void {
         this._paused = true;
         this.eventMap.unmapListeners();
-        document.removeEventListener("keydown", this.onKeyDownMovement.bind(this));
+        document.removeEventListener("keydown", this._onKeyDownMovement.bind(this));
     }
-    private addPiece(): void {
-        this.gameManager.addPiece(this.model.currentPiece);
+
+    private _addPiece(): void {
+        this._gameManager.addPiece(this._model.currentPiece);
 
         let display: TileDisplay;
-        const group: TileGroup = this.model.currentPiece;
+        const group: TileGroup = this._model.currentPiece;
+
+        // eslint-disable-next-line @typescript-eslint/prefer-for-of
         for (let i = 0; i < group.tiles.length; i++) {
             display = PixiFactory.getTileDisplay(group.typeId);
-            this.addDisplayToStage(group.tiles[i], display);
+            this._addDisplayToStage(group.tiles[i], display);
             GameUtils.updateDisplayPositionByTile(group.tiles[i], display);
         }
     }
-    private addDisplayToStage(tile: Tile, display: Sprite): void {
+
+    private _addDisplayToStage(tile: Tile, display: Sprite): void {
         this.view.addChild(display);
         this._displays.set(tile, display);
     }
-    private updateDisplaysPositions(tiles: Tile[]): void {
+
+    private _updateDisplaysPositions(tiles: Tile[]): void {
         let tile: Tile;
         while (tiles.length > 0) {
             tile = tiles.pop();
             GameUtils.updateDisplayPositionByTile(tile, this._displays.get(tile));
         }
     }
-    private removeDisplays(tiles: Tile[]): void {
+
+    private _removeDisplays(tiles: Tile[]): void {
         let tile: Tile;
         let tileDisplay: TileDisplay;
 
@@ -101,58 +99,66 @@ export class GridComponentMediator extends Mediator<GridComponent> {
             this._displays.delete(tile);
         }
     }
-    private updateDisplays(): void {
-        this.updateDisplaysPositions(this.gameManager.getTilesToUpdate());
-        this.removeDisplays(this.gameManager.getTilesToRemove());
+
+    private _updateDisplays(): void {
+        this._updateDisplaysPositions(this._gameManager.getTilesToUpdate());
+        this._removeDisplays(this._gameManager.getTilesToRemove());
     }
-    private game_onUpdateNextPiece(e: GameEvent): void {
-        this.addPiece();
+
+    private _onUpdateNextPiece(e: GameEvent): void {
+        this._addPiece();
     }
-    private game_onClearGrid(e: any): void {
+
+    private _onClearGrid(e: any): void {
         this._displays = new Map<Tile, Sprite>();
         this._tick = 0;
 
-        this.gameManager.createEmpytGrid();
+        this._gameManager.createEmpytGrid();
         this.view.clear();
     }
-    private game_onGameOVer(e: any): void {
+
+    private _onGameOVer(e: any): void {
         this._paused = true;
-        document.removeEventListener("keydown", this.onKeyDownMovement.bind(this));
+        document.removeEventListener("keydown", this._onKeyDownMovement.bind(this));
     }
-    private game_onPauseGame(e: any): void {
+
+    private _onPauseGame(e: any): void {
         this._paused = true;
-        document.removeEventListener("keydown", this.onKeyDownMovement.bind(this));
+        document.removeEventListener("keydown", this._onKeyDownMovement.bind(this));
     }
-    private game_onResumeGame(e: any): void {
+
+    private _onResumeGame(e: any): void {
         this._paused = false;
-        document.addEventListener("keydown", this.onKeyDownMovement.bind(this));
-        window.requestAnimationFrame(this.onEnterFrame.bind(this));
+        document.addEventListener("keydown", this._onKeyDownMovement.bind(this));
+        window.requestAnimationFrame(this._onEnterFrame.bind(this));
     }
-    private onKeyDownMovement(e: KeyboardEvent) {
+
+    private _onKeyDownMovement(e: KeyboardEvent): void {
         if (e.keyCode === 37 || e.keyCode === 65) {
-            this.gameManager.moveCurrentPieceLeft();
+            this._gameManager.moveCurrentPieceLeft();
         } else if (e.keyCode === 39 || e.keyCode === 68) {
-            this.gameManager.moveCurrentPieceRight();
+            this._gameManager.moveCurrentPieceRight();
         } else if (e.keyCode === 38 || e.keyCode === 87) {
-            this.gameManager.rotateCurrentPiece();
+            this._gameManager.rotateCurrentPiece();
         } else if (e.keyCode === 40 || e.keyCode === 83) {
-            this.gameManager.moveCurrentPieceDown();
+            this._gameManager.moveCurrentPieceDown();
         }
-        this.updateDisplays();
+        this._updateDisplays();
     }
-    private onEnterFrame(e: any): void {
+
+    private _onEnterFrame(e: any): void {
         if (this._paused === true) {
             return;
         }
 
         this._tick++;
 
-        if (this._tick > GameUtils.getCurrentSpeed(this.model.level)) {
-            this.gameManager.tickUpdate();
+        if (this._tick > GameUtils.getCurrentSpeed(this._model.level)) {
+            this._gameManager.tickUpdate();
             this._tick = 0;
         }
 
-        this.updateDisplays();
-        window.requestAnimationFrame(this.onEnterFrame.bind(this));
+        this._updateDisplays();
+        window.requestAnimationFrame(this._onEnterFrame.bind(this));
     }
 }

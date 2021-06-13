@@ -18,17 +18,19 @@ export class OptionsView extends Container {
         return this._resetButton;
     }
 
-    constructor() {
+    public constructor() {
         super();
 
-        this.setupBackground();
-        this.setupButtons();
-        this.setupTexts();
+        this._setupBackground();
+        this._setupButtons();
+        this._setupTexts();
     }
-    private setupBackground(): void {
+
+    private _setupBackground(): void {
         this.addChild(PixiFactory.getColorBackground());
     }
-    private setupButtons(): void {
+
+    private _setupButtons(): void {
         this._homeButton = PixiFactory.getButton(AtlasKeys.BUTTON_HOME);
         this._homeButton.x = ViewPortSize.MAX_WIDTH - 30;
         this._homeButton.y = 30;
@@ -39,7 +41,8 @@ export class OptionsView extends Container {
         this._resetButton.y = 116;
         this.addChild(this._resetButton);
     }
-    private setupTexts(): void {
+
+    private _setupTexts(): void {
         const title: Text = PixiFactory.getText(Texts.CONFIG);
         title.x = 15;
         title.y = 18;

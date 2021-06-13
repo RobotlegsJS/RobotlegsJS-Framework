@@ -13,29 +13,29 @@ import { PalidorConfig } from "./configs/PalidorConfig";
 import { ViewsConfig } from "./configs/ViewsConfig";
 
 class Main {
-    private stage: PIXI.Container;
-    private renderer: PIXI.Renderer;
-    private context: Context;
+    private _stage: PIXI.Container;
+    private _renderer: PIXI.Renderer;
+    private _context: Context;
 
-    constructor() {
-        this.renderer = PIXI.autoDetectRenderer({ width: 340, height: 480 });
-        this.stage = new PIXI.Container();
-        this.context = new Context();
-        this.context
+    public constructor() {
+        this._renderer = PIXI.autoDetectRenderer({ width: 340, height: 480 });
+        this._stage = new PIXI.Container();
+        this._context = new Context();
+        this._context
             .install(PalidorBundle)
-            .configure(new ContextView(this.stage))
+            .configure(new ContextView(this._stage))
             .configure(ViewsConfig, GameConfig, PalidorConfig)
             .initialize();
 
-        document.body.appendChild(this.renderer.view);
+        document.body.appendChild(this._renderer.view);
     }
 
-    public render = () => {
-        this.renderer.render(this.stage);
+    public render = (): void => {
+        this._renderer.render(this._stage);
         window.requestAnimationFrame(this.render);
     };
 }
 
-const main = new Main();
+const main: Main = new Main();
 
 main.render();

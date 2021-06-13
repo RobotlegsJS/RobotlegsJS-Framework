@@ -1,17 +1,18 @@
 export class Tile {
-    public static TILE_WIDTH = 18;
+    public static TILE_WIDTH: number = 18;
 
     public row: number;
     public col: number;
     public bRow: number;
     public bCol: number;
 
-    constructor(col = 0, row = 0) {
+    public constructor(col: number = 0, row: number = 0) {
         this.col = col;
         this.row = row;
         this.bCol = col;
         this.bRow = row;
     }
+
     public clone(): Tile {
         const tile: Tile = new Tile();
         tile.col = this.col;
@@ -21,10 +22,12 @@ export class Tile {
 
         return tile;
     }
+
     public setPosition(col: number, row: number): void {
         this.col = col;
         this.row = row;
     }
+
     public toString(): String {
         return "tile_col_" + this.col + "_row_" + this.row;
     }

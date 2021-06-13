@@ -1,4 +1,4 @@
 export class GameStatus {
-    public static GAME = "game";
-    public static GAMEOVER = "gameOver";
+    public static GAME: string = "game";
+    public static GAMEOVER: string = "gameOver";
 }

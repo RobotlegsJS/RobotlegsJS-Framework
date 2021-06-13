@@ -9,15 +9,16 @@ export class TilePool {
     }
     public static getTileDisplay(typeId: number): TileDisplay {
         if (this._dictionary.get(typeId) === undefined) {
-            this._dictionary.set(typeId, new Array<TileDisplay>());
+            this._dictionary.set(typeId, []);
         }
         const list: TileDisplay[] = this._dictionary.get(typeId);
         let tileDisplay: TileDisplay;
-        if (list.length === 0) {
-            tileDisplay = new TileDisplay(AtlasKeys.getTileTexture(typeId), typeId);
-        } else {
-            tileDisplay = list.shift();
-        }
+
+        tileDisplay =
+            list.length === 0
+                ? new TileDisplay(AtlasKeys.getTileTexture(typeId), typeId)
+                : (tileDisplay = list.shift());
+
         tileDisplay.visible = true;
 
         return tileDisplay;

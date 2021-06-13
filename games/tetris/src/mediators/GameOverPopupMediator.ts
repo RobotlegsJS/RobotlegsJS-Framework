@@ -7,22 +7,28 @@ import { GameOverPopup } from "./../views/GameOverPopup";
 
 @injectable()
 export class GameOverPopupMediator extends Mediator<GameOverPopup> {
-    @inject(FlowService) private flowService: FlowService;
-    @inject(GameService) private gameService: GameService;
+    @inject(FlowService)
+    private _flowService: FlowService;
+
+    @inject(GameService)
+    private _gameService: GameService;
 
     public initialize(): void {
-        this.eventMap.mapListener(this.view.homeButton, "click", this.homeButton_onClick, this);
-        this.eventMap.mapListener(this.view.retryButton, "click", this.retryButton_onClick, this);
+        this.eventMap.mapListener(this.view.homeButton, "click", this._onClickHomeButton, this);
+        this.eventMap.mapListener(this.view.retryButton, "click", this._onClickRetryButton, this);
     }
+
     public destroy(): void {
         this.eventMap.unmapListeners();
     }
-    private homeButton_onClick(e: any): void {
-        this.flowService.setHomeView();
-        this.flowService.closePopup();
+
+    private _onClickHomeButton(e: any): void {
+        this._flowService.setHomeView();
+        this._flowService.closePopup();
     }
-    private retryButton_onClick(e: any): void {
-        this.flowService.closePopup();
-        this.gameService.createLevel();
+
+    private _onClickRetryButton(e: any): void {
+        this._flowService.closePopup();
+        this._gameService.createLevel();
     }
 }

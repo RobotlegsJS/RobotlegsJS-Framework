@@ -14,7 +14,7 @@ export class GameModel {
 
     public status: string;
 
-    constructor() {
+    public constructor() {
         this.clear();
     }
 

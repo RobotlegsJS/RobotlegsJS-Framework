@@ -6,14 +6,17 @@ import { TileGroupFactory } from "./../utils/TileGroupFactory";
 
 @injectable()
 export class GetNextPieceCommand implements ICommand {
-    @inject(GameModel) private model: GameModel;
-    @inject(GameService) private gameService: GameService;
+    @inject(GameModel)
+    private _model: GameModel;
+
+    @inject(GameService)
+    private _gameService: GameService;
 
     public execute(): void {
-        this.model.currentPiece = this.model.nextPiece;
-        this.model.nextPiece = TileGroupFactory.getRandomTileGroup();
+        this._model.currentPiece = this._model.nextPiece;
+        this._model.nextPiece = TileGroupFactory.getRandomTileGroup();
 
-        this.gameService.updateNextPiece();
-        this.gameService.updateData();
+        this._gameService.updateNextPiece();
+        this._gameService.updateData();
     }
 }

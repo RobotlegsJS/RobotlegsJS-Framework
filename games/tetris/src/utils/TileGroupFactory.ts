@@ -23,15 +23,17 @@ export class TileGroupFactory {
     }
 
     public static getTilesByTypeArray(typeArray: number[]): Tile[] {
-        const tiles: Tile[] = new Array<Tile>();
+        const tiles: Tile[] = [];
         let tile: Tile;
 
+        // eslint-disable-next-line @typescript-eslint/prefer-for-of
         for (let i = 0; i < typeArray.length; i++) {
             tile = new Tile();
             tile.col = Math.floor(typeArray[i] % 2);
             tile.row = Math.floor(typeArray[i] / 2);
             tiles.push(tile);
         }
+
         return tiles;
     }
 }
