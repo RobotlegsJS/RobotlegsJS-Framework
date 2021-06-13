@@ -6,17 +6,19 @@ import { PixiFactory } from "./../../utils/PixiFactory";
 export class LivesComponent extends Container {
     private _cannons: Sprite[];
 
-    constructor() {
+    public constructor() {
         super();
 
-        this.createDisplays();
+        this._createDisplays();
     }
+
     public updateLives(value: number): void {
         for (let i = 0; i < this._cannons.length; i++) {
             this._cannons[i].visible = i < value;
         }
     }
-    private createDisplays(): void {
+
+    private _createDisplays(): void {
         this._cannons = new Array<Sprite>();
 
         for (let i = 0; i < 3; i++) {

@@ -7,26 +7,30 @@ import { CustomButton } from "./components/CustomButton";
 
 export class HomeView extends Container {
     private _startButton: CustomButton;
+
     public get startButton(): CustomButton {
         return this._startButton;
     }
 
     private _optionButton: CustomButton;
+
     public get optionButton(): CustomButton {
         return this._optionButton;
     }
 
-    constructor() {
+    public constructor() {
         super();
 
-        this.setupBackground();
-        this.setupImages();
-        this.setupButtons();
+        this._setupBackground();
+        this._setupImages();
+        this._setupButtons();
     }
-    private setupBackground(): void {
+
+    private _setupBackground(): void {
         this.addChild(PixiFactory.getColorBackground());
     }
-    private setupImages(): void {
+
+    private _setupImages(): void {
         const logo: Sprite = PixiFactory.getImage(AtlasKeys.LOGO);
         logo.anchor.set(0.5);
         logo.x = ViewPortSize.HALF_WIDTH;
@@ -39,7 +43,8 @@ export class HomeView extends Container {
         setzer.y = ViewPortSize.MAX_HEIGHT - 15;
         this.addChild(setzer);
     }
-    private setupButtons(): void {
+
+    private _setupButtons(): void {
         this._startButton = PixiFactory.getButton(AtlasKeys.BUTTON_START);
         this._startButton.x = ViewPortSize.HALF_WIDTH;
         this._startButton.y = ViewPortSize.MAX_HEIGHT * 0.7;

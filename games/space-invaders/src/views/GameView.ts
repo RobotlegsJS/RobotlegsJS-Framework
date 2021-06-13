@@ -10,11 +10,12 @@ export class GameView extends Container {
 
     private _hudComponent: HUDGameComponent;
 
-    constructor() {
+    public constructor() {
         super();
 
-        this.createBackground();
+        this._createBackground();
     }
+
     public destroy(): void {
         this.removeChild(this._battleField);
         this.removeChild(this._hudComponent);
@@ -22,6 +23,7 @@ export class GameView extends Container {
         this._battleField = null;
         this._hudComponent = null;
     }
+
     public createComponents(): void {
         this._battleField = new BattleFieldComponent();
         this.addChild(this._battleField);
@@ -29,7 +31,8 @@ export class GameView extends Container {
         this._hudComponent = new HUDGameComponent();
         this.addChild(this._hudComponent);
     }
-    private createBackground(): void {
+
+    private _createBackground(): void {
         this.addChild(PixiFactory.getColorBackground(Colors.BACKGROUND));
     }
 }

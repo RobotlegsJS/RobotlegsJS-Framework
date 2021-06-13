@@ -12,6 +12,7 @@ import { LivesComponent } from "./LivesComponent";
 
 export class HUDGameComponent extends Container {
     private _pauseButton: CustomButton;
+
     public get pauseButton(): CustomButton {
         return this._pauseButton;
     }
@@ -25,18 +26,20 @@ export class HUDGameComponent extends Container {
     public constructor() {
         super();
 
-        this.createBackgrounds();
-        this.createTextFields();
-        this.createButtons();
-        this.createComponents();
+        this._createBackgrounds();
+        this._createTextFields();
+        this._createButtons();
+        this._createComponents();
     }
+
     public updateData(model: GameModel): void {
         this._livesComponent.updateLives(model.lives);
         this._scoreText.text = String(model.score);
         this._hiScoreText.text = String(model.hiScore);
         this._levelText.text = String(model.level);
     }
-    private createBackgrounds(): void {
+
+    private _createBackgrounds(): void {
         this.addChild(PixiFactory.getColorBox(ViewPortSize.MAX_WIDTH, 70, Colors.BACKGROUND_DARK));
 
         const bottomBackground: Graphics = PixiFactory.getColorBox(
@@ -47,7 +50,8 @@ export class HUDGameComponent extends Container {
         bottomBackground.y = ViewPortSize.MAX_HEIGHT - 80;
         this.addChild(bottomBackground);
     }
-    private createTextFields(): void {
+
+    private _createTextFields(): void {
         const scoreLabel: Text = PixiFactory.getText(
             Texts.SCORE,
             Colors.STATIC_TEXT,
@@ -93,13 +97,15 @@ export class HUDGameComponent extends Container {
         this._levelText.anchor.x = 1;
         this.addChild(this._levelText);
     }
-    private createButtons(): void {
+
+    private _createButtons(): void {
         this._pauseButton = PixiFactory.getButton(AtlasKeys.BUTTON_PAUSE);
         this._pauseButton.x = ViewPortSize.MAX_WIDTH - 32;
         this._pauseButton.y = MagicValues.BORDER_OFFSET + 15;
         this.addChild(this._pauseButton);
     }
-    private createComponents(): void {
+
+    private _createComponents(): void {
         this._livesComponent = new LivesComponent();
         this._livesComponent.x = MagicValues.BORDER_OFFSET;
         this._livesComponent.y = ViewPortSize.MAX_HEIGHT - 70;

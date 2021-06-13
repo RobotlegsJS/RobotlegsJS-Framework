@@ -2,7 +2,7 @@ export class Point {
     public x: number;
     public y: number;
 
-    constructor(x = 0, y = 0) {
+    public constructor(x: number = 0, y: number = 0) {
         this.x = x;
         this.y = y;
     }

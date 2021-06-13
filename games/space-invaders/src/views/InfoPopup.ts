@@ -13,24 +13,27 @@ export class InfoPopup extends Container {
         return this._closeButton;
     }
 
-    constructor() {
+    public constructor() {
         super();
 
-        this.setupBackgrounds();
-        this.setupText();
-        this.setupButtons();
+        this._setupBackgrounds();
+        this._setupText();
+        this._setupButtons();
     }
-    private setupBackgrounds(): void {
+
+    private _setupBackgrounds(): void {
         this.addChild(PixiFactory.getShadowBackground());
         this.addChild(PixiFactory.getBoardBackground());
     }
-    private setupButtons(): void {
+
+    private _setupButtons(): void {
         this._closeButton = PixiFactory.getButton(AtlasKeys.BUTTON_CANCEL);
         this._closeButton.x = ViewPortSize.MAX_WIDTH - 32;
         this._closeButton.y = MagicValues.BORDER_OFFSET + 15;
         this.addChild(this._closeButton);
     }
-    private setupText(): void {
+
+    private _setupText(): void {
         const msg: Text = PixiFactory.getText(Texts.COMMANDS);
         msg.x = ViewPortSize.HALF_WIDTH;
         msg.y = ViewPortSize.HALF_HEIGHT - 10;

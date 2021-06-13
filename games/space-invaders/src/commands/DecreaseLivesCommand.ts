@@ -5,15 +5,18 @@ import { GameService } from "./../services/GameService";
 
 @injectable()
 export class DecreaseLivesCommand implements ICommand {
-    @inject(GameModel) private model: GameModel;
-    @inject(GameService) private gameService: GameService;
+    @inject(GameModel)
+    private _model: GameModel;
+
+    @inject(GameService)
+    private _gameService: GameService;
 
     public execute(): void {
-        this.model.lives -= 1;
-        this.gameService.updateHUDData();
+        this._model.lives -= 1;
+        this._gameService.updateHUDData();
 
-        if (this.model.lives === 0) {
-            this.gameService.gameOver();
+        if (this._model.lives === 0) {
+            this._gameService.gameOver();
         }
     }
 }

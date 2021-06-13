@@ -17,33 +17,39 @@ import { GameService } from "./../services/GameService";
 
 @injectable()
 export class GameConfig implements IConfig {
-    @inject(IContext) private context: IContext;
-    @inject(IEventCommandMap) private commandMap: IEventCommandMap;
+    @inject(IContext)
+    private _context: IContext;
+
+    @inject(IEventCommandMap)
+    private _commandMap: IEventCommandMap;
 
     public configure(): void {
         EntityPool.init();
         LevelFactory.setupLevels();
 
-        this.mapCommands();
-        this.mapManager();
-        this.mapModels();
+        this._mapCommands();
+        this._mapManager();
+        this._mapModels();
     }
-    private mapCommands(): void {
-        this.commandMap.map(GameEvent.START_GAME_COMMAND).toCommand(StartGameCommand);
-        this.commandMap.map(GameEvent.RETRY_GAME_COMMAND).toCommand(RetryGameCommand);
-        this.commandMap.map(GameEvent.CREATE_LEVEL_COMMAND).toCommand(CreateLevelCommand);
-        this.commandMap.map(GameEvent.INCREASE_LEVEL_COMMAND).toCommand(IncreaseLevelCommand);
-        this.commandMap.map(GameEvent.INCREASE_POINTS).toCommand(IncreasePointsCommand);
-        this.commandMap.map(GameEvent.DECREASE_LIVES).toCommand(DecreaseLivesCommand);
-        this.commandMap.map(GameEvent.GAME_OVER).toCommand(GameOverCommand);
+
+    private _mapCommands(): void {
+        this._commandMap.map(GameEvent.START_GAME_COMMAND).toCommand(StartGameCommand);
+        this._commandMap.map(GameEvent.RETRY_GAME_COMMAND).toCommand(RetryGameCommand);
+        this._commandMap.map(GameEvent.CREATE_LEVEL_COMMAND).toCommand(CreateLevelCommand);
+        this._commandMap.map(GameEvent.INCREASE_LEVEL_COMMAND).toCommand(IncreaseLevelCommand);
+        this._commandMap.map(GameEvent.INCREASE_POINTS).toCommand(IncreasePointsCommand);
+        this._commandMap.map(GameEvent.DECREASE_LIVES).toCommand(DecreaseLivesCommand);
+        this._commandMap.map(GameEvent.GAME_OVER).toCommand(GameOverCommand);
     }
-    private mapManager(): void {
-        this.context.injector.bind(GameService).to(GameService).inSingletonScope();
-        this.context.injector.bind(GameManager).to(GameManager).inSingletonScope();
+
+    private _mapManager(): void {
+        this._context.injector.bind(GameService).to(GameService).inSingletonScope();
+        this._context.injector.bind(GameManager).to(GameManager).inSingletonScope();
         // this.context.injector.bind( SharedObjectManager ).to(SharedObjectManager).inSingletonScope();*
     }
-    private mapModels(): void {
-        this.context.injector.bind(GameModel).to(GameModel).inSingletonScope();
-        this.context.injector.bind(LevelModel).to(LevelModel).inSingletonScope();
+
+    private _mapModels(): void {
+        this._context.injector.bind(GameModel).to(GameModel).inSingletonScope();
+        this._context.injector.bind(LevelModel).to(LevelModel).inSingletonScope();
     }
 }

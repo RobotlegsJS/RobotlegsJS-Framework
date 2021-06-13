@@ -11,8 +11,11 @@ import { BattleFieldComponent } from "./../views/components/BattleFieldComponent
 
 @injectable()
 export class BattleFieldComponentMediator extends Mediator<BattleFieldComponent> {
-    @inject(LevelModel) private levelModel: LevelModel;
-    @inject(GameManager) private gameManager: GameManager;
+    @inject(LevelModel)
+    private _levelModel: LevelModel;
+
+    @inject(GameManager)
+    private _gameManager: GameManager;
 
     private _displays: Map<Entity, Sprite>;
     private _paused: boolean;
@@ -23,13 +26,13 @@ export class BattleFieldComponentMediator extends Mediator<BattleFieldComponent>
         this.eventMap.mapListener(
             this.eventDispatcher,
             GameEvent.CLEAR_BATTLE_FIELD,
-            this.game_onClearBattleField,
+            this._onClearBattleField,
             this
         );
         this.eventMap.mapListener(
             this.eventDispatcher,
             GameEvent.UPDATE_BATTLE_FIELD,
-            this.game_onUpdateBattleField,
+            this._onUpdateBattleField,
             this
         );
         this.eventMap.mapListener(
@@ -51,83 +54,95 @@ export class BattleFieldComponentMediator extends Mediator<BattleFieldComponent>
             this
         );
     }
+
     public destroy(): void {
         this.eventMap.unmapListeners();
     }
+
     private game_onGameOver(e: any): void {
-        document.removeEventListener("keydown", this.onKeyDownOnMovement.bind(this));
-        document.removeEventListener("keyup", this.onKeyUpOnMovement.bind(this));
+        document.removeEventListener("keydown", this._onKeyDownOnMovement.bind(this));
+        document.removeEventListener("keyup", this._onKeyUpOnMovement.bind(this));
         this._paused = true;
     }
+
     private game_onPauseGame(e: any): void {
-        document.removeEventListener("keydown", this.onKeyDownOnMovement.bind(this));
-        document.removeEventListener("keyup", this.onKeyUpOnMovement.bind(this));
+        document.removeEventListener("keydown", this._onKeyDownOnMovement.bind(this));
+        document.removeEventListener("keyup", this._onKeyUpOnMovement.bind(this));
         this._paused = true;
     }
+
     private game_onResumeGame(e: any): void {
-        this.gameManager.resume();
-        document.addEventListener("keydown", this.onKeyDownOnMovement.bind(this));
-        document.addEventListener("keyup", this.onKeyUpOnMovement.bind(this));
+        this._gameManager.resume();
+        document.addEventListener("keydown", this._onKeyDownOnMovement.bind(this));
+        document.addEventListener("keyup", this._onKeyUpOnMovement.bind(this));
         this._paused = false;
 
-        window.requestAnimationFrame(this.onEnterFrame.bind(this));
+        window.requestAnimationFrame(this._onEnterFrame.bind(this));
     }
-    private onKeyDownOnMovement(e: KeyboardEvent) {
+
+    private _onKeyDownOnMovement(e: KeyboardEvent): void {
         if (e.keyCode === 37 || e.keyCode === 65) {
-            this.gameManager.cannonMovement(-3);
+            this._gameManager.cannonMovement(-3);
         } else if (e.keyCode === 39 || e.keyCode === 68) {
-            this.gameManager.cannonMovement(3);
+            this._gameManager.cannonMovement(3);
         } else if (e.keyCode === 32 || e.keyCode === 83) {
-            this.gameManager.startShooting();
+            this._gameManager.startShooting();
         }
     }
-    private onKeyUpOnMovement(e: KeyboardEvent) {
+
+    private _onKeyUpOnMovement(e: KeyboardEvent): void {
         if (e.keyCode === 37 || e.keyCode === 65 || e.keyCode === 39 || e.keyCode === 68) {
-            this.gameManager.cannonMovement(0);
+            this._gameManager.cannonMovement(0);
         } else if (e.keyCode === 32 || e.keyCode === 83) {
-            this.gameManager.stopShooting();
+            this._gameManager.stopShooting();
         }
     }
-    private onEnterFrame(e: any) {
+
+    private _onEnterFrame(e: any): void {
         if (this._paused === true) {
             return;
         }
-        this.gameManager.update();
-        if (this.levelModel.toAdd.length > 0 || this.levelModel.toRemove.length > 0) {
-            this.updateDisplays();
+        this._gameManager.update();
+        if (this._levelModel.toAdd.length > 0 || this._levelModel.toRemove.length > 0) {
+            this._updateDisplays();
         }
-        window.requestAnimationFrame(this.onEnterFrame.bind(this));
+        window.requestAnimationFrame(this._onEnterFrame.bind(this));
     }
-    private game_onUpdateBattleField(e: any): void {
-        this.updateDisplays();
+
+    private _onUpdateBattleField(e: any): void {
+        this._updateDisplays();
     }
-    private game_onClearBattleField(e: any): void {
+
+    private _onClearBattleField(e: any): void {
         this._displays.forEach((display: Sprite, entity: Entity, obThis: any = this) => {
             this.view.removeChild(entity.display);
             this._displays.delete(entity);
             entity = null;
         });
     }
-    private updateDisplays(): void {
+
+    private _updateDisplays(): void {
         let entity: Entity;
-        while (this.levelModel.toAdd.length > 0) {
-            entity = this.levelModel.toAdd.shift();
+        while (this._levelModel.toAdd.length > 0) {
+            entity = this._levelModel.toAdd.shift();
             if (this._displays.get(entity)) {
                 continue;
             }
-            this.addDisplayToStage(entity);
+            this._addDisplayToStage(entity);
         }
-        while (this.levelModel.toRemove.length > 0) {
-            entity = this.levelModel.toRemove.shift();
-            this.levelModel.removeEntity(entity);
-            this.removeDisplayFromStage(entity.display, entity);
+        while (this._levelModel.toRemove.length > 0) {
+            entity = this._levelModel.toRemove.shift();
+            this._levelModel.removeEntity(entity);
+            this._removeDisplayFromStage(entity.display, entity);
         }
     }
-    private addDisplayToStage(entity: Entity): void {
+
+    private _addDisplayToStage(entity: Entity): void {
         this.view.addChild(entity.display);
         this._displays.set(entity, entity.display);
     }
-    private removeDisplayFromStage(display: Sprite, entity: Entity): void {
+
+    private _removeDisplayFromStage(display: Sprite, entity: Entity): void {
         EntityPool.back(entity);
         this.view.removeChild(entity.display);
         this._displays.delete(entity);

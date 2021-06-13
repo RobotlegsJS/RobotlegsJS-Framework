@@ -9,7 +9,7 @@ export class GameModel {
 
     public status: String;
 
-    constructor() {
+    public constructor() {
         this.hiScore = 0;
         this.clear();
     }

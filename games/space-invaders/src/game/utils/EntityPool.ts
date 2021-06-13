@@ -13,26 +13,26 @@ export class EntityPool {
     public static init(): void {
         this.dictionary = new Map<number, Entity[]>();
     }
+
     public static getEntity(typeId: number): Entity {
         if (this.dictionary.get(typeId) === undefined) {
             this.dictionary.set(typeId, new Array<Entity>());
         }
+
         const list: Entity[] = this.dictionary.get(typeId);
         let entity: Entity;
-        if (list.length === 0) {
-            entity = this.createEntityByType(typeId);
-        } else {
-            entity = list.shift();
-        }
+
+        entity = list.length === 0 ? this._createEntityByType(typeId) : list.shift();
 
         if (entity.display) {
             entity.display.visible = true;
         } else {
-            entity.display = this.createDisplayByType(typeId);
+            entity.display = this._createDisplayByType(typeId);
         }
 
         return entity;
     }
+
     public static back(entity: Entity): void {
         const list: Entity[] = this.dictionary.get(entity.typeID);
         entity.display.visible = false;
@@ -41,7 +41,8 @@ export class EntityPool {
             list.push(entity);
         }
     }
-    private static createDisplayByType(typeId: number): any {
+
+    private static _createDisplayByType(typeId: number): any {
         const typesDisplay: any = {};
         typesDisplay[Entity.BULLET] = { type: BulletDisplay, atlasKey: AtlasKeys.BULLET };
         typesDisplay[Entity.ENEMY_1] = { type: EnemyDisplay, atlasKey: AtlasKeys.ENEMY_01 };
@@ -53,7 +54,8 @@ export class EntityPool {
         const ob = typesDisplay[typeId];
         return new ob.type(ob.atlasKey);
     }
-    private static createEntityByType(typeId: number): Entity {
+
+    private static _createEntityByType(typeId: number): Entity {
         let entity: Entity;
 
         if (typeId === Entity.BULLET) {

@@ -21,7 +21,8 @@ export class LevelFactory {
         this._maps[8] = new LevelData(6, 4);
         this._maps[9] = new LevelData(7, 4);
     }
-    public static getEmptyMap(numCols = 5, numRows = 3): number[][] {
+
+    public static getEmptyMap(numCols: number = 5, numRows: number = 3): number[][] {
         const result: number[][] = [];
         let vectorRow: number[];
         const ids = [Entity.ENEMY_1, Entity.ENEMY_2, Entity.ENEMY_3];
@@ -36,10 +37,11 @@ export class LevelFactory {
         }
         return result;
     }
+
     public static generateLevel(levelModel: LevelModel, level: number): void {
         levelModel.reset();
 
-        const map: number[][] = this.getLevelMapByLevel(level);
+        const map: number[][] = this._getLevelMapByLevel(level);
         let enemy: Entity;
 
         for (let row = 0; row < map.length; row++) {
@@ -61,7 +63,8 @@ export class LevelFactory {
         cannon.applyPosition();
         levelModel.setCannon(cannon);
     }
-    private static getLevelMapByLevel(level: number): number[][] {
+
+    private static _getLevelMapByLevel(level: number): number[][] {
         const levelData: LevelData = this._maps[level] || this._maps[0];
         levelData.map = this.getEmptyMap(levelData.cols, levelData.rows);
 

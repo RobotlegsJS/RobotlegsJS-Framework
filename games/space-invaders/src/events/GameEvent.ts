@@ -1,22 +1,22 @@
 export class GameEvent extends Event {
-    public static START_GAME_COMMAND = "startGameCommand";
-    public static RETRY_GAME_COMMAND = "retryGameCommand";
-    public static CREATE_LEVEL_COMMAND = "createLevelCommand";
-    public static INCREASE_LEVEL_COMMAND = "increaseLevelCommand";
+    public static START_GAME_COMMAND: string = "startGameCommand";
+    public static RETRY_GAME_COMMAND: string = "retryGameCommand";
+    public static CREATE_LEVEL_COMMAND: string = "createLevelCommand";
+    public static INCREASE_LEVEL_COMMAND: string = "increaseLevelCommand";
 
-    public static GAME_OVER = "gameOver";
+    public static GAME_OVER: string = "gameOver";
 
-    public static RESUME = "resume";
-    public static PAUSE = "pause";
+    public static RESUME: string = "resume";
+    public static PAUSE: string = "pause";
 
-    public static INCREASE_POINTS = "increasePoints";
-    public static DECREASE_LIVES = "decreaseLives";
+    public static INCREASE_POINTS: string = "increasePoints";
+    public static DECREASE_LIVES: string = "decreaseLives";
 
-    public static UPDATE_HUD_DATA = "updateData";
-    public static CLEAR_BATTLE_FIELD = "clearBattleField";
-    public static UPDATE_BATTLE_FIELD = "updateBattleField";
+    public static UPDATE_HUD_DATA: string = "updateData";
+    public static CLEAR_BATTLE_FIELD: string = "clearBattleField";
+    public static UPDATE_BATTLE_FIELD: string = "updateBattleField";
 
-    constructor(type: string) {
+    public constructor(type: string) {
         super(type);
     }
 }

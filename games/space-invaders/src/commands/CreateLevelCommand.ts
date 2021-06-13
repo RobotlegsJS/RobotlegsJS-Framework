@@ -9,23 +9,30 @@ import { GameService } from "./../services/GameService";
 
 @injectable()
 export class CreateLevelCommand implements ICommand {
-    @inject(FlowService) private flowService: FlowService;
-    @inject(GameModel) private gameModel: GameModel;
-    @inject(GameService) private gameService: GameService;
-    @inject(LevelModel) private levelModel: LevelModel;
+    @inject(FlowService)
+    private _flowService: FlowService;
+
+    @inject(GameModel)
+    private _gameModel: GameModel;
+
+    @inject(GameService)
+    private _gameService: GameService;
+
+    @inject(LevelModel)
+    private _levelModel: LevelModel;
 
     public execute(): void {
-        LevelFactory.generateLevel(this.levelModel, this.gameModel.level);
+        LevelFactory.generateLevel(this._levelModel, this._gameModel.level);
 
-        this.gameService.updateBattleField();
-        this.gameService.updateHUDData();
+        this._gameService.updateBattleField();
+        this._gameService.updateHUDData();
 
-        if (this.gameModel.status) {
-            this.flowService.showStartingPopup();
+        if (this._gameModel.status) {
+            this._flowService.showStartingPopup();
         } else {
-            this.flowService.showInfoPopup();
+            this._flowService.showInfoPopup();
         }
 
-        this.gameModel.status = GameStatus.GAME;
+        this._gameModel.status = GameStatus.GAME;
     }
 }

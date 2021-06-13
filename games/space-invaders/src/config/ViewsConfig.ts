@@ -26,24 +26,26 @@ import { StartingPopup } from "./../views/StartingPopup";
 
 @injectable()
 export class ViewsConfig implements IConfig {
-    @inject(IMediatorMap) private mediatorMap: IMediatorMap;
+    @inject(IMediatorMap)
+    private _mediatorMap: IMediatorMap;
 
     public configure(): void {
-        this.mapMediators();
+        this._mapMediators();
     }
-    private mapMediators(): void {
-        this.mediatorMap.map(GameView).toMediator(GameViewMediator);
-        this.mediatorMap.map(HomeView).toMediator(HomeViewMediator);
-        this.mediatorMap.map(IntroView).toMediator(IntroViewMediator);
-        this.mediatorMap.map(OptionsView).toMediator(OptionsViewMediator);
 
-        this.mediatorMap.map(BattleFieldComponent).toMediator(BattleFieldComponentMediator);
-        this.mediatorMap.map(HUDGameComponent).toMediator(HUDGameComponentMediator);
+    private _mapMediators(): void {
+        this._mediatorMap.map(GameView).toMediator(GameViewMediator);
+        this._mediatorMap.map(HomeView).toMediator(HomeViewMediator);
+        this._mediatorMap.map(IntroView).toMediator(IntroViewMediator);
+        this._mediatorMap.map(OptionsView).toMediator(OptionsViewMediator);
 
-        this.mediatorMap.map(GameOverPopup).toMediator(GameOverPopupMediator);
-        this.mediatorMap.map(InfoPopup).toMediator(InfoPopupMediator);
-        this.mediatorMap.map(PausePopup).toMediator(PausePopupMediator);
-        this.mediatorMap.map(ResetConfirmPopup).toMediator(ResetConfirmPopupMediator);
-        this.mediatorMap.map(StartingPopup).toMediator(StartingPopupMediator);
+        this._mediatorMap.map(BattleFieldComponent).toMediator(BattleFieldComponentMediator);
+        this._mediatorMap.map(HUDGameComponent).toMediator(HUDGameComponentMediator);
+
+        this._mediatorMap.map(GameOverPopup).toMediator(GameOverPopupMediator);
+        this._mediatorMap.map(InfoPopup).toMediator(InfoPopupMediator);
+        this._mediatorMap.map(PausePopup).toMediator(PausePopupMediator);
+        this._mediatorMap.map(ResetConfirmPopup).toMediator(ResetConfirmPopupMediator);
+        this._mediatorMap.map(StartingPopup).toMediator(StartingPopupMediator);
     }
 }

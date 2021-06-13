@@ -5,14 +5,17 @@ import { GameService } from "./../services/GameService";
 
 @injectable()
 export class RetryGameCommand implements ICommand {
-    @inject(GameModel) private gameModel: GameModel;
-    @inject(GameService) private gameService: GameService;
+    @inject(GameModel)
+    private _gameModel: GameModel;
+
+    @inject(GameService)
+    private _gameService: GameService;
 
     public execute(): void {
-        this.gameService.clearBattleField();
+        this._gameService.clearBattleField();
 
-        this.gameModel.clear();
+        this._gameModel.clear();
 
-        this.gameService.createLevelCommand();
+        this._gameService.createLevelCommand();
     }
 }

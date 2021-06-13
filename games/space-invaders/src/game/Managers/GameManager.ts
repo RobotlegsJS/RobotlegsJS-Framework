@@ -14,9 +14,14 @@ import { Point } from "./../utils/Point";
 
 @injectable()
 export class GameManager {
-    @inject(GameModel) private gameModel: GameModel;
-    @inject(LevelModel) private model: LevelModel;
-    @inject(GameService) private service: GameService;
+    @inject(GameModel)
+    private _gameModel: GameModel;
+
+    @inject(LevelModel)
+    private _model: LevelModel;
+
+    @inject(GameService)
+    private _service: GameService;
 
     private _cannonDirection: number;
 
@@ -28,58 +33,64 @@ export class GameManager {
 
     private _shooting: boolean;
 
-    constructor() {
+    public constructor() {
         this._enemyPath = GameUtils.getEnemyPath();
         this._enemyPathIndex = 0;
         this._tickMovement = 0;
         this._tickShot = 0;
     }
-    public cannonMovement(direction = 0): void {
+
+    public cannonMovement(direction: number = 0): void {
         this._cannonDirection = direction;
     }
+
     public update(): void {
         this._tickMovement++;
         this._tickShot++;
 
-        if (this._tickMovement > GameUtils.getCurrentSpeed(this.gameModel.level)) {
-            this.moveEnemies();
-            this.updateExplosions();
+        if (this._tickMovement > GameUtils.getCurrentSpeed(this._gameModel.level)) {
+            this._moveEnemies();
+            this._updateExplosions();
 
             if (Math.random() * 10 < 1) {
-                this.createEnemyBullet();
+                this._createEnemyBullet();
             }
             this._tickMovement = 0;
         }
 
         if (this._tickShot > 16 && this._shooting) {
-            this.createBullets();
+            this._createBullets();
         }
 
-        this.moveCannon();
-        this.moveBullets();
+        this._moveCannon();
+        this._moveBullets();
 
-        this.solveCollisions();
-        this.validateNextLevel();
+        this._solveCollisions();
+        this._validateNextLevel();
     }
+
     public startShooting(): void {
         if (this._shooting === false && this._tickShot > 8) {
-            this.createBullets();
+            this._createBullets();
         }
 
         this._tickShot = 0;
         this._shooting = true;
     }
+
     public stopShooting(): void {
         this._shooting = false;
     }
+
     public resume(): void {
         this._cannonDirection = 0;
         this._tickShot = 0;
         this._shooting = false;
     }
-    private moveEnemies(): void {
+
+    private _moveEnemies(): void {
         let nearEnemyY = 0;
-        for (const enemy of this.model.enemies) {
+        for (const enemy of this._model.enemies) {
             enemy.x += this._enemyPath[this._enemyPathIndex].x;
             enemy.y += this._enemyPath[this._enemyPathIndex].y;
             enemy.applyPosition();
@@ -93,70 +104,76 @@ export class GameManager {
             this._enemyPathIndex = 0;
         }
         if (nearEnemyY > ViewPortSize.MAX_HEIGHT - 120) {
-            this.service.gameOver();
+            this._service.gameOver();
         }
     }
-    private createEnemyBullet(): void {
-        const enemyIndex: number = Math.floor(Math.random() * (this.model.enemies.length - 1));
+
+    private _createEnemyBullet(): void {
+        const enemyIndex: number = Math.floor(Math.random() * (this._model.enemies.length - 1));
 
         if (enemyIndex === 0) {
             return;
         }
 
         const bullet: Bullet = <Bullet>EntityPool.getEntity(Entity.BULLET);
-        bullet.x = this.model.enemies[enemyIndex].x;
-        bullet.y = this.model.enemies[enemyIndex].y + 10;
+        bullet.x = this._model.enemies[enemyIndex].x;
+        bullet.y = this._model.enemies[enemyIndex].y + 10;
         bullet.target = Bullet.PlAYER;
         bullet.applyPosition();
-        this.model.addBullet(bullet);
+        this._model.addBullet(bullet);
     }
-    private updateExplosions(): void {
-        for (const explosion of this.model.exposions) {
+
+    private _updateExplosions(): void {
+        for (const explosion of this._model.exposions) {
             (<Explosion>explosion).update();
             if ((<Explosion>explosion).remove) {
-                this.model.toRemove.push(explosion);
+                this._model.toRemove.push(explosion);
             }
         }
     }
-    private solveCollisions(): void {
-        for (const bullet of this.model.bullets) {
+
+    private _solveCollisions(): void {
+        for (const bullet of this._model.bullets) {
             if ((<Bullet>bullet).target === Bullet.PlAYER) {
-                if (GameUtils.isCollision(bullet, this.model.cannon)) {
-                    this.createExplosion(this.model.cannon);
-                    this.model.cannon.x = ViewPortSize.HALF_WIDTH;
-                    this.model.toRemove.push(bullet);
-                    this.service.decreaseLives();
+                if (GameUtils.isCollision(bullet, this._model.cannon)) {
+                    this._createExplosion(this._model.cannon);
+                    this._model.cannon.x = ViewPortSize.HALF_WIDTH;
+                    this._model.toRemove.push(bullet);
+                    this._service.decreaseLives();
                     break;
                 }
             } else {
-                for (const entity of this.model.enemies) {
+                for (const entity of this._model.enemies) {
                     if (GameUtils.isCollision(bullet, entity)) {
-                        this.createExplosion(entity);
-                        this.model.toRemove.push(entity);
-                        this.model.toRemove.push(bullet);
-                        this.service.increasePoints();
+                        this._createExplosion(entity);
+                        this._model.toRemove.push(entity);
+                        this._model.toRemove.push(bullet);
+                        this._service.increasePoints();
                         break;
                     }
                 }
             }
         }
     }
-    private validateNextLevel(): void {
-        if (this.model.enemies.length > 0) {
+
+    private _validateNextLevel(): void {
+        if (this._model.enemies.length > 0) {
             return;
         }
-        this.service.pause();
-        this.service.increaseLevel();
+        this._service.pause();
+        this._service.increaseLevel();
     }
-    private moveCannon(): void {
-        let newCannonXPosition: number = this.model.cannon.x + this._cannonDirection;
+
+    private _moveCannon(): void {
+        let newCannonXPosition: number = this._model.cannon.x + this._cannonDirection;
         newCannonXPosition = Math.min(ViewPortSize.MAX_WIDTH, newCannonXPosition);
         newCannonXPosition = Math.max(0, newCannonXPosition);
 
-        this.model.cannon.x = newCannonXPosition;
-        this.model.cannon.applyPosition();
+        this._model.cannon.x = newCannonXPosition;
+        this._model.cannon.applyPosition();
     }
-    private createExplosion(entity: Entity): void {
+
+    private _createExplosion(entity: Entity): void {
         const explosion: Explosion = <Explosion>EntityPool.getEntity(Entity.EXPLOSION);
         explosion.x = entity.x;
         explosion.y = entity.y;
@@ -165,12 +182,13 @@ export class GameManager {
         }
         explosion.reset();
         explosion.applyPosition();
-        this.model.addExplosion(explosion);
+        this._model.addExplosion(explosion);
     }
-    private moveBullets(): void {
+
+    private _moveBullets(): void {
         let speedY: number;
 
-        for (const bullet of this.model.bullets) {
+        for (const bullet of this._model.bullets) {
             speedY = -3;
             if ((<Bullet>bullet).target === Bullet.PlAYER) {
                 speedY = 3;
@@ -178,20 +196,22 @@ export class GameManager {
             bullet.y += speedY;
             bullet.applyPosition();
             if (bullet.y >= ViewPortSize.MAX_HEIGHT - 100 || bullet.y <= 0) {
-                this.model.toRemove.push(bullet);
+                this._model.toRemove.push(bullet);
             }
         }
     }
-    private createBullets(): void {
-        this.shootBullets();
+
+    private _createBullets(): void {
+        this._shootBullets();
         this._tickShot = 0;
     }
-    private shootBullets(): void {
+
+    private _shootBullets(): void {
         const bullet = <Bullet>EntityPool.getEntity(Entity.BULLET);
-        bullet.x = this.model.cannon.x;
-        bullet.y = this.model.cannon.y - 10;
+        bullet.x = this._model.cannon.x;
+        bullet.y = this._model.cannon.y - 10;
         bullet.target = Bullet.ENEMY;
         bullet.applyPosition();
-        this.model.addBullet(bullet);
+        this._model.addBullet(bullet);
     }
 }

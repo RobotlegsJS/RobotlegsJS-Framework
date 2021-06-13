@@ -1,6 +1,6 @@
 export class ViewPortSize {
-    public static MAX_WIDTH = 340;
-    public static MAX_HEIGHT = 480;
-    public static HALF_WIDTH = 170;
-    public static HALF_HEIGHT = 240;
+    public static MAX_WIDTH: number = 340;
+    public static MAX_HEIGHT: number = 480;
+    public static HALF_WIDTH: number = 170;
+    public static HALF_HEIGHT: number = 240;
 }

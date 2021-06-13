@@ -5,14 +5,17 @@ import { GameService } from "./../services/GameService";
 
 @injectable()
 export class IncreaseLevelCommand implements ICommand {
-    @inject(GameModel) private model: GameModel;
-    @inject(GameService) private gameService: GameService;
+    @inject(GameModel)
+    private _model: GameModel;
+
+    @inject(GameService)
+    private _gameService: GameService;
 
     public execute(): void {
-        this.model.level += 1;
+        this._model.level += 1;
 
-        this.gameService.clearBattleField();
-        this.gameService.updateHUDData();
-        this.gameService.createLevelCommand();
+        this._gameService.clearBattleField();
+        this._gameService.updateHUDData();
+        this._gameService.createLevelCommand();
     }
 }

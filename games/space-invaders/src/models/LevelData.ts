@@ -3,7 +3,7 @@ export class LevelData {
     public rows: number;
     public map: number[][];
 
-    constructor(cols: number, rows: number) {
+    public constructor(cols: number, rows: number) {
         this.cols = cols;
         this.rows = rows;
     }

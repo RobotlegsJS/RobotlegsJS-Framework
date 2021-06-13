@@ -6,7 +6,7 @@ export class EnemyDisplay extends Sprite {
     private _movementTexture01: Texture;
     private _movementTexture02: Texture;
 
-    constructor(assetKey: string) {
+    public constructor(assetKey: string) {
         super(AtlasKeys.getTexture(assetKey + "_frame_01.png"));
 
         this._movementTexture01 = AtlasKeys.getTexture(assetKey + "_frame_01.png");
@@ -16,10 +16,9 @@ export class EnemyDisplay extends Sprite {
     }
 
     public tick(): void {
-        if (this.texture === this._movementTexture01) {
-            this.texture = this._movementTexture02;
-        } else {
-            this.texture = this._movementTexture01;
-        }
+        this.texture =
+            this.texture === this._movementTexture01
+                ? this._movementTexture02
+                : this._movementTexture01;
     }
 }

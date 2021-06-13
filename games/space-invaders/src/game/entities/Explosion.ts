@@ -3,21 +3,23 @@ import { Entity } from "./Entity";
 
 export class Explosion extends Entity {
     public remove: Boolean;
-    private count = 0;
+    private _count: number = 0;
 
-    constructor(typeID: number = Entity.EXPLOSION) {
+    public constructor(typeID: number = Entity.EXPLOSION) {
         super(typeID);
     }
+
     public update(): void {
-        if (this.count === 1) {
+        if (this._count === 1) {
             this.remove = true;
             return;
         }
-        this.count++;
+        this._count++;
         (<ExplosionDisplay>this.display).nextFrame();
     }
+
     public reset(): void {
-        this.count = 0;
+        this._count = 0;
         this.remove = false;
         (<ExplosionDisplay>this.display).firstFrame();
     }

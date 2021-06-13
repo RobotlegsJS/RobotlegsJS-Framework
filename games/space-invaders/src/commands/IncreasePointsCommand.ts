@@ -5,12 +5,15 @@ import { GameService } from "./../services/GameService";
 
 @injectable()
 export class IncreasePointsCommand implements ICommand {
-    @inject(GameModel) private model: GameModel;
-    @inject(GameService) private gameService: GameService;
+    @inject(GameModel)
+    private _model: GameModel;
+
+    @inject(GameService)
+    private _gameService: GameService;
 
     public execute(): void {
-        this.model.score += 100;
+        this._model.score += 100;
 
-        this.gameService.updateHUDData();
+        this._gameService.updateHUDData();
     }
 }

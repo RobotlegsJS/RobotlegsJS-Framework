@@ -6,12 +6,14 @@ import { inject, injectable } from "@robotlegsjs/core";
 
 @injectable()
 export class GameViewMediator extends Mediator<GameView> {
-    @inject(GameService) private gameService: GameService;
+    @inject(GameService)
+    private _gameService: GameService;
 
     public initialize(): void {
         this.view.createComponents();
-        this.gameService.startCommand();
+        this._gameService.startCommand();
     }
+
     public destroy(): void {
         this.view.destroy();
     }

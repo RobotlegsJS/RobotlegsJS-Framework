@@ -8,20 +8,24 @@ import { AtlasKeys } from "./../utils/AtlasKeys";
 
 @injectable()
 export class IntroViewMediator extends Mediator<IntroView> {
-    @inject(FlowService) private flowService: FlowService;
+    @inject(FlowService)
+    private _flowService: FlowService;
 
     public initialize(): void {
-        setTimeout(this.onTimerOut.bind(this), 3000);
+        setTimeout(this._onTimerOut.bind(this), 3000);
 
         Loader.shared.add(AtlasKeys.SPPNG).add(AtlasKeys.SPXML).load(this.onLoad);
     }
-    public onLoad() {
+
+    public onLoad(): void {
         AtlasKeys.update();
     }
+
     public destroy(): void {
         this.eventMap.unmapListeners();
     }
-    private onTimerOut() {
-        this.flowService.setHomeView();
+
+    private _onTimerOut(): void {
+        this._flowService.setHomeView();
     }
 }

@@ -1,40 +1,41 @@
 import { Texture, Loader, utils } from "pixi.js";
 
 export class AtlasKeys {
-    public static BUTTON_CANCEL = "button_cancel";
-    public static BUTTON_CONFIG = "button_config";
-    public static BUTTON_CONFIRM = "button_confirm";
-    public static BUTTON_HOME = "button_home";
-    public static BUTTON_PAUSE = "button_pause";
-    public static BUTTON_RESET = "button_reset";
-    public static BUTTON_RESUME = "button_resume";
-    public static BUTTON_RETRY = "button_retry";
-    public static BUTTON_START = "button_start";
+    public static BUTTON_CANCEL: string = "button_cancel";
+    public static BUTTON_CONFIG: string = "button_config";
+    public static BUTTON_CONFIRM: string = "button_confirm";
+    public static BUTTON_HOME: string = "button_home";
+    public static BUTTON_PAUSE: string = "button_pause";
+    public static BUTTON_RESET: string = "button_reset";
+    public static BUTTON_RESUME: string = "button_resume";
+    public static BUTTON_RETRY: string = "button_retry";
+    public static BUTTON_START: string = "button_start";
 
-    public static LOGO = "logo_spaceinvaders.png";
-    public static LOGO_SETZER = "logo_setzer.png";
-    public static LOGO_TYPESCRIPT = "./assets/logo_typescript.png";
+    public static LOGO: string = "logo_spaceinvaders.png";
+    public static LOGO_SETZER: string = "logo_setzer.png";
+    public static LOGO_TYPESCRIPT: string = "./assets/logo_typescript.png";
 
-    public static CANNON_HUD = "cannon_hud.png";
+    public static CANNON_HUD: string = "cannon_hud.png";
 
-    public static CANNON = "cannon_frame_01.png";
-    public static BULLET = "bullet_frame_01.png";
-    public static ENEMY_01 = "enemy_01";
-    public static ENEMY_02 = "enemy_02";
-    public static ENEMY_03 = "enemy_03";
-    public static EXPLOSION = "explosion_frame";
+    public static CANNON: string = "cannon_frame_01.png";
+    public static BULLET: string = "bullet_frame_01.png";
+    public static ENEMY_01: string = "enemy_01";
+    public static ENEMY_02: string = "enemy_02";
+    public static ENEMY_03: string = "enemy_03";
+    public static EXPLOSION: string = "explosion_frame";
 
-    public static SPXML = "./assets/spaceinvaders-pixijs-atlas.json";
-    public static SPPNG = "./assets/spaceinvaders-pixijs-atlas.png";
+    public static SPXML: string = "./assets/spaceinvaders-pixijs-atlas.json";
+    public static SPPNG: string = "./assets/spaceinvaders-pixijs-atlas.png";
 
-    private static resources: any;
-    private static textureCache: any;
+    private static _resources: any;
+    private static _textureCache: any;
 
     public static update(): void {
-        this.resources = Loader.shared.resources;
-        this.textureCache = utils.TextureCache;
+        this._resources = Loader.shared.resources;
+        this._textureCache = utils.TextureCache;
     }
+
     public static getTexture(atlasKey: string): Texture {
-        return this.textureCache[atlasKey];
+        return this._textureCache[atlasKey];
     }
 }

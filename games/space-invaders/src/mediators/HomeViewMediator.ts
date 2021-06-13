@@ -6,7 +6,8 @@ import { HomeView } from "./../views/HomeView";
 
 @injectable()
 export class HomeViewMediator extends Mediator<HomeView> {
-    @inject(FlowService) private flowService: FlowService;
+    @inject(FlowService)
+    private _flowService: FlowService;
 
     public initialize(): void {
         this.eventMap.mapListener(this.view.startButton, "click", this.startButton_onClick, this);
@@ -17,13 +18,16 @@ export class HomeViewMediator extends Mediator<HomeView> {
             this
         );
     }
+
     public destroy(): void {
         this.eventMap.unmapListeners();
     }
+
     private startButton_onClick(e: any): void {
-        this.flowService.setGameView();
+        this._flowService.setGameView();
     }
+
     private optionsButton_onClick(e: any): void {
-        this.flowService.setOptionsView();
+        this._flowService.setOptionsView();
     }
 }
