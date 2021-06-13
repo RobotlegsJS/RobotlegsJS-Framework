@@ -30,8 +30,8 @@ npm start
 
 + [PixiJS](http://www.pixijs.com/)
 + [RobotlegsJS](https://github.com/RobotlegsJS/RobotlegsJS-Framework/tree/master/packages/core)
-+ [Robotlegs-Pixi](https://github.com/RobotlegsJS/RobotlegsJS-Framework/tree/master/packages/pixi)
-+ [Robotlegs-Pixi-Palidor](https://github.com/RobotlegsJS/RobotlegsJS-Framework/tree/master/packages/pixi-palidor)
++ [RobotlegsJS-Pixi](https://github.com/RobotlegsJS/RobotlegsJS-Framework/tree/master/packages/pixi)
++ [RobotlegsJS-Pixi-Palidor](https://github.com/RobotlegsJS/RobotlegsJS-Framework/tree/master/packages/pixi-palidor)
 
 * * *
 

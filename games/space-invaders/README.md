@@ -5,7 +5,7 @@ This is a TypeScript open-source game which is a port of the ActionScript versio
 + **Category:** Arcade.
 + **Platform:** Web.
 + **Language:** TypeScript.
-+ **Technologies:** PixiJs, RobotlegsJS, RobotlegsJS-Pixi, RobotlegsJS-Pixi-Palidor.
++ **Technologies:** PixiJS, RobotlegsJS, RobotlegsJS-Pixi, RobotlegsJS-Pixi-Palidor.
 
 * * *
 
@@ -18,9 +18,9 @@ This is a TypeScript open-source game which is a port of the ActionScript versio
 ### Dependencies
 
 + [PixiJS](http://www.pixijs.com/)
-+ [RobotlegsJS](https://github.com/RobotlegsJS/RobotlegsJS)
-+ [RobotlegsJS-Pixi](https://github.com/RobotlegsJS/RobotlegsJS-Pixi)
-+ [RobotlegsJS-Pixi-Palidor](https://github.com/RobotlegsJS/RobotlegsJS-Pixi-Palidor)
++ [RobotlegsJS](https://github.com/RobotlegsJS/RobotlegsJS-Framework/tree/master/packages/core)
++ [RobotlegsJS-Pixi](https://github.com/RobotlegsJS/RobotlegsJS-Framework/tree/master/packages/pixi)
++ [RobotlegsJS-Pixi-Palidor](https://github.com/RobotlegsJS/RobotlegsJS-Framework/tree/master/packages/pixi-palidor)
 
 * * *
 

@@ -17,10 +17,10 @@ This is a TypeScript open-source game which is a port of the ActionScript versio
 
 ### Dependencies
 
-+ [PixiJs](http://www.pixijs.com/)
-+ [RobotlegsJs](https://github.com/RobotlegsJS/RobotlegsJS)
-+ [Robotlegs-Pixi](https://github.com/RobotlegsJS/RobotlegsJS-Pixi)
-+ [Robotlegs-Pixi-Palidor](https://github.com/RobotlegsJS/RobotlegsJS-Pixi-Palidor)
++ [PixiJS](http://www.pixijs.com/)
++ [RobotlegsJS](https://github.com/RobotlegsJS/RobotlegsJS-Framework/tree/master/packages/core)
++ [RobotlegsJS-Pixi](https://github.com/RobotlegsJS/RobotlegsJS-Framework/tree/master/packages/pixi)
++ [RobotlegsJS-Pixi-Palidor](https://github.com/RobotlegsJS/RobotlegsJS-Framework/tree/master/packages/pixi-palidor)
 
 * * *
 

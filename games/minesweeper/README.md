@@ -14,7 +14,7 @@ This is a TypeScript open-source game.
 + **Category:** Puzzle.
 + **Platform:** Web.
 + **Language:** TypeScript.
-+ **Technologies:** PixiJs, RobotlegsJs, RobotlegsJs-Pixi, RobotlegsJs-Pisi-Palidor.
++ **Technologies:** PixiJS, RobotlegsJS, RobotlegsJS-Pixi, RobotlegsJS-Pisi-Palidor.
 
 * * *
 
@@ -35,10 +35,10 @@ npm run start
 
 ### Dependencies
 
-+ [PixiJs](http://www.pixijs.com/)
-+ [RobotlegsJs](https://github.com/RobotlegsJS/RobotlegsJS)
-+ [Robotlegs-Pixi](https://github.com/RobotlegsJS/RobotlegsJS-Pixi)
-+ [Robotlegs-Pixi-Palidor](https://github.com/RobotlegsJS/RobotlegsJS-Pixi-Palidor)
++ [PixiJS](http://www.pixijs.com/)
++ [RobotlegsJS](https://github.com/RobotlegsJS/RobotlegsJS-Framework/tree/master/packages/core)
++ [RobotlegsJS-Pixi](https://github.com/RobotlegsJS/RobotlegsJS-Framework/tree/master/packages/pixi)
++ [RobotlegsJS-Pixi-Palidor](https://github.com/RobotlegsJS/RobotlegsJS-Framework/tree/master/packages/pixi-palidor)
 
 * * *
 
