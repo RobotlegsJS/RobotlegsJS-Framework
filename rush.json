@@ -550,6 +550,12 @@
       "shouldPublish": false
     },
     {
+      "packageName": "game-spaceinvaders",
+      "projectFolder": "games/space-invaders",
+      "reviewCategory": "games",
+      "shouldPublish": false
+    },
+    {
       "packageName": "game-tetris",
       "projectFolder": "games/tetris",
       "reviewCategory": "games",
