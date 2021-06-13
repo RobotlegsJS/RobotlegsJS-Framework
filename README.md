@@ -23,6 +23,14 @@ This repository is the home for all packages maintained by **RobotlegsJS**.
 | [/packages/createjs](./packages/createjs/) | [![npm version](https://badge.fury.io/js/%40robotlegsjs%2Fcreatejs.svg)](https://badge.fury.io/js/%40robotlegsjs%2Fcreatejs) | [changelog](./packages/createjs/CHANGELOG.md) | [@robotlegsjs/createjs](https://www.npmjs.com/package/@robotlegsjs/createjs) |
 | [/packages/openfl](./packages/openfl/) | [![npm version](https://badge.fury.io/js/%40robotlegsjs%2Fopenfl.svg)](https://badge.fury.io/js/%40robotlegsjs%2Fopenfl) | [changelog](./packages/openfl/CHANGELOG.md) | [@robotlegsjs/openfl](https://www.npmjs.com/package/@robotlegsjs/openfl) |
 
+## Unpublished Open Source Games
+
+| Folder | Name | Technologies |
+| ------ | ---- | ------------ |
+| [/games/scratchcard](./games/scratchcard/) | Scratchcard | [signals](./packages/signals/) [core](./packages/core/) [pixi](./packages/pixi/) [pixi-palidor](./packages/pixi-palidor/) |
+| [/games/space-invaders](./games/space-invaders/) | Space Invaders | [core](./packages/core/) [pixi](./packages/pixi/) [pixi-palidor](./packages/pixi-palidor/) |
+| [/games/tetris](./games/tetris/) | Tetris | [core](./packages/core/) [pixi](./packages/pixi/) [pixi-palidor](./packages/pixi-palidor/) |
+
 ## Unpublished Local Projects
 
 | Folder | Description |
