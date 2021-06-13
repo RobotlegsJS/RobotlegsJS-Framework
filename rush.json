@@ -549,6 +549,12 @@
       "reviewCategory": "games",
       "shouldPublish": false
     },
+    {
+      "packageName": "game-tetris",
+      "projectFolder": "games/tetris",
+      "reviewCategory": "games",
+      "shouldPublish": false
+    },
     // "integration-tests" folder (alphabetical order)
     {
       "packageName": "integration-macrobot-signalcommandmap",

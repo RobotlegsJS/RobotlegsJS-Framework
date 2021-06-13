@@ -4,7 +4,7 @@
   "packages": [
     {
       "name": "@istanbuljs/nyc-config-typescript",
-      "allowedCategories": [ "production", "tests" ]
+      "allowedCategories": [ "games", "production", "tests" ]
     },
     {
       "name": "@mcler/webpack-concat-plugin",
@@ -48,7 +48,7 @@
     },
     {
       "name": "chai",
-      "allowedCategories": [ "production", "tests" ]
+      "allowedCategories": [ "games", "production", "tests" ]
     },
     {
       "name": "clean-webpack-plugin",
@@ -180,11 +180,11 @@
     },
     {
       "name": "mocha",
-      "allowedCategories": [ "production", "tests" ]
+      "allowedCategories": [ "games", "production", "tests" ]
     },
     {
       "name": "nyc",
-      "allowedCategories": [ "production", "tests" ]
+      "allowedCategories": [ "games", "production", "tests" ]
     },
     {
       "name": "openfl",
@@ -232,7 +232,7 @@
     },
     {
       "name": "source-map-support",
-      "allowedCategories": [ "production", "tests" ]
+      "allowedCategories": [ "games", "production", "tests" ]
     },
     {
       "name": "terser-webpack-plugin",

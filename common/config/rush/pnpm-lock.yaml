@@ -7,6 +7,7 @@ specifiers:
   '@rush-temp/createjs': file:./projects/createjs.tgz
   '@rush-temp/eventemitter3': file:./projects/eventemitter3.tgz
   '@rush-temp/game-scratchcard': file:./projects/game-scratchcard.tgz
+  '@rush-temp/game-tetris': file:./projects/game-tetris.tgz
   '@rush-temp/integration-macrobot-signalcommandmap': file:./projects/integration-macrobot-signalcommandmap.tgz
   '@rush-temp/macrobot': file:./projects/macrobot.tgz
   '@rush-temp/openfl': file:./projects/openfl.tgz
@@ -91,6 +92,7 @@ dependencies:
   '@rush-temp/createjs': file:projects/createjs.tgz
   '@rush-temp/eventemitter3': file:projects/eventemitter3.tgz
   '@rush-temp/game-scratchcard': file:projects/game-scratchcard.tgz
+  '@rush-temp/game-tetris': file:projects/game-tetris.tgz
   '@rush-temp/integration-macrobot-signalcommandmap': file:projects/integration-macrobot-signalcommandmap.tgz
   '@rush-temp/macrobot': file:projects/macrobot.tgz
   '@rush-temp/openfl': file:projects/openfl.tgz
@@ -8694,6 +8696,49 @@ packages:
       prettier: 2.3.1
       reflect-metadata: 0.1.13
       rimraf: 3.0.2
+      terser-webpack-plugin: 5.1.3_webpack@5.38.1
+      ts-loader: 9.2.3_typescript@4.2.4+webpack@5.38.1
+      ts-node: 10.0.0_typescript@4.2.4
+      tslib: 2.2.0
+      typescript: 4.2.4
+      webpack: 5.38.1_webpack-cli@4.7.2
+      webpack-cli: 4.7.2_4f38b4f344caeae135cc7debc9aac51b
+      webpack-dev-server: 3.11.2_webpack-cli@4.7.2+webpack@5.38.1
+    transitivePeerDependencies:
+      - '@swc/core'
+      - '@swc/wasm'
+      - '@types/node'
+      - '@webpack-cli/generators'
+      - '@webpack-cli/migrate'
+      - supports-color
+      - webpack-bundle-analyzer
+    dev: false
+
+  file:projects/game-tetris.tgz:
+    resolution: {integrity: sha512-msOQXbG9kATpQzuvyH+wOkNhZuMcECqGJ8YM5ECFTiPQwr76h09EhZ99FsnIagJHOmxIlgI6vss9rqEHRt8mjQ==, tarball: file:projects/game-tetris.tgz}
+    name: '@rush-temp/game-tetris'
+    version: 0.0.0
+    dependencies:
+      '@istanbuljs/nyc-config-typescript': 1.0.1_40f74ebf3b42f8d97356b2262606f547
+      '@rushstack/eslint-config': 2.3.4_eslint@7.28.0+typescript@4.2.4
+      '@types/chai': 4.2.18
+      '@types/mocha': 8.2.2
+      '@types/webpack-env': 1.16.0
+      chai: 4.3.4
+      eslint: 7.28.0
+      eslint-plugin-import: 2.23.4_eslint@7.28.0
+      eslint-plugin-jsdoc: 35.1.3_eslint@7.28.0
+      eslint-plugin-prefer-arrow: 1.2.3_eslint@7.28.0
+      eslint-plugin-react: 7.24.0_eslint@7.28.0
+      eslint-plugin-unicorn: 33.0.1_eslint@7.28.0
+      html-webpack-plugin: 5.3.1_webpack@5.38.1
+      mocha: 9.0.0
+      nyc: 15.1.0
+      pixi.js: 5.2.1
+      prettier: 2.3.1
+      reflect-metadata: 0.1.13
+      rimraf: 3.0.2
+      source-map-support: 0.5.19
       terser-webpack-plugin: 5.1.3_webpack@5.38.1
       ts-loader: 9.2.3_typescript@4.2.4+webpack@5.38.1
       ts-node: 10.0.0_typescript@4.2.4
