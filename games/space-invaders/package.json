@@ -1,32 +1,17 @@
 {
-  "name": "typescript-spaceinvaders",
+  "name": "game-spaceinvaders",
   "version": "1.0.0",
+  "private": true,
   "description": "OpenSource Game",
-  "main": "index.js",
   "author": "Ronaldo Santiago",
   "license": "MIT",
-  "dependencies": {
-    "@robotlegsjs/core": "^0.1.1",
-    "@robotlegsjs/pixi": "^0.1.2",
-    "@robotlegsjs/pixi-palidor": "^0.1.1",
-    "gsap": "^1.20.3",
-    "pixi.js": "^4.6.1",
-    "prettier": "^1.8.2",
-    "reflect-metadata": "^0.1.10",
-    "tslint-config-prettier": "^1.6.0"
-  },
-  "devDependencies": {
-    "@types/pixi.js": "^4.6.0",
-    "html-webpack-plugin": "^2.30.1",
-    "ts-loader": "^3.1.1",
-    "tslint": "^5.8.0",
-    "typescript": "^2.6.1",
-    "webpack": "^3.8.1",
-    "webpack-dev-server": "^2.9.4"
-  },
   "scripts": {
-    "autoformat": "prettier --config .prettierrc --write {src,test}/**/*.ts",
-    "start": "webpack-dev-server --config ./webpack.config.js"
+    "start": "webpack serve --config ./webpack.config.js",
+    "bundle": "webpack --env production",
+    "autoformat": "prettier --config ../../.prettierrc --ignore-path ../../.prettierignore --write --list-different .",
+    "cleanup": "rimraf dist",
+    "build": "npm run cleanup && npm run bundle",
+    "prepare": "npm run build"
   },
   "keywords": [
     "RobotlegsJS",
@@ -35,5 +20,26 @@
     "TypeScript",
     "PixiJS",
     "Game"
-  ]
+  ],
+  "dependencies": {
+    "@robotlegsjs/core": "^3.0.0",
+    "@robotlegsjs/pixi": "^3.0.0",
+    "@robotlegsjs/pixi-palidor": "^3.0.0",
+    "pixi.js": "^5.2.1",
+    "reflect-metadata": "^0.1.13",
+    "tslib": "^2.2.0"
+  },
+  "devDependencies": {
+    "html-webpack-plugin": "^5.3.1",
+    "imports-loader": "^3.0.0",
+    "prettier": "^2.3.1",
+    "rimraf": "^3.0.2",
+    "terser-webpack-plugin": "^5.1.3",
+    "ts-loader": "^9.2.3",
+    "ts-node": "^10.0.0",
+    "typescript": "~4.2.4",
+    "webpack": "^5.38.1",
+    "webpack-cli": "^4.7.2",
+    "webpack-dev-server": "^3.11.2"
+  }
 }

@@ -1,31 +1,18 @@
 {
   "compilerOptions": {
-    "module": "commonjs",
-    "outDir": "dist/",
-    "strictNullChecks": false,
     "baseUrl": "src/",
-    "noImplicitAny": false,
-    "removeComments": true,
-    "preserveConstEnums": true,
+    "outDir": "dist/",
     "target": "es5",
-    "lib": [
-      "es6",
-      "dom"
-    ],
+    "lib": ["es6", "dom"],
     "types": ["reflect-metadata"],
-    "declaration": true,
+    "module": "commonjs",
     "moduleResolution": "node",
+    "declaration": true,
+    "noImplicitAny": false,
+    "preserveConstEnums": true,
     "sourceMap": true,
-    "watch": true,
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true
   },
-  "include": [
-    "src/*",
-    "*"
-  ],
-  "exclude": [
-    "node_modules",
-    "**/*.spec.ts"
-  ]
+  "include": ["./src/**/*.ts"]
 }
