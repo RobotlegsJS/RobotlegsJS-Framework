@@ -29,11 +29,11 @@
     "start": "webpack-dev-server --config ./webpack.config.js"
   },
   "keywords": [
-    "RobotlegsJs",
+    "RobotlegsJS",
     "RobotlegsJS-Pixi",
     "RobotlegsJS-Pixi-Palidor",
     "TypeScript",
-    "PixiJs",
+    "PixiJS",
     "Game"
   ]
 }
