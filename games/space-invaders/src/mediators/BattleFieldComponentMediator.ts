@@ -32,9 +32,24 @@ export class BattleFieldComponentMediator extends Mediator<BattleFieldComponent>
             this.game_onUpdateBattleField,
             this
         );
-        this.eventMap.mapListener(this.eventDispatcher, GameEvent.RESUME, this.game_onResumeGame, this);
-        this.eventMap.mapListener(this.eventDispatcher, GameEvent.PAUSE, this.game_onPauseGame, this);
-        this.eventMap.mapListener(this.eventDispatcher, GameEvent.GAME_OVER, this.game_onGameOver, this);
+        this.eventMap.mapListener(
+            this.eventDispatcher,
+            GameEvent.RESUME,
+            this.game_onResumeGame,
+            this
+        );
+        this.eventMap.mapListener(
+            this.eventDispatcher,
+            GameEvent.PAUSE,
+            this.game_onPauseGame,
+            this
+        );
+        this.eventMap.mapListener(
+            this.eventDispatcher,
+            GameEvent.GAME_OVER,
+            this.game_onGameOver,
+            this
+        );
     }
     public destroy(): void {
         this.eventMap.unmapListeners();

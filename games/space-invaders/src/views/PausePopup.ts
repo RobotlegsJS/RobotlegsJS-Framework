@@ -54,7 +54,11 @@ export class PausePopup extends Container {
         this.addChild(this._retryButton);
     }
     private setupText(): void {
-        const tilte: Text = PixiFactory.getText(Texts.PAUSED, Colors.DYNAMIC_TEXT, Texts.FONT_SIZE_DEFAULT + 8);
+        const tilte: Text = PixiFactory.getText(
+            Texts.PAUSED,
+            Colors.DYNAMIC_TEXT,
+            Texts.FONT_SIZE_DEFAULT + 8
+        );
         tilte.x = ViewPortSize.HALF_WIDTH;
         tilte.y = ViewPortSize.HALF_HEIGHT - 35;
         tilte.anchor.set(0.5);

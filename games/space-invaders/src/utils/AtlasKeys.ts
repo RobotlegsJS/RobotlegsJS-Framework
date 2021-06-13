@@ -1,4 +1,4 @@
-import { Texture } from "pixi.js";
+import { Texture, Loader, utils } from "pixi.js";
 
 export class AtlasKeys {
     public static BUTTON_CANCEL = "button_cancel";
@@ -31,8 +31,8 @@ export class AtlasKeys {
     private static textureCache: any;
 
     public static update(): void {
-        this.resources = PIXI.loader.resources;
-        this.textureCache = PIXI.utils.TextureCache;
+        this.resources = Loader.shared.resources;
+        this.textureCache = utils.TextureCache;
     }
     public static getTexture(atlasKey: string): Texture {
         return this.textureCache[atlasKey];

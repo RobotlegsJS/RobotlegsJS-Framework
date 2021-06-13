@@ -39,12 +39,20 @@ export class HUDGameComponent extends Container {
     private createBackgrounds(): void {
         this.addChild(PixiFactory.getColorBox(ViewPortSize.MAX_WIDTH, 70, Colors.BACKGROUND_DARK));
 
-        const bottomBackground: Graphics = PixiFactory.getColorBox(ViewPortSize.MAX_WIDTH, 100, Colors.BACKGROUND_DARK);
+        const bottomBackground: Graphics = PixiFactory.getColorBox(
+            ViewPortSize.MAX_WIDTH,
+            100,
+            Colors.BACKGROUND_DARK
+        );
         bottomBackground.y = ViewPortSize.MAX_HEIGHT - 80;
         this.addChild(bottomBackground);
     }
     private createTextFields(): void {
-        const scoreLabel: Text = PixiFactory.getText(Texts.SCORE, Colors.STATIC_TEXT, Texts.FONT_SIZE_HUD);
+        const scoreLabel: Text = PixiFactory.getText(
+            Texts.SCORE,
+            Colors.STATIC_TEXT,
+            Texts.FONT_SIZE_HUD
+        );
         scoreLabel.x = MagicValues.BORDER_OFFSET;
         scoreLabel.y = MagicValues.BORDER_OFFSET;
         this.addChild(scoreLabel);
@@ -55,7 +63,11 @@ export class HUDGameComponent extends Container {
         this._scoreText.anchor.x = 1;
         this.addChild(this._scoreText);
 
-        const hiScoreLabel: Text = PixiFactory.getText(Texts.HI_SCORE, Colors.STATIC_TEXT, Texts.FONT_SIZE_HUD);
+        const hiScoreLabel: Text = PixiFactory.getText(
+            Texts.HI_SCORE,
+            Colors.STATIC_TEXT,
+            Texts.FONT_SIZE_HUD
+        );
         hiScoreLabel.x = MagicValues.BORDER_OFFSET;
         hiScoreLabel.y = this._scoreText.y + 18;
         this.addChild(hiScoreLabel);
@@ -66,7 +78,11 @@ export class HUDGameComponent extends Container {
         this._hiScoreText.anchor.x = 1;
         this.addChild(this._hiScoreText);
 
-        const levelLabel: Text = PixiFactory.getText(Texts.LEVEL, Colors.STATIC_TEXT, Texts.FONT_SIZE_HUD);
+        const levelLabel: Text = PixiFactory.getText(
+            Texts.LEVEL,
+            Colors.STATIC_TEXT,
+            Texts.FONT_SIZE_HUD
+        );
         levelLabel.x = ViewPortSize.MAX_WIDTH - MagicValues.BORDER_OFFSET - 80;
         levelLabel.y = ViewPortSize.MAX_HEIGHT - 70;
         this.addChild(levelLabel);

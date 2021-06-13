@@ -14,8 +14,10 @@ export class Rectangle {
     public intersects(toIntersect: any): boolean {
         const resultx = Math.max(this.x, toIntersect.x);
         const resulty = Math.max(this.y, toIntersect.y);
-        const resultwidth = Math.min(this.x + this.width, toIntersect.x + toIntersect.width) - resultx;
-        const resultheight = Math.min(this.y + this.height, toIntersect.y + toIntersect.height) - resulty;
+        const resultwidth =
+            Math.min(this.x + this.width, toIntersect.x + toIntersect.width) - resultx;
+        const resultheight =
+            Math.min(this.y + this.height, toIntersect.y + toIntersect.height) - resulty;
         if (resultwidth <= 0 || resultheight <= 0) {
             return false;
         }

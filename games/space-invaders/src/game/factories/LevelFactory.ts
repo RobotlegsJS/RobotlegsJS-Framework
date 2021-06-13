@@ -30,7 +30,7 @@ export class LevelFactory {
             vectorRow = new Array<number>();
 
             for (let col = 0; col < numCols; col++) {
-                vectorRow.push(ids[Math.floor(row * 3 / numRows)]);
+                vectorRow.push(ids[Math.floor((row * 3) / numRows)]);
             }
             result.push(vectorRow);
         }

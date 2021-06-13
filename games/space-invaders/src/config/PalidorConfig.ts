@@ -24,10 +24,7 @@ export class PalidorConfig implements IConfig {
         this.eventDispatcher.dispatchEvent(new FlowEvent(FlowEvent.SHOW_INTRO_VIEW));
     }
     private mapPalidor(): void {
-        this.context.injector
-            .bind(FlowService)
-            .to(FlowService)
-            .inSingletonScope();
+        this.context.injector.bind(FlowService).to(FlowService).inSingletonScope();
 
         this.flowManager.map(FlowEvent.SHOW_INTRO_VIEW).toView(IntroView);
         this.flowManager.map(FlowEvent.SHOW_GAME_VIEW).toView(GameView);
