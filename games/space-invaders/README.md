@@ -1,6 +1,6 @@
 ![cover](media/img_cover_space_invaders_ts.png)
 
-This is a TypeScript open-source game which is a port of the ActionScript version, following the same concepts, graphics, and architecture.
+This is a TypeScript open-source game which is a port of the [ActionScript](https://github.com/RonaldoSetzer/GAME-SpaceInvaders/tree/master/actionscript-spaceinvaders) version, following the same concepts, graphics, and architecture.
 
 + **Category:** Arcade.
 + **Platform:** Web.
@@ -9,9 +9,16 @@ This is a TypeScript open-source game which is a port of the ActionScript versio
 
 * * *
 
-### Gameplay
+### Installation
 
-![gif_ts](media/gif_space_invaders_ts_demo.gif)
+Follow the [building the projects](https://github.com/RobotlegsJS/RobotlegsJS-Framework/tree/master/.github/CONTRIBUTING.md#building-the-projects) section to know how to setup your local development environment.
+
+Then you can run this example using:
+
+```bash
+cd games/space-invaders
+npm start
+```
 
 * * *
 
@@ -24,8 +31,12 @@ This is a TypeScript open-source game which is a port of the ActionScript versio
 
 * * *
 
+### Gameplay
+
+![gif_ts](media/gif_space_invaders_ts_demo.gif)
+
 ### Demos
-+ **[ActionScript](https://ronaldosetzer.github.io/portfolio/open_source/space_invaders_as/)**
+
 + **[TypeScript](https://ronaldosetzer.github.io/portfolio/open_source/space_invaders_ts/)**
 
 * * *
@@ -39,7 +50,9 @@ This is a TypeScript open-source game which is a port of the ActionScript versio
 * * *
 
 ### Screenshots
+
 ![screenshot01](media/img_game_space_invaders_ts.png)
+
 * * *
 
 **Ronaldo Santiago**  - Game Developer [ [portfolio](https://ronaldosetzer.github.io/portfolio/) ]
