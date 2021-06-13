@@ -1,11 +1,24 @@
 ![cover](media/img_cover_tetris_ts.png)
 
-This is a TypeScript open-source game which is a port of the ActionScript version, following the same concepts, graphics, and architecture.
+This is a TypeScript open-source game which is a port of the [ActionScript version](https://github.com/RonaldoSetzer/GAME-Tetris/tree/master/actionscript-tetris), following the same concepts, graphics, and architecture.
 
 + **Category:** Puzzle.
 + **Platform:** Web.
 + **Language:** TypeScript.
-+ **Technologies:** PixiJs, RobotlegsJS, RobotlegsJS-Pixi, RobotlegsJS-Pixi-Palidor.
++ **Technologies:** PixiJS, RobotlegsJS, RobotlegsJS-Pixi, RobotlegsJS-Pixi-Palidor.
+
+* * *
+
+### Installation
+
+Follow the [building the projects](https://github.com/RobotlegsJS/RobotlegsJS-Framework/tree/master/.github/CONTRIBUTING.md#building-the-projects) section to know how to setup your local development environment.
+
+Then you can run this example using:
+
+```bash
+cd games/tetris
+npm start
+```
 
 * * *
 
@@ -17,15 +30,15 @@ This is a TypeScript open-source game which is a port of the ActionScript versio
 
 ### Dependencies
 
-+ [PixiJs](http://www.pixijs.com/)
-+ [RobotlegsJs](https://github.com/RobotlegsJS/RobotlegsJS)
-+ [Robotlegs-Pixi](https://github.com/RobotlegsJS/RobotlegsJS-Pixi)
-+ [Robotlegs-Pixi-Palidor](https://github.com/RobotlegsJS/RobotlegsJS-Pixi-Palidor)
++ [PixiJS](http://www.pixijs.com/)
++ [RobotlegsJS](https://github.com/RobotlegsJS/RobotlegsJS-Framework/tree/master/packages/core)
++ [RobotlegsJS-Pixi](https://github.com/RobotlegsJS/RobotlegsJS-Framework/tree/master/packages/pixi)
++ [RobotlegsJS-Pixi-Palidor](https://github.com/RobotlegsJS/RobotlegsJS-Framework/tree/master/packages/pixi-palidor)
 
 * * *
 
 ### Demo
-+ **[ActionScript](https://ronaldosetzer.github.io/portfolio/open_source/tetris_as/)**
+
 + **[TypeScript](https://ronaldosetzer.github.io/portfolio/open_source/tetris_ts/)**
 
 * * *
