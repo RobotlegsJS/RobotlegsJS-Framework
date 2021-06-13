@@ -15,7 +15,7 @@
     "lint:src": "eslint -c .eslintrc.js --ext .ts ./src",
     "lint:test": "eslint -c .eslintrc.js --ext .ts ./test",
     "lint": "npm run lint:src && npm run lint:test",
-    "cleanup": "rimraf dist",
+    "cleanup": "rimraf .nyc_output && rimraf dist",
     "build": "npm run cleanup && npm run bundle",
     "prepare": "npm run build",
     "test": "nyc mocha"
@@ -48,7 +48,7 @@
     "RobotlegsJS-Pixi",
     "RobotlegsJS-Pixi-Palidor",
     "TypeScript",
-    "PixiJs",
+    "PixiJS",
     "Game"
   ],
   "dependencies": {
