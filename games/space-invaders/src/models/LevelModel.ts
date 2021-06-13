@@ -39,12 +39,12 @@ export class LevelModel {
     public reset(): void {
         this._cannon = new Entity(Entity.CANNON);
 
-        this._bullets = new Array<Entity>();
-        this._enemies = new Array<Entity>();
-        this._exposions = new Array<Entity>();
+        this._bullets = [];
+        this._enemies = [];
+        this._exposions = [];
 
-        this._toAdd = new Array<Entity>();
-        this._toRemove = new Array<Entity>();
+        this._toAdd = [];
+        this._toRemove = [];
     }
 
     public addBullet(entity: Entity): void {

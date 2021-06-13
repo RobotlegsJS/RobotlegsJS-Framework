@@ -16,7 +16,7 @@ export class EntityPool {
 
     public static getEntity(typeId: number): Entity {
         if (this.dictionary.get(typeId) === undefined) {
-            this.dictionary.set(typeId, new Array<Entity>());
+            this.dictionary.set(typeId, []);
         }
 
         const list: Entity[] = this.dictionary.get(typeId);

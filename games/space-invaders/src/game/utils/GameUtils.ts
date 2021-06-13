@@ -8,7 +8,7 @@ export class GameUtils {
     }
 
     public static getEnemyPath(): Point[] {
-        const enemyPath: Point[] = new Array<Point>();
+        const enemyPath: Point[] = [];
         enemyPath.push(new Point(-10, 0));
         enemyPath.push(new Point(-10, 0));
         enemyPath.push(new Point(0, 5));

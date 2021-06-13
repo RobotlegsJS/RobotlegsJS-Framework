@@ -19,7 +19,7 @@ export class LivesComponent extends Container {
     }
 
     private _createDisplays(): void {
-        this._cannons = new Array<Sprite>();
+        this._cannons = [];
 
         for (let i = 0; i < 3; i++) {
             const cannon: Sprite = PixiFactory.getImage(AtlasKeys.CANNON_HUD);

@@ -28,7 +28,7 @@ export class LevelFactory {
         const ids = [Entity.ENEMY_1, Entity.ENEMY_2, Entity.ENEMY_3];
 
         for (let row = 0; row < numRows; row++) {
-            vectorRow = new Array<number>();
+            vectorRow = [];
 
             for (let col = 0; col < numCols; col++) {
                 vectorRow.push(ids[Math.floor((row * 3) / numRows)]);
