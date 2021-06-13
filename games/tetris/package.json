@@ -14,13 +14,17 @@
     "tslib": "^2.2.0"
   },
   "devDependencies": {
+    "@istanbuljs/nyc-config-typescript": "^1.0.1",
     "@types/chai": "^4.2.18",
     "@types/mocha": "^8.2.2",
+    "@types/webpack-env": "^1.16.0",
     "chai": "^4.3.4",
     "html-webpack-plugin": "^5.3.1",
     "mocha": "^9.0.0",
+    "nyc": "^15.1.0",
     "prettier": "^2.3.1",
     "rimraf": "^3.0.2",
+    "source-map-support": "^0.5.19",
     "terser-webpack-plugin": "^5.1.3",
     "ts-loader": "^9.2.3",
     "ts-node": "^10.0.0",
@@ -36,7 +40,30 @@
     "cleanup": "rimraf dist",
     "build": "npm run cleanup && npm run bundle",
     "prepare": "npm run build",
-    "test": "mocha test/**/*.test.ts --require ts-node/register"
+    "test": "nyc mocha"
+  },
+  "nyc": {
+    "extends": "@istanbuljs/nyc-config-typescript",
+    "include": [
+      "src/**/*.ts"
+    ],
+    "exclude": [
+      "test"
+    ],
+    "extension": [
+      ".ts"
+    ],
+    "require": [
+      "ts-node/register",
+      "source-map-support/register"
+    ],
+    "reporter": [
+      "text-summary",
+      "lcov"
+    ],
+    "check-coverage": true,
+    "sourceMap": true,
+    "instrument": true
   },
   "keywords": [
     "RobotlegsJS",

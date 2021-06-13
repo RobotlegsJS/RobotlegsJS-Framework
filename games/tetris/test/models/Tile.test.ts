@@ -1,3 +1,5 @@
+import "../entry";
+
 import { Tile } from "./../../src/models/Tile";
 import { assert } from "chai";
 

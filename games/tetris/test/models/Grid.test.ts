@@ -1,3 +1,5 @@
+import "../entry";
+
 import { Tile } from "./../../src/models/Tile";
 import { Grid } from "./../../src/models/Grid";
 import { assert } from "chai";
@@ -18,7 +20,7 @@ describe("Grid", () => {
         for (let col = 0; col < grid.maxCols; col++) {
             grid.setTile(new Tile(col, row), col, row);
         }
-        let removedRow: Array<Tile> = grid.removeRow(row);
+        grid.removeRow(row);
         let result = true;
         for (let col = 0; col < grid.maxCols; col++) {
             result = result && grid.getTile(col, row) === null;

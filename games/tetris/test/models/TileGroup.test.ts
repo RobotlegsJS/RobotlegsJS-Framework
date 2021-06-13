@@ -1,3 +1,5 @@
+import "../entry";
+
 import { TileGroupFactory } from "./../../src/utils/TileGroupFactory";
 import { TileGroup } from "./../../src/models/TileGroup";
 import { Tile } from "./../../src/models/Tile";

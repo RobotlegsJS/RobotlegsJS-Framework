@@ -1,4 +1,5 @@
-import "reflect-metadata";
+import "../entry";
+
 import { GameModel } from "./../../src/models/GameModel";
 import { assert } from "chai";
 
