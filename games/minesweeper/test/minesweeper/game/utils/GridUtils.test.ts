@@ -1,3 +1,5 @@
+import "../../../entry";
+
 import { GridUtils } from "./../../../../src/minesweeper/game/utils/GridUtils";
 import { Cell } from "./../../../../src/minesweeper/game/models/Cell";
 import { GridData } from "./../../../../src/minesweeper/game/models/GridData";

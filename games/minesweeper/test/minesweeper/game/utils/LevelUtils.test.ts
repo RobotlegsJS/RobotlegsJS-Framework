@@ -1,3 +1,5 @@
+import "../../../entry";
+
 import { Texts } from "../../../../src/minesweeper/utils/Texts";
 import { CustomLevelModel } from "./../../../../src/minesweeper/game/models/CustomLevelModel";
 import { Cell } from "./../../../../src/minesweeper/game/models/Cell";

@@ -1,3 +1,5 @@
+import "../../../entry";
+
 import { GridData } from "../../../../src/minesweeper/game/models/GridData";
 import { LevelModel } from "./../../../../src/minesweeper/game/models/LevelModel";
 import { assert } from "chai";

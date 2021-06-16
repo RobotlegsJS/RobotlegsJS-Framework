@@ -16,5 +16,6 @@
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true
   },
-  "include": ["./src/**/*.ts"]
+  "include": ["./src/**/*.ts"],
+  "files": ["./node_modules/@robotlegsjs/pixi/definitions/pixi.d.ts"]
 }

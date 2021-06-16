@@ -1,3 +1,5 @@
+import "../../../entry";
+
 import { LevelUtils } from "../../../../src/minesweeper/game/utils/LevelUtils";
 import { GameStatus } from "./../../../../src/minesweeper/game/models/GameStatus";
 import { GameOverCommand } from "./../../../../src/minesweeper/game/commands/GameOverCommand";

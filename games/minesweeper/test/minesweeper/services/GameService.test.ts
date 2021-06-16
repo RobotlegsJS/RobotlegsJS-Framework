@@ -1,3 +1,5 @@
+import "../../entry";
+
 import { Texts } from "../../../src/minesweeper/utils/Texts";
 import { GameEvent } from "../../../src/minesweeper/events/GameEvent";
 import { GameStatus } from "../../../src/minesweeper/game/models/GameStatus";
@@ -20,7 +22,7 @@ describe("GameService", () => {
     });
 
     it("DispatchEventWith", () => {
-        let dispatcherSpy = sinon.spy(gameService.eventDispatcher, "dispatchEventWith");
+        let dispatcherSpy = sinon.spy(gameService.eventDispatcher, "dispatchEventWith" as any);
         let type = "TestDispatchEventWith";
         gameService.dispatchEventWith(type);
         let event = dispatcherSpy.firstCall.args[0];
@@ -30,7 +32,7 @@ describe("GameService", () => {
     });
 
     it("RetryCommand", () => {
-        let dispatcherSpy = sinon.spy(gameService.eventDispatcher, "dispatchEventWith");
+        let dispatcherSpy = sinon.spy(gameService.eventDispatcher, "dispatchEventWith" as any);
         gameService.retryCommand();
         let event = dispatcherSpy.firstCall.args[0];
         assert.isTrue(dispatcherSpy.calledOnce);
@@ -38,7 +40,7 @@ describe("GameService", () => {
     });
 
     it("GameOverCommand", () => {
-        let dispatcherSpy = sinon.spy(gameService.eventDispatcher, "dispatchEventWith");
+        let dispatcherSpy = sinon.spy(gameService.eventDispatcher, "dispatchEventWith" as any);
         gameService.gameOverCommand();
         let event = dispatcherSpy.firstCall.args[0];
         assert.isTrue(dispatcherSpy.calledOnce);
@@ -46,7 +48,7 @@ describe("GameService", () => {
     });
 
     it("ExportLevelDataCommand", () => {
-        let dispatcherSpy = sinon.spy(gameService.eventDispatcher, "dispatchEventWith");
+        let dispatcherSpy = sinon.spy(gameService.eventDispatcher, "dispatchEventWith" as any);
         gameService.exportLevelDataCommand();
         let event = dispatcherSpy.firstCall.args[0];
         assert.isTrue(dispatcherSpy.calledOnce);
@@ -54,7 +56,7 @@ describe("GameService", () => {
     });
 
     it("UpdateHUDData", () => {
-        let dispatcherSpy = sinon.spy(gameService.eventDispatcher, "dispatchEventWith");
+        let dispatcherSpy = sinon.spy(gameService.eventDispatcher, "dispatchEventWith" as any);
         gameService.updateHUDData();
         let event = dispatcherSpy.firstCall.args[0];
         assert.isTrue(dispatcherSpy.calledOnce);
@@ -62,7 +64,7 @@ describe("GameService", () => {
     });
 
     it("ClearGridField", () => {
-        let dispatcherSpy = sinon.spy(gameService.eventDispatcher, "dispatchEventWith");
+        let dispatcherSpy = sinon.spy(gameService.eventDispatcher, "dispatchEventWith" as any);
         gameService.clearGridField();
         let event = dispatcherSpy.firstCall.args[0];
         assert.isTrue(dispatcherSpy.calledOnce);
@@ -70,7 +72,7 @@ describe("GameService", () => {
     });
 
     it("UpdateGridField", () => {
-        let dispatcherSpy = sinon.spy(gameService.eventDispatcher, "dispatchEventWith");
+        let dispatcherSpy = sinon.spy(gameService.eventDispatcher, "dispatchEventWith" as any);
         gameService.updateGridField();
         let event = dispatcherSpy.firstCall.args[0];
         assert.isTrue(dispatcherSpy.calledOnce);
@@ -78,7 +80,7 @@ describe("GameService", () => {
     });
 
     it("Pause", () => {
-        let dispatcherSpy = sinon.spy(gameService.eventDispatcher, "dispatchEventWith");
+        let dispatcherSpy = sinon.spy(gameService.eventDispatcher, "dispatchEventWith" as any);
         gameService.pause();
         let event = dispatcherSpy.firstCall.args[0];
         assert.isTrue(dispatcherSpy.calledOnce);
@@ -87,7 +89,7 @@ describe("GameService", () => {
     });
 
     it("resume", () => {
-        let dispatcherSpy = sinon.spy(gameService.eventDispatcher, "dispatchEventWith");
+        let dispatcherSpy = sinon.spy(gameService.eventDispatcher, "dispatchEventWith" as any);
         gameService.resume();
         let event = dispatcherSpy.firstCall.args[0];
         assert.isTrue(dispatcherSpy.calledOnce);
@@ -106,7 +108,7 @@ describe("GameService", () => {
     });
 
     it("CreateLevelCommand", () => {
-        let dispatcherSpy = sinon.spy(gameService.eventDispatcher, "dispatchEvent");
+        let dispatcherSpy = sinon.spy(gameService.eventDispatcher, "dispatchEvent" as any);
         let leveId = Texts.EASY;
         gameService.createLevel(leveId);
         let event: GameEvent = <GameEvent>dispatcherSpy.firstCall.args[0];

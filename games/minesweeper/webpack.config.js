@@ -1,34 +1,55 @@
 const webpack = require("webpack");
 const path = require("path");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
 const TerserPlugin = require("terser-webpack-plugin");
 
-module.exports = (options) => {
-  if (!options) options = { production: false };
+module.exports = (env) => {
+  if (!env) env = { production: false, karma: false };
 
-  let mode = options.production ? "production" : "development";
+  let mode = env.production ? "production" : "development";
+  let tsconfig = !env.karma ? "tsconfig.json" : "tsconfig.test.json";
+  let output = env.production ? "dist" : "dist-test";
+  let filename = env.karma
+    ? "[name].[hash].js"
+    : env.production
+    ? "robotlegs-pixi.min.js"
+    : "robotlegs-pixi.js";
 
   return {
-    mode,
+    mode: mode,
 
     entry: {
-      main: path.resolve("src/index.ts")
+      main: path.join(__dirname, "src/index.ts")
     },
 
     output: {
-      path: __dirname + "/dist",
-      filename: "bundle.js"
+      path: path.join(__dirname, output),
+      filename: filename,
+
+      libraryTarget: "var",
+      library: "RobotlegsJSPixi"
     },
 
-    devtool: options.production ? undefined : "source-map",
+    devtool: env.production ? undefined : "inline-source-map",
 
     module: {
-      rules: [{ test: /\.ts$/, loader: "ts-loader" }]
+      rules: [
+        {
+          test: /\.ts$/,
+          use: [{ loader: "ts-loader", options: { configFile: tsconfig } }]
+        },
+        {
+          test: env.production /* disable this loader for production builds */
+            ? /^$/
+            : /^.*(src).*\.ts$/,
+          loader: "istanbul-instrumenter-loader",
+          enforce: "post"
+        }
+      ]
     },
 
-    plugins: options.production ? [] : [new webpack.ProgressPlugin(), new HtmlWebpackPlugin()],
+    plugins: env.production ? [] : [new webpack.SourceMapDevToolPlugin({ test: /\.ts$/i })],
 
-    optimization: options.production
+    optimization: env.production
       ? {
           concatenateModules: true,
           minimize: true,
@@ -45,7 +66,6 @@ module.exports = (options) => {
           ]
         }
       : {},
-
     resolve: {
       extensions: [".ts", ".js", ".json"]
     }
