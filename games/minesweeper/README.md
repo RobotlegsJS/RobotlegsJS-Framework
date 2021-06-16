@@ -1,13 +1,8 @@
 # GAME-Minesweeper
 
-
-[![Issue Count](https://codeclimate.com/github/RonaldoSetzer/GAME-Minesweeper/badges/issue_count.svg)](https://codeclimate.com/github/RonaldoSetzer/GAME-Minesweeper)
-[![Build Status](https://travis-ci.org/RonaldoSetzer/GAME-Minesweeper.svg?branch=master)](https://travis-ci.org/RonaldoSetzer/GAME-Minesweeper)
-[![Code Climate](https://codeclimate.com/github/RonaldoSetzer/GAME-Minesweeper/badges/gpa.svg)](https://codeclimate.com/github/RonaldoSetzer/GAME-Minesweeper)
-[![Test Coverage](https://codeclimate.com/github/RonaldoSetzer/GAME-Minesweeper/badges/coverage.svg)](https://codeclimate.com/github/RonaldoSetzer/GAME-Minesweeper/coverage)
----
-
 ![cover](media/img_cover_minesweeper_ts.png)
+
+* * *
 
 This is a TypeScript open-source game.
 
@@ -26,9 +21,13 @@ This is a TypeScript open-source game.
 
 ### Installation
 
-```
-npm install
-npm run start
+Follow the [building the projects](https://github.com/RobotlegsJS/RobotlegsJS-Framework/tree/master/.github/CONTRIBUTING.md#building-the-projects) section to know how to setup your local development environment.
+
+Then you can run this example using:
+
+```bash
+cd games/minesweeper
+npm start
 ```
 
 * * *
@@ -40,24 +39,17 @@ npm run start
 + [RobotlegsJS-Pixi](https://github.com/RobotlegsJS/RobotlegsJS-Framework/tree/master/packages/pixi)
 + [RobotlegsJS-Pixi-Palidor](https://github.com/RobotlegsJS/RobotlegsJS-Framework/tree/master/packages/pixi-palidor)
 
-* * *
-
-### Demo
-+ **[TypeScript](https://ronaldosetzer.github.io/portfolio/open_source/minesweeper_ts/)**
-
-* * *
-
 ### Game
 
 ![screenshot01](media/img_ss_minesweeper_ts_01.png)
 
 ![screenshot02](media/img_ss_minesweeper_ts_02.png)
 
-
 * * *
 
 ### Screenshots
 ![screenshot01](media/img_game_minesweeper_ts.png)
+
 * * *
 
 **Ronaldo Santiago**  - Game Developer [ [portfolio](https://ronaldosetzer.github.io/portfolio/) ]
