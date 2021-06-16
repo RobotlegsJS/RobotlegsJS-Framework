@@ -30,33 +30,15 @@ export class GameConfig implements IConfig {
         this.commandMap.map(GameEvent.EXPORT_LEVEL_DATA_COMMAND).toCommand(ExportLevelDataCommand);
     }
     private mapServices(): void {
-        this.context.injector
-            .bind(GameService)
-            .to(GameService)
-            .inSingletonScope();
+        this.context.injector.bind(GameService).to(GameService).inSingletonScope();
     }
     private mapManager(): void {
-        this.context.injector
-            .bind(GameManager)
-            .to(GameManager)
-            .inSingletonScope();
-        this.context.injector
-            .bind(HighScoreManager)
-            .to(HighScoreManager)
-            .inSingletonScope();
+        this.context.injector.bind(GameManager).to(GameManager).inSingletonScope();
+        this.context.injector.bind(HighScoreManager).to(HighScoreManager).inSingletonScope();
     }
     private mapModels(): void {
-        this.context.injector
-            .bind(GameStatus)
-            .to(GameStatus)
-            .inSingletonScope();
-        this.context.injector
-            .bind(LevelModel)
-            .to(LevelModel)
-            .inSingletonScope();
-        this.context.injector
-            .bind(CustomLevelModel)
-            .to(CustomLevelModel)
-            .inSingletonScope();
+        this.context.injector.bind(GameStatus).to(GameStatus).inSingletonScope();
+        this.context.injector.bind(LevelModel).to(LevelModel).inSingletonScope();
+        this.context.injector.bind(CustomLevelModel).to(CustomLevelModel).inSingletonScope();
     }
 }

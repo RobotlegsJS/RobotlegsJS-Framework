@@ -42,7 +42,7 @@ export class GameOverPopup extends Container {
     private createButtons(): void {
         this._homeButton = PixiFactory.getIconButton(AtlasKeys.ICON_HOME);
         this._homeButton.x = ViewPortSize.HALF_WIDTH + this._homeButton.width * 0.5 + 4;
-        this._homeButton.y = ViewPsortSize.MAX_HEIGHT + 100;
+        this._homeButton.y = ViewPortSize.MAX_HEIGHT + 100;
         this.addChild(this._homeButton);
 
         this._retryButton = PixiFactory.getIconButton(AtlasKeys.ICON_RETRY);

@@ -26,7 +26,12 @@ export class GridFieldComponentMediator extends Mediator<GridFieldComponent> {
         this.generateGrid();
         this.eventMap.mapListener(this.eventDispatcher, GameEvent.UPDATE_GRID, this.onUpdate, this);
         this.eventMap.mapListener(this.eventDispatcher, GameEvent.CLEAR_GRID, this.onClear, this);
-        this.eventMap.mapListener(this.eventDispatcher, GameEvent.GAME_OVER_COMMAND, this.onGameOver, this);
+        this.eventMap.mapListener(
+            this.eventDispatcher,
+            GameEvent.GAME_OVER_COMMAND,
+            this.onGameOver,
+            this
+        );
     }
     public onClear(e: any): void {
         this.view.removeChildren();

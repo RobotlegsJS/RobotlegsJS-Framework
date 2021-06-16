@@ -86,12 +86,20 @@ export class TileDisplay extends Container {
             Colors.TILE_TEXT_3,
             Colors.TILE_TEXT_4
         ];
-        this._container.addChild(PixiFactory.getTileLabel(this.cell.value.toString(), colors[this.cell.value]));
+        this._container.addChild(
+            PixiFactory.getTileLabel(this.cell.value.toString(), colors[this.cell.value])
+        );
     }
     private drawBackground(color: number): void {
         this._background.clear();
         this._background.beginFill(color);
-        this._background.drawRoundedRect(0, 0, MagicValues.TILE_WIDTH - 1, MagicValues.TILE_HEIGHT - 1, 5);
+        this._background.drawRoundedRect(
+            0,
+            0,
+            MagicValues.TILE_WIDTH - 1,
+            MagicValues.TILE_HEIGHT - 1,
+            5
+        );
         this._background.pivot.x = this._background.width * 0.5;
         this._background.pivot.y = this._background.height * 0.5;
     }

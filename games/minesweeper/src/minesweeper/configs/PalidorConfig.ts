@@ -25,16 +25,15 @@ export class PalidorConfig implements IConfig {
         this.dispatcher.dispatchEvent(new FlowEvent(FlowEvent.SHOW_INTRO_VIEW));
     }
     private mapPalidor(): void {
-        this.context.injector
-            .bind(FlowService)
-            .to(FlowService)
-            .inSingletonScope();
+        this.context.injector.bind(FlowService).to(FlowService).inSingletonScope();
 
         this.flowManager.map(FlowEvent.SHOW_GAME_VIEW).toView(GameView);
         this.flowManager.map(FlowEvent.SHOW_HOME_VIEW).toView(HomeView);
         this.flowManager.map(FlowEvent.SHOW_INTRO_VIEW).toView(IntroView);
         this.flowManager.map(FlowEvent.SHOW_LEVEL_SELECT_VIEW).toView(LevelSelectView);
-        this.flowManager.map(FlowEvent.SHOW_LEVEL_CUSTOM_OPTIONS_VIEW).toView(LevelCustomOptionsView);
+        this.flowManager
+            .map(FlowEvent.SHOW_LEVEL_CUSTOM_OPTIONS_VIEW)
+            .toView(LevelCustomOptionsView);
 
         this.flowManager.map(FlowEvent.SHOW_GAME_OVER_POPUP).toFloatingView(GameOverPopup);
         this.flowManager.map(FlowEvent.SHOW_PAUSE_POPUP).toFloatingView(PausePopup);

@@ -18,7 +18,14 @@ export class ExportLevelDataCommand implements ICommand {
             }
         };
         const fileName =
-            level.levelId + "_" + level.maxCols + "_" + level.maxRows + "_" + this.levelModel.numMines + ".json";
+            level.levelId +
+            "_" +
+            level.maxCols +
+            "_" +
+            level.maxRows +
+            "_" +
+            this.levelModel.numMines +
+            ".json";
         this.export(JSON.stringify(level), fileName, "text/plain");
     }
     public export(text, name, type) {

@@ -20,9 +20,13 @@ export class HomeView extends Container {
         const tweenLogo = new TweenLite(this._logoImg, 0.4, { alpha: 1 });
         const tweenMsg = new TweenLite(this._msgText, 0.4, { alpha: 1, delay: 0.2 });
     }
-    public animationOut(complete: Function): void {
+    public animationOut(complete: any): void {
         const tweenText = new TweenLite(this._msgText, 0.2, { alpha: 0 });
-        const tweenMsg = new TweenLite(this._logoImg, 0.2, { alpha: 0, delay: 0.1, onComplete: complete });
+        const tweenMsg = new TweenLite(this._logoImg, 0.2, {
+            alpha: 0,
+            delay: 0.1,
+            onComplete: complete
+        });
     }
     private createBackground(): void {
         this.addChild(PixiFactory.getColorBackground());

@@ -1,4 +1,4 @@
-import { Container, Graphics, Sprite, Texture } from "pixi.js";
+import { BitmapText, Container, Graphics, Sprite, Texture } from "pixi.js";
 
 import { CustomButton } from "./../views/components/CustomButton";
 import { AtlasKeys } from "./AtlasKeys";
@@ -13,7 +13,7 @@ export class PixiFactory {
             align: "center",
             font: { name: MagicValues.FONT_FAMILY, size: MagicValues.FONT_SIZE_DEFAULT }
         };
-        const label = new PIXI.extras.BitmapText(text, style);
+        const label = new BitmapText(text, style);
         label.tint = Colors.TEXT;
         return label;
     }
@@ -22,7 +22,7 @@ export class PixiFactory {
             align: "center",
             font: { name: MagicValues.FONT_FAMILY, size: MagicValues.FONT_SIZE_HUD }
         };
-        const label = new PIXI.extras.BitmapText(text, style);
+        const label = new BitmapText(text, style);
         label.tint = Colors.TITLE;
         return label;
     }
@@ -32,7 +32,7 @@ export class PixiFactory {
             font: { name: MagicValues.FONT_FAMILY, size: MagicValues.FONT_SIZE_TITLE }
         };
 
-        const title = new PIXI.extras.BitmapText(label, style);
+        const title = new BitmapText(label, style);
         title.x = ViewPortSize.HALF_WIDTH;
         title.y = 50;
         title.pivot.x = title.width * 0.5;
@@ -46,7 +46,7 @@ export class PixiFactory {
             font: { name: MagicValues.FONT_FAMILY, size: MagicValues.FONT_SIZE_BUTTON }
         };
 
-        const title = new PIXI.extras.BitmapText(label, style);
+        const title = new BitmapText(label, style);
         title.pivot.x = title.width * 0.5;
         title.pivot.y = title.height * 0.5;
         title.tint = Colors.BUTTON_ICON;
@@ -94,7 +94,7 @@ export class PixiFactory {
             align: "center",
             font: { name: MagicValues.FONT_FAMILY, size: MagicValues.FONT_SIZE_BUTTON }
         };
-        const bmpText = new PIXI.extras.BitmapText(text, style);
+        const bmpText = new BitmapText(text, style);
         bmpText.tint = color;
         bmpText.pivot.x = bmpText.width * 0.5;
         bmpText.pivot.y = bmpText.height * 0.5;
