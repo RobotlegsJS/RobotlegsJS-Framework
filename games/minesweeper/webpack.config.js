@@ -8,11 +8,7 @@ module.exports = (env) => {
   let mode = env.production ? "production" : "development";
   let tsconfig = !env.karma ? "tsconfig.json" : "tsconfig.test.json";
   let output = env.production ? "dist" : "dist-test";
-  let filename = env.karma
-    ? "[name].[hash].js"
-    : env.production
-    ? "robotlegs-pixi.min.js"
-    : "robotlegs-pixi.js";
+  let filename = "[name].[hash].js";
 
   return {
     mode: mode,
@@ -23,10 +19,7 @@ module.exports = (env) => {
 
     output: {
       path: path.join(__dirname, output),
-      filename: filename,
-
-      libraryTarget: "var",
-      library: "RobotlegsJSPixi"
+      filename: filename
     },
 
     devtool: env.production ? undefined : "inline-source-map",

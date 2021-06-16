@@ -4,14 +4,14 @@
   "private": true,
   "description": "OpenSource Game",
   "scripts": {
-    "start": "webpack serve --config ./webpack.config.js",
-    "bundle": "webpack --env production --config ./webpack.config.js",
+    "start": "webpack serve --config ./webpack.game.config.js",
+    "bundle": "webpack --env production --config ./webpack.game.config.js",
     "autoformat": "prettier --config ../../.prettierrc --ignore-path ../../.prettierignore --write --list-different .",
-    "cleanup": "rimraf coverage && rimraf dist && rimraf dist-test",
+    "cleanup": "rimraf coverage && rimraf dist && rimraf dist-test && rimraf lib && rimraf lib-test",
     "build": "npm run cleanup && npm run bundle",
     "prepare": "npm run build",
     "test": "node --max-old-space-size=2048 ./node_modules/karma/bin/karma start --single-run",
-    "test:tdd": "./node_modules/.bin/karma start"
+    "test:tdd": "node --max-old-space-size=2048 ./node_modules/karma/bin/karma start"
   },
   "keywords": [
     "Game",
@@ -33,10 +33,12 @@
     "tslib": "^2.2.0"
   },
   "devDependencies": {
+    "@types/bluebird": "^3.5.35",
     "@types/chai": "^4.2.18",
     "@types/mocha": "^8.2.2",
     "@types/sinon": "^10.0.2",
     "@types/webpack-env": "^1.16.0",
+    "bluebird": "^3.7.2",
     "chai": "^4.3.4",
     "es6-map": "^0.1.5",
     "es6-symbol": "^3.1.3",
