@@ -16,7 +16,7 @@ export class NumericStepper extends Container {
 
     private _valueText: any;
 
-    constructor(minValue: number, maxValue: number, value = 0) {
+    public constructor(minValue: number, maxValue: number, value: number = 0) {
         super();
 
         this._value = value || minValue;
@@ -28,29 +28,33 @@ export class NumericStepper extends Container {
         this.createButtons();
         this.scale.set(0.5);
     }
+
     public createTexts(): void {
         this._valueText = PixiFactory.getText(this._value.toString());
         this._valueText.x = 85;
         this._valueText.y = -5;
         this.addChild(this._valueText);
     }
+
     public createButtons(): void {
         this._decreaseButton = PixiFactory.getTextButton("-");
         this._decreaseButton.y = 10;
         this.addChild(this._decreaseButton);
-        this._decreaseButton.on("mouseup", this.descrease);
+        this._decreaseButton.on("mouseup", this._decrease);
 
         this._increaseButton = PixiFactory.getTextButton("+");
         this._increaseButton.x = 210;
         this._increaseButton.y = 10;
         this.addChild(this._increaseButton);
-        this._increaseButton.on("mouseup", this.increase);
+        this._increaseButton.on("mouseup", this._increase);
     }
-    private descrease = (e: any, thisNS = this) => {
+
+    private _decrease = (e: any, thisNS = this): void => {
         thisNS._value = Math.max(thisNS._minValue, thisNS._value - 1);
         thisNS._valueText.text = thisNS._value.toString();
     };
-    private increase = (e: any, thisNS = this) => {
+
+    private _increase = (e: any, thisNS = this): void => {
         thisNS._value = Math.min(thisNS._maxValue, thisNS._value + 1);
         thisNS._valueText.text = thisNS._value.toString();
     };

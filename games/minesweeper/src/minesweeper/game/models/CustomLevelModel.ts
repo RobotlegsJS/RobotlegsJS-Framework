@@ -10,7 +10,7 @@ export class CustomLevelModel {
 
     public mines: Cell[];
 
-    constructor() {
-        this.mines = new Array<Cell>();
+    public constructor() {
+        this.mines = [];
     }
 }

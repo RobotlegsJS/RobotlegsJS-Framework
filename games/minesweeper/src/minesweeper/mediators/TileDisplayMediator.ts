@@ -7,11 +7,13 @@ import { TileDisplay } from "./../views/components/TileDisplay";
 
 @injectable()
 export class TileDisplayMediator extends Mediator<TileDisplay> {
-    @inject(GameManager) public gameManager: GameManager;
+    @inject(GameManager)
+    public gameManager: GameManager;
 
     public initialize(): void {
         this.eventMap.mapListener(this.view, "pointerup", this.onButtonUp, this);
     }
+
     public onButtonUp(e: any): void {
         const cell: Cell = this.view.cell;
         if (e.data.button === 0) {
@@ -23,6 +25,7 @@ export class TileDisplayMediator extends Mediator<TileDisplay> {
             this.view.flag();
         }
     }
+
     public destroy(): void {
         this.eventMap.unmapListeners();
     }

@@ -8,11 +8,20 @@ import { LevelModel } from "./../models/LevelModel";
 
 @injectable()
 export class GameOverCommand implements ICommand {
-    @inject(LevelModel) public levelModel: LevelModel;
-    @inject(GameService) public gameService: GameService;
-    @inject(FlowService) public flowService: FlowService;
-    @inject(GameStatus) public gameStatus: GameStatus;
-    @inject(HighScoreManager) public highScoreManager: HighScoreManager;
+    @inject(LevelModel)
+    public levelModel: LevelModel;
+
+    @inject(GameService)
+    public gameService: GameService;
+
+    @inject(FlowService)
+    public flowService: FlowService;
+
+    @inject(GameStatus)
+    public gameStatus: GameStatus;
+
+    @inject(HighScoreManager)
+    public highScoreManager: HighScoreManager;
 
     public execute(): void {
         this.gameService.pause();

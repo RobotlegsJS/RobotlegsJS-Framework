@@ -39,27 +39,47 @@ export class LevelCustomOptionsView extends Container {
         return this._maxMinesNS;
     }
 
-    constructor() {
+    public constructor() {
         super();
 
-        this.createBackground();
-        this.createTexts();
-        this.createButtons();
-        this.createNumericSteppers();
+        this._createBackground();
+        this._createTexts();
+        this._createButtons();
+        this._createNumericSteppers();
     }
+
     public animationIn(): void {
         const posY = ViewPortSize.MAX_HEIGHT * 0.8;
+
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
         const tweenTitle = new TweenLite(this._titleText, 0.3, { alpha: 1 });
+
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
         const tweenText1 = new TweenLite(this._maxColsText, 0.3, { alpha: 1, delay: 0.1 });
+
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
         const tweenNS1 = new TweenLite(this._maxColsNS, 0.3, { alpha: 1, delay: 0.2 });
+
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
         const tweenText2 = new TweenLite(this._maxRowsText, 0.3, { alpha: 1, delay: 0.2 });
+
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
         const tweenNS2 = new TweenLite(this._maxRowsNS, 0.3, { alpha: 1, delay: 0.3 });
+
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
         const tweenText3 = new TweenLite(this._maxMinesText, 0.3, { alpha: 1, delay: 0.3 });
+
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
         const tweenNS3 = new TweenLite(this._maxMinesNS, 0.3, { alpha: 1, delay: 0.4 });
+
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
         const tweenButton3 = new TweenLite(this.backButton, 0.1, { y: posY, delay: 0.3 });
+
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
         const tweenButton4 = new TweenLite(this.playButton, 0.1, { y: posY, delay: 0.4 });
     }
-    private createNumericSteppers(): void {
+
+    private _createNumericSteppers(): void {
         this._maxColsNS = new NumericStepper(6, 13, 9);
         this._maxColsNS.x = 260;
         this._maxColsNS.y = 160;
@@ -78,7 +98,8 @@ export class LevelCustomOptionsView extends Container {
         this._maxMinesNS.alpha = 0;
         this.addChild(this._maxMinesNS);
     }
-    private createTexts(): void {
+
+    private _createTexts(): void {
         this._titleText = PixiFactory.getTitle(Texts.LEVEL_EDITOR_OPTIONS);
         this._titleText.alpha = 0;
         this.addChild(this._titleText);
@@ -101,10 +122,12 @@ export class LevelCustomOptionsView extends Container {
         this._maxMinesText.alpha = 0;
         this.addChild(this._maxMinesText);
     }
-    private createBackground(): void {
+
+    private _createBackground(): void {
         this.addChild(PixiFactory.getColorBackground());
     }
-    private createButtons(): void {
+
+    private _createButtons(): void {
         this._backButton = PixiFactory.getTextButton(Texts.BACK);
         this._backButton.x = ViewPortSize.HALF_WIDTH - 40;
         this._backButton.y = ViewPortSize.MAX_HEIGHT + 100;

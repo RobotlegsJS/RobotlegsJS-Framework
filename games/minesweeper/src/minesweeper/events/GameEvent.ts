@@ -1,22 +1,22 @@
 import { Event } from "@robotlegsjs/core";
 
 export class GameEvent extends Event {
-    public static CREATE_LEVEL_COMMAND = "createLevelCommand";
-    public static GAME_OVER_COMMAND = "gameOverCommand";
-    public static RETRY_GAME_COMMAND = "retryGameCommand";
-    public static EXPORT_LEVEL_DATA_COMMAND = "exportLevelDataCommand";
+    public static CREATE_LEVEL_COMMAND: string = "createLevelCommand";
+    public static GAME_OVER_COMMAND: string = "gameOverCommand";
+    public static RETRY_GAME_COMMAND: string = "retryGameCommand";
+    public static EXPORT_LEVEL_DATA_COMMAND: string = "exportLevelDataCommand";
 
-    public static RESUME = "resume";
-    public static PAUSE = "pause";
+    public static RESUME: string = "resume";
+    public static PAUSE: string = "pause";
 
-    public static UPDATE_HUD_DATA = "updateData";
+    public static UPDATE_HUD_DATA: string = "updateData";
 
-    public static CLEAR_GRID = "clearGridField";
-    public static UPDATE_GRID = "update";
+    public static CLEAR_GRID: string = "clearGridField";
+    public static UPDATE_GRID: string = "update";
 
     public extra: any;
 
-    constructor(type: string) {
+    public constructor(type: string) {
         super(type);
     }
 }

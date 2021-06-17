@@ -4,9 +4,9 @@ import { Texts } from "./../../utils/Texts";
 
 @injectable()
 export class HighScoreManager {
-    private _gameID = "Minesweeper";
+    private _gameID: string = "Minesweeper";
 
-    public save(levelId: string, value: number) {
+    public save(levelId: string, value: number): void {
         try {
             const data = this.getData();
             data[levelId] = Math.min(value, data[levelId]);
@@ -21,16 +21,18 @@ export class HighScoreManager {
         const data = this.getData();
         return data[levelId];
     }
+
     public getAllHighScore(): any {
         const data = this.getData();
         return data;
     }
+
     public getData(): any {
         let data = {};
         try {
             const dataStr = window.localStorage.getItem(this._gameID);
             if (dataStr === null) {
-                data = this.createData();
+                data = this._createData();
                 window.localStorage.setItem(this._gameID, JSON.stringify(data));
                 console.log("saving a empty object");
             } else {
@@ -42,7 +44,8 @@ export class HighScoreManager {
         }
         return data;
     }
-    private createData(): any {
+
+    private _createData(): any {
         const data = {};
         data[Texts.EASY] = Number.MAX_SAFE_INTEGER;
         data[Texts.NORMAL] = Number.MAX_SAFE_INTEGER;

@@ -6,9 +6,10 @@ import { PixiFactory } from "../../utils/PixiFactory";
 import { ViewPortSize } from "./../../utils/ViewPortSize";
 
 export class GridFieldComponent extends Container {
-    constructor() {
+    public constructor() {
         super();
     }
+
     public setupGridPosition(grid: GridData): void {
         this.removeChildren();
 

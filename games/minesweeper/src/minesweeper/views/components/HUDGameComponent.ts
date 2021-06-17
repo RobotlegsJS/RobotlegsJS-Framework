@@ -20,33 +20,46 @@ export class HUDGameComponent extends Container {
         return this._pauseButton;
     }
 
-    constructor() {
+    public constructor() {
         super();
 
-        this.createTexts();
-        this.createButtons();
-        this.createImages();
+        this._createTexts();
+        this._createButtons();
+        this._createImages();
     }
+
     public updateValues(model: LevelModel): void {
         this._levelText.text = model.levelId;
         this._clockText.text = MagicValues.convertTime(model.clock);
         this._numFlagsText.text = ":" + model.numFlags;
     }
+
     public animationIn(): void {
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
         const tweenText1 = new TweenLite(this._levelText, 0.4, { alpha: 1 });
+
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
         const tweenText2 = new TweenLite(this._clockText, 0.4, { alpha: 1, delay: 0.1 });
+
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
         const tweenImg = new TweenLite(this._flagImg, 0.4, { alpha: 1, delay: 0.2 });
+
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
         const tweenText3 = new TweenLite(this._numFlagsText, 0.4, { alpha: 1, delay: 0.3 });
+
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
         const tweenButton = new TweenLite(this.pauseButton, 0.1, { y: 50, delay: 0.2 });
     }
-    private createImages(): void {
+
+    private _createImages(): void {
         this._flagImg = PixiFactory.getImage(AtlasKeys.ICON_FLAG_LARGE);
         this._flagImg.x = 175;
         this._flagImg.y = 56;
         this._flagImg.alpha = 0;
         this.addChild(this._flagImg);
     }
-    private createTexts(): void {
+
+    private _createTexts(): void {
         this._levelText = PixiFactory.getHUDText(Texts.EASY);
         this._levelText.x = 10;
         this._levelText.y = 10;
@@ -65,7 +78,8 @@ export class HUDGameComponent extends Container {
         this._numFlagsText.alpha = 0;
         this.addChild(this._numFlagsText);
     }
-    private createButtons(): void {
+
+    private _createButtons(): void {
         this._pauseButton = PixiFactory.getIconButton(AtlasKeys.ICON_PAUSE);
         this._pauseButton.x = ViewPortSize.MAX_WIDTH - 50;
         this._pauseButton.y = -100;

@@ -1,5 +1,6 @@
 export class Cell {
     public isFlag: boolean;
+
     private _value: number;
     private _isMine: boolean;
 
@@ -18,7 +19,7 @@ export class Cell {
         return this._value;
     }
 
-    constructor(col: number, row: number) {
+    public constructor(col: number, row: number) {
         this._value = 0;
         this._isMine = false;
         this.isFlag = false;
@@ -26,15 +27,19 @@ export class Cell {
         this._col = col;
         this._row = row;
     }
+
     public increaseValue(): void {
         this._value += 1;
     }
+
     public decreaseValue(): void {
         this._value = Math.max(this.value - 1, 0);
     }
-    public setCellAsAMine() {
+
+    public setCellAsAMine(): void {
         this._isMine = true;
     }
+
     public isMine(): boolean {
         return this._isMine;
     }

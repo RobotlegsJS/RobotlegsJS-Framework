@@ -14,29 +14,36 @@ import { GameService } from "./../services/GameService";
 
 @injectable()
 export class GameConfig implements IConfig {
-    @inject(IContext) public context: IContext;
-    @inject(IEventCommandMap) public commandMap: IEventCommandMap;
+    @inject(IContext)
+    public context: IContext;
+
+    @inject(IEventCommandMap)
+    public commandMap: IEventCommandMap;
 
     public configure(): void {
-        this.mapCommands();
-        this.mapServices();
-        this.mapManager();
-        this.mapModels();
+        this._mapCommands();
+        this._mapServices();
+        this._mapManager();
+        this._mapModels();
     }
-    private mapCommands(): void {
+
+    private _mapCommands(): void {
         this.commandMap.map(GameEvent.CREATE_LEVEL_COMMAND).toCommand(CreateLevelCommand);
         this.commandMap.map(GameEvent.GAME_OVER_COMMAND).toCommand(GameOverCommand);
         this.commandMap.map(GameEvent.RETRY_GAME_COMMAND).toCommand(RetryGameCommand);
         this.commandMap.map(GameEvent.EXPORT_LEVEL_DATA_COMMAND).toCommand(ExportLevelDataCommand);
     }
-    private mapServices(): void {
+
+    private _mapServices(): void {
         this.context.injector.bind(GameService).to(GameService).inSingletonScope();
     }
-    private mapManager(): void {
+
+    private _mapManager(): void {
         this.context.injector.bind(GameManager).to(GameManager).inSingletonScope();
         this.context.injector.bind(HighScoreManager).to(HighScoreManager).inSingletonScope();
     }
-    private mapModels(): void {
+
+    private _mapModels(): void {
         this.context.injector.bind(GameStatus).to(GameStatus).inSingletonScope();
         this.context.injector.bind(LevelModel).to(LevelModel).inSingletonScope();
         this.context.injector.bind(CustomLevelModel).to(CustomLevelModel).inSingletonScope();

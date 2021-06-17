@@ -6,15 +6,18 @@ import { FlowService } from "./../services/FlowService";
 
 @injectable()
 export class IntroViewMediator extends Mediator<IntroView> {
-    @inject(FlowService) public flowService: FlowService;
+    @inject(FlowService)
+    public flowService: FlowService;
 
     public initialize(): void {
-        setTimeout(this.onTimerOut.bind(this), 3000, this);
+        setTimeout(this._onTimerOut.bind(this), 3000, this);
     }
+
     public destroy(): void {
         this.eventMap.unmapListeners();
     }
-    private onTimerOut() {
+
+    private _onTimerOut(): void {
         this.flowService.setHomeView();
     }
 }

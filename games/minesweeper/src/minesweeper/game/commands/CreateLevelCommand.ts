@@ -8,11 +8,20 @@ import { LevelModel } from "./../models/LevelModel";
 
 @injectable()
 export class CreateLevelCommand implements ICommand {
-    @inject(LevelModel) public levelModel: LevelModel;
-    @inject(GameManager) public gameManager: GameManager;
-    @inject(GameService) public gameService: GameService;
-    @inject(FlowService) public flowService: FlowService;
-    @inject(GameEvent) public gameEvent: GameEvent;
+    @inject(LevelModel)
+    public levelModel: LevelModel;
+
+    @inject(GameManager)
+    public gameManager: GameManager;
+
+    @inject(GameService)
+    public gameService: GameService;
+
+    @inject(FlowService)
+    public flowService: FlowService;
+
+    @inject(GameEvent)
+    public gameEvent: GameEvent;
 
     public execute(): void {
         this.levelModel.levelId = this.gameEvent.extra.levelId;

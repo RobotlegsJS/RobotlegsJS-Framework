@@ -13,9 +13,14 @@ import { TileDisplay } from "./../views/components/TileDisplay";
 
 @injectable()
 export class GridFieldComponentMediator extends Mediator<GridFieldComponent> {
-    @inject(LevelModel) public levelModel: LevelModel;
-    @inject(GameManager) public gameManager: GameManager;
-    @inject(GameService) public gameService: GameService;
+    @inject(LevelModel)
+    public levelModel: LevelModel;
+
+    @inject(GameManager)
+    public gameManager: GameManager;
+
+    @inject(GameService)
+    public gameService: GameService;
 
     private _displays: Map<Cell, TileDisplay>;
 
@@ -33,23 +38,29 @@ export class GridFieldComponentMediator extends Mediator<GridFieldComponent> {
             this
         );
     }
+
     public onClear(e: any): void {
         this.view.removeChildren();
     }
+
     public onUpdate(e: any): void {
+        // eslint-disable-next-line @typescript-eslint/prefer-for-of
         for (let i = 0; i < this.levelModel.update.length; i++) {
             const cell = this.levelModel.update[i];
             const display = this._displays.get(cell);
             display.show();
         }
     }
+
     public onGameOver(e: any): void {
+        // eslint-disable-next-line @typescript-eslint/prefer-for-of
         for (let i = 0; i < this.levelModel.mines.length; i++) {
             const cell = this.levelModel.mines[i];
             const display = this._displays.get(cell);
             display.show();
         }
     }
+
     public generateGrid(): void {
         this.view.setupGridPosition(this.levelModel.grid);
         this.view.alpha = 0;
@@ -65,8 +76,10 @@ export class GridFieldComponentMediator extends Mediator<GridFieldComponent> {
             }
         }
 
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
         const tweenView = new TweenLite(this.view, 0.3, { alpha: 1 });
     }
+
     public destroy(): void {
         this.eventMap.unmapListeners();
     }

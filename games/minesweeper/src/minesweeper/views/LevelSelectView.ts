@@ -35,13 +35,14 @@ export class LevelSelectView extends Container {
         return this._customButton;
     }
 
-    constructor() {
+    public constructor() {
         super();
 
-        this.createBackground();
-        this.createTexts();
-        this.createButtons();
+        this._createBackground();
+        this._createTexts();
+        this._createButtons();
     }
+
     public updateHighscore(list: any): void {
         this._easyText.text = Texts.EASY + ": " + MagicValues.convertTime(list[Texts.EASY]);
         this._normalText.text = Texts.NORMAL + ": " + MagicValues.convertTime(list[Texts.NORMAL]);
@@ -60,22 +61,42 @@ export class LevelSelectView extends Container {
         this._customText.pivot.x = this._customText.width * 0.5;
         this._customText.x = ViewPortSize.HALF_WIDTH;
     }
+
     public animationIn(): void {
         const posY = ViewPortSize.MAX_HEIGHT * 0.8;
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
         const tweenTitle = new TweenLite(this._titleText, 0.3, { alpha: 1 });
+
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
         const tweenText1 = new TweenLite(this._easyText, 0.3, { alpha: 1, delay: 0.1 });
+
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
         const tweenText2 = new TweenLite(this._normalText, 0.3, { alpha: 1, delay: 0.2 });
+
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
         const tweenText3 = new TweenLite(this._hardText, 0.3, { alpha: 1, delay: 0.3 });
+
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
         const tweenText4 = new TweenLite(this._customText, 0.3, { alpha: 1, delay: 0.4 });
+
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
         const tweenButton1 = new TweenLite(this.easyButton, 0.1, { y: posY, delay: 0.2 });
+
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
         const tweenButton2 = new TweenLite(this.normalButton, 0.1, { y: posY, delay: 0.3 });
+
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
         const tweenButton3 = new TweenLite(this.hardButton, 0.1, { y: posY, delay: 0.4 });
+
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
         const tweenButton4 = new TweenLite(this.customButton, 0.1, { y: posY, delay: 0.5 });
     }
-    private createBackground(): void {
+
+    private _createBackground(): void {
         this.addChild(PixiFactory.getColorBackground());
     }
-    private createTexts(): void {
+
+    private _createTexts(): void {
         this._titleText = PixiFactory.getTitle(Texts.LEVEL_SELECT);
         this._titleText.alpha = 0;
         this.addChild(this._titleText);
@@ -100,7 +121,8 @@ export class LevelSelectView extends Container {
         this._customText.y = 340;
         this.addChild(this._customText);
     }
-    private createButtons(): void {
+
+    private _createButtons(): void {
         const posY = ViewPortSize.MAX_HEIGHT + 100;
         this._easyButton = PixiFactory.getTextButton(Texts.EASY);
         this._easyButton.x = ViewPortSize.HALF_WIDTH - 120;

@@ -25,25 +25,41 @@ export class YouWinPopup extends Container {
         return this._retryButton;
     }
 
-    constructor() {
+    public constructor() {
         super();
 
         this.interactive = true;
 
-        this.createBackgrounds();
-        this.createButtons();
-        this.createText();
+        this._createBackgrounds();
+        this._createButtons();
+        this._createText();
     }
+
     public animationIn(): void {
         const posY = ViewPortSize.MAX_HEIGHT * 0.8;
+
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
         const tweenTitle = new TweenLite(this._titleText, 0.3, { alpha: 1 });
+
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
         const tweenText1 = new TweenLite(this._msgText, 0.3, { alpha: 1 });
+
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
         const tweenText2 = new TweenLite(this._timeText, 0.3, { alpha: 1 });
+
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
         const tweenText3 = new TweenLite(this._bestText, 0.3, { alpha: 1 });
+
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
         const tweenText4 = new TweenLite(this._clicksText, 0.3, { alpha: 1 });
+
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
         const tweenButton1 = new TweenLite(this._retryButton, 0.1, { y: posY });
+
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
         const tweenButton2 = new TweenLite(this._homeButton, 0.1, { y: posY, delay: 0.1 });
     }
+
     public showInfo(time: number, numClick: number): void {
         this._timeText.text = Texts.GAME_TIME + MagicValues.convertTime(time);
         this._bestText.text = Texts.GAME_BEST_TIME + MagicValues.convertTime(time);
@@ -58,11 +74,13 @@ export class YouWinPopup extends Container {
         this._clicksText.pivot.x = this._clicksText.width * 0.5;
         this._clicksText.x = ViewPortSize.HALF_WIDTH;
     }
-    private createBackgrounds(): void {
+
+    private _createBackgrounds(): void {
         this.addChild(PixiFactory.getShadowBackground(0.8));
         this.addChild(PixiFactory.getShadowHeader());
     }
-    private createButtons(): void {
+
+    private _createButtons(): void {
         this._homeButton = PixiFactory.getIconButton(AtlasKeys.ICON_HOME);
         this._homeButton.x = ViewPortSize.HALF_WIDTH + this._homeButton.width * 0.5 + 4;
         this._homeButton.y = ViewPortSize.MAX_HEIGHT + 100;
@@ -73,7 +91,8 @@ export class YouWinPopup extends Container {
         this._retryButton.y = ViewPortSize.MAX_HEIGHT + 100;
         this.addChild(this._retryButton);
     }
-    private createText(): void {
+
+    private _createText(): void {
         this._titleText = PixiFactory.getTitle(Texts.YOU_WIN);
         this._titleText.alpha = 0;
         this.addChild(this._titleText);

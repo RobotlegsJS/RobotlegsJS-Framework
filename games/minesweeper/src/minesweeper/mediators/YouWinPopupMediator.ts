@@ -8,24 +8,32 @@ import { YouWinPopup } from "./../views/YouWinPopup";
 
 @injectable()
 export class YouWinPopupMediator extends Mediator<YouWinPopup> {
-    @inject(FlowService) public flowService: FlowService;
-    @inject(GameService) public gameService: GameService;
-    @inject(LevelModel) public levelModel: LevelModel;
+    @inject(FlowService)
+    public flowService: FlowService;
+
+    @inject(GameService)
+    public gameService: GameService;
+
+    @inject(LevelModel)
+    public levelModel: LevelModel;
 
     public initialize(): void {
         this.view.animationIn();
         this.view.showInfo(this.levelModel.clock, this.levelModel.numClicks);
-        this.eventMap.mapListener(this.view.homeButton, "click", this.homeButton_onClick, this);
-        this.eventMap.mapListener(this.view.retryButton, "click", this.retryButton_onClick, this);
+        this.eventMap.mapListener(this.view.homeButton, "click", this._onClickHomeButton, this);
+        this.eventMap.mapListener(this.view.retryButton, "click", this._onClickRetryButton, this);
     }
+
     public destroy(): void {
         this.eventMap.unmapListeners();
     }
-    private homeButton_onClick(e: any): void {
+
+    private _onClickHomeButton(e: any): void {
         this.flowService.setHomeView();
         this.flowService.closePopup();
     }
-    private retryButton_onClick(e: any): void {
+
+    private _onClickRetryButton(e: any): void {
         this.flowService.closePopup();
         this.gameService.retryCommand();
     }

@@ -13,6 +13,7 @@ export class LevelUtils {
         level.setGrid(new GridData(9, 9));
         this.generateMines(level, level.numMines);
     }
+
     public static generateNormalLevel(level: LevelModel): void {
         level.levelId = Texts.NORMAL;
         level.numMines = 15;
@@ -20,6 +21,7 @@ export class LevelUtils {
         level.setGrid(new GridData(12, 12));
         this.generateMines(level, level.numMines);
     }
+
     public static generateHardLevel(level: LevelModel): void {
         level.levelId = Texts.HARD;
         level.numMines = 18;
@@ -27,6 +29,7 @@ export class LevelUtils {
         level.setGrid(new GridData(13, 16));
         this.generateMines(level, level.numMines);
     }
+
     public static generateCustomLevel(level: LevelModel, customLevel: CustomLevelModel): void {
         level.levelId = Texts.CUSTOM;
         level.numMines = customLevel.numMines;
@@ -34,6 +37,7 @@ export class LevelUtils {
         level.setGrid(new GridData(customLevel.maxCols, customLevel.maxRows));
         this.generateMines(level, level.numMines);
     }
+
     public static generateMines(level: LevelModel, numMines: number): void {
         while (level.numMines !== level.mines.length) {
             const rndCol: number = Math.floor(Math.random() * level.grid.maxCols);
@@ -44,12 +48,15 @@ export class LevelUtils {
             }
         }
     }
-    public static setMine(level: LevelModel, cell: Cell) {
+
+    public static setMine(level: LevelModel, cell: Cell): void {
         cell.setCellAsAMine();
         level.mines.push(cell);
         level.grid.setCell(cell);
 
         const neighbors: Cell[] = GridUtils.getNeighbors(level.grid, cell);
+
+        // eslint-disable-next-line @typescript-eslint/prefer-for-of
         for (let i = 0; i < neighbors.length; i++) {
             neighbors[i].increaseValue();
         }

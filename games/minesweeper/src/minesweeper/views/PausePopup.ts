@@ -35,29 +35,44 @@ export class PausePopup extends Container {
         return this._levelButton;
     }
 
-    constructor() {
+    public constructor() {
         super();
 
         this.interactive = true;
 
-        this.createBackgrounds();
-        this.createButtons();
-        this.createTexts();
+        this._createBackgrounds();
+        this._createButtons();
+        this._createTexts();
     }
+
     public animationIn(): void {
         const posY = ViewPortSize.MAX_HEIGHT * 0.8;
+
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
         const tweenTitle = new TweenLite(this._titleText, 0.3, { alpha: 1 });
+
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
         const tweenButton0 = new TweenLite(this._resumeButton, 0.1, { y: 50, delay: 0.1 });
+
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
         const tweenButton1 = new TweenLite(this._exportButton, 0.1, { y: posY, delay: 0.2 });
+
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
         const tweenButton2 = new TweenLite(this._retryButton, 0.1, { y: posY, delay: 0.3 });
+
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
         const tweenButton3 = new TweenLite(this._homeButton, 0.1, { y: posY, delay: 0.4 });
+
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
         const tweenButton4 = new TweenLite(this._levelButton, 0.1, { y: posY, delay: 0.5 });
     }
-    private createBackgrounds(): void {
+
+    private _createBackgrounds(): void {
         this.addChild(PixiFactory.getShadowBackground());
         this.addChild(PixiFactory.getShadowHeader());
     }
-    private createButtons(): void {
+
+    private _createButtons(): void {
         const posY = ViewPortSize.MAX_HEIGHT + 100;
 
         this._resumeButton = PixiFactory.getIconButton(AtlasKeys.ICON_RESUME);
@@ -85,7 +100,8 @@ export class PausePopup extends Container {
         this._levelButton.y = posY;
         this.addChild(this._levelButton);
     }
-    private createTexts(): void {
+
+    private _createTexts(): void {
         this._titleText = PixiFactory.getTitle(Texts.PAUSED);
         this._titleText.alpha = 0;
         this.addChild(this._titleText);

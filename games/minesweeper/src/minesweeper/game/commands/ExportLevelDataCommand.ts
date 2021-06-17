@@ -5,7 +5,8 @@ import { LevelModel } from "./../models/LevelModel";
 
 @injectable()
 export class ExportLevelDataCommand implements ICommand {
-    @inject(LevelModel) public levelModel: LevelModel;
+    @inject(LevelModel)
+    public levelModel: LevelModel;
 
     public execute(): void {
         const level = {
@@ -14,9 +15,10 @@ export class ExportLevelDataCommand implements ICommand {
             maxRows: this.levelModel.grid.maxRows,
             mines: {
                 numMines: this.levelModel.numMines,
-                positions: this.parseMines(this.levelModel.mines)
+                positions: this._parseMines(this.levelModel.mines)
             }
         };
+
         const fileName =
             level.levelId +
             "_" +
@@ -26,20 +28,26 @@ export class ExportLevelDataCommand implements ICommand {
             "_" +
             this.levelModel.numMines +
             ".json";
+
         this.export(JSON.stringify(level), fileName, "text/plain");
     }
-    public export(text, name, type) {
+
+    public export(text: string, name: string, type: string): void {
         const a = document.createElement("a");
         const file = new Blob([text], { type });
         a.href = URL.createObjectURL(file);
         a.download = name;
         a.click();
     }
-    private parseMines(mines: Cell[]): Array<{ col; row }> {
-        const list: Array<{ col; row }> = new Array<{ col; row }>();
-        for (let i = 0; i < mines.length; i++) {
+
+    private _parseMines(mines: Cell[]): { col: number; row: number }[] {
+        const list: { col: number; row: number }[] = [];
+
+        // eslint-disable-next-line @typescript-eslint/prefer-for-of
+        for (let i: number = 0; i < mines.length; i++) {
             list.push({ col: mines[i].col, row: mines[i].row });
         }
+
         return list;
     }
 }

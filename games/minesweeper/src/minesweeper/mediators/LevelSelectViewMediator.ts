@@ -8,9 +8,14 @@ import { GameService } from "./../services/GameService";
 
 @injectable()
 export class LevelSelectViewMediator extends Mediator<LevelSelectView> {
-    @inject(FlowService) public flowService: FlowService;
-    @inject(GameService) public gameService: GameService;
-    @inject(HighScoreManager) public highScoreManager: HighScoreManager;
+    @inject(FlowService)
+    public flowService: FlowService;
+
+    @inject(GameService)
+    public gameService: GameService;
+
+    @inject(HighScoreManager)
+    public highScoreManager: HighScoreManager;
 
     public initialize(): void {
         this.view.updateHighscore(this.highScoreManager.getAllHighScore());
@@ -18,35 +23,38 @@ export class LevelSelectViewMediator extends Mediator<LevelSelectView> {
         this.eventMap.mapListener(
             this.view.easyButton,
             "click",
-            this.levelButton_onTriggeredHandler,
+            this._onTriggeredHandlerLevelButton,
             this
         );
         this.eventMap.mapListener(
             this.view.normalButton,
             "click",
-            this.levelButton_onTriggeredHandler,
+            this._onTriggeredHandlerLevelButton,
             this
         );
         this.eventMap.mapListener(
             this.view.hardButton,
             "click",
-            this.levelButton_onTriggeredHandler,
+            this._onTriggeredHandlerLevelButton,
             this
         );
         this.eventMap.mapListener(
             this.view.customButton,
             "click",
-            this.levelCustomButton_onTriggeredHandler,
+            this._onTriggeredHandlerLevelCustomButton,
             this
         );
     }
+
     public destroy(): void {
         this.eventMap.unmapListeners();
     }
-    private levelCustomButton_onTriggeredHandler(e: any): void {
+
+    private _onTriggeredHandlerLevelCustomButton(e: any): void {
         this.flowService.showLevelCustomOptionsView();
     }
-    private levelButton_onTriggeredHandler(e: any): void {
+
+    private _onTriggeredHandlerLevelButton(e: any): void {
         const levelId = e.target.text;
         this.gameService.createLevel(levelId);
     }

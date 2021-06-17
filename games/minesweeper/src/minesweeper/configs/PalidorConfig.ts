@@ -15,16 +15,22 @@ import { StartingPopup } from "./../views/StartingPopup";
 
 @injectable()
 export class PalidorConfig implements IConfig {
-    @inject(IContext) public context: IContext;
-    @inject(IFlowManager) public flowManager: IFlowManager;
-    @inject(IEventDispatcher) public dispatcher: IEventDispatcher;
+    @inject(IContext)
+    public context: IContext;
+
+    @inject(IFlowManager)
+    public flowManager: IFlowManager;
+
+    @inject(IEventDispatcher)
+    public dispatcher: IEventDispatcher;
 
     public configure(): void {
-        this.mapPalidor();
+        this._mapPalidor();
 
         this.dispatcher.dispatchEvent(new FlowEvent(FlowEvent.SHOW_INTRO_VIEW));
     }
-    private mapPalidor(): void {
+
+    private _mapPalidor(): void {
         this.context.injector.bind(FlowService).to(FlowService).inSingletonScope();
 
         this.flowManager.map(FlowEvent.SHOW_GAME_VIEW).toView(GameView);

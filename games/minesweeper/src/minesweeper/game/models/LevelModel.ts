@@ -26,12 +26,14 @@ export class LevelModel {
         return this._update;
     }
 
-    constructor() {
+    public constructor() {
         this.reset();
     }
-    public setGrid(grid: GridData) {
+
+    public setGrid(grid: GridData): void {
         this._grid = grid;
     }
+
     public reset(): void {
         this._mines = new Array<Cell>();
         this._update = new Array<Cell>();
