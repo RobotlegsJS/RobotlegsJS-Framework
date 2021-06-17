@@ -18,8 +18,9 @@ describe("Cell", () => {
         let value = 0;
         let col = 3;
         let row = 4;
+
         cell = new Cell(col, row);
-        assert.equal(0, cell.value);
+        assert.equal(value, cell.value);
         assert.equal(col, cell.col);
         assert.equal(row, cell.row);
     });

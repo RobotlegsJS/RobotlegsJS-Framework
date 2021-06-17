@@ -100,11 +100,14 @@ describe("LevelUtils", () => {
         let cell: Cell = level.grid.getCell(col, row);
         LevelUtils.setMine(level, cell);
 
-        let neighbors: Array<Cell> = GridUtils.getNeighbors(level.grid, cell);
+        let neighbors: Cell[] = GridUtils.getNeighbors(level.grid, cell);
         let result = true;
+
+        // eslint-disable-next-line @typescript-eslint/prefer-for-of
         for (let i = 0; i < neighbors.length; i++) {
             result = result && neighbors[i].value === 1;
         }
+
         assert.isTrue(result);
     });
 
@@ -121,15 +124,18 @@ describe("LevelUtils", () => {
         let mine2: Cell = level.grid.getCell(col2, row2);
         LevelUtils.setMine(level, mine2);
 
-        let neighbors1: Array<Cell> = GridUtils.getNeighbors(level.grid, mine1);
-        let neighbors2: Array<Cell> = GridUtils.getNeighbors(level.grid, mine2);
+        let neighbors1: Cell[] = GridUtils.getNeighbors(level.grid, mine1);
+        let neighbors2: Cell[] = GridUtils.getNeighbors(level.grid, mine2);
         let totalIntersectNeighbors = 3;
         let count = 0;
+
+        // eslint-disable-next-line @typescript-eslint/prefer-for-of
         for (let i = 0; i < neighbors1.length; i++) {
             if (neighbors2.indexOf(neighbors1[i]) !== -1 && neighbors1[i].value === 2) {
                 count++;
             }
         }
+
         assert.equal(totalIntersectNeighbors, count);
     });
 });

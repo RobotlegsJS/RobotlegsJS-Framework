@@ -21,7 +21,7 @@ describe("GridUtils", () => {
         let row = 3;
         let cell: Cell = grid.getCell(col, row);
 
-        let neighbors: Array<Cell> = new Array<Cell>();
+        let neighbors: Cell[] = new Array<Cell>();
         neighbors.push(grid.getCell(col - 1, row - 1));
         neighbors.push(grid.getCell(col, row - 1));
         neighbors.push(grid.getCell(col + 1, row - 1));
@@ -33,12 +33,15 @@ describe("GridUtils", () => {
         neighbors.push(grid.getCell(col, row + 1));
         neighbors.push(grid.getCell(col + 1, row + 1));
 
-        let neighborsResult: Array<Cell> = GridUtils.getNeighbors(grid, cell);
+        let neighborsResult: Cell[] = GridUtils.getNeighbors(grid, cell);
 
         let result = true;
+
+        // eslint-disable-next-line @typescript-eslint/prefer-for-of
         for (let i = 0; i < neighbors.length; i++) {
             result = result && neighborsResult.indexOf(neighbors[i]) !== -1;
         }
+
         assert.isTrue(result);
         assert.equal(neighbors.length, neighborsResult.length);
     });
@@ -48,16 +51,19 @@ describe("GridUtils", () => {
         let row = 0;
         let cell: Cell = grid.getCell(col, row);
 
-        let neighbors: Array<Cell> = new Array<Cell>();
+        let neighbors: Cell[] = new Array<Cell>();
         neighbors.push(grid.getCell(col + 1, row));
         neighbors.push(grid.getCell(col, row + 1));
         neighbors.push(grid.getCell(col + 1, row + 1));
 
-        let neighborsResult: Array<Cell> = GridUtils.getNeighbors(grid, cell);
+        let neighborsResult: Cell[] = GridUtils.getNeighbors(grid, cell);
         let result = true;
+
+        // eslint-disable-next-line @typescript-eslint/prefer-for-of
         for (let i = 0; i < neighbors.length; i++) {
             result = result && neighborsResult.indexOf(neighbors[i]) !== -1;
         }
+
         assert.isTrue(result);
         assert.equal(neighbors.length, neighborsResult.length);
     });
@@ -67,16 +73,19 @@ describe("GridUtils", () => {
         let row = 0;
         let cell: Cell = grid.getCell(col, row);
 
-        let neighbors: Array<Cell> = new Array<Cell>();
+        let neighbors: Cell[] = new Array<Cell>();
         neighbors.push(grid.getCell(col - 1, row));
         neighbors.push(grid.getCell(col - 1, row + 1));
         neighbors.push(grid.getCell(col, row + 1));
 
-        let neighborsResult: Array<Cell> = GridUtils.getNeighbors(grid, cell);
+        let neighborsResult: Cell[] = GridUtils.getNeighbors(grid, cell);
         let result = true;
+
+        // eslint-disable-next-line @typescript-eslint/prefer-for-of
         for (let i = 0; i < neighbors.length; i++) {
             result = result && neighborsResult.indexOf(neighbors[i]) !== -1;
         }
+
         assert.isTrue(result);
         assert.equal(neighbors.length, neighborsResult.length);
     });
@@ -86,16 +95,19 @@ describe("GridUtils", () => {
         let row = grid.maxRows - 1;
         let cell: Cell = grid.getCell(col, row);
 
-        let neighbors: Array<Cell> = new Array<Cell>();
+        let neighbors: Cell[] = new Array<Cell>();
         neighbors.push(grid.getCell(col, row - 1));
         neighbors.push(grid.getCell(col + 1, row - 1));
         neighbors.push(grid.getCell(col + 1, row));
 
-        let neighborsResult: Array<Cell> = GridUtils.getNeighbors(grid, cell);
+        let neighborsResult: Cell[] = GridUtils.getNeighbors(grid, cell);
         let result = true;
+
+        // eslint-disable-next-line @typescript-eslint/prefer-for-of
         for (let i = 0; i < neighbors.length; i++) {
             result = result && neighborsResult.indexOf(neighbors[i]) !== -1;
         }
+
         assert.isTrue(result);
         assert.equal(neighbors.length, neighborsResult.length);
     });
@@ -105,16 +117,19 @@ describe("GridUtils", () => {
         let row = grid.maxRows - 1;
         let cell: Cell = grid.getCell(col, row);
 
-        let neighbors: Array<Cell> = new Array<Cell>();
+        let neighbors: Cell[] = new Array<Cell>();
         neighbors.push(grid.getCell(col, row - 1));
         neighbors.push(grid.getCell(col - 1, row - 1));
         neighbors.push(grid.getCell(col - 1, row));
 
-        let neighborsResult: Array<Cell> = GridUtils.getNeighbors(grid, cell);
+        let neighborsResult: Cell[] = GridUtils.getNeighbors(grid, cell);
         let result = true;
+
+        // eslint-disable-next-line @typescript-eslint/prefer-for-of
         for (let i = 0; i < neighbors.length; i++) {
             result = result && neighborsResult.indexOf(neighbors[i]) !== -1;
         }
+
         assert.isTrue(result);
         assert.equal(neighbors.length, neighborsResult.length);
     });

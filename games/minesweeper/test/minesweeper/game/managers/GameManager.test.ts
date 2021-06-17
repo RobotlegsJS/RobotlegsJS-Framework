@@ -2,8 +2,6 @@ import "../../../entry";
 
 import { LevelUtils } from "../../../../src/minesweeper/game/utils/LevelUtils";
 import { GameStatus } from "./../../../../src/minesweeper/game/models/GameStatus";
-import { GameOverCommand } from "./../../../../src/minesweeper/game/commands/GameOverCommand";
-import { GameEvent } from "../../../../src/minesweeper/events/GameEvent";
 import { Cell } from "./../../../../src/minesweeper/game/models/Cell";
 import { Texts } from "./../../../../src/minesweeper/utils/Texts";
 import { GameService } from "./../../../../src/minesweeper/services/GameService";
