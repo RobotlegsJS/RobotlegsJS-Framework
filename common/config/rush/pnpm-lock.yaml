@@ -6,6 +6,7 @@ specifiers:
   '@rush-temp/core': file:./projects/core.tgz
   '@rush-temp/createjs': file:./projects/createjs.tgz
   '@rush-temp/eventemitter3': file:./projects/eventemitter3.tgz
+  '@rush-temp/game-minesweeper': file:./projects/game-minesweeper.tgz
   '@rush-temp/game-scratchcard': file:./projects/game-scratchcard.tgz
   '@rush-temp/game-spaceinvaders': file:./projects/game-spaceinvaders.tgz
   '@rush-temp/game-tetris': file:./projects/game-tetris.tgz
@@ -45,6 +46,7 @@ specifiers:
   eslint-plugin-react: ^7.24.0
   eslint-plugin-unicorn: ^33.0.1
   glslify: ^7.1.1
+  gsap: ^1.20.6
   html-webpack-plugin: ^5.3.1
   imports-loader: ^3.0.0
   inversify: ^5.1.1
@@ -92,6 +94,7 @@ dependencies:
   '@rush-temp/core': file:projects/core.tgz
   '@rush-temp/createjs': file:projects/createjs.tgz
   '@rush-temp/eventemitter3': file:projects/eventemitter3.tgz
+  '@rush-temp/game-minesweeper': file:projects/game-minesweeper.tgz_sinon-chai@3.7.0
   '@rush-temp/game-scratchcard': file:projects/game-scratchcard.tgz
   '@rush-temp/game-spaceinvaders': file:projects/game-spaceinvaders.tgz
   '@rush-temp/game-tetris': file:projects/game-tetris.tgz
@@ -131,6 +134,7 @@ dependencies:
   eslint-plugin-react: 7.24.0_eslint@7.28.0
   eslint-plugin-unicorn: 33.0.1_eslint@7.28.0
   glslify: 7.1.1
+  gsap: 1.20.6
   html-webpack-plugin: 5.3.1_webpack@5.38.1
   imports-loader: 3.0.0_webpack@5.38.1
   inversify: 5.1.1
@@ -4092,6 +4096,10 @@ packages:
   /growl/1.10.5:
     resolution: {integrity: sha512-qBr4OuELkhPenW6goKVXiv47US3clb3/IbuWF9KNKEijAy9oeHxU9IgzjvJhHkUzhaj7rOUD7+YGWqUjLp5oSA==}
     engines: {node: '>=4.x'}
+    dev: false
+
+  /gsap/1.20.6:
+    resolution: {integrity: sha512-XM2BdaoJP23KSg/u4FnsqVI+HI7/jcVZbHFU8JfzNLvPCF08yf4a/WRFP/lQ5gbWydpL7g/YKjPe/PMpw+5WJQ==}
     dev: false
 
   /handle-thing/2.0.1:
@@ -8675,6 +8683,70 @@ packages:
       - bufferutil
       - canvas
       - debug
+      - supports-color
+      - utf-8-validate
+      - webpack-bundle-analyzer
+    dev: false
+
+  file:projects/game-minesweeper.tgz_sinon-chai@3.7.0:
+    resolution: {integrity: sha512-1b1LOBVoU2k4w1mwqEQjFOq6JwzcrbSlhGWSQWEJ7btuh4t5k8i8MH4PQEJN8vDw4bnSgHYo5MM8VHEHWLV4Eg==, tarball: file:projects/game-minesweeper.tgz}
+    id: file:projects/game-minesweeper.tgz
+    name: '@rush-temp/game-minesweeper'
+    version: 0.0.0
+    dependencies:
+      '@rushstack/eslint-config': 2.3.4_eslint@7.28.0+typescript@4.2.4
+      '@types/bluebird': 3.5.35
+      '@types/chai': 4.2.18
+      '@types/mocha': 8.2.2
+      '@types/sinon': 10.0.2
+      '@types/webpack-env': 1.16.0
+      bluebird: 3.7.2
+      chai: 4.3.4
+      es6-map: 0.1.5
+      es6-symbol: 3.1.3
+      eslint: 7.28.0
+      eslint-plugin-import: 2.23.4_eslint@7.28.0
+      eslint-plugin-jsdoc: 35.1.3_eslint@7.28.0
+      eslint-plugin-prefer-arrow: 1.2.3_eslint@7.28.0
+      eslint-plugin-react: 7.24.0_eslint@7.28.0
+      eslint-plugin-unicorn: 33.0.1_eslint@7.28.0
+      gsap: 1.20.6
+      html-webpack-plugin: 5.3.1_webpack@5.38.1
+      istanbul-instrumenter-loader: 3.0.1_webpack@5.38.1
+      karma: 6.3.3
+      karma-chrome-launcher: 3.1.0
+      karma-coverage-istanbul-reporter: 3.0.3
+      karma-es6-shim: 1.0.0
+      karma-mocha: 2.0.1
+      karma-mocha-reporter: 2.2.5_karma@6.3.3
+      karma-sinon-chai: 2.0.2_603bade0eb2595e5f78e5d6c505e52bd
+      karma-sourcemap-loader: 0.3.8
+      karma-sourcemap-writer: 0.1.2
+      karma-webpack: 5.0.0_webpack@5.38.1
+      mocha: 9.0.0
+      pixi.js: 5.2.1
+      prettier: 2.3.1
+      puppeteer: 10.0.0
+      reflect-metadata: 0.1.13
+      rimraf: 3.0.2
+      sinon: 11.1.1
+      terser-webpack-plugin: 5.1.3_webpack@5.38.1
+      ts-loader: 9.2.3_typescript@4.2.4+webpack@5.38.1
+      ts-node: 10.0.0_typescript@4.2.4
+      tslib: 2.2.0
+      typescript: 4.2.4
+      webpack: 5.38.1_webpack-cli@4.7.2
+      webpack-cli: 4.7.2_4f38b4f344caeae135cc7debc9aac51b
+      webpack-dev-server: 3.11.2_webpack-cli@4.7.2+webpack@5.38.1
+    transitivePeerDependencies:
+      - '@swc/core'
+      - '@swc/wasm'
+      - '@types/node'
+      - '@webpack-cli/generators'
+      - '@webpack-cli/migrate'
+      - bufferutil
+      - debug
+      - sinon-chai
       - supports-color
       - utf-8-validate
       - webpack-bundle-analyzer

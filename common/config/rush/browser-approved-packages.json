@@ -40,7 +40,7 @@
     },
     {
       "name": "bluebird",
-      "allowedCategories": [ "production", "tests" ]
+      "allowedCategories": [ "games", "production", "tests" ]
     },
     {
       "name": "browserify-versionify",
@@ -64,11 +64,11 @@
     },
     {
       "name": "es6-map",
-      "allowedCategories": [ "production", "tests" ]
+      "allowedCategories": [ "games", "production", "tests" ]
     },
     {
       "name": "es6-symbol",
-      "allowedCategories": [ "production", "tests" ]
+      "allowedCategories": [ "games", "production", "tests" ]
     },
     {
       "name": "eslint",
@@ -103,6 +103,10 @@
       "allowedCategories": [ "production", "tests" ]
     },
     {
+      "name": "gsap",
+      "allowedCategories": [ "games" ]
+    },
+    {
       "name": "html-webpack-plugin",
       "allowedCategories": [ "games", "production" ]
     },
@@ -116,7 +120,7 @@
     },
     {
       "name": "istanbul-instrumenter-loader",
-      "allowedCategories": [ "production", "tests" ]
+      "allowedCategories": [ "games", "production", "tests" ]
     },
     {
       "name": "jsdom",
@@ -128,7 +132,7 @@
     },
     {
       "name": "karma",
-      "allowedCategories": [ "production", "tests" ]
+      "allowedCategories": [ "games", "production", "tests" ]
     },
     {
       "name": "karma-chai-sinon",
@@ -136,7 +140,7 @@
     },
     {
       "name": "karma-chrome-launcher",
-      "allowedCategories": [ "production", "tests" ]
+      "allowedCategories": [ "games", "production", "tests" ]
     },
     {
       "name": "karma-commonjs",
@@ -148,35 +152,35 @@
     },
     {
       "name": "karma-coverage-istanbul-reporter",
-      "allowedCategories": [ "production", "tests" ]
+      "allowedCategories": [ "games", "production", "tests" ]
     },
     {
       "name": "karma-es6-shim",
-      "allowedCategories": [ "production", "tests" ]
+      "allowedCategories": [ "games", "production", "tests" ]
     },
     {
       "name": "karma-mocha",
-      "allowedCategories": [ "production", "tests" ]
+      "allowedCategories": [ "games", "production", "tests" ]
     },
     {
       "name": "karma-mocha-reporter",
-      "allowedCategories": [ "production", "tests" ]
+      "allowedCategories": [ "games", "production", "tests" ]
     },
     {
       "name": "karma-sinon-chai",
-      "allowedCategories": [ "production", "tests" ]
+      "allowedCategories": [ "games", "production", "tests" ]
     },
     {
       "name": "karma-sourcemap-loader",
-      "allowedCategories": [ "production", "tests" ]
+      "allowedCategories": [ "games", "production", "tests" ]
     },
     {
       "name": "karma-sourcemap-writer",
-      "allowedCategories": [ "production", "tests" ]
+      "allowedCategories": [ "games", "production", "tests" ]
     },
     {
       "name": "karma-webpack",
-      "allowedCategories": [ "production", "tests" ]
+      "allowedCategories": [ "games", "production", "tests" ]
     },
     {
       "name": "mocha",
@@ -208,7 +212,7 @@
     },
     {
       "name": "puppeteer",
-      "allowedCategories": [ "production", "tests" ]
+      "allowedCategories": [ "games", "production", "tests" ]
     },
     {
       "name": "reflect-metadata",
@@ -224,7 +228,7 @@
     },
     {
       "name": "sinon",
-      "allowedCategories": [ "production", "tests" ]
+      "allowedCategories": [ "games", "production", "tests" ]
     },
     {
       "name": "sinon-chai",

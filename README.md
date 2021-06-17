@@ -27,6 +27,7 @@ This repository is the home for all packages maintained by **RobotlegsJS**.
 
 | Folder | Name | Technologies |
 | ------ | ---- | ------------ |
+| [/games/minesweeper](./games/minesweeper/) | Minesweeper | [core](./packages/core/) [pixi](./packages/pixi/) [pixi-palidor](./packages/pixi-palidor/) |
 | [/games/scratchcard](./games/scratchcard/) | Scratchcard | [signals](./packages/signals/) [core](./packages/core/) [pixi](./packages/pixi/) [pixi-palidor](./packages/pixi-palidor/) |
 | [/games/space-invaders](./games/space-invaders/) | Space Invaders | [core](./packages/core/) [pixi](./packages/pixi/) [pixi-palidor](./packages/pixi-palidor/) |
 | [/games/tetris](./games/tetris/) | Tetris | [core](./packages/core/) [pixi](./packages/pixi/) [pixi-palidor](./packages/pixi-palidor/) |
