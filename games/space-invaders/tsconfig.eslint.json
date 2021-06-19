@@ -3,5 +3,5 @@
   "compilerOptions": {
     "outDir": "lib-test"
   },
-  "include": ["./src/**/*.ts", "./test/**/*.ts"]
+  "include": ["./src/**/*.ts"]
 }
