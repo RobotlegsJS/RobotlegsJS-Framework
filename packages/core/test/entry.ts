@@ -12,4 +12,3 @@ import "bluebird/js/browser/bluebird";
 import "es6-map/implement";
 import "es6-symbol/implement";
 import "jsdom-global";
-import "reflect-metadata";
