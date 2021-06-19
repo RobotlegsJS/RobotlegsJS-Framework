@@ -5,10 +5,9 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import { injectable, inject, named, IHook } from "@robotlegsjs/core";
-
-import { RectangleMediator } from "./RectangleMediator";
+import { IHook, inject, injectable, named } from "@robotlegsjs/core";
 import { ExampleView } from "./ExampleView";
+import { RectangleMediator } from "./RectangleMediator";
 
 @injectable()
 export class HookWithMediatorAndViewInjectionReportFunction implements IHook {

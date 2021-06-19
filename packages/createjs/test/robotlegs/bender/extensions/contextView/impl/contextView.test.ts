@@ -5,11 +5,9 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import "../../../../../entry";
-
 import { assert } from "chai";
-
-import { IContextView, ContextView } from "../../../../../../src";
+import { ContextView, IContextView } from "../../../../../../src";
+import "../../../../../entry";
 
 describe("ContextView", () => {
     let stage: createjs.Stage;

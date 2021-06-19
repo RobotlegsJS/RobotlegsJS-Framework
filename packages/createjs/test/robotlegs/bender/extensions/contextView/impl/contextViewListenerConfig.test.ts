@@ -5,14 +5,11 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import "../../../../../entry";
-
 import { assert } from "chai";
-
-import { IContextView, ContextView, ContextViewListenerConfig } from "../../../../../../src";
-
+import { ContextView, ContextViewListenerConfig, IContextView } from "../../../../../../src";
 import { ContainerRegistry } from "../../../../../../src/robotlegs/bender/extensions/viewManager/impl/ContainerRegistry";
 import { ViewManager } from "../../../../../../src/robotlegs/bender/extensions/viewManager/impl/ViewManager";
+import "../../../../../entry";
 
 describe("ContextViewListenerConfig", () => {
     let stage: createjs.Stage;

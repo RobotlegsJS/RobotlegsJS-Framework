@@ -5,31 +5,26 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import "../../../../../entry";
-
-import sinon = require("sinon");
-
-import { assert } from "chai";
-
 import {
-    instantiateUnmapped,
     IInjector,
+    instantiateUnmapped,
     ITypeFilter,
     RobotlegsInjector,
     TypeMatcher
 } from "@robotlegsjs/core";
-
+import { assert } from "chai";
 import { applyCreateJSPatch } from "../../../../../../src/robotlegs/bender/extensions/contextView/createjsPatch/createjs-patch";
-
 import { IMediator } from "../../../../../../src/robotlegs/bender/extensions/mediatorMap/api/IMediator";
 import { IMediatorMapping } from "../../../../../../src/robotlegs/bender/extensions/mediatorMap/api/IMediatorMapping";
 import { MediatorFactory } from "../../../../../../src/robotlegs/bender/extensions/mediatorMap/impl/MediatorFactory";
-import { MediatorMapping } from "../../../../../../src/robotlegs/bender/extensions/mediatorMap/impl/MediatorMapping";
 import { MediatorManager } from "../../../../../../src/robotlegs/bender/extensions/mediatorMap/impl/MediatorManager";
-
+import { MediatorMapping } from "../../../../../../src/robotlegs/bender/extensions/mediatorMap/impl/MediatorMapping";
+import "../../../../../entry";
 import { CallbackMediator } from "../support/CallbackMediator";
 import { EmptyMediator } from "../support/EmptyMediator";
 import { LifecycleReportingMediator } from "../support/LifecycleReportingMediator";
+
+import sinon = require("sinon");
 
 describe("MediatorManager", () => {
     let injector: IInjector = null;

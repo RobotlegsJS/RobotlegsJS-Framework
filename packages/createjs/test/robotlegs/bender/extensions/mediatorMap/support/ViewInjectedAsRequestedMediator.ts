@@ -5,7 +5,7 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import { injectable, inject } from "@robotlegsjs/core";
+import { inject, injectable } from "@robotlegsjs/core";
 
 @injectable()
 export class ViewInjectedAsRequestedMediator {

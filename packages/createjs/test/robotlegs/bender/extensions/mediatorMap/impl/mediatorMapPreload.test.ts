@@ -5,20 +5,16 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import "../../../../../entry";
-
+import { Context, IContext, IInjector, TypeMatcher } from "@robotlegsjs/core";
 import { assert } from "chai";
-
-import { IInjector, IContext, Context, TypeMatcher } from "@robotlegsjs/core";
-
 import { MediatorMap } from "../../../../../../src/robotlegs/bender/extensions/mediatorMap/impl/MediatorMap";
-
+import "../../../../../entry";
 import { Alpha50PercentHook } from "../support/Alpha50PercentHook";
+import { ExampleDisplayObjectMediator } from "../support/ExampleDisplayObjectMediator";
 import { ExampleMediator } from "../support/ExampleMediator";
 import { ExampleMediator2 } from "../support/ExampleMediator2";
 import { ExampleView } from "../support/ExampleView";
 import { HappyGuard } from "../support/HappyGuard";
-import { ExampleDisplayObjectMediator } from "../support/ExampleDisplayObjectMediator";
 import { HookWithMediatorAndViewInjectionReportFunction } from "../support/HookWithMediatorAndViewInjectionReportFunction";
 import { MediatorWatcher } from "../support/MediatorWatcher";
 import { NotAView } from "../support/NotAView";

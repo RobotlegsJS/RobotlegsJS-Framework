@@ -5,15 +5,11 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import "../../../../entry";
-
+import { Context, IContext } from "@robotlegsjs/core";
 import { assert } from "chai";
-
-import { IContext, Context } from "@robotlegsjs/core";
-
-import { ViewManagerExtension, IViewManager } from "../../../../../src";
-
+import { IViewManager, ViewManagerExtension } from "../../../../../src";
 import { ViewManager } from "../../../../../src/robotlegs/bender/extensions/viewManager/impl/ViewManager";
+import "../../../../entry";
 
 describe("ViewManagerExtension", () => {
     let context: IContext;

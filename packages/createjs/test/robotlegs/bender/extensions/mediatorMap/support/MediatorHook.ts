@@ -5,8 +5,7 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import { injectable, inject, named, optional, IHook } from "@robotlegsjs/core";
-
+import { IHook, inject, injectable, named, optional } from "@robotlegsjs/core";
 import { ViewInjectedMediator } from "./ViewInjectedMediator";
 
 @injectable()
