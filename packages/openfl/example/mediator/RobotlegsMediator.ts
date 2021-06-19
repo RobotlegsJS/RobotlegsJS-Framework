@@ -7,7 +7,7 @@
 
 import Event from "openfl/events/Event";
 import MouseEvent from "openfl/events/MouseEvent";
-import { Mediator } from "../../src";
+import { Mediator } from "src/robotlegs/bender/extensions/mediatorMap/impl/Mediator";
 import { RobotlegsView } from "../view/RobotlegsView";
 import { SmileyView } from "../view/SmileyView";
 
