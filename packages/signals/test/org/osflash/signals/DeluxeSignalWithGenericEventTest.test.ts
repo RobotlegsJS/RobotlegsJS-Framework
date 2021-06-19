@@ -5,16 +5,14 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import "../../../entry";
-
 import { assert } from "chai";
-
-import { AsyncUtil } from "../../../util/AsyncUtil";
 import { DeluxeSignal } from "../../../../src/org/osflash/signals/DeluxeSignal";
 import { GenericEvent } from "../../../../src/org/osflash/signals/events/GenericEvent";
-import { Sprite } from "../../../mock/Sprite";
 import { IEvent } from "../../../../src/org/osflash/signals/events/IEvent";
-import { newEmptyHandler, failIfCalled } from "../../../util/TestBase";
+import "../../../entry";
+import { Sprite } from "../../../mock/Sprite";
+import { AsyncUtil } from "../../../util/AsyncUtil";
+import { failIfCalled, newEmptyHandler } from "../../../util/TestBase";
 
 describe("DeluxeSignalWithGenericEventTest", () => {
     let async: AsyncUtil = new AsyncUtil();

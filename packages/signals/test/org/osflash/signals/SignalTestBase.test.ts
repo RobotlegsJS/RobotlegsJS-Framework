@@ -5,16 +5,14 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import "../../../entry";
-
 import { assert } from "chai";
-
 import { ISignal } from "../../../../src/org/osflash/signals/ISignal";
 import { ISlot } from "../../../../src/org/osflash/signals/ISlot";
 import { Signal } from "../../../../src/org/osflash/signals/Signal";
+import "../../../entry";
 import { MockEvent } from "../../../mock/MockEvent";
 import { AsyncUtil } from "../../../util/AsyncUtil";
-import { newEmptyHandler, failIfCalled } from "../../../util/TestBase";
+import { failIfCalled, newEmptyHandler } from "../../../util/TestBase";
 
 describe("SignalTestBase", () => {
     let signal: ISignal;

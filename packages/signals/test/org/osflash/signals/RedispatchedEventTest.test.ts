@@ -5,13 +5,11 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import "../../../entry";
-
 import { assert } from "chai";
-
-import { AsyncUtil } from "../../../util/AsyncUtil";
 import { DeluxeSignal } from "../../../../src/org/osflash/signals/DeluxeSignal";
 import { GenericEvent } from "../../../../src/org/osflash/signals/events/GenericEvent";
+import "../../../entry";
+import { AsyncUtil } from "../../../util/AsyncUtil";
 
 describe("RedispatchedEventTest", () => {
     let async: AsyncUtil = new AsyncUtil();

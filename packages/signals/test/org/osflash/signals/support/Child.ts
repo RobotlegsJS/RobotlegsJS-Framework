@@ -5,8 +5,8 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import { IBubbleEventHandler } from "../../../../../src/org/osflash/signals/events/IBubbleEventHandler";
 import { DeluxeSignal } from "../../../../../src/org/osflash/signals/DeluxeSignal";
+import { IBubbleEventHandler } from "../../../../../src/org/osflash/signals/events/IBubbleEventHandler";
 import { IEvent } from "../../../../../src/org/osflash/signals/events/IEvent";
 
 export class Child implements IBubbleEventHandler {

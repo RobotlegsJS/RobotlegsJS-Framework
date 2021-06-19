@@ -5,11 +5,9 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import "../../../entry";
-
 import { assert } from "chai";
-
 import { MonoSignal } from "../../../../src/org/osflash/signals/MonoSignal";
+import "../../../entry";
 
 describe("MonoSignalDispatchVarArgsTest", () => {
     let completed: MonoSignal;

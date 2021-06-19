@@ -5,13 +5,11 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import "../../../entry";
-
+import { assert } from "chai";
+import { ISlot } from "../../../../src/org/osflash/signals/ISlot";
 import { Signal } from "../../../../src/org/osflash/signals/Signal";
 import { Slot } from "../../../../src/org/osflash/signals/Slot";
-import { ISlot } from "../../../../src/org/osflash/signals/ISlot";
-
-import { assert } from "chai";
+import "../../../entry";
 
 describe("SlotTest", () => {
     let signal: Signal;

@@ -5,15 +5,13 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import "../../../entry";
-
 import { assert } from "chai";
-
-import { ISignal } from "../../../../src/org/osflash/signals/ISignal";
 import { GenericEvent } from "../../../../src/org/osflash/signals/events/GenericEvent";
-import { Sprite } from "../../../mock/Sprite";
+import { ISignal } from "../../../../src/org/osflash/signals/ISignal";
 import { ISlot } from "../../../../src/org/osflash/signals/ISlot";
 import { Signal } from "../../../../src/org/osflash/signals/Signal";
+import "../../../entry";
+import { Sprite } from "../../../mock/Sprite";
 import { AsyncUtil } from "../../../util/AsyncUtil";
 import { checkGenericEvent, checkSprite } from "../../../util/TestBase";
 

@@ -5,12 +5,10 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import "../../../entry";
-
 import { assert } from "chai";
-
-import { AsyncUtil } from "../../../util/AsyncUtil";
 import { DeluxeSignal } from "../../../../src/org/osflash/signals/DeluxeSignal";
+import "../../../entry";
+import { AsyncUtil } from "../../../util/AsyncUtil";
 
 describe("PriorityListenersTest", () => {
     let async: AsyncUtil = new AsyncUtil();

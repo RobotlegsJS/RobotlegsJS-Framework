@@ -5,12 +5,10 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import "../../../entry";
-
 import { assert } from "chai";
-
 import { GenericEvent } from "../../../../src/org/osflash/signals/events/GenericEvent";
 import { IEvent } from "../../../../src/org/osflash/signals/events/IEvent";
+import "../../../entry";
 
 describe("GenericEventTest", () => {
     let instance: GenericEvent;

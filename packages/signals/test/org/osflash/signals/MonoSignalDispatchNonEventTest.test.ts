@@ -5,12 +5,10 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import "../../../entry";
-
 import { assert } from "chai";
-
-import { AsyncUtil } from "../../../util/AsyncUtil";
 import { MonoSignal } from "../../../../src/org/osflash/signals/MonoSignal";
+import "../../../entry";
+import { AsyncUtil } from "../../../util/AsyncUtil";
 
 describe("MonoSignalDispatchNonEventTest", () => {
     let async: AsyncUtil = new AsyncUtil();

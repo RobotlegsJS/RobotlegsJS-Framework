@@ -5,12 +5,10 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import "../../../entry";
-
 import { assert } from "chai";
-
-import { Signal } from "../../../../src/org/osflash/signals/Signal";
 import { ISignal } from "../../../../src/org/osflash/signals/ISignal";
+import { Signal } from "../../../../src/org/osflash/signals/Signal";
+import "../../../entry";
 
 describe("SignalDispatchVarArgsTest", () => {
     let signal: ISignal;

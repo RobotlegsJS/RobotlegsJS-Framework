@@ -5,13 +5,11 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import "../../../entry";
-
 import { assert } from "chai";
-
-import { AsyncUtil } from "../../../util/AsyncUtil";
 import { ISignal } from "../../../../src/org/osflash/signals/ISignal";
 import { Signal } from "../../../../src/org/osflash/signals/Signal";
+import "../../../entry";
+import { AsyncUtil } from "../../../util/AsyncUtil";
 
 describe("SignalDispatchNoArgsTest", () => {
     let async: AsyncUtil = new AsyncUtil();

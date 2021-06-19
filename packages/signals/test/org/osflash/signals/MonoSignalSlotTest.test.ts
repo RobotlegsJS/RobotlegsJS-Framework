@@ -5,16 +5,13 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import "../../../entry";
-
 import { assert } from "chai";
-
-import { AsyncUtil } from "../../../util/AsyncUtil";
-import { checkGenericEvent, failIfCalled, newEmptyHandler } from "../../../util/TestBase";
-
-import { MonoSignal } from "../../../../src/org/osflash/signals/MonoSignal";
 import { GenericEvent } from "../../../../src/org/osflash/signals/events/GenericEvent";
 import { ISlot } from "../../../../src/org/osflash/signals/ISlot";
+import { MonoSignal } from "../../../../src/org/osflash/signals/MonoSignal";
+import "../../../entry";
+import { AsyncUtil } from "../../../util/AsyncUtil";
+import { checkGenericEvent, failIfCalled, newEmptyHandler } from "../../../util/TestBase";
 
 describe("MonoSignalSlotTest", () => {
     let async: AsyncUtil = new AsyncUtil();
