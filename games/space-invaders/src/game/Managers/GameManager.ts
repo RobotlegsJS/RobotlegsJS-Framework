@@ -1,5 +1,4 @@
 import { inject, injectable } from "@robotlegsjs/core";
-
 import { GameModel } from "./../../models/GameModel";
 import { LevelModel } from "./../../models/LevelModel";
 import { GameService } from "./../../services/GameService";

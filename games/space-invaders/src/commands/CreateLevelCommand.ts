@@ -1,5 +1,4 @@
 import { ICommand, inject, injectable } from "@robotlegsjs/core";
-
 import { LevelFactory } from "./../game/factories/LevelFactory";
 import { GameModel } from "./../models/GameModel";
 import { GameStatus } from "./../models/GameStatus";

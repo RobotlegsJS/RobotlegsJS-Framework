@@ -1,5 +1,4 @@
 import { Container, Text } from "pixi.js";
-
 import { AtlasKeys } from "./../utils/AtlasKeys";
 import { PixiFactory } from "./../utils/PixiFactory";
 import { Texts } from "./../utils/Texts";

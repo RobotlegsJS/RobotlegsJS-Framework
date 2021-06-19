@@ -1,5 +1,4 @@
 import { Container } from "pixi.js";
-
 import { Colors } from "./../utils/Colors";
 import { PixiFactory } from "./../utils/PixiFactory";
 import { BattleFieldComponent } from "./components/BattleFieldComponent";

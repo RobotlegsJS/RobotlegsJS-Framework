@@ -1,7 +1,6 @@
 import { inject, injectable } from "@robotlegsjs/core";
 import { Mediator } from "@robotlegsjs/pixi";
 import { Loader } from "pixi.js";
-
 import { IntroView } from "../views/IntroView";
 import { FlowService } from "./../services/FlowService";
 import { AtlasKeys } from "./../utils/AtlasKeys";

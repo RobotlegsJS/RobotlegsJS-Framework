@@ -1,6 +1,5 @@
 import { inject, injectable } from "@robotlegsjs/core";
 import { Mediator } from "@robotlegsjs/pixi";
-
 import { GameEvent } from "./../events/GameEvent";
 import { GameModel } from "./../models/GameModel";
 import { FlowService } from "./../services/FlowService";

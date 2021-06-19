@@ -1,5 +1,4 @@
 import { injectable } from "@robotlegsjs/core";
-
 import { Entity } from "./../game/entities/Entity";
 
 @injectable()

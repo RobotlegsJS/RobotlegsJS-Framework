@@ -1,5 +1,4 @@
 import { Container, Sprite, Text, TilingSprite } from "pixi.js";
-
 import { AtlasKeys } from "./../utils/AtlasKeys";
 import { Colors } from "./../utils/Colors";
 import { PixiFactory } from "./../utils/PixiFactory";

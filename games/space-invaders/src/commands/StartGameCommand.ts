@@ -1,5 +1,4 @@
 import { ICommand, inject, injectable } from "@robotlegsjs/core";
-
 import { GameModel } from "./../models/GameModel";
 import { GameService } from "./../services/GameService";
 
