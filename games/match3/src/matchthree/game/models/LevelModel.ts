@@ -49,11 +49,7 @@ export class LevelModel {
         list.set(PieceType.RAINBOW, 300);
 
         const value = list.get(pieceType);
-        if (value !== undefined) {
-            this.score += this.score + value;
-        } else {
-            this.score += 100;
-        }
+        this.score += value !== undefined ? this.score + value : 100;
     }
 
     public addPiece(piece: PieceData): void {

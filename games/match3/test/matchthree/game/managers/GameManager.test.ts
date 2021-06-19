@@ -144,7 +144,7 @@ describe("GameManager", () => {
         assert.isTrue(result);
     });
 
-    /* CONTEXT: REMOVING PIECES*/
+    /* CONTEXT: REMOVING PIECES */
 
     it("RemovePiece", () => {
         const col = 3;
@@ -434,7 +434,7 @@ describe("GameManager", () => {
         assert.isTrue(isEmpty);
     });
 
-    /*CONTEXT: SWAPING PIECES*/
+    /* CONTEXT: SWAPING PIECES */
 
     it("SwapSelectedPieces", () => {
         const piece1col = 1;
