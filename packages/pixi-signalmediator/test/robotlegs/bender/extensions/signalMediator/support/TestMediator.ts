@@ -6,10 +6,8 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import { ISignal } from "@robotlegsjs/signals";
-
 import { EventDispatcher, EventMap } from "@robotlegsjs/core";
-
+import { ISignal } from "@robotlegsjs/signals";
 import { SignalMediator } from "../../../../../../src/robotlegs/bender/extensions/signalMediator/impl/SignalMediator";
 
 export class TestMediator extends SignalMediator<EventDispatcher> {

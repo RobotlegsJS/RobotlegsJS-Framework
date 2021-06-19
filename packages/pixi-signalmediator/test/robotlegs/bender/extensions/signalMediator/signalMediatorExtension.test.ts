@@ -6,15 +6,12 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import "../../../../entry.ts";
-
+import { Context, IExtension } from "@robotlegsjs/core";
 import { assert } from "chai";
-
-import { IExtension, Context } from "@robotlegsjs/core";
-
-import { SignalMediatorExtension } from "../../../../../src/robotlegs/bender/extensions/signalMediator/SignalMediatorExtension";
 import { ISignalMap } from "../../../../../src/robotlegs/bender/extensions/signalMediator/api/ISignalMap";
 import { SignalMap } from "../../../../../src/robotlegs/bender/extensions/signalMediator/impl/SignalMap";
+import { SignalMediatorExtension } from "../../../../../src/robotlegs/bender/extensions/signalMediator/SignalMediatorExtension";
+import "../../../../entry.ts";
 
 describe("SignalMediatorExtension", () => {
     let context: Context;

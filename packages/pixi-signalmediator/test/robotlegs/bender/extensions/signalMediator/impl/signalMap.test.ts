@@ -5,14 +5,11 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import "../../../../../entry.ts";
-
-import { assert } from "chai";
-
 import { Signal } from "@robotlegsjs/signals";
-
+import { assert } from "chai";
 import { ISignalMap } from "../../../../../../src/robotlegs/bender/extensions/signalMediator/api/ISignalMap";
 import { SignalMap } from "../../../../../../src/robotlegs/bender/extensions/signalMediator/impl/SignalMap";
+import "../../../../../entry.ts";
 
 describe("SignalMap", () => {
     let signalMap: ISignalMap;

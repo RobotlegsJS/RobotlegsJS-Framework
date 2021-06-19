@@ -5,12 +5,9 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import "../../../../../entry.ts";
-
-import { assert } from "chai";
-
 import { Signal } from "@robotlegsjs/signals";
-
+import { assert } from "chai";
+import "../../../../../entry.ts";
 import { TestMediator } from "../support/TestMediator";
 
 describe("SignalMediator", () => {
