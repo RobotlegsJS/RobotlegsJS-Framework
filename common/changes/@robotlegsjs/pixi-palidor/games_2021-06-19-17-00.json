@@ -1,0 +1,11 @@
+{
+  "changes": [
+    {
+      "packageName": "@robotlegsjs/pixi-palidor",
+      "comment": "Add source code of games developed using RobotlegsJS (see [19](https://github.com/RobotlegsJS/RobotlegsJS-Framework/pull/19))",
+      "type": "patch"
+    }
+  ],
+  "packageName": "@robotlegsjs/pixi-palidor",
+  "email": "tiago.schenkel@gmail.com"
+}
