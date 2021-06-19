@@ -89,7 +89,7 @@
     "@istanbuljs/nyc-config-typescript": "^1.0.1",
     "@rushstack/eslint-config": "^2.3.4",
     "@types/bluebird": "^3.5.35",
-    "@types/chai": "^4.2.18",
+    "@types/chai": "^4.2.19",
     "@types/mocha": "^8.2.2",
     "@types/sinon": "^10.0.2",
     "@types/webpack-env": "^1.16.0",
