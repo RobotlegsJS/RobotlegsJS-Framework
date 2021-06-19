@@ -544,6 +544,12 @@
     },
     // "games" folder (alphabetical order)
     {
+      "packageName": "game-match3",
+      "projectFolder": "games/match3",
+      "reviewCategory": "games",
+      "shouldPublish": false
+    },
+    {
       "packageName": "game-minesweeper",
       "projectFolder": "games/minesweeper",
       "reviewCategory": "games",
