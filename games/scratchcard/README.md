@@ -1,5 +1,4 @@
-GAME-Scratchcard
-===
+# GAME Scratchcard
 
 This is a TypeScript open-source game.
 
@@ -10,10 +9,9 @@ This is a TypeScript open-source game.
 + **Language:** TypeScript.
 + **Technologies:** PixiJS, RobotlegsJS, RobotlegsJS-Pixi, RobotlegsJS-Pixi-Palidor.
 
-
 * * *
 
-### Installation
+## Installation
 
 Follow the [building the projects](https://github.com/RobotlegsJS/RobotlegsJS-Framework/tree/master/.github/CONTRIBUTING.md#building-the-projects) section to know how to setup your local development environment.
 
@@ -26,7 +24,7 @@ npm start
 
 * * *
 
-### Dependencies
+## Dependencies
 
 + [PixiJS](http://www.pixijs.com/)
 + [RobotlegsJS](https://github.com/RobotlegsJS/RobotlegsJS-Framework/tree/master/packages/core)
@@ -35,8 +33,7 @@ npm start
 
 * * *
 
-
-### Features
+## Features
 
 - Scrach engine.
 - Grid with 9 different items.

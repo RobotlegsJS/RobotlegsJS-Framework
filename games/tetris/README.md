@@ -1,3 +1,5 @@
+# Game Tetris
+
 ![cover](media/img_cover_tetris_ts.png)
 
 This is a TypeScript open-source game which is a port of the [ActionScript version](https://github.com/RonaldoSetzer/GAME-Tetris/tree/master/actionscript-tetris), following the same concepts, graphics, and architecture.
@@ -9,7 +11,7 @@ This is a TypeScript open-source game which is a port of the [ActionScript versi
 
 * * *
 
-### Installation
+## Installation
 
 Follow the [building the projects](https://github.com/RobotlegsJS/RobotlegsJS-Framework/tree/master/.github/CONTRIBUTING.md#building-the-projects) section to know how to setup your local development environment.
 
@@ -22,13 +24,13 @@ npm start
 
 * * *
 
-### Gameplay
+## Gameplay
 
 ![gif_ts](media/gif_tetris_ts_demo.gif)
 
 * * *
 
-### Dependencies
+## Dependencies
 
 + [PixiJS](http://www.pixijs.com/)
 + [RobotlegsJS](https://github.com/RobotlegsJS/RobotlegsJS-Framework/tree/master/packages/core)
@@ -37,21 +39,19 @@ npm start
 
 * * *
 
-### Demo
+## Demo
 
 + **[TypeScript](https://ronaldosetzer.github.io/portfolio/open_source/tetris_ts/)**
 
 * * *
 
-### Game
-
-#### Game Flow
+### Game Flow
 
 ![screenshot01](media/img_ss_tetris_ts_01.png)
 
 * * *
 
-### Screenshots
+## Screenshots
 ![screenshot01](media/img_game_tetris_ts.png)
 * * *
 

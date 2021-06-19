@@ -1,4 +1,4 @@
-# GAME-Match3
+# GAME Match3
 
 ![cover](media/img_cover_match3_ts.png)
 
@@ -11,13 +11,13 @@ This is a TypeScript open-source game which is a port of the [ActionScript versi
 
 * * *
 
-### Gameplay
+## Gameplay
 
 ![gif_ts](media/gif_match3_ts_demo.gif)
 
 * * *
 
-### Installation
+## Installation
 
 Follow the [building the projects](https://github.com/RobotlegsJS/RobotlegsJS-Framework/tree/master/.github/CONTRIBUTING.md#building-the-projects) section to know how to setup your local development environment.
 
@@ -30,7 +30,7 @@ npm start
 
 * * *
 
-### Dependencies
+## Dependencies
 
 + [PixiJS](http://www.pixijs.com/)
 + [RobotlegsJS](https://github.com/RobotlegsJS/RobotlegsJS-Framework/tree/master/packages/core)
@@ -39,13 +39,13 @@ npm start
 
 * * *
 
-### Demos
+## Demos
 
 + **[TypeScript](https://ronaldosetzer.github.io/portfolio/open_source/match3_ts/)**
 
 * * *
 
-### Game
+## Game
 
 ![screenshot01](media/img_ss_match3_ts_01.png)
 
@@ -57,7 +57,7 @@ npm start
 
 * * *
 
-### Screenshots
+## Screenshots
 
 ![screenshot01](media/img_game_match3_ts.png)
 
