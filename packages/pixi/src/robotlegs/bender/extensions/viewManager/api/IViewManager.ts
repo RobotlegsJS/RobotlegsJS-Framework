@@ -5,9 +5,8 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import { Container } from "pixi.js";
-
 import { IEventDispatcher } from "@robotlegsjs/core";
+import { Container } from "pixi.js";
 import { IViewHandler } from "./IViewHandler";
 
 // [Event(name="containerAdd", type="robotlegs.bender.extensions.viewManager.impl.ViewManagerEvent")]

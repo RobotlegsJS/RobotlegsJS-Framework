@@ -5,12 +5,9 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import { Container } from "pixi.js";
-
 import { IContext, IExtension, IInjector, ILogger } from "@robotlegsjs/core";
-
+import { Container } from "pixi.js";
 import { IContextView } from "../contextView/api/IContextView";
-
 import { IViewManager } from "./api/IViewManager";
 import { ContainerBinding } from "./impl/ContainerBinding";
 import { ContainerRegistry } from "./impl/ContainerRegistry";

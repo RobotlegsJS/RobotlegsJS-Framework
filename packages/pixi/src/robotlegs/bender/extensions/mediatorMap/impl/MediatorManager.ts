@@ -6,7 +6,6 @@
 // ------------------------------------------------------------------------------
 
 import { DisplayObject } from "pixi.js";
-
 import { IMediatorMapping } from "../api/IMediatorMapping";
 import { MediatorFactory } from "./MediatorFactory";
 

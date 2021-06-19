@@ -5,9 +5,8 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import { Container } from "pixi.js";
-
 import { Event } from "@robotlegsjs/core";
+import { Container } from "pixi.js";
 
 /**
  * Container existence event

@@ -5,10 +5,8 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import { Container } from "pixi.js";
-
 import { IClass, IEvent } from "@robotlegsjs/core";
-
+import { Container } from "pixi.js";
 import { ContainerBinding } from "./ContainerBinding";
 import { ContainerRegistry } from "./ContainerRegistry";
 import { ContainerRegistryEvent } from "./ContainerRegistryEvent";

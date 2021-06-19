@@ -12,9 +12,9 @@
  * - Implements event bubbling on `dispatchEvent` when `bubbles` is true.
  */
 
+import { IEvent } from "@robotlegsjs/core";
 import { DisplayObject, utils } from "pixi.js";
 import EventEmitter = utils.EventEmitter;
-import { IEvent } from "@robotlegsjs/core";
 
 // eslint-disable-next-line @rushstack/typedef-var
 const EventDispatcherMixin = {

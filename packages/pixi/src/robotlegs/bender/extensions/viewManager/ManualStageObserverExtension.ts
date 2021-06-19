@@ -6,7 +6,6 @@
 // ------------------------------------------------------------------------------
 
 import { IContext, IExtension, IInjector, ILogger } from "@robotlegsjs/core";
-
 import { ContainerRegistry } from "./impl/ContainerRegistry";
 import { ManualStageObserver } from "./impl/ManualStageObserver";
 

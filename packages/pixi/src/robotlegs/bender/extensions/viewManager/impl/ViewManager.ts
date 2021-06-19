@@ -5,17 +5,13 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
+import { EventDispatcher, inject, injectable } from "@robotlegsjs/core";
 import { Container } from "pixi.js";
-
-import { injectable, inject, EventDispatcher } from "@robotlegsjs/core";
-
 import { IViewHandler } from "../api/IViewHandler";
 import { IViewManager } from "../api/IViewManager";
-
-import { ViewManagerEvent } from "./ViewManagerEvent";
-
-import { ContainerRegistry } from "../impl/ContainerRegistry";
 import { ContainerBinding } from "../impl/ContainerBinding";
+import { ContainerRegistry } from "../impl/ContainerRegistry";
+import { ViewManagerEvent } from "./ViewManagerEvent";
 
 // [Event(name="containerAdd", type="robotlegs.bender.extensions.viewManager.impl.ViewManagerEvent")]
 // [Event(name="containerRemove", type="robotlegs.bender.extensions.viewManager.impl.ViewManagerEvent")]
