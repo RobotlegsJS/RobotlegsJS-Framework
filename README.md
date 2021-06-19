@@ -27,6 +27,7 @@ This repository is the home for all packages maintained by **RobotlegsJS**.
 
 | Folder | Name | Technologies |
 | ------ | ---- | ------------ |
+| [/games/battleship](./games/battleship/) | Battleship | [core](./packages/core/) [pixi](./packages/pixi/) [pixi-palidor](./packages/pixi-palidor/) |
 | [/games/match3](./games/match3/) | Match3 | [core](./packages/core/) [pixi](./packages/pixi/) [pixi-palidor](./packages/pixi-palidor/) |
 | [/games/minesweeper](./games/minesweeper/) | Minesweeper | [core](./packages/core/) [pixi](./packages/pixi/) [pixi-palidor](./packages/pixi-palidor/) |
 | [/games/scratchcard](./games/scratchcard/) | Scratchcard | [signals](./packages/signals/) [core](./packages/core/) [pixi](./packages/pixi/) [pixi-palidor](./packages/pixi-palidor/) |
