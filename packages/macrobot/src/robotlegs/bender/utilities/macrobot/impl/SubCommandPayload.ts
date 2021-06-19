@@ -6,7 +6,6 @@
 // ------------------------------------------------------------------------------
 
 import { IType } from "@robotlegsjs/core";
-
 import { ISubCommandPayload } from "../api/ISubCommandPayload";
 
 export class SubCommandPayload<T> implements ISubCommandPayload<T> {

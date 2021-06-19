@@ -12,7 +12,6 @@ export { IAsyncCommand } from "./robotlegs/bender/utilities/macrobot/api/IAsyncC
 export { IMacro } from "./robotlegs/bender/utilities/macrobot/api/IMacro";
 export { ISubCommandMapping } from "./robotlegs/bender/utilities/macrobot/api/ISubCommandMapping";
 export { ISubCommandPayload } from "./robotlegs/bender/utilities/macrobot/api/ISubCommandPayload";
-
 export { AbstractMacro } from "./robotlegs/bender/utilities/macrobot/impl/AbstractMacro";
 export { AsyncCommand } from "./robotlegs/bender/utilities/macrobot/impl/AsyncCommand";
 export { ParallelMacro } from "./robotlegs/bender/utilities/macrobot/impl/ParallelMacro";

@@ -6,11 +6,9 @@
 // ------------------------------------------------------------------------------
 
 import { IClass, ICommand, IInjector, instantiateUnmapped } from "@robotlegsjs/core";
-
-import { ISubCommandPayload } from "../api/ISubCommandPayload";
 import { ISubCommandMapping } from "../api/ISubCommandMapping";
+import { ISubCommandPayload } from "../api/ISubCommandPayload";
 import { ISubCommandConfigurator } from "../dsl/ISubCommandConfigurator";
-
 import { SubCommandPayload } from "./SubCommandPayload";
 
 export class SubCommandMapping implements ISubCommandMapping, ISubCommandConfigurator {

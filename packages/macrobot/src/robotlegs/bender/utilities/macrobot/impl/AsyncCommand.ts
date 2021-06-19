@@ -5,8 +5,7 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import { inject, injectable, IContext } from "@robotlegsjs/core";
-
+import { IContext, inject, injectable } from "@robotlegsjs/core";
 import { IAsyncCommand } from "../api/IAsyncCommand";
 
 @injectable()

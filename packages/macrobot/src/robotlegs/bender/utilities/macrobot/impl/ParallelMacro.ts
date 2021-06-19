@@ -6,10 +6,8 @@
 // ------------------------------------------------------------------------------
 
 import { injectable } from "@robotlegsjs/core";
-
 import { IMacro } from "../api/IMacro";
 import { ISubCommandMapping } from "../api/ISubCommandMapping";
-
 import { AbstractMacro } from "./AbstractMacro";
 
 @injectable()
