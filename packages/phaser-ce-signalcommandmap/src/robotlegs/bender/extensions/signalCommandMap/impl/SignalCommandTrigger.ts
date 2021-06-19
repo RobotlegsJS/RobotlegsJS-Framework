@@ -6,14 +6,14 @@
 // ------------------------------------------------------------------------------
 
 import {
-    IInjector,
-    ILogger,
-    ICommandExecutor,
-    ICommandTrigger,
     CommandExecutor,
     CommandMapper,
     CommandMappingList,
-    CommandPayload
+    CommandPayload,
+    ICommandExecutor,
+    ICommandTrigger,
+    IInjector,
+    ILogger
 } from "@robotlegsjs/core";
 
 /**
