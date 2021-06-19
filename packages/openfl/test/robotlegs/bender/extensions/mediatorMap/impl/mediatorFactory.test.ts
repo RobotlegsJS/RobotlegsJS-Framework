@@ -5,31 +5,26 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import "../../../../../entry";
-
-import sinon = require("sinon");
-
-import { assert } from "chai";
-
-import DisplayObjectContainer from "openfl/display/DisplayObjectContainer";
-import DisplayObject from "openfl/display/DisplayObject";
-
 import { IInjector, ITypeFilter, RobotlegsInjector, TypeMatcher } from "@robotlegsjs/core";
-
+import { assert } from "chai";
+import DisplayObject from "openfl/display/DisplayObject";
+import DisplayObjectContainer from "openfl/display/DisplayObjectContainer";
 import { IMediator } from "../../../../../../src/robotlegs/bender/extensions/mediatorMap/api/IMediator";
 import { IMediatorMapping } from "../../../../../../src/robotlegs/bender/extensions/mediatorMap/api/IMediatorMapping";
 import { MediatorFactory } from "../../../../../../src/robotlegs/bender/extensions/mediatorMap/impl/MediatorFactory";
-import { MediatorMapping } from "../../../../../../src/robotlegs/bender/extensions/mediatorMap/impl/MediatorMapping";
 import { MediatorManager } from "../../../../../../src/robotlegs/bender/extensions/mediatorMap/impl/MediatorManager";
-
+import { MediatorMapping } from "../../../../../../src/robotlegs/bender/extensions/mediatorMap/impl/MediatorMapping";
+import "../../../../../entry";
 import { CallbackHook } from "../support/CallbackHook";
 import { CallbackMediator } from "../support/CallbackMediator";
 import { GrumpyGuard } from "../support/GrumpyGuard";
 import { HappyGuard } from "../support/HappyGuard";
 import { InjectedMediator } from "../support/InjectedMediator";
 import { MediatorHook } from "../support/MediatorHook";
-import { ViewInjectedMediator } from "../support/ViewInjectedMediator";
 import { ViewInjectedAsRequestedMediator } from "../support/ViewInjectedAsRequestedMediator";
+import { ViewInjectedMediator } from "../support/ViewInjectedMediator";
+
+import sinon = require("sinon");
 
 describe("MediatorFactory", () => {
     let injector: IInjector = null;

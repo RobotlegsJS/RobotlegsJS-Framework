@@ -5,17 +5,13 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import "../../../../../entry";
-
 import { assert } from "chai";
-
 import DisplayObjectContainer from "openfl/display/DisplayObjectContainer";
-
 import { IViewHandler } from "../../../../../../src/robotlegs/bender/extensions/viewManager/api/IViewHandler";
 import { ContainerBinding } from "../../../../../../src/robotlegs/bender/extensions/viewManager/impl/ContainerBinding";
 import { ContainerRegistry } from "../../../../../../src/robotlegs/bender/extensions/viewManager/impl/ContainerRegistry";
 import { ContainerRegistryEvent } from "../../../../../../src/robotlegs/bender/extensions/viewManager/impl/ContainerRegistryEvent";
-
+import "../../../../../entry";
 import { CallbackViewHandler } from "../support/CallbackViewHandler";
 import { TreeContainer } from "../support/TreeContainer";
 

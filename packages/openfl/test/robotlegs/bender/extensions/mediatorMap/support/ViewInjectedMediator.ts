@@ -5,9 +5,8 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
+import { inject, injectable } from "@robotlegsjs/core";
 import DisplayObjectContainer from "openfl/display/DisplayObjectContainer";
-
-import { injectable, inject } from "@robotlegsjs/core";
 
 @injectable()
 export class ViewInjectedMediator {

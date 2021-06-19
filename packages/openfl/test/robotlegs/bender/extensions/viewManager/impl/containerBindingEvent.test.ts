@@ -5,11 +5,9 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import "../../../../../entry";
-
 import { assert } from "chai";
-
 import { ContainerBindingEvent } from "../../../../../../src/robotlegs/bender/extensions/viewManager/impl/ContainerBindingEvent";
+import "../../../../../entry";
 
 describe("ContainerBindingEvent", () => {
     let event: ContainerBindingEvent = null;

@@ -5,15 +5,13 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import "../../../../entry";
-
+import { Context, IContext } from "@robotlegsjs/core";
 import { assert } from "chai";
-
-import { IContext, Context } from "@robotlegsjs/core";
-
-import { ViewManagerExtension, MediatorMapExtension, IMediatorMap } from "../../../../../src";
-
+import { IMediatorMap } from "src/robotlegs/bender/extensions/mediatorMap/api/IMediatorMap";
+import { MediatorMapExtension } from "src/robotlegs/bender/extensions/mediatorMap/MediatorMapExtension";
+import { ViewManagerExtension } from "src/robotlegs/bender/extensions/viewManager/ViewManagerExtension";
 import { MediatorMap } from "../../../../../src/robotlegs/bender/extensions/mediatorMap/impl/MediatorMap";
+import "../../../../entry";
 
 describe("MediatorMapExtension", () => {
     let context: IContext;

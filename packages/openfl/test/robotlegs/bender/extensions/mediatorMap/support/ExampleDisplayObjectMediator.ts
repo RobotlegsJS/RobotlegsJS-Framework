@@ -5,10 +5,8 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import { injectable, inject } from "@robotlegsjs/core";
-
+import { inject, injectable } from "@robotlegsjs/core";
 import DisplayObject from "openfl/display/DisplayObject";
-
 import { MediatorWatcher } from "./MediatorWatcher";
 
 @injectable()

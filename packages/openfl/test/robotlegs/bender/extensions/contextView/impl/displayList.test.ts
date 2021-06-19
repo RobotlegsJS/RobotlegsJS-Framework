@@ -5,14 +5,12 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import "../../../../../entry";
-
 import { assert } from "chai";
-
-import Stage from "openfl/display/Stage";
-import DisplayObjectContainer from "openfl/display/DisplayObjectContainer";
 import DisplayObject from "openfl/display/DisplayObject";
+import DisplayObjectContainer from "openfl/display/DisplayObjectContainer";
+import Stage from "openfl/display/Stage";
 import Event from "openfl/events/Event";
+import "../../../../../entry";
 
 describe("DisplayList", () => {
     let stage: Stage;
