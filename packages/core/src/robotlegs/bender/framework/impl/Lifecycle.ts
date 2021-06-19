@@ -6,12 +6,10 @@
 // ------------------------------------------------------------------------------
 
 import { IEventDispatcher } from "../../events/api/IEventDispatcher";
-
 import { ILifecycle } from "../api/ILifecycle";
 import { LifecycleError } from "../api/LifecycleError";
 import { LifecycleEvent } from "../api/LifecycleEvent";
 import { LifecycleState } from "../api/LifecycleState";
-
 import { LifecycleTransition } from "./LifecycleTransition";
 
 // [Event(name="destroy", type="robotlegs.bender.framework.api.LifecycleEvent")]

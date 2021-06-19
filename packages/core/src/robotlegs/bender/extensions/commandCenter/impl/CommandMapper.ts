@@ -6,15 +6,12 @@
 // ------------------------------------------------------------------------------
 
 import { IClass } from "../../matching/IClass";
-
 import { ICommand } from "../api/ICommand";
 import { ICommandMapping } from "../api/ICommandMapping";
 import { ICommandMappingList } from "../api/ICommandMappingList";
-
+import { ICommandConfigurator } from "../dsl/ICommandConfigurator";
 import { ICommandMapper } from "../dsl/ICommandMapper";
 import { ICommandUnmapper } from "../dsl/ICommandUnmapper";
-import { ICommandConfigurator } from "../dsl/ICommandConfigurator";
-
 import { CommandMapping } from "./CommandMapping";
 
 /**

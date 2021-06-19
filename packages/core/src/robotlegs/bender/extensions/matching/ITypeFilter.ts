@@ -6,7 +6,6 @@
 // ------------------------------------------------------------------------------
 
 import { IMatcher } from "../../framework/api/IMatcher";
-
 import { IType } from "./IType";
 
 /**

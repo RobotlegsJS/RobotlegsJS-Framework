@@ -5,10 +5,10 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import { IEventMap } from "./api/IEventMap";
-import { EventMap } from "./impl/EventMap";
 import { IContext } from "../../framework/api/IContext";
 import { IExtension } from "../../framework/api/IExtension";
+import { IEventMap } from "./api/IEventMap";
+import { EventMap } from "./impl/EventMap";
 
 /**
  * An Event Map keeps track of listeners and provides the ability

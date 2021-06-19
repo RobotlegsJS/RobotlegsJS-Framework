@@ -5,12 +5,10 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import { IContext } from "../../framework/api/IContext";
-import { IExtension } from "../../framework/api/IExtension";
-
 import { IEventDispatcher } from "../../events/api/IEventDispatcher";
 import { EventDispatcher } from "../../events/impl/EventDispatcher";
-
+import { IContext } from "../../framework/api/IContext";
+import { IExtension } from "../../framework/api/IExtension";
 import { LifecycleEventRelay } from "./impl/LifecycleEventRelay";
 
 /**

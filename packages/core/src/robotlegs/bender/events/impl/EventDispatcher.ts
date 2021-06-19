@@ -28,10 +28,8 @@
 //////////////////////////////////////////////////////////////////////////////////////
 
 import { injectable } from "inversify";
-
 import { IEvent } from "../api/IEvent";
 import { IEventDispatcher } from "../api/IEventDispatcher";
-
 import { Event } from "../impl/Event";
 
 /**

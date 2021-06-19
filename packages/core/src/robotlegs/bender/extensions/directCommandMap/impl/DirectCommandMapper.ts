@@ -5,17 +5,14 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import { IClass } from "../../matching/IClass";
-
 import { CommandPayload } from "../../commandCenter/api/CommandPayload";
 import { ICommand } from "../../commandCenter/api/ICommand";
 import { ICommandExecutor } from "../../commandCenter/api/ICommandExecutor";
 import { ICommandMapping } from "../../commandCenter/api/ICommandMapping";
 import { ICommandMappingList } from "../../commandCenter/api/ICommandMappingList";
-
 import { CommandMapping } from "../../commandCenter/impl/CommandMapping";
-
 import { IDirectCommandConfigurator } from "../../directCommandMap/dsl/IDirectCommandConfigurator";
+import { IClass } from "../../matching/IClass";
 
 /**
  * @private

@@ -6,18 +6,16 @@
 // ------------------------------------------------------------------------------
 
 import { interfaces } from "inversify";
-
 import { IConfig } from "../api/IConfig";
 import { IContext } from "../api/IContext";
 import { IInjector } from "../api/IInjector";
 import { ILogger } from "../api/ILogger";
 import { IMatcher } from "../api/IMatcher";
 import { LifecycleEvent } from "../api/LifecycleEvent";
-
 import { ClassMatcher } from "./ClassMatcher";
+import { instantiateUnmapped } from "./instantiateUnmapped";
 import { ObjectMatcher } from "./ObjectMatcher";
 import { ObjectProcessor } from "./ObjectProcessor";
-import { instantiateUnmapped } from "./instantiateUnmapped";
 
 /**
  * The config manager handles configuration files and

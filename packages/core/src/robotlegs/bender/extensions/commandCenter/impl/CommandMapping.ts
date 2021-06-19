@@ -6,11 +6,8 @@
 // ------------------------------------------------------------------------------
 
 import { getQualifiedClassName } from "../../../framework/impl/getQualifiedClassName";
-
 import { IClass } from "../../matching/IClass";
-
 import { ICommand } from "../api/ICommand";
-
 import { ICommandMapping } from "../api/ICommandMapping";
 
 /**

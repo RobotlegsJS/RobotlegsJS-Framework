@@ -5,11 +5,10 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import { IClass } from "../../matching/IClass";
 import { IEvent } from "../../../events/api/IEvent";
-
 import { ICommandMapper } from "../../commandCenter/dsl/ICommandMapper";
 import { ICommandUnmapper } from "../../commandCenter/dsl/ICommandUnmapper";
+import { IClass } from "../../matching/IClass";
 
 // eslint-disable-next-line @rushstack/typedef-var
 export const IEventCommandMap = Symbol("IEventCommandMap");

@@ -5,9 +5,9 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import { ConsoleLogTarget } from "./impl/ConsoleLogTarget";
 import { IContext } from "../../framework/api/IContext";
 import { IExtension } from "../../framework/api/IExtension";
+import { ConsoleLogTarget } from "./impl/ConsoleLogTarget";
 
 /**
  * Adds a TraceLogTarget to the context

@@ -5,24 +5,18 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import { injectable, inject } from "inversify";
-
+import { inject, injectable } from "inversify";
 import { IContext } from "../../../framework/api/IContext";
 import { IInjector } from "../../../framework/api/IInjector";
-
-import { IClass } from "../../matching/IClass";
-
 import { CommandPayload } from "../../commandCenter/api/CommandPayload";
 import { ICommand } from "../../commandCenter/api/ICommand";
 import { ICommandExecutor } from "../../commandCenter/api/ICommandExecutor";
-
 import { CommandExecutor } from "../../commandCenter/impl/CommandExecutor";
 import { CommandMappingList } from "../../commandCenter/impl/CommandMappingList";
 import { NullCommandTrigger } from "../../commandCenter/impl/NullCommandTrigger";
-
+import { IClass } from "../../matching/IClass";
 import { IDirectCommandMap } from "../api/IDirectCommandMap";
 import { IDirectCommandConfigurator } from "../dsl/IDirectCommandConfigurator";
-
 import { DirectCommandMapper } from "./DirectCommandMapper";
 
 /**

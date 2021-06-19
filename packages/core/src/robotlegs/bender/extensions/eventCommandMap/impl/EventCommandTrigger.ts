@@ -5,24 +5,20 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
+import { IEvent } from "../../../events/api/IEvent";
+import { IEventDispatcher } from "../../../events/api/IEventDispatcher";
 import { IInjector } from "../../../framework/api/IInjector";
 import { ILogger } from "../../../framework/api/ILogger";
 import { getQualifiedClassName } from "../../../framework/impl/getQualifiedClassName";
-
-import { IEvent } from "../../../events/api/IEvent";
-import { IEventDispatcher } from "../../../events/api/IEventDispatcher";
-
-import { IClass } from "../../matching/IClass";
-import { isInstanceOfType } from "../../matching/isInstanceOfType";
-
+import { CommandPayload } from "../../commandCenter/api/CommandPayload";
 import { ICommandExecutor } from "../../commandCenter/api/ICommandExecutor";
 import { ICommandMappingList } from "../../commandCenter/api/ICommandMappingList";
 import { ICommandTrigger } from "../../commandCenter/api/ICommandTrigger";
-import { CommandPayload } from "../../commandCenter/api/CommandPayload";
-
 import { CommandExecutor } from "../../commandCenter/impl/CommandExecutor";
 import { CommandMapper } from "../../commandCenter/impl/CommandMapper";
 import { CommandMappingList } from "../../commandCenter/impl/CommandMappingList";
+import { IClass } from "../../matching/IClass";
+import { isInstanceOfType } from "../../matching/isInstanceOfType";
 
 /**
  * @private

@@ -6,14 +6,11 @@
 // ------------------------------------------------------------------------------
 
 import { injectable } from "inversify";
-
 import { IEvent } from "../../../events/api/IEvent";
 import { IEventDispatcher } from "../../../events/api/IEventDispatcher";
 import { Event } from "../../../events/impl/Event";
-
 import { IClass } from "../../../extensions/matching/IClass";
 import { isInstanceOfType } from "../../../extensions/matching/isInstanceOfType";
-
 import { IEventMap } from "../api/IEventMap";
 import { DomEventMapConfig } from "./DomEventMapConfig";
 import { EventMapConfig } from "./EventMapConfig";

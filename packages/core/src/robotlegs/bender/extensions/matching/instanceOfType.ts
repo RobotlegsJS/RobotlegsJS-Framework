@@ -6,7 +6,6 @@
 // ------------------------------------------------------------------------------
 
 import { IMatcher } from "../../framework/api/IMatcher";
-
 import { isInstanceOfType } from "./isInstanceOfType";
 import { IType } from "./IType";
 

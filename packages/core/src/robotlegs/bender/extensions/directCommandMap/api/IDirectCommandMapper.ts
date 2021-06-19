@@ -5,11 +5,9 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import { IClass } from "../../matching/IClass";
-
 import { CommandPayload } from "../../commandCenter/api/CommandPayload";
 import { ICommand } from "../../commandCenter/api/ICommand";
-
+import { IClass } from "../../matching/IClass";
 import { IDirectCommandConfigurator } from "../dsl/IDirectCommandConfigurator";
 
 /**

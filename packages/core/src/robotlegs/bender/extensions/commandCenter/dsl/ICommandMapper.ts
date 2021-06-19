@@ -6,9 +6,7 @@
 // ------------------------------------------------------------------------------
 
 import { IClass } from "../../matching/IClass";
-
 import { ICommand } from "../api/ICommand";
-
 import { ICommandConfigurator } from "./ICommandConfigurator";
 
 /**

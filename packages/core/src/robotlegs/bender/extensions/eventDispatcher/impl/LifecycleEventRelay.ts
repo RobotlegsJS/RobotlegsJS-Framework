@@ -7,7 +7,6 @@
 
 import { IEventDispatcher } from "../../../events/api/IEventDispatcher";
 import { LifecycleEvent } from "../../../framework/api/LifecycleEvent";
-
 import { EventRelay } from "./EventRelay";
 
 /**

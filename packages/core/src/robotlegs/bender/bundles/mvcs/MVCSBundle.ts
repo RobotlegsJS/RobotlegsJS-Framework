@@ -5,15 +5,14 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import { IBundle } from "../../framework/api/IBundle";
-import { IContext } from "../../framework/api/IContext";
-
 import { DirectCommandMapExtension } from "../../extensions/directCommandMap/DirectCommandMapExtension";
-import { InjectableLoggerExtension } from "../../extensions/enhancedLogging/InjectableLoggerExtension";
 import { ConsoleLoggingExtension } from "../../extensions/enhancedLogging/ConsoleLoggingExtension";
+import { InjectableLoggerExtension } from "../../extensions/enhancedLogging/InjectableLoggerExtension";
 import { EventCommandMapExtension } from "../../extensions/eventCommandMap/EventCommandMapExtension";
 import { EventDispatcherExtension } from "../../extensions/eventDispatcher/EventDispatcherExtension";
 import { LocalEventMapExtension } from "../../extensions/localEventMap/LocalEventMapExtension";
+import { IBundle } from "../../framework/api/IBundle";
+import { IContext } from "../../framework/api/IContext";
 
 /**
  * For that Classic Robotlegs flavour
