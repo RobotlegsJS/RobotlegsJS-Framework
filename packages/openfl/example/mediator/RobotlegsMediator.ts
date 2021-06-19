@@ -5,13 +5,11 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import { Mediator } from "../../src";
-
-import { RobotlegsView } from "../view/RobotlegsView";
-import { SmileyView } from "../view/SmileyView";
-
 import Event from "openfl/events/Event";
 import MouseEvent from "openfl/events/MouseEvent";
+import { Mediator } from "../../src";
+import { RobotlegsView } from "../view/RobotlegsView";
+import { SmileyView } from "../view/SmileyView";
 
 export class RobotlegsMediator extends Mediator<RobotlegsView> {
     public initialize(): void {

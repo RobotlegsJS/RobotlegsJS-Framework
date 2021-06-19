@@ -5,8 +5,8 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import Sprite from "openfl/display/Sprite";
 import Graphics from "openfl/display/Graphics";
+import Sprite from "openfl/display/Sprite";
 import Event from "openfl/events/Event";
 
 export class SmileyView extends Sprite {

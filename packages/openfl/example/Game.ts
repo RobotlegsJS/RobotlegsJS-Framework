@@ -5,17 +5,12 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import "reflect-metadata";
-
 import { Context, MVCSBundle } from "@robotlegsjs/core";
-
-import { ContextView, OpenFLBundle } from "../src";
-
-import { MyConfig } from "./config/MyConfig";
-
-import { GameView } from "./view/GameView";
-
 import Stage from "openfl/display/Stage";
+import "reflect-metadata";
+import { ContextView, OpenFLBundle } from "../src";
+import { MyConfig } from "./config/MyConfig";
+import { GameView } from "./view/GameView";
 
 export class Game {
     private _loading: HTMLDivElement;
