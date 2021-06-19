@@ -5,21 +5,18 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import { injectable, inject, IConfig } from "@robotlegsjs/core";
-
+import { IConfig, inject, injectable } from "@robotlegsjs/core";
 import { IStateMediatorMap } from "../../src/robotlegs/bender/extensions/stateMediatorMap/api/IStateMediatorMap";
-
 import { BootMediator } from "../mediators/BootMediator";
-import { PreloadMediator } from "../mediators/PreloadMediator";
+import { GameOverMediator } from "../mediators/GameOverMediator";
 import { GameTitleMediator } from "../mediators/GameTitleMediator";
 import { MainMediator } from "../mediators/MainMediator";
-import { GameOverMediator } from "../mediators/GameOverMediator";
-
+import { PreloadMediator } from "../mediators/PreloadMediator";
 import { Boot } from "../states/Boot";
-import { Preload } from "../states/Preload";
+import { GameOver } from "../states/GameOver";
 import { GameTitle } from "../states/GameTitle";
 import { Main } from "../states/Main";
-import { GameOver } from "../states/GameOver";
+import { Preload } from "../states/Preload";
 
 @injectable()
 export class StateMediatorConfig implements IConfig {
