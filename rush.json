@@ -229,6 +229,7 @@
   "approvedPackagesPolicy": {
     "reviewCategories": [
       "production", // library projects that ship
+      "games", // non-shipping game projects
       "tests" // non-shipping test projects
     ],
     // We don't need to review @types packages, because we can assume
@@ -540,6 +541,43 @@
       "projectFolder": "packages/phaser",
       "reviewCategory": "production",
       "versionPolicyName": "robotlegsjs"
+    },
+    // "games" folder (alphabetical order)
+    {
+      "packageName": "game-battleship",
+      "projectFolder": "games/battleship",
+      "reviewCategory": "games",
+      "shouldPublish": false
+    },
+    {
+      "packageName": "game-match3",
+      "projectFolder": "games/match3",
+      "reviewCategory": "games",
+      "shouldPublish": false
+    },
+    {
+      "packageName": "game-minesweeper",
+      "projectFolder": "games/minesweeper",
+      "reviewCategory": "games",
+      "shouldPublish": false
+    },
+    {
+      "packageName": "game-scratchcard",
+      "projectFolder": "games/scratchcard",
+      "reviewCategory": "games",
+      "shouldPublish": false
+    },
+    {
+      "packageName": "game-spaceinvaders",
+      "projectFolder": "games/space-invaders",
+      "reviewCategory": "games",
+      "shouldPublish": false
+    },
+    {
+      "packageName": "game-tetris",
+      "projectFolder": "games/tetris",
+      "reviewCategory": "games",
+      "shouldPublish": false
     },
     // "integration-tests" folder (alphabetical order)
     {

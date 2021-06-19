@@ -191,7 +191,8 @@
       "summary": "Used to run test on all packages.",
       "description": "This command will run `npm test` on all packages",
       "safeForSimultaneousRushProcesses": false,
-      "enableParallelism": true
+      "enableParallelism": true,
+      "ignoreMissingScript": true
     },
     {
       "name": "lint",

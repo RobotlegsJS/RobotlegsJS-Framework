@@ -165,11 +165,12 @@ yarn start
 
 ## Examples
 
-+ [Game - Battleship](https://github.com/RonaldoSetzer/GAME-Battleship)
-+ [Game - Minesweeper](https://github.com/RonaldoSetzer/GAME-Minesweeper)
-+ [Game - Space Invaders](https://github.com/RonaldoSetzer/GAME-SpaceInvaders)
-+ [Game - Tetris](https://github.com/RonaldoSetzer/GAME-Tetris)
-+ [Game - Match 3](https://github.com/RonaldoSetzer/GAME-Match3)
++ [Game - Battleship](https://github.com/RobotlegsJS/RobotlegsJS-Framework/tree/master/games/battleship)
++ [Game - Match3](https://github.com/RobotlegsJS/RobotlegsJS-Framework/tree/master/games/match3)
++ [Game - Minesweeper](https://github.com/RobotlegsJS/RobotlegsJS-Framework/tree/master/games/minesweeper)
++ [Game - Scratchcard](https://github.com/RobotlegsJS/RobotlegsJS-Framework/tree/master/games/scratchcard)
++ [Game - Space Invaders](https://github.com/RobotlegsJS/RobotlegsJS-Framework/tree/master/games/space-invaders)
++ [Game - Tetris](https://github.com/RobotlegsJS/RobotlegsJS-Framework/tree/master/games/tetris)
 
 ## RobotlegsJS Pixi Palidor for enterprise
 

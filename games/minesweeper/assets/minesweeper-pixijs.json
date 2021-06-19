@@ -1,0 +1,83 @@
+{
+  "frames": {
+    "button_background.png": {
+      "frame": { "x": 1, "y": 45, "w": 75, "h": 75 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 75, "h": 75 },
+      "sourceSize": { "w": 75, "h": 75 }
+    },
+    "icon_flag.png": {
+      "frame": { "x": 78, "y": 97, "w": 19, "h": 23 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 19, "h": 23 },
+      "sourceSize": { "w": 19, "h": 23 }
+    },
+    "icon_flag_large.png": {
+      "frame": { "x": 283, "y": 45, "w": 38, "h": 33 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 38, "h": 33 },
+      "sourceSize": { "w": 38, "h": 33 }
+    },
+    "icon_home.png": {
+      "frame": { "x": 170, "y": 45, "w": 55, "h": 48 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 55, "h": 48 },
+      "sourceSize": { "w": 55, "h": 48 }
+    },
+    "icon_mine.png": {
+      "frame": { "x": 283, "y": 80, "w": 25, "h": 26 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 25, "h": 26 },
+      "sourceSize": { "w": 25, "h": 26 }
+    },
+    "icon_pause.png": {
+      "frame": { "x": 78, "y": 45, "w": 47, "h": 50 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 47, "h": 50 },
+      "sourceSize": { "w": 47, "h": 50 }
+    },
+    "icon_resume.png": {
+      "frame": { "x": 127, "y": 45, "w": 41, "h": 50 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 41, "h": 50 },
+      "sourceSize": { "w": 41, "h": 50 }
+    },
+    "icon_retry.png": {
+      "frame": { "x": 227, "y": 45, "w": 54, "h": 48 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 54, "h": 48 },
+      "sourceSize": { "w": 54, "h": 48 }
+    },
+    "logo_minesweeper.png": {
+      "frame": { "x": 1, "y": 1, "w": 376, "h": 42 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 376, "h": 42 },
+      "sourceSize": { "w": 376, "h": 42 }
+    },
+    "logo_setzer.png": {
+      "frame": { "x": 99, "y": 97, "w": 12, "h": 20 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 12, "h": 20 },
+      "sourceSize": { "w": 12, "h": 20 }
+    }
+  },
+  "meta": {
+    "app": "http://www.codeandweb.com/texturepacker",
+    "version": "1.0",
+    "image": "minesweeper-pixijs.png",
+    "format": "RGBA8888",
+    "size": { "w": 378, "h": 121 },
+    "scale": "1",
+    "smartupdate": "$TexturePacker:SmartUpdate:d50fefb40c9c2eb205a802604cb17b9a:ac8f28c2336d6985a223ec4fabfb8294:7b688720ff4f0e9a75b2d4893cd226eb$"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "baseUrl": "src/",
+    "outDir": "dist/",
+    "target": "es5",
+    "lib": ["es6", "dom"],
+    "types": ["reflect-metadata"],
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "strictNullChecks": false,
+    "noImplicitAny": false,
+    "removeComments": true,
+    "preserveConstEnums": true,
+    "declaration": true,
+    "sourceMap": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true
+  },
+  "include": ["./src/**/*.ts"],
+  "files": ["./node_modules/@robotlegsjs/pixi/definitions/pixi.d.ts"]
+}

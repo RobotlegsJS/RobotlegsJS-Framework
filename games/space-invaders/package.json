@@ -1,0 +1,56 @@
+{
+  "name": "game-spaceinvaders",
+  "version": "1.0.0",
+  "private": true,
+  "description": "OpenSource Game",
+  "author": "Ronaldo Santiago",
+  "license": "MIT",
+  "scripts": {
+    "start": "webpack serve --config ./webpack.config.js",
+    "bundle": "webpack --env production",
+    "autoformat": "prettier --config ../../.prettierrc --ignore-path ../../.prettierignore --write --list-different .",
+    "lint-fix:src": "eslint -c .eslintrc.js --ext .ts ./src --fix",
+    "lint-fix": "npm run lint-fix:src",
+    "lint:src": "eslint -c .eslintrc.js --ext .ts ./src",
+    "lint": "npm run lint:src",
+    "cleanup": "rimraf dist",
+    "build": "npm run cleanup && npm run bundle",
+    "prepare": "npm run build"
+  },
+  "keywords": [
+    "RobotlegsJS",
+    "RobotlegsJS-Pixi",
+    "RobotlegsJS-Pixi-Palidor",
+    "TypeScript",
+    "PixiJS",
+    "Game"
+  ],
+  "dependencies": {
+    "@robotlegsjs/core": "^3.0.0",
+    "@robotlegsjs/pixi": "^3.0.0",
+    "@robotlegsjs/pixi-palidor": "^3.0.0",
+    "pixi.js": "^5.2.1",
+    "reflect-metadata": "^0.1.13",
+    "tslib": "^2.2.0"
+  },
+  "devDependencies": {
+    "@rushstack/eslint-config": "^2.3.4",
+    "eslint": "^7.28.0",
+    "eslint-plugin-import": "^2.23.4",
+    "eslint-plugin-jsdoc": "^35.1.3",
+    "eslint-plugin-prefer-arrow": "^1.2.3",
+    "eslint-plugin-react": "^7.24.0",
+    "eslint-plugin-unicorn": "^33.0.1",
+    "html-webpack-plugin": "^5.3.1",
+    "imports-loader": "^3.0.0",
+    "prettier": "^2.3.1",
+    "rimraf": "^3.0.2",
+    "terser-webpack-plugin": "^5.1.3",
+    "ts-loader": "^9.2.3",
+    "ts-node": "^10.0.0",
+    "typescript": "~4.2.4",
+    "webpack": "^5.38.1",
+    "webpack-cli": "^4.7.2",
+    "webpack-dev-server": "^3.11.2"
+  }
+}
