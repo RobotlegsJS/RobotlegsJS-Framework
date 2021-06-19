@@ -8,7 +8,7 @@
 /// <reference types="mocha" />
 
 /* eslint-disable import/no-internal-modules */
-import "reflect-metadata";
 import "bluebird/js/browser/bluebird";
-import "es6-symbol/implement";
 import "es6-map/implement";
+import "es6-symbol/implement";
+import "reflect-metadata";

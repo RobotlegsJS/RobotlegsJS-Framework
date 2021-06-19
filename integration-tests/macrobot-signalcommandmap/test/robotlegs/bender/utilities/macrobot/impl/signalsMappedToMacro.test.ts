@@ -5,16 +5,11 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import "../../../../../entry";
-
-import { assert } from "chai";
-
-import { Signal } from "@robotlegsjs/signals";
-
-import { IContext, IInjector, Context, CommandMapper } from "@robotlegsjs/core";
-
+import { CommandMapper, Context, IContext, IInjector } from "@robotlegsjs/core";
 import { SignalCommandTrigger } from "@robotlegsjs/signalcommandmap";
-
+import { Signal } from "@robotlegsjs/signals";
+import { assert } from "chai";
+import "../../../../../entry";
 import { DelaySignal } from "../support/DelaySignal";
 import { NoParametersSignal } from "../support/NoParametersSignal";
 import { ParametersSignal } from "../support/ParametersSignal";
