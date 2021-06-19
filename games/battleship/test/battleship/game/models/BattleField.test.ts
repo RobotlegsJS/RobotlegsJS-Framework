@@ -1,7 +1,5 @@
 import "../../../entry";
 
-import sinon = require("sinon");
-
 import { Tile } from "./../../../../src/battleship/game/models/Tile";
 import { Ship } from "../../../../src/battleship/game/models/Ship";
 import { BattleField } from "../../../../src/battleship/game/models/BattleField";

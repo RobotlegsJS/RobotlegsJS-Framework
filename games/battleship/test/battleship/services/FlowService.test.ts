@@ -16,6 +16,8 @@ describe("flowService", () => {
     beforeEach(() => {
         flowService = new FlowService();
         flowService.eventDispatcher = new EventDispatcher();
+
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
         let flowEvent = new FlowEvent(FlowEvent.SHOW_GAME_OVER_POPUP);
     });
 
