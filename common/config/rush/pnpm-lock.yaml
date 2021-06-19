@@ -41,9 +41,9 @@ specifiers:
   easeljs: ^1.0.2
   es6-map: ^0.1.5
   es6-symbol: ^3.1.3
-  eslint: ^7.28.0
+  eslint: ^7.29.0
   eslint-plugin-import: ^2.23.4
-  eslint-plugin-jsdoc: ^35.1.3
+  eslint-plugin-jsdoc: ^35.3.2
   eslint-plugin-prefer-arrow: ^1.2.3
   eslint-plugin-react: ^7.24.0
   eslint-plugin-unicorn: ^33.0.1
@@ -113,7 +113,7 @@ dependencies:
   '@rush-temp/pixi-signalmediator': file:projects/pixi-signalmediator.tgz
   '@rush-temp/signalcommandmap': file:projects/signalcommandmap.tgz
   '@rush-temp/signals': file:projects/signals.tgz
-  '@rushstack/eslint-config': 2.3.4_eslint@7.28.0+typescript@4.2.4
+  '@rushstack/eslint-config': 2.3.4_eslint@7.29.0+typescript@4.2.4
   '@types/bluebird': 3.5.35
   '@types/chai': 4.2.18
   '@types/core-js': 2.5.4
@@ -131,12 +131,12 @@ dependencies:
   easeljs: 1.0.2
   es6-map: 0.1.5
   es6-symbol: 3.1.3
-  eslint: 7.28.0
-  eslint-plugin-import: 2.23.4_eslint@7.28.0
-  eslint-plugin-jsdoc: 35.1.3_eslint@7.28.0
-  eslint-plugin-prefer-arrow: 1.2.3_eslint@7.28.0
-  eslint-plugin-react: 7.24.0_eslint@7.28.0
-  eslint-plugin-unicorn: 33.0.1_eslint@7.28.0
+  eslint: 7.29.0
+  eslint-plugin-import: 2.23.4_eslint@7.29.0
+  eslint-plugin-jsdoc: 35.3.2_eslint@7.29.0
+  eslint-plugin-prefer-arrow: 1.2.3_eslint@7.29.0
+  eslint-plugin-react: 7.24.0_eslint@7.29.0
+  eslint-plugin-unicorn: 33.0.1_eslint@7.29.0
   glslify: 7.1.1
   gsap: 1.20.6
   html-webpack-plugin: 5.3.1_webpack@5.38.1
@@ -223,7 +223,7 @@ packages:
       - supports-color
     dev: false
 
-  /@babel/eslint-parser/7.14.5_@babel+core@7.14.5+eslint@7.28.0:
+  /@babel/eslint-parser/7.14.5_@babel+core@7.14.5+eslint@7.29.0:
     resolution: {integrity: sha512-20BlOHuGf3UXS7z1QPyllM9Gz8SEgcp/UcKeUmdHIFZO6HF1n+3KaLpeyfwWvjY/Os/ynPX3k8qXE/nZ5dw/0g==}
     engines: {node: ^10.13.0 || ^12.13.0 || >=14.0.0}
     peerDependencies:
@@ -231,7 +231,7 @@ packages:
       eslint: '>=7.5.0'
     dependencies:
       '@babel/core': 7.14.5
-      eslint: 7.28.0
+      eslint: 7.29.0
       eslint-scope: 5.1.1
       eslint-visitor-keys: 2.1.0
       semver: 6.3.0
@@ -823,23 +823,23 @@ packages:
       url: 0.11.0
     dev: false
 
-  /@rushstack/eslint-config/2.3.4_eslint@7.28.0+typescript@4.2.4:
+  /@rushstack/eslint-config/2.3.4_eslint@7.29.0+typescript@4.2.4:
     resolution: {integrity: sha512-mwEfj3e260slxM57A2eMtkNpVM9J2iMGoqzWfD4hHtO+dcZT6rEeYG4djwj61ZriNJdAY8QIMMhfuID/xV+cyw==}
     peerDependencies:
       eslint: ^6.0.0 || ^7.0.0
       typescript: '>=3.0.0'
     dependencies:
       '@rushstack/eslint-patch': 1.0.6
-      '@rushstack/eslint-plugin': 0.7.3_eslint@7.28.0+typescript@4.2.4
-      '@rushstack/eslint-plugin-packlets': 0.2.2_eslint@7.28.0+typescript@4.2.4
-      '@rushstack/eslint-plugin-security': 0.1.4_eslint@7.28.0+typescript@4.2.4
-      '@typescript-eslint/eslint-plugin': 3.4.0_8002d252628dfa93a4ba3eb5839035e4
-      '@typescript-eslint/experimental-utils': 3.10.1_eslint@7.28.0+typescript@4.2.4
-      '@typescript-eslint/parser': 3.4.0_eslint@7.28.0+typescript@4.2.4
+      '@rushstack/eslint-plugin': 0.7.3_eslint@7.29.0+typescript@4.2.4
+      '@rushstack/eslint-plugin-packlets': 0.2.2_eslint@7.29.0+typescript@4.2.4
+      '@rushstack/eslint-plugin-security': 0.1.4_eslint@7.29.0+typescript@4.2.4
+      '@typescript-eslint/eslint-plugin': 3.4.0_c0de57a3215d64a2728927ceaaae7977
+      '@typescript-eslint/experimental-utils': 3.10.1_eslint@7.29.0+typescript@4.2.4
+      '@typescript-eslint/parser': 3.4.0_eslint@7.29.0+typescript@4.2.4
       '@typescript-eslint/typescript-estree': 3.4.0_typescript@4.2.4
-      eslint: 7.28.0
+      eslint: 7.29.0
       eslint-plugin-promise: 4.2.1
-      eslint-plugin-react: 7.20.6_eslint@7.28.0
+      eslint-plugin-react: 7.20.6_eslint@7.29.0
       eslint-plugin-tsdoc: 0.2.14
       typescript: 4.2.4
     transitivePeerDependencies:
@@ -850,40 +850,40 @@ packages:
     resolution: {integrity: sha512-Myxw//kzromB9yWgS8qYGuGVf91oBUUJpNvy5eM50sqvmKLbKjwLxohJnkWGTeeI9v9IBMtPLxz5Gc60FIfvCA==}
     dev: false
 
-  /@rushstack/eslint-plugin-packlets/0.2.2_eslint@7.28.0+typescript@4.2.4:
+  /@rushstack/eslint-plugin-packlets/0.2.2_eslint@7.29.0+typescript@4.2.4:
     resolution: {integrity: sha512-8kKs5fq9Mm9sP4W7ETbp48eH6iECfXDKP1mdg2iBPl8CaZZHMzVYC2vQSSSOOMv+OV23LreRFWV0LlllEDuD3Q==}
     peerDependencies:
       eslint: ^6.0.0 || ^7.0.0
     dependencies:
       '@rushstack/tree-pattern': 0.2.1
-      '@typescript-eslint/experimental-utils': 3.10.1_eslint@7.28.0+typescript@4.2.4
-      eslint: 7.28.0
+      '@typescript-eslint/experimental-utils': 3.10.1_eslint@7.29.0+typescript@4.2.4
+      eslint: 7.29.0
     transitivePeerDependencies:
       - supports-color
       - typescript
     dev: false
 
-  /@rushstack/eslint-plugin-security/0.1.4_eslint@7.28.0+typescript@4.2.4:
+  /@rushstack/eslint-plugin-security/0.1.4_eslint@7.29.0+typescript@4.2.4:
     resolution: {integrity: sha512-AiNUS5H4/RvyNI9FDKdd4ya3PovjpPVU9Pr7He1JPvqLHOCT8P9n5YpRHjxx0ftD77mDLT5HrcOKjxTW7BZQHg==}
     peerDependencies:
       eslint: ^6.0.0 || ^7.0.0
     dependencies:
       '@rushstack/tree-pattern': 0.2.1
-      '@typescript-eslint/experimental-utils': 3.10.1_eslint@7.28.0+typescript@4.2.4
-      eslint: 7.28.0
+      '@typescript-eslint/experimental-utils': 3.10.1_eslint@7.29.0+typescript@4.2.4
+      eslint: 7.29.0
     transitivePeerDependencies:
       - supports-color
       - typescript
     dev: false
 
-  /@rushstack/eslint-plugin/0.7.3_eslint@7.28.0+typescript@4.2.4:
+  /@rushstack/eslint-plugin/0.7.3_eslint@7.29.0+typescript@4.2.4:
     resolution: {integrity: sha512-8+AqxybpcJJuxn0+fsWwMIMj2g2tLfPrbOyhEi+Rozh36eTmgGXF45qh8bHE1gicsX4yGDj2ob1P62oQV6hs3g==}
     peerDependencies:
       eslint: ^6.0.0 || ^7.0.0
     dependencies:
       '@rushstack/tree-pattern': 0.2.1
-      '@typescript-eslint/experimental-utils': 3.10.1_eslint@7.28.0+typescript@4.2.4
-      eslint: 7.28.0
+      '@typescript-eslint/experimental-utils': 3.10.1_eslint@7.29.0+typescript@4.2.4
+      eslint: 7.29.0
     transitivePeerDependencies:
       - supports-color
       - typescript
@@ -1086,7 +1086,7 @@ packages:
     dev: false
     optional: true
 
-  /@typescript-eslint/eslint-plugin/3.4.0_8002d252628dfa93a4ba3eb5839035e4:
+  /@typescript-eslint/eslint-plugin/3.4.0_c0de57a3215d64a2728927ceaaae7977:
     resolution: {integrity: sha512-wfkpiqaEVhZIuQRmudDszc01jC/YR7gMSxa6ulhggAe/Hs0KVIuo9wzvFiDbG3JD5pRFQoqnf4m7REDsUvBnMQ==}
     engines: {node: ^10.12.0 || >=12.0.0}
     peerDependencies:
@@ -1097,10 +1097,10 @@ packages:
       typescript:
         optional: true
     dependencies:
-      '@typescript-eslint/experimental-utils': 3.4.0_eslint@7.28.0+typescript@4.2.4
-      '@typescript-eslint/parser': 3.4.0_eslint@7.28.0+typescript@4.2.4
+      '@typescript-eslint/experimental-utils': 3.4.0_eslint@7.29.0+typescript@4.2.4
+      '@typescript-eslint/parser': 3.4.0_eslint@7.29.0+typescript@4.2.4
       debug: 4.3.1
-      eslint: 7.28.0
+      eslint: 7.29.0
       functional-red-black-tree: 1.0.1
       regexpp: 3.1.0
       semver: 7.3.5
@@ -1110,7 +1110,7 @@ packages:
       - supports-color
     dev: false
 
-  /@typescript-eslint/experimental-utils/3.10.1_eslint@7.28.0+typescript@4.2.4:
+  /@typescript-eslint/experimental-utils/3.10.1_eslint@7.29.0+typescript@4.2.4:
     resolution: {integrity: sha512-DewqIgscDzmAfd5nOGe4zm6Bl7PKtMG2Ad0KG8CUZAHlXfAKTF9Ol5PXhiMh39yRL2ChRH1cuuUGOcVyyrhQIw==}
     engines: {node: ^10.12.0 || >=12.0.0}
     peerDependencies:
@@ -1119,7 +1119,7 @@ packages:
       '@types/json-schema': 7.0.7
       '@typescript-eslint/types': 3.10.1
       '@typescript-eslint/typescript-estree': 3.10.1_typescript@4.2.4
-      eslint: 7.28.0
+      eslint: 7.29.0
       eslint-scope: 5.1.1
       eslint-utils: 2.1.0
     transitivePeerDependencies:
@@ -1127,7 +1127,7 @@ packages:
       - typescript
     dev: false
 
-  /@typescript-eslint/experimental-utils/3.4.0_eslint@7.28.0+typescript@4.2.4:
+  /@typescript-eslint/experimental-utils/3.4.0_eslint@7.29.0+typescript@4.2.4:
     resolution: {integrity: sha512-rHPOjL43lOH1Opte4+dhC0a/+ks+8gOBwxXnyrZ/K4OTAChpSjP76fbI8Cglj7V5GouwVAGaK+xVwzqTyE/TPw==}
     engines: {node: ^10.12.0 || >=12.0.0}
     peerDependencies:
@@ -1135,7 +1135,7 @@ packages:
     dependencies:
       '@types/json-schema': 7.0.7
       '@typescript-eslint/typescript-estree': 3.4.0_typescript@4.2.4
-      eslint: 7.28.0
+      eslint: 7.29.0
       eslint-scope: 5.1.1
       eslint-utils: 2.1.0
     transitivePeerDependencies:
@@ -1143,7 +1143,7 @@ packages:
       - typescript
     dev: false
 
-  /@typescript-eslint/parser/3.4.0_eslint@7.28.0+typescript@4.2.4:
+  /@typescript-eslint/parser/3.4.0_eslint@7.29.0+typescript@4.2.4:
     resolution: {integrity: sha512-ZUGI/de44L5x87uX5zM14UYcbn79HSXUR+kzcqU42gH0AgpdB/TjuJy3m4ezI7Q/jk3wTQd755mxSDLhQP79KA==}
     engines: {node: ^10.12.0 || >=12.0.0}
     peerDependencies:
@@ -1154,9 +1154,9 @@ packages:
         optional: true
     dependencies:
       '@types/eslint-visitor-keys': 1.0.0
-      '@typescript-eslint/experimental-utils': 3.4.0_eslint@7.28.0+typescript@4.2.4
+      '@typescript-eslint/experimental-utils': 3.4.0_eslint@7.29.0+typescript@4.2.4
       '@typescript-eslint/typescript-estree': 3.4.0_typescript@4.2.4
-      eslint: 7.28.0
+      eslint: 7.29.0
       eslint-visitor-keys: 1.3.0
       typescript: 4.2.4
     transitivePeerDependencies:
@@ -3071,7 +3071,7 @@ packages:
       pkg-dir: 2.0.0
     dev: false
 
-  /eslint-plugin-import/2.23.4_eslint@7.28.0:
+  /eslint-plugin-import/2.23.4_eslint@7.29.0:
     resolution: {integrity: sha512-6/wP8zZRsnQFiR3iaPFgh5ImVRM1WN5NUWfTIRqwOdeiGJlBcSk82o1FEVq8yXmy4lkIzTo7YhHCIxlU/2HyEQ==}
     engines: {node: '>=4'}
     peerDependencies:
@@ -3081,7 +3081,7 @@ packages:
       array.prototype.flat: 1.2.4
       debug: 2.6.9
       doctrine: 2.1.0
-      eslint: 7.28.0
+      eslint: 7.29.0
       eslint-import-resolver-node: 0.3.4
       eslint-module-utils: 2.6.1
       find-up: 2.1.0
@@ -3095,8 +3095,8 @@ packages:
       tsconfig-paths: 3.9.0
     dev: false
 
-  /eslint-plugin-jsdoc/35.1.3_eslint@7.28.0:
-    resolution: {integrity: sha512-9AVpCssb7+cfEx3GJtnhJ8yLOVsHDKGMgngcfvwFBxdcOVPFhLENReL5aX1R2gNiG3psqIWFVBpSPnPQTrMZUA==}
+  /eslint-plugin-jsdoc/35.3.2_eslint@7.29.0:
+    resolution: {integrity: sha512-r3qfbByMZ4O5Y8O6aHxo1AdgdpwTQSD72anIZuhjNI6ZkMtjhpSkkPN3cY/tsZtmWeMH+1pB/nblWIAr3F0lxA==}
     engines: {node: '>=12'}
     peerDependencies:
       eslint: ^6.0.0 || ^7.0.0
@@ -3104,7 +3104,7 @@ packages:
       '@es-joy/jsdoccomment': 0.8.0-alpha.2
       comment-parser: 1.1.5
       debug: 4.3.1
-      eslint: 7.28.0
+      eslint: 7.29.0
       esquery: 1.4.0
       jsdoc-type-pratt-parser: 1.0.4
       lodash: 4.17.21
@@ -3115,12 +3115,12 @@ packages:
       - supports-color
     dev: false
 
-  /eslint-plugin-prefer-arrow/1.2.3_eslint@7.28.0:
+  /eslint-plugin-prefer-arrow/1.2.3_eslint@7.29.0:
     resolution: {integrity: sha512-J9I5PKCOJretVuiZRGvPQxCbllxGAV/viI20JO3LYblAodofBxyMnZAJ+WGeClHgANnSJberTNoFWWjrWKBuXQ==}
     peerDependencies:
       eslint: '>=2.0.0'
     dependencies:
-      eslint: 7.28.0
+      eslint: 7.29.0
     dev: false
 
   /eslint-plugin-promise/4.2.1:
@@ -3128,7 +3128,7 @@ packages:
     engines: {node: '>=6'}
     dev: false
 
-  /eslint-plugin-react/7.20.6_eslint@7.28.0:
+  /eslint-plugin-react/7.20.6_eslint@7.29.0:
     resolution: {integrity: sha512-kidMTE5HAEBSLu23CUDvj8dc3LdBU0ri1scwHBZjI41oDv4tjsWZKU7MQccFzH1QYPYhsnTF2ovh7JlcIcmxgg==}
     engines: {node: '>=4'}
     peerDependencies:
@@ -3137,7 +3137,7 @@ packages:
       array-includes: 3.1.3
       array.prototype.flatmap: 1.2.4
       doctrine: 2.1.0
-      eslint: 7.28.0
+      eslint: 7.29.0
       has: 1.0.3
       jsx-ast-utils: 2.4.1
       object.entries: 1.1.4
@@ -3148,7 +3148,7 @@ packages:
       string.prototype.matchall: 4.0.5
     dev: false
 
-  /eslint-plugin-react/7.24.0_eslint@7.28.0:
+  /eslint-plugin-react/7.24.0_eslint@7.29.0:
     resolution: {integrity: sha512-KJJIx2SYx7PBx3ONe/mEeMz4YE0Lcr7feJTCMyyKb/341NcjuAgim3Acgan89GfPv7nxXK2+0slu0CWXYM4x+Q==}
     engines: {node: '>=4'}
     peerDependencies:
@@ -3157,7 +3157,7 @@ packages:
       array-includes: 3.1.3
       array.prototype.flatmap: 1.2.4
       doctrine: 2.1.0
-      eslint: 7.28.0
+      eslint: 7.29.0
       has: 1.0.3
       jsx-ast-utils: 3.2.0
       minimatch: 3.0.4
@@ -3176,7 +3176,7 @@ packages:
       '@microsoft/tsdoc-config': 0.15.2
     dev: false
 
-  /eslint-plugin-unicorn/33.0.1_eslint@7.28.0:
+  /eslint-plugin-unicorn/33.0.1_eslint@7.29.0:
     resolution: {integrity: sha512-VxX/L/9DUEyB3D0v00185LrgsB5/fBwkgA4IC7ehHRu5hFSgA6VecmdpFybhsr4GQ/Y1iyXMHf6q+JKvcR2MwA==}
     engines: {node: '>=12'}
     peerDependencies:
@@ -3184,9 +3184,9 @@ packages:
     dependencies:
       ci-info: 3.2.0
       clean-regexp: 1.0.0
-      eslint: 7.28.0
-      eslint-template-visitor: 2.3.2_eslint@7.28.0
-      eslint-utils: 3.0.0_eslint@7.28.0
+      eslint: 7.29.0
+      eslint-template-visitor: 2.3.2_eslint@7.29.0
+      eslint-utils: 3.0.0_eslint@7.29.0
       import-modules: 2.1.0
       is-builtin-module: 3.1.0
       lodash: 4.17.21
@@ -3208,14 +3208,14 @@ packages:
       estraverse: 4.3.0
     dev: false
 
-  /eslint-template-visitor/2.3.2_eslint@7.28.0:
+  /eslint-template-visitor/2.3.2_eslint@7.29.0:
     resolution: {integrity: sha512-3ydhqFpuV7x1M9EK52BPNj6V0Kwu0KKkcIAfpUhwHbR8ocRln/oUHgfxQupY8O1h4Qv/POHDumb/BwwNfxbtnA==}
     peerDependencies:
       eslint: '>=7.0.0'
     dependencies:
       '@babel/core': 7.14.5
-      '@babel/eslint-parser': 7.14.5_@babel+core@7.14.5+eslint@7.28.0
-      eslint: 7.28.0
+      '@babel/eslint-parser': 7.14.5_@babel+core@7.14.5+eslint@7.29.0
+      eslint: 7.29.0
       eslint-visitor-keys: 2.1.0
       esquery: 1.4.0
       multimap: 1.1.0
@@ -3230,13 +3230,13 @@ packages:
       eslint-visitor-keys: 1.3.0
     dev: false
 
-  /eslint-utils/3.0.0_eslint@7.28.0:
+  /eslint-utils/3.0.0_eslint@7.29.0:
     resolution: {integrity: sha512-uuQC43IGctw68pJA1RgbQS8/NP7rch6Cwd4j3ZBtgo4/8Flj4eGE7ZYSZRN3iq5pVUv6GPdW5Z1RFleo84uLDA==}
     engines: {node: ^10.0.0 || ^12.0.0 || >= 14.0.0}
     peerDependencies:
       eslint: '>=5'
     dependencies:
-      eslint: 7.28.0
+      eslint: 7.29.0
       eslint-visitor-keys: 2.1.0
     dev: false
 
@@ -3250,8 +3250,8 @@ packages:
     engines: {node: '>=10'}
     dev: false
 
-  /eslint/7.28.0:
-    resolution: {integrity: sha512-UMfH0VSjP0G4p3EWirscJEQ/cHqnT/iuH6oNZOB94nBjWbMnhGEPxsZm1eyIW0C/9jLI0Fow4W5DXLjEI7mn1g==}
+  /eslint/7.29.0:
+    resolution: {integrity: sha512-82G/JToB9qIy/ArBzIWG9xvvwL3R86AlCjtGw+A29OMZDqhTybz/MByORSukGxeI+YPCR4coYyITKk8BFH9nDA==}
     engines: {node: ^10.12.0 || >=12.0.0}
     hasBin: true
     dependencies:
@@ -8479,12 +8479,12 @@ packages:
     dev: false
 
   file:projects/core.tgz:
-    resolution: {integrity: sha512-vJDyhAyBF2sivUbSEVMGs4PNtw+/pybGNngs5SlYoc7CRsi7dtXBcCbx5Z9jnkszmMFOdo79/K0wRfz9ldtf1Q==, tarball: file:projects/core.tgz}
+    resolution: {integrity: sha512-oKEJxP8EyoA3aKE7P8pYeYhI3gUHxXG/DZlIQ/91kGs106DWb9JSqqXZ6aMh2d/GlVYqzsWj6OQHmOmw8m/Ulw==, tarball: file:projects/core.tgz}
     name: '@rush-temp/core'
     version: 0.0.0
     dependencies:
       '@istanbuljs/nyc-config-typescript': 1.0.1_40f74ebf3b42f8d97356b2262606f547
-      '@rushstack/eslint-config': 2.3.4_eslint@7.28.0+typescript@4.2.4
+      '@rushstack/eslint-config': 2.3.4_eslint@7.29.0+typescript@4.2.4
       '@types/bluebird': 3.5.35
       '@types/chai': 4.2.18
       '@types/mocha': 8.2.2
@@ -8495,12 +8495,12 @@ packages:
       chai: 4.3.4
       es6-map: 0.1.5
       es6-symbol: 3.1.3
-      eslint: 7.28.0
-      eslint-plugin-import: 2.23.4_eslint@7.28.0
-      eslint-plugin-jsdoc: 35.1.3_eslint@7.28.0
-      eslint-plugin-prefer-arrow: 1.2.3_eslint@7.28.0
-      eslint-plugin-react: 7.24.0_eslint@7.28.0
-      eslint-plugin-unicorn: 33.0.1_eslint@7.28.0
+      eslint: 7.29.0
+      eslint-plugin-import: 2.23.4_eslint@7.29.0
+      eslint-plugin-jsdoc: 35.3.2_eslint@7.29.0
+      eslint-plugin-prefer-arrow: 1.2.3_eslint@7.29.0
+      eslint-plugin-react: 7.24.0_eslint@7.29.0
+      eslint-plugin-unicorn: 33.0.1_eslint@7.29.0
       glslify: 7.1.1
       imports-loader: 3.0.0_webpack@5.38.1
       inversify: 5.1.1
@@ -8550,12 +8550,12 @@ packages:
     dev: false
 
   file:projects/createjs.tgz:
-    resolution: {integrity: sha512-Ptu0QI3uGC4u7orpleIQwg7Xv8/XvUvz5DO8vRRxxiL84ycjOccA/R9SEsEAO+OFPm/EYLHu3bZGRQjfWnDL+Q==, tarball: file:projects/createjs.tgz}
+    resolution: {integrity: sha512-WoHD8h6cVopSHaxSG9m1y1Zv6f1qRN2RxFG3JlaNeo0P/aqGz4r4mM93/sick4CFGbzOiS1snz+AjFyR/ZHpnw==, tarball: file:projects/createjs.tgz}
     name: '@rush-temp/createjs'
     version: 0.0.0
     dependencies:
       '@mcler/webpack-concat-plugin': 4.1.3_113243b053f7620383bd9a5a80771064
-      '@rushstack/eslint-config': 2.3.4_eslint@7.28.0+typescript@4.2.4
+      '@rushstack/eslint-config': 2.3.4_eslint@7.29.0+typescript@4.2.4
       '@types/bluebird': 3.5.35
       '@types/chai': 4.2.18
       '@types/createjs-lib': 0.0.29
@@ -8572,12 +8572,12 @@ packages:
       easeljs: 1.0.2
       es6-map: 0.1.5
       es6-symbol: 3.1.3
-      eslint: 7.28.0
-      eslint-plugin-import: 2.23.4_eslint@7.28.0
-      eslint-plugin-jsdoc: 35.1.3_eslint@7.28.0
-      eslint-plugin-prefer-arrow: 1.2.3_eslint@7.28.0
-      eslint-plugin-react: 7.24.0_eslint@7.28.0
-      eslint-plugin-unicorn: 33.0.1_eslint@7.28.0
+      eslint: 7.29.0
+      eslint-plugin-import: 2.23.4_eslint@7.29.0
+      eslint-plugin-jsdoc: 35.3.2_eslint@7.29.0
+      eslint-plugin-prefer-arrow: 1.2.3_eslint@7.29.0
+      eslint-plugin-react: 7.24.0_eslint@7.29.0
+      eslint-plugin-unicorn: 33.0.1_eslint@7.29.0
       glslify: 7.1.1
       html-webpack-plugin: 5.3.1_webpack@5.38.1
       imports-loader: 3.0.0_webpack@5.38.1
@@ -8623,12 +8623,12 @@ packages:
     dev: false
 
   file:projects/eventemitter3.tgz:
-    resolution: {integrity: sha512-1Hu2omBL5W+7rMuLufddg5nVyhz+Igs4FHoJIw3I6tu7QM2GPMzdeN0qYQjgr2h59dg4cyD2hAtXHYfH/ZHnxw==, tarball: file:projects/eventemitter3.tgz}
+    resolution: {integrity: sha512-V0hKblvpifinWLJUAuhBc04Fc+GqgjPLCI3zzeyiffUn9yqmJprofiY7EEF6feYxO01sUmxVjVkx904wdEUWgA==, tarball: file:projects/eventemitter3.tgz}
     name: '@rush-temp/eventemitter3'
     version: 0.0.0
     dependencies:
       '@istanbuljs/nyc-config-typescript': 1.0.1_40f74ebf3b42f8d97356b2262606f547
-      '@rushstack/eslint-config': 2.3.4_eslint@7.28.0+typescript@4.2.4
+      '@rushstack/eslint-config': 2.3.4_eslint@7.29.0+typescript@4.2.4
       '@types/bluebird': 3.5.35
       '@types/chai': 4.2.18
       '@types/mocha': 8.2.2
@@ -8639,12 +8639,12 @@ packages:
       chai: 4.3.4
       es6-map: 0.1.5
       es6-symbol: 3.1.3
-      eslint: 7.28.0
-      eslint-plugin-import: 2.23.4_eslint@7.28.0
-      eslint-plugin-jsdoc: 35.1.3_eslint@7.28.0
-      eslint-plugin-prefer-arrow: 1.2.3_eslint@7.28.0
-      eslint-plugin-react: 7.24.0_eslint@7.28.0
-      eslint-plugin-unicorn: 33.0.1_eslint@7.28.0
+      eslint: 7.29.0
+      eslint-plugin-import: 2.23.4_eslint@7.29.0
+      eslint-plugin-jsdoc: 35.3.2_eslint@7.29.0
+      eslint-plugin-prefer-arrow: 1.2.3_eslint@7.29.0
+      eslint-plugin-react: 7.24.0_eslint@7.29.0
+      eslint-plugin-unicorn: 33.0.1_eslint@7.29.0
       eventemitter3: 4.0.7
       glslify: 7.1.1
       imports-loader: 3.0.0_webpack@5.38.1
@@ -8693,12 +8693,12 @@ packages:
     dev: false
 
   file:projects/game-battleship.tgz_sinon-chai@3.7.0:
-    resolution: {integrity: sha512-wEDLPCXHGzwOIDuUL+nz7ryteSRiB3oLQvjsocrqbirslq7Cmscq28QZlUrIlo5epz1mZRqSVQ+NS4wLaamZFg==, tarball: file:projects/game-battleship.tgz}
+    resolution: {integrity: sha512-OIFbpFdYbG/TnKE1iGDuFDu/dYgPoYe+BYEnej/JroR/JfyZvaFaCXkZvQD4+Hkof5p3JbaPsjbYf3YotVEJjg==, tarball: file:projects/game-battleship.tgz}
     id: file:projects/game-battleship.tgz
     name: '@rush-temp/game-battleship'
     version: 0.0.0
     dependencies:
-      '@rushstack/eslint-config': 2.3.4_eslint@7.28.0+typescript@4.2.4
+      '@rushstack/eslint-config': 2.3.4_eslint@7.29.0+typescript@4.2.4
       '@types/bluebird': 3.5.35
       '@types/chai': 4.2.18
       '@types/mocha': 8.2.2
@@ -8708,12 +8708,12 @@ packages:
       chai: 4.3.4
       es6-map: 0.1.5
       es6-symbol: 3.1.3
-      eslint: 7.28.0
-      eslint-plugin-import: 2.23.4_eslint@7.28.0
-      eslint-plugin-jsdoc: 35.1.3_eslint@7.28.0
-      eslint-plugin-prefer-arrow: 1.2.3_eslint@7.28.0
-      eslint-plugin-react: 7.24.0_eslint@7.28.0
-      eslint-plugin-unicorn: 33.0.1_eslint@7.28.0
+      eslint: 7.29.0
+      eslint-plugin-import: 2.23.4_eslint@7.29.0
+      eslint-plugin-jsdoc: 35.3.2_eslint@7.29.0
+      eslint-plugin-prefer-arrow: 1.2.3_eslint@7.29.0
+      eslint-plugin-react: 7.24.0_eslint@7.29.0
+      eslint-plugin-unicorn: 33.0.1_eslint@7.29.0
       gsap: 1.20.6
       html-webpack-plugin: 5.3.1_webpack@5.38.1
       istanbul-instrumenter-loader: 3.0.1_webpack@5.38.1
@@ -8757,12 +8757,12 @@ packages:
     dev: false
 
   file:projects/game-match3.tgz_sinon-chai@3.7.0:
-    resolution: {integrity: sha512-xYUs4S3zDWdY0fIYfngwyluWRk1o8g0o5vHWTMC1SngLmXdzrrmAkp8uKdFX47LBqh327kRLszp67FdtR5SV9g==, tarball: file:projects/game-match3.tgz}
+    resolution: {integrity: sha512-JWWWG1IVBUP9wn5A8iO/BWzuqSC64EWtceKjtPAKCV9PKbSHVAozUxF62J39EhErNPO44FY4KN90VuhzW7XCJA==, tarball: file:projects/game-match3.tgz}
     id: file:projects/game-match3.tgz
     name: '@rush-temp/game-match3'
     version: 0.0.0
     dependencies:
-      '@rushstack/eslint-config': 2.3.4_eslint@7.28.0+typescript@4.2.4
+      '@rushstack/eslint-config': 2.3.4_eslint@7.29.0+typescript@4.2.4
       '@types/bluebird': 3.5.35
       '@types/chai': 4.2.18
       '@types/mocha': 8.2.2
@@ -8772,12 +8772,12 @@ packages:
       chai: 4.3.4
       es6-map: 0.1.5
       es6-symbol: 3.1.3
-      eslint: 7.28.0
-      eslint-plugin-import: 2.23.4_eslint@7.28.0
-      eslint-plugin-jsdoc: 35.1.3_eslint@7.28.0
-      eslint-plugin-prefer-arrow: 1.2.3_eslint@7.28.0
-      eslint-plugin-react: 7.24.0_eslint@7.28.0
-      eslint-plugin-unicorn: 33.0.1_eslint@7.28.0
+      eslint: 7.29.0
+      eslint-plugin-import: 2.23.4_eslint@7.29.0
+      eslint-plugin-jsdoc: 35.3.2_eslint@7.29.0
+      eslint-plugin-prefer-arrow: 1.2.3_eslint@7.29.0
+      eslint-plugin-react: 7.24.0_eslint@7.29.0
+      eslint-plugin-unicorn: 33.0.1_eslint@7.29.0
       gsap: 1.20.6
       html-webpack-plugin: 5.3.1_webpack@5.38.1
       istanbul-instrumenter-loader: 3.0.1_webpack@5.38.1
@@ -8821,12 +8821,12 @@ packages:
     dev: false
 
   file:projects/game-minesweeper.tgz_sinon-chai@3.7.0:
-    resolution: {integrity: sha512-1b1LOBVoU2k4w1mwqEQjFOq6JwzcrbSlhGWSQWEJ7btuh4t5k8i8MH4PQEJN8vDw4bnSgHYo5MM8VHEHWLV4Eg==, tarball: file:projects/game-minesweeper.tgz}
+    resolution: {integrity: sha512-fWQL9HO2p2s5g32QZ4glu9OW7Luc2NGFT5LRzQw8A1jiAaz5vgmeVh7VUeYipXE9NF2Jc5jqPQLHe+1H0X1OTw==, tarball: file:projects/game-minesweeper.tgz}
     id: file:projects/game-minesweeper.tgz
     name: '@rush-temp/game-minesweeper'
     version: 0.0.0
     dependencies:
-      '@rushstack/eslint-config': 2.3.4_eslint@7.28.0+typescript@4.2.4
+      '@rushstack/eslint-config': 2.3.4_eslint@7.29.0+typescript@4.2.4
       '@types/bluebird': 3.5.35
       '@types/chai': 4.2.18
       '@types/mocha': 8.2.2
@@ -8836,12 +8836,12 @@ packages:
       chai: 4.3.4
       es6-map: 0.1.5
       es6-symbol: 3.1.3
-      eslint: 7.28.0
-      eslint-plugin-import: 2.23.4_eslint@7.28.0
-      eslint-plugin-jsdoc: 35.1.3_eslint@7.28.0
-      eslint-plugin-prefer-arrow: 1.2.3_eslint@7.28.0
-      eslint-plugin-react: 7.24.0_eslint@7.28.0
-      eslint-plugin-unicorn: 33.0.1_eslint@7.28.0
+      eslint: 7.29.0
+      eslint-plugin-import: 2.23.4_eslint@7.29.0
+      eslint-plugin-jsdoc: 35.3.2_eslint@7.29.0
+      eslint-plugin-prefer-arrow: 1.2.3_eslint@7.29.0
+      eslint-plugin-react: 7.24.0_eslint@7.29.0
+      eslint-plugin-unicorn: 33.0.1_eslint@7.29.0
       gsap: 1.20.6
       html-webpack-plugin: 5.3.1_webpack@5.38.1
       istanbul-instrumenter-loader: 3.0.1_webpack@5.38.1
@@ -8885,17 +8885,17 @@ packages:
     dev: false
 
   file:projects/game-scratchcard.tgz:
-    resolution: {integrity: sha512-mAORuMlfLN50Vl1a+EfNQF4xWWFDezf5+U05Nkuqt+BB++bX6w96vAQ0gmHW3wsUTYnMhpPkwbdTFQUBLklM+w==, tarball: file:projects/game-scratchcard.tgz}
+    resolution: {integrity: sha512-wgfTunUpJBdC+b6KjdqOUckQXmxDvRc1+8P20qo5jhbyWEuQ+cyk3ZjBHOlrNvwI7o9vu5HxmRfQmzsxwqJBxg==, tarball: file:projects/game-scratchcard.tgz}
     name: '@rush-temp/game-scratchcard'
     version: 0.0.0
     dependencies:
-      '@rushstack/eslint-config': 2.3.4_eslint@7.28.0+typescript@4.2.4
-      eslint: 7.28.0
-      eslint-plugin-import: 2.23.4_eslint@7.28.0
-      eslint-plugin-jsdoc: 35.1.3_eslint@7.28.0
-      eslint-plugin-prefer-arrow: 1.2.3_eslint@7.28.0
-      eslint-plugin-react: 7.24.0_eslint@7.28.0
-      eslint-plugin-unicorn: 33.0.1_eslint@7.28.0
+      '@rushstack/eslint-config': 2.3.4_eslint@7.29.0+typescript@4.2.4
+      eslint: 7.29.0
+      eslint-plugin-import: 2.23.4_eslint@7.29.0
+      eslint-plugin-jsdoc: 35.3.2_eslint@7.29.0
+      eslint-plugin-prefer-arrow: 1.2.3_eslint@7.29.0
+      eslint-plugin-react: 7.24.0_eslint@7.29.0
+      eslint-plugin-unicorn: 33.0.1_eslint@7.29.0
       html-webpack-plugin: 5.3.1_webpack@5.38.1
       imports-loader: 3.0.0_webpack@5.38.1
       pixi.js: 5.2.1
@@ -8921,17 +8921,17 @@ packages:
     dev: false
 
   file:projects/game-spaceinvaders.tgz:
-    resolution: {integrity: sha512-Xf22YD+wnXyAlUKWPV0p2OQgg6g5tE8WwMI8dS5o3BeBAmV+N2aeTLvufqabXhhz7IfXB8233BrJmMSFubK4zg==, tarball: file:projects/game-spaceinvaders.tgz}
+    resolution: {integrity: sha512-yFuIBzw+16aXVFlVT40T1p2trYGO2ohXO3+UBVNce6QNjRmxRudJOsh0QLljw91zEHZ5VlpWYIUm3eL38n2kYg==, tarball: file:projects/game-spaceinvaders.tgz}
     name: '@rush-temp/game-spaceinvaders'
     version: 0.0.0
     dependencies:
-      '@rushstack/eslint-config': 2.3.4_eslint@7.28.0+typescript@4.2.4
-      eslint: 7.28.0
-      eslint-plugin-import: 2.23.4_eslint@7.28.0
-      eslint-plugin-jsdoc: 35.1.3_eslint@7.28.0
-      eslint-plugin-prefer-arrow: 1.2.3_eslint@7.28.0
-      eslint-plugin-react: 7.24.0_eslint@7.28.0
-      eslint-plugin-unicorn: 33.0.1_eslint@7.28.0
+      '@rushstack/eslint-config': 2.3.4_eslint@7.29.0+typescript@4.2.4
+      eslint: 7.29.0
+      eslint-plugin-import: 2.23.4_eslint@7.29.0
+      eslint-plugin-jsdoc: 35.3.2_eslint@7.29.0
+      eslint-plugin-prefer-arrow: 1.2.3_eslint@7.29.0
+      eslint-plugin-react: 7.24.0_eslint@7.29.0
+      eslint-plugin-unicorn: 33.0.1_eslint@7.29.0
       html-webpack-plugin: 5.3.1_webpack@5.38.1
       imports-loader: 3.0.0_webpack@5.38.1
       pixi.js: 5.2.1
@@ -8957,22 +8957,22 @@ packages:
     dev: false
 
   file:projects/game-tetris.tgz:
-    resolution: {integrity: sha512-msOQXbG9kATpQzuvyH+wOkNhZuMcECqGJ8YM5ECFTiPQwr76h09EhZ99FsnIagJHOmxIlgI6vss9rqEHRt8mjQ==, tarball: file:projects/game-tetris.tgz}
+    resolution: {integrity: sha512-2gbX+2abB0siXXtydjb278GG6ZF7sangYJkZplX0r0W4y8EkBXihmc+4g6bzz+rfucLP7zG4dzKyH1TMzUjnIA==, tarball: file:projects/game-tetris.tgz}
     name: '@rush-temp/game-tetris'
     version: 0.0.0
     dependencies:
       '@istanbuljs/nyc-config-typescript': 1.0.1_40f74ebf3b42f8d97356b2262606f547
-      '@rushstack/eslint-config': 2.3.4_eslint@7.28.0+typescript@4.2.4
+      '@rushstack/eslint-config': 2.3.4_eslint@7.29.0+typescript@4.2.4
       '@types/chai': 4.2.18
       '@types/mocha': 8.2.2
       '@types/webpack-env': 1.16.0
       chai: 4.3.4
-      eslint: 7.28.0
-      eslint-plugin-import: 2.23.4_eslint@7.28.0
-      eslint-plugin-jsdoc: 35.1.3_eslint@7.28.0
-      eslint-plugin-prefer-arrow: 1.2.3_eslint@7.28.0
-      eslint-plugin-react: 7.24.0_eslint@7.28.0
-      eslint-plugin-unicorn: 33.0.1_eslint@7.28.0
+      eslint: 7.29.0
+      eslint-plugin-import: 2.23.4_eslint@7.29.0
+      eslint-plugin-jsdoc: 35.3.2_eslint@7.29.0
+      eslint-plugin-prefer-arrow: 1.2.3_eslint@7.29.0
+      eslint-plugin-react: 7.24.0_eslint@7.29.0
+      eslint-plugin-unicorn: 33.0.1_eslint@7.29.0
       html-webpack-plugin: 5.3.1_webpack@5.38.1
       mocha: 9.0.0
       nyc: 15.1.0
@@ -9000,12 +9000,12 @@ packages:
     dev: false
 
   file:projects/integration-macrobot-signalcommandmap.tgz:
-    resolution: {integrity: sha512-vDbLnJaurTgdDNoWdVi8UOrQFO8kvL+pLgv6ib4SsbbP3YbShtRkf0UVvB9872OSAZBXatqrXB5NWkoSVtNJ3Q==, tarball: file:projects/integration-macrobot-signalcommandmap.tgz}
+    resolution: {integrity: sha512-nE0efdcseAIQ/o/giD5kb83bwA8VqfHfSX0jkOjZHTvb8Du0Q0VrNnfyU7XAPWAQg9Vng09tsZxW/eZCsE76cQ==, tarball: file:projects/integration-macrobot-signalcommandmap.tgz}
     name: '@rush-temp/integration-macrobot-signalcommandmap'
     version: 0.0.0
     dependencies:
       '@istanbuljs/nyc-config-typescript': 1.0.1_40f74ebf3b42f8d97356b2262606f547
-      '@rushstack/eslint-config': 2.3.4_eslint@7.28.0+typescript@4.2.4
+      '@rushstack/eslint-config': 2.3.4_eslint@7.29.0+typescript@4.2.4
       '@types/bluebird': 3.5.35
       '@types/chai': 4.2.18
       '@types/mocha': 8.2.2
@@ -9016,12 +9016,12 @@ packages:
       chai: 4.3.4
       es6-map: 0.1.5
       es6-symbol: 3.1.3
-      eslint: 7.28.0
-      eslint-plugin-import: 2.23.4_eslint@7.28.0
-      eslint-plugin-jsdoc: 35.1.3_eslint@7.28.0
-      eslint-plugin-prefer-arrow: 1.2.3_eslint@7.28.0
-      eslint-plugin-react: 7.24.0_eslint@7.28.0
-      eslint-plugin-unicorn: 33.0.1_eslint@7.28.0
+      eslint: 7.29.0
+      eslint-plugin-import: 2.23.4_eslint@7.29.0
+      eslint-plugin-jsdoc: 35.3.2_eslint@7.29.0
+      eslint-plugin-prefer-arrow: 1.2.3_eslint@7.29.0
+      eslint-plugin-react: 7.24.0_eslint@7.29.0
+      eslint-plugin-unicorn: 33.0.1_eslint@7.29.0
       glslify: 7.1.1
       imports-loader: 3.0.0_webpack@5.38.1
       istanbul-instrumenter-loader: 3.0.1_webpack@5.38.1
@@ -9067,12 +9067,12 @@ packages:
     dev: false
 
   file:projects/macrobot.tgz:
-    resolution: {integrity: sha512-/E/hNW8r3ktOSr0GAqEHj1A6Kj4gD469Vw7I/Pr0oeiOdROy3dGn8PrUnN8e+epP3GfGoCUocENMv2UvOoUMeA==, tarball: file:projects/macrobot.tgz}
+    resolution: {integrity: sha512-zjmCPQBHPO4QNS/doi8jYN0K29PYOnW/t6Q9hydOOH1o8nHlJ6SieqOP3OTKn2OoCCowh+WfAsm4DUdKWka0nQ==, tarball: file:projects/macrobot.tgz}
     name: '@rush-temp/macrobot'
     version: 0.0.0
     dependencies:
       '@istanbuljs/nyc-config-typescript': 1.0.1_40f74ebf3b42f8d97356b2262606f547
-      '@rushstack/eslint-config': 2.3.4_eslint@7.28.0+typescript@4.2.4
+      '@rushstack/eslint-config': 2.3.4_eslint@7.29.0+typescript@4.2.4
       '@types/bluebird': 3.5.35
       '@types/chai': 4.2.18
       '@types/mocha': 8.2.2
@@ -9083,12 +9083,12 @@ packages:
       chai: 4.3.4
       es6-map: 0.1.5
       es6-symbol: 3.1.3
-      eslint: 7.28.0
-      eslint-plugin-import: 2.23.4_eslint@7.28.0
-      eslint-plugin-jsdoc: 35.1.3_eslint@7.28.0
-      eslint-plugin-prefer-arrow: 1.2.3_eslint@7.28.0
-      eslint-plugin-react: 7.24.0_eslint@7.28.0
-      eslint-plugin-unicorn: 33.0.1_eslint@7.28.0
+      eslint: 7.29.0
+      eslint-plugin-import: 2.23.4_eslint@7.29.0
+      eslint-plugin-jsdoc: 35.3.2_eslint@7.29.0
+      eslint-plugin-prefer-arrow: 1.2.3_eslint@7.29.0
+      eslint-plugin-react: 7.24.0_eslint@7.29.0
+      eslint-plugin-unicorn: 33.0.1_eslint@7.29.0
       glslify: 7.1.1
       imports-loader: 3.0.0_webpack@5.38.1
       istanbul-instrumenter-loader: 3.0.1_webpack@5.38.1
@@ -9134,11 +9134,11 @@ packages:
     dev: false
 
   file:projects/openfl.tgz:
-    resolution: {integrity: sha512-X1OJxkg7zgEfZYAKz6xAL1g0UrBhgZZ4eVBusozRovtZi0xEHkHqV/Cqvyc0HL4xbCa92Di1X6qZW0qo0AgBWA==, tarball: file:projects/openfl.tgz}
+    resolution: {integrity: sha512-Z2nZuE0hNrKdaLbM1UC9ulb+xPPufpuQmTngSuh1gZ0FdhP2PLV5vSSZTUrw/CWdig5+xrmz6G66eJF86pzN4Q==, tarball: file:projects/openfl.tgz}
     name: '@rush-temp/openfl'
     version: 0.0.0
     dependencies:
-      '@rushstack/eslint-config': 2.3.4_eslint@7.28.0+typescript@4.2.4
+      '@rushstack/eslint-config': 2.3.4_eslint@7.29.0+typescript@4.2.4
       '@types/bluebird': 3.5.35
       '@types/chai': 4.2.18
       '@types/core-js': 2.5.4
@@ -9152,12 +9152,12 @@ packages:
       copy-webpack-plugin: 9.0.0_webpack@5.38.1
       es6-map: 0.1.5
       es6-symbol: 3.1.3
-      eslint: 7.28.0
-      eslint-plugin-import: 2.23.4_eslint@7.28.0
-      eslint-plugin-jsdoc: 35.1.3_eslint@7.28.0
-      eslint-plugin-prefer-arrow: 1.2.3_eslint@7.28.0
-      eslint-plugin-react: 7.24.0_eslint@7.28.0
-      eslint-plugin-unicorn: 33.0.1_eslint@7.28.0
+      eslint: 7.29.0
+      eslint-plugin-import: 2.23.4_eslint@7.29.0
+      eslint-plugin-jsdoc: 35.3.2_eslint@7.29.0
+      eslint-plugin-prefer-arrow: 1.2.3_eslint@7.29.0
+      eslint-plugin-react: 7.24.0_eslint@7.29.0
+      eslint-plugin-unicorn: 33.0.1_eslint@7.29.0
       glslify: 7.1.1
       html-webpack-plugin: 5.3.1_webpack@5.38.1
       imports-loader: 3.0.0_webpack@5.38.1
@@ -9202,11 +9202,11 @@ packages:
     dev: false
 
   file:projects/phaser-ce-signalcommandmap.tgz:
-    resolution: {integrity: sha512-6fHYMxtib2gOofK/DgLEur7hJNtnB3i+p2eGvrcs5WAfZG4Onzo+9whZBKOK2Bjr/ryx4KXgAxhLTr6fVqn8Jw==, tarball: file:projects/phaser-ce-signalcommandmap.tgz}
+    resolution: {integrity: sha512-/cBo9j/SP/nsN6bi8QuXHZD56QIVowiDb50A6TwfI1GONkWRqxrmKnAG5tDNeWTyq3td6A6ts6IdD1Z8fqiQxQ==, tarball: file:projects/phaser-ce-signalcommandmap.tgz}
     name: '@rush-temp/phaser-ce-signalcommandmap'
     version: 0.0.0
     dependencies:
-      '@rushstack/eslint-config': 2.3.4_eslint@7.28.0+typescript@4.2.4
+      '@rushstack/eslint-config': 2.3.4_eslint@7.29.0+typescript@4.2.4
       '@types/bluebird': 3.5.35
       '@types/chai': 4.2.18
       '@types/mocha': 8.2.2
@@ -9217,12 +9217,12 @@ packages:
       chai: 4.3.4
       es6-map: 0.1.5
       es6-symbol: 3.1.3
-      eslint: 7.28.0
-      eslint-plugin-import: 2.23.4_eslint@7.28.0
-      eslint-plugin-jsdoc: 35.1.3_eslint@7.28.0
-      eslint-plugin-prefer-arrow: 1.2.3_eslint@7.28.0
-      eslint-plugin-react: 7.24.0_eslint@7.28.0
-      eslint-plugin-unicorn: 33.0.1_eslint@7.28.0
+      eslint: 7.29.0
+      eslint-plugin-import: 2.23.4_eslint@7.29.0
+      eslint-plugin-jsdoc: 35.3.2_eslint@7.29.0
+      eslint-plugin-prefer-arrow: 1.2.3_eslint@7.29.0
+      eslint-plugin-react: 7.24.0_eslint@7.29.0
+      eslint-plugin-unicorn: 33.0.1_eslint@7.29.0
       glslify: 7.1.1
       imports-loader: 3.0.0_webpack@5.38.1
       istanbul-instrumenter-loader: 3.0.1_webpack@5.38.1
@@ -9266,12 +9266,12 @@ packages:
     dev: false
 
   file:projects/phaser-ce.tgz:
-    resolution: {integrity: sha512-tteDMqGREvAkhUr9M1dHy7zjDl0b19d1A55qvTX1ZLG5hZqrQgW3YjqliCsX9vmsTk2OUrMu71YvXSoAqBGHXw==, tarball: file:projects/phaser-ce.tgz}
+    resolution: {integrity: sha512-pnbIXDCTs1L46vlKnCQa2FbToMO0gqCAUQwEpwme0eZ6m5ihpzukXW4eh2h7lK/JCCcFyx2OvUrUEjK6cmVu0Q==, tarball: file:projects/phaser-ce.tgz}
     name: '@rush-temp/phaser-ce'
     version: 0.0.0
     dependencies:
       '@mcler/webpack-concat-plugin': 4.1.3_113243b053f7620383bd9a5a80771064
-      '@rushstack/eslint-config': 2.3.4_eslint@7.28.0+typescript@4.2.4
+      '@rushstack/eslint-config': 2.3.4_eslint@7.29.0+typescript@4.2.4
       '@types/bluebird': 3.5.35
       '@types/chai': 4.2.18
       '@types/mocha': 8.2.2
@@ -9283,12 +9283,12 @@ packages:
       clean-webpack-plugin: 3.0.0_webpack@5.38.1
       es6-map: 0.1.5
       es6-symbol: 3.1.3
-      eslint: 7.28.0
-      eslint-plugin-import: 2.23.4_eslint@7.28.0
-      eslint-plugin-jsdoc: 35.1.3_eslint@7.28.0
-      eslint-plugin-prefer-arrow: 1.2.3_eslint@7.28.0
-      eslint-plugin-react: 7.24.0_eslint@7.28.0
-      eslint-plugin-unicorn: 33.0.1_eslint@7.28.0
+      eslint: 7.29.0
+      eslint-plugin-import: 2.23.4_eslint@7.29.0
+      eslint-plugin-jsdoc: 35.3.2_eslint@7.29.0
+      eslint-plugin-prefer-arrow: 1.2.3_eslint@7.29.0
+      eslint-plugin-react: 7.24.0_eslint@7.29.0
+      eslint-plugin-unicorn: 33.0.1_eslint@7.29.0
       glslify: 7.1.1
       html-webpack-plugin: 5.3.1_webpack@5.38.1
       imports-loader: 3.0.0_webpack@5.38.1
@@ -9334,12 +9334,12 @@ packages:
     dev: false
 
   file:projects/phaser.tgz:
-    resolution: {integrity: sha512-9ywIgeCYRkjCldM/5Cs+IY4vCTSSsAduRR7hKQQQCGTqo3IWNMfu38sKxzjhtcOLGWGhOdFykq8JXmjYSlp1Qw==, tarball: file:projects/phaser.tgz}
+    resolution: {integrity: sha512-s8VHCKz0BzVDD6DT98kbh+g+Vsx18hon/ofp99mQXb7fGJsCz9GsC6T0eMfJ3pAxmAL/MyA0lP6I2+On/PI/+g==, tarball: file:projects/phaser.tgz}
     name: '@rush-temp/phaser'
     version: 0.0.0
     dependencies:
       '@mcler/webpack-concat-plugin': 4.1.3_113243b053f7620383bd9a5a80771064
-      '@rushstack/eslint-config': 2.3.4_eslint@7.28.0+typescript@4.2.4
+      '@rushstack/eslint-config': 2.3.4_eslint@7.29.0+typescript@4.2.4
       '@types/bluebird': 3.5.35
       '@types/chai': 4.2.18
       '@types/mocha': 8.2.2
@@ -9352,12 +9352,12 @@ packages:
       copy-webpack-plugin: 9.0.0_webpack@5.38.1
       es6-map: 0.1.5
       es6-symbol: 3.1.3
-      eslint: 7.28.0
-      eslint-plugin-import: 2.23.4_eslint@7.28.0
-      eslint-plugin-jsdoc: 35.1.3_eslint@7.28.0
-      eslint-plugin-prefer-arrow: 1.2.3_eslint@7.28.0
-      eslint-plugin-react: 7.24.0_eslint@7.28.0
-      eslint-plugin-unicorn: 33.0.1_eslint@7.28.0
+      eslint: 7.29.0
+      eslint-plugin-import: 2.23.4_eslint@7.29.0
+      eslint-plugin-jsdoc: 35.3.2_eslint@7.29.0
+      eslint-plugin-prefer-arrow: 1.2.3_eslint@7.29.0
+      eslint-plugin-react: 7.24.0_eslint@7.29.0
+      eslint-plugin-unicorn: 33.0.1_eslint@7.29.0
       glslify: 7.1.1
       html-webpack-plugin: 5.3.1_webpack@5.38.1
       imports-loader: 3.0.0_webpack@5.38.1
@@ -9403,11 +9403,11 @@ packages:
     dev: false
 
   file:projects/pixi-palidor.tgz:
-    resolution: {integrity: sha512-BIS0IJTJ7QGgL6+pKFg9vcJ5ghClTZ8O96+Ws6Oe1PFtRLvYEg8A67MVxiSzBojvuKQVs0R+h2dqBfalPaJUuw==, tarball: file:projects/pixi-palidor.tgz}
+    resolution: {integrity: sha512-bVANWukaxqzxaVyQ77pRQTIRywi0ay0CWXRTozWoOvwQy82OIjKFeMmfRbU6/GhgHJIPNOk7kgHw7qDIFqvkpw==, tarball: file:projects/pixi-palidor.tgz}
     name: '@rush-temp/pixi-palidor'
     version: 0.0.0
     dependencies:
-      '@rushstack/eslint-config': 2.3.4_eslint@7.28.0+typescript@4.2.4
+      '@rushstack/eslint-config': 2.3.4_eslint@7.29.0+typescript@4.2.4
       '@types/bluebird': 3.5.35
       '@types/chai': 4.2.18
       '@types/mocha': 8.2.2
@@ -9420,12 +9420,12 @@ packages:
       copy-webpack-plugin: 9.0.0_webpack@5.38.1
       es6-map: 0.1.5
       es6-symbol: 3.1.3
-      eslint: 7.28.0
-      eslint-plugin-import: 2.23.4_eslint@7.28.0
-      eslint-plugin-jsdoc: 35.1.3_eslint@7.28.0
-      eslint-plugin-prefer-arrow: 1.2.3_eslint@7.28.0
-      eslint-plugin-react: 7.24.0_eslint@7.28.0
-      eslint-plugin-unicorn: 33.0.1_eslint@7.28.0
+      eslint: 7.29.0
+      eslint-plugin-import: 2.23.4_eslint@7.29.0
+      eslint-plugin-jsdoc: 35.3.2_eslint@7.29.0
+      eslint-plugin-prefer-arrow: 1.2.3_eslint@7.29.0
+      eslint-plugin-react: 7.24.0_eslint@7.29.0
+      eslint-plugin-unicorn: 33.0.1_eslint@7.29.0
       glslify: 7.1.1
       html-webpack-plugin: 5.3.1_webpack@5.38.1
       imports-loader: 3.0.0_webpack@5.38.1
@@ -9471,12 +9471,12 @@ packages:
     dev: false
 
   file:projects/pixi-signalmediator.tgz:
-    resolution: {integrity: sha512-249HU/0IqG8xHXn423L2sEUahMqezoc3fDVc8e+dmBdMxapvy4ERi3MziktiBKZY9BuNSULX+4Ct2vfFMMdLzA==, tarball: file:projects/pixi-signalmediator.tgz}
+    resolution: {integrity: sha512-Wv66OMVUtwzmEd7imUZbtSyky0FWaaxn3bXDsrWgV+97HR5V8x7q+cnMM4f2FFtVrbWmrZSiqjK4cxYvwgDvEg==, tarball: file:projects/pixi-signalmediator.tgz}
     name: '@rush-temp/pixi-signalmediator'
     version: 0.0.0
     dependencies:
       '@istanbuljs/nyc-config-typescript': 1.0.1_40f74ebf3b42f8d97356b2262606f547
-      '@rushstack/eslint-config': 2.3.4_eslint@7.28.0+typescript@4.2.4
+      '@rushstack/eslint-config': 2.3.4_eslint@7.29.0+typescript@4.2.4
       '@types/bluebird': 3.5.35
       '@types/chai': 4.2.18
       '@types/mocha': 8.2.2
@@ -9487,12 +9487,12 @@ packages:
       chai: 4.3.4
       es6-map: 0.1.5
       es6-symbol: 3.1.3
-      eslint: 7.28.0
-      eslint-plugin-import: 2.23.4_eslint@7.28.0
-      eslint-plugin-jsdoc: 35.1.3_eslint@7.28.0
-      eslint-plugin-prefer-arrow: 1.2.3_eslint@7.28.0
-      eslint-plugin-react: 7.24.0_eslint@7.28.0
-      eslint-plugin-unicorn: 33.0.1_eslint@7.28.0
+      eslint: 7.29.0
+      eslint-plugin-import: 2.23.4_eslint@7.29.0
+      eslint-plugin-jsdoc: 35.3.2_eslint@7.29.0
+      eslint-plugin-prefer-arrow: 1.2.3_eslint@7.29.0
+      eslint-plugin-react: 7.24.0_eslint@7.29.0
+      eslint-plugin-unicorn: 33.0.1_eslint@7.29.0
       glslify: 7.1.1
       imports-loader: 3.0.0_webpack@5.38.1
       istanbul-instrumenter-loader: 3.0.1_webpack@5.38.1
@@ -9540,11 +9540,11 @@ packages:
     dev: false
 
   file:projects/pixi.tgz:
-    resolution: {integrity: sha512-S6MxalekbWOyb1TSh0esw+w+9U9aMwGvkxaMpv3o69CWpgY0zxN4V3DiQ5kS95yTJM1fogsDk02+6IQ5rYazEQ==, tarball: file:projects/pixi.tgz}
+    resolution: {integrity: sha512-WZWn/LZgid6BxJ2gwrjVq5/tBvajHlrM9Kw2e4fas3hVorzO0gZPbFi9/JUBHlF8p+2JhBzCgTl21FbFPjqmHw==, tarball: file:projects/pixi.tgz}
     name: '@rush-temp/pixi'
     version: 0.0.0
     dependencies:
-      '@rushstack/eslint-config': 2.3.4_eslint@7.28.0+typescript@4.2.4
+      '@rushstack/eslint-config': 2.3.4_eslint@7.29.0+typescript@4.2.4
       '@types/bluebird': 3.5.35
       '@types/chai': 4.2.18
       '@types/mocha': 8.2.2
@@ -9557,12 +9557,12 @@ packages:
       copy-webpack-plugin: 9.0.0_webpack@5.38.1
       es6-map: 0.1.5
       es6-symbol: 3.1.3
-      eslint: 7.28.0
-      eslint-plugin-import: 2.23.4_eslint@7.28.0
-      eslint-plugin-jsdoc: 35.1.3_eslint@7.28.0
-      eslint-plugin-prefer-arrow: 1.2.3_eslint@7.28.0
-      eslint-plugin-react: 7.24.0_eslint@7.28.0
-      eslint-plugin-unicorn: 33.0.1_eslint@7.28.0
+      eslint: 7.29.0
+      eslint-plugin-import: 2.23.4_eslint@7.29.0
+      eslint-plugin-jsdoc: 35.3.2_eslint@7.29.0
+      eslint-plugin-prefer-arrow: 1.2.3_eslint@7.29.0
+      eslint-plugin-react: 7.24.0_eslint@7.29.0
+      eslint-plugin-unicorn: 33.0.1_eslint@7.29.0
       glslify: 7.1.1
       html-webpack-plugin: 5.3.1_webpack@5.38.1
       imports-loader: 3.0.0_webpack@5.38.1
@@ -9607,12 +9607,12 @@ packages:
     dev: false
 
   file:projects/signalcommandmap.tgz:
-    resolution: {integrity: sha512-iJd+A/CkfiDQo9F+naxSVUf6Vb6Q1atuRhRqZpjaOatCjNB/s0sxu5xF0oC6MfGD0/JM6KL+GCyhekPuJrxqCA==, tarball: file:projects/signalcommandmap.tgz}
+    resolution: {integrity: sha512-7RqtEZklnbCnnmhE8ycMbFLYRp0xbLh0eVmF7SkXIAZTlJj9HLqymLhA69AIERKwGql2AWDqIZHV4YNiiZVR7A==, tarball: file:projects/signalcommandmap.tgz}
     name: '@rush-temp/signalcommandmap'
     version: 0.0.0
     dependencies:
       '@istanbuljs/nyc-config-typescript': 1.0.1_40f74ebf3b42f8d97356b2262606f547
-      '@rushstack/eslint-config': 2.3.4_eslint@7.28.0+typescript@4.2.4
+      '@rushstack/eslint-config': 2.3.4_eslint@7.29.0+typescript@4.2.4
       '@types/bluebird': 3.5.35
       '@types/chai': 4.2.18
       '@types/mocha': 8.2.2
@@ -9623,12 +9623,12 @@ packages:
       chai: 4.3.4
       es6-map: 0.1.5
       es6-symbol: 3.1.3
-      eslint: 7.28.0
-      eslint-plugin-import: 2.23.4_eslint@7.28.0
-      eslint-plugin-jsdoc: 35.1.3_eslint@7.28.0
-      eslint-plugin-prefer-arrow: 1.2.3_eslint@7.28.0
-      eslint-plugin-react: 7.24.0_eslint@7.28.0
-      eslint-plugin-unicorn: 33.0.1_eslint@7.28.0
+      eslint: 7.29.0
+      eslint-plugin-import: 2.23.4_eslint@7.29.0
+      eslint-plugin-jsdoc: 35.3.2_eslint@7.29.0
+      eslint-plugin-prefer-arrow: 1.2.3_eslint@7.29.0
+      eslint-plugin-react: 7.24.0_eslint@7.29.0
+      eslint-plugin-unicorn: 33.0.1_eslint@7.29.0
       glslify: 7.1.1
       imports-loader: 3.0.0_webpack@5.38.1
       istanbul-instrumenter-loader: 3.0.1_webpack@5.38.1
@@ -9673,12 +9673,12 @@ packages:
     dev: false
 
   file:projects/signals.tgz:
-    resolution: {integrity: sha512-AVN0fjGo5HXtlEw+QkKn8PnnHor/OR1nJQabqbGHTQF450fxtpdsolhc1EtHFjQsgQDALr2BJboSILIDRtnP5Q==, tarball: file:projects/signals.tgz}
+    resolution: {integrity: sha512-MJJkIFP+bF4rfhisNB00HOB9U4Knr7kpcswPbB3aOXM+S/AtohDOdjJJXdOskotaYmOejANInQgrz5zYDb5taA==, tarball: file:projects/signals.tgz}
     name: '@rush-temp/signals'
     version: 0.0.0
     dependencies:
       '@istanbuljs/nyc-config-typescript': 1.0.1_40f74ebf3b42f8d97356b2262606f547
-      '@rushstack/eslint-config': 2.3.4_eslint@7.28.0+typescript@4.2.4
+      '@rushstack/eslint-config': 2.3.4_eslint@7.29.0+typescript@4.2.4
       '@types/bluebird': 3.5.35
       '@types/chai': 4.2.18
       '@types/mocha': 8.2.2
@@ -9689,12 +9689,12 @@ packages:
       chai: 4.3.4
       es6-map: 0.1.5
       es6-symbol: 3.1.3
-      eslint: 7.28.0
-      eslint-plugin-import: 2.23.4_eslint@7.28.0
-      eslint-plugin-jsdoc: 35.1.3_eslint@7.28.0
-      eslint-plugin-prefer-arrow: 1.2.3_eslint@7.28.0
-      eslint-plugin-react: 7.24.0_eslint@7.28.0
-      eslint-plugin-unicorn: 33.0.1_eslint@7.28.0
+      eslint: 7.29.0
+      eslint-plugin-import: 2.23.4_eslint@7.29.0
+      eslint-plugin-jsdoc: 35.3.2_eslint@7.29.0
+      eslint-plugin-prefer-arrow: 1.2.3_eslint@7.29.0
+      eslint-plugin-react: 7.24.0_eslint@7.29.0
+      eslint-plugin-unicorn: 33.0.1_eslint@7.29.0
       glslify: 7.1.1
       imports-loader: 3.0.0_webpack@5.38.1
       istanbul-instrumenter-loader: 3.0.1_webpack@5.38.1
