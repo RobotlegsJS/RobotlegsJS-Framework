@@ -1,6 +1,8 @@
+# GAME-Match3
+
 ![cover](media/img_cover_match3_ts.png)
 
-This is a TypeScript open-source game which is a port of the ActionScript version, following the same concepts, graphics, and architecture.
+This is a TypeScript open-source game which is a port of the [ActionScript version](https://github.com/RonaldoSetzer/GAME-Match3/tree/master/actionscript-match3), following the same concepts, graphics, and architecture.
 
 + **Category:** Arcade.
 + **Platform:** Web.
@@ -15,6 +17,19 @@ This is a TypeScript open-source game which is a port of the ActionScript versio
 
 * * *
 
+### Installation
+
+Follow the [building the projects](https://github.com/RobotlegsJS/RobotlegsJS-Framework/tree/master/.github/CONTRIBUTING.md#building-the-projects) section to know how to setup your local development environment.
+
+Then you can run this example using:
+
+```bash
+cd games/match3
+npm start
+```
+
+* * *
+
 ### Dependencies
 
 + [PixiJS](http://www.pixijs.com/)
@@ -25,7 +40,7 @@ This is a TypeScript open-source game which is a port of the ActionScript versio
 * * *
 
 ### Demos
-+ **[ActionScript](https://ronaldosetzer.github.io/portfolio/open_source/match3_as/)**
+
 + **[TypeScript](https://ronaldosetzer.github.io/portfolio/open_source/match3_ts/)**
 
 * * *
@@ -43,7 +58,9 @@ This is a TypeScript open-source game which is a port of the ActionScript versio
 * * *
 
 ### Screenshots
+
 ![screenshot01](media/img_game_match3_ts.png)
+
 * * *
 
 **Ronaldo Santiago**  - Game Developer [ [portfolio](https://ronaldosetzer.github.io/portfolio/) ]
