@@ -6,12 +6,9 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import { ISignal } from "@robotlegsjs/signals";
-
-import { injectable, IEventDispatcher } from "@robotlegsjs/core";
-
+import { IEventDispatcher, injectable } from "@robotlegsjs/core";
 import { Mediator } from "@robotlegsjs/pixi";
-
+import { ISignal } from "@robotlegsjs/signals";
 import { ISignalMap } from "../api/ISignalMap";
 import { SignalMap } from "./SignalMap";
 
