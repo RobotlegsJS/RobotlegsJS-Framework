@@ -6,11 +6,8 @@
 // ------------------------------------------------------------------------------
 
 import { Context, MVCSBundle } from "@robotlegsjs/core";
-
 import { ContextView, CreateJSBundle } from "../src";
-
 import { MyConfig } from "./config/MyConfig";
-
 import { RobotlegsView } from "./view/RobotlegsView";
 
 export class Game {

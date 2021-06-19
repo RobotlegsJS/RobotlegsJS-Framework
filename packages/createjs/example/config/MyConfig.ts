@@ -5,13 +5,10 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import { inject, injectable, IConfig } from "@robotlegsjs/core";
-
+import { IConfig, inject, injectable } from "@robotlegsjs/core";
 import { IMediatorMap } from "../../src/index";
-
 import { RobotlegsMediator } from "../mediator/RobotlegsMediator";
 import { SmileyMediator } from "../mediator/SmileyMediator";
-
 import { RobotlegsView } from "../view/RobotlegsView";
 import { SmileyView } from "../view/SmileyView";
 
