@@ -6,7 +6,6 @@
 // ------------------------------------------------------------------------------
 
 import { IClass, ICommandMapper, ICommandUnmapper } from "@robotlegsjs/core";
-
 import { ISignal } from "@robotlegsjs/signals";
 
 // eslint-disable-next-line @rushstack/typedef-var

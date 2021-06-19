@@ -5,10 +5,8 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import { MonoSignal, OnceSignal, Signal, DeluxeSignal, PrioritySignal } from "@robotlegsjs/signals";
-
-import { injectable, IContext, IExtension, UID } from "@robotlegsjs/core";
-
+import { IContext, IExtension, injectable, UID } from "@robotlegsjs/core";
+import { DeluxeSignal, MonoSignal, OnceSignal, PrioritySignal, Signal } from "@robotlegsjs/signals";
 import { ISignalCommandMap } from "./api/ISignalCommandMap";
 import { SignalCommandMap } from "./impl/SignalCommandMap";
 
