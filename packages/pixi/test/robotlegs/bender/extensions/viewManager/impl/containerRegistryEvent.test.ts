@@ -5,13 +5,10 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import "../../../../../entry";
-
 import { assert } from "chai";
-
 import { Sprite } from "pixi.js";
-
 import { ContainerRegistryEvent } from "../../../../../../src/robotlegs/bender/extensions/viewManager/impl/ContainerRegistryEvent";
+import "../../../../../entry";
 
 describe("ContainerRegistryEvent", () => {
     let container: Sprite = null;

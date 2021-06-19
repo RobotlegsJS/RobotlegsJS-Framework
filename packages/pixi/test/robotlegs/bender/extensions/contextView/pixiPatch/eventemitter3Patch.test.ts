@@ -5,15 +5,11 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import "../../../../../entry";
-
-import { assert } from "chai";
-
-import { Container } from "pixi.js";
-
 import { Event } from "@robotlegsjs/core";
-
+import { assert } from "chai";
+import { Container } from "pixi.js";
 import "../../../../../../src/robotlegs/bender/extensions/contextView/pixiPatch/eventemitter3-patch";
+import "../../../../../entry";
 
 describe("EventEmmiter3Patch", () => {
     let container: Container;

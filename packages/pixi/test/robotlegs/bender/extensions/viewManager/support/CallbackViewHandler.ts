@@ -5,10 +5,8 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import { Container } from "pixi.js";
-
 import { IClass } from "@robotlegsjs/core";
-
+import { Container } from "pixi.js";
 import { IViewHandler } from "../../../../../../src/robotlegs/bender/extensions/viewManager/api/IViewHandler";
 
 /**

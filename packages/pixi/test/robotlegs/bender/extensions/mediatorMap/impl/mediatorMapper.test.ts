@@ -5,20 +5,16 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import "../../../../../entry";
-
-import sinon = require("sinon");
-
+import { Context, IContext, IInjector, ILogger, TypeMatcher } from "@robotlegsjs/core";
 import { Sprite } from "pixi.js";
-
-import { IContext, IInjector, ILogger, Context, TypeMatcher } from "@robotlegsjs/core";
-
 import { MediatorFactory } from "../../../../../../src/robotlegs/bender/extensions/mediatorMap/impl/MediatorFactory";
 import { MediatorMapper } from "../../../../../../src/robotlegs/bender/extensions/mediatorMap/impl/MediatorMapper";
 import { MediatorViewHandler } from "../../../../../../src/robotlegs/bender/extensions/mediatorMap/impl/MediatorViewHandler";
-
+import "../../../../../entry";
 import { NullMediator } from "../support/NullMediator";
 import { NullMediator2 } from "../support/NullMediator2";
+
+import sinon = require("sinon");
 
 describe("MediatorMapper", () => {
     let context: IContext = null;

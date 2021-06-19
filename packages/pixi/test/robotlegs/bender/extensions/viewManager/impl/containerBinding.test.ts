@@ -5,18 +5,13 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import "../../../../../entry";
-
-import { assert } from "chai";
-
-import { Sprite } from "pixi.js";
-
 import { IClass } from "@robotlegsjs/core";
-
+import { assert } from "chai";
+import { Sprite } from "pixi.js";
 import { IViewHandler } from "../../../../../../src/robotlegs/bender/extensions/viewManager/api/IViewHandler";
 import { ContainerBinding } from "../../../../../../src/robotlegs/bender/extensions/viewManager/impl/ContainerBinding";
 import { ContainerBindingEvent } from "../../../../../../src/robotlegs/bender/extensions/viewManager/impl/ContainerBindingEvent";
-
+import "../../../../../entry";
 import { CallbackViewHandler } from "../support/CallbackViewHandler";
 
 describe("ContainerBinding", () => {

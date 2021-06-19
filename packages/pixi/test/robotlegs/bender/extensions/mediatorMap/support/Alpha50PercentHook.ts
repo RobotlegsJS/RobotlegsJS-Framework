@@ -5,9 +5,8 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
+import { IHook, inject, injectable } from "@robotlegsjs/core";
 import { Sprite } from "pixi.js";
-
-import { injectable, inject, IHook } from "@robotlegsjs/core";
 
 @injectable()
 export class Alpha50PercentHook implements IHook {
