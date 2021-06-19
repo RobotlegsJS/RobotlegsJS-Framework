@@ -1,3 +1,5 @@
+import "../../../entry";
+
 import { assert } from "chai";
 
 import { LevelInfo } from "./../../../../src/matchthree/game/models/LevelInfo";

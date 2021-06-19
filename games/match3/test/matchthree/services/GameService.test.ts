@@ -1,3 +1,5 @@
+import "../../entry";
+
 import sinon = require("sinon");
 import { assert } from "chai";
 import { EventDispatcher } from "@robotlegsjs/core";
@@ -21,7 +23,7 @@ describe("GameService", () => {
     });
 
     it("DispatchEventWith", () => {
-        const dispatcherSpy = sinon.spy(gameService.eventDispatcher, "dispatchEventWith");
+        const dispatcherSpy = sinon.spy(gameService.eventDispatcher, "dispatchEventWith" as any);
         const type = "TestDispatchEventWith";
         gameService.dispatchEventWith(type);
         const event = dispatcherSpy.firstCall.args[0];
@@ -31,7 +33,7 @@ describe("GameService", () => {
     });
 
     it("RetryCommand", () => {
-        const dispatcherSpy = sinon.spy(gameService.eventDispatcher, "dispatchEventWith");
+        const dispatcherSpy = sinon.spy(gameService.eventDispatcher, "dispatchEventWith" as any);
         gameService.retryCommand();
         const event = dispatcherSpy.firstCall.args[0];
         assert.isTrue(dispatcherSpy.calledOnce);
@@ -39,7 +41,7 @@ describe("GameService", () => {
     });
 
     it("SwapPiecesConfirmCommand", () => {
-        const dispatcherSpy = sinon.spy(gameService.eventDispatcher, "dispatchEventWith");
+        const dispatcherSpy = sinon.spy(gameService.eventDispatcher, "dispatchEventWith" as any);
         gameService.swapPiecesConfirmCommand();
         const event = dispatcherSpy.firstCall.args[0];
         assert.isTrue(dispatcherSpy.calledOnce);
@@ -47,7 +49,7 @@ describe("GameService", () => {
     });
 
     it("GameOverCommand", () => {
-        const dispatcherSpy = sinon.spy(gameService.eventDispatcher, "dispatchEventWith");
+        const dispatcherSpy = sinon.spy(gameService.eventDispatcher, "dispatchEventWith" as any);
         gameService.gameOverCommand();
         const event = dispatcherSpy.firstCall.args[0];
         assert.isTrue(dispatcherSpy.calledOnce);
@@ -55,7 +57,7 @@ describe("GameService", () => {
     });
 
     it("UpdateHUDData", () => {
-        const dispatcherSpy = sinon.spy(gameService.eventDispatcher, "dispatchEventWith");
+        const dispatcherSpy = sinon.spy(gameService.eventDispatcher, "dispatchEventWith" as any);
         gameService.updateHUDData();
         const event = dispatcherSpy.firstCall.args[0];
         assert.isTrue(dispatcherSpy.calledOnce);
@@ -63,7 +65,7 @@ describe("GameService", () => {
     });
 
     it("ClearGridField", () => {
-        const dispatcherSpy = sinon.spy(gameService.eventDispatcher, "dispatchEventWith");
+        const dispatcherSpy = sinon.spy(gameService.eventDispatcher, "dispatchEventWith" as any);
         gameService.clearGridField();
         const event = dispatcherSpy.firstCall.args[0];
         assert.isTrue(dispatcherSpy.calledOnce);
@@ -71,7 +73,7 @@ describe("GameService", () => {
     });
 
     it("UpdateGridField", () => {
-        const dispatcherSpy = sinon.spy(gameService.eventDispatcher, "dispatchEventWith");
+        const dispatcherSpy = sinon.spy(gameService.eventDispatcher, "dispatchEventWith" as any);
         gameService.updateGridField();
         const event = dispatcherSpy.firstCall.args[0];
         assert.isTrue(dispatcherSpy.calledOnce);
@@ -79,7 +81,7 @@ describe("GameService", () => {
     });
 
     it("Pause", () => {
-        const dispatcherSpy = sinon.spy(gameService.eventDispatcher, "dispatchEventWith");
+        const dispatcherSpy = sinon.spy(gameService.eventDispatcher, "dispatchEventWith" as any);
         gameService.pause();
         const event = dispatcherSpy.firstCall.args[0];
         assert.isTrue(dispatcherSpy.calledOnce);
@@ -88,7 +90,7 @@ describe("GameService", () => {
     });
 
     it("resume", () => {
-        const dispatcherSpy = sinon.spy(gameService.eventDispatcher, "dispatchEventWith");
+        const dispatcherSpy = sinon.spy(gameService.eventDispatcher, "dispatchEventWith" as any);
         gameService.resume();
         const event = dispatcherSpy.firstCall.args[0];
         assert.isTrue(dispatcherSpy.calledOnce);

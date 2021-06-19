@@ -1,5 +1,7 @@
+import "../../../entry";
+
 import { assert } from "chai";
-import { Sprite, Texture } from "pixi.js";
+import { Sprite, Texture, TilingSprite } from "pixi.js";
 
 import { PieceData } from "../../../../src/matchthree/game/models/PieceData";
 import { Tile } from "./../../../../src/matchthree/game/models/Tile";
@@ -66,18 +68,16 @@ describe("PieceData", () => {
     });
 
     it("UpdateDisplayPosition: Any", () => {
-        const texture: Texture = Texture.fromImage("./assets/atlas/game/piece_normal_3.png");
         piece = new PieceData(5, 6, PieceType.NORMAL, PieceIds.ORANGE);
-        piece.display = new Sprite(texture);
+        piece.display = TilingSprite.from("./assets/atlas/game/piece_normal_3.png");
         piece.updateDisplayPosition();
         assert.equal(piece.display.x, Tile.TILE_WIDTH * piece.col);
         assert.equal(piece.display.y, Tile.TILE_WIDTH * piece.row);
     });
 
     it("UpdateDisplayPosition: Any in the first row", () => {
-        const texture: Texture = Texture.fromImage("./assets/atlas/game/piece_normal_3.png");
         piece = new PieceData(5, 0, PieceType.NORMAL, PieceIds.ORANGE);
-        piece.display = new Sprite(texture);
+        piece.display = TilingSprite.from("./assets/atlas/game/piece_normal_3.png");
         piece.updateDisplayPosition();
         assert.equal(piece.display.x, Tile.TILE_WIDTH * piece.col);
         assert.equal(piece.display.y, -Tile.TILE_HEIGHT);

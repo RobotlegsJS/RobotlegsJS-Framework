@@ -1,3 +1,5 @@
+import "../../../entry";
+
 import { assert } from "chai";
 
 import { SwapModel } from "./../../../../src/matchthree/game/models/SwapModel";

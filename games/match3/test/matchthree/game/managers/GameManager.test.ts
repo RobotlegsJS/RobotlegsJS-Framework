@@ -1,3 +1,5 @@
+import "../../../entry";
+
 import { assert } from "chai";
 import { EventDispatcher } from "@robotlegsjs/core";
 import sinon = require("sinon");
@@ -36,6 +38,7 @@ describe("GameManager", () => {
     });
 
     /* CONTEXT: MODIFYING THE GRID */
+
     it("GenerateGrid", () => {
         const maxCols = 4;
         const maxRows = 6;
@@ -315,7 +318,7 @@ describe("GameManager", () => {
             [2, 3, 1, 2, 3, 4, 2, 3], // [               ]
             [3, 1, 2, 5, 5, 5, 1, 2], // [      5 5 5    ]
             [1, 2, 3, 1, 2, 3, 1, 2], // [               ]
-            [2, 3, 1, 2, 3, 1, 2, 3] //   [               ]
+            [2, 3, 1, 2, 3, 1, 2, 3] //  [               ]
         ];
 
         GridUtils.generateByMap(gameManager.grid, map);
@@ -357,7 +360,7 @@ describe("GameManager", () => {
             [2, 3, 6, 6, 6, 6, 6, 2], // [    6 6 6 6 6  ]
             [3, 1, 2, 5, 5, 2, 2, 1], // [               ]
             [1, 2, 3, 1, 2, 3, 1, 1], // [               ]
-            [2, 3, 1, 2, 3, 1, 2, 3] //   [               ]
+            [2, 3, 1, 2, 3, 1, 2, 3] //  [               ]
         ];
         // PowerUps
         //    col:1 (Row or Col)
@@ -411,7 +414,7 @@ describe("GameManager", () => {
             [2, 3, 1, 2, 3, 4, 2, 3], // 4
             [3, 1, 2, 5, 5, 5, 5, 2], // 5
             [1, 2, 3, 1, 2, 3, 1, 2], // 6
-            [2, 3, 1, 2, 3, 1, 2, 3] // 7
+            [2, 3, 1, 2, 3, 1, 2, 3] //  7
         ];
 
         GridUtils.generateByMap(gameManager.grid, map);
@@ -430,7 +433,9 @@ describe("GameManager", () => {
         assert.equal(64, gameManager.levelModel.toRemove.length);
         assert.isTrue(isEmpty);
     });
+
     /*CONTEXT: SWAPING PIECES*/
+
     it("SwapSelectedPieces", () => {
         const piece1col = 1;
         const piece2col = 2;
@@ -489,7 +494,7 @@ describe("GameManager", () => {
             [2, 3, 1, 2, 3, 4, 2, 3], // [               ]
             [3, 1, 2, 5, 4, 5, 5, 2], // [               ]
             [1, 2, 3, 1, 2, 3, 1, 2], // [               ]
-            [2, 3, 1, 2, 3, 1, 2, 3] //   [               ]
+            [2, 3, 1, 2, 3, 1, 2, 3] //  [               ]
         ];
         GridUtils.generateByMap(gameManager.grid, map);
 
@@ -501,7 +506,7 @@ describe("GameManager", () => {
         gameManager.swapModel.status = SwapModel.SWAP;
 
         const spySwapSelectedPieces = sinon.spy(gameManager, "swapSelectedPieces");
-        const spyAfterSwap = sinon.spy(gameManager, "afterSwap");
+        const spyAfterSwap = sinon.spy(gameManager, "afterSwap" as any);
 
         gameManager.nextStep(gameManager);
         // After the movement of the sprites
@@ -523,7 +528,7 @@ describe("GameManager", () => {
             [2, 3, 1, 2, 3, 4, 2, 3], // [               ]
             [3, 1, 2, 5, 4, 5, 5, 2], // [               ]
             [1, 2, 3, 1, 2, 3, 1, 2], // [               ]
-            [2, 3, 1, 2, 3, 1, 2, 3] //   [               ]
+            [2, 3, 1, 2, 3, 1, 2, 3] //  [               ]
         ];
         GridUtils.generateByMap(gameManager.grid, map);
 
@@ -535,7 +540,7 @@ describe("GameManager", () => {
         gameManager.swapModel.status = SwapModel.VALIDATE;
 
         const spyRemoveAllChains = sinon.spy(gameManager, "removeAllChains");
-        const spyAfterSwap = sinon.spy(gameManager, "afterSwap");
+        const spyAfterSwap = sinon.spy(gameManager, "afterSwap" as any);
         const spySwapPiecesConfirmCommand = sinon.spy(
             gameManager.gameService,
             "swapPiecesConfirmCommand"
@@ -558,7 +563,7 @@ describe("GameManager", () => {
             [4, 5, 4, 3, 6, 2, 3, 4], // [               ]
             [4, 1, 3, 1, 5, 3, 2, 3], // [              3]
             [2, 3, 1, 2, 6, 1, 2, 3], // [              3]
-            [2, 3, 1, 2, 4, 3, 1, 3] // [            1 3]
+            [2, 3, 1, 2, 4, 3, 1, 3] //  [            1 3]
         ];
         GridUtils.generateByMap(gameManager.grid, map);
 
@@ -570,7 +575,7 @@ describe("GameManager", () => {
         gameManager.swapModel.status = SwapModel.VALIDATE;
 
         const spyRemoveAllChains = sinon.spy(gameManager, "removeAllChains");
-        const spyAfterSwap = sinon.spy(gameManager, "afterSwap");
+        const spyAfterSwap = sinon.spy(gameManager, "afterSwap" as any);
         const spySwapPiecesConfirmCommand = sinon.spy(
             gameManager.gameService,
             "swapPiecesConfirmCommand"
@@ -593,7 +598,7 @@ describe("GameManager", () => {
             [4, 5, 4, 3, 6, 2, 3, 4], // [               ]
             [4, 1, 3, 1, 5, 3, 2, 2], // [               ]
             [2, 3, 1, 2, 6, 1, 2, 3], // [              3]
-            [2, 3, 1, 2, 4, 1, 1, 1] // [          1 1 1]
+            [2, 3, 1, 2, 4, 1, 1, 1] //  [          1 1 1]
         ];
         GridUtils.generateByMap(gameManager.grid, map);
 
@@ -605,7 +610,7 @@ describe("GameManager", () => {
         gameManager.swapModel.status = SwapModel.VALIDATE;
 
         const spyRemoveAllChains = sinon.spy(gameManager, "removeAllChains");
-        const spyAfterSwap = sinon.spy(gameManager, "afterSwap");
+        const spyAfterSwap = sinon.spy(gameManager, "afterSwap" as any);
         const spySwapPiecesConfirmCommand = sinon.spy(
             gameManager.gameService,
             "swapPiecesConfirmCommand"
@@ -628,7 +633,7 @@ describe("GameManager", () => {
             [2, 3, 1, 2, 3, 4, 2, 3], // [               ]
             [3, 1, 2, 5, 4, 5, 5, 2], // [               ]
             [1, 2, 3, 1, 2, 3, 1, 2], // [               ]
-            [2, 3, 1, 2, 3, 1, 2, 3] //   [               ]
+            [2, 3, 1, 2, 3, 1, 2, 3] //  [               ]
         ];
         GridUtils.generateByMap(gameManager.grid, map);
 
@@ -639,12 +644,12 @@ describe("GameManager", () => {
         gameManager.swapModel.setPosition(TouchPhase.ENDED, secondPosition.col, secondPosition.row);
         gameManager.swapModel.status = SwapModel.VALIDATE;
 
-        const spyAfterSwap = sinon.spy(gameManager, "afterSwap");
+        const spyAfterSwap = sinon.spy(gameManager, "afterSwap" as any);
         const spySwapSelectedPieces = sinon.spy(gameManager, "swapSelectedPieces");
 
         gameManager.nextStep(gameManager);
 
-        assert.isTrue(spyAfterSwap.called, "afterSwap");
+        assert.isTrue(spyAfterSwap.called, "afterSwap" as any);
         assert.isTrue(spySwapSelectedPieces.called, "swapSelectedPieces");
         assert.equal(
             PieceIds.BLUE,
@@ -666,7 +671,7 @@ describe("GameManager", () => {
             [2, 3, 1, 2, 3, 4, 2, 3], // [               ]
             [3, 1, 2, 5, 4, 5, 5, 2], // [               ]
             [1, 2, 3, 1, 2, 3, 1, 2], // [               ]
-            [2, 3, 1, 2, 3, 1, 2, 3] //   [               ]
+            [2, 3, 1, 2, 3, 1, 2, 3] //  [               ]
         ];
         GridUtils.generateByMap(gameManager.grid, map);
 
@@ -692,7 +697,7 @@ describe("GameManager", () => {
         gameManager.swapModel.setPosition(TouchPhase.ENDED, secondPosition.col, secondPosition.row);
         gameManager.swapModel.status = SwapModel.VALIDATE;
 
-        const spyAfterSwap = sinon.spy(gameManager, "afterSwap");
+        const spyAfterSwap = sinon.spy(gameManager, "afterSwap" as any);
         const spyRemoveAllPieces = sinon.spy(gameManager, "removeAllPieces");
         const spySwapPiecesConfirmCommand = sinon.spy(
             gameManager.gameService,
@@ -701,7 +706,7 @@ describe("GameManager", () => {
 
         gameManager.nextStep(gameManager);
 
-        assert.isTrue(spyAfterSwap.called, "afterSwap");
+        assert.isTrue(spyAfterSwap.called, "afterSwap" as any);
         assert.isTrue(spyRemoveAllPieces.called, "removeAllPieces");
         assert.isTrue(spySwapPiecesConfirmCommand.called, "swapPiecesConfirmCommand");
     });
@@ -716,7 +721,7 @@ describe("GameManager", () => {
             [2, 3, 1, 2, 3, 4, 2, 3], // [                 ]
             [3, 1, 2, 5, 4, 5, 5, 2], // [                 ]
             [1, 2, 3, 1, 2, 3, 1, 2], // [                 ]
-            [2, 3, 1, 2, 3, 1, 2, 3] //   [                 ]
+            [2, 3, 1, 2, 3, 1, 2, 3] //  [                 ]
         ];
         GridUtils.generateByMap(gameManager.grid, map);
 
@@ -732,7 +737,7 @@ describe("GameManager", () => {
         gameManager.swapModel.setPosition(TouchPhase.ENDED, secondPosition.col, secondPosition.row);
         gameManager.swapModel.status = SwapModel.VALIDATE;
 
-        const spyAfterSwap = sinon.spy(gameManager, "afterSwap");
+        const spyAfterSwap = sinon.spy(gameManager, "afterSwap" as any);
         const spyRemovePiecesInList = sinon.spy(gameManager, "removePiecesInList");
         const spySwapPiecesConfirmCommand = sinon.spy(
             gameManager.gameService,
@@ -775,7 +780,7 @@ describe("GameManager", () => {
         gameManager.swapModel.setPosition(TouchPhase.ENDED, secondPosition.col, secondPosition.row);
         gameManager.swapModel.status = SwapModel.VALIDATE;
 
-        const spyAfterSwap = sinon.spy(gameManager, "afterSwap");
+        const spyAfterSwap = sinon.spy(gameManager, "afterSwap" as any);
         const spyRemovePiecesInList = sinon.spy(gameManager, "removePiecesInList");
         const spySwapPiecesConfirmCommand = sinon.spy(
             gameManager.gameService,
@@ -818,7 +823,7 @@ describe("GameManager", () => {
         gameManager.swapModel.setPosition(TouchPhase.ENDED, secondPosition.col, secondPosition.row);
         gameManager.swapModel.status = SwapModel.VALIDATE;
 
-        const spyAfterSwap = sinon.spy(gameManager, "afterSwap");
+        const spyAfterSwap = sinon.spy(gameManager, "afterSwap" as any);
         const spyRemovePiecesInList = sinon.spy(gameManager, "removePiecesInList");
         const spySwapPiecesConfirmCommand = sinon.spy(
             gameManager.gameService,

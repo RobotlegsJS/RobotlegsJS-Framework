@@ -1,3 +1,5 @@
+import "../../../entry";
+
 import { assert } from "chai";
 
 import { GridData } from "./../../../../src/matchthree/game/models/GridData";

@@ -1,14 +1,16 @@
+import "../../entry";
+
 import { assert } from "chai";
-import { Texture } from "pixi.js";
+import { Sprite, TilingSprite } from "pixi.js";
 
 import { AtlasKeys } from "./../../../src/matchthree/utils/AtlasKeys";
 
 describe("AtlasKeys", () => {
     it("GetTexture", () => {
         const key = "./assets/atlas/game/piece_normal_3.png";
-        const texture: Texture = Texture.fromImage(key);
-        const textureCache: any = { "./assets/atlas/game/piece_normal_3.png": texture };
+        const sprite: Sprite = TilingSprite.from(key);
+        const textureCache: any = { "./assets/atlas/game/piece_normal_3.png": sprite.texture };
         AtlasKeys.update(textureCache);
-        assert.equal(texture, AtlasKeys.getTexture(key));
+        assert.equal(sprite.texture, AtlasKeys.getTexture(key));
     });
 });
