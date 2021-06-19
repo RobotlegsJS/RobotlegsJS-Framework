@@ -6,7 +6,6 @@
 // ------------------------------------------------------------------------------
 
 import { IClass, ITypeMatcher } from "@robotlegsjs/core";
-
 import { IMediatorMapper } from "../dsl/IMediatorMapper";
 import { IMediatorUnmapper } from "../dsl/IMediatorUnmapper";
 

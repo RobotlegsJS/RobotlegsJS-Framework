@@ -6,18 +6,15 @@
 // ------------------------------------------------------------------------------
 
 import { IBundle, IContext, ILogger, instanceOfType } from "@robotlegsjs/core";
-
 import { IContextSceneManager } from "../../extensions/contextSceneManager/api/IContextSceneManager";
+import { ContextSceneManagerExtension } from "../../extensions/contextSceneManager/ContextSceneManagerExtension";
 import { ContextSceneManager } from "../../extensions/contextSceneManager/impl/ContextSceneManager";
 import { ContextSceneManagerListenerConfig } from "../../extensions/contextSceneManager/impl/ContextSceneManagerListenerConfig";
-import { ContextSceneManagerExtension } from "../../extensions/contextSceneManager/ContextSceneManagerExtension";
-
+import { LocalEventEmitterMapExtension } from "../../extensions/localEventEmitterMap/LocalEventEmitterMapExtension";
 import { SceneMediatorMapExtension } from "../../extensions/mediatorMap/SceneMediatorMapExtension";
 import { ViewMediatorMapExtension } from "../../extensions/mediatorMap/ViewMediatorMapExtension";
-
 import { SceneManagerExtension } from "../../extensions/viewManager/SceneManagerExtension";
 import { SceneManagerObserverExtension } from "../../extensions/viewManager/SceneManagerObserverExtension";
-import { LocalEventEmitterMapExtension } from "../../extensions/localEventEmitterMap/LocalEventEmitterMapExtension";
 
 /**
  * For that Classic Robotlegs flavour

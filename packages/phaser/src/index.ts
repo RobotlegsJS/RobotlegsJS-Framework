@@ -6,13 +6,23 @@
 // ------------------------------------------------------------------------------
 
 /**
+ * Bundles
+ */
+export { PhaserBundle } from "./robotlegs/bender/bundles/phaser/PhaserBundle";
+/**
  * ContextSceneManager extension
  */
 export { IContextSceneManager } from "./robotlegs/bender/extensions/contextSceneManager/api/IContextSceneManager";
+export { ContextSceneManagerExtension } from "./robotlegs/bender/extensions/contextSceneManager/ContextSceneManagerExtension";
 export { ContextSceneManager } from "./robotlegs/bender/extensions/contextSceneManager/impl/ContextSceneManager";
 export { ContextSceneManagerListenerConfig } from "./robotlegs/bender/extensions/contextSceneManager/impl/ContextSceneManagerListenerConfig";
-export { ContextSceneManagerExtension } from "./robotlegs/bender/extensions/contextSceneManager/ContextSceneManagerExtension";
-
+/**
+ * LocalEventEmitterMap
+ */
+export { IEventEmitterMap } from "./robotlegs/bender/extensions/localEventEmitterMap/api/IEventEmitterMap";
+export { EventEmitterMap } from "./robotlegs/bender/extensions/localEventEmitterMap/impl/EventEmitterMap";
+export { EventEmitterMapConfig } from "./robotlegs/bender/extensions/localEventEmitterMap/impl/EventEmitterMapConfig";
+export { LocalEventEmitterMapExtension } from "./robotlegs/bender/extensions/localEventEmitterMap/LocalEventEmitterMapExtension";
 /**
  * MediatorMap extension
  */
@@ -21,11 +31,9 @@ export { IMediatorManager } from "./robotlegs/bender/extensions/mediatorMap/api/
 export { IMediatorMapping } from "./robotlegs/bender/extensions/mediatorMap/api/IMediatorMapping";
 export { ISceneMediatorMap } from "./robotlegs/bender/extensions/mediatorMap/api/ISceneMediatorMap";
 export { IViewMediatorMap } from "./robotlegs/bender/extensions/mediatorMap/api/IViewMediatorMap";
-
 export { IMediatorConfigurator } from "./robotlegs/bender/extensions/mediatorMap/dsl/IMediatorConfigurator";
 export { IMediatorMapper } from "./robotlegs/bender/extensions/mediatorMap/dsl/IMediatorMapper";
 export { IMediatorUnmapper } from "./robotlegs/bender/extensions/mediatorMap/dsl/IMediatorUnmapper";
-
 export { AbstractMediator } from "./robotlegs/bender/extensions/mediatorMap/impl/AbstractMediator";
 export { AbstractMediatorFactory } from "./robotlegs/bender/extensions/mediatorMap/impl/AbstractMediatorFactory";
 export { AbstractMediatorHandler } from "./robotlegs/bender/extensions/mediatorMap/impl/AbstractMediatorHandler";
@@ -42,17 +50,14 @@ export { ViewMediatorFactory } from "./robotlegs/bender/extensions/mediatorMap/i
 export { ViewMediatorHandler } from "./robotlegs/bender/extensions/mediatorMap/impl/ViewMediatorHandler";
 export { ViewMediatorManager } from "./robotlegs/bender/extensions/mediatorMap/impl/ViewMediatorManager";
 export { ViewMediatorMap } from "./robotlegs/bender/extensions/mediatorMap/impl/ViewMediatorMap";
-
 export { SceneMediatorMapExtension } from "./robotlegs/bender/extensions/mediatorMap/SceneMediatorMapExtension";
 export { ViewMediatorMapExtension } from "./robotlegs/bender/extensions/mediatorMap/ViewMediatorMapExtension";
-
 /**
  * ViewManager extension
  */
 export { ISceneHandler } from "./robotlegs/bender/extensions/viewManager/api/ISceneHandler";
 export { ISceneManager } from "./robotlegs/bender/extensions/viewManager/api/ISceneManager";
 export { IViewHandler } from "./robotlegs/bender/extensions/viewManager/api/IViewHandler";
-
 export { ConfigureSceneEvent } from "./robotlegs/bender/extensions/viewManager/impl/ConfigureSceneEvent";
 export { ConfigureViewEvent } from "./robotlegs/bender/extensions/viewManager/impl/ConfigureViewEvent";
 export { SceneManager } from "./robotlegs/bender/extensions/viewManager/impl/SceneManager";
@@ -62,19 +67,5 @@ export { SceneManagerEvent } from "./robotlegs/bender/extensions/viewManager/imp
 export { SceneManagerObserver } from "./robotlegs/bender/extensions/viewManager/impl/SceneManagerObserver";
 export { SceneRegistry } from "./robotlegs/bender/extensions/viewManager/impl/SceneRegistry";
 export { SceneRegistryEvent } from "./robotlegs/bender/extensions/viewManager/impl/SceneRegistryEvent";
-
 export { SceneManagerExtension } from "./robotlegs/bender/extensions/viewManager/SceneManagerExtension";
 export { SceneManagerObserverExtension } from "./robotlegs/bender/extensions/viewManager/SceneManagerObserverExtension";
-
-/**
- * LocalEventEmitterMap
- */
-export { IEventEmitterMap } from "./robotlegs/bender/extensions/localEventEmitterMap/api/IEventEmitterMap";
-export { EventEmitterMap } from "./robotlegs/bender/extensions/localEventEmitterMap/impl/EventEmitterMap";
-export { EventEmitterMapConfig } from "./robotlegs/bender/extensions/localEventEmitterMap/impl/EventEmitterMapConfig";
-export { LocalEventEmitterMapExtension } from "./robotlegs/bender/extensions/localEventEmitterMap/LocalEventEmitterMapExtension";
-
-/**
- * Bundles
- */
-export { PhaserBundle } from "./robotlegs/bender/bundles/phaser/PhaserBundle";

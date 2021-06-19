@@ -6,7 +6,6 @@
 // ------------------------------------------------------------------------------
 
 import { IEventDispatcher } from "@robotlegsjs/core";
-
 import { ISceneHandler } from "./ISceneHandler";
 import { IViewHandler } from "./IViewHandler";
 

@@ -6,9 +6,7 @@
 // ------------------------------------------------------------------------------
 
 import { IClass } from "@robotlegsjs/core";
-
 import { IMediatorMapping } from "../api/IMediatorMapping";
-
 import { AbstractMediatorFactory } from "./AbstractMediatorFactory";
 
 /**

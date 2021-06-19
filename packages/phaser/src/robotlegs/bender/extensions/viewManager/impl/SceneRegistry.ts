@@ -6,7 +6,6 @@
 // ------------------------------------------------------------------------------
 
 import { EventDispatcher } from "@robotlegsjs/core";
-
 import { SceneManagerBinding } from "./SceneManagerBinding";
 import { SceneManagerBindingEvent } from "./SceneManagerBindingEvent";
 import { SceneRegistryEvent } from "./SceneRegistryEvent";
