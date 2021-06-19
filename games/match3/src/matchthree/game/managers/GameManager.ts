@@ -84,7 +84,7 @@ export class GameManager {
 
         let rndIndex: number;
         let powerUp: PieceData;
-        const toAdd: PieceData[] = new Array<PieceData>();
+        const toAdd: PieceData[] = [];
 
         for (const chain of chains) {
             if (chain.length > 3) {

@@ -31,7 +31,7 @@ export class StarDisplayComponent extends Container {
     }
 
     private createStarts(): void {
-        this._stars = new Array<SingleStar>();
+        this._stars = [];
         this._stars.push(this.createSingleStar(-36, -6));
         this._stars.push(this.createSingleStar(0, 0));
         this._stars.push(this.createSingleStar(36, -6));

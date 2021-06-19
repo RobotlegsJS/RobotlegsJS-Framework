@@ -6,7 +6,7 @@ import { PieceType } from "./PieceType";
 
 export class PowerUpUtils {
     public static getPiecesAffectedByPowerUp(piece: PieceData, grid: GridData): PieceData[] {
-        let piecesToRemove: PieceData[] = new Array<PieceData>();
+        let piecesToRemove: PieceData[] = [];
 
         if (piece.pieceType === PieceType.ROW) {
             piecesToRemove = piecesToRemove.concat(GridUtils.getRow(grid, piece.row));

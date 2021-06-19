@@ -13,7 +13,7 @@ export class GridData {
     }
 
     constructor(cols = 8, rows = 8) {
-        this._grid = new Array<PieceData[]>();
+        this._grid = [];
         this._maxCols = cols;
         this._maxRows = rows;
         this.generateEmptyGrid();
@@ -33,7 +33,7 @@ export class GridData {
     private generateEmptyGrid(): void {
         let line: PieceData[];
         for (let row = 0; row < this._maxRows; row++) {
-            line = new Array<PieceData>();
+            line = [];
             for (let col = 0; col < this._maxCols; col++) {
                 line.push(PieceUtils.getEmptyPiece(col, row));
             }

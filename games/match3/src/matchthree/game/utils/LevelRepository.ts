@@ -23,7 +23,7 @@ export class LevelsRepository {
     }
 
     private setupLevels() {
-        this.levels = new Array<LevelInfo>();
+        this.levels = [];
         this.levels.push(new LevelInfo(0, 5, 7, LevelInfo.MOVE_TYPE, [4200, 5000, 6000], 10)); // 35
         this.levels.push(new LevelInfo(1, 6, 8, LevelInfo.TIMER_TYPE, [8000, 9000, 10000], 0, 80)); // 48
         this.levels.push(new LevelInfo(2, 6, 9, LevelInfo.MOVE_TYPE, [8000, 10000, 12000], 20)); // 54

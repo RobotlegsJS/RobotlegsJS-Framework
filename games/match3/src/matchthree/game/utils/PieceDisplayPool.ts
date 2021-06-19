@@ -11,7 +11,7 @@ export class PixiSpritePool {
 
     public static getImage(assetId: string): Sprite {
         if (this.spriteList.get(assetId) === undefined) {
-            this.spriteList.set(assetId, new Array<Sprite>());
+            this.spriteList.set(assetId, []);
         }
 
         const list: Sprite[] = this.spriteList.get(assetId);

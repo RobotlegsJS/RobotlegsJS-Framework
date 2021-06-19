@@ -15,8 +15,8 @@ describe("PowerUpUtils", () => {
     let grid: GridData;
 
     beforeEach(() => {
-        result = new Array<PieceData>();
-        pieces = new Array<PieceData>();
+        result = [];
+        pieces = [];
         grid = new GridData(5, 5);
     });
 

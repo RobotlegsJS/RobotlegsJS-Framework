@@ -30,11 +30,11 @@ export class LevelModel {
         this.numStars = 0;
         this.numMoves = 0;
 
-        this._pieces = new Array<PieceData>();
+        this._pieces = [];
 
-        this._toAdd = new Array<PieceData>();
-        this._toRemove = new Array<PieceData>();
-        this._toMove = new Array<PieceData>();
+        this._toAdd = [];
+        this._toRemove = [];
+        this._toMove = [];
 
         if (this.levelInfo) {
             this.numMoves = this.levelInfo.numMoves;

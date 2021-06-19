@@ -123,7 +123,7 @@ describe("GameManager", () => {
     });
 
     it("DropPieces", () => {
-        const firstLine: PieceData[] = new Array<PieceData>();
+        const firstLine: PieceData[] = [];
         let piece: PieceData;
         let result = true;
 
@@ -168,7 +168,7 @@ describe("GameManager", () => {
     });
 
     it("RemovePiecesInList", () => {
-        const pieces: PieceData[] = new Array<PieceData>();
+        const pieces: PieceData[] = [];
         pieces.push(new PieceData(1, 6, PieceType.NORMAL, PieceIds.BLUE));
         pieces.push(new PieceData(2, 5, PieceType.NORMAL, PieceIds.GREEN));
         pieces.push(new PieceData(3, 4, PieceType.NORMAL, PieceIds.ORANGE));
