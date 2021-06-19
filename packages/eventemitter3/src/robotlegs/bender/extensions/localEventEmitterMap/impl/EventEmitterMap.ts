@@ -5,8 +5,7 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import { injectable, EventMap } from "@robotlegsjs/core";
-
+import { EventMap, injectable } from "@robotlegsjs/core";
 import { IEventEmitterMap } from "../api/IEventEmitterMap";
 import { EventEmitterMapConfig } from "./EventEmitterMapConfig";
 
