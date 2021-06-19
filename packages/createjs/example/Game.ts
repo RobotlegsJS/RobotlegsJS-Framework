@@ -6,7 +6,8 @@
 // ------------------------------------------------------------------------------
 
 import { Context, MVCSBundle } from "@robotlegsjs/core";
-import { ContextView, CreateJSBundle } from "../src";
+import { CreateJSBundle } from "../src/robotlegs/bender/bundles/createjs/CreateJSBundle";
+import { ContextView } from "../src/robotlegs/bender/extensions/contextView/impl/ContextView";
 import { MyConfig } from "./config/MyConfig";
 import { RobotlegsView } from "./view/RobotlegsView";
 

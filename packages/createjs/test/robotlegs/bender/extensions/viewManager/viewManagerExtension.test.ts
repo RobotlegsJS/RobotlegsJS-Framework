@@ -7,8 +7,9 @@
 
 import { Context, IContext } from "@robotlegsjs/core";
 import { assert } from "chai";
-import { IViewManager, ViewManagerExtension } from "../../../../../src";
+import { IViewManager } from "../../../../../src/robotlegs/bender/extensions/viewManager/api/IViewManager";
 import { ViewManager } from "../../../../../src/robotlegs/bender/extensions/viewManager/impl/ViewManager";
+import { ViewManagerExtension } from "../../../../../src/robotlegs/bender/extensions/viewManager/ViewManagerExtension";
 import "../../../../entry";
 
 describe("ViewManagerExtension", () => {

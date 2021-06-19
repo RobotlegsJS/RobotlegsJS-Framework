@@ -7,16 +7,14 @@
 
 import { Context, IContext, LogLevel } from "@robotlegsjs/core";
 import { assert } from "chai";
-import {
-    ContextView,
-    ContextViewExtension,
-    ContextViewListenerConfig,
-    MediatorMapExtension,
-    StageCrawlerExtension,
-    ViewManagerExtension
-} from "../../../../../src";
+import { ContextViewExtension } from "../../../../../src/robotlegs/bender/extensions/contextView/ContextViewExtension";
+import { ContextView } from "../../../../../src/robotlegs/bender/extensions/contextView/impl/ContextView";
+import { ContextViewListenerConfig } from "../../../../../src/robotlegs/bender/extensions/contextView/impl/ContextViewListenerConfig";
+import { MediatorMapExtension } from "../../../../../src/robotlegs/bender/extensions/mediatorMap/MediatorMapExtension";
 import { IViewHandler } from "../../../../../src/robotlegs/bender/extensions/viewManager/api/IViewHandler";
 import { ContainerRegistry } from "../../../../../src/robotlegs/bender/extensions/viewManager/impl/ContainerRegistry";
+import { StageCrawlerExtension } from "../../../../../src/robotlegs/bender/extensions/viewManager/StageCrawlerExtension";
+import { ViewManagerExtension } from "../../../../../src/robotlegs/bender/extensions/viewManager/ViewManagerExtension";
 import "../../../../entry";
 import { CallbackLogTarget } from "../contextView/support/CallbackLogTarget";
 import { LogParams } from "../contextView/support/LogParams";

@@ -6,7 +6,8 @@
 // ------------------------------------------------------------------------------
 
 import { assert } from "chai";
-import { ContextView, IContextView } from "../../../../../../src";
+import { IContextView } from "../../../../../../src/robotlegs/bender/extensions/contextView/api/IContextView";
+import { ContextView } from "../../../../../../src/robotlegs/bender/extensions/contextView/impl/ContextView";
 import "../../../../../entry";
 
 describe("ContextView", () => {

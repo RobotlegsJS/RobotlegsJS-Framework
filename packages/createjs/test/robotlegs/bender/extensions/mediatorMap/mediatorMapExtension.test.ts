@@ -7,8 +7,10 @@
 
 import { Context, IContext } from "@robotlegsjs/core";
 import { assert } from "chai";
-import { IMediatorMap, MediatorMapExtension, ViewManagerExtension } from "../../../../../src";
+import { IMediatorMap } from "../../../../../src/robotlegs/bender/extensions/mediatorMap/api/IMediatorMap";
 import { MediatorMap } from "../../../../../src/robotlegs/bender/extensions/mediatorMap/impl/MediatorMap";
+import { MediatorMapExtension } from "../../../../../src/robotlegs/bender/extensions/mediatorMap/MediatorMapExtension";
+import { ViewManagerExtension } from "../../../../../src/robotlegs/bender/extensions/viewManager/ViewManagerExtension";
 import "../../../../entry";
 
 describe("MediatorMapExtension", () => {
