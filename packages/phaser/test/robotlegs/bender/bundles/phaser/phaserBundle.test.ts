@@ -5,22 +5,16 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import "../../../../entry";
-
 import { Context, IContext, LogLevel } from "@robotlegsjs/core";
-
+import { assert } from "chai";
 import { PhaserBundle } from "../../../../../src/robotlegs/bender/bundles/phaser/PhaserBundle";
-
-import { ContextSceneManager } from "../../../../../src/robotlegs/bender/extensions/contextSceneManager/impl/ContextSceneManager";
-
 import { IContextSceneManager } from "../../../../../src/robotlegs/bender/extensions/contextSceneManager/api/IContextSceneManager";
+import { ContextSceneManager } from "../../../../../src/robotlegs/bender/extensions/contextSceneManager/impl/ContextSceneManager";
 import { ISceneMediatorMap } from "../../../../../src/robotlegs/bender/extensions/mediatorMap/api/ISceneMediatorMap";
 import { IViewMediatorMap } from "../../../../../src/robotlegs/bender/extensions/mediatorMap/api/IViewMediatorMap";
 import { ISceneManager } from "../../../../../src/robotlegs/bender/extensions/viewManager/api/ISceneManager";
 import { SceneRegistry } from "../../../../../src/robotlegs/bender/extensions/viewManager/impl/SceneRegistry";
-
-import { assert } from "chai";
-
+import "../../../../entry";
 import { CallbackLogTarget } from "../../extensions/contextStateManager/support/CallbackLogTarget";
 import { LogParams } from "../../extensions/contextStateManager/support/LogParams";
 
