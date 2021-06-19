@@ -1,6 +1,5 @@
 import { inject, injectable } from "@robotlegsjs/core";
 import { Mediator } from "@robotlegsjs/pixi";
-
 import { LevelInfo } from "./../game/models/LevelInfo";
 import { LevelsRepository } from "./../game/utils/LevelRepository";
 import { ScoreUtils } from "./../game/utils/ScoreUtils";

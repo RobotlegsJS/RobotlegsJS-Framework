@@ -1,8 +1,6 @@
-import "../../entry";
-
 import { assert } from "chai";
 import { Sprite, TilingSprite } from "pixi.js";
-
+import "../../entry";
 import { AtlasKeys } from "./../../../src/matchthree/utils/AtlasKeys";
 
 describe("AtlasKeys", () => {

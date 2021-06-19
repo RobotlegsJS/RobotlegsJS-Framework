@@ -1,5 +1,4 @@
 import { ICommand, inject, injectable } from "@robotlegsjs/core";
-
 import { GameService } from "./../../services/GameService";
 import { GameStatus } from "./../models/GameStatus";
 import { LevelInfo } from "./../models/LevelInfo";

@@ -1,5 +1,4 @@
 import { Sprite, Texture } from "pixi.js";
-
 import { AtlasKeys } from "./../../utils/AtlasKeys";
 
 export class SingleStar extends Sprite {

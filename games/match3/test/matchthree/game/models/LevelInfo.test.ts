@@ -1,7 +1,5 @@
-import "../../../entry";
-
 import { assert } from "chai";
-
+import "../../../entry";
 import { LevelInfo } from "./../../../../src/matchthree/game/models/LevelInfo";
 
 describe("LevelInfo", () => {

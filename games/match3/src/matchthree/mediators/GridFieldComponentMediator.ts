@@ -2,7 +2,6 @@ import { inject, injectable } from "@robotlegsjs/core";
 import { Mediator } from "@robotlegsjs/pixi";
 import { TweenLite } from "gsap";
 import { Sprite } from "pixi.js";
-
 import { PixiSpritePool } from "../game/utils/PieceDisplayPool";
 import { PieceUtils } from "../game/utils/PieceUtils";
 import { GameEvent } from "./../events/GameEvent";

@@ -1,5 +1,4 @@
-import { Container, BitmapText } from "pixi.js";
-
+import { BitmapText, Container } from "pixi.js";
 import { AtlasKeys } from "./../utils/AtlasKeys";
 import { MagicValues } from "./../utils/MagicValues";
 import { PixiFactory } from "./../utils/PixiFactory";

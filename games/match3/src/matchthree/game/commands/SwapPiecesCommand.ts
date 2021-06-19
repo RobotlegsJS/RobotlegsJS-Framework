@@ -1,5 +1,4 @@
 import { ICommand, inject, injectable } from "@robotlegsjs/core";
-
 import { GameEvent } from "./../../events/GameEvent";
 import { GameManager } from "./../managers/GameManager";
 import { SwapModel } from "./../models/SwapModel";

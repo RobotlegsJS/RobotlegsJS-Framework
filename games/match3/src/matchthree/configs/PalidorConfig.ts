@@ -1,6 +1,5 @@
 import { IConfig, IContext, IEventDispatcher, inject, injectable } from "@robotlegsjs/core";
 import { IFlowManager } from "@robotlegsjs/pixi-palidor";
-
 import { YouWinPopup } from "../views/YouWinPopup";
 import { FlowEvent } from "./../events/FlowEvent";
 import { FlowService } from "./../services/FlowService";

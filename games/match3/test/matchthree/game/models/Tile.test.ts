@@ -1,7 +1,5 @@
-import "../../../entry";
-
 import { assert } from "chai";
-
+import "../../../entry";
 import { Tile } from "./../../../../src/matchthree/game/models/Tile";
 
 describe("Tile", () => {

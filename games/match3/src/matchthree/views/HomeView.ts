@@ -1,5 +1,4 @@
 import { Container, Sprite } from "pixi.js";
-
 import { AtlasKeys } from "./../utils/AtlasKeys";
 import { MagicValues } from "./../utils/MagicValues";
 import { PixiFactory } from "./../utils/PixiFactory";

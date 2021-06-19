@@ -1,5 +1,4 @@
 import { Container, Graphics } from "pixi.js";
-
 import { BlankedCell } from "./../../game/displays/BlankedCell";
 import { Tile } from "./../../game/models/Tile";
 import { ViewPortSize } from "./../../utils/ViewPortSize";

@@ -1,5 +1,4 @@
 import { TimelineLite, TweenLite } from "gsap";
-
 import { PieceData } from "./../models/PieceData";
 import { Tile } from "./../models/Tile";
 

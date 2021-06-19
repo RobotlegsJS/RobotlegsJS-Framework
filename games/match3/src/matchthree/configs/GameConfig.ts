@@ -1,5 +1,4 @@
 import { IConfig, IContext, IEventCommandMap, inject, injectable } from "@robotlegsjs/core";
-
 import { GameEvent } from "./../events/GameEvent";
 import { CreateLevelCommand } from "./../game/commands/CreateLevelCommand";
 import { GameOverCommand } from "./../game/commands/GameOverCommand";

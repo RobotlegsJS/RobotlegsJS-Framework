@@ -1,9 +1,6 @@
-import "../../../entry";
-
-import { assert } from "chai";
 import { EventDispatcher } from "@robotlegsjs/core";
-import sinon = require("sinon");
-
+import { assert } from "chai";
+import "../../../entry";
 import { GameManager } from "./../../../../src/matchthree/game/managers/GameManager";
 import { GameStatus } from "./../../../../src/matchthree/game/models/GameStatus";
 import { LevelModel } from "./../../../../src/matchthree/game/models/LevelModel";
@@ -16,6 +13,8 @@ import { PieceIds } from "./../../../../src/matchthree/game/utils/PieceIds";
 import { PieceType } from "./../../../../src/matchthree/game/utils/PieceType";
 import { PieceUtils } from "./../../../../src/matchthree/game/utils/PieceUtils";
 import { GameService } from "./../../../../src/matchthree/services/GameService";
+
+import sinon = require("sinon");
 
 describe("GameManager", () => {
     let gameManager: GameManager;

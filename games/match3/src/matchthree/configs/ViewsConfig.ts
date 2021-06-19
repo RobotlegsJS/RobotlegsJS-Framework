@@ -1,6 +1,5 @@
 import { IConfig, inject, injectable } from "@robotlegsjs/core";
 import { IMediatorMap } from "@robotlegsjs/pixi";
-
 import { YouWinPopupMediator } from ".././mediators/YouWinPopupMediator";
 import { AlertPopupMediator } from "./../mediators/AlertPopupMediator";
 import { GameOverPopupMediator } from "./../mediators/GameOverPopupMediator";

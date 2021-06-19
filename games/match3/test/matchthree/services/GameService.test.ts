@@ -1,13 +1,12 @@
-import "../../entry";
-
-import sinon = require("sinon");
-import { assert } from "chai";
 import { EventDispatcher } from "@robotlegsjs/core";
-
+import { assert } from "chai";
 import { TouchPhase } from "../../../src/matchthree/game/models/TouchPhase";
+import "../../entry";
 import { GameEvent } from "./../../../src/matchthree/events/GameEvent";
 import { GameStatus } from "./../../../src/matchthree/game/models/GameStatus";
 import { GameService } from "./../../../src/matchthree/services/GameService";
+
+import sinon = require("sinon");
 
 describe("GameService", () => {
     let gameService: GameService;
