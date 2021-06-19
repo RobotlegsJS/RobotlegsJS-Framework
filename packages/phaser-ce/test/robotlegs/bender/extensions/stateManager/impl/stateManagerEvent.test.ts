@@ -5,13 +5,10 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import "../../../../../entry";
-
 import { assert } from "chai";
-
 import { IStateHandler } from "../../../../../../src/robotlegs/bender/extensions/stateManager/api/IStateHandler";
 import { StateManagerEvent } from "../../../../../../src/robotlegs/bender/extensions/stateManager/impl/StateManagerEvent";
-
+import "../../../../../entry";
 import { CallbackStateHandler } from "../support/CallbackStateHandler";
 
 describe("StateManagerEvent", () => {

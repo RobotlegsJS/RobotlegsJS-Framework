@@ -5,11 +5,9 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import "../../../../entry";
-
+import { Context, IContext } from "@robotlegsjs/core";
 import { assert } from "chai";
-
-import { IContext, Context } from "@robotlegsjs/core";
+import "../../../../entry";
 
 describe("PhaserBundle", () => {
     let context: IContext;
