@@ -7,8 +7,7 @@
 
 import { Context } from "@robotlegsjs/core";
 import { ContextView } from "@robotlegsjs/pixi";
-import { autoDetectRenderer, Renderer, Container } from "pixi.js";
-
+import { autoDetectRenderer, Container, Renderer } from "pixi.js";
 import { PalidorBundle } from "../src/robotlegs/bender/bundles/palidor/PalidorBundle";
 import { ExampleConfig } from "./config/ExampleConfig";
 

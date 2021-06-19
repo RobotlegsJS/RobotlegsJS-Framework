@@ -6,7 +6,6 @@
 // ------------------------------------------------------------------------------
 
 import { Container, Graphics, Sprite, Text, TextStyle, TilingSprite } from "pixi.js";
-
 import { ColorButton } from "./../components/ColorButton";
 
 export class AbstractView extends Container {

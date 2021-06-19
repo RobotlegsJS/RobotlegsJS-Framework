@@ -7,7 +7,6 @@
 
 import { Event, IConfig, IEventDispatcher, inject, injectable } from "@robotlegsjs/core";
 import { IMediatorMap } from "@robotlegsjs/pixi";
-
 import { PalidorViewMediator } from "../mediators/PalidorViewMediator";
 import { RobotlegsViewMediator } from "../mediators/RobotlegsViewMediator";
 import { PalidorView } from "../views/PalidorView";

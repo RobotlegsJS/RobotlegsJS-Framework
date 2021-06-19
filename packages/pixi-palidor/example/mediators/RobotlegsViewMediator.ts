@@ -7,7 +7,6 @@
 
 import { Event, injectable } from "@robotlegsjs/core";
 import { Mediator } from "@robotlegsjs/pixi";
-
 import { RobotlegsView } from "./../views/RobotlegsView";
 
 @injectable()
