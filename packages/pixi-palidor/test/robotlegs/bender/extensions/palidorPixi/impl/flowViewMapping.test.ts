@@ -5,14 +5,13 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
+import { assert } from "chai";
+import { FlowManager } from "../../../../../../src/robotlegs/bender/extensions/palidorPixi/impl/FlowManager";
+import { FlowViewMapping } from "../../../../../../src/robotlegs/bender/extensions/palidorPixi/impl/FlowViewMapping";
 import "./../../../../../entry";
+import { Utils } from "./../support/Utils";
 
 import sinon = require("sinon");
-import { assert } from "chai";
-
-import { FlowManager, FlowViewMapping } from "./../../../../../../src";
-
-import { Utils } from "./../support/Utils";
 
 describe("FlowViwMapping", () => {
     let flowManager: FlowManager;

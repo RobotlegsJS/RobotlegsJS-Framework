@@ -5,12 +5,10 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import "./../../../../../entry";
-
-import { PalidorEvent } from "../../../../../../src";
-
-import { assert } from "chai";
 import { Event } from "@robotlegsjs/core";
+import { assert } from "chai";
+import { PalidorEvent } from "../../../../../../src/robotlegs/bender/extensions/palidorPixi/events/PalidorEvent";
+import "./../../../../../entry";
 
 describe("PalidorEvent", () => {
     describe("constants", () => {

@@ -5,14 +5,14 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import "../../../../entry";
-
 import { Context, IContext } from "@robotlegsjs/core";
 import { ContextView } from "@robotlegsjs/pixi";
 import { assert } from "chai";
 import { Container } from "pixi.js";
-
-import { IContainerController, IFlowManager, PalidorBundle } from "./../../../../../src";
+import { PalidorBundle } from "../../../../../src/robotlegs/bender/bundles/palidor/PalidorBundle";
+import { IContainerController } from "../../../../../src/robotlegs/bender/extensions/palidorPixi/api/IContainerController";
+import { IFlowManager } from "../../../../../src/robotlegs/bender/extensions/palidorPixi/api/IFlowManager";
+import "../../../../entry";
 
 describe("PixiBundle", () => {
     let context: IContext;
