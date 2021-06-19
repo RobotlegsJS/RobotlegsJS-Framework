@@ -5,8 +5,8 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import { ISlot } from "./ISlot";
 import { IOnceSignal } from "./IOnceSignal";
+import { ISlot } from "./ISlot";
 
 // eslint-disable-next-line @rushstack/typedef-var
 export const ISignal = Symbol("ISignal");

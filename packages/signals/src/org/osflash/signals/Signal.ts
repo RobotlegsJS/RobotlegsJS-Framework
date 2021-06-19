@@ -5,9 +5,9 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import { OnceSignal } from "./OnceSignal";
 import { ISignal } from "./ISignal";
 import { ISlot } from "./ISlot";
+import { OnceSignal } from "./OnceSignal";
 
 /**
  * Allows the valueClasses to be set in MXML, e.g.

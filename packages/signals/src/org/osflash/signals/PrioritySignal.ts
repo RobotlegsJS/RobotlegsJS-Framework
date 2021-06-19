@@ -5,9 +5,9 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import { Signal } from "./Signal";
 import { IPrioritySignal } from "./IPrioritySignal";
 import { ISlot } from "./ISlot";
+import { Signal } from "./Signal";
 import { Slot } from "./Slot";
 
 export class PrioritySignal extends Signal implements IPrioritySignal {

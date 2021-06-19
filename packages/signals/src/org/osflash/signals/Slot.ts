@@ -5,8 +5,8 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import { ISlot } from "./ISlot";
 import { IOnceSignal } from "./IOnceSignal";
+import { ISlot } from "./ISlot";
 
 /**
  * The Slot class represents a signal slot.
