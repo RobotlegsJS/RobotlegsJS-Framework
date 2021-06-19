@@ -66,10 +66,8 @@ describe("GameManager", () => {
 
     it("FillStep: Called twice", () => {
         const row = 0;
+
         gameManager.fillStep();
-
-        const firstRowBefore: PieceData[] = GridUtils.getRow(gameManager.grid, row);
-
         gameManager.fillStep();
 
         const firstRowAfter: PieceData[] = GridUtils.getRow(gameManager.grid, row);

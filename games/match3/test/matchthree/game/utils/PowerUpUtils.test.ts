@@ -44,6 +44,7 @@ describe("PowerUpUtils", () => {
         );
         result = PowerUpUtils.getPiecesAffectedByPowerUp(removePiece, grid);
 
+        // eslint-disable-next-line @typescript-eslint/prefer-for-of
         for (let i = 0; i < result.length; i++) {
             piece = result[i];
             isSameRow = isSameRow && piece.row === row;
@@ -71,6 +72,7 @@ describe("PowerUpUtils", () => {
         );
         result = PowerUpUtils.getPiecesAffectedByPowerUp(removePiece, grid);
 
+        // eslint-disable-next-line @typescript-eslint/prefer-for-of
         for (let i = 0; i < result.length; i++) {
             piece = result[i];
             isSameCol = isSameCol && piece.col === col;
@@ -109,6 +111,7 @@ describe("PowerUpUtils", () => {
         );
         result = PowerUpUtils.getPiecesAffectedByPowerUp(removePiece, grid);
 
+        // eslint-disable-next-line @typescript-eslint/prefer-for-of
         for (let i = 0; i < result.length; i++) {
             piece = result[i];
             isInPieces = isInPieces && pieces.indexOf(piece) !== -1;
@@ -143,6 +146,7 @@ describe("PowerUpUtils", () => {
         );
         result = PowerUpUtils.getPiecesAffectedByPowerUp(removePiece, grid);
 
+        // eslint-disable-next-line @typescript-eslint/prefer-for-of
         for (let i = 0; i < result.length; i++) {
             piece = result[i];
             isInPieces = isInPieces && pieces.indexOf(piece) !== -1;

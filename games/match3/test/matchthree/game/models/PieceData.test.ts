@@ -1,7 +1,7 @@
 import "../../../entry";
 
 import { assert } from "chai";
-import { Sprite, Texture, TilingSprite } from "pixi.js";
+import { TilingSprite } from "pixi.js";
 
 import { PieceData } from "../../../../src/matchthree/game/models/PieceData";
 import { Tile } from "./../../../../src/matchthree/game/models/Tile";

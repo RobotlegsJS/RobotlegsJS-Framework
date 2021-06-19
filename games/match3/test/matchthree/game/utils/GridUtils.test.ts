@@ -51,6 +51,7 @@ describe("GridUtils", () => {
             new PieceData(2, 2, PieceType.NORMAL, PieceIds.LIGHT_BLUE)
         ];
 
+        // eslint-disable-next-line @typescript-eslint/prefer-for-of
         for (let i = 0; i < lightBluePieces.length; i++) {
             grid.setPiece(lightBluePieces[i]);
         }
@@ -69,6 +70,7 @@ describe("GridUtils", () => {
             new PieceData(2, 2, PieceType.RAINBOW, PieceIds.RAINBOW)
         ];
 
+        // eslint-disable-next-line @typescript-eslint/prefer-for-of
         for (let i = 0; i < powerUpsPieces.length; i++) {
             grid.setPiece(powerUpsPieces[i]);
         }
