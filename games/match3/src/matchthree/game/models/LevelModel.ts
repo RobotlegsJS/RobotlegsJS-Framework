@@ -21,7 +21,7 @@ export class LevelModel {
     private _toRemove: PieceData[];
     private _toMove: PieceData[];
 
-    constructor() {
+    public constructor() {
         this.reset();
     }
 

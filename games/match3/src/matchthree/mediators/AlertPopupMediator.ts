@@ -9,13 +9,13 @@ export class AlertPopupMediator extends Mediator<AlertPopup> {
         this.eventMap.mapListener(
             this.view.confirmButton,
             "click",
-            this.confirmButton_onTriggeredHandler,
+            this._onTriggeredHandlerConfirmButton,
             this
         );
         this.eventMap.mapListener(
             this.view.cancelButton,
             "click",
-            this.cancelButton_onTriggeredHandler,
+            this._onTriggeredHandlerCancelButton,
             this
         );
     }
@@ -24,11 +24,11 @@ export class AlertPopupMediator extends Mediator<AlertPopup> {
         this.eventMap.unmapListeners();
     }
 
-    private confirmButton_onTriggeredHandler(e: any): void {
+    private _onTriggeredHandlerConfirmButton(e: any): void {
         this.view.parent.removeChild(this.view);
     }
 
-    private cancelButton_onTriggeredHandler(e: any): void {
+    private _onTriggeredHandlerCancelButton(e: any): void {
         this.view.parent.removeChild(this.view);
     }
 }

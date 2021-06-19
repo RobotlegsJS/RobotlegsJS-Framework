@@ -3,7 +3,7 @@ import { PixiFactory } from "./../../utils/PixiFactory";
 import { IconButton } from "./IconButton";
 
 export class LevelSelectButton extends IconButton {
-    constructor() {
+    public constructor() {
         super();
     }
 

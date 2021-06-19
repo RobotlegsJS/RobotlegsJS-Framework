@@ -1,6 +1,6 @@
 import { GameView } from "./../views/GameView";
 
-import { injectable, inject } from "@robotlegsjs/core";
+import { injectable } from "@robotlegsjs/core";
 import { Mediator } from "@robotlegsjs/pixi";
 
 @injectable()

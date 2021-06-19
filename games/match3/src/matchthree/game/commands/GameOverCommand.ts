@@ -9,36 +9,36 @@ import { ScoreUtils } from "./../utils/ScoreUtils";
 @injectable()
 export class GameOverCommand implements ICommand {
     @inject(LevelModel)
-    private levelModel: LevelModel;
+    private _levelModel: LevelModel;
 
     @inject(GameService)
-    private gameService: GameService;
+    private _gameService: GameService;
 
     @inject(FlowService)
-    private flowService: FlowService;
+    private _flowService: FlowService;
 
     @inject(LevelsRepository)
-    private levelsRepository: LevelsRepository;
+    private _levelsRepository: LevelsRepository;
 
     public execute(): void {
-        this.gameService.pause();
-        let hiScore = this.levelModel.levelInfo.hiScore;
-        hiScore = Math.max(hiScore, this.levelModel.score);
+        this._gameService.pause();
+        let hiScore = this._levelModel.levelInfo.hiScore;
+        hiScore = Math.max(hiScore, this._levelModel.score);
 
-        this.levelsRepository.updateHiScore(this.levelModel.levelId, hiScore);
+        this._levelsRepository.updateHiScore(this._levelModel.levelId, hiScore);
         // SharedObjectManager.updateHighScore();
 
         const stars = ScoreUtils.getNumStars(
-            this.levelModel.score,
-            this.levelModel.levelInfo.scoreStarts
+            this._levelModel.score,
+            this._levelModel.levelInfo.scoreStarts
         );
 
-        this.levelModel.numStars = stars;
+        this._levelModel.numStars = stars;
 
         if (stars > 0) {
-            this.flowService.showYouWinPopup();
+            this._flowService.showYouWinPopup();
         } else {
-            this.flowService.showGameOverPopup();
+            this._flowService.showGameOverPopup();
         }
     }
 }

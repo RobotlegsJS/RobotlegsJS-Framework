@@ -5,9 +5,9 @@ import { SingleStar } from "./SingleStart";
 export class StarDisplayComponent extends Container {
     private _stars: SingleStar[];
 
-    constructor() {
+    public constructor() {
         super();
-        this.createStarts();
+        this._createStarts();
     }
 
     public update(score: number, scoreStarts: number[]): void {
@@ -30,14 +30,14 @@ export class StarDisplayComponent extends Container {
         }
     }
 
-    private createStarts(): void {
+    private _createStarts(): void {
         this._stars = [];
-        this._stars.push(this.createSingleStar(-36, -6));
-        this._stars.push(this.createSingleStar(0, 0));
-        this._stars.push(this.createSingleStar(36, -6));
+        this._stars.push(this._createSingleStar(-36, -6));
+        this._stars.push(this._createSingleStar(0, 0));
+        this._stars.push(this._createSingleStar(36, -6));
     }
 
-    private createSingleStar(x: number, y: number): SingleStar {
+    private _createSingleStar(x: number, y: number): SingleStar {
         const star: SingleStar = new SingleStar();
         star.anchor.set(0.5);
         star.x = x;

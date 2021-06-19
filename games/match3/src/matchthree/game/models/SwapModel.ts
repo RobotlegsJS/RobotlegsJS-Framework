@@ -5,12 +5,12 @@ import { TouchPhase } from "./TouchPhase";
 
 @injectable()
 export class SwapModel {
-    public static SWAP = "swap";
-    public static WAIT = "wait";
-    public static ROLLBACK = "rollback";
-    public static VALIDATE = "validate";
-    public static HORIZONTAL = "horizontal";
-    public static VERTICAL = "vertical";
+    public static SWAP: string = "swap";
+    public static WAIT: string = "wait";
+    public static ROLLBACK: string = "rollback";
+    public static VALIDATE: string = "validate";
+    public static HORIZONTAL: string = "horizontal";
+    public static VERTICAL: string = "vertical";
 
     public status: string;
 
@@ -19,7 +19,7 @@ export class SwapModel {
     private _maxCols: number;
     private _maxRows: number;
 
-    constructor() {
+    public constructor() {
         this._first = new Tile();
         this._second = new Tile();
     }
@@ -31,9 +31,9 @@ export class SwapModel {
 
     public setPosition(phase: string, col: number, row: number): void {
         let position: Tile;
-        TouchPhase.BEGAN === phase ? (position = this.first) : (position = this._second);
-        position.col = this.solveRanger(col, this._maxCols);
-        position.row = this.solveRanger(row, this._maxRows);
+        position = TouchPhase.BEGAN === phase ? this.first : this._second;
+        position.col = this._solveRanger(col, this._maxCols);
+        position.row = this._solveRanger(row, this._maxRows);
     }
 
     public get swapDirection(): string {
@@ -49,10 +49,10 @@ export class SwapModel {
     }
 
     public updateStatus(): void {
-        this.status === SwapModel.SWAP ? (this.status = SwapModel.VALIDATE) : (this.status = "");
+        this.status = this.status === SwapModel.SWAP ? SwapModel.VALIDATE : "";
     }
 
-    private solveRanger(value: number, max: number): number {
+    private _solveRanger(value: number, max: number): number {
         return Math.max(Math.min(value, max - 1), 0);
     }
 }

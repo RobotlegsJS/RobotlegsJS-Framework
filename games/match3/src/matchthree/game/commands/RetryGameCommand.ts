@@ -8,27 +8,27 @@ import { LevelModel } from "./../models/LevelModel";
 @injectable()
 export class RetryGameCommand implements ICommand {
     @inject(LevelModel)
-    private levelModel: LevelModel;
+    private _levelModel: LevelModel;
 
     @inject(GameManager)
-    private gameManager: GameManager;
+    private _gameManager: GameManager;
 
     @inject(GameService)
-    private gameService: GameService;
+    private _gameService: GameService;
 
     @inject(FlowService)
-    private flowService: FlowService;
+    private _flowService: FlowService;
 
     public execute(): void {
-        this.gameService.clearGridField();
+        this._gameService.clearGridField();
 
-        this.levelModel.reset();
+        this._levelModel.reset();
 
-        this.gameService.updateHUDData();
-        this.gameService.start();
-        this.flowService.showStartingPopup();
+        this._gameService.updateHUDData();
+        this._gameService.start();
+        this._flowService.showStartingPopup();
 
-        this.gameManager.generateGrid(this.levelModel.maxCols, this.levelModel.maxRows);
-        this.gameManager.nextStep();
+        this._gameManager.generateGrid(this._levelModel.maxCols, this._levelModel.maxRows);
+        this._gameManager.nextStep();
     }
 }

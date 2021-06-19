@@ -16,19 +16,19 @@ export class HomeView extends Container {
         return this._optionsButton;
     }
 
-    constructor() {
+    public constructor() {
         super();
 
-        this.createBackground();
-        this.createImages();
-        this.createButtons();
+        this._createBackground();
+        this._createImages();
+        this._createButtons();
     }
 
-    private createBackground(): void {
+    private _createBackground(): void {
         this.addChild(PixiFactory.getBackground());
     }
 
-    private createImages(): void {
+    private _createImages(): void {
         const logo: Sprite = PixiFactory.getImage(AtlasKeys.LOGO_MATCH_THREE);
         logo.x = ViewPortSize.HALF_WIDTH;
         logo.y = ViewPortSize.MAX_HEIGHT * 0.3;
@@ -41,7 +41,7 @@ export class HomeView extends Container {
         this.addChild(logoSetzer);
     }
 
-    private createButtons(): void {
+    private _createButtons(): void {
         this._playButton = PixiFactory.getIconButton(AtlasKeys.ICON_RESUME, IconButton.TYPE_MEDIUM);
         this._playButton.x = ViewPortSize.HALF_WIDTH;
         this._playButton.y = ViewPortSize.MAX_HEIGHT - 50 - MagicValues.BORDER_OFFSET_BOTTOM;

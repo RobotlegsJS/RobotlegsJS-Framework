@@ -7,7 +7,7 @@ import { MagicValues } from "./MagicValues";
 import { ViewPortSize } from "./ViewPortSize";
 
 export class PixiFactory {
-    public static getText(text: string, fontSize: number = MagicValues.SIZE_DEFAULT): Container {
+    public static getText(text: string, fontSize: number = MagicValues.SIZE_DEFAULT): BitmapText {
         const style = {
             align: "center",
             font: { name: MagicValues.FONT_FAMILY, size: fontSize }
@@ -48,11 +48,11 @@ export class PixiFactory {
         return new Sprite(AtlasKeys.getTexture(AtlasKeys.BG_IMAGE));
     }
 
-    public static getColorBackground(color = 0x000000): Graphics {
+    public static getColorBackground(color: number = 0x000000): Graphics {
         return this.getColorBox(ViewPortSize.MAX_WIDTH, ViewPortSize.MAX_HEIGHT, color);
     }
 
-    public static getColorBox(width: number, heigth: number, color = 0x00000): Graphics {
+    public static getColorBox(width: number, heigth: number, color: number = 0x00000): Graphics {
         const background: Graphics = new Graphics();
         background.beginFill(color);
         background.drawRect(0, 0, width, heigth);
@@ -71,7 +71,7 @@ export class PixiFactory {
         return new Sprite(AtlasKeys.getTexture(AtlasKeys.BG_HUD_IMAGE));
     }
 
-    public static getShadowBackground(alpha = 0.6): Graphics {
+    public static getShadowBackground(alpha: number = 0.6): Graphics {
         const bg: Graphics = PixiFactory.getColorBackground(0x000000);
         bg.alpha = alpha;
         return bg;

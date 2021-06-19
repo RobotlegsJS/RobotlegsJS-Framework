@@ -506,7 +506,7 @@ describe("GameManager", () => {
         gameManager.swapModel.status = SwapModel.SWAP;
 
         const spySwapSelectedPieces = sinon.spy(gameManager, "swapSelectedPieces");
-        const spyAfterSwap = sinon.spy(gameManager, "afterSwap" as any);
+        const spyAfterSwap = sinon.spy(gameManager, "_afterSwap" as any);
 
         gameManager.nextStep(gameManager);
         // After the movement of the sprites
@@ -540,7 +540,7 @@ describe("GameManager", () => {
         gameManager.swapModel.status = SwapModel.VALIDATE;
 
         const spyRemoveAllChains = sinon.spy(gameManager, "removeAllChains");
-        const spyAfterSwap = sinon.spy(gameManager, "afterSwap" as any);
+        const spyAfterSwap = sinon.spy(gameManager, "_afterSwap" as any);
         const spySwapPiecesConfirmCommand = sinon.spy(
             gameManager.gameService,
             "swapPiecesConfirmCommand"
@@ -575,7 +575,7 @@ describe("GameManager", () => {
         gameManager.swapModel.status = SwapModel.VALIDATE;
 
         const spyRemoveAllChains = sinon.spy(gameManager, "removeAllChains");
-        const spyAfterSwap = sinon.spy(gameManager, "afterSwap" as any);
+        const spyAfterSwap = sinon.spy(gameManager, "_afterSwap" as any);
         const spySwapPiecesConfirmCommand = sinon.spy(
             gameManager.gameService,
             "swapPiecesConfirmCommand"
@@ -610,7 +610,7 @@ describe("GameManager", () => {
         gameManager.swapModel.status = SwapModel.VALIDATE;
 
         const spyRemoveAllChains = sinon.spy(gameManager, "removeAllChains");
-        const spyAfterSwap = sinon.spy(gameManager, "afterSwap" as any);
+        const spyAfterSwap = sinon.spy(gameManager, "_afterSwap" as any);
         const spySwapPiecesConfirmCommand = sinon.spy(
             gameManager.gameService,
             "swapPiecesConfirmCommand"
@@ -644,12 +644,12 @@ describe("GameManager", () => {
         gameManager.swapModel.setPosition(TouchPhase.ENDED, secondPosition.col, secondPosition.row);
         gameManager.swapModel.status = SwapModel.VALIDATE;
 
-        const spyAfterSwap = sinon.spy(gameManager, "afterSwap" as any);
+        const spyAfterSwap = sinon.spy(gameManager, "_afterSwap" as any);
         const spySwapSelectedPieces = sinon.spy(gameManager, "swapSelectedPieces");
 
         gameManager.nextStep(gameManager);
 
-        assert.isTrue(spyAfterSwap.called, "afterSwap" as any);
+        assert.isTrue(spyAfterSwap.called, "_afterSwap" as any);
         assert.isTrue(spySwapSelectedPieces.called, "swapSelectedPieces");
         assert.equal(
             PieceIds.BLUE,
@@ -697,7 +697,7 @@ describe("GameManager", () => {
         gameManager.swapModel.setPosition(TouchPhase.ENDED, secondPosition.col, secondPosition.row);
         gameManager.swapModel.status = SwapModel.VALIDATE;
 
-        const spyAfterSwap = sinon.spy(gameManager, "afterSwap" as any);
+        const spyAfterSwap = sinon.spy(gameManager, "_afterSwap" as any);
         const spyRemoveAllPieces = sinon.spy(gameManager, "removeAllPieces");
         const spySwapPiecesConfirmCommand = sinon.spy(
             gameManager.gameService,
@@ -706,7 +706,7 @@ describe("GameManager", () => {
 
         gameManager.nextStep(gameManager);
 
-        assert.isTrue(spyAfterSwap.called, "afterSwap" as any);
+        assert.isTrue(spyAfterSwap.called, "_afterSwap" as any);
         assert.isTrue(spyRemoveAllPieces.called, "removeAllPieces");
         assert.isTrue(spySwapPiecesConfirmCommand.called, "swapPiecesConfirmCommand");
     });
@@ -737,7 +737,7 @@ describe("GameManager", () => {
         gameManager.swapModel.setPosition(TouchPhase.ENDED, secondPosition.col, secondPosition.row);
         gameManager.swapModel.status = SwapModel.VALIDATE;
 
-        const spyAfterSwap = sinon.spy(gameManager, "afterSwap" as any);
+        const spyAfterSwap = sinon.spy(gameManager, "_afterSwap" as any);
         const spyRemovePiecesInList = sinon.spy(gameManager, "removePiecesInList");
         const spySwapPiecesConfirmCommand = sinon.spy(
             gameManager.gameService,
@@ -780,7 +780,7 @@ describe("GameManager", () => {
         gameManager.swapModel.setPosition(TouchPhase.ENDED, secondPosition.col, secondPosition.row);
         gameManager.swapModel.status = SwapModel.VALIDATE;
 
-        const spyAfterSwap = sinon.spy(gameManager, "afterSwap" as any);
+        const spyAfterSwap = sinon.spy(gameManager, "_afterSwap" as any);
         const spyRemovePiecesInList = sinon.spy(gameManager, "removePiecesInList");
         const spySwapPiecesConfirmCommand = sinon.spy(
             gameManager.gameService,
@@ -823,7 +823,7 @@ describe("GameManager", () => {
         gameManager.swapModel.setPosition(TouchPhase.ENDED, secondPosition.col, secondPosition.row);
         gameManager.swapModel.status = SwapModel.VALIDATE;
 
-        const spyAfterSwap = sinon.spy(gameManager, "afterSwap" as any);
+        const spyAfterSwap = sinon.spy(gameManager, "_afterSwap" as any);
         const spyRemovePiecesInList = sinon.spy(gameManager, "removePiecesInList");
         const spySwapPiecesConfirmCommand = sinon.spy(
             gameManager.gameService,

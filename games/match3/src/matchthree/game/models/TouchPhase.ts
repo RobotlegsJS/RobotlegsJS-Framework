@@ -1,4 +1,4 @@
 export class TouchPhase {
-    public static BEGAN = "mousedown";
-    public static ENDED = "mouseup";
+    public static BEGAN: string = "mousedown";
+    public static ENDED: string = "mouseup";
 }

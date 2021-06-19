@@ -32,7 +32,7 @@ export class GameManager {
         this.swapModel.setMaxValues(this._grid.maxCols, this._grid.maxRows);
     }
 
-    public nextStep = (nthis: GameManager = this) => {
+    public nextStep = (nthis: GameManager = this): void => {
         // SWAP
         if (
             nthis.swapModel.status === SwapModel.SWAP ||
@@ -44,7 +44,7 @@ export class GameManager {
             return;
         } else if (nthis.swapModel.status === SwapModel.VALIDATE) {
             nthis.swapModel.updateStatus();
-            nthis.afterSwap();
+            nthis._afterSwap();
 
             return;
         }
@@ -194,7 +194,7 @@ export class GameManager {
         return this._grid;
     }
 
-    private afterSwap(): void {
+    private _afterSwap(): void {
         let needToRollback = false;
 
         const piece1: PieceData = this.grid.getPiece(

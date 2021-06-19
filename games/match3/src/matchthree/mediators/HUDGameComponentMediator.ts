@@ -12,16 +12,16 @@ import { HUDGameComponent } from "./../views/components/HUDGameComponent";
 @injectable()
 export class HUDGameComponentMediator extends Mediator<HUDGameComponent> {
     @inject(LevelModel)
-    private levelModel: LevelModel;
+    private _levelModel: LevelModel;
 
     @inject(GameStatus)
-    private gameStatus: GameStatus;
+    private _gameStatus: GameStatus;
 
     @inject(GameService)
-    private gameService: GameService;
+    private _gameService: GameService;
 
     @inject(FlowService)
-    private flowService: FlowService;
+    private _flowService: FlowService;
 
     private _paused: boolean;
 
@@ -29,17 +29,17 @@ export class HUDGameComponentMediator extends Mediator<HUDGameComponent> {
         this.eventMap.mapListener(
             this.view.pauseButton,
             "click",
-            this.pauseButton_onTriggeredHandler,
+            this._onTriggeredHandlerPauseButton,
             this
         );
         this.eventMap.mapListener(
             this.eventDispatcher,
             GameEvent.UPDATE_HUD_DATA,
-            this.game_onUpdateHandler,
+            this._onUpdateHandlerGame,
             this
         );
 
-        this.setupHUDType();
+        this._setupHUDType();
     }
 
     public destroy(): void {
@@ -47,13 +47,13 @@ export class HUDGameComponentMediator extends Mediator<HUDGameComponent> {
         this.eventMap.unmapListeners();
     }
 
-    private setupHUDType(): void {
-        if (this.levelModel.levelInfo.levelType === LevelInfo.TIMER_TYPE) {
+    private _setupHUDType(): void {
+        if (this._levelModel.levelInfo.levelType === LevelInfo.TIMER_TYPE) {
             this.view.setTimerType();
             this.eventMap.mapListener(
                 this.eventDispatcher,
                 GameEvent.RESUME,
-                this.game_onResumeHandler,
+                this._onResumeHandlerGame,
                 this
             );
         } else {
@@ -61,39 +61,39 @@ export class HUDGameComponentMediator extends Mediator<HUDGameComponent> {
         }
     }
 
-    private game_onResumeHandler(e: any): void {
+    private _onResumeHandlerGame(e: any): void {
         this._paused = false;
-        this.tick();
+        this._tick();
     }
 
-    private tick(): void {
+    private _tick(): void {
         if (this._paused === true) {
             return;
         }
-        this.levelModel.clock--;
-        this.view.updateValues(this.levelModel);
+        this._levelModel.clock--;
+        this.view.updateValues(this._levelModel);
 
         if (
-            this.levelModel.levelInfo.levelType === LevelInfo.TIMER_TYPE &&
-            this.levelModel.clock === 0
+            this._levelModel.levelInfo.levelType === LevelInfo.TIMER_TYPE &&
+            this._levelModel.clock === 0
         ) {
-            if (this.gameStatus.hasToWait) {
-                this.gameService.gameOver();
+            if (this._gameStatus.hasToWait) {
+                this._gameService.gameOver();
             } else {
-                this.gameService.gameOverCommand();
+                this._gameService.gameOverCommand();
             }
             this._paused = true;
             return;
         }
-        setTimeout(this.tick.bind(this), 1000);
+        setTimeout(this._tick.bind(this), 1000);
     }
 
-    private game_onUpdateHandler(e: any): void {
-        this.view.updateValues(this.levelModel);
+    private _onUpdateHandlerGame(e: any): void {
+        this.view.updateValues(this._levelModel);
     }
 
-    private pauseButton_onTriggeredHandler(e: any): void {
+    private _onTriggeredHandlerPauseButton(e: any): void {
         this._paused = true;
-        this.flowService.showPausePopup();
+        this._flowService.showPausePopup();
     }
 }

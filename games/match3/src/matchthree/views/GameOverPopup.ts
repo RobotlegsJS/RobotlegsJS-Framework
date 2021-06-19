@@ -18,23 +18,23 @@ export class GameOverPopup extends Container {
         return this._levelSelectButton;
     }
 
-    constructor() {
+    public constructor() {
         super();
 
-        this.createBackground();
-        this.createText();
-        this.createButtons();
+        this._createBackground();
+        this._createText();
+        this._createButtons();
     }
 
-    private createBackground(): void {
+    private _createBackground(): void {
         this.addChild(PixiFactory.getShadowBackground(0.9));
     }
 
-    private createText(): void {
+    private _createText(): void {
         this.addChild(PixiFactory.getTitle(Texts.GAME_OVER));
     }
 
-    private createButtons(): void {
+    private _createButtons(): void {
         this._retryButton = PixiFactory.getIconButton(AtlasKeys.ICON_RETRY);
         this._retryButton.x = ViewPortSize.HALF_WIDTH - this._retryButton.width * 0.5 - 4;
         this._retryButton.y = ViewPortSize.MAX_HEIGHT - MagicValues.BORDER_OFFSET_BOTTOM;

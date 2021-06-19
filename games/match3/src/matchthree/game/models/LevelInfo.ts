@@ -1,6 +1,6 @@
 export class LevelInfo {
-    public static MOVE_TYPE = "moveType";
-    public static TIMER_TYPE = "timerType";
+    public static MOVE_TYPE: string = "moveType";
+    public static TIMER_TYPE: string = "timerType";
 
     public hiScore: number;
 
@@ -13,14 +13,14 @@ export class LevelInfo {
     private _time: number;
     private _levelId: number;
 
-    constructor(
+    public constructor(
         levelId: number,
         maxCols: number,
         maxRows: number,
         levelType: string,
         scoreStarts: number[],
         moves: number,
-        time = 0
+        time: number = 0
     ) {
         this._levelId = levelId;
         this._numMoves = moves;

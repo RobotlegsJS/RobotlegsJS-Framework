@@ -8,35 +8,35 @@ import { StartingPopup } from "./../views/StartingPopup";
 @injectable()
 export class StartingPopupMediator extends Mediator<StartingPopup> {
     @inject(GameService)
-    private gameService: GameService;
+    private _gameService: GameService;
 
     @inject(FlowService)
-    private flowService: FlowService;
+    private _flowService: FlowService;
 
     private _count: number;
 
     public initialize(): void {
         this._count = 4;
 
-        this.tick(this);
+        this._tick(this);
     }
 
     public destroy(): void {
         this.eventMap.unmapListeners();
     }
 
-    private tick(obThis: any = this) {
+    private _tick(obThis: StartingPopupMediator = this): void {
         obThis._count -= 1;
         if (obThis._count > 0) {
             obThis.view.changeNumber(obThis._count);
-            setTimeout(obThis.tick, 300, obThis);
+            setTimeout(obThis._tick, 300, obThis);
         } else {
             obThis.tick_onComplete();
         }
     }
 
     private tick_onComplete(): void {
-        this.gameService.resume();
-        this.flowService.closePopup();
+        this._gameService.resume();
+        this._flowService.closePopup();
     }
 }

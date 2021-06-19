@@ -1,8 +1,8 @@
 export class PieceType {
-    public static EMPTY = "empty";
+    public static EMPTY: string = "empty";
 
-    public static NORMAL = "normal";
-    public static ROW = "row";
-    public static COL = "col";
-    public static RAINBOW = "rainbow";
+    public static NORMAL: string = "normal";
+    public static ROW: string = "row";
+    public static COL: string = "col";
+    public static RAINBOW: string = "rainbow";
 }

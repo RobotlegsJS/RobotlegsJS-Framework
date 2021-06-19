@@ -17,7 +17,7 @@ export class PieceUtils {
         return new PieceData(col, row);
     }
 
-    public static getNewNormalPiece(col: number, row: number, pieceId = 0): PieceData {
+    public static getNewNormalPiece(col: number, row: number, pieceId: number = 0): PieceData {
         if (pieceId === 0) {
             const ids: number[] = PieceIds.ALL_NORMAL_IDS;
             const rnd: number = Math.floor(Math.random() * ids.length);

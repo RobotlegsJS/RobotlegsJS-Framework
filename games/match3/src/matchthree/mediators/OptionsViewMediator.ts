@@ -7,22 +7,22 @@ import { OptionsView } from "./../views/OptionsView";
 @injectable()
 export class OptionsViewMediator extends Mediator<OptionsView> {
     @inject(FlowService)
-    private flowService: FlowService;
+    private _flowService: FlowService;
 
     public initialize(): void {
-        this.eventMap.mapListener(this.view.backButton, "click", this.backButton_onClick, this);
-        this.eventMap.mapListener(this.view.deleteButton, "click", this.deleteButton_onClick, this);
+        this.eventMap.mapListener(this.view.backButton, "click", this._onClickBackButton, this);
+        this.eventMap.mapListener(this.view.deleteButton, "click", this._onClickDeleteButton, this);
     }
 
     public destroy(): void {
         this.eventMap.unmapListeners();
     }
 
-    private backButton_onClick(e: any, thisObject: any): void {
-        this.flowService.setHomeView();
+    private _onClickBackButton(e: any, thisObject: any): void {
+        this._flowService.setHomeView();
     }
 
-    private deleteButton_onClick(e: any): void {
-        this.flowService.showAlertPopup();
+    private _onClickDeleteButton(e: any): void {
+        this._flowService.showAlertPopup();
     }
 }

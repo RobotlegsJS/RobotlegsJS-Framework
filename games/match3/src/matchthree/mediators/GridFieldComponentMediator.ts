@@ -18,39 +18,39 @@ import { GridFieldComponent } from "./../views/components/GridFieldComponent";
 @injectable()
 export class GridFieldComponentMediator extends Mediator<GridFieldComponent> {
     @inject(LevelModel)
-    private levelModel: LevelModel;
+    private _levelModel: LevelModel;
 
     @inject(GameManager)
-    private gameManager: GameManager;
+    private _gameManager: GameManager;
 
     @inject(GameService)
-    private gameService: GameService;
+    private _gameService: GameService;
 
     private _displays: Map<PieceData, Sprite>;
 
     public initialize(): void {
         this._displays = new Map<PieceData, Sprite>();
-        this.view.generateGrid(this.levelModel.maxCols, this.levelModel.maxRows);
+        this.view.generateGrid(this._levelModel.maxCols, this._levelModel.maxRows);
 
         this.view.interactive = true;
 
         this.eventMap.mapListener(
             this.eventDispatcher,
             GameEvent.CLEAR_GRID,
-            this.game_onClearGridHandler,
+            this._onClearGridHandlerGame,
             this
         );
         this.eventMap.mapListener(
             this.eventDispatcher,
             GameEvent.UPDATE_GRID,
-            this.game_onUpdateGridHandler,
+            this._onUpdateGridHandlerGame,
             this
         );
 
-        this.eventMap.mapListener(this.view, "mousedown", this.view_onSelectPiecesHandler, this);
-        this.eventMap.mapListener(this.view, "mouseup", this.view_onSelectPiecesHandler, this);
+        this.eventMap.mapListener(this.view, "mousedown", this._onSelectPiecesHandlerView, this);
+        this.eventMap.mapListener(this.view, "mouseup", this._onSelectPiecesHandlerView, this);
 
-        this.gameManager.nextStep();
+        this._gameManager.nextStep();
     }
 
     public destroy(): void {
@@ -58,19 +58,19 @@ export class GridFieldComponentMediator extends Mediator<GridFieldComponent> {
     }
 
     public updateDisplays(): void {
-        if (this.levelModel.toRemove.length > 0) {
+        if (this._levelModel.toRemove.length > 0) {
             this.removeDisplays();
-        } else if (this.levelModel.toAdd.length > 0) {
+        } else if (this._levelModel.toAdd.length > 0) {
             this.addDisplays();
-        } else if (this.levelModel.toMove.length > 0) {
+        } else if (this._levelModel.toMove.length > 0) {
             this.moveDisplays();
         }
     }
 
     public addDisplays(): void {
         let piece: PieceData;
-        while (this.levelModel.toAdd.length > 0) {
-            piece = this.levelModel.toAdd.pop();
+        while (this._levelModel.toAdd.length > 0) {
+            piece = this._levelModel.toAdd.pop();
             if (this._displays.get(piece)) {
                 continue;
             }
@@ -79,22 +79,22 @@ export class GridFieldComponentMediator extends Mediator<GridFieldComponent> {
             piece.updateDisplayPosition();
             this.addDisplayToStage(piece);
         }
-        this.gameManager.nextStep();
+        this._gameManager.nextStep();
     }
 
     public removeDisplays(): void {
         let piece: PieceData;
         const animationList: TweenLite[] = [];
 
-        while (this.levelModel.toRemove.length > 0) {
-            piece = this.levelModel.toRemove.pop();
+        while (this._levelModel.toRemove.length > 0) {
+            piece = this._levelModel.toRemove.pop();
 
-            this.levelModel.removePiece(piece);
+            this._levelModel.removePiece(piece);
             this._displays.delete(piece);
 
             animationList.push(AnimationUtils.createRemoveTween(piece, this.destroyDisplay));
         }
-        AnimationUtils.applyAnimation(animationList, this.gameManager.nextStep);
+        AnimationUtils.applyAnimation(animationList, this._gameManager.nextStep);
     }
 
     public destroyDisplay(display: Sprite): void {
@@ -105,14 +105,14 @@ export class GridFieldComponentMediator extends Mediator<GridFieldComponent> {
     public moveDisplays(): void {
         const animationList: TweenLite[] = [];
 
-        while (this.levelModel.toMove.length > 0) {
-            animationList.push(AnimationUtils.createMoveTween(this.levelModel.toMove.pop()));
+        while (this._levelModel.toMove.length > 0) {
+            animationList.push(AnimationUtils.createMoveTween(this._levelModel.toMove.pop()));
         }
         AnimationUtils.applyAnimation(animationList, this.onComplete);
     }
 
-    public onComplete = (ob: any = this) => {
-        ob.gameManager.nextStep();
+    public onComplete = (ob: GridFieldComponentMediator = this): void => {
+        ob._gameManager.nextStep();
     };
 
     public addDisplayToStage(piece: PieceData): void {
@@ -125,11 +125,11 @@ export class GridFieldComponentMediator extends Mediator<GridFieldComponent> {
         this._displays.delete(piece);
     }
 
-    private view_onSelectPiecesHandler(e: any): void {
+    private _onSelectPiecesHandlerView(e: any): void {
         if (
-            this.levelModel.toMove.length ||
-            this.levelModel.toRemove.length ||
-            this.levelModel.toAdd.length
+            this._levelModel.toMove.length ||
+            this._levelModel.toRemove.length ||
+            this._levelModel.toAdd.length
         ) {
             return;
         }
@@ -146,7 +146,7 @@ export class GridFieldComponentMediator extends Mediator<GridFieldComponent> {
                     (e.data.global.y - (this.view.y - Tile.TILE_HEIGHT * 0.5)) / Tile.TILE_HEIGHT
                 );
 
-                this.gameService.swapPiecesCommand(TouchPhase.BEGAN, col, row);
+                this._gameService.swapPiecesCommand(TouchPhase.BEGAN, col, row);
             } else if (touchPhase === TouchPhase.ENDED) {
                 col = Math.floor(
                     (e.data.global.x - (this.view.x - Tile.TILE_WIDTH * 0.5)) / Tile.TILE_WIDTH
@@ -155,19 +155,18 @@ export class GridFieldComponentMediator extends Mediator<GridFieldComponent> {
                     (e.data.global.y - (this.view.y - Tile.TILE_HEIGHT * 0.5)) / Tile.TILE_HEIGHT
                 );
 
-                this.gameService.swapPiecesCommand(TouchPhase.ENDED, col, row);
+                this._gameService.swapPiecesCommand(TouchPhase.ENDED, col, row);
             }
         }
     }
 
-    private game_onClearGridHandler(e: any): void {
-        const keys = this._displays.values();
+    private _onClearGridHandlerGame(e: any): void {
         this._displays.forEach((display: Sprite, piece: PieceData, map: Map<PieceData, Sprite>) => {
             this.removeDisplayFromStage(piece);
         }, this);
     }
 
-    private game_onUpdateGridHandler(e: any): void {
+    private _onUpdateGridHandlerGame(e: any): void {
         this.updateDisplays();
     }
 }

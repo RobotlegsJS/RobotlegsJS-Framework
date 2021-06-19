@@ -1,4 +1,4 @@
-import { Container } from "pixi.js";
+import { Container, BitmapText } from "pixi.js";
 
 import { AtlasKeys } from "./../utils/AtlasKeys";
 import { MagicValues } from "./../utils/MagicValues";
@@ -19,22 +19,22 @@ export class AlertPopup extends Container {
         return this._cancelButton;
     }
 
-    constructor() {
+    public constructor() {
         super();
 
-        this.createBackground();
-        this.createText();
-        this.createButtons();
+        this._createBackground();
+        this._createText();
+        this._createButtons();
     }
 
-    private createBackground(): void {
+    private _createBackground(): void {
         this.addChild(PixiFactory.getShadowBackground(0.9));
     }
 
-    private createText(): void {
+    private _createText(): void {
         this.addChild(PixiFactory.getTitle(Texts.ALERT));
 
-        const alert: Container = PixiFactory.getText(Texts.CONFIRM_DELETE);
+        const alert: BitmapText = PixiFactory.getText(Texts.CONFIRM_DELETE);
         alert.x = ViewPortSize.HALF_WIDTH;
         alert.y = ViewPortSize.HALF_HEIGHT;
         alert.pivot.x = alert.width * 0.5;
@@ -42,7 +42,7 @@ export class AlertPopup extends Container {
         this.addChild(alert);
     }
 
-    private createButtons(): void {
+    private _createButtons(): void {
         this._confirmButton = PixiFactory.getIconButton(AtlasKeys.ICON_CONFIRM);
         this._confirmButton.x = ViewPortSize.HALF_WIDTH - this._confirmButton.width * 0.5 - 4;
         this._confirmButton.y = ViewPortSize.MAX_HEIGHT - MagicValues.BORDER_OFFSET_BOTTOM;

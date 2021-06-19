@@ -10,35 +10,37 @@ import { LevelsRepository } from "./../utils/LevelRepository";
 @injectable()
 export class CreateLevelCommand implements ICommand {
     @inject(LevelModel)
-    private levelModel: LevelModel;
+    private _levelModel: LevelModel;
 
     @inject(GameManager)
-    private gameManager: GameManager;
+    private _gameManager: GameManager;
 
     @inject(GameService)
-    private gameService: GameService;
+    private _gameService: GameService;
 
     @inject(FlowService)
-    private flowService: FlowService;
+    private _flowService: FlowService;
 
     @inject(GameEvent)
-    private gameEvent: GameEvent;
+    private _gameEvent: GameEvent;
 
     @inject(LevelsRepository)
-    private levelsRepository: LevelsRepository;
+    private _levelsRepository: LevelsRepository;
 
     public execute(): void {
-        this.levelModel.levelId = this.gameEvent.extra.levelId;
-        this.levelModel.levelInfo = this.levelsRepository.getLevelInfoById(this.levelModel.levelId);
-        this.levelModel.reset();
-        this.levelModel.numMoves = this.levelModel.levelInfo.numMoves;
+        this._levelModel.levelId = this._gameEvent.extra.levelId;
+        this._levelModel.levelInfo = this._levelsRepository.getLevelInfoById(
+            this._levelModel.levelId
+        );
+        this._levelModel.reset();
+        this._levelModel.numMoves = this._levelModel.levelInfo.numMoves;
 
-        this.gameManager.generateGrid(this.levelModel.maxCols, this.levelModel.maxRows);
+        this._gameManager.generateGrid(this._levelModel.maxCols, this._levelModel.maxRows);
 
-        this.gameService.updateHUDData();
-        this.gameService.start();
+        this._gameService.updateHUDData();
+        this._gameService.start();
 
-        this.flowService.setGameView();
-        this.flowService.showStartingPopup();
+        this._flowService.setGameView();
+        this._flowService.showStartingPopup();
     }
 }

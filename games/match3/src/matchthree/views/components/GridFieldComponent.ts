@@ -5,13 +5,13 @@ import { Tile } from "./../../game/models/Tile";
 import { ViewPortSize } from "./../../utils/ViewPortSize";
 
 export class GridFieldComponent extends Container {
-    constructor() {
+    public constructor() {
         super();
 
-        this.setupValues();
+        this._setupValues();
     }
 
-    public generateGrid(maxCols, maxRows): void {
+    public generateGrid(maxCols: number, maxRows: number): void {
         const gridSize = maxCols * Tile.TILE_WIDTH;
         const newX = (ViewPortSize.MAX_WIDTH - gridSize) * 0.5;
         this.x = newX + Tile.TILE_WIDTH * 0.5;
@@ -26,7 +26,7 @@ export class GridFieldComponent extends Container {
         }
     }
 
-    private setupValues(): void {
+    private _setupValues(): void {
         this.x = 10 + Tile.TILE_WIDTH * 0.5;
         this.y = 130 + Tile.TILE_HEIGHT * 0.5;
     }

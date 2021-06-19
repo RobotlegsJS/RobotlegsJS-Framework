@@ -1,12 +1,12 @@
 import { EventDispatcher, IEventDispatcher, inject, injectable } from "@robotlegsjs/core";
-import { PalidorEvent } from "@robotlegsjs/pixi-palidor/lib";
+import { PalidorEvent } from "@robotlegsjs/pixi-palidor";
 
 import { FlowEvent } from "./../events/FlowEvent";
 
 @injectable()
 export class FlowService {
     @inject(IEventDispatcher)
-    private eventDispatcher: IEventDispatcher;
+    private _eventDispatcher: IEventDispatcher;
 
     // Views
 
@@ -55,6 +55,6 @@ export class FlowService {
     }
 
     public dispatchEventWith(type: string): void {
-        (<EventDispatcher>this.eventDispatcher).dispatchEventWith(type);
+        (<EventDispatcher>this._eventDispatcher).dispatchEventWith(type);
     }
 }

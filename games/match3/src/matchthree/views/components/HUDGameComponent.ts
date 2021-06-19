@@ -24,13 +24,13 @@ export class HUDGameComponent extends Container {
 
     private _starComponent: StarDisplayComponent;
 
-    constructor() {
+    public constructor() {
         super();
 
-        this.createBackground();
-        this.createTextFields();
-        this.createButtons();
-        this.createStarCompont();
+        this._createBackground();
+        this._createTextFields();
+        this._createButtons();
+        this._createStarCompont();
     }
 
     public updateValues(model: LevelModel): void {
@@ -55,11 +55,11 @@ export class HUDGameComponent extends Container {
         this._timeText.visible = false;
     }
 
-    private createBackground(): void {
+    private _createBackground(): void {
         this.addChild(PixiFactory.getBackgroundHUD());
     }
 
-    private createTextFields(): void {
+    private _createTextFields(): void {
         /* Static Texts */
         const scoreLabel = PixiFactory.getText(Texts.SCORE, MagicValues.SIZE_HUD);
         scoreLabel.x = MagicValues.BORDER_OFFSET_HUD;
@@ -97,14 +97,14 @@ export class HUDGameComponent extends Container {
         this.addChild(this._timeText);
     }
 
-    private createButtons(): void {
+    private _createButtons(): void {
         this._pauseButton = PixiFactory.getIconButton(AtlasKeys.ICON_PAUSE);
         this._pauseButton.x = ViewPortSize.MAX_WIDTH - MagicValues.BORDER_OFFSET_HUD - 30;
         this._pauseButton.y = MagicValues.BORDER_OFFSET_HUD + 20;
         this.addChild(this._pauseButton);
     }
 
-    private createStarCompont(): void {
+    private _createStarCompont(): void {
         this._starComponent = new StarDisplayComponent();
         this._starComponent.x = ViewPortSize.HALF_WIDTH;
         this._starComponent.y = MagicValues.BORDER_OFFSET_HUD + 60;

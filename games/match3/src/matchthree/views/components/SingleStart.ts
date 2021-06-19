@@ -3,15 +3,15 @@ import { Sprite, Texture } from "pixi.js";
 import { AtlasKeys } from "./../../utils/AtlasKeys";
 
 export class SingleStar extends Sprite {
-    private textures: Texture[];
+    private _textures: Texture[];
 
     public get numFrames(): number {
-        return this.textures.length;
+        return this._textures.length;
     }
 
-    constructor() {
+    public constructor() {
         super(AtlasKeys.getTexture(AtlasKeys.STAR_HUD_DISPLAY + "00.png"));
-        this.textures = [
+        this._textures = [
             AtlasKeys.getTexture(AtlasKeys.STAR_HUD_DISPLAY + "00.png"),
             AtlasKeys.getTexture(AtlasKeys.STAR_HUD_DISPLAY + "01.png"),
             AtlasKeys.getTexture(AtlasKeys.STAR_HUD_DISPLAY + "02.png"),
@@ -27,6 +27,6 @@ export class SingleStar extends Sprite {
     }
 
     public currentFrame(value: number): void {
-        this.texture = this.textures[value];
+        this.texture = this._textures[value];
     }
 }

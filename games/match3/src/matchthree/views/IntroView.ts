@@ -6,19 +6,19 @@ import { Texts } from "./../utils/Texts";
 import { ViewPortSize } from "./../utils/ViewPortSize";
 
 export class IntroView extends Container {
-    constructor() {
+    public constructor() {
         super();
 
-        this.setupBackground();
-        this.setupImages();
-        this.setupText();
+        this._setupBackground();
+        this._setupImages();
+        this._setupText();
     }
 
-    private setupBackground(): void {
+    private _setupBackground(): void {
         this.addChild(PixiFactory.getColorBackground(0x204d63));
     }
 
-    private setupImages(): void {
+    private _setupImages(): void {
         const logo: Sprite = TilingSprite.from(AtlasKeys.LOGO_TYPESCRIPT);
         logo.anchor.x = 0.5;
         logo.x = ViewPortSize.HALF_WIDTH;
@@ -26,7 +26,7 @@ export class IntroView extends Container {
         this.addChild(logo);
     }
 
-    private setupText(): void {
+    private _setupText(): void {
         const style = new TextStyle({
             align: "center",
             fill: 0xb5d6e6,

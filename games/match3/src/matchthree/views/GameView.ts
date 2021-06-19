@@ -11,9 +11,9 @@ export class GameView extends Container {
         return this._gridField;
     }
 
-    constructor() {
+    public constructor() {
         super();
-        this.createBackground();
+        this._createBackground();
     }
 
     public destroy(): void {
@@ -32,7 +32,7 @@ export class GameView extends Container {
         this.addChild(this._gridField);
     }
 
-    private createBackground(): void {
+    private _createBackground(): void {
         this.addChild(PixiFactory.getBackground());
     }
 }

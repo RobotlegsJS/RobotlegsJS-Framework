@@ -21,21 +21,21 @@ export class PausePopup extends Container {
         return this._retryButton;
     }
 
-    constructor() {
+    public constructor() {
         super();
 
         this.interactive = true;
 
-        this.setupBackgrounds();
-        this.setupButtons();
-        this.setupText();
+        this._setupBackgrounds();
+        this._setupButtons();
+        this._setupText();
     }
 
-    private setupBackgrounds(): void {
+    private _setupBackgrounds(): void {
         this.addChild(PixiFactory.getShadowBackground(0.9));
     }
 
-    private setupButtons(): void {
+    private _setupButtons(): void {
         this._levelSelectButton = PixiFactory.getIconButton(AtlasKeys.ICON_LEVEL_SELECT);
         this._levelSelectButton.x =
             ViewPortSize.HALF_WIDTH + this._levelSelectButton.width * 0.5 + 4;
@@ -53,7 +53,7 @@ export class PausePopup extends Container {
         this.addChild(this._retryButton);
     }
 
-    private setupText(): void {
+    private _setupText(): void {
         this.addChild(PixiFactory.getTitle(Texts.PAUSED));
     }
 }

@@ -8,25 +8,25 @@ import { LevelModel } from "./../models/LevelModel";
 @injectable()
 export class SwapPiecesConfirmCommand implements ICommand {
     @inject(LevelModel)
-    private levelModel: LevelModel;
+    private _levelModel: LevelModel;
 
     @inject(GameStatus)
-    private gameStatus: GameStatus;
+    private _gameStatus: GameStatus;
 
     @inject(GameService)
-    private gameService: GameService;
+    private _gameService: GameService;
 
     public execute(): void {
-        if (this.levelModel.levelInfo.levelType === LevelInfo.TIMER_TYPE) {
+        if (this._levelModel.levelInfo.levelType === LevelInfo.TIMER_TYPE) {
             return;
         }
 
-        this.levelModel.numMoves -= 1;
+        this._levelModel.numMoves -= 1;
 
-        this.gameService.updateHUDData();
+        this._gameService.updateHUDData();
 
-        if (this.levelModel.numMoves === 0) {
-            this.gameStatus.gameOver();
+        if (this._levelModel.numMoves === 0) {
+            this._gameStatus.gameOver();
         }
     }
 }

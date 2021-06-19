@@ -3,7 +3,7 @@ import { Graphics } from "pixi.js";
 import { Tile } from "./../models/Tile";
 
 export class BlankedCell extends Graphics {
-    constructor() {
+    public constructor() {
         super();
         this.beginFill(0xffffff);
         this.drawRect(0, 0, Tile.TILE_WIDTH, Tile.TILE_HEIGHT);

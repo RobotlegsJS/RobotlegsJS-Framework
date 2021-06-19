@@ -29,26 +29,26 @@ import { YouWinPopup } from "./../views/YouWinPopup";
 @injectable()
 export class ViewsConfig implements IConfig {
     @inject(IMediatorMap)
-    private mediatorMap: IMediatorMap;
+    private _mediatorMap: IMediatorMap;
 
     public configure(): void {
-        this.mapMediators();
+        this._mapMediators();
     }
 
-    private mapMediators(): void {
-        this.mediatorMap.map(IntroView).toMediator(IntroViewMediator);
-        this.mediatorMap.map(GameView).toMediator(GameViewMediator);
-        this.mediatorMap.map(HomeView).toMediator(HomeViewMediator);
-        this.mediatorMap.map(OptionsView).toMediator(OptionsViewMediator);
-        this.mediatorMap.map(LevelSelectView).toMediator(LevelSelectViewMediator);
+    private _mapMediators(): void {
+        this._mediatorMap.map(IntroView).toMediator(IntroViewMediator);
+        this._mediatorMap.map(GameView).toMediator(GameViewMediator);
+        this._mediatorMap.map(HomeView).toMediator(HomeViewMediator);
+        this._mediatorMap.map(OptionsView).toMediator(OptionsViewMediator);
+        this._mediatorMap.map(LevelSelectView).toMediator(LevelSelectViewMediator);
 
-        this.mediatorMap.map(GridFieldComponent).toMediator(GridFieldComponentMediator);
-        this.mediatorMap.map(HUDGameComponent).toMediator(HUDGameComponentMediator);
+        this._mediatorMap.map(GridFieldComponent).toMediator(GridFieldComponentMediator);
+        this._mediatorMap.map(HUDGameComponent).toMediator(HUDGameComponentMediator);
 
-        this.mediatorMap.map(AlertPopup).toMediator(AlertPopupMediator);
-        this.mediatorMap.map(GameOverPopup).toMediator(GameOverPopupMediator);
-        this.mediatorMap.map(PausePopup).toMediator(PausePopupMediator);
-        this.mediatorMap.map(StartingPopup).toMediator(StartingPopupMediator);
-        this.mediatorMap.map(YouWinPopup).toMediator(YouWinPopupMediator);
+        this._mediatorMap.map(AlertPopup).toMediator(AlertPopupMediator);
+        this._mediatorMap.map(GameOverPopup).toMediator(GameOverPopupMediator);
+        this._mediatorMap.map(PausePopup).toMediator(PausePopupMediator);
+        this._mediatorMap.map(StartingPopup).toMediator(StartingPopupMediator);
+        this._mediatorMap.map(YouWinPopup).toMediator(YouWinPopupMediator);
     }
 }

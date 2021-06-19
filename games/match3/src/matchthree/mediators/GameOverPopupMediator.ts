@@ -8,22 +8,22 @@ import { GameOverPopup } from "./../views/GameOverPopup";
 @injectable()
 export class GameOverPopupMediator extends Mediator<GameOverPopup> {
     @inject(FlowService)
-    private flowService: FlowService;
+    private _flowService: FlowService;
 
     @inject(GameService)
-    private gameService: GameService;
+    private _gameService: GameService;
 
     public initialize(): void {
         this.eventMap.mapListener(
             this.view.retryButton,
             "click",
-            this.retryButton_onTriggeredHandler,
+            this._onTriggeredHandlerRetryButton,
             this
         );
         this.eventMap.mapListener(
             this.view.levelSelectButton,
             "click",
-            this.levelSelectButton_onTriggeredHandler,
+            this._onTriggeredHandlerLevelSelectButton,
             this
         );
     }
@@ -32,13 +32,13 @@ export class GameOverPopupMediator extends Mediator<GameOverPopup> {
         this.eventMap.unmapListeners();
     }
 
-    private retryButton_onTriggeredHandler(e: any): void {
-        this.flowService.closePopup();
-        this.gameService.retryCommand();
+    private _onTriggeredHandlerRetryButton(e: any): void {
+        this._flowService.closePopup();
+        this._gameService.retryCommand();
     }
 
-    private levelSelectButton_onTriggeredHandler(e: any): void {
-        this.flowService.closePopup();
-        this.flowService.setLevelSelectView();
+    private _onTriggeredHandlerLevelSelectButton(e: any): void {
+        this._flowService.closePopup();
+        this._flowService.setLevelSelectView();
     }
 }

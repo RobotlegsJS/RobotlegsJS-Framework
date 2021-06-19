@@ -12,11 +12,11 @@ export class GridData {
         return this._maxCols;
     }
 
-    constructor(cols = 8, rows = 8) {
+    public constructor(cols: number = 8, rows: number = 8) {
         this._grid = [];
         this._maxCols = cols;
         this._maxRows = rows;
-        this.generateEmptyGrid();
+        this._generateEmptyGrid();
     }
 
     public getPiece(col: number, row: number): PieceData {
@@ -30,7 +30,7 @@ export class GridData {
         this._grid[piece.row][piece.col] = piece;
     }
 
-    private generateEmptyGrid(): void {
+    private _generateEmptyGrid(): void {
         let line: PieceData[];
         for (let row = 0; row < this._maxRows; row++) {
             line = [];

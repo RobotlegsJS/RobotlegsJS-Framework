@@ -14,7 +14,12 @@ export class PieceData {
         return this._pieceType;
     }
 
-    constructor(col = 0, row = 0, pieceType: string = PieceType.EMPTY, pieceId = 0) {
+    public constructor(
+        col: number = 0,
+        row: number = 0,
+        pieceType: string = PieceType.EMPTY,
+        pieceId: number = 0
+    ) {
         this._pieceType = pieceType;
         this.pieceId = pieceId;
         this.col = col;

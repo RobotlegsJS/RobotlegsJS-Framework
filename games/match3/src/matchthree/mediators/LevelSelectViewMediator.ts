@@ -13,22 +13,22 @@ import { LevelSelectView } from "./../views/LevelSelectView";
 @injectable()
 export class LevelSelectViewMediator extends Mediator<LevelSelectView> {
     @inject(FlowService)
-    private flowService: FlowService;
+    private _flowService: FlowService;
 
     @inject(GameService)
-    private gameService: GameService;
+    private _gameService: GameService;
 
     @inject(LevelsRepository)
-    private levelsRepository: LevelsRepository;
+    private _levelsRepository: LevelsRepository;
 
-    private levelsIds: Map<LevelSelectButton, number>;
+    private _levelsIds: Map<LevelSelectButton, number>;
 
     public initialize(): void {
-        this.createMapButtons();
+        this._createMapButtons();
         this.eventMap.mapListener(
             this.view.backButton,
             "click",
-            this.backButton_onTriggeredHandler,
+            this._onTriggeredHandlerBackButton,
             this
         );
     }
@@ -37,9 +37,9 @@ export class LevelSelectViewMediator extends Mediator<LevelSelectView> {
         this.eventMap.unmapListeners();
     }
 
-    private createMapButtons(): void {
-        this.levelsIds = new Map<LevelSelectButton, number>();
-        const levels: LevelInfo[] = this.levelsRepository.getLevels();
+    private _createMapButtons(): void {
+        this._levelsIds = new Map<LevelSelectButton, number>();
+        const levels: LevelInfo[] = this._levelsRepository.getLevels();
         let levelInfo: LevelInfo;
         let levelButton: LevelSelectButton;
 
@@ -53,21 +53,21 @@ export class LevelSelectViewMediator extends Mediator<LevelSelectView> {
             levelButton.y = 180 + Math.floor(i / 3) * (levelButton.height + 8);
             levelButton.setStars(ScoreUtils.getNumStars(levelInfo.hiScore, levelInfo.scoreStarts));
             levelButton.anchor.set(0.5);
-            this.levelsIds.set(levelButton, levels[i].levelId);
+            this._levelsIds.set(levelButton, levels[i].levelId);
             this.eventMap.mapListener(
                 levelButton,
                 "click",
-                this.levelButton_onTriggeredHandler,
+                this._onTriggeredHandlerLevelButton,
                 this
             );
         }
     }
 
-    private backButton_onTriggeredHandler(e: any): void {
-        this.flowService.setHomeView();
+    private _onTriggeredHandlerBackButton(e: any): void {
+        this._flowService.setHomeView();
     }
 
-    private levelButton_onTriggeredHandler(e: any): void {
-        this.gameService.createLevel(this.levelsIds.get(e.currentTarget));
+    private _onTriggeredHandlerLevelButton(e: any): void {
+        this._gameService.createLevel(this._levelsIds.get(e.currentTarget));
     }
 }

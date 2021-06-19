@@ -1,14 +1,14 @@
 export class PieceIds {
-    public static EMPTY = 0;
+    public static EMPTY: number = 0;
 
-    public static BLUE = 1;
-    public static GREEN = 2;
-    public static ORANGE = 3;
-    public static YELLOW = 4;
-    public static PINK = 5;
-    public static LIGHT_BLUE = 6;
+    public static BLUE: number = 1;
+    public static GREEN: number = 2;
+    public static ORANGE: number = 3;
+    public static YELLOW: number = 4;
+    public static PINK: number = 5;
+    public static LIGHT_BLUE: number = 6;
 
-    public static RAINBOW = 7;
+    public static RAINBOW: number = 7;
 
     public static ALL_NORMAL_IDS: number[] = [
         PieceIds.BLUE,

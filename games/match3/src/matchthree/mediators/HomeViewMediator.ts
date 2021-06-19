@@ -7,14 +7,14 @@ import { HomeView } from "./../views/HomeView";
 @injectable()
 export class HomeViewMediator extends Mediator<HomeView> {
     @inject(FlowService)
-    private flowService: FlowService;
+    private _flowService: FlowService;
 
     public initialize(): void {
-        this.eventMap.mapListener(this.view.playButton, "click", this.playButton_onClick, this);
+        this.eventMap.mapListener(this.view.playButton, "click", this._onClickPlayButton, this);
         this.eventMap.mapListener(
             this.view.optionsButton,
             "click",
-            this.optionsButton_onClick,
+            this._onClickOptionsButton,
             this
         );
     }
@@ -23,11 +23,11 @@ export class HomeViewMediator extends Mediator<HomeView> {
         this.eventMap.unmapListeners();
     }
 
-    private playButton_onClick(e: any): void {
-        this.flowService.setLevelSelectView();
+    private _onClickPlayButton(e: any): void {
+        this._flowService.setLevelSelectView();
     }
 
-    private optionsButton_onClick(e: any): void {
-        this.flowService.setOptionsView();
+    private _onClickOptionsButton(e: any): void {
+        this._flowService.setOptionsView();
     }
 }

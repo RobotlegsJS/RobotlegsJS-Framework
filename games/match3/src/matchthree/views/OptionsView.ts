@@ -1,4 +1,4 @@
-import { Container } from "pixi.js";
+import { Container, BitmapText } from "pixi.js";
 
 import { AtlasKeys } from "./../utils/AtlasKeys";
 import { MagicValues } from "./../utils/MagicValues";
@@ -17,29 +17,29 @@ export class OptionsView extends Container {
         return this._backButton;
     }
 
-    constructor() {
+    public constructor() {
         super();
 
-        this.createBackgrounds();
-        this.createTexts();
-        this.createButtons();
+        this._createBackgrounds();
+        this._createTexts();
+        this._createButtons();
     }
 
-    private createBackgrounds(): void {
+    private _createBackgrounds(): void {
         this.addChild(PixiFactory.getBackground());
         this.addChild(PixiFactory.getBackgroundPopup());
     }
 
-    private createTexts(): void {
+    private _createTexts(): void {
         this.addChild(PixiFactory.getTitle(Texts.OPTIONS));
 
-        const hiScore: Container = PixiFactory.getText(Texts.HI_SCORE);
+        const hiScore: BitmapText = PixiFactory.getText(Texts.HI_SCORE);
         hiScore.x = MagicValues.BORDER_OFFSET_POPUP;
         hiScore.y = 180;
         this.addChild(hiScore);
     }
 
-    private createButtons(): void {
+    private _createButtons(): void {
         this._deleteButton = PixiFactory.getIconButton(
             AtlasKeys.ICON_DELETE,
             IconButton.TYPE_SMALL_DANGER
