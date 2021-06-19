@@ -6,7 +6,7 @@
 // ------------------------------------------------------------------------------
 
 import { Container, Graphics, Text, TextStyle } from "pixi.js";
-import { ColorButton } from "./../components/ColorButton";
+import { ColorButton } from "../components/ColorButton";
 
 export class FloatingView extends Container {
     private _closeButton: ColorButton;

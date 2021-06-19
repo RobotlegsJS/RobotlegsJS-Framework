@@ -1,7 +1,7 @@
 import { inject, injectable } from "@robotlegsjs/core";
 import { Mediator } from "@robotlegsjs/pixi";
-import { FlowService } from "./../services/FlowService";
-import { OptionsView } from "./../views/OptionsView";
+import { FlowService } from "../services/FlowService";
+import { OptionsView } from "../views/OptionsView";
 
 @injectable()
 export class OptionsViewMediator extends Mediator<OptionsView> {

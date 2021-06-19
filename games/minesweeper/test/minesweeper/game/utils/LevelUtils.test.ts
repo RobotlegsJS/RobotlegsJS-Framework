@@ -1,12 +1,12 @@
 import { assert } from "chai";
+import { Cell } from "../../../../src/minesweeper/game/models/Cell";
+import { CustomLevelModel } from "../../../../src/minesweeper/game/models/CustomLevelModel";
 import { GridData } from "../../../../src/minesweeper/game/models/GridData";
+import { LevelModel } from "../../../../src/minesweeper/game/models/LevelModel";
+import { GridUtils } from "../../../../src/minesweeper/game/utils/GridUtils";
+import { LevelUtils } from "../../../../src/minesweeper/game/utils/LevelUtils";
 import { Texts } from "../../../../src/minesweeper/utils/Texts";
 import "../../../entry";
-import { Cell } from "./../../../../src/minesweeper/game/models/Cell";
-import { CustomLevelModel } from "./../../../../src/minesweeper/game/models/CustomLevelModel";
-import { LevelModel } from "./../../../../src/minesweeper/game/models/LevelModel";
-import { GridUtils } from "./../../../../src/minesweeper/game/utils/GridUtils";
-import { LevelUtils } from "./../../../../src/minesweeper/game/utils/LevelUtils";
 
 describe("LevelUtils", () => {
     let level: LevelModel;

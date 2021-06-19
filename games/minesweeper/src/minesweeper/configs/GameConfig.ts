@@ -1,15 +1,15 @@
 import { IConfig, IContext, IEventCommandMap, inject, injectable } from "@robotlegsjs/core";
-import { GameEvent } from "./../events/GameEvent";
-import { CreateLevelCommand } from "./../game/commands/CreateLevelCommand";
-import { ExportLevelDataCommand } from "./../game/commands/ExportLevelDataCommand";
-import { GameOverCommand } from "./../game/commands/GameOverCommand";
-import { RetryGameCommand } from "./../game/commands/RetryGameCommand";
-import { GameManager } from "./../game/managers/GameManager";
-import { HighScoreManager } from "./../game/managers/HighScoreManager";
-import { CustomLevelModel } from "./../game/models/CustomLevelModel";
-import { GameStatus } from "./../game/models/GameStatus";
-import { LevelModel } from "./../game/models/LevelModel";
-import { GameService } from "./../services/GameService";
+import { GameEvent } from "../events/GameEvent";
+import { CreateLevelCommand } from "../game/commands/CreateLevelCommand";
+import { ExportLevelDataCommand } from "../game/commands/ExportLevelDataCommand";
+import { GameOverCommand } from "../game/commands/GameOverCommand";
+import { RetryGameCommand } from "../game/commands/RetryGameCommand";
+import { GameManager } from "../game/managers/GameManager";
+import { HighScoreManager } from "../game/managers/HighScoreManager";
+import { CustomLevelModel } from "../game/models/CustomLevelModel";
+import { GameStatus } from "../game/models/GameStatus";
+import { LevelModel } from "../game/models/LevelModel";
+import { GameService } from "../services/GameService";
 
 @injectable()
 export class GameConfig implements IConfig {

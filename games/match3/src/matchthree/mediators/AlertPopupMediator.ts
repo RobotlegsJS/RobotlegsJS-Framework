@@ -1,6 +1,6 @@
 import { injectable } from "@robotlegsjs/core";
 import { Mediator } from "@robotlegsjs/pixi";
-import { AlertPopup } from "./../views/AlertPopup";
+import { AlertPopup } from "../views/AlertPopup";
 
 @injectable()
 export class AlertPopupMediator extends Mediator<AlertPopup> {

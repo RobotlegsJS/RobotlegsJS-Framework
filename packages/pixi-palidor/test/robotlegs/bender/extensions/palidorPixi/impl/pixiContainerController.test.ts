@@ -8,8 +8,8 @@
 import { assert } from "chai";
 import { Container } from "pixi.js";
 import { PixiContainerController } from "../../../../../../src/robotlegs/bender/extensions/palidorPixi/impl/PixiContainerController";
-import "./../../../../../entry";
-import { Utils } from "./../support/Utils";
+import "../../../../../entry";
+import { Utils } from "../support/Utils";
 
 describe("PixiContainerController", () => {
     let controller: PixiContainerController;

@@ -7,13 +7,13 @@
 
 import { Event, IConfig, IEventDispatcher, inject, injectable } from "@robotlegsjs/core";
 import { IMediatorMap } from "@robotlegsjs/pixi";
+import { IFlowManager } from "../../src/robotlegs/bender/extensions/palidorPixi/api/IFlowManager";
+import { FloatingViewMediator } from "../mediators/FloatingViewMediator";
 import { PalidorViewMediator } from "../mediators/PalidorViewMediator";
 import { RobotlegsViewMediator } from "../mediators/RobotlegsViewMediator";
+import { FloatingView } from "../views/FloatingView";
 import { PalidorView } from "../views/PalidorView";
-import { IFlowManager } from "./../../src/robotlegs/bender/extensions/palidorPixi/api/IFlowManager";
-import { FloatingViewMediator } from "./../mediators/FloatingViewMediator";
-import { FloatingView } from "./../views/FloatingView";
-import { RobotlegsView } from "./../views/RobotlegsView";
+import { RobotlegsView } from "../views/RobotlegsView";
 
 @injectable()
 export class ExampleConfig implements IConfig {

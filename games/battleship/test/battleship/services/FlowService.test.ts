@@ -1,9 +1,9 @@
 import { EventDispatcher } from "@robotlegsjs/core";
 import { PalidorEvent } from "@robotlegsjs/pixi-palidor";
 import { assert } from "chai";
+import { FlowEvent } from "../../../src/battleship/events/FlowEvent";
+import { FlowService } from "../../../src/battleship/services/FlowService";
 import "../../entry";
-import { FlowEvent } from "./../../../src/battleship/events/FlowEvent";
-import { FlowService } from "./../../../src/battleship/services/FlowService";
 
 import sinon = require("sinon");
 

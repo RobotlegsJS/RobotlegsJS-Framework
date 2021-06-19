@@ -1,7 +1,7 @@
 import { assert } from "chai";
+import { Cell } from "../../../../src/minesweeper/game/models/Cell";
+import { GridData } from "../../../../src/minesweeper/game/models/GridData";
 import "../../../entry";
-import { Cell } from "./../../../../src/minesweeper/game/models/Cell";
-import { GridData } from "./../../../../src/minesweeper/game/models/GridData";
 
 describe("GridData", () => {
     let grid: GridData;

@@ -2,17 +2,17 @@ import { inject, injectable } from "@robotlegsjs/core";
 import { Mediator } from "@robotlegsjs/pixi";
 import { TweenLite } from "gsap";
 import { Sprite } from "pixi.js";
+import { GameEvent } from "../events/GameEvent";
+import { GameManager } from "../game/managers/GameManager";
+import { LevelModel } from "../game/models/LevelModel";
+import { PieceData } from "../game/models/PieceData";
+import { Tile } from "../game/models/Tile";
+import { TouchPhase } from "../game/models/TouchPhase";
+import { AnimationUtils } from "../game/utils/AnimationUtils";
 import { PixiSpritePool } from "../game/utils/PieceDisplayPool";
 import { PieceUtils } from "../game/utils/PieceUtils";
-import { GameEvent } from "./../events/GameEvent";
-import { GameManager } from "./../game/managers/GameManager";
-import { LevelModel } from "./../game/models/LevelModel";
-import { PieceData } from "./../game/models/PieceData";
-import { Tile } from "./../game/models/Tile";
-import { TouchPhase } from "./../game/models/TouchPhase";
-import { AnimationUtils } from "./../game/utils/AnimationUtils";
-import { GameService } from "./../services/GameService";
-import { GridFieldComponent } from "./../views/components/GridFieldComponent";
+import { GameService } from "../services/GameService";
+import { GridFieldComponent } from "../views/components/GridFieldComponent";
 
 @injectable()
 export class GridFieldComponentMediator extends Mediator<GridFieldComponent> {

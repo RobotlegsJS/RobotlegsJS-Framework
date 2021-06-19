@@ -1,15 +1,15 @@
 import { inject, injectable } from "@robotlegsjs/core";
-import { GameModel } from "./../../models/GameModel";
-import { LevelModel } from "./../../models/LevelModel";
-import { GameService } from "./../../services/GameService";
-import { ViewPortSize } from "./../../utils/ViewPortSize";
-import { EnemyDisplay } from "./../displays/EnemyDisplay";
-import { Bullet } from "./../entities/Bullet";
-import { Entity } from "./../entities/Entity";
-import { Explosion } from "./../entities/Explosion";
-import { EntityPool } from "./../utils/EntityPool";
-import { GameUtils } from "./../utils/GameUtils";
-import { Point } from "./../utils/Point";
+import { GameModel } from "../../models/GameModel";
+import { LevelModel } from "../../models/LevelModel";
+import { GameService } from "../../services/GameService";
+import { ViewPortSize } from "../../utils/ViewPortSize";
+import { EnemyDisplay } from "../displays/EnemyDisplay";
+import { Bullet } from "../entities/Bullet";
+import { Entity } from "../entities/Entity";
+import { Explosion } from "../entities/Explosion";
+import { EntityPool } from "../utils/EntityPool";
+import { GameUtils } from "../utils/GameUtils";
+import { Point } from "../utils/Point";
 
 @injectable()
 export class GameManager {

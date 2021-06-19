@@ -1,5 +1,5 @@
 import { BitmapText, Container, Graphics, Sprite, Texture } from "pixi.js";
-import { CustomButton } from "./../views/components/CustomButton";
+import { CustomButton } from "../views/components/CustomButton";
 import { AtlasKeys } from "./AtlasKeys";
 import { Colors } from "./Colors";
 import { MagicValues } from "./MagicValues";

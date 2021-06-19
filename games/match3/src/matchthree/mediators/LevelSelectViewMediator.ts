@@ -1,13 +1,13 @@
 import { inject, injectable } from "@robotlegsjs/core";
 import { Mediator } from "@robotlegsjs/pixi";
-import { LevelInfo } from "./../game/models/LevelInfo";
-import { LevelsRepository } from "./../game/utils/LevelRepository";
-import { ScoreUtils } from "./../game/utils/ScoreUtils";
-import { FlowService } from "./../services/FlowService";
-import { GameService } from "./../services/GameService";
-import { ViewPortSize } from "./../utils/ViewPortSize";
-import { LevelSelectButton } from "./../views/components/LevelSelectButton";
-import { LevelSelectView } from "./../views/LevelSelectView";
+import { LevelInfo } from "../game/models/LevelInfo";
+import { LevelsRepository } from "../game/utils/LevelRepository";
+import { ScoreUtils } from "../game/utils/ScoreUtils";
+import { FlowService } from "../services/FlowService";
+import { GameService } from "../services/GameService";
+import { ViewPortSize } from "../utils/ViewPortSize";
+import { LevelSelectButton } from "../views/components/LevelSelectButton";
+import { LevelSelectView } from "../views/LevelSelectView";
 
 @injectable()
 export class LevelSelectViewMediator extends Mediator<LevelSelectView> {

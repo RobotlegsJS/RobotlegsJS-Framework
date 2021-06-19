@@ -1,7 +1,7 @@
 import { Container, Graphics } from "pixi.js";
 import { Colors } from "../utils/Colors";
-import { MagicValues } from "./../utils/MagicValues";
-import { PixiFactory } from "./../utils/PixiFactory";
+import { MagicValues } from "../utils/MagicValues";
+import { PixiFactory } from "../utils/PixiFactory";
 import { Item } from "./components/Item";
 
 export class ScratchView extends Container {

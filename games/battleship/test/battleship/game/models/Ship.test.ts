@@ -1,7 +1,7 @@
 import { assert } from "chai";
+import { Ship } from "../../../../src/battleship/game/models/Ship";
+import { Tile } from "../../../../src/battleship/game/models/Tile";
 import "../../../entry";
-import { Ship } from "./../../../../src/battleship/game/models/Ship";
-import { Tile } from "./../../../../src/battleship/game/models/Tile";
 
 describe("Ship", () => {
     let ship: Ship;

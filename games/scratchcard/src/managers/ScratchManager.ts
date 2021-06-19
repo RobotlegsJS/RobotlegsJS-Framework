@@ -1,8 +1,8 @@
 import { IEventDispatcher, inject, injectable } from "@robotlegsjs/core";
+import { GameEvent } from "../events/GameEvent";
+import { Model } from "../models/Model";
 import { MagicValues } from "../utils/MagicValues";
-import { GameEvent } from "./../events/GameEvent";
-import { Model } from "./../models/Model";
-import { Prizes } from "./../utils/Prizes";
+import { Prizes } from "../utils/Prizes";
 
 @injectable()
 export class ScratchManager {

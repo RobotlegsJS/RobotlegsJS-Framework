@@ -1,7 +1,7 @@
 import { assert } from "chai";
+import { Grid } from "../../src/models/Grid";
+import { Tile } from "../../src/models/Tile";
 import "../entry";
-import { Grid } from "./../../src/models/Grid";
-import { Tile } from "./../../src/models/Tile";
 
 describe("Grid", () => {
     let grid: Grid;

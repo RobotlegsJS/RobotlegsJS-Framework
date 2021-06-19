@@ -1,5 +1,5 @@
-import { AtlasKeys } from "./../../utils/AtlasKeys";
-import { PieceData } from "./../models/PieceData";
+import { AtlasKeys } from "../../utils/AtlasKeys";
+import { PieceData } from "../models/PieceData";
 import { PieceIds } from "./PieceIds";
 import { PieceType } from "./PieceType";
 

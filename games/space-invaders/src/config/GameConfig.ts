@@ -1,18 +1,18 @@
 import { IConfig, IContext, IEventCommandMap, inject, injectable } from "@robotlegsjs/core";
-import { CreateLevelCommand } from "./../commands/CreateLevelCommand";
-import { DecreaseLivesCommand } from "./../commands/DecreaseLivesCommand";
-import { GameOverCommand } from "./../commands/GameOverCommand";
-import { IncreaseLevelCommand } from "./../commands/IncreaaseLevelCommand";
-import { IncreasePointsCommand } from "./../commands/IncreasePointsCommand";
-import { RetryGameCommand } from "./../commands/RetryGameCommand";
-import { StartGameCommand } from "./../commands/StartGameCommand";
-import { GameEvent } from "./../events/GameEvent";
-import { LevelFactory } from "./../game/factories/LevelFactory";
-import { GameManager } from "./../game/Managers/GameManager";
-import { EntityPool } from "./../game/utils/EntityPool";
-import { GameModel } from "./../models/GameModel";
-import { LevelModel } from "./../models/LevelModel";
-import { GameService } from "./../services/GameService";
+import { CreateLevelCommand } from "../commands/CreateLevelCommand";
+import { DecreaseLivesCommand } from "../commands/DecreaseLivesCommand";
+import { GameOverCommand } from "../commands/GameOverCommand";
+import { IncreaseLevelCommand } from "../commands/IncreaaseLevelCommand";
+import { IncreasePointsCommand } from "../commands/IncreasePointsCommand";
+import { RetryGameCommand } from "../commands/RetryGameCommand";
+import { StartGameCommand } from "../commands/StartGameCommand";
+import { GameEvent } from "../events/GameEvent";
+import { LevelFactory } from "../game/factories/LevelFactory";
+import { GameManager } from "../game/Managers/GameManager";
+import { EntityPool } from "../game/utils/EntityPool";
+import { GameModel } from "../models/GameModel";
+import { LevelModel } from "../models/LevelModel";
+import { GameService } from "../services/GameService";
 
 @injectable()
 export class GameConfig implements IConfig {

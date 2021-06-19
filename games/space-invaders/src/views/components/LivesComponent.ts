@@ -1,6 +1,6 @@
 import { Container, Sprite } from "pixi.js";
-import { AtlasKeys } from "./../../utils/AtlasKeys";
-import { PixiFactory } from "./../../utils/PixiFactory";
+import { AtlasKeys } from "../../utils/AtlasKeys";
+import { PixiFactory } from "../../utils/PixiFactory";
 
 export class LivesComponent extends Container {
     private _cannons: Sprite[];

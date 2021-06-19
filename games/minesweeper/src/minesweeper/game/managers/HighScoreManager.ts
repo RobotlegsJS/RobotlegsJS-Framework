@@ -1,5 +1,5 @@
 import { injectable } from "@robotlegsjs/core";
-import { Texts } from "./../../utils/Texts";
+import { Texts } from "../../utils/Texts";
 
 @injectable()
 export class HighScoreManager {

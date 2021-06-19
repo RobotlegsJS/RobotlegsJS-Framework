@@ -1,6 +1,6 @@
 import { assert } from "chai";
+import { Cell } from "../../../../src/minesweeper/game/models/Cell";
 import "../../../entry";
-import { Cell } from "./../../../../src/minesweeper/game/models/Cell";
 
 describe("Cell", () => {
     let cell: Cell;

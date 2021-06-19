@@ -1,17 +1,17 @@
 import { IConfig, IContext, IEventDispatcher, inject, injectable } from "@robotlegsjs/core";
 import { IFlowManager } from "@robotlegsjs/pixi-palidor";
+import { FlowEvent } from "../events/FlowEvent";
+import { FlowService } from "../services/FlowService";
+import { AlertPopup } from "../views/AlertPopup";
+import { GameOverPopup } from "../views/GameOverPopup";
+import { GameView } from "../views/GameView";
+import { HomeView } from "../views/HomeView";
+import { IntroView } from "../views/IntroView";
+import { LevelSelectView } from "../views/LevelSelectView";
+import { OptionsView } from "../views/OptionsView";
+import { PausePopup } from "../views/PausePopup";
+import { StartingPopup } from "../views/StartingPopup";
 import { YouWinPopup } from "../views/YouWinPopup";
-import { FlowEvent } from "./../events/FlowEvent";
-import { FlowService } from "./../services/FlowService";
-import { AlertPopup } from "./../views/AlertPopup";
-import { GameOverPopup } from "./../views/GameOverPopup";
-import { GameView } from "./../views/GameView";
-import { HomeView } from "./../views/HomeView";
-import { IntroView } from "./../views/IntroView";
-import { LevelSelectView } from "./../views/LevelSelectView";
-import { OptionsView } from "./../views/OptionsView";
-import { PausePopup } from "./../views/PausePopup";
-import { StartingPopup } from "./../views/StartingPopup";
 
 @injectable()
 export class PalidorConfig implements IConfig {

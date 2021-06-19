@@ -1,4 +1,4 @@
-import { Entity } from "./../entities/Entity";
+import { Entity } from "../entities/Entity";
 import { Point } from "./Point";
 import { Rectangle } from "./Rectangle";
 

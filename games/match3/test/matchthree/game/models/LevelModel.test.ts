@@ -1,9 +1,9 @@
 import { assert } from "chai";
+import { LevelInfo } from "../../../../src/matchthree/game/models/LevelInfo";
+import { LevelModel } from "../../../../src/matchthree/game/models/LevelModel";
+import { PieceData } from "../../../../src/matchthree/game/models/PieceData";
+import { PieceType } from "../../../../src/matchthree/game/utils/PieceType";
 import "../../../entry";
-import { LevelInfo } from "./../../../../src/matchthree/game/models/LevelInfo";
-import { LevelModel } from "./../../../../src/matchthree/game/models/LevelModel";
-import { PieceData } from "./../../../../src/matchthree/game/models/PieceData";
-import { PieceType } from "./../../../../src/matchthree/game/utils/PieceType";
 
 describe("LevelModel", () => {
     let levelModel: LevelModel;

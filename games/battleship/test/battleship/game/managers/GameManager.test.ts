@@ -1,12 +1,12 @@
 import { EventDispatcher } from "@robotlegsjs/core";
 import { assert } from "chai";
+import { AttackEvent } from "../../../../src/battleship/game/events/AttackEvent";
 import { GameManager } from "../../../../src/battleship/game/managers/GameManager";
+import { BattleField } from "../../../../src/battleship/game/models/BattleField";
+import { Ship } from "../../../../src/battleship/game/models/Ship";
 import { Tile } from "../../../../src/battleship/game/models/Tile";
+import { BattleFieldUtils } from "../../../../src/battleship/game/utils/BattleFieldUtils";
 import "../../../entry";
-import { AttackEvent } from "./../../../../src/battleship/game/events/AttackEvent";
-import { BattleField } from "./../../../../src/battleship/game/models/BattleField";
-import { Ship } from "./../../../../src/battleship/game/models/Ship";
-import { BattleFieldUtils } from "./../../../../src/battleship/game/utils/BattleFieldUtils";
 
 describe("GameManager", () => {
     let gameManager: GameManager;

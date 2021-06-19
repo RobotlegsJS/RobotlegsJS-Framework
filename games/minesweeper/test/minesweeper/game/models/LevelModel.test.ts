@@ -1,7 +1,7 @@
 import { assert } from "chai";
 import { GridData } from "../../../../src/minesweeper/game/models/GridData";
+import { LevelModel } from "../../../../src/minesweeper/game/models/LevelModel";
 import "../../../entry";
-import { LevelModel } from "./../../../../src/minesweeper/game/models/LevelModel";
 
 describe("LevelModel", () => {
     let level: LevelModel;

@@ -2,7 +2,7 @@ import { inject, injectable } from "@robotlegsjs/core";
 import { Mediator } from "@robotlegsjs/pixi";
 import { PalidorEvent } from "@robotlegsjs/pixi-palidor";
 import { Model } from "../models/Model";
-import { FeedbackPopup } from "./../views/FeedbackPopup";
+import { FeedbackPopup } from "../views/FeedbackPopup";
 
 @injectable()
 export class FeedbackPopupMediator extends Mediator<FeedbackPopup> {

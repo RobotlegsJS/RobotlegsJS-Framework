@@ -1,6 +1,6 @@
 import { assert } from "chai";
+import { Tile } from "../../../../src/matchthree/game/models/Tile";
 import "../../../entry";
-import { Tile } from "./../../../../src/matchthree/game/models/Tile";
 
 describe("Tile", () => {
     it("Constructor", () => {

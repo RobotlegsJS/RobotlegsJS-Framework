@@ -1,7 +1,7 @@
 import { inject, injectable } from "@robotlegsjs/core";
 import { Mediator } from "@robotlegsjs/pixi";
-import { FlowService } from "./../services/FlowService";
-import { ResetConfirmPopup } from "./../views/ResetConfirmPopup";
+import { FlowService } from "../services/FlowService";
+import { ResetConfirmPopup } from "../views/ResetConfirmPopup";
 
 @injectable()
 export class ResetConfirmPopupMediator extends Mediator<ResetConfirmPopup> {

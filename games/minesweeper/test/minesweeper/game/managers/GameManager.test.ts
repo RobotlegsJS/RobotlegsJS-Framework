@@ -1,15 +1,15 @@
 import { EventDispatcher } from "@robotlegsjs/core";
 import { assert } from "chai";
+import { GameManager } from "../../../../src/minesweeper/game/managers/GameManager";
+import { Cell } from "../../../../src/minesweeper/game/models/Cell";
 import { CustomLevelModel } from "../../../../src/minesweeper/game/models/CustomLevelModel";
+import { GameStatus } from "../../../../src/minesweeper/game/models/GameStatus";
+import { GridData } from "../../../../src/minesweeper/game/models/GridData";
+import { LevelModel } from "../../../../src/minesweeper/game/models/LevelModel";
 import { LevelUtils } from "../../../../src/minesweeper/game/utils/LevelUtils";
+import { GameService } from "../../../../src/minesweeper/services/GameService";
+import { Texts } from "../../../../src/minesweeper/utils/Texts";
 import "../../../entry";
-import { GameManager } from "./../../../../src/minesweeper/game/managers/GameManager";
-import { Cell } from "./../../../../src/minesweeper/game/models/Cell";
-import { GameStatus } from "./../../../../src/minesweeper/game/models/GameStatus";
-import { GridData } from "./../../../../src/minesweeper/game/models/GridData";
-import { LevelModel } from "./../../../../src/minesweeper/game/models/LevelModel";
-import { GameService } from "./../../../../src/minesweeper/services/GameService";
-import { Texts } from "./../../../../src/minesweeper/utils/Texts";
 
 import sinon = require("sinon");
 

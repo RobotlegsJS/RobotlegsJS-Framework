@@ -8,7 +8,7 @@
 import { Event } from "@robotlegsjs/core";
 import { assert } from "chai";
 import { PalidorEvent } from "../../../../../../src/robotlegs/bender/extensions/palidorPixi/events/PalidorEvent";
-import "./../../../../../entry";
+import "../../../../../entry";
 
 describe("PalidorEvent", () => {
     describe("constants", () => {

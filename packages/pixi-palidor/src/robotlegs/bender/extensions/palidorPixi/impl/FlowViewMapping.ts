@@ -7,7 +7,7 @@
 
 import { IClass } from "@robotlegsjs/core";
 import { Container } from "pixi.js";
-import { IFlowViewMapping } from "./../api/IFlowViewMapping";
+import { IFlowViewMapping } from "../api/IFlowViewMapping";
 import { FlowManager } from "./FlowManager";
 
 export class FlowViewMapping implements IFlowViewMapping {

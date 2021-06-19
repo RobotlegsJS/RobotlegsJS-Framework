@@ -1,7 +1,7 @@
 import { inject, injectable } from "@robotlegsjs/core";
 import { Mediator } from "@robotlegsjs/pixi";
-import { FlowService } from "./../services/FlowService";
-import { HomeView } from "./../views/HomeView";
+import { FlowService } from "../services/FlowService";
+import { HomeView } from "../views/HomeView";
 
 @injectable()
 export class HomeViewMediator extends Mediator<HomeView> {

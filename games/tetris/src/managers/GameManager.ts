@@ -1,8 +1,8 @@
 import { inject, injectable } from "@robotlegsjs/core";
 import { Grid } from "../models/Grid";
+import { Tile } from "../models/Tile";
 import { TileGroup } from "../models/TileGroup";
 import { GameService } from "../services/GameService";
-import { Tile } from "./../models/Tile";
 
 @injectable()
 export class GameManager {

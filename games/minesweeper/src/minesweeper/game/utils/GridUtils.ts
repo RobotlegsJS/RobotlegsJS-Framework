@@ -1,5 +1,5 @@
-import { Cell } from "./../models/Cell";
-import { GridData } from "./../models/GridData";
+import { Cell } from "../models/Cell";
+import { GridData } from "../models/GridData";
 
 export class GridUtils {
     public static getNeighbors(grid: GridData, cell: Cell): Cell[] {

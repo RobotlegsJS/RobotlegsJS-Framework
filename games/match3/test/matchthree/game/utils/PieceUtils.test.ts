@@ -1,9 +1,9 @@
 import { assert } from "chai";
+import { PieceData } from "../../../../src/matchthree/game/models/PieceData";
+import { PieceIds } from "../../../../src/matchthree/game/utils/PieceIds";
+import { PieceType } from "../../../../src/matchthree/game/utils/PieceType";
+import { PieceUtils } from "../../../../src/matchthree/game/utils/PieceUtils";
 import "../../../entry";
-import { PieceData } from "./../../../../src/matchthree/game/models/PieceData";
-import { PieceIds } from "./../../../../src/matchthree/game/utils/PieceIds";
-import { PieceType } from "./../../../../src/matchthree/game/utils/PieceType";
-import { PieceUtils } from "./../../../../src/matchthree/game/utils/PieceUtils";
 
 describe("PieceUtils", () => {
     it("GetEmpytPiece", () => {

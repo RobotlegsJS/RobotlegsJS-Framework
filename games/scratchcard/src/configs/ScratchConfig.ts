@@ -8,23 +8,23 @@ import {
 } from "@robotlegsjs/core";
 import { IMediatorMap } from "@robotlegsjs/pixi";
 import { IFlowManager } from "@robotlegsjs/pixi-palidor";
+import { EndGameCommand } from "../commands/EndGameCommand";
+import { StartGameCommand } from "../commands/StartGameCommand";
+import { FlowEvent } from "../events/FlowEvent";
+import { GameEvent } from "../events/GameEvent";
 import { ScratchManager } from "../managers/ScratchManager";
+import { TickManager } from "../managers/TickManager";
 import { FeedbackPopupMediator } from "../mediators/FeedbackPopupMediator";
 import { HUDViewMediator } from "../mediators/HUDViewMediator";
 import { IntroViewMediator } from "../mediators/IntroViewMediator";
+import { MainViewMediator } from "../mediators/MainViewMediator";
+import { ScratchViewMediator } from "../mediators/ScratchViewMediator";
+import { Model } from "../models/Model";
+import { FeedbackPopup } from "../views/FeedbackPopup";
+import { HUDView } from "../views/HUDView";
+import { IntroView } from "../views/IntroView";
+import { MainView } from "../views/MainView";
 import { ScratchView } from "../views/ScratchView";
-import { EndGameCommand } from "./../commands/EndGameCommand";
-import { StartGameCommand } from "./../commands/StartGameCommand";
-import { FlowEvent } from "./../events/FlowEvent";
-import { GameEvent } from "./../events/GameEvent";
-import { TickManager } from "./../managers/TickManager";
-import { MainViewMediator } from "./../mediators/MainViewMediator";
-import { ScratchViewMediator } from "./../mediators/ScratchViewMediator";
-import { Model } from "./../models/Model";
-import { FeedbackPopup } from "./../views/FeedbackPopup";
-import { HUDView } from "./../views/HUDView";
-import { IntroView } from "./../views/IntroView";
-import { MainView } from "./../views/MainView";
 
 @injectable()
 export class ScratchConfig implements IConfig {

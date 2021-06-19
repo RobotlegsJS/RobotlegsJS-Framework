@@ -1,10 +1,10 @@
 import { inject, injectable } from "@robotlegsjs/core";
 import { Mediator } from "@robotlegsjs/pixi";
+import { GameEvent } from "../events/GameEvent";
+import { ScratchManager } from "../managers/ScratchManager";
+import { TickManager } from "../managers/TickManager";
 import { Model } from "../models/Model";
-import { GameEvent } from "./../events/GameEvent";
-import { ScratchManager } from "./../managers/ScratchManager";
-import { TickManager } from "./../managers/TickManager";
-import { HUDView } from "./../views/HUDView";
+import { HUDView } from "../views/HUDView";
 
 @injectable()
 export class HUDViewMediator extends Mediator<HUDView> {

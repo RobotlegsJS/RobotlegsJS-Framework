@@ -1,14 +1,14 @@
 import { inject, injectable } from "@robotlegsjs/core";
 import { Mediator } from "@robotlegsjs/pixi";
 import { TweenLite } from "gsap";
-import { GameEvent } from "./../events/GameEvent";
-import { GameManager } from "./../game/managers/GameManager";
-import { Cell } from "./../game/models/Cell";
-import { LevelModel } from "./../game/models/LevelModel";
-import { GameService } from "./../services/GameService";
-import { MagicValues } from "./../utils/MagicValues";
-import { GridFieldComponent } from "./../views/components/GridFieldComponent";
-import { TileDisplay } from "./../views/components/TileDisplay";
+import { GameEvent } from "../events/GameEvent";
+import { GameManager } from "../game/managers/GameManager";
+import { Cell } from "../game/models/Cell";
+import { LevelModel } from "../game/models/LevelModel";
+import { GameService } from "../services/GameService";
+import { MagicValues } from "../utils/MagicValues";
+import { GridFieldComponent } from "../views/components/GridFieldComponent";
+import { TileDisplay } from "../views/components/TileDisplay";
 
 @injectable()
 export class GridFieldComponentMediator extends Mediator<GridFieldComponent> {

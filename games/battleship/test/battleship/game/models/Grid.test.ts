@@ -1,6 +1,6 @@
 import { assert } from "chai";
+import { Grid } from "../../../../src/battleship/game/models/Grid";
 import "../../../entry";
-import { Grid } from "./../../../../src/battleship/game/models/Grid";
 
 describe("Grid", () => {
     let grid: Grid;

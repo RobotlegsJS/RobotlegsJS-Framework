@@ -1,9 +1,9 @@
-import { LevelData } from "./../../models/LevelData";
-import { LevelModel } from "./../../models/LevelModel";
-import { ViewPortSize } from "./../../utils/ViewPortSize";
-import { CannonDisplay } from "./../displays/CannonDisplay";
-import { Entity } from "./../entities/Entity";
-import { EntityPool } from "./../utils/EntityPool";
+import { LevelData } from "../../models/LevelData";
+import { LevelModel } from "../../models/LevelModel";
+import { ViewPortSize } from "../../utils/ViewPortSize";
+import { CannonDisplay } from "../displays/CannonDisplay";
+import { Entity } from "../entities/Entity";
+import { EntityPool } from "../utils/EntityPool";
 
 export class LevelFactory {
     private static _maps: LevelData[];

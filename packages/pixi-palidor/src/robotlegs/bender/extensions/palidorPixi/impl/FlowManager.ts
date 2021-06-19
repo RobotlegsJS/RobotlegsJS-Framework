@@ -10,7 +10,7 @@ import { Container } from "pixi.js";
 import { IContainerController } from "../api/IContainerController";
 import { IFlowManager } from "../api/IFlowManager";
 import { IFlowViewMapping } from "../api/IFlowViewMapping";
-import { PalidorEvent } from "./../events/PalidorEvent";
+import { PalidorEvent } from "../events/PalidorEvent";
 import { FlowViewMapping } from "./FlowViewMapping";
 
 @injectable()

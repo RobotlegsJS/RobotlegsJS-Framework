@@ -1,11 +1,11 @@
 import { Container, Graphics, Text } from "pixi.js";
-import { GameModel } from "./../../models/GameModel";
-import { AtlasKeys } from "./../../utils/AtlasKeys";
-import { Colors } from "./../../utils/Colors";
-import { MagicValues } from "./../../utils/MagicValues";
-import { PixiFactory } from "./../../utils/PixiFactory";
-import { Texts } from "./../../utils/Texts";
-import { ViewPortSize } from "./../../utils/ViewPortSize";
+import { GameModel } from "../../models/GameModel";
+import { AtlasKeys } from "../../utils/AtlasKeys";
+import { Colors } from "../../utils/Colors";
+import { MagicValues } from "../../utils/MagicValues";
+import { PixiFactory } from "../../utils/PixiFactory";
+import { Texts } from "../../utils/Texts";
+import { ViewPortSize } from "../../utils/ViewPortSize";
 import { CustomButton } from "./CustomButton";
 import { LivesComponent } from "./LivesComponent";
 

@@ -1,9 +1,9 @@
 import { Container, Text } from "pixi.js";
-import { AtlasKeys } from "./../utils/AtlasKeys";
-import { MagicValues } from "./../utils/MagicValues";
-import { PixiFactory } from "./../utils/PixiFactory";
-import { Texts } from "./../utils/Texts";
-import { ViewPortSize } from "./../utils/ViewPortSize";
+import { AtlasKeys } from "../utils/AtlasKeys";
+import { MagicValues } from "../utils/MagicValues";
+import { PixiFactory } from "../utils/PixiFactory";
+import { Texts } from "../utils/Texts";
+import { ViewPortSize } from "../utils/ViewPortSize";
 import { CustomButton } from "./components/CustomButton";
 
 export class InfoPopup extends Container {

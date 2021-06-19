@@ -1,5 +1,5 @@
 import { Sprite } from "pixi.js";
-import { AtlasKeys } from "./../../utils/AtlasKeys";
+import { AtlasKeys } from "../../utils/AtlasKeys";
 
 export class CannonDisplay extends Sprite {
     public constructor() {

@@ -1,5 +1,5 @@
 import { Container } from "pixi.js";
-import { TilePool } from "./../../utils/TilePool";
+import { TilePool } from "../../utils/TilePool";
 import { TileDisplay } from "./TileDisplay";
 
 export class GridComponent extends Container {

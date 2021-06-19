@@ -1,9 +1,9 @@
 import { ICommand, inject, injectable } from "@robotlegsjs/core";
-import { FlowService } from "./../../services/FlowService";
-import { GameService } from "./../../services/GameService";
-import { LevelModel } from "./../models/LevelModel";
-import { LevelsRepository } from "./../utils/LevelRepository";
-import { ScoreUtils } from "./../utils/ScoreUtils";
+import { FlowService } from "../../services/FlowService";
+import { GameService } from "../../services/GameService";
+import { LevelModel } from "../models/LevelModel";
+import { LevelsRepository } from "../utils/LevelRepository";
+import { ScoreUtils } from "../utils/ScoreUtils";
 
 @injectable()
 export class GameOverCommand implements ICommand {

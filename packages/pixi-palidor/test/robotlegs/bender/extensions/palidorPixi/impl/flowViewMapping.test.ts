@@ -8,8 +8,8 @@
 import { assert } from "chai";
 import { FlowManager } from "../../../../../../src/robotlegs/bender/extensions/palidorPixi/impl/FlowManager";
 import { FlowViewMapping } from "../../../../../../src/robotlegs/bender/extensions/palidorPixi/impl/FlowViewMapping";
-import "./../../../../../entry";
-import { Utils } from "./../support/Utils";
+import "../../../../../entry";
+import { Utils } from "../support/Utils";
 
 import sinon = require("sinon");
 

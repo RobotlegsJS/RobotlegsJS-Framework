@@ -1,8 +1,8 @@
 import { EventDispatcher } from "@robotlegsjs/core";
 import { assert } from "chai";
 import { GameEvent } from "../../../src/battleship/events/GameEvent";
+import { GameService } from "../../../src/battleship/services/GameService";
 import "../../entry";
-import { GameService } from "./../../../src/battleship/services/GameService";
 
 import sinon = require("sinon");
 

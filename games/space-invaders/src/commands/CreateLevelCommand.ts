@@ -1,10 +1,10 @@
 import { ICommand, inject, injectable } from "@robotlegsjs/core";
-import { LevelFactory } from "./../game/factories/LevelFactory";
-import { GameModel } from "./../models/GameModel";
-import { GameStatus } from "./../models/GameStatus";
-import { LevelModel } from "./../models/LevelModel";
-import { FlowService } from "./../services/FlowService";
-import { GameService } from "./../services/GameService";
+import { LevelFactory } from "../game/factories/LevelFactory";
+import { GameModel } from "../models/GameModel";
+import { GameStatus } from "../models/GameStatus";
+import { LevelModel } from "../models/LevelModel";
+import { FlowService } from "../services/FlowService";
+import { GameService } from "../services/GameService";
 
 @injectable()
 export class CreateLevelCommand implements ICommand {

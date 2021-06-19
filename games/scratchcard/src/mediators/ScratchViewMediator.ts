@@ -1,9 +1,9 @@
 import { inject, injectable } from "@robotlegsjs/core";
 import { Mediator } from "@robotlegsjs/pixi";
+import { GameEvent } from "../events/GameEvent";
 import { TickManager } from "../managers/TickManager";
 import { Model } from "../models/Model";
 import { ScratchView } from "../views/ScratchView";
-import { GameEvent } from "./../events/GameEvent";
 
 @injectable()
 export class ScratchViewMediator extends Mediator<ScratchView> {

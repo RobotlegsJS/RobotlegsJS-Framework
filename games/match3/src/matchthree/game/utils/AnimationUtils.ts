@@ -1,6 +1,6 @@
 import { TimelineLite, TweenLite } from "gsap";
-import { PieceData } from "./../models/PieceData";
-import { Tile } from "./../models/Tile";
+import { PieceData } from "../models/PieceData";
+import { Tile } from "../models/Tile";
 
 export class AnimationUtils {
     public static createMoveTween(piece: PieceData): TweenLite {

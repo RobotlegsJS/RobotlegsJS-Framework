@@ -1,5 +1,5 @@
 import { Graphics } from "pixi.js";
-import { Tile } from "./../models/Tile";
+import { Tile } from "../models/Tile";
 
 export class BlankedCell extends Graphics {
     public constructor() {

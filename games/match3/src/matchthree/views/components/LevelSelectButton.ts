@@ -1,5 +1,5 @@
-import { AtlasKeys } from "./../../utils/AtlasKeys";
-import { PixiFactory } from "./../../utils/PixiFactory";
+import { AtlasKeys } from "../../utils/AtlasKeys";
+import { PixiFactory } from "../../utils/PixiFactory";
 import { IconButton } from "./IconButton";
 
 export class LevelSelectButton extends IconButton {

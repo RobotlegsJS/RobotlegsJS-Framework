@@ -1,4 +1,4 @@
-import { TileDisplay } from "./../views/components/TileDisplay";
+import { TileDisplay } from "../views/components/TileDisplay";
 import { AtlasKeys } from "./AtlasKeys";
 
 export class TilePool {

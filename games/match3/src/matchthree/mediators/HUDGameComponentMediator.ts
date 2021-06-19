@@ -1,12 +1,12 @@
 import { inject, injectable } from "@robotlegsjs/core";
 import { Mediator } from "@robotlegsjs/pixi";
-import { GameEvent } from "./../events/GameEvent";
-import { GameStatus } from "./../game/models/GameStatus";
-import { LevelInfo } from "./../game/models/LevelInfo";
-import { LevelModel } from "./../game/models/LevelModel";
-import { FlowService } from "./../services/FlowService";
-import { GameService } from "./../services/GameService";
-import { HUDGameComponent } from "./../views/components/HUDGameComponent";
+import { GameEvent } from "../events/GameEvent";
+import { GameStatus } from "../game/models/GameStatus";
+import { LevelInfo } from "../game/models/LevelInfo";
+import { LevelModel } from "../game/models/LevelModel";
+import { FlowService } from "../services/FlowService";
+import { GameService } from "../services/GameService";
+import { HUDGameComponent } from "../views/components/HUDGameComponent";
 
 @injectable()
 export class HUDGameComponentMediator extends Mediator<HUDGameComponent> {

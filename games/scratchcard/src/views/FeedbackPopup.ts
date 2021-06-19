@@ -1,7 +1,7 @@
 import { Container } from "pixi.js";
 import { Colors } from "../utils/Colors";
-import { MagicValues } from "./../utils/MagicValues";
-import { PixiFactory } from "./../utils/PixiFactory";
+import { MagicValues } from "../utils/MagicValues";
+import { PixiFactory } from "../utils/PixiFactory";
 
 export class FeedbackPopup extends Container {
     public constructor() {

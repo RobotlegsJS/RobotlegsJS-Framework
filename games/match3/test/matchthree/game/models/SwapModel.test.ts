@@ -1,7 +1,7 @@
 import { assert } from "chai";
+import { SwapModel } from "../../../../src/matchthree/game/models/SwapModel";
+import { TouchPhase } from "../../../../src/matchthree/game/models/TouchPhase";
 import "../../../entry";
-import { SwapModel } from "./../../../../src/matchthree/game/models/SwapModel";
-import { TouchPhase } from "./../../../../src/matchthree/game/models/TouchPhase";
 
 describe("SwapModel", () => {
     const maxCols = 5;

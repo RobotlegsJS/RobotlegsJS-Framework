@@ -1,6 +1,6 @@
 import { BitmapText, Container, Graphics, Sprite, Texture } from "pixi.js";
-import { IconButton } from "./../views/components/IconButton";
-import { LevelSelectButton } from "./../views/components/LevelSelectButton";
+import { IconButton } from "../views/components/IconButton";
+import { LevelSelectButton } from "../views/components/LevelSelectButton";
 import { AtlasKeys } from "./AtlasKeys";
 import { MagicValues } from "./MagicValues";
 import { ViewPortSize } from "./ViewPortSize";

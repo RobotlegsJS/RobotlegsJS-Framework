@@ -11,8 +11,8 @@ import { IFlowViewMapping } from "../../../../../../src/robotlegs/bender/extensi
 import { PalidorEvent } from "../../../../../../src/robotlegs/bender/extensions/palidorPixi/events/PalidorEvent";
 import { FlowManager } from "../../../../../../src/robotlegs/bender/extensions/palidorPixi/impl/FlowManager";
 import { FlowViewMapping } from "../../../../../../src/robotlegs/bender/extensions/palidorPixi/impl/FlowViewMapping";
-import "./../../../../../entry";
-import { Utils } from "./../support/Utils";
+import "../../../../../entry";
+import { Utils } from "../support/Utils";
 
 import sinon = require("sinon");
 

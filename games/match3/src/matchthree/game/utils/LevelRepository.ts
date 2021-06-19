@@ -1,5 +1,5 @@
 import { injectable } from "@robotlegsjs/core";
-import { LevelInfo } from "./../models/LevelInfo";
+import { LevelInfo } from "../models/LevelInfo";
 
 @injectable()
 export class LevelsRepository {

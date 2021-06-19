@@ -1,12 +1,12 @@
 import { inject, injectable } from "@robotlegsjs/core";
 import { Mediator } from "@robotlegsjs/pixi";
 import { Sprite } from "pixi.js";
-import { GameEvent } from "./../events/GameEvent";
-import { Entity } from "./../game/entities/Entity";
-import { GameManager } from "./../game/Managers/GameManager";
-import { EntityPool } from "./../game/utils/EntityPool";
-import { LevelModel } from "./../models/LevelModel";
-import { BattleFieldComponent } from "./../views/components/BattleFieldComponent";
+import { GameEvent } from "../events/GameEvent";
+import { Entity } from "../game/entities/Entity";
+import { GameManager } from "../game/Managers/GameManager";
+import { EntityPool } from "../game/utils/EntityPool";
+import { LevelModel } from "../models/LevelModel";
+import { BattleFieldComponent } from "../views/components/BattleFieldComponent";
 
 @injectable()
 export class BattleFieldComponentMediator extends Mediator<BattleFieldComponent> {

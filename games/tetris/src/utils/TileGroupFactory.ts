@@ -1,6 +1,6 @@
+import { Tile } from "../models/Tile";
 import { TileGroup } from "../models/TileGroup";
 import { TileGroupType } from "../models/TileGroupType";
-import { Tile } from "./../models/Tile";
 
 export class TileGroupFactory {
     public static getTileGroup(typeId: number): TileGroup {
