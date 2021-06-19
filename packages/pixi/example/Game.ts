@@ -8,8 +8,8 @@
 import PIXI = require("pixi.js");
 
 import { Context, MVCSBundle } from "@robotlegsjs/core";
-import { ContextView, PixiBundle } from "../src";
-
+import { PixiBundle } from "../src/robotlegs/bender/bundles/pixi/PixiBundle";
+import { ContextView } from "../src/robotlegs/bender/extensions/contextView/impl/ContextView";
 import { MyConfig } from "./config/MyConfig";
 import { RobotlegsView } from "./view/RobotlegsView";
 
