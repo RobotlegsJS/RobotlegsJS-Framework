@@ -1,4 +1,4 @@
-import { Container, Graphics, Sprite, Texture } from "pixi.js";
+import { BitmapText, Container, Graphics, Sprite, Texture } from "pixi.js";
 
 import { IconButton } from "./../views/components/IconButton";
 import { LevelSelectButton } from "./../views/components/LevelSelectButton";
@@ -13,7 +13,7 @@ export class PixiFactory {
             font: { name: MagicValues.FONT_FAMILY, size: fontSize }
         };
 
-        return new PIXI.extras.BitmapText(text, style);
+        return new BitmapText(text, style);
     }
     public static getTitle(label: string): Container {
         const style = {
@@ -21,14 +21,17 @@ export class PixiFactory {
             font: { name: MagicValues.FONT_FAMILY, size: MagicValues.SIZE_TITLE }
         };
 
-        const title = new PIXI.extras.BitmapText(label, style);
+        const title = new BitmapText(label, style);
         title.x = ViewPortSize.HALF_WIDTH;
         title.y = 110;
         title.pivot.x = title.width * 0.5;
         title.pivot.y = title.height * 0.5;
         return title;
     }
-    public static getIconButton(icon: string, shapeType: string = IconButton.TYPE_SMALL): IconButton {
+    public static getIconButton(
+        icon: string,
+        shapeType: string = IconButton.TYPE_SMALL
+    ): IconButton {
         const button: IconButton = new IconButton(shapeType);
         button.setIco(icon);
         return button;
