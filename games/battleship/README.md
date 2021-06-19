@@ -1,11 +1,6 @@
 GAME-Battleship
 ===
 
-
-[![Build Status](https://travis-ci.org/RonaldoSetzer/GAME-Battleship.svg?branch=master)](https://travis-ci.org/RonaldoSetzer/GAME-Battleship)
-[![Test Coverage](https://codeclimate.com/github/RonaldoSetzer/GAME-Battleship/badges/coverage.svg)](https://codeclimate.com/github/RonaldoSetzer/GAME-Battleship/coverage)
-[![styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
-
 This is a TypeScript open-source game.
 
 ![battleship_ss_01](media/battleship_ss_01.png)
@@ -15,14 +10,17 @@ This is a TypeScript open-source game.
 + **Language:** TypeScript.
 + **Technologies:** PixiJS, RobotlegsJS, RobotlegsJS-Pixi, RobotlegsJS-Pixi-Palidor.
 
-
 * * *
 
 ### Installation
 
-```
-npm install
-npm run start
+Follow the [building the projects](https://github.com/RobotlegsJS/RobotlegsJS-Framework/tree/master/.github/CONTRIBUTING.md#building-the-projects) section to know how to setup your local development environment.
+
+Then you can run this example using:
+
+```bash
+cd games/battleship
+npm start
 ```
 
 * * *
