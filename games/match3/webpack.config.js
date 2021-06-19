@@ -1,38 +1,66 @@
-const webpack = require('webpack');
-const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+const webpack = require("webpack");
+const path = require("path");
+const TerserPlugin = require("terser-webpack-plugin");
 
-module.exports = (function (options) {
+module.exports = (env) => {
+  if (!env) env = { production: false, karma: false };
+
+  let mode = env.production ? "production" : "development";
+  let tsconfig = !env.karma ? "tsconfig.json" : "tsconfig.test.json";
+  let output = env.production ? "dist" : "dist-test";
+  let filename = "[name].[hash].js";
+
   return {
+    mode: mode,
+
     entry: {
-      main: path.resolve("src/index.ts")
+      main: path.join(__dirname, "src/index.ts")
     },
 
     output: {
-      path: __dirname + "/dist",
-      filename: "bundle.js"
+      path: path.join(__dirname, output),
+      filename: filename
     },
 
-    devtool: 'source-map',
+    devtool: env.production ? undefined : "inline-source-map",
 
     module: {
-      rules: [{
+      rules: [
+        {
           test: /\.ts$/,
-          loader: "ts-loader"
+          use: [{ loader: "ts-loader", options: { configFile: tsconfig } }]
         },
         {
-          test: /^(.(?!\.test))*\.ts$/,
+          test: env.production /* disable this loader for production builds */
+            ? /^$/
+            : /^.*(src).*\.ts$/,
           loader: "istanbul-instrumenter-loader",
           enforce: "post"
         }
       ]
     },
 
-    plugins: [new HtmlWebpackPlugin() ],
+    plugins: env.production ? [] : [new webpack.SourceMapDevToolPlugin({ test: /\.ts$/i })],
 
+    optimization: env.production
+      ? {
+          concatenateModules: true,
+          minimize: true,
+          minimizer: [
+            new TerserPlugin({
+              parallel: 4,
+              extractComments: false,
+              terserOptions: {
+                format: {
+                  comments: false
+                }
+              }
+            })
+          ]
+        }
+      : {},
     resolve: {
-      extensions: ['.ts', '.js', '.json']
+      extensions: [".ts", ".js", ".json"]
     }
-
-  }
-})();
+  };
+};
