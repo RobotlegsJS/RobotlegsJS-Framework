@@ -1,6 +1,5 @@
-import { BattleField } from "./BattleField";
-
 import { injectable } from "@robotlegsjs/core";
+import { BattleField } from "./BattleField";
 
 @injectable()
 export class LevelModel {

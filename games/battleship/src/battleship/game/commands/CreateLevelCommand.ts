@@ -1,9 +1,8 @@
-import { BattleFieldUtils } from "../utils/BattleFieldUtils";
-import { LevelModel } from "../models/LevelModel";
-import { GameService } from "../../services/GameService";
+import { ICommand, inject, injectable } from "@robotlegsjs/core";
 import { FlowService } from "../../services/FlowService";
-
-import { injectable, inject, ICommand } from "@robotlegsjs/core";
+import { GameService } from "../../services/GameService";
+import { LevelModel } from "../models/LevelModel";
+import { BattleFieldUtils } from "../utils/BattleFieldUtils";
 
 @injectable()
 export class CreateLevelCommand implements ICommand {

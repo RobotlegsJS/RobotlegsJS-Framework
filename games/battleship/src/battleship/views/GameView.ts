@@ -1,15 +1,12 @@
-import { Colors } from "../utils/Colors";
-import { AtlasKeys } from "../utils/AtlasKeys";
-
 import { TweenLite } from "gsap";
-
+import { Container } from "pixi.js";
+import { AtlasKeys } from "../utils/AtlasKeys";
+import { Colors } from "../utils/Colors";
+import { MagicValues } from "../utils/MagicValues";
+import { PixiFactory } from "../utils/PixiFactory";
 import { CustomButton } from "./components/CustomButton";
 import { EnemyComponent } from "./components/EnemyComponent";
-import { MagicValues } from "../utils/MagicValues";
 import { HeroComponent } from "./components/HeroComponent";
-import { PixiFactory } from "../utils/PixiFactory";
-
-import { Container } from "pixi.js";
 
 export class GameView extends Container {
     private _hero: HeroComponent;

@@ -1,8 +1,7 @@
+import { Container, Graphics } from "pixi.js";
 import { Tile } from "../../game/models/Tile";
 import { Colors } from "../../utils/Colors";
 import { MagicValues } from "../../utils/MagicValues";
-
-import { Graphics, Container } from "pixi.js";
 
 export class TileDisplay extends Container {
     public tileId: number;

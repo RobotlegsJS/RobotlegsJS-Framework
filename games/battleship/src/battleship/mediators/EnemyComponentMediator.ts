@@ -1,11 +1,10 @@
+import { inject, injectable } from "@robotlegsjs/core";
+import { Mediator } from "@robotlegsjs/pixi";
 import { GameEvent } from "../events/GameEvent";
 import { BattleField } from "../game/models/BattleField";
 import { LevelModel } from "../game/models/LevelModel";
 import { EnemyComponent } from "../views/components/EnemyComponent";
 
-import { injectable, inject } from "@robotlegsjs/core";
-
-import { Mediator } from "@robotlegsjs/pixi";
 @injectable()
 export class EnemyComponentMediator extends Mediator<EnemyComponent> {
     @inject(LevelModel)

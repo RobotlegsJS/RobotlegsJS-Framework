@@ -1,13 +1,12 @@
-import { EnemyTileDisplay } from "./EnemyTileDisplay";
+import { Container } from "pixi.js";
+import { Grid } from "../../game/models/Grid";
 import { Player } from "../../game/models/Player";
-import { MagicValues } from "../../utils/MagicValues";
 import { Tile } from "../../game/models/Tile";
 import { IsoUtils } from "../../utils/IsoUtils";
+import { MagicValues } from "../../utils/MagicValues";
 import { PixiFactory } from "../../utils/PixiFactory";
-import { Grid } from "../../game/models/Grid";
+import { EnemyTileDisplay } from "./EnemyTileDisplay";
 import { TileDisplay } from "./TileDisplay";
-
-import { Container } from "pixi.js";
 
 export class GridDisplay extends Container {
     private _displays: Map<string, TileDisplay>;

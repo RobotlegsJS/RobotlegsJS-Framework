@@ -1,8 +1,6 @@
-import "../../../entry";
-
-import { Tile } from "./../../../../src/battleship/game/models/Tile";
-
 import { assert } from "chai";
+import "../../../entry";
+import { Tile } from "./../../../../src/battleship/game/models/Tile";
 
 describe("Tile", () => {
     context("constructor", () => {

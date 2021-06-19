@@ -1,11 +1,9 @@
+import { inject, injectable } from "@robotlegsjs/core";
+import { Mediator } from "@robotlegsjs/pixi";
 import { LevelModel } from "../game/models/LevelModel";
 import { FlowService } from "../services/FlowService";
 import { GameService } from "../services/GameService";
 import { YouWinPopup } from "../views/YouWinPopup";
-
-import { injectable, inject } from "@robotlegsjs/core";
-
-import { Mediator } from "@robotlegsjs/pixi";
 
 @injectable()
 export class YouWinPopupMediator extends Mediator<YouWinPopup> {

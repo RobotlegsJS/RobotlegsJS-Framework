@@ -1,11 +1,10 @@
+import { Container } from "pixi.js";
 import { Player } from "../../game/models/Player";
-import { ShipsGridDisplay } from "./ShipsGridDisplay";
-import { GridDisplay } from "./GridDisplay";
-import { Texts } from "../../utils/Texts";
 import { Colors } from "../../utils/Colors";
 import { PixiFactory } from "../../utils/PixiFactory";
-
-import { Container } from "pixi.js";
+import { Texts } from "../../utils/Texts";
+import { GridDisplay } from "./GridDisplay";
+import { ShipsGridDisplay } from "./ShipsGridDisplay";
 
 export class EnemyComponent extends Container {
     private _ships: ShipsGridDisplay;

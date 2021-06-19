@@ -1,9 +1,8 @@
-import { Colors } from "./Colors";
+import { BitmapText, Container, Graphics, Sprite, Texture } from "pixi.js";
 import { CustomButton } from "../views/components/CustomButton";
-import { MagicValues } from "./MagicValues";
 import { AtlasKeys } from "./AtlasKeys";
-
-import { BitmapText, Graphics, Container, Sprite, Texture } from "pixi.js";
+import { Colors } from "./Colors";
+import { MagicValues } from "./MagicValues";
 
 export class PixiFactory {
     /* TEXTFIELDS */

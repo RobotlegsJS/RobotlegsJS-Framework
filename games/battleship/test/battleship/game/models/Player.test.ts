@@ -1,8 +1,6 @@
-import "../../../entry";
-
-import { Player } from "./../../../../src/battleship/game/models/Player";
-
 import { assert } from "chai";
+import "../../../entry";
+import { Player } from "./../../../../src/battleship/game/models/Player";
 
 describe("Player", () => {
     context("constants", () => {

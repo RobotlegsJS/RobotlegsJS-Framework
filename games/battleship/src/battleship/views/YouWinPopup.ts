@@ -1,12 +1,10 @@
-import { CustomButton } from "./components/CustomButton";
-
+import { TweenLite } from "gsap";
+import { Container } from "pixi.js";
 import { AtlasKeys } from "../utils/AtlasKeys";
 import { MagicValues } from "../utils/MagicValues";
 import { PixiFactory } from "../utils/PixiFactory";
 import { Texts } from "../utils/Texts";
-
-import { Container } from "pixi.js";
-import { TweenLite } from "gsap";
+import { CustomButton } from "./components/CustomButton";
 
 export class YouWinPopup extends Container {
     private _titleText: any;

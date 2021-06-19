@@ -1,10 +1,8 @@
-import "../../../entry";
-
-import { Tile } from "./../../../../src/battleship/game/models/Tile";
-import { Ship } from "../../../../src/battleship/game/models/Ship";
-import { BattleField } from "../../../../src/battleship/game/models/BattleField";
-
 import { assert } from "chai";
+import { BattleField } from "../../../../src/battleship/game/models/BattleField";
+import { Ship } from "../../../../src/battleship/game/models/Ship";
+import "../../../entry";
+import { Tile } from "./../../../../src/battleship/game/models/Tile";
 
 describe("BattleField", () => {
     let battlefield: BattleField = new BattleField();

@@ -1,12 +1,11 @@
-import { AttackEvent } from "../events/AttackEvent";
-import { Tile } from "../models/Tile";
-import { GameManager } from "../managers/GameManager";
-import { BattleFieldUtils } from "../utils/BattleFieldUtils";
-import { LevelModel } from "../models/LevelModel";
-import { GameService } from "../../services/GameService";
+import { ICommand, inject, injectable } from "@robotlegsjs/core";
 import { FlowService } from "../../services/FlowService";
-
-import { injectable, inject, ICommand } from "@robotlegsjs/core";
+import { GameService } from "../../services/GameService";
+import { AttackEvent } from "../events/AttackEvent";
+import { GameManager } from "../managers/GameManager";
+import { LevelModel } from "../models/LevelModel";
+import { Tile } from "../models/Tile";
+import { BattleFieldUtils } from "../utils/BattleFieldUtils";
 
 @injectable()
 export class EnemyAttackCommand implements ICommand {

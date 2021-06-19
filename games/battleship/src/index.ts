@@ -1,17 +1,15 @@
 /// <reference path="../node_modules/@robotlegsjs/pixi/definitions/pixi.d.ts" />
 
-import "reflect-metadata";
-
-import PIXI = require("pixi.js");
-
-import { AtlasKeys } from "./battleship/utils/AtlasKeys";
-import { GameConfig } from "./battleship/configs/GameConfig";
-import { PalidorConfig } from "./battleship/configs/PalidorConfig";
-import { ViewsConfig } from "./battleship/configs/ViewsConfig";
-
 import { Context } from "@robotlegsjs/core";
 import { ContextView } from "@robotlegsjs/pixi";
 import { PalidorBundle } from "@robotlegsjs/pixi-palidor";
+import "reflect-metadata";
+import { GameConfig } from "./battleship/configs/GameConfig";
+import { PalidorConfig } from "./battleship/configs/PalidorConfig";
+import { ViewsConfig } from "./battleship/configs/ViewsConfig";
+import { AtlasKeys } from "./battleship/utils/AtlasKeys";
+
+import PIXI = require("pixi.js");
 
 class Main {
     private _stage: PIXI.Container;

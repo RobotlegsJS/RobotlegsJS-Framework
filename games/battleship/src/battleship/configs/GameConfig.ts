@@ -1,12 +1,11 @@
-import { HeroAttackCommand } from "../game/commands/HeroAttackCommand";
-import { EnemyAttackCommand } from "../game/commands/EnemyAttackCommand";
-import { GameService } from "../services/GameService";
+import { IConfig, IContext, IEventCommandMap, inject, injectable } from "@robotlegsjs/core";
 import { GameEvent } from "../events/GameEvent";
 import { CreateLevelCommand } from "../game/commands/CreateLevelCommand";
+import { EnemyAttackCommand } from "../game/commands/EnemyAttackCommand";
+import { HeroAttackCommand } from "../game/commands/HeroAttackCommand";
 import { GameManager } from "../game/managers/GameManager";
 import { LevelModel } from "../game/models/LevelModel";
-
-import { IConfig, injectable, inject, IEventCommandMap, IContext } from "@robotlegsjs/core";
+import { GameService } from "../services/GameService";
 
 @injectable()
 export class GameConfig implements IConfig {

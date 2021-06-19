@@ -1,6 +1,6 @@
+import { Container } from "pixi.js";
 import { Ship } from "../../game/models/Ship";
 import { ShipDisplay } from "./ShipDisplay";
-import { Container } from "pixi.js";
 
 export class ShipsGridDisplay extends Container {
     private _displays: Map<Ship, ShipDisplay>;

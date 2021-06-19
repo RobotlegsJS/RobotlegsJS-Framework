@@ -1,10 +1,8 @@
-import "../../../entry";
-
-import { Tile } from "./../../../../src/battleship/game/models/Tile";
-import { BattleField } from "./../../../../src/battleship/game/models/BattleField";
-import { BattleFieldUtils } from "../../../../src/battleship/game/utils/BattleFieldUtils";
-
 import { assert } from "chai";
+import { BattleFieldUtils } from "../../../../src/battleship/game/utils/BattleFieldUtils";
+import "../../../entry";
+import { BattleField } from "./../../../../src/battleship/game/models/BattleField";
+import { Tile } from "./../../../../src/battleship/game/models/Tile";
 
 describe("BattleFieldUtils", () => {
     let battleField: BattleField;

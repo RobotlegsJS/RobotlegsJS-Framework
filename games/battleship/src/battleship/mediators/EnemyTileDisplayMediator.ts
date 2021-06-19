@@ -1,10 +1,8 @@
-import { GameService } from "../services/GameService";
-import { GameManager } from "../game/managers/GameManager";
-import { EnemyTileDisplay } from "../views/components/EnemyTileDisplay";
-
-import { injectable, inject } from "@robotlegsjs/core";
-
+import { inject, injectable } from "@robotlegsjs/core";
 import { Mediator } from "@robotlegsjs/pixi";
+import { GameManager } from "../game/managers/GameManager";
+import { GameService } from "../services/GameService";
+import { EnemyTileDisplay } from "../views/components/EnemyTileDisplay";
 
 @injectable()
 export class EnemyTileDisplayMediator extends Mediator<EnemyTileDisplay> {

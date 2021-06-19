@@ -1,9 +1,7 @@
-import "../../../entry";
-
-import { AttackEvent } from "./../../../../src/battleship/game/events/AttackEvent";
-
-import { assert } from "chai";
 import { Event } from "@robotlegsjs/core";
+import { assert } from "chai";
+import "../../../entry";
+import { AttackEvent } from "./../../../../src/battleship/game/events/AttackEvent";
 
 describe("AttackEvent", () => {
     context("constants", () => {
