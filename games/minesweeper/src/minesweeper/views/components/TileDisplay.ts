@@ -1,5 +1,4 @@
 import { Container, Graphics } from "pixi.js";
-
 import { Cell } from "./../../game/models/Cell";
 import { AtlasKeys } from "./../../utils/AtlasKeys";
 import { Colors } from "./../../utils/Colors";

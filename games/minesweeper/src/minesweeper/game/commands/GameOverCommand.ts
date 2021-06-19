@@ -1,5 +1,4 @@
 import { ICommand, inject, injectable } from "@robotlegsjs/core";
-
 import { FlowService } from "./../../services/FlowService";
 import { GameService } from "./../../services/GameService";
 import { HighScoreManager } from "./../managers/HighScoreManager";

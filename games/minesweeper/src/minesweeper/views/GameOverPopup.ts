@@ -1,6 +1,5 @@
 import { TweenLite } from "gsap";
 import { Container } from "pixi.js";
-
 import { AtlasKeys } from "./../utils/AtlasKeys";
 import { PixiFactory } from "./../utils/PixiFactory";
 import { Texts } from "./../utils/Texts";

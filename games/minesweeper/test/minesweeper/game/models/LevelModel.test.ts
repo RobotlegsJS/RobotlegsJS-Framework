@@ -1,8 +1,7 @@
-import "../../../entry";
-
-import { GridData } from "../../../../src/minesweeper/game/models/GridData";
-import { LevelModel } from "./../../../../src/minesweeper/game/models/LevelModel";
 import { assert } from "chai";
+import { GridData } from "../../../../src/minesweeper/game/models/GridData";
+import "../../../entry";
+import { LevelModel } from "./../../../../src/minesweeper/game/models/LevelModel";
 
 describe("LevelModel", () => {
     let level: LevelModel;

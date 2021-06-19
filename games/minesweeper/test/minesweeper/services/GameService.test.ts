@@ -1,11 +1,11 @@
-import "../../entry";
-
-import { Texts } from "../../../src/minesweeper/utils/Texts";
-import { GameEvent } from "../../../src/minesweeper/events/GameEvent";
-import { GameStatus } from "../../../src/minesweeper/game/models/GameStatus";
-import { GameService } from "./../../../src/minesweeper/services/GameService";
 import { EventDispatcher } from "@robotlegsjs/core";
 import { assert } from "chai";
+import { GameEvent } from "../../../src/minesweeper/events/GameEvent";
+import { GameStatus } from "../../../src/minesweeper/game/models/GameStatus";
+import { Texts } from "../../../src/minesweeper/utils/Texts";
+import "../../entry";
+import { GameService } from "./../../../src/minesweeper/services/GameService";
+
 import sinon = require("sinon");
 
 describe("GameService", () => {

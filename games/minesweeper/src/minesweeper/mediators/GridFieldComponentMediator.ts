@@ -1,7 +1,6 @@
 import { inject, injectable } from "@robotlegsjs/core";
 import { Mediator } from "@robotlegsjs/pixi";
 import { TweenLite } from "gsap";
-
 import { GameEvent } from "./../events/GameEvent";
 import { GameManager } from "./../game/managers/GameManager";
 import { Cell } from "./../game/models/Cell";

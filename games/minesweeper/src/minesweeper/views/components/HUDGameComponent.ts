@@ -1,6 +1,5 @@
 import { TweenLite } from "gsap";
 import { Container, Sprite } from "pixi.js";
-
 import { LevelModel } from "./../../game/models/LevelModel";
 import { AtlasKeys } from "./../../utils/AtlasKeys";
 import { MagicValues } from "./../../utils/MagicValues";

@@ -1,5 +1,4 @@
 import { Container, Sprite, Texture } from "pixi.js";
-
 import { AtlasKeys } from "./../../utils/AtlasKeys";
 import { Colors } from "./../../utils/Colors";
 import { PixiFactory } from "./../../utils/PixiFactory";

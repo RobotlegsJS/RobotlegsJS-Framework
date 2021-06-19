@@ -1,5 +1,4 @@
 import { injectable } from "@robotlegsjs/core";
-
 import { Texts } from "./../../utils/Texts";
 
 @injectable()

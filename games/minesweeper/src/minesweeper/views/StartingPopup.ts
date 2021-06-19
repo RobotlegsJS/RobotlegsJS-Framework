@@ -1,5 +1,4 @@
 import { Container, Graphics } from "pixi.js";
-
 import { PixiFactory } from "./../utils/PixiFactory";
 import { ViewPortSize } from "./../utils/ViewPortSize";
 

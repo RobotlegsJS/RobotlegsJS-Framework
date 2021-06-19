@@ -1,5 +1,4 @@
 import { inject, injectable } from "@robotlegsjs/core";
-
 import { Texts } from "../../utils/Texts";
 import { Cell } from "../models/Cell";
 import { CustomLevelModel } from "../models/CustomLevelModel";

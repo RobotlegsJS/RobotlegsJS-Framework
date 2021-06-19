@@ -1,6 +1,5 @@
 import { EventDispatcher, IEventDispatcher, inject, injectable } from "@robotlegsjs/core";
 import { PalidorEvent } from "@robotlegsjs/pixi-palidor";
-
 import { FlowEvent } from "./../events/FlowEvent";
 
 @injectable()

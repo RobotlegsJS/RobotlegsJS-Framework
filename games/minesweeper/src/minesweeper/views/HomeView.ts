@@ -1,6 +1,5 @@
 import { TweenLite } from "gsap";
 import { Container, Sprite } from "pixi.js";
-
 import { AtlasKeys } from "./../utils/AtlasKeys";
 import { PixiFactory } from "./../utils/PixiFactory";
 import { ViewPortSize } from "./../utils/ViewPortSize";

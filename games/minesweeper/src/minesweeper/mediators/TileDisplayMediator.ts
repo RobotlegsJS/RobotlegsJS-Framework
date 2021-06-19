@@ -1,6 +1,5 @@
 import { inject, injectable } from "@robotlegsjs/core";
 import { Mediator } from "@robotlegsjs/pixi";
-
 import { GameManager } from "../game/managers/GameManager";
 import { Cell } from "./../game/models/Cell";
 import { TileDisplay } from "./../views/components/TileDisplay";

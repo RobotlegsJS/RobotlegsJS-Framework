@@ -1,6 +1,5 @@
 import { inject, injectable } from "@robotlegsjs/core";
 import { Mediator } from "@robotlegsjs/pixi";
-
 import { HighScoreManager } from "../game/managers/HighScoreManager";
 import { LevelSelectView } from "../views/LevelSelectView";
 import { FlowService } from "./../services/FlowService";

@@ -1,5 +1,4 @@
 import { ICommand, inject, injectable } from "@robotlegsjs/core";
-
 import { Cell } from "../models/Cell";
 import { LevelModel } from "./../models/LevelModel";
 
