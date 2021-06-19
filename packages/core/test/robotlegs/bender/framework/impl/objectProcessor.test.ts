@@ -5,13 +5,10 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import "../../../../entry";
-
 import { assert } from "chai";
-
-import { ObjectProcessor } from "../../../../../src/robotlegs/bender/framework/impl/ObjectProcessor";
 import { instanceOfType } from "../../../../../src/robotlegs/bender/extensions/matching/instanceOfType";
-
+import { ObjectProcessor } from "../../../../../src/robotlegs/bender/framework/impl/ObjectProcessor";
+import "../../../../entry";
 import { TestObject } from "./objectSupport/TestObject";
 
 describe("ObjectProcessor", () => {

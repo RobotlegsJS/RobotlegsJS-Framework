@@ -5,13 +5,10 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import "../../../../entry";
-
 import { assert } from "chai";
-
 import { IType } from "../../../../../src/robotlegs/bender/extensions/matching/IType";
 import { TypeFilter } from "../../../../../src/robotlegs/bender/extensions/matching/TypeFilter";
-
+import "../../../../entry";
 import { BaseType } from "./support/BaseType";
 import { ExtendedType } from "./support/ExtendedType";
 

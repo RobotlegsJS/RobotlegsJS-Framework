@@ -5,14 +5,12 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import "../../../../../entry";
-
 import { assert } from "chai";
-
 import { IEventDispatcher } from "../../../../../../src/robotlegs/bender/events/api/IEventDispatcher";
 import { Event } from "../../../../../../src/robotlegs/bender/events/impl/Event";
 import { EventDispatcher } from "../../../../../../src/robotlegs/bender/events/impl/EventDispatcher";
 import { EventRelay } from "../../../../../../src/robotlegs/bender/extensions/eventDispatcher/impl/EventRelay";
+import "../../../../../entry";
 
 describe("EventRelay", () => {
     let source: IEventDispatcher;

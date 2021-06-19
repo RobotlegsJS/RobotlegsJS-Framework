@@ -5,19 +5,14 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import "../../../../../entry";
-
 import { assert } from "chai";
-
-import { IClass } from "../../../../../../src/robotlegs/bender/extensions/matching/IClass";
-
 import { IEvent } from "../../../../../../src/robotlegs/bender/events/api/IEvent";
 import { IEventDispatcher } from "../../../../../../src/robotlegs/bender/events/api/IEventDispatcher";
 import { Event } from "../../../../../../src/robotlegs/bender/events/impl/Event";
 import { EventDispatcher } from "../../../../../../src/robotlegs/bender/events/impl/EventDispatcher";
-
 import { EventMapConfig } from "../../../../../../src/robotlegs/bender/extensions/localEventMap/impl/EventMapConfig";
-
+import { IClass } from "../../../../../../src/robotlegs/bender/extensions/matching/IClass";
+import "../../../../../entry";
 import { CustomEvent } from "../support/CustomEvent";
 
 describe("EventMapConfig", () => {

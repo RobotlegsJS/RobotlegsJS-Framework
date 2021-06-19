@@ -5,10 +5,9 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import { injectable, inject, named } from "inversify";
-
-import { IGuard } from "../../../../../../src/robotlegs/bender/framework/api/IGuard";
+import { inject, injectable, named } from "inversify";
 import { Event } from "../../../../../../src/robotlegs/bender/events/impl/Event";
+import { IGuard } from "../../../../../../src/robotlegs/bender/framework/api/IGuard";
 
 @injectable()
 export class EventInjectedCallbackGuard implements IGuard {

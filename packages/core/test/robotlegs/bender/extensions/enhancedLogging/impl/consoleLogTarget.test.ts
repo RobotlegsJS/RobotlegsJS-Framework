@@ -5,17 +5,14 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import "../../../../../entry";
-
-import sinon = require("sinon");
-
 import { assert } from "chai";
-
+import { ConsoleLogTarget } from "../../../../../../src/robotlegs/bender/extensions/enhancedLogging/impl/ConsoleLogTarget";
 import { IContext } from "../../../../../../src/robotlegs/bender/framework/api/IContext";
 import { LogLevel } from "../../../../../../src/robotlegs/bender/framework/api/LogLevel";
 import { Context } from "../../../../../../src/robotlegs/bender/framework/impl/Context";
+import "../../../../../entry";
 
-import { ConsoleLogTarget } from "../../../../../../src/robotlegs/bender/extensions/enhancedLogging/impl/ConsoleLogTarget";
+import sinon = require("sinon");
 
 describe("ConsoleLogTarget", () => {
     let context: IContext;

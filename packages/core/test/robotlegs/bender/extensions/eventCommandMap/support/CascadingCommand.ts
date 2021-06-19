@@ -5,10 +5,9 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import { injectable, inject } from "inversify";
-
-import { Event } from "../../../../../../src/robotlegs/bender/events/impl/Event";
+import { inject, injectable } from "inversify";
 import { IEventDispatcher } from "../../../../../../src/robotlegs/bender/events/api/IEventDispatcher";
+import { Event } from "../../../../../../src/robotlegs/bender/events/impl/Event";
 import { ICommand } from "../../../../../../src/robotlegs/bender/extensions/commandCenter/api/ICommand";
 import { IEventCommandMap } from "../../../../../../src/robotlegs/bender/extensions/eventCommandMap/api/IEventCommandMap";
 import { NullCommand } from "../../commandCenter/support/NullCommand";

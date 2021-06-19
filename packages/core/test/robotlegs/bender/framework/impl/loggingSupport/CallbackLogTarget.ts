@@ -6,7 +6,6 @@
 // ------------------------------------------------------------------------------
 
 import { ILogTarget } from "../../../../../../src/robotlegs/bender/framework/api/ILogTarget";
-
 import { LogParams } from "./LogParams";
 
 export class CallbackLogTarget implements ILogTarget {

@@ -5,22 +5,18 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import "../../../../../entry";
-
 import { assert } from "chai";
-
-import sinon = require("sinon");
-
 import { ICommandMapping } from "../../../../../../src/robotlegs/bender/extensions/commandCenter/api/ICommandMapping";
 import { CommandMapper } from "../../../../../../src/robotlegs/bender/extensions/commandCenter/impl/CommandMapper";
 import { CommandMappingList } from "../../../../../../src/robotlegs/bender/extensions/commandCenter/impl/CommandMappingList";
 import { NullCommandTrigger } from "../../../../../../src/robotlegs/bender/extensions/commandCenter/impl/NullCommandTrigger";
-
-import { HappyGuard } from "../../../framework/impl/guardSupport/HappyGuard";
+import "../../../../../entry";
 import { GrumpyGuard } from "../../../framework/impl/guardSupport/GrumpyGuard";
+import { HappyGuard } from "../../../framework/impl/guardSupport/HappyGuard";
 import { CallbackHook } from "../../../framework/impl/hookSupport/CallbackHook";
-
 import { NullCommand } from "../support/NullCommand";
+
+import sinon = require("sinon");
 
 describe("CommandMapper", () => {
     let mappings: CommandMappingList;

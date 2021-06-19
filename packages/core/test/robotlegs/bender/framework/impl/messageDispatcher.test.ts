@@ -5,12 +5,9 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import "../../../../entry";
-
 import { assert } from "chai";
-
 import { MessageDispatcher } from "../../../../../src/robotlegs/bender/framework/impl/MessageDispatcher";
-
+import "../../../../entry";
 import { createAsyncHandler } from "./safelyCallBackSupport/createAsyncHandler";
 import { createCallbackHandlerThatErrors } from "./safelyCallBackSupport/createCallbackHandlerThatErrors";
 import { createHandler } from "./safelyCallBackSupport/createHandler";

@@ -5,11 +5,9 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import { injectable, inject, named, optional } from "inversify";
-
+import { inject, injectable, named, optional } from "inversify";
 import { Event } from "../../../../../../src/robotlegs/bender/events/impl/Event";
 import { ICommand } from "../../../../../../src/robotlegs/bender/extensions/commandCenter/api/ICommand";
-
 import { SupportEvent } from "./SupportEvent";
 
 @injectable()

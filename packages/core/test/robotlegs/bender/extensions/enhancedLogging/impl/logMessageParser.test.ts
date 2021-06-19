@@ -5,11 +5,9 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import "../../../../../entry";
-
 import { assert } from "chai";
-
 import { LogMessageParser } from "../../../../../../src/robotlegs/bender/extensions/enhancedLogging/impl/LogMessageParser";
+import "../../../../../entry";
 
 describe("LogMessageParser", () => {
     let logMessageParser: LogMessageParser;

@@ -5,13 +5,10 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import "../../../../entry";
-
 import { assert } from "chai";
-
 import { guardsApprove } from "../../../../../src/robotlegs/bender/framework/impl/guardsApprove";
 import { RobotlegsInjector } from "../../../../../src/robotlegs/bender/framework/impl/RobotlegsInjector";
-
+import "../../../../entry";
 import { BossGuard } from "./guardSupport/BossGuard";
 import { GrumpyGuard } from "./guardSupport/GrumpyGuard";
 import { HappyGuard } from "./guardSupport/HappyGuard";

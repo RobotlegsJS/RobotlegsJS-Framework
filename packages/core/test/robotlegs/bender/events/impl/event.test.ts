@@ -5,11 +5,9 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import "../../../../entry";
-
 import { assert } from "chai";
-
 import { Event } from "../../../../../src/";
+import "../../../../entry";
 
 describe("Event", () => {
     it("event_only_with_type_is_initialized", () => {

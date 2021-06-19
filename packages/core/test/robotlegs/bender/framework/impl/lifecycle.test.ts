@@ -5,16 +5,13 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import "../../../../entry";
-
 import { assert } from "chai";
-
 import { IEventDispatcher } from "../../../../../src/robotlegs/bender/events/api/IEventDispatcher";
 import { EventDispatcher } from "../../../../../src/robotlegs/bender/events/impl/EventDispatcher";
-
 import { LifecycleEvent } from "../../../../../src/robotlegs/bender/framework/api/LifecycleEvent";
 import { LifecycleState } from "../../../../../src/robotlegs/bender/framework/api/LifecycleState";
 import { Lifecycle } from "../../../../../src/robotlegs/bender/framework/impl/Lifecycle";
+import "../../../../entry";
 
 describe("Lifecycle", () => {
     let target: IEventDispatcher;

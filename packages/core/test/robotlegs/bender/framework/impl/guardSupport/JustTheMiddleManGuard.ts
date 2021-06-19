@@ -5,10 +5,8 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import { injectable, inject } from "inversify";
-
+import { inject, injectable } from "inversify";
 import { IGuard } from "../../../../../../src/robotlegs/bender/framework/api/IGuard";
-
 import { BossGuard } from "./BossGuard";
 
 @injectable()

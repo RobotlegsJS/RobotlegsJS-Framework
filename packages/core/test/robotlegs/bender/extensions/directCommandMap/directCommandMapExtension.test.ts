@@ -5,16 +5,13 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import "../../../../entry";
-
 import { assert } from "chai";
-
+import { IDirectCommandMap } from "../../../../../src/robotlegs/bender/extensions/directCommandMap/api/IDirectCommandMap";
+import { DirectCommandMapExtension } from "../../../../../src/robotlegs/bender/extensions/directCommandMap/DirectCommandMapExtension";
+import { DirectCommandMap } from "../../../../../src/robotlegs/bender/extensions/directCommandMap/impl/DirectCommandMap";
 import { IContext } from "../../../../../src/robotlegs/bender/framework/api/IContext";
 import { Context } from "../../../../../src/robotlegs/bender/framework/impl/Context";
-
-import { IDirectCommandMap } from "../../../../../src/robotlegs/bender/extensions/directCommandMap/api/IDirectCommandMap";
-import { DirectCommandMap } from "../../../../../src/robotlegs/bender/extensions/directCommandMap/impl/DirectCommandMap";
-import { DirectCommandMapExtension } from "../../../../../src/robotlegs/bender/extensions/directCommandMap/DirectCommandMapExtension";
+import "../../../../entry";
 
 describe("DirectCommandMapExtension", () => {
     let context: IContext;

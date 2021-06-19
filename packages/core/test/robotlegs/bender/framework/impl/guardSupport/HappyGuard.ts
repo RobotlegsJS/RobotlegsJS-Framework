@@ -6,7 +6,6 @@
 // ------------------------------------------------------------------------------
 
 import { injectable } from "inversify";
-
 import { IGuard } from "../../../../../../src/robotlegs/bender/framework/api/IGuard";
 
 @injectable()

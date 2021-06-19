@@ -5,23 +5,18 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import "../../../../../entry";
-
 import { assert } from "chai";
-
-import { IClass } from "../../../../../../src/robotlegs/bender/extensions/matching/IClass";
-
+import { CommandPayload } from "../../../../../../src/robotlegs/bender/extensions/commandCenter/api/CommandPayload";
 import { ICommand } from "../../../../../../src/robotlegs/bender/extensions/commandCenter/api/ICommand";
 import { ICommandMapping } from "../../../../../../src/robotlegs/bender/extensions/commandCenter/api/ICommandMapping";
-import { CommandPayload } from "../../../../../../src/robotlegs/bender/extensions/commandCenter/api/CommandPayload";
 import { CommandExecutor } from "../../../../../../src/robotlegs/bender/extensions/commandCenter/impl/CommandExecutor";
 import { CommandMapping } from "../../../../../../src/robotlegs/bender/extensions/commandCenter/impl/CommandMapping";
+import { IClass } from "../../../../../../src/robotlegs/bender/extensions/matching/IClass";
 import { IInjector } from "../../../../../../src/robotlegs/bender/framework/api/IInjector";
 import { RobotlegsInjector } from "../../../../../../src/robotlegs/bender/framework/impl/RobotlegsInjector";
-
-import { HappyGuard } from "../../../framework/impl/guardSupport/HappyGuard";
+import "../../../../../entry";
 import { GrumpyGuard } from "../../../framework/impl/guardSupport/GrumpyGuard";
-
+import { HappyGuard } from "../../../framework/impl/guardSupport/HappyGuard";
 import { ClassReportingCallbackCommand } from "../support/ClassReportingCallbackCommand";
 import { ClassReportingCallbackCommand2 } from "../support/ClassReportingCallbackCommand2";
 import { ClassReportingCallbackGuard } from "../support/ClassReportingCallbackGuard";

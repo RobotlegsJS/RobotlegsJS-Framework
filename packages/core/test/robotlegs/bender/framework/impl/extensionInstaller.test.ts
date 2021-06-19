@@ -5,14 +5,11 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import "../../../../entry";
-
 import { assert } from "chai";
-
 import { IExtension } from "../../../../../src/robotlegs/bender/framework/api/IExtension";
 import { Context } from "../../../../../src/robotlegs/bender/framework/impl/Context";
 import { ExtensionInstaller } from "../../../../../src/robotlegs/bender/framework/impl/ExtensionInstaller";
-
+import "../../../../entry";
 import { CallbackExtension } from "./contextSupport/CallbackExtension";
 
 describe("ExtensionInstaller", () => {

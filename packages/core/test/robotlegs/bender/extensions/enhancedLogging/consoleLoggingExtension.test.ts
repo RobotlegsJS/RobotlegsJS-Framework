@@ -5,14 +5,12 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
+import { ConsoleLoggingExtension } from "../../../../../src/robotlegs/bender/extensions/enhancedLogging/ConsoleLoggingExtension";
+import { IContext } from "../../../../../src/robotlegs/bender/framework/api/IContext";
+import { Context } from "../../../../../src/robotlegs/bender/framework/impl/Context";
 import "../../../../entry";
 
 import sinon = require("sinon");
-
-import { IContext } from "../../../../../src/robotlegs/bender/framework/api/IContext";
-import { Context } from "../../../../../src/robotlegs/bender/framework/impl/Context";
-
-import { ConsoleLoggingExtension } from "../../../../../src/robotlegs/bender/extensions/enhancedLogging/ConsoleLoggingExtension";
 
 describe("ConsoleLoggingExtension", () => {
     let context: IContext;

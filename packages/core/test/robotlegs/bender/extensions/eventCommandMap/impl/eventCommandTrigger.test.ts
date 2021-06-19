@@ -5,29 +5,23 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import "../../../../../entry";
-
-import sinon = require("sinon");
-
 import { assert } from "chai";
-
-import { IContext } from "../../../../../../src/robotlegs/bender/framework/api/IContext";
-import { Context } from "../../../../../../src/robotlegs/bender/framework/impl/Context";
-
 import { IEvent } from "../../../../../../src/robotlegs/bender/events/api/IEvent";
 import { Event } from "../../../../../../src/robotlegs/bender/events/impl/Event";
 import { EventDispatcher } from "../../../../../../src/robotlegs/bender/events/impl/EventDispatcher";
-
-import { IClass } from "../../../../../../src/robotlegs/bender/extensions/matching/IClass";
-
 import { CommandMapper } from "../../../../../../src/robotlegs/bender/extensions/commandCenter/impl/CommandMapper";
 import { CommandMapping } from "../../../../../../src/robotlegs/bender/extensions/commandCenter/impl/CommandMapping";
 import { EventCommandTrigger } from "../../../../../../src/robotlegs/bender/extensions/eventCommandMap/impl/EventCommandTrigger";
-
+import { IClass } from "../../../../../../src/robotlegs/bender/extensions/matching/IClass";
+import { IContext } from "../../../../../../src/robotlegs/bender/framework/api/IContext";
+import { Context } from "../../../../../../src/robotlegs/bender/framework/impl/Context";
+import "../../../../../entry";
 import { CustomEvent1 } from "../support/CustomEvent1";
 import { CustomEvent1CallbackCommand } from "../support/CustomEvent1CallbackCommand";
 import { CustomEvent2 } from "../support/CustomEvent2";
 import { EventCallbackCommand } from "../support/EventCallbackCommand";
+
+import sinon = require("sinon");
 
 describe("EventCommandTrigger", () => {
     let context: IContext;

@@ -5,11 +5,9 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import "../../../../entry";
-
 import { assert } from "chai";
-
 import { safelyCallBack } from "../../../../../src/robotlegs/bender/framework/impl/safelyCallBack";
+import "../../../../entry";
 
 describe("safelyCallBack", () => {
     it("callback with no params is called", () => {

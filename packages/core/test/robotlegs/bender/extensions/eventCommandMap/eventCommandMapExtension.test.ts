@@ -5,19 +5,15 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import "../../../../entry";
-
 import { assert } from "chai";
-
-import { IContext } from "../../../../../src/robotlegs/bender/framework/api/IContext";
-import { Context } from "../../../../../src/robotlegs/bender/framework/impl/Context";
-
 import { IEventDispatcher } from "../../../../../src/robotlegs/bender/events/api/IEventDispatcher";
 import { EventDispatcher } from "../../../../../src/robotlegs/bender/events/impl/EventDispatcher";
-
 import { IEventCommandMap } from "../../../../../src/robotlegs/bender/extensions/eventCommandMap/api/IEventCommandMap";
-import { EventCommandMap } from "../../../../../src/robotlegs/bender/extensions/eventCommandMap/impl/EventCommandMap";
 import { EventCommandMapExtension } from "../../../../../src/robotlegs/bender/extensions/eventCommandMap/EventCommandMapExtension";
+import { EventCommandMap } from "../../../../../src/robotlegs/bender/extensions/eventCommandMap/impl/EventCommandMap";
+import { IContext } from "../../../../../src/robotlegs/bender/framework/api/IContext";
+import { Context } from "../../../../../src/robotlegs/bender/framework/impl/Context";
+import "../../../../entry";
 
 describe("EventCommandMapExtension", () => {
     let context: IContext;
