@@ -7,7 +7,6 @@
 
 import { Context, MVCSBundle } from "@robotlegsjs/core";
 import Stage from "openfl/display/Stage";
-import "reflect-metadata";
 import { OpenFLBundle } from "../src/robotlegs/bender/bundles/openfl/OpenFLBundle";
 import { ContextView } from "../src/robotlegs/bender/extensions/contextView/impl/ContextView";
 import { MyConfig } from "./config/MyConfig";
