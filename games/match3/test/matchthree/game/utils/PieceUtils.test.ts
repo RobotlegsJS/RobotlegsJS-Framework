@@ -32,8 +32,18 @@ describe("PieceUtils", () => {
         const col = 2;
         const row = 3;
         const piece1: PieceData = PieceUtils.getNewPowerUpPiece(col, row, PieceType.RAINBOW);
-        const piece2: PieceData = PieceUtils.getNewPowerUpPiece(col, row, PieceType.ROW, PieceIds.BLUE);
-        const piece3: PieceData = PieceUtils.getNewPowerUpPiece(col, row, PieceType.COL, PieceIds.ORANGE);
+        const piece2: PieceData = PieceUtils.getNewPowerUpPiece(
+            col,
+            row,
+            PieceType.ROW,
+            PieceIds.BLUE
+        );
+        const piece3: PieceData = PieceUtils.getNewPowerUpPiece(
+            col,
+            row,
+            PieceType.COL,
+            PieceIds.ORANGE
+        );
 
         assert.equal(PieceType.RAINBOW, piece1.pieceType);
         assert.equal(PieceType.ROW, piece2.pieceType);
@@ -48,7 +58,10 @@ describe("PieceUtils", () => {
     });
 
     it("GetNewPowerByChainLength: The chain contains three pieces", () => {
-        const normalPiece: PieceData = PieceUtils.getNewPowerByChainLength(3, PieceUtils.getNewNormalPiece(0, 0));
+        const normalPiece: PieceData = PieceUtils.getNewPowerByChainLength(
+            3,
+            PieceUtils.getNewNormalPiece(0, 0)
+        );
 
         assert.isNull(normalPiece);
     });
@@ -66,7 +79,9 @@ describe("PieceUtils", () => {
         assert.isNotNull(powerUpColRow);
         assert.isNotNull(powerUpRainbow);
 
-        assert.isTrue(powerUpColRow.pieceType === PieceType.COL || powerUpColRow.pieceType === PieceType.ROW);
+        assert.isTrue(
+            powerUpColRow.pieceType === PieceType.COL || powerUpColRow.pieceType === PieceType.ROW
+        );
         assert.equal(PieceType.RAINBOW, powerUpRainbow.pieceType);
 
         assert.equal(PieceIds.YELLOW, powerUpColRow.pieceId);

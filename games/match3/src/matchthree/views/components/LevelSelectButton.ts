@@ -13,6 +13,7 @@ export class LevelSelectButton extends IconButton {
         label.pivot.y = label.height;
         this.addChild(label);
     }
+
     public setStars(numStars: number): void {
         for (let i = 0; i < numStars; i++) {
             const star = PixiFactory.getImage(AtlasKeys.LEVEL_SELECT_SMALL_STAR);

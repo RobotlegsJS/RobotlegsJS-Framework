@@ -24,10 +24,12 @@ export class OptionsView extends Container {
         this.createTexts();
         this.createButtons();
     }
+
     private createBackgrounds(): void {
         this.addChild(PixiFactory.getBackground());
         this.addChild(PixiFactory.getBackgroundPopup());
     }
+
     private createTexts(): void {
         this.addChild(PixiFactory.getTitle(Texts.OPTIONS));
 
@@ -36,8 +38,12 @@ export class OptionsView extends Container {
         hiScore.y = 180;
         this.addChild(hiScore);
     }
+
     private createButtons(): void {
-        this._deleteButton = PixiFactory.getIconButton(AtlasKeys.ICON_DELETE, IconButton.TYPE_SMALL_DANGER);
+        this._deleteButton = PixiFactory.getIconButton(
+            AtlasKeys.ICON_DELETE,
+            IconButton.TYPE_SMALL_DANGER
+        );
         this._deleteButton.x = ViewPortSize.MAX_WIDTH - MagicValues.BORDER_OFFSET_POPUP - 25;
         this._deleteButton.y = 200;
         this.addChild(this._deleteButton);

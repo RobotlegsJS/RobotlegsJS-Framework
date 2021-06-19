@@ -34,7 +34,12 @@ describe("PowerUpUtils", () => {
             this.grid.setPiece(piece);
         }
 
-        const removePiece: PieceData = PieceUtils.getNewPowerUpPiece(0, 0, PieceType.ROW, PieceIds.BLUE);
+        const removePiece: PieceData = PieceUtils.getNewPowerUpPiece(
+            0,
+            0,
+            PieceType.ROW,
+            PieceIds.BLUE
+        );
         this.result = PowerUpUtils.getPiecesAffectedByPowerUp(removePiece, this.grid);
 
         for (let i = 0; i < this.result.length; i++) {
@@ -56,7 +61,12 @@ describe("PowerUpUtils", () => {
             this.grid.setPiece(piece);
         }
 
-        const removePiece: PieceData = PieceUtils.getNewPowerUpPiece(0, 0, PieceType.COL, PieceIds.BLUE);
+        const removePiece: PieceData = PieceUtils.getNewPowerUpPiece(
+            0,
+            0,
+            PieceType.COL,
+            PieceIds.BLUE
+        );
         this.result = PowerUpUtils.getPiecesAffectedByPowerUp(removePiece, this.grid);
 
         for (let i = 0; i < this.result.length; i++) {
@@ -89,7 +99,12 @@ describe("PowerUpUtils", () => {
             this.grid.setPiece(piece);
         }
 
-        const removePiece: PieceData = PieceUtils.getNewPowerUpPiece(3, 3, PieceType.RAINBOW, PieceIds.RAINBOW);
+        const removePiece: PieceData = PieceUtils.getNewPowerUpPiece(
+            3,
+            3,
+            PieceType.RAINBOW,
+            PieceIds.RAINBOW
+        );
         this.result = PowerUpUtils.getPiecesAffectedByPowerUp(removePiece, this.grid);
 
         for (let i = 0; i < this.result.length; i++) {
@@ -118,7 +133,12 @@ describe("PowerUpUtils", () => {
             this.grid.setPiece(piece);
         }
 
-        const removePiece: PieceData = PieceUtils.getNewPowerUpPiece(0, 0, PieceType.RAINBOW, PieceIds.GREEN);
+        const removePiece: PieceData = PieceUtils.getNewPowerUpPiece(
+            0,
+            0,
+            PieceType.RAINBOW,
+            PieceIds.GREEN
+        );
         this.result = PowerUpUtils.getPiecesAffectedByPowerUp(removePiece, this.grid);
 
         for (let i = 0; i < this.result.length; i++) {

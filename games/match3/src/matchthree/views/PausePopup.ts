@@ -30,12 +30,15 @@ export class PausePopup extends Container {
         this.setupButtons();
         this.setupText();
     }
+
     private setupBackgrounds(): void {
         this.addChild(PixiFactory.getShadowBackground(0.9));
     }
+
     private setupButtons(): void {
         this._levelSelectButton = PixiFactory.getIconButton(AtlasKeys.ICON_LEVEL_SELECT);
-        this._levelSelectButton.x = ViewPortSize.HALF_WIDTH + this._levelSelectButton.width * 0.5 + 4;
+        this._levelSelectButton.x =
+            ViewPortSize.HALF_WIDTH + this._levelSelectButton.width * 0.5 + 4;
         this._levelSelectButton.y = ViewPortSize.MAX_HEIGHT - MagicValues.BORDER_OFFSET_BOTTOM;
         this.addChild(this._levelSelectButton);
 
@@ -49,6 +52,7 @@ export class PausePopup extends Container {
         this._retryButton.y = ViewPortSize.MAX_HEIGHT - MagicValues.BORDER_OFFSET_BOTTOM;
         this.addChild(this._retryButton);
     }
+
     private setupText(): void {
         this.addChild(PixiFactory.getTitle(Texts.PAUSED));
     }

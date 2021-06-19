@@ -54,8 +54,8 @@ describe("GameManager", () => {
 
         const firstRowAfter: PieceData[] = GridUtils.getRow(gameManager.grid, row);
 
-        const isEmptyBefore = firstRowBefore.every(e => e.pieceType === PieceType.EMPTY);
-        const isNotEmptyAfter = firstRowAfter.every(e => e.pieceType !== PieceType.EMPTY);
+        const isEmptyBefore = firstRowBefore.every((e) => e.pieceType === PieceType.EMPTY);
+        const isNotEmptyAfter = firstRowAfter.every((e) => e.pieceType !== PieceType.EMPTY);
 
         assert.isTrue(isEmptyBefore);
         assert.isTrue(isNotEmptyAfter);
@@ -71,8 +71,10 @@ describe("GameManager", () => {
 
         const firstRowAfter: PieceData[] = GridUtils.getRow(gameManager.grid, row);
         const secondRowAfter: PieceData[] = GridUtils.getRow(gameManager.grid, row + 1);
-        const firstRowAfterIsNotEmpty = firstRowAfter.every(e => e.pieceType !== PieceType.EMPTY);
-        const firstRowWasDroppedToSecondRow = secondRowAfter.every(e => secondRowAfter.indexOf(e) !== -1);
+        const firstRowAfterIsNotEmpty = firstRowAfter.every((e) => e.pieceType !== PieceType.EMPTY);
+        const firstRowWasDroppedToSecondRow = secondRowAfter.every(
+            (e) => secondRowAfter.indexOf(e) !== -1
+        );
 
         assert.isTrue(firstRowWasDroppedToSecondRow);
         assert.isTrue(firstRowAfterIsNotEmpty);
@@ -93,7 +95,8 @@ describe("GameManager", () => {
 
             if (piece.pieceType === PieceType.NORMAL) {
                 hasPieceId = hasPieceId && piece.pieceId !== undefined;
-                addedToLevelModel = addedToLevelModel && gameManager.levelModel.pieces.indexOf(piece) !== -1;
+                addedToLevelModel =
+                    addedToLevelModel && gameManager.levelModel.pieces.indexOf(piece) !== -1;
             }
         }
 
@@ -103,7 +106,12 @@ describe("GameManager", () => {
     });
 
     it("CreatePowerUp", () => {
-        const powerUp: PieceData = PieceUtils.getNewPowerUpPiece(0, 0, PieceType.COL, PieceIds.YELLOW);
+        const powerUp: PieceData = PieceUtils.getNewPowerUpPiece(
+            0,
+            0,
+            PieceType.COL,
+            PieceIds.YELLOW
+        );
         gameManager.createPowerUp(powerUp);
 
         assert.equal(powerUp, gameManager.grid.getPiece(powerUp.col, powerUp.row));
@@ -174,8 +182,11 @@ describe("GameManager", () => {
         let isInToRemoveList = true;
 
         for (const piece of pieces) {
-            isInToRemoveList = isInToRemoveList && gameManager.levelModel.toRemove.indexOf(piece) !== -1;
-            isEmpty = isEmpty && PieceType.EMPTY === gameManager.grid.getPiece(piece.col, piece.row).pieceType;
+            isInToRemoveList =
+                isInToRemoveList && gameManager.levelModel.toRemove.indexOf(piece) !== -1;
+            isEmpty =
+                isEmpty &&
+                PieceType.EMPTY === gameManager.grid.getPiece(piece.col, piece.row).pieceType;
         }
         assert.isTrue(isInToRemoveList);
         assert.isTrue(isEmpty);
@@ -245,12 +256,19 @@ describe("GameManager", () => {
         GridUtils.generateByMap(gameManager.grid, map);
 
         const row = 2;
-        const powerUp: PieceData = PieceUtils.getNewPowerUpPiece(2, row, PieceType.ROW, PieceIds.BLUE);
+        const powerUp: PieceData = PieceUtils.getNewPowerUpPiece(
+            2,
+            row,
+            PieceType.ROW,
+            PieceIds.BLUE
+        );
 
         gameManager.grid.setPiece(powerUp);
         gameManager.removeAllChains();
 
-        const result = GridUtils.getRow(gameManager.grid, row).every(e => e.pieceType === PieceType.EMPTY);
+        const result = GridUtils.getRow(gameManager.grid, row).every(
+            (e) => e.pieceType === PieceType.EMPTY
+        );
 
         assert.isTrue(result);
     });
@@ -271,12 +289,19 @@ describe("GameManager", () => {
         GridUtils.generateByMap(gameManager.grid, map);
 
         const col = 0;
-        const powerUp: PieceData = PieceUtils.getNewPowerUpPiece(col, 0, PieceType.COL, PieceIds.LIGHT_BLUE);
+        const powerUp: PieceData = PieceUtils.getNewPowerUpPiece(
+            col,
+            0,
+            PieceType.COL,
+            PieceIds.LIGHT_BLUE
+        );
 
         gameManager.grid.setPiece(powerUp);
         gameManager.removeAllChains();
 
-        const isAllEmpty = GridUtils.getCol(gameManager.grid, col).every(e => e.pieceType === PieceType.EMPTY);
+        const isAllEmpty = GridUtils.getCol(gameManager.grid, col).every(
+            (e) => e.pieceType === PieceType.EMPTY
+        );
         assert.isTrue(isAllEmpty);
     });
 
@@ -298,16 +323,26 @@ describe("GameManager", () => {
         const col = 4;
         const row = 2;
 
-        const powerUpRainbow: PieceData = PieceUtils.getNewPowerUpPiece(col, row, PieceType.RAINBOW, PieceIds.RAINBOW);
+        const powerUpRainbow: PieceData = PieceUtils.getNewPowerUpPiece(
+            col,
+            row,
+            PieceType.RAINBOW,
+            PieceIds.RAINBOW
+        );
         gameManager.grid.setPiece(powerUpRainbow);
 
-        const powerUpRow: PieceData = PieceUtils.getNewPowerUpPiece(col - 1, row, PieceType.ROW, PieceIds.BLUE);
+        const powerUpRow: PieceData = PieceUtils.getNewPowerUpPiece(
+            col - 1,
+            row,
+            PieceType.ROW,
+            PieceIds.BLUE
+        );
         gameManager.grid.setPiece(powerUpRow);
         gameManager.removeAllChains();
 
         let pieces: PieceData[] = GridUtils.getCol(gameManager.grid, col);
         pieces = pieces.concat(GridUtils.getRow(gameManager.grid, row));
-        const isAllPiecesEmpty = pieces.every(e => e.pieceType === PieceType.EMPTY);
+        const isAllPiecesEmpty = pieces.every((e) => e.pieceType === PieceType.EMPTY);
 
         assert.isTrue(isAllPiecesEmpty);
     });
@@ -341,7 +376,12 @@ describe("GameManager", () => {
     it("RemovePiecesInList: Remove all pieces in the list and applies the PowerUp effect", () => {
         const pieces: PieceData[] = GridUtils.spawnNewRow(gameManager.grid, 0);
 
-        const powerUpRow: PieceData = PieceUtils.getNewPowerUpPiece(0, 0, PieceType.ROW, PieceIds.BLUE);
+        const powerUpRow: PieceData = PieceUtils.getNewPowerUpPiece(
+            0,
+            0,
+            PieceType.ROW,
+            PieceIds.BLUE
+        );
         gameManager.grid.setPiece(powerUpRow);
         pieces[0] = powerUpRow;
 
@@ -351,8 +391,11 @@ describe("GameManager", () => {
         let isInToRemoveList = true;
 
         for (const piece of pieces) {
-            isInToRemoveList = isInToRemoveList && gameManager.levelModel.toRemove.indexOf(piece) !== -1;
-            isEmpty = isEmpty && PieceType.EMPTY === gameManager.grid.getPiece(piece.col, piece.row).pieceType;
+            isInToRemoveList =
+                isInToRemoveList && gameManager.levelModel.toRemove.indexOf(piece) !== -1;
+            isEmpty =
+                isEmpty &&
+                PieceType.EMPTY === gameManager.grid.getPiece(piece.col, piece.row).pieceType;
         }
         assert.isTrue(isInToRemoveList);
         assert.isTrue(isEmpty);
@@ -379,7 +422,9 @@ describe("GameManager", () => {
         let isEmpty = true;
 
         for (const piece of pieces) {
-            isEmpty = isEmpty && PieceType.EMPTY === gameManager.grid.getPiece(piece.col, piece.row).pieceType;
+            isEmpty =
+                isEmpty &&
+                PieceType.EMPTY === gameManager.grid.getPiece(piece.col, piece.row).pieceType;
         }
         assert.equal(64, pieces.length);
         assert.equal(64, gameManager.levelModel.toRemove.length);
@@ -411,8 +456,16 @@ describe("GameManager", () => {
         const piece2col = 2;
         const piece1row = 1;
         const piece2row = 3;
-        const piece1: PieceData = PieceUtils.getNewNormalPiece(piece1col, piece1row, PieceIds.YELLOW);
-        const piece2: PieceData = PieceUtils.getNewNormalPiece(piece2col, piece2row, PieceIds.GREEN);
+        const piece1: PieceData = PieceUtils.getNewNormalPiece(
+            piece1col,
+            piece1row,
+            PieceIds.YELLOW
+        );
+        const piece2: PieceData = PieceUtils.getNewNormalPiece(
+            piece2col,
+            piece2row,
+            PieceIds.GREEN
+        );
         gameManager.grid.setPiece(piece1);
         gameManager.grid.setPiece(piece2);
 
@@ -483,7 +536,10 @@ describe("GameManager", () => {
 
         const spyRemoveAllChains = sinon.spy(gameManager, "removeAllChains");
         const spyAfterSwap = sinon.spy(gameManager, "afterSwap");
-        const spySwapPiecesConfirmCommand = sinon.spy(gameManager.gameService, "swapPiecesConfirmCommand");
+        const spySwapPiecesConfirmCommand = sinon.spy(
+            gameManager.gameService,
+            "swapPiecesConfirmCommand"
+        );
 
         gameManager.nextStep(gameManager);
 
@@ -515,7 +571,10 @@ describe("GameManager", () => {
 
         const spyRemoveAllChains = sinon.spy(gameManager, "removeAllChains");
         const spyAfterSwap = sinon.spy(gameManager, "afterSwap");
-        const spySwapPiecesConfirmCommand = sinon.spy(gameManager.gameService, "swapPiecesConfirmCommand");
+        const spySwapPiecesConfirmCommand = sinon.spy(
+            gameManager.gameService,
+            "swapPiecesConfirmCommand"
+        );
 
         gameManager.nextStep(gameManager);
 
@@ -547,7 +606,10 @@ describe("GameManager", () => {
 
         const spyRemoveAllChains = sinon.spy(gameManager, "removeAllChains");
         const spyAfterSwap = sinon.spy(gameManager, "afterSwap");
-        const spySwapPiecesConfirmCommand = sinon.spy(gameManager.gameService, "swapPiecesConfirmCommand");
+        const spySwapPiecesConfirmCommand = sinon.spy(
+            gameManager.gameService,
+            "swapPiecesConfirmCommand"
+        );
 
         gameManager.nextStep(gameManager);
 
@@ -584,8 +646,14 @@ describe("GameManager", () => {
 
         assert.isTrue(spyAfterSwap.called, "afterSwap");
         assert.isTrue(spySwapSelectedPieces.called, "swapSelectedPieces");
-        assert.equal(PieceIds.BLUE, gameManager.grid.getPiece(firstPosition.col, firstPosition.row).pieceId);
-        assert.equal(PieceIds.ORANGE, gameManager.grid.getPiece(secondPosition.col, secondPosition.row).pieceId);
+        assert.equal(
+            PieceIds.BLUE,
+            gameManager.grid.getPiece(firstPosition.col, firstPosition.row).pieceId
+        );
+        assert.equal(
+            PieceIds.ORANGE,
+            gameManager.grid.getPiece(secondPosition.col, secondPosition.row).pieceId
+        );
     });
 
     it("AfterSwap (private): Swapping two rainbows to RemoveAllPieces", () => {
@@ -602,8 +670,18 @@ describe("GameManager", () => {
         ];
         GridUtils.generateByMap(gameManager.grid, map);
 
-        const pieceRainbow1 = PieceUtils.getNewPowerUpPiece(0, 0, PieceType.RAINBOW, PieceIds.RAINBOW);
-        const pieceRainbow2 = PieceUtils.getNewPowerUpPiece(1, 0, PieceType.RAINBOW, PieceIds.RAINBOW);
+        const pieceRainbow1 = PieceUtils.getNewPowerUpPiece(
+            0,
+            0,
+            PieceType.RAINBOW,
+            PieceIds.RAINBOW
+        );
+        const pieceRainbow2 = PieceUtils.getNewPowerUpPiece(
+            1,
+            0,
+            PieceType.RAINBOW,
+            PieceIds.RAINBOW
+        );
         gameManager.grid.setPiece(pieceRainbow1);
         gameManager.grid.setPiece(pieceRainbow2);
 
@@ -616,7 +694,10 @@ describe("GameManager", () => {
 
         const spyAfterSwap = sinon.spy(gameManager, "afterSwap");
         const spyRemoveAllPieces = sinon.spy(gameManager, "removeAllPieces");
-        const spySwapPiecesConfirmCommand = sinon.spy(gameManager.gameService, "swapPiecesConfirmCommand");
+        const spySwapPiecesConfirmCommand = sinon.spy(
+            gameManager.gameService,
+            "swapPiecesConfirmCommand"
+        );
 
         gameManager.nextStep(gameManager);
 
@@ -653,7 +734,10 @@ describe("GameManager", () => {
 
         const spyAfterSwap = sinon.spy(gameManager, "afterSwap");
         const spyRemovePiecesInList = sinon.spy(gameManager, "removePiecesInList");
-        const spySwapPiecesConfirmCommand = sinon.spy(gameManager.gameService, "swapPiecesConfirmCommand");
+        const spySwapPiecesConfirmCommand = sinon.spy(
+            gameManager.gameService,
+            "swapPiecesConfirmCommand"
+        );
 
         gameManager.nextStep(gameManager);
 
@@ -676,7 +760,12 @@ describe("GameManager", () => {
         ];
         GridUtils.generateByMap(gameManager.grid, map);
 
-        const pieceRainbow = PieceUtils.getNewPowerUpPiece(0, 0, PieceType.RAINBOW, PieceIds.RAINBOW);
+        const pieceRainbow = PieceUtils.getNewPowerUpPiece(
+            0,
+            0,
+            PieceType.RAINBOW,
+            PieceIds.RAINBOW
+        );
         gameManager.grid.setPiece(pieceRainbow);
 
         const firstPosition: Tile = new Tile(0, 0);
@@ -688,7 +777,10 @@ describe("GameManager", () => {
 
         const spyAfterSwap = sinon.spy(gameManager, "afterSwap");
         const spyRemovePiecesInList = sinon.spy(gameManager, "removePiecesInList");
-        const spySwapPiecesConfirmCommand = sinon.spy(gameManager.gameService, "swapPiecesConfirmCommand");
+        const spySwapPiecesConfirmCommand = sinon.spy(
+            gameManager.gameService,
+            "swapPiecesConfirmCommand"
+        );
 
         gameManager.nextStep(gameManager);
 
@@ -711,7 +803,12 @@ describe("GameManager", () => {
         ];
         GridUtils.generateByMap(gameManager.grid, map);
 
-        const pieceRainbow = PieceUtils.getNewPowerUpPiece(1, 0, PieceType.RAINBOW, PieceIds.RAINBOW);
+        const pieceRainbow = PieceUtils.getNewPowerUpPiece(
+            1,
+            0,
+            PieceType.RAINBOW,
+            PieceIds.RAINBOW
+        );
         gameManager.grid.setPiece(pieceRainbow);
 
         const firstPosition: Tile = new Tile(0, 0);
@@ -723,7 +820,10 @@ describe("GameManager", () => {
 
         const spyAfterSwap = sinon.spy(gameManager, "afterSwap");
         const spyRemovePiecesInList = sinon.spy(gameManager, "removePiecesInList");
-        const spySwapPiecesConfirmCommand = sinon.spy(gameManager.gameService, "swapPiecesConfirmCommand");
+        const spySwapPiecesConfirmCommand = sinon.spy(
+            gameManager.gameService,
+            "swapPiecesConfirmCommand"
+        );
 
         gameManager.nextStep(gameManager);
 

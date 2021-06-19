@@ -49,6 +49,7 @@ export class AtlasKeys {
     public static update(textureCache: any): void {
         this.textureCache = textureCache;
     }
+
     public static getTexture(atlasKey): Texture {
         return this.textureCache[atlasKey];
     }

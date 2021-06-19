@@ -21,6 +21,7 @@ export class LevelSelectView extends Container {
         this.createText();
         this.createButton();
     }
+
     public createLevelButton(text: string): LevelSelectButton {
         const level: LevelSelectButton = PixiFactory.getLevelSelectButton();
         level.setText(text);
@@ -28,13 +29,16 @@ export class LevelSelectView extends Container {
 
         return level;
     }
+
     private createBackground(): void {
         this.addChild(PixiFactory.getBackground());
         this.addChild(PixiFactory.getBackgroundPopup());
     }
+
     private createText(): void {
         this.addChild(PixiFactory.getTitle(Texts.LEVEL_SELECT));
     }
+
     private createButton(): void {
         this._backButton = PixiFactory.getIconButton(AtlasKeys.ICON_HOME, IconButton.TYPE_MEDIUM);
         this._backButton.x = ViewPortSize.HALF_WIDTH;

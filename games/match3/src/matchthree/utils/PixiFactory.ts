@@ -15,6 +15,7 @@ export class PixiFactory {
 
         return new BitmapText(text, style);
     }
+
     public static getTitle(label: string): Container {
         const style = {
             align: "center",
@@ -28,6 +29,7 @@ export class PixiFactory {
         title.pivot.y = title.height * 0.5;
         return title;
     }
+
     public static getIconButton(
         icon: string,
         shapeType: string = IconButton.TYPE_SMALL
@@ -36,22 +38,27 @@ export class PixiFactory {
         button.setIco(icon);
         return button;
     }
+
     public static getImage(atlasKey: string): Sprite {
         const texture: Texture = AtlasKeys.getTexture(atlasKey);
         return new Sprite(texture);
     }
+
     public static getBackground(): Sprite {
         return new Sprite(AtlasKeys.getTexture(AtlasKeys.BG_IMAGE));
     }
+
     public static getColorBackground(color = 0x000000): Graphics {
         return this.getColorBox(ViewPortSize.MAX_WIDTH, ViewPortSize.MAX_HEIGHT, color);
     }
+
     public static getColorBox(width: number, heigth: number, color = 0x00000): Graphics {
         const background: Graphics = new Graphics();
         background.beginFill(color);
         background.drawRect(0, 0, width, heigth);
         return background;
     }
+
     public static getBackgroundPopup(): Sprite {
         const image: Sprite = new Sprite(AtlasKeys.getTexture(AtlasKeys.BG_POPUP_IMAGE));
         image.anchor.set(0.5);
@@ -59,14 +66,17 @@ export class PixiFactory {
         image.y = ViewPortSize.HALF_HEIGHT;
         return image;
     }
+
     public static getBackgroundHUD(): Sprite {
         return new Sprite(AtlasKeys.getTexture(AtlasKeys.BG_HUD_IMAGE));
     }
+
     public static getShadowBackground(alpha = 0.6): Graphics {
         const bg: Graphics = PixiFactory.getColorBackground(0x000000);
         bg.alpha = alpha;
         return bg;
     }
+
     public static getLevelSelectButton(): LevelSelectButton {
         return new LevelSelectButton();
     }

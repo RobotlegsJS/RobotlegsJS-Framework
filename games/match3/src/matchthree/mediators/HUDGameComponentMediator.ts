@@ -11,35 +11,61 @@ import { HUDGameComponent } from "./../views/components/HUDGameComponent";
 
 @injectable()
 export class HUDGameComponentMediator extends Mediator<HUDGameComponent> {
-    @inject(LevelModel) private levelModel: LevelModel;
-    @inject(GameStatus) private gameStatus: GameStatus;
-    @inject(GameService) private gameService: GameService;
-    @inject(FlowService) private flowService: FlowService;
+    @inject(LevelModel)
+    private levelModel: LevelModel;
+
+    @inject(GameStatus)
+    private gameStatus: GameStatus;
+
+    @inject(GameService)
+    private gameService: GameService;
+
+    @inject(FlowService)
+    private flowService: FlowService;
 
     private _paused: boolean;
 
     public initialize(): void {
-        this.eventMap.mapListener(this.view.pauseButton, "click", this.pauseButton_onTriggeredHandler, this);
-        this.eventMap.mapListener(this.eventDispatcher, GameEvent.UPDATE_HUD_DATA, this.game_onUpdateHandler, this);
+        this.eventMap.mapListener(
+            this.view.pauseButton,
+            "click",
+            this.pauseButton_onTriggeredHandler,
+            this
+        );
+        this.eventMap.mapListener(
+            this.eventDispatcher,
+            GameEvent.UPDATE_HUD_DATA,
+            this.game_onUpdateHandler,
+            this
+        );
 
         this.setupHUDType();
     }
+
     public destroy(): void {
         this._paused = true;
         this.eventMap.unmapListeners();
     }
+
     private setupHUDType(): void {
         if (this.levelModel.levelInfo.levelType === LevelInfo.TIMER_TYPE) {
             this.view.setTimerType();
-            this.eventMap.mapListener(this.eventDispatcher, GameEvent.RESUME, this.game_onResumeHandler, this);
+            this.eventMap.mapListener(
+                this.eventDispatcher,
+                GameEvent.RESUME,
+                this.game_onResumeHandler,
+                this
+            );
         } else {
             this.view.setMoveType();
         }
     }
+
     private game_onResumeHandler(e: any): void {
         this._paused = false;
         this.tick();
     }
+
     private tick(): void {
         if (this._paused === true) {
             return;
@@ -47,7 +73,10 @@ export class HUDGameComponentMediator extends Mediator<HUDGameComponent> {
         this.levelModel.clock--;
         this.view.updateValues(this.levelModel);
 
-        if (this.levelModel.levelInfo.levelType === LevelInfo.TIMER_TYPE && this.levelModel.clock === 0) {
+        if (
+            this.levelModel.levelInfo.levelType === LevelInfo.TIMER_TYPE &&
+            this.levelModel.clock === 0
+        ) {
             if (this.gameStatus.hasToWait) {
                 this.gameService.gameOver();
             } else {
@@ -58,9 +87,11 @@ export class HUDGameComponentMediator extends Mediator<HUDGameComponent> {
         }
         setTimeout(this.tick.bind(this), 1000);
     }
+
     private game_onUpdateHandler(e: any): void {
         this.view.updateValues(this.levelModel);
     }
+
     private pauseButton_onTriggeredHandler(e: any): void {
         this._paused = true;
         this.flowService.showPausePopup();

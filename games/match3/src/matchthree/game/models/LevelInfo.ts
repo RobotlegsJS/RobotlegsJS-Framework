@@ -34,21 +34,27 @@ export class LevelInfo {
     public get scoreStarts(): number[] {
         return this._scoreStarts;
     }
+
     public get levelType(): String {
         return this._levelType;
     }
+
     public get maxRows(): number {
         return this._maxRows;
     }
+
     public get maxCols(): number {
         return this._maxCols;
     }
+
     public get numMoves(): number {
         return this._numMoves;
     }
+
     public get time(): number {
         return this._time;
     }
+
     public get levelId(): number {
         return this._levelId;
     }

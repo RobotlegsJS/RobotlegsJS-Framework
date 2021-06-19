@@ -10,6 +10,7 @@ export class GridFieldComponent extends Container {
 
         this.setupValues();
     }
+
     public generateGrid(maxCols, maxRows): void {
         const gridSize = maxCols * Tile.TILE_WIDTH;
         const newX = (ViewPortSize.MAX_WIDTH - gridSize) * 0.5;
@@ -24,6 +25,7 @@ export class GridFieldComponent extends Container {
             }
         }
     }
+
     private setupValues(): void {
         this.x = 10 + Tile.TILE_WIDTH * 0.5;
         this.y = 130 + Tile.TILE_HEIGHT * 0.5;

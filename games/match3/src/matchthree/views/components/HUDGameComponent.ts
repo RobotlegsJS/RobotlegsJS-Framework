@@ -11,6 +11,7 @@ import { StarDisplayComponent } from "./StarDisplayComponent";
 
 export class HUDGameComponent extends Container {
     private _pauseButton: IconButton;
+
     public get pauseButton(): IconButton {
         return this._pauseButton;
     }
@@ -31,6 +32,7 @@ export class HUDGameComponent extends Container {
         this.createButtons();
         this.createStarCompont();
     }
+
     public updateValues(model: LevelModel): void {
         this._scoreText.text = String(model.score);
         this._movesText.text = String(model.numMoves);
@@ -38,21 +40,25 @@ export class HUDGameComponent extends Container {
         this._timeText.pivot.x = this._timeText.width * 0.5;
         this._starComponent.update(model.score, model.levelInfo.scoreStarts);
     }
+
     public setTimerType(): void {
         this._movesLabel.visible = false;
         this._movesText.visible = false;
         this._timeLabel.visible = true;
         this._timeText.visible = true;
     }
+
     public setMoveType(): void {
         this._movesLabel.visible = true;
         this._movesText.visible = true;
         this._timeLabel.visible = false;
         this._timeText.visible = false;
     }
+
     private createBackground(): void {
         this.addChild(PixiFactory.getBackgroundHUD());
     }
+
     private createTextFields(): void {
         /* Static Texts */
         const scoreLabel = PixiFactory.getText(Texts.SCORE, MagicValues.SIZE_HUD);
@@ -90,12 +96,14 @@ export class HUDGameComponent extends Container {
         this._timeText.y = this._timeLabel.y + 16;
         this.addChild(this._timeText);
     }
+
     private createButtons(): void {
         this._pauseButton = PixiFactory.getIconButton(AtlasKeys.ICON_PAUSE);
         this._pauseButton.x = ViewPortSize.MAX_WIDTH - MagicValues.BORDER_OFFSET_HUD - 30;
         this._pauseButton.y = MagicValues.BORDER_OFFSET_HUD + 20;
         this.addChild(this._pauseButton);
     }
+
     private createStarCompont(): void {
         this._starComponent = new StarDisplayComponent();
         this._starComponent.x = ViewPortSize.HALF_WIDTH;

@@ -8,10 +8,17 @@ import { ScoreUtils } from "./../utils/ScoreUtils";
 
 @injectable()
 export class GameOverCommand implements ICommand {
-    @inject(LevelModel) private levelModel: LevelModel;
-    @inject(GameService) private gameService: GameService;
-    @inject(FlowService) private flowService: FlowService;
-    @inject(LevelsRepository) private levelsRepository: LevelsRepository;
+    @inject(LevelModel)
+    private levelModel: LevelModel;
+
+    @inject(GameService)
+    private gameService: GameService;
+
+    @inject(FlowService)
+    private flowService: FlowService;
+
+    @inject(LevelsRepository)
+    private levelsRepository: LevelsRepository;
 
     public execute(): void {
         this.gameService.pause();
@@ -21,7 +28,10 @@ export class GameOverCommand implements ICommand {
         this.levelsRepository.updateHiScore(this.levelModel.levelId, hiScore);
         // SharedObjectManager.updateHighScore();
 
-        const stars = ScoreUtils.getNumStars(this.levelModel.score, this.levelModel.levelInfo.scoreStarts);
+        const stars = ScoreUtils.getNumStars(
+            this.levelModel.score,
+            this.levelModel.levelInfo.scoreStarts
+        );
 
         this.levelModel.numStars = stars;
 

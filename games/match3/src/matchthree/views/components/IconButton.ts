@@ -29,6 +29,7 @@ export class IconButton extends Sprite {
         this.setInitialValues();
         this.setupInteractions();
     }
+
     public setIco(name: string): void {
         if (this._ico) {
             this.removeChild(this._ico);
@@ -38,11 +39,13 @@ export class IconButton extends Sprite {
         this._ico.anchor.set(0.5);
         this.addChild(this._ico);
     }
+
     private setInitialValues(): void {
         this.anchor.set(0.5);
         this.interactive = true;
         this.buttonMode = true;
     }
+
     private setupInteractions(): void {
         this.on("pointerup", this.onButtonUp);
         this.on("pointerupoutside", this.onButtonUp);
@@ -50,20 +53,24 @@ export class IconButton extends Sprite {
         this.on("pointerover", this.onButtonOver);
         this.on("pointerout", this.onButtonOut);
     }
+
     private onButtonDown(): void {
         this._isDown = true;
         this.texture = this._downState;
         this.scale.set(0.95, 0.95);
     }
+
     private onButtonOut(): void {
         this._isOver = false;
         this.texture = this._upState;
         this.scale.set(1, 1);
     }
+
     private onButtonOver(): void {
         this._isOver = true;
         this.texture = this._overState;
     }
+
     private onButtonUp(): void {
         this._isDown = false;
         this.scale.set(1, 1);

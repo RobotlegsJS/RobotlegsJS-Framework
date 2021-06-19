@@ -4,9 +4,11 @@ import { AtlasKeys } from "./../../utils/AtlasKeys";
 
 export class PixiSpritePool {
     public static spriteList: Map<string, Sprite[]>;
+
     public static init(): void {
         this.spriteList = new Map<string, Sprite[]>();
     }
+
     public static getImage(assetId: string): Sprite {
         if (this.spriteList.get(assetId) === undefined) {
             this.spriteList.set(assetId, new Array<Sprite>());
@@ -27,6 +29,7 @@ export class PixiSpritePool {
 
         return piece;
     }
+
     public static back(piece: Sprite): void {
         const assetId = (<any>piece.texture).textureCacheIds[0];
         const list: Sprite[] = this.spriteList.get(assetId);

@@ -20,6 +20,7 @@ export class PieceData {
         this.col = col;
         this.row = row;
     }
+
     public updateDisplayPosition(): void {
         if (this._pieceType === PieceType.EMPTY) {
             return;
@@ -27,11 +28,22 @@ export class PieceData {
         this.display.x = Tile.TILE_WIDTH * this.col;
         this.display.y = this.row ? Tile.TILE_WIDTH * this.row : -Tile.TILE_HEIGHT;
     }
+
     public setPosition(col: number, row: number): void {
         this.col = col;
         this.row = row;
     }
+
     public toString(): string {
-        return "piece_id_" + this.pieceId + "_type_" + this._pieceType + "_col_" + this.col + "_row_" + this.row;
+        return (
+            "piece_id_" +
+            this.pieceId +
+            "_type_" +
+            this._pieceType +
+            "_col_" +
+            this.col +
+            "_row_" +
+            this.row
+        );
     }
 }

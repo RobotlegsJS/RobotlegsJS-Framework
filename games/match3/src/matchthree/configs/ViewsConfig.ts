@@ -28,11 +28,13 @@ import { YouWinPopup } from "./../views/YouWinPopup";
 
 @injectable()
 export class ViewsConfig implements IConfig {
-    @inject(IMediatorMap) private mediatorMap: IMediatorMap;
+    @inject(IMediatorMap)
+    private mediatorMap: IMediatorMap;
 
     public configure(): void {
         this.mapMediators();
     }
+
     private mapMediators(): void {
         this.mediatorMap.map(IntroView).toMediator(IntroViewMediator);
         this.mediatorMap.map(GameView).toMediator(GameViewMediator);

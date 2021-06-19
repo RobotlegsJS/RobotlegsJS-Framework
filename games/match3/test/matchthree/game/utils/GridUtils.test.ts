@@ -95,7 +95,11 @@ describe("GridUtils", () => {
     });
 
     it("GetHorizontalChains", () => {
-        const map: number[][] = [[1, 1, 1, 4, 5, 5, 5], [1, 2, 3, 3, 3, 1, 2], [3, 4, 5, 1, 2, 2, 1]];
+        const map: number[][] = [
+            [1, 1, 1, 4, 5, 5, 5],
+            [1, 2, 3, 3, 3, 1, 2],
+            [3, 4, 5, 1, 2, 2, 1]
+        ];
         grid = new GridData(7, 3);
         GridUtils.generateByMap(grid, map);
 
@@ -107,7 +111,15 @@ describe("GridUtils", () => {
     });
 
     it("GetVerticalChains", () => {
-        const map: number[][] = [[1, 1, 1], [1, 2, 3], [1, 4, 5], [5, 4, 3], [3, 4, 3], [3, 2, 4], [3, 2, 1]];
+        const map: number[][] = [
+            [1, 1, 1],
+            [1, 2, 3],
+            [1, 4, 5],
+            [5, 4, 3],
+            [3, 4, 3],
+            [3, 2, 4],
+            [3, 2, 1]
+        ];
         grid = new GridData(3, 7);
         GridUtils.generateByMap(grid, map);
 

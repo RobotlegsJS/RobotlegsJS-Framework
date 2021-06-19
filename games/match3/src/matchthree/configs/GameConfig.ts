@@ -16,8 +16,11 @@ import { GameService } from "./../services/GameService";
 
 @injectable()
 export class GameConfig implements IConfig {
-    @inject(IContext) private context: IContext;
-    @inject(IEventCommandMap) private commandMap: IEventCommandMap;
+    @inject(IContext)
+    private context: IContext;
+
+    @inject(IEventCommandMap)
+    private commandMap: IEventCommandMap;
 
     public configure(): void {
         PixiSpritePool.init();
@@ -27,42 +30,30 @@ export class GameConfig implements IConfig {
         this.mapManager();
         this.mapModels();
     }
+
     private mapCommands(): void {
         this.commandMap.map(GameEvent.CREATE_LEVEL_COMMAND).toCommand(CreateLevelCommand);
         this.commandMap.map(GameEvent.GAME_OVER_COMMAND).toCommand(GameOverCommand);
         this.commandMap.map(GameEvent.RETRY_GAME_COMMAND).toCommand(RetryGameCommand);
 
-        this.commandMap.map(GameEvent.SWAP_PIECES_CONFIRM_COMMAND).toCommand(SwapPiecesConfirmCommand);
+        this.commandMap
+            .map(GameEvent.SWAP_PIECES_CONFIRM_COMMAND)
+            .toCommand(SwapPiecesConfirmCommand);
         this.commandMap.map(GameEvent.SWAP_PIECES_COMMAND).toCommand(SwapPiecesCommand);
     }
+
     private mapServices(): void {
-        this.context.injector
-            .bind(GameService)
-            .to(GameService)
-            .inSingletonScope();
+        this.context.injector.bind(GameService).to(GameService).inSingletonScope();
     }
+
     private mapManager(): void {
-        this.context.injector
-            .bind(GameManager)
-            .to(GameManager)
-            .inSingletonScope();
-        this.context.injector
-            .bind(LevelsRepository)
-            .to(LevelsRepository)
-            .inSingletonScope();
+        this.context.injector.bind(GameManager).to(GameManager).inSingletonScope();
+        this.context.injector.bind(LevelsRepository).to(LevelsRepository).inSingletonScope();
     }
+
     private mapModels(): void {
-        this.context.injector
-            .bind(GameStatus)
-            .to(GameStatus)
-            .inSingletonScope();
-        this.context.injector
-            .bind(LevelModel)
-            .to(LevelModel)
-            .inSingletonScope();
-        this.context.injector
-            .bind(SwapModel)
-            .to(SwapModel)
-            .inSingletonScope();
+        this.context.injector.bind(GameStatus).to(GameStatus).inSingletonScope();
+        this.context.injector.bind(LevelModel).to(LevelModel).inSingletonScope();
+        this.context.injector.bind(SwapModel).to(SwapModel).inSingletonScope();
     }
 }

@@ -16,14 +16,17 @@ export class StartingPopup extends Container {
         this.setupBackgrounds();
         this.setupTexts();
     }
+
     public changeNumber(n: number): void {
         this._background.alpha -= 0.1;
         this._decreasingNumber.text = String(n);
     }
+
     private setupBackgrounds(): void {
         this._background = PixiFactory.getShadowBackground();
         this.addChild(this._background);
     }
+
     private setupTexts(): void {
         this._decreasingNumber = PixiFactory.getText("3", MagicValues.SIZE_DEFAULT + 6);
         this._decreasingNumber.anchor.set(0.5);

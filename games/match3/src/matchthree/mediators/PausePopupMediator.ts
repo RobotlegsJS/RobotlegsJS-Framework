@@ -7,25 +7,37 @@ import { PausePopup } from "./../views/PausePopup";
 
 @injectable()
 export class PausePopupMediator extends Mediator<PausePopup> {
-    @inject(FlowService) private flowService: FlowService;
-    @inject(GameService) private gameService: GameService;
+    @inject(FlowService)
+    private flowService: FlowService;
+
+    @inject(GameService)
+    private gameService: GameService;
 
     public initialize(): void {
-        this.eventMap.mapListener(this.view.levelSelectButton, "click", this.levelSelectButton_onClick, this);
+        this.eventMap.mapListener(
+            this.view.levelSelectButton,
+            "click",
+            this.levelSelectButton_onClick,
+            this
+        );
         this.eventMap.mapListener(this.view.resumeButton, "click", this.resumeButton_onClick, this);
         this.eventMap.mapListener(this.view.retryButton, "click", this.retryButton_onClick, this);
     }
+
     public destroy(): void {
         this.eventMap.unmapListeners();
     }
+
     private levelSelectButton_onClick(e: any): void {
         this.flowService.setLevelSelectView();
         this.flowService.closePopup();
     }
+
     private resumeButton_onClick(e: any): void {
         this.flowService.closePopup();
         this.flowService.showStartingPopup();
     }
+
     private retryButton_onClick(e: any): void {
         this.flowService.closePopup();
         this.gameService.retryCommand();

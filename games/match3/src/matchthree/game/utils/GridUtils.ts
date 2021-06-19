@@ -11,6 +11,7 @@ export class GridUtils {
             }
         }
     }
+
     public static spawnNewRow(grid: GridData, row: number): PieceData[] {
         const pieces: PieceData[] = new Array<PieceData>();
         let piece: PieceData;
@@ -28,6 +29,7 @@ export class GridUtils {
         }
         return pieces;
     }
+
     public static swapPieces(grid: GridData, piece1: PieceData, piece2: PieceData): void {
         const row1: number = piece1.row;
         const col1: number = piece1.col;
@@ -41,6 +43,7 @@ export class GridUtils {
         grid.setPiece(piece1);
         grid.setPiece(piece2);
     }
+
     public static getCol(grid: GridData, col: number): PieceData[] {
         const result: PieceData[] = new Array<PieceData>();
         let piece: PieceData;
@@ -51,6 +54,7 @@ export class GridUtils {
         }
         return result;
     }
+
     public static getRow(grid: GridData, row: number): PieceData[] {
         const result: PieceData[] = new Array<PieceData>();
         let piece: PieceData;
@@ -75,6 +79,7 @@ export class GridUtils {
         }
         return result;
     }
+
     public static hasEmptyPiece(grid: GridData): Boolean {
         let piece: PieceData;
 
@@ -88,9 +93,11 @@ export class GridUtils {
         }
         return false;
     }
+
     public static removePiece(grid: GridData, piece: PieceData): void {
         grid.setPiece(new PieceData(piece.col, piece.row));
     }
+
     public static getAllChains(grid: GridData): PieceData[][] {
         let result: PieceData[][] = new Array<PieceData[]>();
         let row: number;
@@ -106,6 +113,7 @@ export class GridUtils {
 
         return result;
     }
+
     public static getHorizontalChains(grid: GridData, row: number): PieceData[][] {
         const result: PieceData[][] = new Array<PieceData[]>();
         let horizontal: PieceData[];
@@ -140,6 +148,7 @@ export class GridUtils {
         }
         return result;
     }
+
     public static getVerticalChains(grid: GridData, col: number): PieceData[][] {
         const result: PieceData[][] = new Array<PieceData[]>();
         let vertical: PieceData[];
@@ -174,6 +183,7 @@ export class GridUtils {
         }
         return result;
     }
+
     public static getChainWithPiece(grid: GridData, piece: PieceData): PieceData[] {
         let chains: PieceData[][] = new Array<PieceData[]>();
         chains = chains.concat(GridUtils.getVerticalChains(grid, piece.col));
@@ -189,6 +199,7 @@ export class GridUtils {
 
         return result;
     }
+
     public static getAllPieces(grid: GridData): PieceData[] {
         let result: PieceData[] = new Array<PieceData>();
         for (let row = 0; row < grid.maxRows; row++) {
@@ -196,6 +207,7 @@ export class GridUtils {
         }
         return result;
     }
+
     public static getAllPowerUps(grid: GridData): PieceData[] {
         const pieces: PieceData[] = new Array<PieceData>();
         let piece: PieceData;

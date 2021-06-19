@@ -15,6 +15,7 @@ export class GameView extends Container {
         super();
         this.createBackground();
     }
+
     public destroy(): void {
         this.removeChild(this._gridField);
         this.removeChild(this._hudComponent);
@@ -22,6 +23,7 @@ export class GameView extends Container {
         this._gridField = null;
         this._hudComponent = null;
     }
+
     public createComponents(): void {
         this._hudComponent = new HUDGameComponent();
         this.addChild(this._hudComponent);
@@ -29,6 +31,7 @@ export class GameView extends Container {
         this._gridField = new GridFieldComponent();
         this.addChild(this._gridField);
     }
+
     private createBackground(): void {
         this.addChild(PixiFactory.getBackground());
     }

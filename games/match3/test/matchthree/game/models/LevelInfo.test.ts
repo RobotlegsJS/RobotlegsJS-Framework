@@ -29,7 +29,15 @@ describe("LevelInfo", () => {
         const numMoves = 0;
         const time = 10;
 
-        const levelInfo = new LevelInfo(levelId, maxCols, maxRows, type, scoreStars, numMoves, time);
+        const levelInfo = new LevelInfo(
+            levelId,
+            maxCols,
+            maxRows,
+            type,
+            scoreStars,
+            numMoves,
+            time
+        );
         assert.equal(levelId, levelInfo.levelId);
         assert.equal(maxCols, levelInfo.maxCols);
         assert.equal(maxRows, levelInfo.maxRows);

@@ -18,15 +18,18 @@ export class GridData {
         this._maxRows = rows;
         this.generateEmptyGrid();
     }
+
     public getPiece(col: number, row: number): PieceData {
         if (col < this._maxCols && row < this._maxRows) {
             return this._grid[row][col];
         }
         return undefined;
     }
+
     public setPiece(piece: PieceData): void {
         this._grid[piece.row][piece.col] = piece;
     }
+
     private generateEmptyGrid(): void {
         let line: PieceData[];
         for (let row = 0; row < this._maxRows; row++) {

@@ -7,9 +7,14 @@ import { LevelModel } from "./../models/LevelModel";
 
 @injectable()
 export class SwapPiecesConfirmCommand implements ICommand {
-    @inject(LevelModel) private levelModel: LevelModel;
-    @inject(GameStatus) private gameStatus: GameStatus;
-    @inject(GameService) private gameService: GameService;
+    @inject(LevelModel)
+    private levelModel: LevelModel;
+
+    @inject(GameStatus)
+    private gameStatus: GameStatus;
+
+    @inject(GameService)
+    private gameService: GameService;
 
     public execute(): void {
         if (this.levelModel.levelInfo.levelType === LevelInfo.TIMER_TYPE) {

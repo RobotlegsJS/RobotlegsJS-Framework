@@ -4,6 +4,7 @@ import { AtlasKeys } from "./../../utils/AtlasKeys";
 
 export class SingleStar extends Sprite {
     private textures: Texture[];
+
     public get numFrames(): number {
         return this.textures.length;
     }
@@ -24,6 +25,7 @@ export class SingleStar extends Sprite {
             AtlasKeys.getTexture(AtlasKeys.STAR_HUD_DISPLAY + "10.png")
         ];
     }
+
     public currentFrame(value: number): void {
         this.texture = this.textures[value];
     }

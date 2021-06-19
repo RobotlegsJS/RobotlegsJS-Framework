@@ -26,6 +26,7 @@ export class YouWinPopup extends Container {
         this.createText();
         this.createButtons();
     }
+
     public createStars(numStars: number): void {
         for (let i = 0; i < numStars; i++) {
             const star = PixiFactory.getImage(AtlasKeys.POPUP_STAR);
@@ -34,15 +35,18 @@ export class YouWinPopup extends Container {
             this.addChild(star);
         }
     }
+
     public updateValues(score: String, hiScore: String): void {
         this._scoreText.text = score;
         this._scoreText.pivot.x = this._scoreText.width;
         this._hiScoreText.text = "0";
     }
+
     private createBackground(): void {
         this.addChild(PixiFactory.getShadowBackground());
         this.addChild(PixiFactory.getBackgroundPopup());
     }
+
     private createText(): void {
         this.addChild(PixiFactory.getTitle(Texts.YOU_WIN));
 
@@ -68,6 +72,7 @@ export class YouWinPopup extends Container {
         this._hiScoreText.y = 260;
         this.addChild(this._hiScoreText);
     }
+
     private createButtons(): void {
         this._retryButton = PixiFactory.getIconButton(AtlasKeys.ICON_RETRY);
         this._retryButton.x = ViewPortSize.HALF_WIDTH - this._retryButton.width * 0.5 - 4;
@@ -75,7 +80,8 @@ export class YouWinPopup extends Container {
         this.addChild(this._retryButton);
 
         this._levelSelectButton = PixiFactory.getIconButton(AtlasKeys.ICON_LEVEL_SELECT);
-        this._levelSelectButton.x = ViewPortSize.HALF_WIDTH + this._levelSelectButton.width * 0.5 + 4;
+        this._levelSelectButton.x =
+            ViewPortSize.HALF_WIDTH + this._levelSelectButton.width * 0.5 + 4;
         this._levelSelectButton.y = ViewPortSize.MAX_HEIGHT - MagicValues.BORDER_OFFSET_BOTTOM;
         this.addChild(this._levelSelectButton);
     }

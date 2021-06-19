@@ -9,12 +9,23 @@ import { LevelsRepository } from "./../utils/LevelRepository";
 
 @injectable()
 export class CreateLevelCommand implements ICommand {
-    @inject(LevelModel) private levelModel: LevelModel;
-    @inject(GameManager) private gameManager: GameManager;
-    @inject(GameService) private gameService: GameService;
-    @inject(FlowService) private flowService: FlowService;
-    @inject(GameEvent) private gameEvent: GameEvent;
-    @inject(LevelsRepository) private levelsRepository: LevelsRepository;
+    @inject(LevelModel)
+    private levelModel: LevelModel;
+
+    @inject(GameManager)
+    private gameManager: GameManager;
+
+    @inject(GameService)
+    private gameService: GameService;
+
+    @inject(FlowService)
+    private flowService: FlowService;
+
+    @inject(GameEvent)
+    private gameEvent: GameEvent;
+
+    @inject(LevelsRepository)
+    private levelsRepository: LevelsRepository;
 
     public execute(): void {
         this.levelModel.levelId = this.gameEvent.extra.levelId;

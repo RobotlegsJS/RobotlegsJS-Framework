@@ -7,10 +7,17 @@ import { LevelModel } from "./../models/LevelModel";
 
 @injectable()
 export class RetryGameCommand implements ICommand {
-    @inject(LevelModel) private levelModel: LevelModel;
-    @inject(GameManager) private gameManager: GameManager;
-    @inject(GameService) private gameService: GameService;
-    @inject(FlowService) private flowService: FlowService;
+    @inject(LevelModel)
+    private levelModel: LevelModel;
+
+    @inject(GameManager)
+    private gameManager: GameManager;
+
+    @inject(GameService)
+    private gameService: GameService;
+
+    @inject(FlowService)
+    private flowService: FlowService;
 
     public execute(): void {
         this.gameService.clearGridField();

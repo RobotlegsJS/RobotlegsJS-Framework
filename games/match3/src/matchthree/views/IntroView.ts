@@ -13,9 +13,11 @@ export class IntroView extends Container {
         this.setupImages();
         this.setupText();
     }
+
     private setupBackground(): void {
         this.addChild(PixiFactory.getColorBackground(0x204d63));
     }
+
     private setupImages(): void {
         const logo: Sprite = TilingSprite.from(AtlasKeys.LOGO_TYPESCRIPT);
         logo.anchor.x = 0.5;
@@ -23,6 +25,7 @@ export class IntroView extends Container {
         logo.y = ViewPortSize.MAX_HEIGHT - 64;
         this.addChild(logo);
     }
+
     private setupText(): void {
         const style = new TextStyle({
             align: "center",

@@ -14,6 +14,7 @@ export class AlertPopup extends Container {
     public get confirmButton(): IconButton {
         return this._confirmButton;
     }
+
     public get cancelButton(): IconButton {
         return this._cancelButton;
     }
@@ -25,9 +26,11 @@ export class AlertPopup extends Container {
         this.createText();
         this.createButtons();
     }
+
     private createBackground(): void {
         this.addChild(PixiFactory.getShadowBackground(0.9));
     }
+
     private createText(): void {
         this.addChild(PixiFactory.getTitle(Texts.ALERT));
 
@@ -38,6 +41,7 @@ export class AlertPopup extends Container {
         alert.pivot.y = alert.height * 0.5;
         this.addChild(alert);
     }
+
     private createButtons(): void {
         this._confirmButton = PixiFactory.getIconButton(AtlasKeys.ICON_CONFIRM);
         this._confirmButton.x = ViewPortSize.HALF_WIDTH - this._confirmButton.width * 0.5 - 4;

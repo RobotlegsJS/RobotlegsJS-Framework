@@ -13,10 +13,17 @@ import { PowerUpUtils } from "./../utils/PowerUpUtils";
 
 @injectable()
 export class GameManager {
-    @inject(LevelModel) public levelModel: LevelModel;
-    @inject(GameStatus) public gameStatus: GameStatus;
-    @inject(GameService) public gameService: GameService;
-    @inject(SwapModel) public swapModel: SwapModel;
+    @inject(LevelModel)
+    public levelModel: LevelModel;
+
+    @inject(GameStatus)
+    public gameStatus: GameStatus;
+
+    @inject(GameService)
+    public gameService: GameService;
+
+    @inject(SwapModel)
+    public swapModel: SwapModel;
 
     private _grid: GridData;
 
@@ -24,9 +31,13 @@ export class GameManager {
         this._grid = new GridData(maxCols, maxRows);
         this.swapModel.setMaxValues(this._grid.maxCols, this._grid.maxRows);
     }
-    public nextStep = (nthis: any = this) => {
+
+    public nextStep = (nthis: GameManager = this) => {
         // SWAP
-        if (nthis.swapModel.status === SwapModel.SWAP || nthis.swapModel.status === SwapModel.ROLLBACK) {
+        if (
+            nthis.swapModel.status === SwapModel.SWAP ||
+            nthis.swapModel.status === SwapModel.ROLLBACK
+        ) {
             nthis.swapModel.updateStatus();
             nthis.swapSelectedPieces();
 
@@ -39,7 +50,11 @@ export class GameManager {
         }
 
         // UDPATE VIEW - ADD - MOVE - REMOVE
-        if (nthis.levelModel.toAdd.length || nthis.levelModel.toMove.length || nthis.levelModel.toRemove.length) {
+        if (
+            nthis.levelModel.toAdd.length ||
+            nthis.levelModel.toMove.length ||
+            nthis.levelModel.toRemove.length
+        ) {
             nthis.gameService.updateGridField();
             return;
         }
@@ -55,10 +70,12 @@ export class GameManager {
         }
         nthis.gameService.updateGridField();
     };
+
     public removeAllPieces(): void {
         this.removePiecesInList(GridUtils.getAllPieces(this.grid));
         this.gameService.updateHUDData();
     }
+
     public removeAllChains(chains?: PieceData[][]): boolean {
         if (chains === undefined) {
             chains = GridUtils.getAllChains(this.grid);
@@ -85,12 +102,15 @@ export class GameManager {
 
         return willRemoveSomething;
     }
+
     public removePiecesInList(piecesToRemove: PieceData[]): void {
         let piece: PieceData;
         while (piecesToRemove.length > 0) {
             piece = piecesToRemove.pop();
 
-            piecesToRemove = piecesToRemove.concat(PowerUpUtils.getPiecesAffectedByPowerUp(piece, this.grid));
+            piecesToRemove = piecesToRemove.concat(
+                PowerUpUtils.getPiecesAffectedByPowerUp(piece, this.grid)
+            );
 
             if (piece.pieceType === PieceType.EMPTY) {
                 continue;
@@ -99,15 +119,18 @@ export class GameManager {
             this.removePiece(piece);
         }
     }
+
     public removePiece(piece: PieceData): void {
         this.levelModel.updateScoreByPieceType(piece.pieceType);
         this.levelModel.addToRemoveList(piece);
         GridUtils.removePiece(this._grid, piece);
     }
+
     public fillStep(): void {
         this.dropPieces();
         this.createNewPiecesAbove();
     }
+
     public dropPieces(): void {
         let piece: PieceData;
         let pieceBellow: PieceData;
@@ -117,13 +140,17 @@ export class GameManager {
                 piece = this.grid.getPiece(col, row);
                 pieceBellow = this.grid.getPiece(col, row + 1);
 
-                if (pieceBellow.pieceType === PieceType.EMPTY && piece.pieceType !== PieceType.EMPTY) {
+                if (
+                    pieceBellow.pieceType === PieceType.EMPTY &&
+                    piece.pieceType !== PieceType.EMPTY
+                ) {
                     GridUtils.swapPieces(this.grid, piece, pieceBellow);
                     this.levelModel.addToMoveList(piece);
                 }
             }
         }
     }
+
     public createNewPiecesAbove(): void {
         const topLine = 0;
         const pieces: PieceData[] = GridUtils.spawnNewRow(this.grid, topLine);
@@ -133,14 +160,22 @@ export class GameManager {
             this.levelModel.addToMoveList(piece);
         }
     }
+
     public createPowerUp(powerUp: PieceData): void {
         this._grid.setPiece(powerUp);
         this.levelModel.addPiece(powerUp);
         this.levelModel.addToMoveList(powerUp);
     }
+
     public swapSelectedPieces(): void {
-        const piece1: PieceData = this._grid.getPiece(this.swapModel.first.col, this.swapModel.first.row);
-        const piece2: PieceData = this._grid.getPiece(this.swapModel.second.col, this.swapModel.second.row);
+        const piece1: PieceData = this._grid.getPiece(
+            this.swapModel.first.col,
+            this.swapModel.first.row
+        );
+        const piece2: PieceData = this._grid.getPiece(
+            this.swapModel.second.col,
+            this.swapModel.second.row
+        );
 
         if (!PieceUtils.IsAdjacent(piece1, piece2)) {
             this.swapModel.status = "";
@@ -154,19 +189,31 @@ export class GameManager {
 
         this.gameService.updateGridField();
     }
+
     public get grid(): GridData {
         return this._grid;
     }
+
     private afterSwap(): void {
         let needToRollback = false;
 
-        const piece1: PieceData = this.grid.getPiece(this.swapModel.first.col, this.swapModel.first.row);
-        const piece2: PieceData = this.grid.getPiece(this.swapModel.second.col, this.swapModel.second.row);
+        const piece1: PieceData = this.grid.getPiece(
+            this.swapModel.first.col,
+            this.swapModel.first.row
+        );
+        const piece2: PieceData = this.grid.getPiece(
+            this.swapModel.second.col,
+            this.swapModel.second.row
+        );
 
         if (piece1.pieceType === PieceType.RAINBOW && piece2.pieceType === PieceType.RAINBOW) {
             this.removeAllPieces();
-        } else if (piece1.pieceType === PieceType.RAINBOW || piece2.pieceType === PieceType.RAINBOW) {
-            const pieceId: number = piece1.pieceType === PieceType.RAINBOW ? piece2.pieceId : piece1.pieceId;
+        } else if (
+            piece1.pieceType === PieceType.RAINBOW ||
+            piece2.pieceType === PieceType.RAINBOW
+        ) {
+            const pieceId: number =
+                piece1.pieceType === PieceType.RAINBOW ? piece2.pieceId : piece1.pieceId;
             piece1.pieceId = pieceId;
             piece2.pieceId = pieceId;
             this.removePiecesInList([piece1, piece2]);
