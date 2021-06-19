@@ -7,8 +7,8 @@
 
 import { assert } from "chai";
 import Stage from "openfl/display/Stage";
-import { IContextView } from "src/robotlegs/bender/extensions/contextView/api/IContextView";
-import { ContextView } from "src/robotlegs/bender/extensions/contextView/impl/ContextView";
+import { IContextView } from "../../../../../../src/robotlegs/bender/extensions/contextView/api/IContextView";
+import { ContextView } from "../../../../../../src/robotlegs/bender/extensions/contextView/impl/ContextView";
 import "../../../../../entry";
 
 describe("ContextView", () => {

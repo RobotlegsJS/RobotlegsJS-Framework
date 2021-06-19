@@ -7,9 +7,9 @@
 
 import { assert } from "chai";
 import Stage from "openfl/display/Stage";
-import { IContextView } from "src/robotlegs/bender/extensions/contextView/api/IContextView";
-import { ContextView } from "src/robotlegs/bender/extensions/contextView/impl/ContextView";
-import { ContextViewListenerConfig } from "src/robotlegs/bender/extensions/contextView/impl/ContextViewListenerConfig";
+import { IContextView } from "../../../../../../src/robotlegs/bender/extensions/contextView/api/IContextView";
+import { ContextView } from "../../../../../../src/robotlegs/bender/extensions/contextView/impl/ContextView";
+import { ContextViewListenerConfig } from "../../../../../../src/robotlegs/bender/extensions/contextView/impl/ContextViewListenerConfig";
 import { ContainerRegistry } from "../../../../../../src/robotlegs/bender/extensions/viewManager/impl/ContainerRegistry";
 import { ViewManager } from "../../../../../../src/robotlegs/bender/extensions/viewManager/impl/ViewManager";
 import "../../../../../entry";

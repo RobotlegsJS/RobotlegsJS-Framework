@@ -6,7 +6,7 @@
 // ------------------------------------------------------------------------------
 
 import { IConfig, inject, injectable } from "@robotlegsjs/core";
-import { IMediatorMap } from "src/robotlegs/bender/extensions/mediatorMap/api/IMediatorMap";
+import { IMediatorMap } from "../../src/robotlegs/bender/extensions/mediatorMap/api/IMediatorMap";
 import { RobotlegsMediator } from "../mediator/RobotlegsMediator";
 import { SmileyMediator } from "../mediator/SmileyMediator";
 import { RobotlegsView } from "../view/RobotlegsView";

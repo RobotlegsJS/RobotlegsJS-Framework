@@ -8,11 +8,11 @@
 import { Context, IContext, LogLevel } from "@robotlegsjs/core";
 import { assert } from "chai";
 import Stage from "openfl/display/Stage";
-import { OpenFLBundle } from "src/robotlegs/bender/bundles/openfl/OpenFLBundle";
-import { IContextView } from "src/robotlegs/bender/extensions/contextView/api/IContextView";
-import { ContextView } from "src/robotlegs/bender/extensions/contextView/impl/ContextView";
-import { IMediatorMap } from "src/robotlegs/bender/extensions/mediatorMap/api/IMediatorMap";
-import { IViewManager } from "src/robotlegs/bender/extensions/viewManager/api/IViewManager";
+import { OpenFLBundle } from "../../../../../src/robotlegs/bender/bundles/openfl/OpenFLBundle";
+import { IContextView } from "../../../../../src/robotlegs/bender/extensions/contextView/api/IContextView";
+import { ContextView } from "../../../../../src/robotlegs/bender/extensions/contextView/impl/ContextView";
+import { IMediatorMap } from "../../../../../src/robotlegs/bender/extensions/mediatorMap/api/IMediatorMap";
+import { IViewManager } from "../../../../../src/robotlegs/bender/extensions/viewManager/api/IViewManager";
 import { ContainerRegistry } from "../../../../../src/robotlegs/bender/extensions/viewManager/impl/ContainerRegistry";
 import "../../../../entry";
 import { CallbackLogTarget } from "../../extensions/contextView/support/CallbackLogTarget";
