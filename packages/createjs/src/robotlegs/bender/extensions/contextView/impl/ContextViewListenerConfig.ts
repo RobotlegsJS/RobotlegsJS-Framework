@@ -5,10 +5,9 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import { injectable, inject, IConfig } from "@robotlegsjs/core";
-
-import { IContextView } from "../api/IContextView";
+import { IConfig, inject, injectable } from "@robotlegsjs/core";
 import { IViewManager } from "../../viewManager/api/IViewManager";
+import { IContextView } from "../api/IContextView";
 
 /**
  * This configuration file adds the ContextView to the viewManager.

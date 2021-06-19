@@ -5,10 +5,8 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import { IClass, EventDispatcher } from "@robotlegsjs/core";
-
+import { EventDispatcher, IClass } from "@robotlegsjs/core";
 import { IViewHandler } from "../api/IViewHandler";
-
 import { ContainerBindingEvent } from "./ContainerBindingEvent";
 
 // [Event(name="bindingEmpty", type="robotlegs.bender.extensions.viewManager.impl.ContainerBindingEvent")]

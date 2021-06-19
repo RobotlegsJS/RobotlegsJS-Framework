@@ -6,9 +6,7 @@
 // ------------------------------------------------------------------------------
 
 import { IContext, IExtension, IInjector, ILogger } from "@robotlegsjs/core";
-
 import { IContextView } from "../contextView/api/IContextView";
-
 import { IViewManager } from "./api/IViewManager";
 import { ContainerBinding } from "./impl/ContainerBinding";
 import { ContainerRegistry } from "./impl/ContainerRegistry";
