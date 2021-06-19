@@ -1,5 +1,4 @@
 import { Sprite } from "pixi.js";
-
 import { Tile } from "../models/Tile";
 
 export class GameUtils {

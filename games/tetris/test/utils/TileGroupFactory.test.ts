@@ -1,10 +1,9 @@
+import { assert } from "chai";
 import "../entry";
-
 import { Tile } from "./../../src/models/Tile";
 import { TileGroup } from "./../../src/models/TileGroup";
 import { TileGroupType } from "./../../src/models/TileGroupType";
 import { TileGroupFactory } from "./../../src/utils/TileGroupFactory";
-import { assert } from "chai";
 
 describe("TileGroupFactory", () => {
     it("testGetTileGroup: notNull", () => {

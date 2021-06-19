@@ -1,5 +1,4 @@
 import { inject, injectable } from "@robotlegsjs/core";
-
 import { Grid } from "../models/Grid";
 import { TileGroup } from "../models/TileGroup";
 import { GameService } from "../services/GameService";

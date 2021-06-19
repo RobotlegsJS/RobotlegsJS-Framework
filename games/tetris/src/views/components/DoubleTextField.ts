@@ -1,5 +1,4 @@
 import { Container, Text } from "pixi.js";
-
 import { Colors } from "./../../utils/Colors";
 import { PixiFactory } from "./../../utils/PixiFactory";
 

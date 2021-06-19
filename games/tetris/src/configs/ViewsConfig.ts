@@ -1,6 +1,5 @@
 import { IConfig, inject, injectable } from "@robotlegsjs/core";
 import { IMediatorMap } from "@robotlegsjs/pixi";
-
 import { GameOverPopupMediator } from "./../mediators/GameOverPopupMediator";
 import { GameViewMediator } from "./../mediators/GameViewMediator";
 import { GridComponentMediator } from "./../mediators/GridComponentMediator";

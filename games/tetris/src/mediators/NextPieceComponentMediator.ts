@@ -1,7 +1,6 @@
 import { inject, injectable } from "@robotlegsjs/core";
 import { Mediator } from "@robotlegsjs/pixi";
 import { Sprite } from "pixi.js";
-
 import { GameEvent } from "./../events/GameEvent";
 import { GameModel } from "./../models/GameModel";
 import { Tile } from "./../models/Tile";
