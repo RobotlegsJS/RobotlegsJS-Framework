@@ -1,5 +1,7 @@
 import "../../../entry";
+
 import { Tile } from "./../../../../src/battleship/game/models/Tile";
+
 import { assert } from "chai";
 
 describe("Tile", () => {

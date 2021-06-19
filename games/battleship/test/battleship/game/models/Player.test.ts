@@ -1,5 +1,7 @@
 import "../../../entry";
+
 import { Player } from "./../../../../src/battleship/game/models/Player";
+
 import { assert } from "chai";
 
 describe("Player", () => {

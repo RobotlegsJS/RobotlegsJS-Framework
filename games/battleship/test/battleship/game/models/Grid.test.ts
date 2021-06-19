@@ -1,5 +1,7 @@
 import "../../../entry";
+
 import { Grid } from "./../../../../src/battleship/game/models/Grid";
+
 import { assert } from "chai";
 
 describe("Grid", () => {
