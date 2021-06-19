@@ -10,4 +10,3 @@
 /* eslint-disable import/no-internal-modules */
 import "es6-map/implement";
 import "es6-symbol/implement";
-import "reflect-metadata";

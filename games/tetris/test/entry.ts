@@ -6,6 +6,3 @@
 // ------------------------------------------------------------------------------
 
 /// <reference types="mocha" />
-
-/* eslint-disable import/no-internal-modules */
-import "reflect-metadata";

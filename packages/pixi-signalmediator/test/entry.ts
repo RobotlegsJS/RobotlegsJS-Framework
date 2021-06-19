@@ -10,5 +10,5 @@
 
 /* eslint-disable import/no-internal-modules */
 import "bluebird/js/browser/bluebird";
-import "es6-symbol/implement";
 import "es6-map/implement";
+import "es6-symbol/implement";
