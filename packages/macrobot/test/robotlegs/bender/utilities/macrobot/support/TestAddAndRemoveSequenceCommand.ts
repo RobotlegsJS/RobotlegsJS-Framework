@@ -6,9 +6,7 @@
 // ------------------------------------------------------------------------------
 
 import { injectable } from "@robotlegsjs/core";
-
 import { SequenceMacro } from "../../../../../../src/robotlegs/bender/utilities/macrobot/impl/SequenceMacro";
-
 import { Report1Command } from "./Report1Command";
 import { Report2Command } from "./Report2Command";
 import { Report3Command } from "./Report3Command";

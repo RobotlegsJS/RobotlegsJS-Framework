@@ -5,12 +5,10 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import "../../../../../entry";
-
 import { assert } from "chai";
-
 import { ISubCommandPayload } from "../../../../../../src/robotlegs/bender/utilities/macrobot/api/ISubCommandPayload";
 import { SubCommandPayload } from "../../../../../../src/robotlegs/bender/utilities/macrobot/impl/SubCommandPayload";
+import "../../../../../entry";
 
 describe("SubCommandPayload", () => {
     let payload: ISubCommandPayload<any>;

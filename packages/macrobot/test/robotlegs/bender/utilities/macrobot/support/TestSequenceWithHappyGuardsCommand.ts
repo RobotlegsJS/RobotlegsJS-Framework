@@ -6,11 +6,9 @@
 // ------------------------------------------------------------------------------
 
 import { injectable } from "@robotlegsjs/core";
-
 import { SequenceMacro } from "../../../../../../src/robotlegs/bender/utilities/macrobot/impl/SequenceMacro";
-
-import { ReportStringCommand } from "./ReportStringCommand";
 import { HappyGuard } from "./HappyGuard";
+import { ReportStringCommand } from "./ReportStringCommand";
 
 @injectable()
 export class TestSequenceWithHappyGuardsCommand extends SequenceMacro {

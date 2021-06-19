@@ -5,17 +5,14 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import "../../../../../entry";
-
 import { assert } from "chai";
-
 import { SubCommandMapping } from "../../../../../../src/robotlegs/bender/utilities/macrobot/impl/SubCommandMapping";
 import { SubCommandMappingList } from "../../../../../../src/robotlegs/bender/utilities/macrobot/impl/SubCommandMappingList";
-
+import "../../../../../entry";
+import { GrumpyGuard } from "../support/GrumpyGuard";
+import { HappyGuard } from "../support/HappyGuard";
 import { NullCommand } from "../support/NullCommand";
 import { NullCommand2 } from "../support/NullCommand2";
-import { HappyGuard } from "../support/HappyGuard";
-import { GrumpyGuard } from "../support/GrumpyGuard";
 import { ReportHook } from "../support/ReportHook";
 
 describe("SubCommandMappingList", () => {

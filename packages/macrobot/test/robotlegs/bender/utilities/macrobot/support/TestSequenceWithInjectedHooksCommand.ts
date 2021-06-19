@@ -6,11 +6,9 @@
 // ------------------------------------------------------------------------------
 
 import { injectable } from "@robotlegsjs/core";
-
 import { SequenceMacro } from "../../../../../../src/robotlegs/bender/utilities/macrobot/impl/SequenceMacro";
-
-import { ReportStringCommand } from "./ReportStringCommand";
 import { ReportCommandHook } from "./ReportCommandHook";
+import { ReportStringCommand } from "./ReportStringCommand";
 
 @injectable()
 export class TestSequenceWithInjectedHooksCommand extends SequenceMacro {
