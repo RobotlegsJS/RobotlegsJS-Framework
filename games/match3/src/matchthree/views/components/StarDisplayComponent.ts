@@ -1,5 +1,4 @@
 import { Container } from "pixi.js";
-
 import { SingleStar } from "./SingleStart";
 
 export class StarDisplayComponent extends Container {

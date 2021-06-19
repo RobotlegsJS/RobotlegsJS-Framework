@@ -1,13 +1,11 @@
-import "../../../entry";
-
 import { assert } from "chai";
-
-import { GridData } from "./../../../../src/matchthree/game/models/GridData";
-import { PieceData } from "./../../../../src/matchthree/game/models/PieceData";
-import { Tile } from "./../../../../src/matchthree/game/models/Tile";
-import { GridUtils } from "./../../../../src/matchthree/game/utils/GridUtils";
-import { PieceIds } from "./../../../../src/matchthree/game/utils/PieceIds";
-import { PieceType } from "./../../../../src/matchthree/game/utils/PieceType";
+import { GridData } from "../../../../src/matchthree/game/models/GridData";
+import { PieceData } from "../../../../src/matchthree/game/models/PieceData";
+import { Tile } from "../../../../src/matchthree/game/models/Tile";
+import { GridUtils } from "../../../../src/matchthree/game/utils/GridUtils";
+import { PieceIds } from "../../../../src/matchthree/game/utils/PieceIds";
+import { PieceType } from "../../../../src/matchthree/game/utils/PieceType";
+import "../../../entry";
 
 describe("GridUtils", () => {
     let grid: GridData;

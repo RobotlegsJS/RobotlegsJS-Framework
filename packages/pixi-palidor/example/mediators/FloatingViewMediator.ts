@@ -7,9 +7,8 @@
 
 import { Event, injectable } from "@robotlegsjs/core";
 import { Mediator } from "@robotlegsjs/pixi";
-
-import { PalidorEvent } from "./../../src/robotlegs/bender/extensions/palidorPixi/events/PalidorEvent";
-import { FloatingView } from "./../views/FloatingView";
+import { PalidorEvent } from "../../src/robotlegs/bender/extensions/palidorPixi/events/PalidorEvent";
+import { FloatingView } from "../views/FloatingView";
 
 @injectable()
 export class FloatingViewMediator extends Mediator<FloatingView> {

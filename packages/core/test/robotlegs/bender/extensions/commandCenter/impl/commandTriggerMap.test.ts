@@ -5,15 +5,13 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import "../../../../../entry";
-
 import { assert } from "chai";
-
-import sinon = require("sinon");
-
 import { ICommandTrigger } from "../../../../../../src/robotlegs/bender/extensions/commandCenter/api/ICommandTrigger";
 import { CommandTriggerMap } from "../../../../../../src/robotlegs/bender/extensions/commandCenter/impl/CommandTriggerMap";
 import { NullCommandTrigger } from "../../../../../../src/robotlegs/bender/extensions/commandCenter/impl/NullCommandTrigger";
+import "../../../../../entry";
+
+import sinon = require("sinon");
 
 describe("CommandTriggerMap", () => {
     let subject: CommandTriggerMap;

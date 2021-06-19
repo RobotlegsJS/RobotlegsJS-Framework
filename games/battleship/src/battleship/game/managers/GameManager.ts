@@ -1,10 +1,9 @@
+import { IEventDispatcher, inject, injectable } from "@robotlegsjs/core";
 import { FlowService } from "../../services/FlowService";
-import { AttackEvent } from "../events/AttackEvent";
 import { GameService } from "../../services/GameService";
-import { LevelModel } from "../models/LevelModel";
+import { AttackEvent } from "../events/AttackEvent";
 import { BattleField } from "../models/BattleField";
-
-import { injectable, inject, IEventDispatcher } from "@robotlegsjs/core";
+import { LevelModel } from "../models/LevelModel";
 
 @injectable()
 export class GameManager {

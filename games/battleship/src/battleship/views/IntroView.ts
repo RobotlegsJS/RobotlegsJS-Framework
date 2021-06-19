@@ -1,9 +1,8 @@
-import { Texts } from "../utils/Texts";
+import { Container, Sprite, Text, TextStyle, TilingSprite } from "pixi.js";
 import { AtlasKeys } from "../utils/AtlasKeys";
-import { PixiFactory } from "../utils/PixiFactory";
 import { MagicValues } from "../utils/MagicValues";
-
-import { Container, Text, TextStyle, TilingSprite, Sprite } from "pixi.js";
+import { PixiFactory } from "../utils/PixiFactory";
+import { Texts } from "../utils/Texts";
 
 export class IntroView extends Container {
     public constructor() {

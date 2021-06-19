@@ -1,9 +1,7 @@
-import "../../../entry";
-
 import { assert } from "chai";
-
+import { GridData } from "../../../../src/matchthree/game/models/GridData";
 import { PieceData } from "../../../../src/matchthree/game/models/PieceData";
-import { GridData } from "./../../../../src/matchthree/game/models/GridData";
+import "../../../entry";
 
 describe("Grid", () => {
     let grid: GridData;

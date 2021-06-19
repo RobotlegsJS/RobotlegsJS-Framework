@@ -1,5 +1,5 @@
-import { GridData } from "./../models/GridData";
-import { PieceData } from "./../models/PieceData";
+import { GridData } from "../models/GridData";
+import { PieceData } from "../models/PieceData";
 import { GridUtils } from "./GridUtils";
 import { PieceIds } from "./PieceIds";
 import { PieceType } from "./PieceType";

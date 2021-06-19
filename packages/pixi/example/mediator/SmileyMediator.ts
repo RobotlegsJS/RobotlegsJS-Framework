@@ -5,8 +5,7 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import { Mediator } from "../../src";
-
+import { Mediator } from "../../src/robotlegs/bender/extensions/mediatorMap/impl/Mediator";
 import { SmileyView } from "../view/SmileyView";
 
 export class SmileyMediator extends Mediator<SmileyView> {

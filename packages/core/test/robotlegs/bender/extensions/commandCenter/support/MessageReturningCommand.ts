@@ -5,7 +5,7 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import { injectable, inject } from "inversify";
+import { inject, injectable } from "inversify";
 
 @injectable()
 export class MessageReturningCommand {

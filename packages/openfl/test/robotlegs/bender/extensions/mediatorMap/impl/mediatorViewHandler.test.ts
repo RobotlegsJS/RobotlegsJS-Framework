@@ -5,20 +5,15 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import "../../../../../entry";
-
+import { Context, IContext, IInjector, ITypeFilter, TypeMatcher } from "@robotlegsjs/core";
 import { assert } from "chai";
-
-import DisplayObjectContainer from "openfl/display/DisplayObjectContainer";
 import DisplayObject from "openfl/display/DisplayObject";
+import DisplayObjectContainer from "openfl/display/DisplayObjectContainer";
 import Sprite from "openfl/display/Sprite";
-
-import { IContext, IInjector, ITypeFilter, Context, TypeMatcher } from "@robotlegsjs/core";
-
 import { MediatorFactory } from "../../../../../../src/robotlegs/bender/extensions/mediatorMap/impl/MediatorFactory";
 import { MediatorMapping } from "../../../../../../src/robotlegs/bender/extensions/mediatorMap/impl/MediatorMapping";
 import { MediatorViewHandler } from "../../../../../../src/robotlegs/bender/extensions/mediatorMap/impl/MediatorViewHandler";
-
+import "../../../../../entry";
 import { CallbackMediator } from "../support/CallbackMediator";
 import { NotAView } from "../support/NotAView";
 

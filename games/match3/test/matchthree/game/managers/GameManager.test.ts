@@ -1,21 +1,20 @@
+import { EventDispatcher } from "@robotlegsjs/core";
+import { assert } from "chai";
+import { GameManager } from "../../../../src/matchthree/game/managers/GameManager";
+import { GameStatus } from "../../../../src/matchthree/game/models/GameStatus";
+import { LevelModel } from "../../../../src/matchthree/game/models/LevelModel";
+import { PieceData } from "../../../../src/matchthree/game/models/PieceData";
+import { SwapModel } from "../../../../src/matchthree/game/models/SwapModel";
+import { Tile } from "../../../../src/matchthree/game/models/Tile";
+import { TouchPhase } from "../../../../src/matchthree/game/models/TouchPhase";
+import { GridUtils } from "../../../../src/matchthree/game/utils/GridUtils";
+import { PieceIds } from "../../../../src/matchthree/game/utils/PieceIds";
+import { PieceType } from "../../../../src/matchthree/game/utils/PieceType";
+import { PieceUtils } from "../../../../src/matchthree/game/utils/PieceUtils";
+import { GameService } from "../../../../src/matchthree/services/GameService";
 import "../../../entry";
 
-import { assert } from "chai";
-import { EventDispatcher } from "@robotlegsjs/core";
 import sinon = require("sinon");
-
-import { GameManager } from "./../../../../src/matchthree/game/managers/GameManager";
-import { GameStatus } from "./../../../../src/matchthree/game/models/GameStatus";
-import { LevelModel } from "./../../../../src/matchthree/game/models/LevelModel";
-import { PieceData } from "./../../../../src/matchthree/game/models/PieceData";
-import { SwapModel } from "./../../../../src/matchthree/game/models/SwapModel";
-import { Tile } from "./../../../../src/matchthree/game/models/Tile";
-import { TouchPhase } from "./../../../../src/matchthree/game/models/TouchPhase";
-import { GridUtils } from "./../../../../src/matchthree/game/utils/GridUtils";
-import { PieceIds } from "./../../../../src/matchthree/game/utils/PieceIds";
-import { PieceType } from "./../../../../src/matchthree/game/utils/PieceType";
-import { PieceUtils } from "./../../../../src/matchthree/game/utils/PieceUtils";
-import { GameService } from "./../../../../src/matchthree/services/GameService";
 
 describe("GameManager", () => {
     let gameManager: GameManager;

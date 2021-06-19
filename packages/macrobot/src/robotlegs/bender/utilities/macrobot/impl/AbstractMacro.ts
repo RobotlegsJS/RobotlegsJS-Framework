@@ -7,25 +7,22 @@
 
 import {
     applyHooks,
-    guardsApprove,
-    inject,
-    injectable,
-    interfaces,
     CommandPayload,
     ContainerModule,
+    guardsApprove,
     IClass,
     ICommand,
     IContext,
-    IInjector
+    IInjector,
+    inject,
+    injectable,
+    interfaces
 } from "@robotlegsjs/core";
-
 import { IAsyncCommand } from "../api/IAsyncCommand";
 import { IMacro } from "../api/IMacro";
 import { ISubCommandMapping } from "../api/ISubCommandMapping";
 import { ISubCommandPayload } from "../api/ISubCommandPayload";
-
 import { ISubCommandConfigurator } from "../dsl/ISubCommandConfigurator";
-
 import { AsyncCommand } from "./AsyncCommand";
 import { SubCommandMapping } from "./SubCommandMapping";
 import { SubCommandMappingList } from "./SubCommandMappingList";

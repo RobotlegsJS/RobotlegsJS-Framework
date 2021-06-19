@@ -5,9 +5,8 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import { DisplayObject } from "pixi.js";
-
 import { IClass } from "@robotlegsjs/core";
+import { DisplayObject } from "pixi.js";
 
 /**
  * View handler contract

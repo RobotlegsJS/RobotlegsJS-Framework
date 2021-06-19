@@ -5,9 +5,9 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import { IMatcher } from "../../../../../../src/robotlegs/bender/framework/api/IMatcher";
-import { IType } from "../../../../../../src/robotlegs/bender/extensions/matching/IType";
 import { instanceOfType } from "../../../../../../src/robotlegs/bender/extensions/matching/instanceOfType";
+import { IType } from "../../../../../../src/robotlegs/bender/extensions/matching/IType";
+import { IMatcher } from "../../../../../../src/robotlegs/bender/framework/api/IMatcher";
 
 export class TypeCollection<T> {
     private _type: IType<T>;

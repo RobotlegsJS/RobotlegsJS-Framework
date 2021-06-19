@@ -6,7 +6,8 @@
 // ------------------------------------------------------------------------------
 
 import { injectable } from "inversify";
-
+import { EventDispatcher } from "../../events/impl/EventDispatcher";
+import { IClass } from "../../extensions/matching/IClass";
 import { IBundle } from "../api/IBundle";
 import { IConfig } from "../api/IConfig";
 import { IContext } from "../api/IContext";
@@ -16,7 +17,6 @@ import { ILogger } from "../api/ILogger";
 import { ILogTarget } from "../api/ILogTarget";
 import { IMatcher } from "../api/IMatcher";
 import { LifecycleEvent } from "../api/LifecycleEvent";
-
 import { ConfigManager } from "./ConfigManager";
 import { ExtensionInstaller } from "./ExtensionInstaller";
 import { Lifecycle } from "./Lifecycle";
@@ -24,10 +24,6 @@ import { LogManager } from "./LogManager";
 import { Pin } from "./Pin";
 import { RobotlegsInjector } from "./RobotlegsInjector";
 import { UID } from "./UID";
-
-import { EventDispatcher } from "../../events/impl/EventDispatcher";
-
-import { IClass } from "../../extensions/matching/IClass";
 
 // [Event(name="destroy", type="robotlegs.bender.framework.api.LifecycleEvent")]
 // [Event(name="detain", type="robotlegs.bender.framework.api.PinEvent")]

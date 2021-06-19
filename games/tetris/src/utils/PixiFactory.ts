@@ -1,7 +1,6 @@
-import { Container, Graphics, TextStyle, Sprite, Text, Texture } from "pixi.js";
-
-import { CustomButton } from "./../views/components/CustomButton";
-import { TileDisplay } from "./../views/components/TileDisplay";
+import { Container, Graphics, Sprite, Text, TextStyle, Texture } from "pixi.js";
+import { CustomButton } from "../views/components/CustomButton";
+import { TileDisplay } from "../views/components/TileDisplay";
 import { AtlasKeys } from "./AtlasKeys";
 import { Colors } from "./Colors";
 import { Texts } from "./Texts";

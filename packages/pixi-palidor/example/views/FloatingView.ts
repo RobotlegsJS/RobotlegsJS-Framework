@@ -5,8 +5,8 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import { ColorButton } from "./../components/ColorButton";
-import { Container, Graphics, TextStyle, Text } from "pixi.js";
+import { Container, Graphics, Text, TextStyle } from "pixi.js";
+import { ColorButton } from "../components/ColorButton";
 
 export class FloatingView extends Container {
     private _closeButton: ColorButton;

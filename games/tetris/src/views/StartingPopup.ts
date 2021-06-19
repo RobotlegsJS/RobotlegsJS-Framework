@@ -1,9 +1,8 @@
 import { Container, Graphics, Text } from "pixi.js";
-
-import { Colors } from "./../utils/Colors";
-import { PixiFactory } from "./../utils/PixiFactory";
-import { Texts } from "./../utils/Texts";
-import { ViewPortSize } from "./../utils/ViewPortSize";
+import { Colors } from "../utils/Colors";
+import { PixiFactory } from "../utils/PixiFactory";
+import { Texts } from "../utils/Texts";
+import { ViewPortSize } from "../utils/ViewPortSize";
 
 export class StartingPopup extends Container {
     private _decreasingNumber: Text;

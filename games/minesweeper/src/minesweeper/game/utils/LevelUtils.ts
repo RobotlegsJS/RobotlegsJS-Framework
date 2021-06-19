@@ -1,8 +1,8 @@
 import { Texts } from "../../utils/Texts";
+import { Cell } from "../models/Cell";
+import { CustomLevelModel } from "../models/CustomLevelModel";
 import { GridData } from "../models/GridData";
-import { Cell } from "./../models/Cell";
-import { CustomLevelModel } from "./../models/CustomLevelModel";
-import { LevelModel } from "./../models/LevelModel";
+import { LevelModel } from "../models/LevelModel";
 import { GridUtils } from "./GridUtils";
 
 export class LevelUtils {

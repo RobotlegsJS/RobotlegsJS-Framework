@@ -5,10 +5,9 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import { IClass } from "../../../extensions/matching/IClass";
-
 import { IEvent } from "../../../events/api/IEvent";
 import { IEventDispatcher } from "../../../events/api/IEventDispatcher";
+import { IClass } from "../../../extensions/matching/IClass";
 
 // eslint-disable-next-line @rushstack/typedef-var
 export const IEventMap = Symbol("IEventMap");

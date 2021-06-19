@@ -5,10 +5,8 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import { injectable, inject } from "@robotlegsjs/core";
-
+import { inject, injectable } from "@robotlegsjs/core";
 import { StateMediator } from "../../src/robotlegs/bender/extensions/stateMediatorMap/impl/StateMediator";
-
 import { GameModel } from "../models/GameModel";
 import { Main } from "../states/Main";
 

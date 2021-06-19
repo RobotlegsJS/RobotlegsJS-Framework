@@ -5,13 +5,10 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import "../../../../../entry";
-
 import { assert } from "chai";
-
 import { Container, DisplayObject } from "pixi.js";
-
 import "../../../../../../src/robotlegs/bender/extensions/contextView/pixiPatch/pixi-patch";
+import "../../../../../entry";
 
 describe("ContainsPatch", () => {
     let container: Container;

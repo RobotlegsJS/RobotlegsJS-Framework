@@ -1,9 +1,8 @@
 import { ICommand, inject, injectable } from "@robotlegsjs/core";
-
-import { GameEvent } from "./../../events/GameEvent";
-import { GameManager } from "./../managers/GameManager";
-import { SwapModel } from "./../models/SwapModel";
-import { TouchPhase } from "./../models/TouchPhase";
+import { GameEvent } from "../../events/GameEvent";
+import { GameManager } from "../managers/GameManager";
+import { SwapModel } from "../models/SwapModel";
+import { TouchPhase } from "../models/TouchPhase";
 
 @injectable()
 export class SwapPiecesCommand implements ICommand {

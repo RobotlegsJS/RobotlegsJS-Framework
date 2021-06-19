@@ -1,11 +1,10 @@
-import { HPsComponent } from "./HPsComponent";
-import { ShipsGridDisplay } from "./ShipsGridDisplay";
-import { GridDisplay } from "./GridDisplay";
-import { Texts } from "../../utils/Texts";
+import { Container } from "pixi.js";
 import { Colors } from "../../utils/Colors";
 import { PixiFactory } from "../../utils/PixiFactory";
-
-import { Container } from "pixi.js";
+import { Texts } from "../../utils/Texts";
+import { GridDisplay } from "./GridDisplay";
+import { HPsComponent } from "./HPsComponent";
+import { ShipsGridDisplay } from "./ShipsGridDisplay";
 
 export class HeroComponent extends Container {
     private _ships: ShipsGridDisplay;

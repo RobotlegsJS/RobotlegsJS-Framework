@@ -6,11 +6,9 @@
 // ------------------------------------------------------------------------------
 
 import { IContext, IExtension, IInjector } from "@robotlegsjs/core";
-
 import { IViewManager } from "./api/IViewManager";
-import { ViewManager } from "./impl/ViewManager";
-
 import { ContainerRegistry } from "./impl/ContainerRegistry";
+import { ViewManager } from "./impl/ViewManager";
 
 /**
  * This extension install a View Manager into the context

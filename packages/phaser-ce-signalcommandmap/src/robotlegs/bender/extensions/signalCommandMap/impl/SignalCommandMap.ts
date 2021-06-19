@@ -6,16 +6,15 @@
 // ------------------------------------------------------------------------------
 
 import {
-    injectable,
-    inject,
-    IInjector,
-    IContext,
-    ICommandTrigger,
+    CommandTriggerMap,
     ICommandMapper,
+    ICommandTrigger,
     ICommandUnmapper,
-    CommandTriggerMap
+    IContext,
+    IInjector,
+    inject,
+    injectable
 } from "@robotlegsjs/core";
-
 import { ISignalCommandMap } from "../api/ISignalCommandMap";
 import { SignalCommandTrigger } from "./SignalCommandTrigger";
 

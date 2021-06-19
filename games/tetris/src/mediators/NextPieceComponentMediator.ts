@@ -1,12 +1,11 @@
 import { inject, injectable } from "@robotlegsjs/core";
 import { Mediator } from "@robotlegsjs/pixi";
 import { Sprite } from "pixi.js";
-
-import { GameEvent } from "./../events/GameEvent";
-import { GameModel } from "./../models/GameModel";
-import { Tile } from "./../models/Tile";
-import { PixiFactory } from "./../utils/PixiFactory";
-import { NextPieceComponent } from "./../views/components/NextPieceComponent";
+import { GameEvent } from "../events/GameEvent";
+import { GameModel } from "../models/GameModel";
+import { Tile } from "../models/Tile";
+import { PixiFactory } from "../utils/PixiFactory";
+import { NextPieceComponent } from "../views/components/NextPieceComponent";
 
 @injectable()
 export class NextPieceComponentMediator extends Mediator<NextPieceComponent> {

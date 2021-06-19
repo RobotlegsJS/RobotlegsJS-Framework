@@ -1,12 +1,11 @@
 import { inject, injectable } from "@robotlegsjs/core";
-
+import { GameService } from "../../services/GameService";
 import { Texts } from "../../utils/Texts";
 import { Cell } from "../models/Cell";
 import { CustomLevelModel } from "../models/CustomLevelModel";
+import { LevelModel } from "../models/LevelModel";
 import { GridUtils } from "../utils/GridUtils";
 import { LevelUtils } from "../utils/LevelUtils";
-import { GameService } from "./../../services/GameService";
-import { LevelModel } from "./../models/LevelModel";
 
 @injectable()
 export class GameManager {

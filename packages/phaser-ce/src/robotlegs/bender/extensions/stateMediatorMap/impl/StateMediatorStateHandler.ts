@@ -6,10 +6,8 @@
 // ------------------------------------------------------------------------------
 
 import { IClass } from "@robotlegsjs/core";
-
-import { IStateMediatorMapping } from "../api/IStateMediatorMapping";
 import { IStateHandler } from "../../stateManager/api/IStateHandler";
-
+import { IStateMediatorMapping } from "../api/IStateMediatorMapping";
 import { StateMediatorFactory } from "./StateMediatorFactory";
 
 /**

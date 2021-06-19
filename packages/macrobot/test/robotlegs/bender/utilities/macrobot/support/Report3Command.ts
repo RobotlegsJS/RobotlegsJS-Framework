@@ -5,7 +5,7 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import { injectable, inject, named, ICommand } from "@robotlegsjs/core";
+import { ICommand, inject, injectable, named } from "@robotlegsjs/core";
 
 @injectable()
 export class Report3Command implements ICommand {

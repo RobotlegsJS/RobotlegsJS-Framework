@@ -5,7 +5,7 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import { injectable, IGuard } from "@robotlegsjs/core";
+import { IGuard, injectable } from "@robotlegsjs/core";
 
 @injectable()
 export class GrumpyGuard implements IGuard {

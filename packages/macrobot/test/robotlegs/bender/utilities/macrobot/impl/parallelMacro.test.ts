@@ -5,26 +5,23 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import "../../../../../entry";
-
-import { assert } from "chai";
-
 import {
-    IContext,
-    IInjector,
-    IEventDispatcher,
-    IEventCommandMap,
     Context,
     Event,
     EventCommandMap,
-    EventDispatcher
+    EventDispatcher,
+    IContext,
+    IEventCommandMap,
+    IEventDispatcher,
+    IInjector
 } from "@robotlegsjs/core";
-
+import { assert } from "chai";
+import "../../../../../entry";
 import { TestAddAndRemoveParallelCommand } from "../support/TestAddAndRemoveParallelCommand";
+import { TestEmptyParallelCommand } from "../support/TestEmptyParallelCommand";
 import { TestParallelCommand } from "../support/TestParallelCommand";
 import { TestParallelWithCompleteCallbackCommand } from "../support/TestParallelWithCompleteCallbackCommand";
 import { TestParallelWithPayloadCommand } from "../support/TestParallelWithPayloadCommand";
-import { TestEmptyParallelCommand } from "../support/TestEmptyParallelCommand";
 
 describe("ParallelMacro", () => {
     let context: IContext;

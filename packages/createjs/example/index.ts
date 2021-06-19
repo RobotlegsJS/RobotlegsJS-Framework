@@ -6,7 +6,6 @@
 // ------------------------------------------------------------------------------
 
 import "reflect-metadata";
-
 import { Game } from "./Game";
 
 (<any>window).initGame = () => {

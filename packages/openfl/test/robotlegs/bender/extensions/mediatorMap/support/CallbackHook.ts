@@ -5,7 +5,7 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import { injectable, inject, named, IHook } from "@robotlegsjs/core";
+import { IHook, inject, injectable, named } from "@robotlegsjs/core";
 
 @injectable()
 export class CallbackHook implements IHook {

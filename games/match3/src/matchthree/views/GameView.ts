@@ -1,6 +1,5 @@
 import { Container } from "pixi.js";
-
-import { PixiFactory } from "./../utils/PixiFactory";
+import { PixiFactory } from "../utils/PixiFactory";
 import { GridFieldComponent } from "./components/GridFieldComponent";
 import { HUDGameComponent } from "./components/HUDGameComponent";
 

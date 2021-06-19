@@ -1,8 +1,7 @@
-import { Container, Graphics, BitmapText } from "pixi.js";
-
-import { MagicValues } from "./../utils/MagicValues";
-import { PixiFactory } from "./../utils/PixiFactory";
-import { ViewPortSize } from "./../utils/ViewPortSize";
+import { BitmapText, Container, Graphics } from "pixi.js";
+import { MagicValues } from "../utils/MagicValues";
+import { PixiFactory } from "../utils/PixiFactory";
+import { ViewPortSize } from "../utils/ViewPortSize";
 
 export class StartingPopup extends Container {
     private _decreasingNumber: BitmapText;

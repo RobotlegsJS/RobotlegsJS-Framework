@@ -1,9 +1,8 @@
 import { ICommand, inject, injectable } from "@robotlegsjs/core";
-
-import { GameService } from "./../../services/GameService";
-import { GameStatus } from "./../models/GameStatus";
-import { LevelInfo } from "./../models/LevelInfo";
-import { LevelModel } from "./../models/LevelModel";
+import { GameService } from "../../services/GameService";
+import { GameStatus } from "../models/GameStatus";
+import { LevelInfo } from "../models/LevelInfo";
+import { LevelModel } from "../models/LevelModel";
 
 @injectable()
 export class SwapPiecesConfirmCommand implements ICommand {

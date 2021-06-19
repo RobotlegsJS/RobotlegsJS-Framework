@@ -1,6 +1,5 @@
 import { Sprite, Texture } from "pixi.js";
-
-import { AtlasKeys } from "./../../utils/AtlasKeys";
+import { AtlasKeys } from "../../utils/AtlasKeys";
 
 export class EnemyDisplay extends Sprite {
     private _movementTexture01: Texture;

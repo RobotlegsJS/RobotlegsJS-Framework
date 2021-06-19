@@ -6,12 +6,10 @@
 // ------------------------------------------------------------------------------
 
 import { IBundle, IContext, ILogger, instanceOfType } from "@robotlegsjs/core";
-
 import { IContextView } from "../../extensions/contextView/api/IContextView";
+import { ContextViewExtension } from "../../extensions/contextView/ContextViewExtension";
 import { ContextView } from "../../extensions/contextView/impl/ContextView";
 import { ContextViewListenerConfig } from "../../extensions/contextView/impl/ContextViewListenerConfig";
-
-import { ContextViewExtension } from "../../extensions/contextView/ContextViewExtension";
 import { MediatorMapExtension } from "../../extensions/mediatorMap/MediatorMapExtension";
 import { StageCrawlerExtension } from "../../extensions/viewManager/StageCrawlerExtension";
 import { StageObserverExtension } from "../../extensions/viewManager/StageObserverExtension";

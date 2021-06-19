@@ -5,10 +5,8 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import { injectable, inject, named } from "@robotlegsjs/core";
-
+import { inject, injectable, named } from "@robotlegsjs/core";
 import { SequenceMacro } from "../../../../../../src/robotlegs/bender/utilities/macrobot/impl/SequenceMacro";
-
 import { ReportStringCommand } from "./ReportStringCommand";
 
 @injectable()

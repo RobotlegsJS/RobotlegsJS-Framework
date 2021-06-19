@@ -8,17 +8,14 @@
 import { Context, IContext, MVCSBundle } from "@robotlegsjs/core";
 import { PhaserBundle } from "../src/robotlegs/bender/bundles/phaser/PhaserBundle";
 import { ContextStateManager } from "../src/robotlegs/bender/extensions/contextStateManager/impl/ContextStateManager";
-
-import { StateKey } from "./constants/StateKey";
-
-import { Boot } from "./states/Boot";
-import { Preload } from "./states/Preload";
-import { GameTitle } from "./states/GameTitle";
-import { Main } from "./states/Main";
-import { GameOver } from "./states/GameOver";
-
 import { GameConfig } from "./config/GameConfig";
 import { StateMediatorConfig } from "./config/StateMediatorConfig";
+import { StateKey } from "./constants/StateKey";
+import { Boot } from "./states/Boot";
+import { GameOver } from "./states/GameOver";
+import { GameTitle } from "./states/GameTitle";
+import { Main } from "./states/Main";
+import { Preload } from "./states/Preload";
 
 export class Game extends Phaser.Game {
     private _context: IContext;

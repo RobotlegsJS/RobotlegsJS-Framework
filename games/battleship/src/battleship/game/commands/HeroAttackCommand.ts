@@ -1,11 +1,10 @@
+import { ICommand, inject, injectable } from "@robotlegsjs/core";
 import { GameEvent } from "../../events/GameEvent";
+import { FlowService } from "../../services/FlowService";
+import { GameService } from "../../services/GameService";
 import { AttackEvent } from "../events/AttackEvent";
 import { GameManager } from "../managers/GameManager";
 import { LevelModel } from "../models/LevelModel";
-import { GameService } from "../../services/GameService";
-import { FlowService } from "../../services/FlowService";
-
-import { injectable, inject, ICommand } from "@robotlegsjs/core";
 
 @injectable()
 export class HeroAttackCommand implements ICommand {

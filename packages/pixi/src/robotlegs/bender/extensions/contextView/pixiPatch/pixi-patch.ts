@@ -11,8 +11,8 @@
  * - implement PIXI.Container.contains method
  */
 
-import "./eventemitter3-patch";
 import "./contains-patch";
+import "./eventemitter3-patch";
 
 import PIXI = require("pixi.js");
 

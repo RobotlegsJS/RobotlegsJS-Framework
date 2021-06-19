@@ -5,17 +5,13 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import "../../../../../entry";
-
 import { assert } from "chai";
-
 import { IEventDispatcher } from "../../../../../../src/robotlegs/bender/events/api/IEventDispatcher";
 import { Event } from "../../../../../../src/robotlegs/bender/events/impl/Event";
 import { EventDispatcher } from "../../../../../../src/robotlegs/bender/events/impl/EventDispatcher";
-
 import { IEventMap } from "../../../../../../src/robotlegs/bender/extensions/localEventMap/api/IEventMap";
 import { EventMap } from "../../../../../../src/robotlegs/bender/extensions/localEventMap/impl/EventMap";
-
+import "../../../../../entry";
 import { CustomEvent } from "../support/CustomEvent";
 import { CustomEvent2 } from "../support/CustomEvent2";
 import { MockEventMap } from "../support/MockEventMap";

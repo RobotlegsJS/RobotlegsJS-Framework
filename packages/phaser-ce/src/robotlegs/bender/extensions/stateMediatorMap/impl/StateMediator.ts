@@ -5,8 +5,7 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import { injectable, inject, IEventMap, IEventDispatcher, Event } from "@robotlegsjs/core";
-
+import { Event, IEventDispatcher, IEventMap, inject, injectable } from "@robotlegsjs/core";
 import { IStateMediator } from "../api/IStateMediator";
 
 /**

@@ -1,9 +1,8 @@
+import { TweenLite } from "gsap";
+import { Container, Sprite } from "pixi.js";
 import { AtlasKeys } from "../utils/AtlasKeys";
 import { MagicValues } from "../utils/MagicValues";
 import { PixiFactory } from "../utils/PixiFactory";
-
-import { TweenLite } from "gsap";
-import { Container, Sprite } from "pixi.js";
 
 export class HomeView extends Container {
     private _msgText: any;

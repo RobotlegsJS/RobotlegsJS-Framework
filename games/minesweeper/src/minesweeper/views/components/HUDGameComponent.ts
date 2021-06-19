@@ -1,12 +1,11 @@
 import { TweenLite } from "gsap";
 import { Container, Sprite } from "pixi.js";
-
-import { LevelModel } from "./../../game/models/LevelModel";
-import { AtlasKeys } from "./../../utils/AtlasKeys";
-import { MagicValues } from "./../../utils/MagicValues";
-import { PixiFactory } from "./../../utils/PixiFactory";
-import { Texts } from "./../../utils/Texts";
-import { ViewPortSize } from "./../../utils/ViewPortSize";
+import { LevelModel } from "../../game/models/LevelModel";
+import { AtlasKeys } from "../../utils/AtlasKeys";
+import { MagicValues } from "../../utils/MagicValues";
+import { PixiFactory } from "../../utils/PixiFactory";
+import { Texts } from "../../utils/Texts";
+import { ViewPortSize } from "../../utils/ViewPortSize";
 import { CustomButton } from "./CustomButton";
 
 export class HUDGameComponent extends Container {

@@ -1,6 +1,5 @@
 import { Sprite, Texture } from "pixi.js";
-
-import { AtlasKeys } from "./../../utils/AtlasKeys";
+import { AtlasKeys } from "../../utils/AtlasKeys";
 
 export class CustomButton extends Sprite {
     private _downState: Texture;

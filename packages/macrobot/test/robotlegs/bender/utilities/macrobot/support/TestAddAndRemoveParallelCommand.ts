@@ -6,13 +6,11 @@
 // ------------------------------------------------------------------------------
 
 import { injectable } from "@robotlegsjs/core";
-
 import { ParallelMacro } from "../../../../../../src/robotlegs/bender/utilities/macrobot/impl/ParallelMacro";
-
-import { ReportDelayAsyncCommand } from "./ReportDelayAsyncCommand";
 import { Report1Command } from "./Report1Command";
 import { Report2Command } from "./Report2Command";
 import { Report3Command } from "./Report3Command";
+import { ReportDelayAsyncCommand } from "./ReportDelayAsyncCommand";
 
 @injectable()
 export class TestAddAndRemoveParallelCommand extends ParallelMacro {

@@ -5,15 +5,12 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import { injectable, EventDispatcher } from "@robotlegsjs/core";
-
+import { EventDispatcher, injectable } from "@robotlegsjs/core";
 import { IStateHandler } from "../api/IStateHandler";
 import { IStateManager } from "../api/IStateManager";
-
-import { StateManagerEvent } from "./StateManagerEvent";
-
-import { StateRegistry } from "./StateRegistry";
 import { StateManagerBinding } from "./StateManagerBinding";
+import { StateManagerEvent } from "./StateManagerEvent";
+import { StateRegistry } from "./StateRegistry";
 
 /**
  * @private

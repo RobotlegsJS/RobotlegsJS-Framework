@@ -5,12 +5,10 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import "../../../../../entry";
-
 import { assert } from "chai";
-
 import { IEventEmitterMap } from "../../../../../../src/robotlegs/bender/extensions/localEventEmitterMap/api/IEventEmitterMap";
 import { EventEmitterMap } from "../../../../../../src/robotlegs/bender/extensions/localEventEmitterMap/impl/EventEmitterMap";
+import "../../../../../entry";
 
 describe("EventEmitterMap", () => {
     const STARTED: string = "started";

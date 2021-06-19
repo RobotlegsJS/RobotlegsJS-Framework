@@ -5,8 +5,7 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import { injectable, inject, IHook } from "@robotlegsjs/core";
-
+import { IHook, inject, injectable } from "@robotlegsjs/core";
 import { ExampleView } from "./ExampleView";
 
 @injectable()

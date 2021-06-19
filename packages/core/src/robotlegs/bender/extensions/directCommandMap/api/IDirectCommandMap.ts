@@ -5,10 +5,8 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import { IClass } from "../../matching/IClass";
-
 import { ICommand } from "../../commandCenter/api/ICommand";
-
+import { IClass } from "../../matching/IClass";
 import { IDirectCommandMapper } from "./IDirectCommandMapper";
 
 // eslint-disable-next-line @rushstack/typedef-var

@@ -1,10 +1,9 @@
 import { Container } from "pixi.js";
-
-import { AtlasKeys } from "./../utils/AtlasKeys";
-import { MagicValues } from "./../utils/MagicValues";
-import { PixiFactory } from "./../utils/PixiFactory";
-import { Texts } from "./../utils/Texts";
-import { ViewPortSize } from "./../utils/ViewPortSize";
+import { AtlasKeys } from "../utils/AtlasKeys";
+import { MagicValues } from "../utils/MagicValues";
+import { PixiFactory } from "../utils/PixiFactory";
+import { Texts } from "../utils/Texts";
+import { ViewPortSize } from "../utils/ViewPortSize";
 import { IconButton } from "./components/IconButton";
 
 export class YouWinPopup extends Container {

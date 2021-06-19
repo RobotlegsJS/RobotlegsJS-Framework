@@ -6,7 +6,6 @@
 // ------------------------------------------------------------------------------
 
 import { IClass } from "@robotlegsjs/core";
-
 import { ISceneHandler } from "../../../../../../src/robotlegs/bender/extensions/viewManager/api/ISceneHandler";
 
 /**

@@ -24,8 +24,7 @@ import {
     StageObserverExtension,
     ViewManagerExtension
 } from "@robotlegsjs/pixi";
-
-import { PalidorPixiExtension } from "./../../extensions/palidorPixi/PalidorPixiExtension";
+import { PalidorPixiExtension } from "../../extensions/palidorPixi/PalidorPixiExtension";
 
 export class PalidorBundle implements IBundle {
     private _context: IContext;

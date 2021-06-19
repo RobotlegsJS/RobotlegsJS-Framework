@@ -1,7 +1,6 @@
+import { Container } from "pixi.js";
 import { Ship } from "../../game/models/Ship";
 import { ShipHPComponent } from "./ShipHPComponent";
-
-import { Container } from "pixi.js";
 
 export class HPsComponent extends Container {
     private _displays: Map<Ship, ShipHPComponent>;

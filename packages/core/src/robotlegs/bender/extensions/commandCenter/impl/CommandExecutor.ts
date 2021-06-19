@@ -5,18 +5,15 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import { IClass } from "../../matching/IClass";
-
-import { ICommand } from "../api/ICommand";
-import { ICommandExecutor } from "../api/ICommandExecutor";
-import { ICommandMapping } from "../api/ICommandMapping";
-import { CommandPayload } from "../api/CommandPayload";
-
 import { IInjector } from "../../../framework/api/IInjector";
-
 import { applyHooks } from "../../../framework/impl/applyHooks";
 import { guardsApprove } from "../../../framework/impl/guardsApprove";
 import { instantiateUnmapped } from "../../../framework/impl/instantiateUnmapped";
+import { IClass } from "../../matching/IClass";
+import { CommandPayload } from "../api/CommandPayload";
+import { ICommand } from "../api/ICommand";
+import { ICommandExecutor } from "../api/ICommandExecutor";
+import { ICommandMapping } from "../api/ICommandMapping";
 
 /**
  * @private

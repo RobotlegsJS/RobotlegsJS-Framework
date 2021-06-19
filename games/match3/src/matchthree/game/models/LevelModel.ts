@@ -1,7 +1,6 @@
 import { injectable } from "@robotlegsjs/core";
-
-import { PieceType } from "./../utils/PieceType";
-import { PieceUtils } from "./../utils/PieceUtils";
+import { PieceType } from "../utils/PieceType";
+import { PieceUtils } from "../utils/PieceUtils";
 import { LevelInfo } from "./LevelInfo";
 import { PieceData } from "./PieceData";
 

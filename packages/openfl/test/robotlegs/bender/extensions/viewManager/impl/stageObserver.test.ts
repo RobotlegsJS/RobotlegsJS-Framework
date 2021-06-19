@@ -5,18 +5,13 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import "../../../../../entry";
-
-import { assert } from "chai";
-
-import Stage from "openfl/display/Stage";
-import DisplayObjectContainer from "openfl/display/DisplayObjectContainer";
-
 import { IClass } from "@robotlegsjs/core";
-
+import { assert } from "chai";
+import DisplayObjectContainer from "openfl/display/DisplayObjectContainer";
+import Stage from "openfl/display/Stage";
 import { ContainerRegistry } from "../../../../../../src/robotlegs/bender/extensions/viewManager/impl/ContainerRegistry";
 import { StageObserver } from "../../../../../../src/robotlegs/bender/extensions/viewManager/impl/StageObserver";
-
+import "../../../../../entry";
 import { CallbackViewHandler } from "../support/CallbackViewHandler";
 
 describe("StageObserver", () => {

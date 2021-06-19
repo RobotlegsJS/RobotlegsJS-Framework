@@ -6,7 +6,6 @@
 // ------------------------------------------------------------------------------
 
 import { getQualifiedClassName } from "../../framework/impl/getQualifiedClassName";
-
 import { isInstanceOfType } from "./isInstanceOfType";
 import { IType } from "./IType";
 import { ITypeFilter } from "./ITypeFilter";

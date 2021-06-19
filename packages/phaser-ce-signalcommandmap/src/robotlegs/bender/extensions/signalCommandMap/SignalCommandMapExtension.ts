@@ -5,8 +5,7 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import { injectable, IContext, IExtension, UID } from "@robotlegsjs/core";
-
+import { IContext, IExtension, injectable, UID } from "@robotlegsjs/core";
 import { ISignalCommandMap } from "./api/ISignalCommandMap";
 import { SignalCommandMap } from "./impl/SignalCommandMap";
 

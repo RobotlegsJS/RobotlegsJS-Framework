@@ -1,8 +1,7 @@
-import { Colors } from "../../utils/Colors";
+import { Container, Graphics, Sprite } from "pixi.js";
 import { AtlasKeys } from "../../utils/AtlasKeys";
+import { Colors } from "../../utils/Colors";
 import { PixiFactory } from "../../utils/PixiFactory";
-
-import { Container, Sprite, Graphics } from "pixi.js";
 
 export class ShipHPComponent extends Container {
     private _shipDisplay: Sprite;

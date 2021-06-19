@@ -1,6 +1,6 @@
-import { Tile } from "./Tile";
-import { Ship } from "./Ship";
 import { Grid } from "./Grid";
+import { Ship } from "./Ship";
+import { Tile } from "./Tile";
 
 export class BattleField {
     public grid: Grid;

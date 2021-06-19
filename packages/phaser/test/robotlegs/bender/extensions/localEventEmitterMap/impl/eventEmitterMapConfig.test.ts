@@ -5,11 +5,9 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import "../../../../../entry";
-
 import { assert } from "chai";
-
 import { EventEmitterMapConfig } from "../../../../../../src/robotlegs/bender/extensions/localEventEmitterMap/impl/EventEmitterMapConfig";
+import "../../../../../entry";
 
 describe("EventEmitterMapConfig", () => {
     const EMITTER: Phaser.Events.EventEmitter = new Phaser.Events.EventEmitter();

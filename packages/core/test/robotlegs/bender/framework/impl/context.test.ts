@@ -5,10 +5,7 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import "../../../../entry";
-
 import { assert } from "chai";
-
 import { IConfig } from "../../../../../src/robotlegs/bender/framework/api/IConfig";
 import { IContext } from "../../../../../src/robotlegs/bender/framework/api/IContext";
 import { IExtension } from "../../../../../src/robotlegs/bender/framework/api/IExtension";
@@ -18,7 +15,7 @@ import { LogLevel } from "../../../../../src/robotlegs/bender/framework/api/LogL
 import { PinEvent } from "../../../../../src/robotlegs/bender/framework/api/PinEvent";
 import { Context } from "../../../../../src/robotlegs/bender/framework/impl/Context";
 import { RobotlegsInjector } from "../../../../../src/robotlegs/bender/framework/impl/RobotlegsInjector";
-
+import "../../../../entry";
 import { CallbackConfig } from "./contextSupport/CallbackConfig";
 import { CallbackExtension } from "./contextSupport/CallbackExtension";
 import { CallbackLogTarget } from "./loggingSupport/CallbackLogTarget";

@@ -6,7 +6,6 @@
 // ------------------------------------------------------------------------------
 
 import { Event } from "@robotlegsjs/core";
-
 import { IViewHandler } from "../api/IViewHandler";
 
 /**

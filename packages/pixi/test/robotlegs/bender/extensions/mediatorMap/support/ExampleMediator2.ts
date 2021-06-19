@@ -5,10 +5,8 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import { injectable, inject } from "@robotlegsjs/core";
-
+import { inject, injectable } from "@robotlegsjs/core";
 import { Sprite } from "pixi.js";
-
 import { MediatorWatcher } from "./MediatorWatcher";
 
 @injectable()

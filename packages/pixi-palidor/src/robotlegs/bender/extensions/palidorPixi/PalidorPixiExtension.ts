@@ -5,15 +5,12 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
+import { IContext, IExtension, IInjector, instanceOfType } from "@robotlegsjs/core";
+import { ContextView, IContextView } from "@robotlegsjs/pixi";
 import { IContainerController } from "./api/IContainerController";
 import { IFlowManager } from "./api/IFlowManager";
-
 import { FlowManager } from "./impl/FlowManager";
 import { PixiContainerController } from "./impl/PixiContainerController";
-
-import { IContext, IExtension, IInjector, instanceOfType } from "@robotlegsjs/core";
-
-import { IContextView, ContextView } from "@robotlegsjs/pixi";
 
 export class PalidorPixiExtension implements IExtension {
     private _injector: IInjector;

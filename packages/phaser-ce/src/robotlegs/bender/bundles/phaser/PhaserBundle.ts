@@ -6,12 +6,11 @@
 // ------------------------------------------------------------------------------
 
 import { IBundle, IContext } from "@robotlegsjs/core";
-
 import { ContextStateManagerExtension } from "../../extensions/contextStateManager/ContextStateManagerExtension";
-import { StateManagerExtension } from "../../extensions/stateManager/StateManagerExtension";
-import { StateMediatorMapExtension } from "../../extensions/stateMediatorMap/StateMediatorMapExtension";
 import { ContextStateManagerListenerConfig } from "../../extensions/contextStateManager/impl/ContextStateManagerListenerConfig";
+import { StateManagerExtension } from "../../extensions/stateManager/StateManagerExtension";
 import { StateManagerObserverExtension } from "../../extensions/stateManager/StateManagerObserverExtension";
+import { StateMediatorMapExtension } from "../../extensions/stateMediatorMap/StateMediatorMapExtension";
 
 /**
  * For that Classic Robotlegs flavour

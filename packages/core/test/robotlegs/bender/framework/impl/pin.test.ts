@@ -5,14 +5,13 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import "../../../../entry";
-
 import { assert } from "chai";
-import sinon = require("sinon");
-
+import { EventDispatcher } from "../../../../../src/robotlegs/bender/events/impl/EventDispatcher";
 import { PinEvent } from "../../../../../src/robotlegs/bender/framework/api/PinEvent";
 import { Pin } from "../../../../../src/robotlegs/bender/framework/impl/Pin";
-import { EventDispatcher } from "../../../../../src/robotlegs/bender/events/impl/EventDispatcher";
+import "../../../../entry";
+
+import sinon = require("sinon");
 
 describe("Pin", () => {
     let instance: object;

@@ -5,13 +5,10 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import "../../../entry";
-
 import { assert } from "chai";
-
-import { AsyncUtil } from "../../../util/AsyncUtil";
 import { Signal } from "../../../../src/org/osflash/signals/Signal";
-
+import "../../../entry";
+import { AsyncUtil } from "../../../util/AsyncUtil";
 import { Base } from "./support/Base";
 import { Inherited1 } from "./support/Inherited1";
 import { Inherited2 } from "./support/Inherited2";

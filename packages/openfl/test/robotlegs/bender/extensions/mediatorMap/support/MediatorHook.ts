@@ -5,10 +5,8 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
+import { IHook, inject, injectable, named, optional } from "@robotlegsjs/core";
 import DisplayObjectContainer from "openfl/display/DisplayObjectContainer";
-
-import { injectable, inject, named, optional, IHook } from "@robotlegsjs/core";
-
 import { ViewInjectedMediator } from "./ViewInjectedMediator";
 
 @injectable()

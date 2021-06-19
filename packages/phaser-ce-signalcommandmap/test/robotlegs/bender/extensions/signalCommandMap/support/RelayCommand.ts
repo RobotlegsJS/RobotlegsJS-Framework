@@ -5,11 +5,9 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import { injectable, inject, ICommand } from "@robotlegsjs/core";
-
-import { TargetSignal } from "./TargetSignal";
-
+import { ICommand, inject, injectable } from "@robotlegsjs/core";
 import { Data } from "./Data";
+import { TargetSignal } from "./TargetSignal";
 
 @injectable()
 export class RelayCommand implements ICommand {

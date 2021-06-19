@@ -1,11 +1,11 @@
-import { AtlasKeys } from "./../../utils/AtlasKeys";
-import { BulletDisplay } from "./../displays/BulletDisplay";
-import { CannonDisplay } from "./../displays/CannonDisplay";
-import { EnemyDisplay } from "./../displays/EnemyDisplay";
-import { ExplosionDisplay } from "./../displays/ExplosionDisplay";
-import { Bullet } from "./../entities/Bullet";
-import { Entity } from "./../entities/Entity";
-import { Explosion } from "./../entities/Explosion";
+import { AtlasKeys } from "../../utils/AtlasKeys";
+import { BulletDisplay } from "../displays/BulletDisplay";
+import { CannonDisplay } from "../displays/CannonDisplay";
+import { EnemyDisplay } from "../displays/EnemyDisplay";
+import { ExplosionDisplay } from "../displays/ExplosionDisplay";
+import { Bullet } from "../entities/Bullet";
+import { Entity } from "../entities/Entity";
+import { Explosion } from "../entities/Explosion";
 
 export class EntityPool {
     public static dictionary: Map<number, Entity[]>;

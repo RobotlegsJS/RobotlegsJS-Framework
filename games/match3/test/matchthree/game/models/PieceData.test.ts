@@ -1,12 +1,10 @@
-import "../../../entry";
-
 import { assert } from "chai";
 import { TilingSprite } from "pixi.js";
-
 import { PieceData } from "../../../../src/matchthree/game/models/PieceData";
-import { Tile } from "./../../../../src/matchthree/game/models/Tile";
-import { PieceIds } from "./../../../../src/matchthree/game/utils/PieceIds";
-import { PieceType } from "./../../../../src/matchthree/game/utils/PieceType";
+import { Tile } from "../../../../src/matchthree/game/models/Tile";
+import { PieceIds } from "../../../../src/matchthree/game/utils/PieceIds";
+import { PieceType } from "../../../../src/matchthree/game/utils/PieceType";
+import "../../../entry";
 
 describe("PieceData", () => {
     let piece: PieceData;

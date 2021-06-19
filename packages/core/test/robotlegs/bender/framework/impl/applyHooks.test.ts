@@ -5,13 +5,10 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import "../../../../entry";
-
 import { assert } from "chai";
-
 import { applyHooks } from "../../../../../src/robotlegs/bender/framework/impl/applyHooks";
 import { RobotlegsInjector } from "../../../../../src/robotlegs/bender/framework/impl/RobotlegsInjector";
-
+import "../../../../entry";
 import { CallbackHook } from "./hookSupport/CallbackHook";
 
 describe("applyHooks", () => {

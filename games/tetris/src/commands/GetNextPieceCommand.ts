@@ -1,8 +1,7 @@
 import { ICommand, inject, injectable } from "@robotlegsjs/core";
-
-import { GameModel } from "./../models/GameModel";
-import { GameService } from "./../services/GameService";
-import { TileGroupFactory } from "./../utils/TileGroupFactory";
+import { GameModel } from "../models/GameModel";
+import { GameService } from "../services/GameService";
+import { TileGroupFactory } from "../utils/TileGroupFactory";
 
 @injectable()
 export class GetNextPieceCommand implements ICommand {

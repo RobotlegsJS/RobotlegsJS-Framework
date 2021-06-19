@@ -1,6 +1,5 @@
 import { Sprite, Texture } from "pixi.js";
-
-import { AtlasKeys } from "./../../utils/AtlasKeys";
+import { AtlasKeys } from "../../utils/AtlasKeys";
 
 export class IconButton extends Sprite {
     public static TYPE_SMALL: string = "button_small";

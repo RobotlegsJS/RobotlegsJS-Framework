@@ -1,7 +1,6 @@
 import { ICommand, inject, injectable } from "@robotlegsjs/core";
-
 import { Cell } from "../models/Cell";
-import { LevelModel } from "./../models/LevelModel";
+import { LevelModel } from "../models/LevelModel";
 
 @injectable()
 export class ExportLevelDataCommand implements ICommand {

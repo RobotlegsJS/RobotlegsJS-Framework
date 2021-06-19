@@ -1,13 +1,11 @@
-import "../../../entry";
-
 import { assert } from "chai";
-
-import { GridData } from "./../../../../src/matchthree/game/models/GridData";
-import { PieceData } from "./../../../../src/matchthree/game/models/PieceData";
-import { PieceIds } from "./../../../../src/matchthree/game/utils/PieceIds";
-import { PieceType } from "./../../../../src/matchthree/game/utils/PieceType";
-import { PieceUtils } from "./../../../../src/matchthree/game/utils/PieceUtils";
-import { PowerUpUtils } from "./../../../../src/matchthree/game/utils/PowerUpUtils";
+import { GridData } from "../../../../src/matchthree/game/models/GridData";
+import { PieceData } from "../../../../src/matchthree/game/models/PieceData";
+import { PieceIds } from "../../../../src/matchthree/game/utils/PieceIds";
+import { PieceType } from "../../../../src/matchthree/game/utils/PieceType";
+import { PieceUtils } from "../../../../src/matchthree/game/utils/PieceUtils";
+import { PowerUpUtils } from "../../../../src/matchthree/game/utils/PowerUpUtils";
+import "../../../entry";
 
 describe("PowerUpUtils", () => {
     let result: PieceData[];

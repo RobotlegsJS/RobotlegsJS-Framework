@@ -5,16 +5,12 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import "../../../../entry.ts";
-
-import { assert } from "chai";
-
 import { Context } from "@robotlegsjs/core";
-
+import { assert } from "chai";
 import { ISignalCommandMap } from "../../../../../src/robotlegs/bender/extensions/signalCommandMap/api/ISignalCommandMap";
 import { SignalCommandMap } from "../../../../../src/robotlegs/bender/extensions/signalCommandMap/impl/SignalCommandMap";
 import { SignalCommandMapExtension } from "../../../../../src/robotlegs/bender/extensions/signalCommandMap/SignalCommandMapExtension";
-
+import "../../../../entry.ts";
 import { Data } from "./support/Data";
 import { RelayCommand } from "./support/RelayCommand";
 import { RelaySignal } from "./support/RelaySignal";

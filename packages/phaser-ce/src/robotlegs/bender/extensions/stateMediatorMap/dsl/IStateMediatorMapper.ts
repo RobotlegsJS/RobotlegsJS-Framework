@@ -6,7 +6,6 @@
 // ------------------------------------------------------------------------------
 
 import { IClass } from "@robotlegsjs/core";
-
 import { IStateMediatorConfigurator } from "./IStateMediatorConfigurator";
 
 /**

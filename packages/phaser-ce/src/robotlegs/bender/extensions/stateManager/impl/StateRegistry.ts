@@ -6,7 +6,6 @@
 // ------------------------------------------------------------------------------
 
 import { EventDispatcher } from "@robotlegsjs/core";
-
 import { StateManagerBinding } from "./StateManagerBinding";
 import { StateManagerBindingEvent } from "./StateManagerBindingEvent";
 import { StateRegistryEvent } from "./StateRegistryEvent";

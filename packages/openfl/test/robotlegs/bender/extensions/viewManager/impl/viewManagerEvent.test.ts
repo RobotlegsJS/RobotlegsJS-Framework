@@ -5,15 +5,11 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import "../../../../../entry";
-
 import { assert } from "chai";
-
 import DisplayObjectContainer from "openfl/display/DisplayObjectContainer";
-
 import { IViewHandler } from "../../../../../../src/robotlegs/bender/extensions/viewManager/api/IViewHandler";
 import { ViewManagerEvent } from "../../../../../../src/robotlegs/bender/extensions/viewManager/impl/ViewManagerEvent";
-
+import "../../../../../entry";
 import { CallbackViewHandler } from "../support/CallbackViewHandler";
 
 describe("ViewManagerEvent", () => {

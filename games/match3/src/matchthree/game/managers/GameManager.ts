@@ -1,15 +1,14 @@
 import { inject, injectable } from "@robotlegsjs/core";
-
-import { GameService } from "./../../services/GameService";
-import { GameStatus } from "./../models/GameStatus";
-import { GridData } from "./../models/GridData";
-import { LevelModel } from "./../models/LevelModel";
-import { PieceData } from "./../models/PieceData";
-import { SwapModel } from "./../models/SwapModel";
-import { GridUtils } from "./../utils/GridUtils";
-import { PieceType } from "./../utils/PieceType";
-import { PieceUtils } from "./../utils/PieceUtils";
-import { PowerUpUtils } from "./../utils/PowerUpUtils";
+import { GameService } from "../../services/GameService";
+import { GameStatus } from "../models/GameStatus";
+import { GridData } from "../models/GridData";
+import { LevelModel } from "../models/LevelModel";
+import { PieceData } from "../models/PieceData";
+import { SwapModel } from "../models/SwapModel";
+import { GridUtils } from "../utils/GridUtils";
+import { PieceType } from "../utils/PieceType";
+import { PieceUtils } from "../utils/PieceUtils";
+import { PowerUpUtils } from "../utils/PowerUpUtils";
 
 @injectable()
 export class GameManager {

@@ -1,5 +1,4 @@
 import { Container } from "pixi.js";
-
 import { PixiFactory } from "../../utils/PixiFactory";
 import { CustomButton } from "./CustomButton";
 

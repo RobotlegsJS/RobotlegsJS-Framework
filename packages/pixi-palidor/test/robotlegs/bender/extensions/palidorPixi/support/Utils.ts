@@ -5,19 +5,14 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import {
-    IContainerController,
-    IFlowManager,
-    FlowManager,
-    PixiContainerController,
-    PalidorPixiExtension
-} from "./../../../../../../src";
-
-import { Container } from "pixi.js";
-
 import { Context, MVCSBundle } from "@robotlegsjs/core";
-
 import { ContextView, PixiBundle } from "@robotlegsjs/pixi";
+import { Container } from "pixi.js";
+import { IContainerController } from "../../../../../../src/robotlegs/bender/extensions/palidorPixi/api/IContainerController";
+import { IFlowManager } from "../../../../../../src/robotlegs/bender/extensions/palidorPixi/api/IFlowManager";
+import { FlowManager } from "../../../../../../src/robotlegs/bender/extensions/palidorPixi/impl/FlowManager";
+import { PixiContainerController } from "../../../../../../src/robotlegs/bender/extensions/palidorPixi/impl/PixiContainerController";
+import { PalidorPixiExtension } from "../../../../../../src/robotlegs/bender/extensions/palidorPixi/PalidorPixiExtension";
 
 export class Utils {
     public static getInstanceOfFlowManager(): FlowManager {

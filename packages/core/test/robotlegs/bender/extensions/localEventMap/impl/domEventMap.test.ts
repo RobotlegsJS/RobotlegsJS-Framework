@@ -5,12 +5,10 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import "../../../../../entry";
-
 import { assert } from "chai";
-
 import { IEventMap } from "../../../../../../src/robotlegs/bender/extensions/localEventMap/api/IEventMap";
 import { EventMap } from "../../../../../../src/robotlegs/bender/extensions/localEventMap/impl/EventMap";
+import "../../../../../entry";
 
 describe("DomEventMap", () => {
     const STARTED: string = "started";

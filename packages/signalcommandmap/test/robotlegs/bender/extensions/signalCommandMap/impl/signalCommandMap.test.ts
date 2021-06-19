@@ -5,17 +5,12 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import "../../../../../entry";
-
-import { assert } from "chai";
-
+import { CommandMapper, Context, ICommandMapper, IContext } from "@robotlegsjs/core";
 import { ISignal, Signal } from "@robotlegsjs/signals";
-
-import { IContext, ICommandMapper, Context, CommandMapper } from "@robotlegsjs/core";
-
-import { SignalCommandMapExtension } from "../../../../../../src/robotlegs/bender/extensions/signalCommandMap/SignalCommandMapExtension";
+import { assert } from "chai";
 import { SignalCommandMap } from "../../../../../../src/robotlegs/bender/extensions/signalCommandMap/impl/SignalCommandMap";
-
+import { SignalCommandMapExtension } from "../../../../../../src/robotlegs/bender/extensions/signalCommandMap/SignalCommandMapExtension";
+import "../../../../../entry";
 import { NullCommand } from "../support/NullCommand";
 
 describe("SignalCommandMap", () => {

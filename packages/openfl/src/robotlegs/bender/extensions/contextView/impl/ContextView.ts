@@ -6,10 +6,8 @@
 // ------------------------------------------------------------------------------
 
 import { IConfig } from "@robotlegsjs/core";
-
-import { IContextView } from "../api/IContextView";
-
 import Stage from "openfl/display/Stage";
+import { IContextView } from "../api/IContextView";
 
 /**
  * The Context View represents the root Container for a Context

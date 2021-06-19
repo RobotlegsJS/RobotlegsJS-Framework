@@ -1,8 +1,7 @@
-import "../entry";
-
-import { Tile } from "./../../src/models/Tile";
-import { Grid } from "./../../src/models/Grid";
 import { assert } from "chai";
+import { Grid } from "../../src/models/Grid";
+import { Tile } from "../../src/models/Tile";
+import "../entry";
 
 describe("Grid", () => {
     let grid: Grid;

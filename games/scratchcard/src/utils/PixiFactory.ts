@@ -1,5 +1,4 @@
 import { Graphics, Sprite, Text } from "pixi.js";
-
 import { AssetKeys } from "./AssetKeys";
 import { Colors } from "./Colors";
 import { MagicValues } from "./MagicValues";

@@ -5,13 +5,11 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import "../../../../../entry";
-
 import { assert } from "chai";
-
 import { Container } from "pixi.js";
-
-import { IContextView, ContextView } from "../../../../../../src";
+import { IContextView } from "../../../../../../src/robotlegs/bender/extensions/contextView/api/IContextView";
+import { ContextView } from "../../../../../../src/robotlegs/bender/extensions/contextView/impl/ContextView";
+import "../../../../../entry";
 
 describe("ContextView", () => {
     let container: Container;

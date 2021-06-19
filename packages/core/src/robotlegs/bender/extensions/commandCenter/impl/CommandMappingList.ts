@@ -5,14 +5,12 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
+import { ILogger } from "../../../framework/api/ILogger";
 import { IClass } from "../../matching/IClass";
-
 import { ICommand } from "../api/ICommand";
 import { ICommandMapping } from "../api/ICommandMapping";
 import { ICommandMappingList } from "../api/ICommandMappingList";
 import { ICommandTrigger } from "../api/ICommandTrigger";
-
-import { ILogger } from "../../../framework/api/ILogger";
 
 export type CommandMappingCompareFunction = (a: ICommandMapping, b: ICommandMapping) => number;
 

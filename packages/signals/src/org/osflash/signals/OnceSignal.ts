@@ -6,9 +6,9 @@
  */
 
 import { IOnceSignal } from "./IOnceSignal";
-import { SlotList } from "./SlotList";
 import { ISlot } from "./ISlot";
 import { Slot } from "./Slot";
+import { SlotList } from "./SlotList";
 
 /**
  * Allows the valueClasses to be set in MXML, e.g.

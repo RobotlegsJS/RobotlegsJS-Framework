@@ -1,10 +1,9 @@
-import { Container, BitmapText } from "pixi.js";
-
-import { AtlasKeys } from "./../utils/AtlasKeys";
-import { MagicValues } from "./../utils/MagicValues";
-import { PixiFactory } from "./../utils/PixiFactory";
-import { Texts } from "./../utils/Texts";
-import { ViewPortSize } from "./../utils/ViewPortSize";
+import { BitmapText, Container } from "pixi.js";
+import { AtlasKeys } from "../utils/AtlasKeys";
+import { MagicValues } from "../utils/MagicValues";
+import { PixiFactory } from "../utils/PixiFactory";
+import { Texts } from "../utils/Texts";
+import { ViewPortSize } from "../utils/ViewPortSize";
 import { IconButton } from "./components/IconButton";
 
 export class OptionsView extends Container {

@@ -5,12 +5,9 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import "../../../../../entry";
-
 import { assert } from "chai";
-
 import { ConfigureViewEvent } from "../../../../../../src/robotlegs/bender/extensions/viewManager/impl/ConfigureViewEvent";
-
+import "../../../../../entry";
 import { MockScene } from "../support/MockScene";
 
 describe("ConfigureViewEvent", () => {

@@ -6,13 +6,10 @@
 // ------------------------------------------------------------------------------
 
 import { IClass } from "@robotlegsjs/core";
-
-import { ContainerRegistryEvent } from "./ContainerRegistryEvent";
-
-import { ContainerRegistry } from "./ContainerRegistry";
-import { ContainerBinding } from "./ContainerBinding";
-
 import { ConfigureViewEvent } from "./ConfigureViewEvent";
+import { ContainerBinding } from "./ContainerBinding";
+import { ContainerRegistry } from "./ContainerRegistry";
+import { ContainerRegistryEvent } from "./ContainerRegistryEvent";
 
 /**
  * @private

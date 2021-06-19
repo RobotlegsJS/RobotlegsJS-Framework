@@ -5,14 +5,11 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import "../../../entry";
-
 import { assert } from "chai";
-
-import { AsyncUtil } from "../../../util/AsyncUtil";
 import { GenericEvent } from "../../../../src/org/osflash/signals/events/GenericEvent";
 import { IEvent } from "../../../../src/org/osflash/signals/events/IEvent";
-
+import "../../../entry";
+import { AsyncUtil } from "../../../util/AsyncUtil";
 import { BubbleHater } from "./support/BubbleHater";
 import { Child } from "./support/Child";
 

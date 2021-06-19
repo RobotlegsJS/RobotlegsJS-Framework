@@ -5,10 +5,9 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import { injectable, inject, IConfig } from "@robotlegsjs/core";
-
-import { IContextStateManager } from "../api/IContextStateManager";
+import { IConfig, inject, injectable } from "@robotlegsjs/core";
 import { IStateManager } from "../../stateManager/api/IStateManager";
+import { IContextStateManager } from "../api/IContextStateManager";
 
 /**
  * This configuration file adds the ContextStateManager to the stateManager.

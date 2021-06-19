@@ -1,17 +1,16 @@
 import { inject, injectable } from "@robotlegsjs/core";
 import { Mediator } from "@robotlegsjs/pixi";
 import { Sprite } from "pixi.js";
-
-import { GameEvent } from "./../events/GameEvent";
-import { GameManager } from "./../managers/GameManager";
-import { GameModel } from "./../models/GameModel";
-import { Tile } from "./../models/Tile";
-import { TileGroup } from "./../models/TileGroup";
-import { GameUtils } from "./../utils/GameUtils";
-import { PixiFactory } from "./../utils/PixiFactory";
-import { TilePool } from "./../utils/TilePool";
-import { GridComponent } from "./../views/components/GridComponent";
-import { TileDisplay } from "./../views/components/TileDisplay";
+import { GameEvent } from "../events/GameEvent";
+import { GameManager } from "../managers/GameManager";
+import { GameModel } from "../models/GameModel";
+import { Tile } from "../models/Tile";
+import { TileGroup } from "../models/TileGroup";
+import { GameUtils } from "../utils/GameUtils";
+import { PixiFactory } from "../utils/PixiFactory";
+import { TilePool } from "../utils/TilePool";
+import { GridComponent } from "../views/components/GridComponent";
+import { TileDisplay } from "../views/components/TileDisplay";
 
 @injectable()
 export class GridComponentMediator extends Mediator<GridComponent> {

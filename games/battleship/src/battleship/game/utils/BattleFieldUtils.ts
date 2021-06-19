@@ -1,6 +1,6 @@
+import { BattleField } from "../models/BattleField";
 import { Ship } from "../models/Ship";
 import { Tile } from "../models/Tile";
-import { BattleField } from "../models/BattleField";
 
 export class BattleFieldUtils {
     public static generateBattleField(): BattleField {

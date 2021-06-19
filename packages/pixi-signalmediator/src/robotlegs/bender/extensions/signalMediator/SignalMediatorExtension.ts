@@ -7,7 +7,6 @@
 // ------------------------------------------------------------------------------
 
 import { IContext, IExtension, UID } from "@robotlegsjs/core";
-
 import { ISignalMap } from "./api/ISignalMap";
 import { SignalMap } from "./impl/SignalMap";
 

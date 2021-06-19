@@ -6,7 +6,6 @@
 // ------------------------------------------------------------------------------
 
 import { ICommand } from "@robotlegsjs/core";
-
 import { ISubCommandMapper } from "../dsl/ISubCommandMapper";
 import { ISubCommandUnMapper } from "../dsl/ISubCommandUnMapper";
 

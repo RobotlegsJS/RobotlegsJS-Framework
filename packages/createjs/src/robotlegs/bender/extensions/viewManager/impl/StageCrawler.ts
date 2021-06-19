@@ -6,7 +6,6 @@
 // ------------------------------------------------------------------------------
 
 import { IClass } from "@robotlegsjs/core";
-
 import { ContainerBinding } from "./ContainerBinding";
 
 /**

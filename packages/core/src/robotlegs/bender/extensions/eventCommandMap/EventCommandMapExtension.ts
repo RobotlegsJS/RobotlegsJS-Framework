@@ -7,7 +7,6 @@
 
 import { IContext } from "../../framework/api/IContext";
 import { IExtension } from "../../framework/api/IExtension";
-
 import { IEventCommandMap } from "./api/IEventCommandMap";
 import { EventCommandMap } from "./impl/EventCommandMap";
 

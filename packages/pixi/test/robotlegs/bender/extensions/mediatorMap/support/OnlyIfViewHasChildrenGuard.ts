@@ -5,9 +5,8 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
+import { IGuard, inject, injectable } from "@robotlegsjs/core";
 import { Sprite } from "pixi.js";
-
-import { injectable, inject, IGuard } from "@robotlegsjs/core";
 
 @injectable()
 export class OnlyIfViewHasChildrenGuard implements IGuard {

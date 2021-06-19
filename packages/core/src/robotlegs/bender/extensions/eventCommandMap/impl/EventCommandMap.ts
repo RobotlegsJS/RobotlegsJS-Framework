@@ -5,24 +5,17 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import { injectable, inject } from "inversify";
-
+import { inject, injectable } from "inversify";
+import { IEvent } from "../../../events/api/IEvent";
+import { IEventDispatcher } from "../../../events/api/IEventDispatcher";
 import { IContext } from "../../../framework/api/IContext";
 import { IInjector } from "../../../framework/api/IInjector";
 import { ILogger } from "../../../framework/api/ILogger";
-
-import { IEvent } from "../../../events/api/IEvent";
-import { IEventDispatcher } from "../../../events/api/IEventDispatcher";
-
-import { IClass } from "../../matching/IClass";
-
 import { ICommandMapper } from "../../commandCenter/dsl/ICommandMapper";
 import { ICommandUnmapper } from "../../commandCenter/dsl/ICommandUnmapper";
-
 import { CommandTriggerMap } from "../../commandCenter/impl/CommandTriggerMap";
-
 import { IEventCommandMap } from "../../eventCommandMap/api/IEventCommandMap";
-
+import { IClass } from "../../matching/IClass";
 import { EventCommandTrigger } from "./EventCommandTrigger";
 
 /**

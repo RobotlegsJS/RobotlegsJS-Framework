@@ -1,8 +1,7 @@
+import { Sprite } from "pixi.js";
+import { Ship } from "../../game/models/Ship";
 import { AtlasKeys } from "../../utils/AtlasKeys";
 import { IsoUtils } from "../../utils/IsoUtils";
-import { Ship } from "../../game/models/Ship";
-
-import { Sprite } from "pixi.js";
 
 export class ShipDisplay extends Sprite {
     public constructor(ship: Ship) {

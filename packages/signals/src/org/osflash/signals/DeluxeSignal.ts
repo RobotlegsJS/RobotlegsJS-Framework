@@ -5,9 +5,9 @@
  * LICENSE file in the root directory of this source tree.
  */
 
+import { IEvent } from "./events/IEvent";
 import { PrioritySignal } from "./PrioritySignal";
 import { SlotList } from "./SlotList";
-import { IEvent } from "./events/IEvent";
 
 /**
  * Allows the valueClasses to be set in MXML, e.g.

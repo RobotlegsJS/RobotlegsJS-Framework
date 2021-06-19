@@ -7,7 +7,6 @@
 
 import { IContext } from "../../framework/api/IContext";
 import { IExtension } from "../../framework/api/IExtension";
-
 import { IDirectCommandMap } from "./api/IDirectCommandMap";
 import { DirectCommandMap } from "./impl/DirectCommandMap";
 

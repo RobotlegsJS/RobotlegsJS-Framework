@@ -6,10 +6,8 @@
 // ------------------------------------------------------------------------------
 
 import { IContext, IExtension, IInjector } from "@robotlegsjs/core";
-
 import { IStateManager } from "./api/IStateManager";
 import { StateManager } from "./impl/StateManager";
-
 import { StateRegistry } from "./impl/StateRegistry";
 
 /**

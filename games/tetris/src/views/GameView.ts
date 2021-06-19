@@ -1,9 +1,8 @@
 import { Container, Sprite } from "pixi.js";
-
-import { AtlasKeys } from "./../utils/AtlasKeys";
-import { MagicValues } from "./../utils/MagicValues";
-import { PixiFactory } from "./../utils/PixiFactory";
-import { ViewPortSize } from "./../utils/ViewPortSize";
+import { AtlasKeys } from "../utils/AtlasKeys";
+import { MagicValues } from "../utils/MagicValues";
+import { PixiFactory } from "../utils/PixiFactory";
+import { ViewPortSize } from "../utils/ViewPortSize";
 import { GridComponent } from "./components/GridComponent";
 import { HUDGameComponent } from "./components/HUDGameComponent";
 import { NextPieceComponent } from "./components/NextPieceComponent";

@@ -5,18 +5,14 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import "../../../../entry";
-
 import { assert } from "chai";
-
+import { instanceOfType } from "../../../../../src/robotlegs/bender/extensions/matching/instanceOfType";
 import { IConfig } from "../../../../../src/robotlegs/bender/framework/api/IConfig";
 import { IInjector } from "../../../../../src/robotlegs/bender/framework/api/IInjector";
-import { Context } from "../../../../../src/robotlegs/bender/framework/impl/Context";
 import { ConfigManager } from "../../../../../src/robotlegs/bender/framework/impl/ConfigManager";
+import { Context } from "../../../../../src/robotlegs/bender/framework/impl/Context";
 import { instantiateUnmapped } from "../../../../../src/robotlegs/bender/framework/impl/instantiateUnmapped";
-
-import { instanceOfType } from "../../../../../src/robotlegs/bender/extensions/matching/instanceOfType";
-
+import "../../../../entry";
 import { TypedConfig } from "./configSupport/TypedConfig";
 import { TestObject } from "./objectSupport/TestObject";
 

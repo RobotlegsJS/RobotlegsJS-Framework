@@ -5,10 +5,10 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import Sprite from "openfl/display/Sprite";
 import Loader from "openfl/display/Loader";
-import URLRequest from "openfl/net/URLRequest";
+import Sprite from "openfl/display/Sprite";
 import Event from "openfl/events/Event";
+import URLRequest from "openfl/net/URLRequest";
 
 export class RobotlegsView extends Sprite {
     public constructor() {

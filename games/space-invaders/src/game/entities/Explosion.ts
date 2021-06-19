@@ -1,4 +1,4 @@
-import { ExplosionDisplay } from "./../displays/ExplosionDisplay";
+import { ExplosionDisplay } from "../displays/ExplosionDisplay";
 import { Entity } from "./Entity";
 
 export class Explosion extends Entity {

@@ -5,11 +5,9 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import "../../../../../entry";
-
 import { assert } from "chai";
-
 import { dummyMethod } from "../../../../../../src";
+import "../../../../../entry";
 
 describe("Dummy test", () => {
     beforeEach(() => {});

@@ -5,19 +5,14 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import "../../../../../entry";
-
-import { assert } from "chai";
-
-import { Container } from "pixi.js";
-
 import { IClass } from "@robotlegsjs/core";
-
+import { assert } from "chai";
+import { Container } from "pixi.js";
 import { applyPixiPatch } from "../../../../../../src/robotlegs/bender/extensions/contextView/pixiPatch/pixi-patch";
 import { ConfigureViewEvent } from "../../../../../../src/robotlegs/bender/extensions/viewManager/impl/ConfigureViewEvent";
 import { ContainerRegistry } from "../../../../../../src/robotlegs/bender/extensions/viewManager/impl/ContainerRegistry";
 import { ManualStageObserver } from "../../../../../../src/robotlegs/bender/extensions/viewManager/impl/ManualStageObserver";
-
+import "../../../../../entry";
 import { CallbackViewHandler } from "../support/CallbackViewHandler";
 
 describe("StageObserver", () => {

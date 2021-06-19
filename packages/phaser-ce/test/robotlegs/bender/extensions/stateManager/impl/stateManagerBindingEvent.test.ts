@@ -5,11 +5,9 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import "../../../../../entry";
-
 import { assert } from "chai";
-
 import { StateManagerBindingEvent } from "../../../../../../src/robotlegs/bender/extensions/stateManager/impl/StateManagerBindingEvent";
+import "../../../../../entry";
 
 describe("StateManagerBindingEvent", () => {
     let event: StateManagerBindingEvent = null;

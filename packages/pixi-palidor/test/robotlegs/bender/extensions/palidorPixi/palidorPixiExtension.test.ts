@@ -5,24 +5,22 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import "../../../../entry";
-
-import { IContainerController, IFlowManager, PalidorPixiExtension } from "../../../../../src";
-
-import { assert } from "chai";
-import { Container } from "pixi.js";
-
 import {
     Context,
-    InjectableLoggerExtension,
-    EventDispatcherExtension,
     DirectCommandMapExtension,
     EventCommandMapExtension,
+    EventDispatcherExtension,
+    InjectableLoggerExtension,
     LocalEventMapExtension,
     MVCSBundle
 } from "@robotlegsjs/core";
-
 import { ContextView, PixiBundle } from "@robotlegsjs/pixi";
+import { assert } from "chai";
+import { Container } from "pixi.js";
+import { IContainerController } from "../../../../../src/robotlegs/bender/extensions/palidorPixi/api/IContainerController";
+import { IFlowManager } from "../../../../../src/robotlegs/bender/extensions/palidorPixi/api/IFlowManager";
+import { PalidorPixiExtension } from "../../../../../src/robotlegs/bender/extensions/palidorPixi/PalidorPixiExtension";
+import "../../../../entry";
 
 describe("PalidorPixiExtension", () => {
     let context: Context;

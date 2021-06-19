@@ -1,18 +1,17 @@
 import { IConfig, IContext, IEventCommandMap, inject, injectable } from "@robotlegsjs/core";
-
-import { GameEvent } from "./../events/GameEvent";
-import { CreateLevelCommand } from "./../game/commands/CreateLevelCommand";
-import { GameOverCommand } from "./../game/commands/GameOverCommand";
-import { RetryGameCommand } from "./../game/commands/RetryGameCommand";
-import { SwapPiecesCommand } from "./../game/commands/SwapPiecesCommand";
-import { SwapPiecesConfirmCommand } from "./../game/commands/SwapPiecesConfirmCommand";
-import { GameManager } from "./../game/managers/GameManager";
-import { GameStatus } from "./../game/models/GameStatus";
-import { LevelModel } from "./../game/models/LevelModel";
-import { SwapModel } from "./../game/models/SwapModel";
-import { LevelsRepository } from "./../game/utils/LevelRepository";
-import { PixiSpritePool } from "./../game/utils/PieceDisplayPool";
-import { GameService } from "./../services/GameService";
+import { GameEvent } from "../events/GameEvent";
+import { CreateLevelCommand } from "../game/commands/CreateLevelCommand";
+import { GameOverCommand } from "../game/commands/GameOverCommand";
+import { RetryGameCommand } from "../game/commands/RetryGameCommand";
+import { SwapPiecesCommand } from "../game/commands/SwapPiecesCommand";
+import { SwapPiecesConfirmCommand } from "../game/commands/SwapPiecesConfirmCommand";
+import { GameManager } from "../game/managers/GameManager";
+import { GameStatus } from "../game/models/GameStatus";
+import { LevelModel } from "../game/models/LevelModel";
+import { SwapModel } from "../game/models/SwapModel";
+import { LevelsRepository } from "../game/utils/LevelRepository";
+import { PixiSpritePool } from "../game/utils/PieceDisplayPool";
+import { GameService } from "../services/GameService";
 
 @injectable()
 export class GameConfig implements IConfig {

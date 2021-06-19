@@ -1,9 +1,8 @@
-import "../entry";
-
-import { TileGroupFactory } from "./../../src/utils/TileGroupFactory";
-import { TileGroup } from "./../../src/models/TileGroup";
-import { Tile } from "./../../src/models/Tile";
 import { assert } from "chai";
+import { Tile } from "../../src/models/Tile";
+import { TileGroup } from "../../src/models/TileGroup";
+import { TileGroupFactory } from "../../src/utils/TileGroupFactory";
+import "../entry";
 
 describe("TileGroup", () => {
     function generateTilesBackup(tiles: Tile[]): Tile[] {

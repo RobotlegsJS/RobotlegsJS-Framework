@@ -5,17 +5,15 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import "../../../entry";
-
 import { assert } from "chai";
-
 import { ISignal } from "../../../../src/org/osflash/signals/ISignal";
 import { ISlot } from "../../../../src/org/osflash/signals/ISlot";
 import { Signal } from "../../../../src/org/osflash/signals/Signal";
-import { Sprite } from "../../../mock/Sprite";
-import { MockMouseEvent } from "../../../mock/MockMouseEvent";
+import "../../../entry";
 import { MockEvent } from "../../../mock/MockEvent";
-import { newEmptyHandler, failIfCalled } from "../../../util/TestBase";
+import { MockMouseEvent } from "../../../mock/MockMouseEvent";
+import { Sprite } from "../../../mock/Sprite";
+import { failIfCalled, newEmptyHandler } from "../../../util/TestBase";
 
 describe("SlotListTest", () => {
     let signal: ISignal;

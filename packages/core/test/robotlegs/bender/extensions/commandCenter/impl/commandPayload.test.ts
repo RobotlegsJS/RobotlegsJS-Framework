@@ -5,13 +5,10 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import "../../../../../entry";
-
 import { assert } from "chai";
-
-import { IType } from "../../../../../../src/robotlegs/bender/extensions/matching/IType";
-
 import { CommandPayload } from "../../../../../../src/robotlegs/bender/extensions/commandCenter/api/CommandPayload";
+import { IType } from "../../../../../../src/robotlegs/bender/extensions/matching/IType";
+import "../../../../../entry";
 
 describe("CommandPayload", () => {
     let subject: CommandPayload;

@@ -6,7 +6,6 @@
 // ------------------------------------------------------------------------------
 
 import { EventDispatcher } from "@robotlegsjs/core";
-
 import { ContainerBinding } from "./ContainerBinding";
 import { ContainerBindingEvent } from "./ContainerBindingEvent";
 import { ContainerRegistryEvent } from "./ContainerRegistryEvent";

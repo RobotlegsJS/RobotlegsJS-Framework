@@ -1,5 +1,4 @@
 import { injectable } from "@robotlegsjs/core";
-
 import { Tile } from "./Tile";
 import { TouchPhase } from "./TouchPhase";
 

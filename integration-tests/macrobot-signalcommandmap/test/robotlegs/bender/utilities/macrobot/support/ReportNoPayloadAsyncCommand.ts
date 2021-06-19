@@ -6,7 +6,6 @@
 // ------------------------------------------------------------------------------
 
 import { injectable } from "@robotlegsjs/core";
-
 import { AsyncCommand } from "@robotlegsjs/macrobot";
 
 @injectable()

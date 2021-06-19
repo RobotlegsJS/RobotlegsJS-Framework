@@ -5,11 +5,9 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import "../../../../entry";
-
 import { assert } from "chai";
-
 import { TypeMatcherError } from "../../../../../src/robotlegs/bender/extensions/matching/TypeMatcherError";
+import "../../../../entry";
 
 describe("TypeMatcherError", () => {
     let typeMatcherError: TypeMatcherError;

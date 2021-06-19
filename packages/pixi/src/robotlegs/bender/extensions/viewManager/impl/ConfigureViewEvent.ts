@@ -6,7 +6,6 @@
 // ------------------------------------------------------------------------------
 
 import { Event } from "@robotlegsjs/core";
-
 import { Container } from "pixi.js";
 
 /**

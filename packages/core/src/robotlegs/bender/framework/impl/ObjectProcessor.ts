@@ -6,7 +6,6 @@
 // ------------------------------------------------------------------------------
 
 import { IMatcher } from "../api/IMatcher";
-
 import { ObjectHandler } from "./ObjectHandler";
 
 /**

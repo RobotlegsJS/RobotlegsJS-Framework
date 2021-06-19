@@ -5,8 +5,7 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import { injectable, inject, IConfig, IContext } from "@robotlegsjs/core";
-
+import { IConfig, IContext, inject, injectable } from "@robotlegsjs/core";
 import { GameModel } from "../models/GameModel";
 
 @injectable()

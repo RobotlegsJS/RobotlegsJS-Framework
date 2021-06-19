@@ -1,14 +1,13 @@
 import { IConfig, IContext, IEventCommandMap, inject, injectable } from "@robotlegsjs/core";
-
-import { CreateLevelCommand } from "./../commands/CreateLevelCommand";
-import { GameOverCommand } from "./../commands/GameOverCommand";
-import { GetNextPieceCommand } from "./../commands/GetNextPieceCommand";
-import { IncreasePointsCommand } from "./../commands/IncreasePointsCommand";
-import { GameEvent } from "./../events/GameEvent";
-import { GameManager } from "./../managers/GameManager";
-import { GameModel } from "./../models/GameModel";
-import { GameService } from "./../services/GameService";
-import { TilePool } from "./../utils/TilePool";
+import { CreateLevelCommand } from "../commands/CreateLevelCommand";
+import { GameOverCommand } from "../commands/GameOverCommand";
+import { GetNextPieceCommand } from "../commands/GetNextPieceCommand";
+import { IncreasePointsCommand } from "../commands/IncreasePointsCommand";
+import { GameEvent } from "../events/GameEvent";
+import { GameManager } from "../managers/GameManager";
+import { GameModel } from "../models/GameModel";
+import { GameService } from "../services/GameService";
+import { TilePool } from "../utils/TilePool";
 
 @injectable()
 export class GameConfig implements IConfig {

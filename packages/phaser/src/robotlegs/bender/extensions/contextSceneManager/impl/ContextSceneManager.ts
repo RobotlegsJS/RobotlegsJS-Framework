@@ -6,7 +6,6 @@
 // ------------------------------------------------------------------------------
 
 import { IConfig } from "@robotlegsjs/core";
-
 import { IContextSceneManager } from "../api/IContextSceneManager";
 
 /**

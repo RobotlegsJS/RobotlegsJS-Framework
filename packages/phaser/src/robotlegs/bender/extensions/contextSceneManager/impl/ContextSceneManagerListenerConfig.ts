@@ -5,8 +5,7 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import { inject, injectable, IConfig } from "@robotlegsjs/core";
-
+import { IConfig, inject, injectable } from "@robotlegsjs/core";
 import { ISceneManager } from "../../viewManager/api/ISceneManager";
 import { IContextSceneManager } from "../api/IContextSceneManager";
 

@@ -5,11 +5,9 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import { IClass, EventDispatcher } from "@robotlegsjs/core";
-
+import { EventDispatcher, IClass } from "@robotlegsjs/core";
 import { ISceneHandler } from "../api/ISceneHandler";
 import { IViewHandler } from "../api/IViewHandler";
-
 import { SceneManagerBindingEvent } from "./SceneManagerBindingEvent";
 
 /**

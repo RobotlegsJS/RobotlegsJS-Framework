@@ -5,13 +5,11 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import { ILogger, ITypeFilter, IClass } from "@robotlegsjs/core";
-
+import { IClass, ILogger, ITypeFilter } from "@robotlegsjs/core";
 import { IMediatorMapping } from "../api/IMediatorMapping";
 import { IMediatorConfigurator } from "../dsl/IMediatorConfigurator";
 import { IMediatorMapper } from "../dsl/IMediatorMapper";
 import { IMediatorUnmapper } from "../dsl/IMediatorUnmapper";
-
 import { AbstractMediatorHandler } from "./AbstractMediatorHandler";
 import { MediatorMapping } from "./MediatorMapping";
 

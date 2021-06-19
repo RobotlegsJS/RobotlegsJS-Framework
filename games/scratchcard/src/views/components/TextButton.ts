@@ -1,5 +1,4 @@
 import { Container, Graphics, Text } from "pixi.js";
-
 import { Colors } from "../../utils/Colors";
 
 export class TextButton extends Container {

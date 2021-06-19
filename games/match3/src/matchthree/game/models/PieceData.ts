@@ -1,6 +1,5 @@
 import { Sprite } from "pixi.js";
-
-import { PieceType } from "./../utils/PieceType";
+import { PieceType } from "../utils/PieceType";
 import { Tile } from "./Tile";
 
 export class PieceData {

@@ -1,9 +1,8 @@
 import { Container } from "pixi.js";
-
 import { GridData } from "../../game/models/GridData";
 import { MagicValues } from "../../utils/MagicValues";
 import { PixiFactory } from "../../utils/PixiFactory";
-import { ViewPortSize } from "./../../utils/ViewPortSize";
+import { ViewPortSize } from "../../utils/ViewPortSize";
 
 export class GridFieldComponent extends Container {
     public constructor() {

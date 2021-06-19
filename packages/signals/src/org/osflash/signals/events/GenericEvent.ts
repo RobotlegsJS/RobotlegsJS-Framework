@@ -5,8 +5,8 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import { IEvent } from "./IEvent";
 import { IPrioritySignal } from "../IPrioritySignal";
+import { IEvent } from "./IEvent";
 
 /**
  *

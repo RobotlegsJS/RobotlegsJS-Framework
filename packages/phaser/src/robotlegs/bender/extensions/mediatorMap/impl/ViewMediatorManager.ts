@@ -7,7 +7,6 @@
 
 import { IMediatorManager } from "../api/IMediatorManager";
 import { IMediatorMapping } from "../api/IMediatorMapping";
-
 import { ViewMediatorFactory } from "./ViewMediatorFactory";
 
 /**

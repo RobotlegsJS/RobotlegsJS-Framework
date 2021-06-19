@@ -5,39 +5,30 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import "../../../../../entry";
-
 import { assert } from "chai";
-
-import { IContext } from "../../../../../../src/robotlegs/bender/framework/api/IContext";
-import { IInjector } from "../../../../../../src/robotlegs/bender/framework/api/IInjector";
-import { Context } from "../../../../../../src/robotlegs/bender/framework/impl/Context";
-
 import { IEventDispatcher } from "../../../../../../src/robotlegs/bender/events/api/IEventDispatcher";
 import { Event } from "../../../../../../src/robotlegs/bender/events/impl/Event";
 import { EventDispatcher } from "../../../../../../src/robotlegs/bender/events/impl/EventDispatcher";
-
 import { ICommand } from "../../../../../../src/robotlegs/bender/extensions/commandCenter/api/ICommand";
 import { ICommandMapping } from "../../../../../../src/robotlegs/bender/extensions/commandCenter/api/ICommandMapping";
 import { ICommandMapper } from "../../../../../../src/robotlegs/bender/extensions/commandCenter/dsl/ICommandMapper";
 import { CommandMapper } from "../../../../../../src/robotlegs/bender/extensions/commandCenter/impl/CommandMapper";
-
 import { IEventCommandMap } from "../../../../../../src/robotlegs/bender/extensions/eventCommandMap/api/IEventCommandMap";
 import { EventCommandMap } from "../../../../../../src/robotlegs/bender/extensions/eventCommandMap/impl/EventCommandMap";
-
-import { HappyGuard } from "../../../framework/impl/guardSupport/HappyGuard";
+import { IContext } from "../../../../../../src/robotlegs/bender/framework/api/IContext";
+import { IInjector } from "../../../../../../src/robotlegs/bender/framework/api/IInjector";
+import { Context } from "../../../../../../src/robotlegs/bender/framework/impl/Context";
+import "../../../../../entry";
 import { GrumpyGuard } from "../../../framework/impl/guardSupport/GrumpyGuard";
-
+import { HappyGuard } from "../../../framework/impl/guardSupport/HappyGuard";
 import { CallbackCommand } from "../../commandCenter/support/CallbackCommand";
 import { CallbackCommand2 } from "../../commandCenter/support/CallbackCommand2";
-import { ClassReportingCallbackGuard } from "../../commandCenter/support/ClassReportingCallbackGuard";
-import { ClassReportingCallbackGuard2 } from "../../commandCenter/support/ClassReportingCallbackGuard2";
 import { ClassReportingCallbackCommand } from "../../commandCenter/support/ClassReportingCallbackCommand";
 import { ClassReportingCallbackCommand2 } from "../../commandCenter/support/ClassReportingCallbackCommand2";
+import { ClassReportingCallbackGuard } from "../../commandCenter/support/ClassReportingCallbackGuard";
+import { ClassReportingCallbackGuard2 } from "../../commandCenter/support/ClassReportingCallbackGuard2";
 import { ClassReportingCallbackHook } from "../../commandCenter/support/ClassReportingCallbackHook";
-
 import { NullCommand } from "../../commandCenter/support/NullCommand";
-
 import { CascadingCommand } from "../support/CascadingCommand";
 import { CommandMappingCommand } from "../support/CommandMappingCommand";
 import { CommandUnmappingCommand } from "../support/CommandUnmappingCommand";

@@ -5,23 +5,18 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import "../../../../../entry";
-
-import sinon = require("sinon");
-
-import { assert } from "chai";
-
+import { CommandMapper, IInjector, RobotlegsInjector } from "@robotlegsjs/core";
 import { ISignal, Signal } from "@robotlegsjs/signals";
-
-import { IInjector, RobotlegsInjector, CommandMapper } from "@robotlegsjs/core";
-
-import { SignalCommandMapExtension } from "../../../../../../src/robotlegs/bender/extensions/signalCommandMap/SignalCommandMapExtension";
+import { assert } from "chai";
 import { SignalCommandTrigger } from "../../../../../../src/robotlegs/bender/extensions/signalCommandMap/impl/SignalCommandTrigger";
-
+import { SignalCommandMapExtension } from "../../../../../../src/robotlegs/bender/extensions/signalCommandMap/SignalCommandMapExtension";
+import "../../../../../entry";
 import { CallbackCommand } from "../support/CallbackCommand";
 import { CallbackParametersCommand } from "../support/CallbackParametersCommand";
 import { NullCommand } from "../support/NullCommand";
 import { ParametersSignal } from "../support/ParametersSignal";
+
+import sinon = require("sinon");
 
 describe("SignalCommandTrigger", () => {
     let extension: SignalCommandMapExtension;

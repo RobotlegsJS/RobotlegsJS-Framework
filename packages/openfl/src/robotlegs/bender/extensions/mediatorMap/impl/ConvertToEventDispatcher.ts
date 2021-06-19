@@ -6,9 +6,8 @@
 // ------------------------------------------------------------------------------
 
 import { IEvent, IEventDispatcher } from "@robotlegsjs/core";
-
-import EventDispatcher from "openfl/events/EventDispatcher";
 import Event from "openfl/events/Event";
+import EventDispatcher from "openfl/events/EventDispatcher";
 
 /**
  * Makes the bridge between the EventDispatcher from OpenFL and IEventDispatcher.

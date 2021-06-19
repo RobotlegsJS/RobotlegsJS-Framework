@@ -5,16 +5,12 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import "../../../../../entry";
-
+import { Context, IContext, IInjector } from "@robotlegsjs/core";
 import { assert } from "chai";
-
-import { IContext, IInjector, Context } from "@robotlegsjs/core";
-
-import { SignalCommandMapExtension } from "../../../../../../src/robotlegs/bender/extensions/signalCommandMap/SignalCommandMapExtension";
 import { ISignalCommandMap } from "../../../../../../src/robotlegs/bender/extensions/signalCommandMap/api/ISignalCommandMap";
 import { SignalCommandMap } from "../../../../../../src/robotlegs/bender/extensions/signalCommandMap/impl/SignalCommandMap";
-
+import { SignalCommandMapExtension } from "../../../../../../src/robotlegs/bender/extensions/signalCommandMap/SignalCommandMapExtension";
+import "../../../../../entry";
 import { CascadingCommand } from "../support/CascadingCommand";
 import { ExecuteMethodWithParametersCommand } from "../support/ExecuteMethodWithParametersCommand";
 import { GrumpyGuard } from "../support/GrumpyGuard";

@@ -5,17 +5,13 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import { injectable, inject, EventDispatcher } from "@robotlegsjs/core";
-
+import { EventDispatcher, inject, injectable } from "@robotlegsjs/core";
+import DisplayObjectContainer from "openfl/display/DisplayObjectContainer";
 import { IViewHandler } from "../api/IViewHandler";
 import { IViewManager } from "../api/IViewManager";
-
-import { ViewManagerEvent } from "./ViewManagerEvent";
-
-import { ContainerRegistry } from "./ContainerRegistry";
 import { ContainerBinding } from "./ContainerBinding";
-
-import DisplayObjectContainer from "openfl/display/DisplayObjectContainer";
+import { ContainerRegistry } from "./ContainerRegistry";
+import { ViewManagerEvent } from "./ViewManagerEvent";
 
 // [Event(name="containerAdd", type="robotlegs.bender.extensions.viewManager.impl.ViewManagerEvent")]
 // [Event(name="containerRemove", type="robotlegs.bender.extensions.viewManager.impl.ViewManagerEvent")]

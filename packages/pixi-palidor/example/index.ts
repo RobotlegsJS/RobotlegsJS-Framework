@@ -8,7 +8,6 @@
 /// <reference path="../node_modules/@robotlegsjs/pixi/definitions/pixi.d.ts" />
 
 import "reflect-metadata";
-
 import { Game } from "./Game";
 
 (<any>window).initGame = () => {

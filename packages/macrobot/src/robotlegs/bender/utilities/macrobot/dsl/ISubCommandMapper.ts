@@ -6,7 +6,6 @@
 // ------------------------------------------------------------------------------
 
 import { IClass, ICommand } from "@robotlegsjs/core";
-
 import { ISubCommandConfigurator } from "./ISubCommandConfigurator";
 
 export interface ISubCommandMapper {

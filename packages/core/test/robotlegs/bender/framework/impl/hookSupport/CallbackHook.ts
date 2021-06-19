@@ -5,8 +5,7 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import { injectable, inject, named } from "inversify";
-
+import { inject, injectable, named } from "inversify";
 import { IHook } from "../../../../../../src/robotlegs/bender/framework/api/IHook";
 
 @injectable()

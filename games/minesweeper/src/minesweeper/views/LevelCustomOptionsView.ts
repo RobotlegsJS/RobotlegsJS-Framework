@@ -1,10 +1,9 @@
 import { TweenLite } from "gsap";
 import { Container } from "pixi.js";
-
 import { AtlasKeys } from "../utils/AtlasKeys";
+import { PixiFactory } from "../utils/PixiFactory";
 import { Texts } from "../utils/Texts";
-import { PixiFactory } from "./../utils/PixiFactory";
-import { ViewPortSize } from "./../utils/ViewPortSize";
+import { ViewPortSize } from "../utils/ViewPortSize";
 import { CustomButton } from "./components/CustomButton";
 import { NumericStepper } from "./components/NumericStepper";
 

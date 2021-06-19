@@ -1,12 +1,10 @@
-import { Ship } from "../game/models/Ship";
+import { inject, injectable } from "@robotlegsjs/core";
+import { Mediator } from "@robotlegsjs/pixi";
 import { GameEvent } from "../events/GameEvent";
 import { BattleField } from "../game/models/BattleField";
 import { LevelModel } from "../game/models/LevelModel";
+import { Ship } from "../game/models/Ship";
 import { HeroComponent } from "../views/components/HeroComponent";
-
-import { injectable, inject } from "@robotlegsjs/core";
-
-import { Mediator } from "@robotlegsjs/pixi";
 
 @injectable()
 export class HeroComponentMediator extends Mediator<HeroComponent> {

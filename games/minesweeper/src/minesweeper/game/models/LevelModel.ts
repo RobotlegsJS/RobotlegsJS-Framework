@@ -1,5 +1,4 @@
 import { injectable } from "@robotlegsjs/core";
-
 import { Cell } from "./Cell";
 import { GridData } from "./GridData";
 

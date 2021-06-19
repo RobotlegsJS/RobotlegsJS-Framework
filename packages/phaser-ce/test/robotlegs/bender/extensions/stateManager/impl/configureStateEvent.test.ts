@@ -5,11 +5,9 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import "../../../../../entry";
-
 import { assert } from "chai";
-
 import { ConfigureStateEvent } from "../../../../../../src/robotlegs/bender/extensions/stateManager/impl/ConfigureStateEvent";
+import "../../../../../entry";
 
 describe("ConfigureStateEvent", () => {
     let state: Phaser.State = null;

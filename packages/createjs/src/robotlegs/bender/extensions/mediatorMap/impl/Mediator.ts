@@ -6,17 +6,15 @@
 // ------------------------------------------------------------------------------
 
 import {
-    injectable,
-    inject,
+    Event,
     IClass,
     IEvent,
-    IEventMap,
     IEventDispatcher,
-    Event
+    IEventMap,
+    inject,
+    injectable
 } from "@robotlegsjs/core";
-
 import { IMediator } from "../api/IMediator";
-
 import { ConvertToEventDispatcher } from "./ConvertToEventDispatcher";
 
 /**

@@ -1,8 +1,6 @@
-import "../../../entry";
-
 import { assert } from "chai";
-
-import { LevelInfo } from "./../../../../src/matchthree/game/models/LevelInfo";
+import { LevelInfo } from "../../../../src/matchthree/game/models/LevelInfo";
+import "../../../entry";
 
 describe("LevelInfo", () => {
     it("Constructor: When the type is MOVE_TYPE", () => {

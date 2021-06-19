@@ -5,18 +5,13 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import "../../../../../entry";
-
 import { assert } from "chai";
-
-import {
-    IContextStateManager,
-    ContextStateManager,
-    ContextStateManagerListenerConfig
-} from "../../../../../../src";
-
-import { StateRegistry } from "../../../../../../src/robotlegs/bender/extensions/stateManager/impl/StateRegistry";
+import { IContextStateManager } from "../../../../../../src/robotlegs/bender/extensions/contextStateManager/api/IContextStateManager";
+import { ContextStateManager } from "../../../../../../src/robotlegs/bender/extensions/contextStateManager/impl/ContextStateManager";
+import { ContextStateManagerListenerConfig } from "../../../../../../src/robotlegs/bender/extensions/contextStateManager/impl/ContextStateManagerListenerConfig";
 import { StateManager } from "../../../../../../src/robotlegs/bender/extensions/stateManager/impl/StateManager";
+import { StateRegistry } from "../../../../../../src/robotlegs/bender/extensions/stateManager/impl/StateRegistry";
+import "../../../../../entry";
 
 describe("ContextStateManagerListenerConfig", () => {
     let phaserStateManager: Phaser.StateManager;

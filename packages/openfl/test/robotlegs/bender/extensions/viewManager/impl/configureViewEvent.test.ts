@@ -5,13 +5,10 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import "../../../../../entry";
-
 import { assert } from "chai";
-
 import DisplayObjectContainer from "openfl/display/DisplayObjectContainer";
-
 import { ConfigureViewEvent } from "../../../../../../src/robotlegs/bender/extensions/viewManager/impl/ConfigureViewEvent";
+import "../../../../../entry";
 
 describe("ConfigureViewEvent", () => {
     let container: DisplayObjectContainer = null;

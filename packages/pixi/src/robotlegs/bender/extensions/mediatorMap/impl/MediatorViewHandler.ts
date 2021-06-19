@@ -5,13 +5,10 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import { DisplayObject } from "pixi.js";
-
 import { IClass } from "@robotlegsjs/core";
-
-import { IMediatorMapping } from "../api/IMediatorMapping";
+import { DisplayObject } from "pixi.js";
 import { IViewHandler } from "../../viewManager/api/IViewHandler";
-
+import { IMediatorMapping } from "../api/IMediatorMapping";
 import { MediatorFactory } from "./MediatorFactory";
 
 /**

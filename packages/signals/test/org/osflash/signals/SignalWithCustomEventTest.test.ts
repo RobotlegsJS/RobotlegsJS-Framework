@@ -5,14 +5,11 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import "../../../entry";
-
 import { assert } from "chai";
-
-import { Signal } from "../../../../src/org/osflash/signals/Signal";
-import { AsyncUtil } from "../../../util/AsyncUtil";
 import { GenericEvent } from "../../../../src/org/osflash/signals/events/GenericEvent";
-
+import { Signal } from "../../../../src/org/osflash/signals/Signal";
+import "../../../entry";
+import { AsyncUtil } from "../../../util/AsyncUtil";
 import { MessageEvent } from "./support/MessageEvent";
 
 describe("SignalWithCustomEventTest", () => {

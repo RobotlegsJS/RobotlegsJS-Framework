@@ -6,11 +6,9 @@
 // ------------------------------------------------------------------------------
 
 import { IContext, IExtension, IInjector } from "@robotlegsjs/core";
-
+import { IStateManager } from "../stateManager/api/IStateManager";
 import { IStateMediatorMap } from "./api/IStateMediatorMap";
 import { StateMediatorMap } from "./impl/StateMediatorMap";
-
-import { IStateManager } from "../stateManager/api/IStateManager";
 
 /**
  * This extension installs a shared IStateMediatorMap into the context

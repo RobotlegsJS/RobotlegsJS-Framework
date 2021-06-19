@@ -1,13 +1,10 @@
+import { EventDispatcher } from "@robotlegsjs/core";
+import { assert } from "chai";
+import { GameEvent } from "../../../src/battleship/events/GameEvent";
+import { GameService } from "../../../src/battleship/services/GameService";
 import "../../entry";
 
 import sinon = require("sinon");
-
-import { GameEvent } from "../../../src/battleship/events/GameEvent";
-import { GameService } from "./../../../src/battleship/services/GameService";
-
-import { EventDispatcher } from "@robotlegsjs/core";
-
-import { assert } from "chai";
 
 describe("GameService", () => {
     let gameService: GameService;

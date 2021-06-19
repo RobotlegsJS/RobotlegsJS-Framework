@@ -5,11 +5,9 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-import "../../../entry";
-
 import { assert } from "chai";
-
 import { Promise } from "../../../../src/org/osflash/signals/Promise";
+import "../../../entry";
 
 describe("PromiseTest", () => {
     let promise: Promise;

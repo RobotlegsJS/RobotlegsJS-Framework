@@ -6,7 +6,6 @@
 // ------------------------------------------------------------------------------
 
 import { Mediator } from "../../src/index";
-
 import { RobotlegsView } from "../view/RobotlegsView";
 import { SmileyView } from "../view/SmileyView";
 

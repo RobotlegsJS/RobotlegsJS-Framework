@@ -6,9 +6,7 @@
 // ------------------------------------------------------------------------------
 
 import { IClass } from "@robotlegsjs/core";
-
 import { IViewHandler } from "../../viewManager/api/IViewHandler";
-
 import { AbstractMediatorHandler } from "./AbstractMediatorHandler";
 
 /**

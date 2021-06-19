@@ -1,5 +1,4 @@
 import { injectable } from "@robotlegsjs/core";
-
 import { TileGroup } from "./TileGroup";
 
 @injectable()

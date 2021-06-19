@@ -1,7 +1,6 @@
 import { Container, Text } from "pixi.js";
-
-import { Colors } from "./../../utils/Colors";
-import { PixiFactory } from "./../../utils/PixiFactory";
+import { Colors } from "../../utils/Colors";
+import { PixiFactory } from "../../utils/PixiFactory";
 
 export class DoubleTextField extends Container {
     private _text: Text;

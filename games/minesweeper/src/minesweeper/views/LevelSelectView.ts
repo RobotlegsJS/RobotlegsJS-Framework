@@ -1,10 +1,9 @@
 import { TweenLite } from "gsap";
 import { Container } from "pixi.js";
-
-import { MagicValues } from "./../utils/MagicValues";
-import { PixiFactory } from "./../utils/PixiFactory";
-import { Texts } from "./../utils/Texts";
-import { ViewPortSize } from "./../utils/ViewPortSize";
+import { MagicValues } from "../utils/MagicValues";
+import { PixiFactory } from "../utils/PixiFactory";
+import { Texts } from "../utils/Texts";
+import { ViewPortSize } from "../utils/ViewPortSize";
 import { CustomButton } from "./components/CustomButton";
 
 export class LevelSelectView extends Container {

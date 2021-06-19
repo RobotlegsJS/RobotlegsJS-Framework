@@ -5,10 +5,8 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import DisplayObjectContainer from "openfl/display/DisplayObjectContainer";
-
 import { IClass } from "@robotlegsjs/core";
-
+import DisplayObjectContainer from "openfl/display/DisplayObjectContainer";
 import { IViewHandler } from "../../../../../../src/robotlegs/bender/extensions/viewManager/api/IViewHandler";
 
 /**

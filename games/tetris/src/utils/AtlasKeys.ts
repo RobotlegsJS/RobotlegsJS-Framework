@@ -1,4 +1,4 @@
-import { Texture, Loader, utils } from "pixi.js";
+import { Loader, Texture, utils } from "pixi.js";
 
 export class AtlasKeys {
     public static BUTTON_CANCEL: string = "button_cancel";

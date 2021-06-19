@@ -5,18 +5,15 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import "../../../../entry";
-
 import { assert } from "chai";
-
-import { IInjector } from "../../../../../src/robotlegs/bender/framework/api/IInjector";
-import { IMatcher } from "../../../../../src/robotlegs/bender/framework/api/IMatcher";
 import { instanceOfType } from "../../../../../src/robotlegs/bender/extensions/matching/instanceOfType";
 import { IType } from "../../../../../src/robotlegs/bender/extensions/matching/IType";
-
-import { TypeCollection } from "./support/TypeCollection";
+import { IInjector } from "../../../../../src/robotlegs/bender/framework/api/IInjector";
+import { IMatcher } from "../../../../../src/robotlegs/bender/framework/api/IMatcher";
+import "../../../../entry";
 import { BaseType } from "./support/BaseType";
 import { ExtendedType } from "./support/ExtendedType";
+import { TypeCollection } from "./support/TypeCollection";
 
 describe("instanceOfType", () => {
     let booleanCollection: TypeCollection<Boolean> = new TypeCollection(

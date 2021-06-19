@@ -5,10 +5,8 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
+import { IHook, inject, injectable, named } from "@robotlegsjs/core";
 import { Sprite } from "pixi.js";
-
-import { injectable, inject, named, IHook } from "@robotlegsjs/core";
-
 import { RectangleMediator } from "./RectangleMediator";
 
 @injectable()

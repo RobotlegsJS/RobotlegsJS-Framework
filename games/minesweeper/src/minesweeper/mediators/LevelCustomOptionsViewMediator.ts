@@ -1,11 +1,10 @@
 import { inject, injectable } from "@robotlegsjs/core";
 import { Mediator } from "@robotlegsjs/pixi";
-
+import { CustomLevelModel } from "../game/models/CustomLevelModel";
 import { FlowService } from "../services/FlowService";
-import { CustomLevelModel } from "./../game/models/CustomLevelModel";
-import { GameService } from "./../services/GameService";
-import { Texts } from "./../utils/Texts";
-import { LevelCustomOptionsView } from "./../views/LevelCustomOptionsView";
+import { GameService } from "../services/GameService";
+import { Texts } from "../utils/Texts";
+import { LevelCustomOptionsView } from "../views/LevelCustomOptionsView";
 
 @injectable()
 export class LevelCustomOptionsViewMediator extends Mediator<LevelCustomOptionsView> {

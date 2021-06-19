@@ -1,25 +1,23 @@
+import { IConfig, inject, injectable } from "@robotlegsjs/core";
+import { IMediatorMap } from "@robotlegsjs/pixi";
+import { EnemyComponentMediator } from "../mediators/EnemyComponentMediator";
+import { EnemyTileDisplayMediator } from "../mediators/EnemyTileDisplayMediator";
+import { GameOverPopupMediator } from "../mediators/GameOverPopupMediator";
+import { GameViewMediator } from "../mediators/GameViewMediator";
+import { HeroComponentMediator } from "../mediators/HeroComponentMediator";
+import { HomeViewMediator } from "../mediators/HomeViewMediator";
+import { IntroViewMediator } from "../mediators/IntroViewMediator";
 import { PausePopupMediator } from "../mediators/PausePopupMediator";
+import { YouWinPopupMediator } from "../mediators/YouWinPopupMediator";
+import { EnemyComponent } from "../views/components/EnemyComponent";
+import { EnemyTileDisplay } from "../views/components/EnemyTileDisplay";
+import { HeroComponent } from "../views/components/HeroComponent";
+import { GameOverPopup } from "../views/GameOverPopup";
+import { GameView } from "../views/GameView";
+import { HomeView } from "../views/HomeView";
+import { IntroView } from "../views/IntroView";
 import { PausePopup } from "../views/PausePopup";
 import { YouWinPopup } from "../views/YouWinPopup";
-import { YouWinPopupMediator } from "../mediators/YouWinPopupMediator";
-import { GameOverPopupMediator } from "../mediators/GameOverPopupMediator";
-import { GameOverPopup } from "../views/GameOverPopup";
-import { EnemyTileDisplay } from "../views/components/EnemyTileDisplay";
-import { EnemyComponentMediator } from "../mediators/EnemyComponentMediator";
-import { EnemyComponent } from "../views/components/EnemyComponent";
-import { EnemyTileDisplayMediator } from "../mediators/EnemyTileDisplayMediator";
-import { HeroComponentMediator } from "../mediators/HeroComponentMediator";
-import { HeroComponent } from "../views/components/HeroComponent";
-import { GameViewMediator } from "../mediators/GameViewMediator";
-import { GameView } from "../views/GameView";
-import { HomeViewMediator } from "../mediators/HomeViewMediator";
-import { HomeView } from "../views/HomeView";
-import { IntroViewMediator } from "../mediators/IntroViewMediator";
-import { IntroView } from "../views/IntroView";
-
-import { IConfig, injectable, inject } from "@robotlegsjs/core";
-
-import { IMediatorMap } from "@robotlegsjs/pixi";
 
 @injectable()
 export class ViewsConfig implements IConfig {

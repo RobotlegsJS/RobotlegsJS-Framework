@@ -5,8 +5,8 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import { Lifecycle } from "./Lifecycle";
 import { LifecycleEvent } from "../api/LifecycleEvent";
+import { Lifecycle } from "./Lifecycle";
 import { MessageDispatcher } from "./MessageDispatcher";
 import { safelyCallBack } from "./safelyCallBack";
 

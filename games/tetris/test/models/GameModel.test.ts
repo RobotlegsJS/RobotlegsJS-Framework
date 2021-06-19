@@ -1,7 +1,6 @@
-import "../entry";
-
-import { GameModel } from "./../../src/models/GameModel";
 import { assert } from "chai";
+import { GameModel } from "../../src/models/GameModel";
+import "../entry";
 
 describe("GameModel", () => {
     it("Clear: Returns the values to default", () => {

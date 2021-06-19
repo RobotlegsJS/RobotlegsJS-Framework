@@ -5,13 +5,10 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import "../../../../entry";
-
 import { assert } from "chai";
-
 import { LogLevel } from "../../../../../src/robotlegs/bender/framework/api/LogLevel";
 import { Logger } from "../../../../../src/robotlegs/bender/framework/impl/Logger";
-
+import "../../../../entry";
 import { CallbackLogTarget } from "./loggingSupport/CallbackLogTarget";
 import { LogParams } from "./loggingSupport/LogParams";
 

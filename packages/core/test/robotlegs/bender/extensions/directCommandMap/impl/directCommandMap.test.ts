@@ -5,30 +5,23 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import "../../../../../entry";
-
 import { assert } from "chai";
-
+import { CommandPayload } from "../../../../../../src/robotlegs/bender/extensions/commandCenter/api/CommandPayload";
+import { ICommand } from "../../../../../../src/robotlegs/bender/extensions/commandCenter/api/ICommand";
+import { ICommandMapping } from "../../../../../../src/robotlegs/bender/extensions/commandCenter/api/ICommandMapping";
+import { IDirectCommandMap } from "../../../../../../src/robotlegs/bender/extensions/directCommandMap/api/IDirectCommandMap";
+import { DirectCommandMap } from "../../../../../../src/robotlegs/bender/extensions/directCommandMap/impl/DirectCommandMap";
+import { DirectCommandMapper } from "../../../../../../src/robotlegs/bender/extensions/directCommandMap/impl/DirectCommandMapper";
+import { IClass } from "../../../../../../src/robotlegs/bender/extensions/matching/IClass";
 import { IContext } from "../../../../../../src/robotlegs/bender/framework/api/IContext";
 import { IInjector } from "../../../../../../src/robotlegs/bender/framework/api/IInjector";
 import { PinEvent } from "../../../../../../src/robotlegs/bender/framework/api/PinEvent";
 import { Context } from "../../../../../../src/robotlegs/bender/framework/impl/Context";
-
-import { IClass } from "../../../../../../src/robotlegs/bender/extensions/matching/IClass";
-
-import { ICommand } from "../../../../../../src/robotlegs/bender/extensions/commandCenter/api/ICommand";
-import { ICommandMapping } from "../../../../../../src/robotlegs/bender/extensions/commandCenter/api/ICommandMapping";
-import { CommandPayload } from "../../../../../../src/robotlegs/bender/extensions/commandCenter/api/CommandPayload";
-
-import { IDirectCommandMap } from "../../../../../../src/robotlegs/bender/extensions/directCommandMap/api/IDirectCommandMap";
-import { DirectCommandMap } from "../../../../../../src/robotlegs/bender/extensions/directCommandMap/impl/DirectCommandMap";
-import { DirectCommandMapper } from "../../../../../../src/robotlegs/bender/extensions/directCommandMap/impl/DirectCommandMapper";
-
-import { NullCommand } from "../../commandCenter/support/NullCommand";
+import "../../../../../entry";
 import { CallbackCommand } from "../../commandCenter/support/CallbackCommand";
 import { CallbackCommand2 } from "../../commandCenter/support/CallbackCommand2";
+import { NullCommand } from "../../commandCenter/support/NullCommand";
 import { PayloadInjectionPointsCommand } from "../../commandCenter/support/PayloadInjectionPointsCommand";
-
 import { DirectCommandMapReportingCommand } from "../support/DirectCommandMapReportingCommand";
 
 describe("DirectCommandMap", () => {

@@ -5,15 +5,13 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import "../../../../entry";
-
 import { assert } from "chai";
-
+import { InjectableLoggerExtension } from "../../../../../src/robotlegs/bender/extensions/enhancedLogging/InjectableLoggerExtension";
 import { IContext } from "../../../../../src/robotlegs/bender/framework/api/IContext";
 import { ILogger } from "../../../../../src/robotlegs/bender/framework/api/ILogger";
 import { Context } from "../../../../../src/robotlegs/bender/framework/impl/Context";
 import { Logger } from "../../../../../src/robotlegs/bender/framework/impl/Logger";
-import { InjectableLoggerExtension } from "../../../../../src/robotlegs/bender/extensions/enhancedLogging/InjectableLoggerExtension";
+import "../../../../entry";
 
 describe("InjectableLoggerExtension", () => {
     let context: IContext;

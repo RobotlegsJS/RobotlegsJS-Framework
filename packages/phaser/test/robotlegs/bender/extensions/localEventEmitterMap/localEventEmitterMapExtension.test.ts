@@ -5,16 +5,12 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import "../../../../entry";
-
+import { Context, IContext } from "@robotlegsjs/core";
 import { assert } from "chai";
-
-import { IContext, Context } from "@robotlegsjs/core";
-
 import { IEventEmitterMap } from "../../../../../src/robotlegs/bender/extensions/localEventEmitterMap/api/IEventEmitterMap";
 import { EventEmitterMap } from "../../../../../src/robotlegs/bender/extensions/localEventEmitterMap/impl/EventEmitterMap";
-
 import { LocalEventEmitterMapExtension } from "../../../../../src/robotlegs/bender/extensions/localEventEmitterMap/LocalEventEmitterMapExtension";
+import "../../../../entry";
 
 describe("LocalEventEmitterMapExtension", () => {
     let context: IContext;

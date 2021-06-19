@@ -6,7 +6,6 @@
 // ------------------------------------------------------------------------------
 
 import { Mediator } from "../../src/index";
-
 import { SmileyView } from "../view/SmileyView";
 
 export class SmileyMediator extends Mediator<SmileyView> {

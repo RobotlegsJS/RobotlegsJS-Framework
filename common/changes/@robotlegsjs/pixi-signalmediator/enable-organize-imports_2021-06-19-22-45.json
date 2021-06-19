@@ -1,0 +1,11 @@
+{
+  "changes": [
+    {
+      "packageName": "@robotlegsjs/pixi-signalmediator",
+      "comment": "Enable VS Code Organize Imports source code action (see [20](https://github.com/RobotlegsJS/RobotlegsJS-Framework/pull/20))",
+      "type": "patch"
+    }
+  ],
+  "packageName": "@robotlegsjs/pixi-signalmediator",
+  "email": "tiago.schenkel@gmail.com"
+}

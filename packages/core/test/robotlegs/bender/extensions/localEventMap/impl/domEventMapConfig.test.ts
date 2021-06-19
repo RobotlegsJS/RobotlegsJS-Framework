@@ -5,11 +5,9 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import "../../../../../entry";
-
 import { assert } from "chai";
-
 import { DomEventMapConfig } from "../../../../../../src/robotlegs/bender/extensions/localEventMap/impl/DomEventMapConfig";
+import "../../../../../entry";
 
 describe("DomEventMapConfig", () => {
     const DISPATCHER: EventTarget = window;

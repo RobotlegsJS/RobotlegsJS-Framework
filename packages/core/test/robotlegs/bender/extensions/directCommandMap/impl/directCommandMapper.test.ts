@@ -5,35 +5,27 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import "../../../../../entry";
-
 import { assert } from "chai";
-
-import { IContext } from "../../../../../../src/robotlegs/bender/framework/api/IContext";
-import { IInjector } from "../../../../../../src/robotlegs/bender/framework/api/IInjector";
-import { Context } from "../../../../../../src/robotlegs/bender/framework/impl/Context";
-
-import { IClass } from "../../../../../../src/robotlegs/bender/extensions/matching/IClass";
-
 import { CommandPayload } from "../../../../../../src/robotlegs/bender/extensions/commandCenter/api/CommandPayload";
 import { ICommand } from "../../../../../../src/robotlegs/bender/extensions/commandCenter/api/ICommand";
 import { ICommandExecutor } from "../../../../../../src/robotlegs/bender/extensions/commandCenter/api/ICommandExecutor";
 import { ICommandMappingList } from "../../../../../../src/robotlegs/bender/extensions/commandCenter/api/ICommandMappingList";
-
 import { CommandExecutor } from "../../../../../../src/robotlegs/bender/extensions/commandCenter/impl/CommandExecutor";
 import { CommandMappingList } from "../../../../../../src/robotlegs/bender/extensions/commandCenter/impl/CommandMappingList";
 import { NullCommandTrigger } from "../../../../../../src/robotlegs/bender/extensions/commandCenter/impl/NullCommandTrigger";
-
 import { IDirectCommandConfigurator } from "../../../../../../src/robotlegs/bender/extensions/directCommandMap/dsl/IDirectCommandConfigurator";
 import { DirectCommandMapper } from "../../../../../../src/robotlegs/bender/extensions/directCommandMap/impl/DirectCommandMapper";
-
-import { NullCommand } from "../../commandCenter/support/NullCommand";
-import { CallbackCommand } from "../../commandCenter/support/CallbackCommand";
-import { PayloadInjectionPointsCommand } from "../../commandCenter/support/PayloadInjectionPointsCommand";
-
-import { HappyGuard } from "../../../framework/impl/guardSupport/HappyGuard";
+import { IClass } from "../../../../../../src/robotlegs/bender/extensions/matching/IClass";
+import { IContext } from "../../../../../../src/robotlegs/bender/framework/api/IContext";
+import { IInjector } from "../../../../../../src/robotlegs/bender/framework/api/IInjector";
+import { Context } from "../../../../../../src/robotlegs/bender/framework/impl/Context";
+import "../../../../../entry";
 import { GrumpyGuard } from "../../../framework/impl/guardSupport/GrumpyGuard";
+import { HappyGuard } from "../../../framework/impl/guardSupport/HappyGuard";
 import { CallbackHook } from "../../../framework/impl/hookSupport/CallbackHook";
+import { CallbackCommand } from "../../commandCenter/support/CallbackCommand";
+import { NullCommand } from "../../commandCenter/support/NullCommand";
+import { PayloadInjectionPointsCommand } from "../../commandCenter/support/PayloadInjectionPointsCommand";
 
 describe("DirectCommandMapper", () => {
     let context: IContext;

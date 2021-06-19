@@ -6,19 +6,16 @@
 // ------------------------------------------------------------------------------
 
 import { IConfig, inject, injectable } from "@robotlegsjs/core";
-
 import { ISceneMediatorMap } from "../../src/robotlegs/bender/extensions/mediatorMap/api/ISceneMediatorMap";
-
+import { IViewMediatorMap } from "../../src/robotlegs/bender/extensions/mediatorMap/api/IViewMediatorMap";
 import { BootMediator } from "../mediators/BootMediator";
 import { MainMediator } from "../mediators/MainMediator";
 import { PreloadMediator } from "../mediators/PreloadMediator";
-
+import { ScoreViewMediator } from "../mediators/ScoreViewMediator";
 import { Boot } from "../scenes/Boot";
 import { Main } from "../scenes/Main";
 import { Preload } from "../scenes/Preload";
-import { IViewMediatorMap } from "../../src/robotlegs/bender/extensions/mediatorMap/api/IViewMediatorMap";
 import { ScoreView } from "../views/ScoreView";
-import { ScoreViewMediator } from "../mediators/ScoreViewMediator";
 
 @injectable()
 export class SceneMediatorConfig implements IConfig {

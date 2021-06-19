@@ -6,7 +6,6 @@
 // ------------------------------------------------------------------------------
 
 import { IClass } from "../../matching/IClass";
-
 import { ICommand } from "./ICommand";
 
 /**

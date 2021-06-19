@@ -5,8 +5,7 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import { injectable, inject, ICommand } from "@robotlegsjs/core";
-
+import { ICommand, inject, injectable } from "@robotlegsjs/core";
 import { Data } from "./Data";
 import { TargetSignal } from "./TargetSignal";
 

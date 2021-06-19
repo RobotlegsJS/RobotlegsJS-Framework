@@ -5,29 +5,24 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import "../../../../../entry";
-
 import { assert } from "chai";
-
-import sinon = require("sinon");
-
-import { ILogger } from "../../../../../../src/robotlegs/bender/framework/api/ILogger";
-import { LogLevel } from "../../../../../../src/robotlegs/bender/framework/api/LogLevel";
-import { Logger } from "../../../../../../src/robotlegs/bender/framework/impl/Logger";
-
 import { ICommandMapping } from "../../../../../../src/robotlegs/bender/extensions/commandCenter/api/ICommandMapping";
 import { ICommandTrigger } from "../../../../../../src/robotlegs/bender/extensions/commandCenter/api/ICommandTrigger";
 import { CommandMapping } from "../../../../../../src/robotlegs/bender/extensions/commandCenter/impl/CommandMapping";
 import { CommandMappingList } from "../../../../../../src/robotlegs/bender/extensions/commandCenter/impl/CommandMappingList";
 import { NullCommandTrigger } from "../../../../../../src/robotlegs/bender/extensions/commandCenter/impl/NullCommandTrigger";
-
+import { ILogger } from "../../../../../../src/robotlegs/bender/framework/api/ILogger";
+import { LogLevel } from "../../../../../../src/robotlegs/bender/framework/api/LogLevel";
+import { Logger } from "../../../../../../src/robotlegs/bender/framework/impl/Logger";
+import "../../../../../entry";
 import { CallbackLogTarget } from "../../../framework/impl/loggingSupport/CallbackLogTarget";
 import { LogParams } from "../../../framework/impl/loggingSupport/LogParams";
-
 import { NullCommand } from "../support/NullCommand";
 import { NullCommand2 } from "../support/NullCommand2";
 import { NullCommand3 } from "../support/NullCommand3";
 import { PriorityMapping } from "../support/PriorityMapping";
+
+import sinon = require("sinon");
 
 describe("CommandMappingList", () => {
     let logger: ILogger;

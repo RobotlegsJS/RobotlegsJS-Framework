@@ -1,7 +1,6 @@
-import "../entry";
-
-import { Tile } from "./../../src/models/Tile";
 import { assert } from "chai";
+import { Tile } from "../../src/models/Tile";
+import "../entry";
 
 describe("Tile", () => {
     let tile: Tile;

@@ -5,12 +5,9 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import "../../../../../entry";
-
 import { assert } from "chai";
-
 import { CommandMapping } from "../../../../../../src/robotlegs/bender/extensions/commandCenter/impl/CommandMapping";
-
+import "../../../../../entry";
 import { NullCommand } from "../support/NullCommand";
 
 describe("CommandMapping", () => {

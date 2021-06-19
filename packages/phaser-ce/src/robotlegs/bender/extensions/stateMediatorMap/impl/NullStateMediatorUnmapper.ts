@@ -6,7 +6,6 @@
 // ------------------------------------------------------------------------------
 
 import { IClass } from "@robotlegsjs/core";
-
 import { IStateMediatorUnmapper } from "../dsl/IStateMediatorUnmapper";
 
 /**

@@ -6,10 +6,8 @@
 // ------------------------------------------------------------------------------
 
 import { IContext, IExtension, IInjector } from "@robotlegsjs/core";
-
 import { IViewManager } from "../viewManager/api/IViewManager";
 import { ViewManager } from "../viewManager/impl/ViewManager";
-
 import { ContainerRegistry } from "./impl/ContainerRegistry";
 
 /**

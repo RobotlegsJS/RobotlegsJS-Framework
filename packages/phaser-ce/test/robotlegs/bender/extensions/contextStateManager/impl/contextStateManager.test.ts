@@ -5,11 +5,10 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import "../../../../../entry";
-
 import { assert } from "chai";
-
-import { IContextStateManager, ContextStateManager } from "../../../../../../src";
+import { IContextStateManager } from "../../../../../../src/robotlegs/bender/extensions/contextStateManager/api/IContextStateManager";
+import { ContextStateManager } from "../../../../../../src/robotlegs/bender/extensions/contextStateManager/impl/ContextStateManager";
+import "../../../../../entry";
 
 describe("ContextStateManager", () => {
     let stateManager: Phaser.StateManager;

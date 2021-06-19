@@ -6,15 +6,14 @@
 // ------------------------------------------------------------------------------
 
 import {
-    IClass,
-    IType,
-    IInjector,
     applyHooks,
     guardsApprove,
+    IClass,
+    IInjector,
     instantiateUnmapped,
+    IType,
     ITypeFilter
 } from "@robotlegsjs/core";
-
 import { IMediatorManager } from "../api/IMediatorManager";
 import { IMediatorMapping } from "../api/IMediatorMapping";
 

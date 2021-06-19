@@ -5,8 +5,8 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import { ICommandMapping } from "./ICommandMapping";
 import { CommandPayload } from "./CommandPayload";
+import { ICommandMapping } from "./ICommandMapping";
 
 /**
  * @private

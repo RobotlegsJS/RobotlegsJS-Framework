@@ -1,9 +1,8 @@
-import { GameManager } from "./../managers/GameManager";
-import { LevelModel } from "./../models/LevelModel";
-import { GameService } from "./../../services/GameService";
-import { FlowService } from "./../../services/FlowService";
-
-import { injectable, inject, ICommand } from "@robotlegsjs/core";
+import { ICommand, inject, injectable } from "@robotlegsjs/core";
+import { FlowService } from "../../services/FlowService";
+import { GameService } from "../../services/GameService";
+import { GameManager } from "../managers/GameManager";
+import { LevelModel } from "../models/LevelModel";
 
 @injectable()
 export class RetryGameCommand implements ICommand {

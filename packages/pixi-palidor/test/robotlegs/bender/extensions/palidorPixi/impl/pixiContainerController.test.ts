@@ -5,14 +5,11 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import "./../../../../../entry";
-
-import { PixiContainerController } from "../../../../../../src";
-
 import { assert } from "chai";
 import { Container } from "pixi.js";
-
-import { Utils } from "./../support/Utils";
+import { PixiContainerController } from "../../../../../../src/robotlegs/bender/extensions/palidorPixi/impl/PixiContainerController";
+import "../../../../../entry";
+import { Utils } from "../support/Utils";
 
 describe("PixiContainerController", () => {
     let controller: PixiContainerController;

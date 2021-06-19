@@ -5,8 +5,7 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import { instanceOfType, IContext, IExtension, IInjector, ILogger } from "@robotlegsjs/core";
-
+import { IContext, IExtension, IInjector, ILogger, instanceOfType } from "@robotlegsjs/core";
 import { IContextView } from "./api/IContextView";
 import { ContextView } from "./impl/ContextView";
 

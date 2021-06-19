@@ -16,6 +16,8 @@ module.exports = (config) => {
     basePath: "",
     frameworks: ["webpack", "mocha", "sinon-chai", "es6-shim"],
     files: [
+      { pattern: "node_modules/reflect-metadata/Reflect.js", include: true },
+      { pattern: "node_modules/bluebird/js/browser/bluebird.js", include: true },
       { pattern: "./test/index.ts", include: true },
       { pattern: "**/*.map", served: true, included: false, watched: true }
     ],

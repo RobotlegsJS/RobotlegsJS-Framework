@@ -5,10 +5,8 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import { IClass, EventDispatcher } from "@robotlegsjs/core";
-
+import { EventDispatcher, IClass } from "@robotlegsjs/core";
 import { IStateHandler } from "../api/IStateHandler";
-
 import { StateManagerBindingEvent } from "./StateManagerBindingEvent";
 
 /**

@@ -5,10 +5,8 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import { injectable, inject, named, IInjector, ICommand } from "@robotlegsjs/core";
-
+import { ICommand, IInjector, inject, injectable, named } from "@robotlegsjs/core";
 import { ISignalCommandMap } from "../../../../../../src/robotlegs/bender/extensions/signalCommandMap/api/ISignalCommandMap";
-
 import { NullCommand } from "./NullCommand";
 import { SupportSignal } from "./SupportSignal";
 

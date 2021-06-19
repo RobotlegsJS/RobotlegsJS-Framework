@@ -5,7 +5,7 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import { injectable, inject, named, optional, ICommand } from "@robotlegsjs/core";
+import { ICommand, inject, injectable, named, optional } from "@robotlegsjs/core";
 
 @injectable()
 export class CallbackParametersCommand implements ICommand {

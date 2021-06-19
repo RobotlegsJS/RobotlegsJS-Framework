@@ -5,11 +5,9 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import { injectable, inject, IClass, IEvent, IEventDispatcher, Event } from "@robotlegsjs/core";
-
-import { IMediator } from "../api/IMediator";
-
+import { Event, IClass, IEvent, IEventDispatcher, inject, injectable } from "@robotlegsjs/core";
 import { IEventEmitterMap } from "../../localEventEmitterMap/api/IEventEmitterMap";
+import { IMediator } from "../api/IMediator";
 
 /**
  * Abstract mediator implementation used by `SceneMediator` and `ViewMediator` classes.

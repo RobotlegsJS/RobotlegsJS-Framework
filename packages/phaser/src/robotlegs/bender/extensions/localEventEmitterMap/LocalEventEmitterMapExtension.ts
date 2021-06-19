@@ -6,7 +6,6 @@
 // ------------------------------------------------------------------------------
 
 import { IContext, IExtension } from "@robotlegsjs/core";
-
 import { IEventEmitterMap } from "./api/IEventEmitterMap";
 import { EventEmitterMap } from "./impl/EventEmitterMap";
 

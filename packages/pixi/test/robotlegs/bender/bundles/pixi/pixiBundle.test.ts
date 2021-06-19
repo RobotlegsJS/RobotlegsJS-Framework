@@ -5,24 +5,16 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import "../../../../entry";
-
+import { Context, IContext, LogLevel } from "@robotlegsjs/core";
 import { assert } from "chai";
-
 import { Container } from "pixi.js";
-
-import { IContext, Context, LogLevel } from "@robotlegsjs/core";
-
-import {
-    IContextView,
-    IMediatorMap,
-    IViewManager,
-    ContextView,
-    PixiBundle
-} from "../../../../../src";
-
+import { PixiBundle } from "../../../../../src/robotlegs/bender/bundles/pixi/PixiBundle";
+import { IContextView } from "../../../../../src/robotlegs/bender/extensions/contextView/api/IContextView";
+import { ContextView } from "../../../../../src/robotlegs/bender/extensions/contextView/impl/ContextView";
+import { IMediatorMap } from "../../../../../src/robotlegs/bender/extensions/mediatorMap/api/IMediatorMap";
+import { IViewManager } from "../../../../../src/robotlegs/bender/extensions/viewManager/api/IViewManager";
 import { ContainerRegistry } from "../../../../../src/robotlegs/bender/extensions/viewManager/impl/ContainerRegistry";
-
+import "../../../../entry";
 import { CallbackLogTarget } from "../../extensions/contextView/support/CallbackLogTarget";
 import { LogParams } from "../../extensions/contextView/support/LogParams";
 

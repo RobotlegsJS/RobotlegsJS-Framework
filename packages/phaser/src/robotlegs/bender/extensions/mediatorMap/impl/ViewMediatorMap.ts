@@ -6,21 +6,18 @@
 // ------------------------------------------------------------------------------
 
 import {
-    injectable,
-    inject,
     IClass,
     IContext,
     ILogger,
+    inject,
+    injectable,
     ITypeMatcher,
     TypeMatcher
 } from "@robotlegsjs/core";
-
 import { IViewHandler } from "../../viewManager/api/IViewHandler";
-
 import { IViewMediatorMap } from "../api/IViewMediatorMap";
 import { IMediatorMapper } from "../dsl/IMediatorMapper";
 import { IMediatorUnmapper } from "../dsl/IMediatorUnmapper";
-
 import { MediatorMapper } from "./MediatorMapper";
 import { NullMediatorUnmapper } from "./NullMediatorUnmapper";
 import { ViewMediatorFactory } from "./ViewMediatorFactory";

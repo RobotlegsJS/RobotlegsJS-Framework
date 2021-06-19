@@ -5,12 +5,9 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import "../../../../entry";
-
 import { assert } from "chai";
-
 import { RobotlegsInjector } from "../../../../../src/robotlegs/bender/framework/impl/RobotlegsInjector";
-
+import "../../../../entry";
 import { TestObject } from "./objectSupport/TestObject";
 
 describe("RobotlegsInjector", () => {

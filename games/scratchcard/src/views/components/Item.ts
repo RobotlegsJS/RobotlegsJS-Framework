@@ -1,8 +1,7 @@
 import { Container, Graphics } from "pixi.js";
-
-import { Colors } from "./../../utils/Colors";
-import { MagicValues } from "./../../utils/MagicValues";
-import { PixiFactory } from "./../../utils/PixiFactory";
+import { Colors } from "../../utils/Colors";
+import { MagicValues } from "../../utils/MagicValues";
+import { PixiFactory } from "../../utils/PixiFactory";
 
 export class Item extends Container {
     private _border: Graphics;

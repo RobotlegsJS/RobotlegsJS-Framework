@@ -1,7 +1,6 @@
-import { TilePool } from "./../../utils/TilePool";
-import { TileDisplay } from "./TileDisplay";
-
 import { Container } from "pixi.js";
+import { TilePool } from "../../utils/TilePool";
+import { TileDisplay } from "./TileDisplay";
 
 export class GridComponent extends Container {
     public clear(): void {

@@ -5,18 +5,12 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import "../../../../entry";
-
+import { Context, IContext, LogLevel } from "@robotlegsjs/core";
 import { assert } from "chai";
-
-import { IContext, Context, LogLevel } from "@robotlegsjs/core";
-
-import {
-    IContextStateManager,
-    ContextStateManager,
-    ContextStateManagerExtension
-} from "../../../../../src";
-
+import { IContextStateManager } from "../../../../../src/robotlegs/bender/extensions/contextStateManager/api/IContextStateManager";
+import { ContextStateManagerExtension } from "../../../../../src/robotlegs/bender/extensions/contextStateManager/ContextStateManagerExtension";
+import { ContextStateManager } from "../../../../../src/robotlegs/bender/extensions/contextStateManager/impl/ContextStateManager";
+import "../../../../entry";
 import { CallbackLogTarget } from "./support/CallbackLogTarget";
 import { LogParams } from "./support/LogParams";
 

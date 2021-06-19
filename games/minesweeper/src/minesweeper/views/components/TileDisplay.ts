@@ -1,10 +1,9 @@
 import { Container, Graphics } from "pixi.js";
-
-import { Cell } from "./../../game/models/Cell";
-import { AtlasKeys } from "./../../utils/AtlasKeys";
-import { Colors } from "./../../utils/Colors";
-import { MagicValues } from "./../../utils/MagicValues";
-import { PixiFactory } from "./../../utils/PixiFactory";
+import { Cell } from "../../game/models/Cell";
+import { AtlasKeys } from "../../utils/AtlasKeys";
+import { Colors } from "../../utils/Colors";
+import { MagicValues } from "../../utils/MagicValues";
+import { PixiFactory } from "../../utils/PixiFactory";
 
 export class TileDisplay extends Container {
     public cell: Cell;
