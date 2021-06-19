@@ -106,7 +106,7 @@
     "istanbul-instrumenter-loader": "^3.0.1",
     "jsdom": "^16.6.0",
     "jsdom-global": "^3.0.2",
-    "karma": "^6.3.3",
+    "karma": "^6.3.4",
     "karma-chrome-launcher": "^3.1.0",
     "karma-coverage-istanbul-reporter": "^3.0.3",
     "karma-es6-shim": "^1.0.0",
