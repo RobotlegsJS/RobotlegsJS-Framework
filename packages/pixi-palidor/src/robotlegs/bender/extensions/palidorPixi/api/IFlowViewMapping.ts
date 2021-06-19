@@ -5,9 +5,8 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import { Container } from "pixi.js";
-
 import { IClass } from "@robotlegsjs/core";
+import { Container } from "pixi.js";
 
 export interface IFlowViewMapping {
     toFloatingView(viewClass: IClass<Container>): void;

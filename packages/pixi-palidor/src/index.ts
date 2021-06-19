@@ -8,6 +8,7 @@
 /**
  * PalidorPixiExtension Extension
  */
+export { PalidorBundle } from "./robotlegs/bender/bundles/palidor/PalidorBundle";
 export { IContainerController } from "./robotlegs/bender/extensions/palidorPixi/api/IContainerController";
 export { IFlowManager } from "./robotlegs/bender/extensions/palidorPixi/api/IFlowManager";
 export { IFlowViewMapping } from "./robotlegs/bender/extensions/palidorPixi/api/IFlowViewMapping";
@@ -16,4 +17,3 @@ export { FlowManager } from "./robotlegs/bender/extensions/palidorPixi/impl/Flow
 export { FlowViewMapping } from "./robotlegs/bender/extensions/palidorPixi/impl/FlowViewMapping";
 export { PixiContainerController } from "./robotlegs/bender/extensions/palidorPixi/impl/PixiContainerController";
 export { PalidorPixiExtension } from "./robotlegs/bender/extensions/palidorPixi/PalidorPixiExtension";
-export { PalidorBundle } from "./robotlegs/bender/bundles/palidor/PalidorBundle";

@@ -5,17 +5,13 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import { IContainerController } from "../api/IContainerController";
-import { IFlowViewMapping } from "../api/IFlowViewMapping";
-import { IFlowManager } from "../api/IFlowManager";
-
-import { PalidorEvent } from "./../events/PalidorEvent";
-
-import { FlowViewMapping } from "./FlowViewMapping";
-
+import { Event, IClass, IEventDispatcher, IEventMap, inject, injectable } from "@robotlegsjs/core";
 import { Container } from "pixi.js";
-
-import { injectable, inject, IClass, IEventMap, IEventDispatcher, Event } from "@robotlegsjs/core";
+import { IContainerController } from "../api/IContainerController";
+import { IFlowManager } from "../api/IFlowManager";
+import { IFlowViewMapping } from "../api/IFlowViewMapping";
+import { PalidorEvent } from "./../events/PalidorEvent";
+import { FlowViewMapping } from "./FlowViewMapping";
 
 @injectable()
 export class FlowManager implements IFlowManager {

@@ -5,13 +5,10 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import { IFlowViewMapping } from "./../api/IFlowViewMapping";
-
-import { FlowManager } from "./FlowManager";
-
-import { Container } from "pixi.js";
-
 import { IClass } from "@robotlegsjs/core";
+import { Container } from "pixi.js";
+import { IFlowViewMapping } from "./../api/IFlowViewMapping";
+import { FlowManager } from "./FlowManager";
 
 export class FlowViewMapping implements IFlowViewMapping {
     private _event: string;
