@@ -6,14 +6,12 @@
 // ------------------------------------------------------------------------------
 
 import { IClass, ILogger, ITypeFilter } from "@robotlegsjs/core";
-
 import { IStateMediatorMapping } from "../api/IStateMediatorMapping";
 import { IStateMediatorConfigurator } from "../dsl/IStateMediatorConfigurator";
 import { IStateMediatorMapper } from "../dsl/IStateMediatorMapper";
 import { IStateMediatorUnmapper } from "../dsl/IStateMediatorUnmapper";
-
-import { StateMediatorStateHandler } from "./StateMediatorStateHandler";
 import { StateMediatorMapping } from "./StateMediatorMapping";
+import { StateMediatorStateHandler } from "./StateMediatorStateHandler";
 
 /**
  * @private

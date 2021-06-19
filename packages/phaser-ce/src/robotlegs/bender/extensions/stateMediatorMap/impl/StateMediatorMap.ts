@@ -6,25 +6,22 @@
 // ------------------------------------------------------------------------------
 
 import {
-    injectable,
-    inject,
     IClass,
     IContext,
     ILogger,
+    inject,
+    injectable,
     ITypeMatcher,
     TypeMatcher
 } from "@robotlegsjs/core";
-
+import { IStateHandler } from "../../stateManager/api/IStateHandler";
 import { IStateMediatorMap } from "../api/IStateMediatorMap";
 import { IStateMediatorMapper } from "../dsl/IStateMediatorMapper";
 import { IStateMediatorUnmapper } from "../dsl/IStateMediatorUnmapper";
-
-import { IStateHandler } from "../../stateManager/api/IStateHandler";
-
-import { StateMediatorFactory } from "./StateMediatorFactory";
-import { StateMediatorStateHandler } from "./StateMediatorStateHandler";
 import { NullStateMediatorUnmapper } from "./NullStateMediatorUnmapper";
+import { StateMediatorFactory } from "./StateMediatorFactory";
 import { StateMediatorMapper } from "./StateMediatorMapper";
+import { StateMediatorStateHandler } from "./StateMediatorStateHandler";
 
 /**
  * @private

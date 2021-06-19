@@ -6,9 +6,8 @@
 // ------------------------------------------------------------------------------
 
 import { IContext, IExtension, IInjector, ILogger } from "@robotlegsjs/core";
-
-import { StateRegistry } from "./impl/StateRegistry";
 import { StateManagerObserver } from "./impl/StateManagerObserver";
+import { StateRegistry } from "./impl/StateRegistry";
 
 let installCount: number = 0;
 

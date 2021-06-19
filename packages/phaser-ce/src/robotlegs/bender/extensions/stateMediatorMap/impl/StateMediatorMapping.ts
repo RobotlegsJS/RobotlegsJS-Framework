@@ -6,7 +6,6 @@
 // ------------------------------------------------------------------------------
 
 import { IClass, ITypeFilter } from "@robotlegsjs/core";
-
 import { IStateMediatorMapping } from "../api/IStateMediatorMapping";
 import { IStateMediatorConfigurator } from "../dsl/IStateMediatorConfigurator";
 
