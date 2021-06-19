@@ -4,7 +4,7 @@ import { CustomButton } from "./../views/components/CustomButton";
 import { MagicValues } from "./MagicValues";
 import { AtlasKeys } from "./AtlasKeys";
 
-import { Graphics, Text, Container, Sprite, Texture } from "pixi.js";
+import { BitmapText, Graphics, Text, Container, Sprite, Texture } from "pixi.js";
 
 export class PixiFactory {
     /* TEXTFIELDS */
@@ -13,7 +13,7 @@ export class PixiFactory {
             align: "center",
             font: { name: MagicValues.FONT_FAMILY, size: MagicValues.FONT_SIZE_DEFAULT }
         };
-        let label = new PIXI.extras.BitmapText(text, style);
+        let label = new BitmapText(text, style);
         label.tint = color;
         return label;
     }
@@ -23,7 +23,7 @@ export class PixiFactory {
             align: "center",
             font: { name: MagicValues.FONT_FAMILY, size: MagicValues.FONT_SIZE_HUD_SMALL }
         };
-        let label = new PIXI.extras.BitmapText(text, style);
+        let label = new BitmapText(text, style);
         label.tint = Colors.TEXT;
         return label;
     }
@@ -34,7 +34,7 @@ export class PixiFactory {
             font: { name: MagicValues.FONT_FAMILY, size: MagicValues.FONT_SIZE_TITLE }
         };
 
-        let title = new PIXI.extras.BitmapText(label, style);
+        let title = new BitmapText(label, style);
         title.x = MagicValues.HALF_WIDTH;
         title.y = 50;
         title.pivot.x = title.width * 0.5;
@@ -49,7 +49,7 @@ export class PixiFactory {
             font: { name: MagicValues.FONT_FAMILY, size: MagicValues.FONT_SIZE_BUTTON }
         };
 
-        let title = new PIXI.extras.BitmapText(label, style);
+        let title = new BitmapText(label, style);
         title.pivot.x = title.width * 0.5;
         title.pivot.y = title.height * 0.5;
         title.tint = Colors.BUTTON_ICON;
@@ -120,7 +120,7 @@ export class PixiFactory {
             align: "center",
             font: { name: MagicValues.FONT_FAMILY, size: MagicValues.FONT_SIZE_BUTTON }
         };
-        let bmpText = new PIXI.extras.BitmapText(text, style);
+        let bmpText = new BitmapText(text, style);
         bmpText.tint = color;
         bmpText.pivot.x = bmpText.width * 0.5;
         bmpText.pivot.y = bmpText.height * 0.5;
