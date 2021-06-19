@@ -1,6 +1,5 @@
 import { inject, injectable } from "@robotlegsjs/core";
 import { Mediator } from "@robotlegsjs/pixi";
-
 import { TickManager } from "../managers/TickManager";
 import { Model } from "../models/Model";
 import { ScratchView } from "../views/ScratchView";

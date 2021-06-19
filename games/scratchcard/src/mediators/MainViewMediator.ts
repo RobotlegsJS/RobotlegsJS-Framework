@@ -1,6 +1,5 @@
 import { injectable } from "@robotlegsjs/core";
 import { Mediator } from "@robotlegsjs/pixi";
-
 import { MainView } from "../views/MainView";
 
 @injectable()

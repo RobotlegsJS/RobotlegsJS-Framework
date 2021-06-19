@@ -1,16 +1,14 @@
 /// <reference path="../node_modules/@robotlegsjs/pixi/definitions/pixi.d.ts" />
 
-import "reflect-metadata";
-
-import PIXI = require("pixi.js");
-
 import { Context } from "@robotlegsjs/core";
 import { ContextView } from "@robotlegsjs/pixi";
 import { PalidorBundle } from "@robotlegsjs/pixi-palidor";
-
+import "reflect-metadata";
 import { ScratchConfig } from "./configs/ScratchConfig";
 import { AssetKeys } from "./utils/AssetKeys";
 import { MagicValues } from "./utils/MagicValues";
+
+import PIXI = require("pixi.js");
 
 class Main {
     private _stage: PIXI.Container;

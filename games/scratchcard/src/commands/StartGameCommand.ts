@@ -1,5 +1,4 @@
 import { ICommand, IEventDispatcher, inject, injectable } from "@robotlegsjs/core";
-
 import { GameEvent } from "../events/GameEvent";
 import { ScratchManager } from "../managers/ScratchManager";
 import { Model } from "./../models/Model";

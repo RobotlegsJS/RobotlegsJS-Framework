@@ -1,5 +1,4 @@
-import { Container, Sprite, Text, TilingSprite, TextStyle } from "pixi.js";
-
+import { Container, Sprite, Text, TextStyle, TilingSprite } from "pixi.js";
 import { AssetKeys } from "./../utils/AssetKeys";
 import { Colors } from "./../utils/Colors";
 import { MagicValues } from "./../utils/MagicValues";

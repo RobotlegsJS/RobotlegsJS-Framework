@@ -1,5 +1,4 @@
 import { ICommand, IEventDispatcher, inject, injectable } from "@robotlegsjs/core";
-
 import { FlowEvent } from "./../events/FlowEvent";
 import { GameEvent } from "./../events/GameEvent";
 import { Model } from "./../models/Model";

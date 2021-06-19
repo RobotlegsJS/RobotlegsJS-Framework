@@ -1,10 +1,9 @@
-import { ScratchView } from "./ScratchView";
-import { MagicValues } from "../utils/MagicValues";
-import { HUDView } from "./HUDView";
 import { Container } from "pixi.js";
-
+import { MagicValues } from "../utils/MagicValues";
 import { PixiFactory } from "../utils/PixiFactory";
 import { Colors } from "./../utils/Colors";
+import { HUDView } from "./HUDView";
+import { ScratchView } from "./ScratchView";
 
 export class MainView extends Container {
     private _hud: HUDView;

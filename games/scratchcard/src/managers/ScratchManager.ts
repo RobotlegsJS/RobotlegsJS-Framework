@@ -1,5 +1,4 @@
 import { IEventDispatcher, inject, injectable } from "@robotlegsjs/core";
-
 import { MagicValues } from "../utils/MagicValues";
 import { GameEvent } from "./../events/GameEvent";
 import { Model } from "./../models/Model";

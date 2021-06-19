@@ -8,7 +8,6 @@ import {
 } from "@robotlegsjs/core";
 import { IMediatorMap } from "@robotlegsjs/pixi";
 import { IFlowManager } from "@robotlegsjs/pixi-palidor";
-
 import { ScratchManager } from "../managers/ScratchManager";
 import { FeedbackPopupMediator } from "../mediators/FeedbackPopupMediator";
 import { HUDViewMediator } from "../mediators/HUDViewMediator";
