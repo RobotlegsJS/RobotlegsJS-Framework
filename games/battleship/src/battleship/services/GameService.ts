@@ -1,5 +1,5 @@
-import { AttackEvent } from "./../game/events/AttackEvent";
-import { GameEvent } from "./../events/GameEvent";
+import { GameEvent } from "../events/GameEvent";
+
 import { injectable, inject, IEventDispatcher, EventDispatcher } from "@robotlegsjs/core";
 
 @injectable()

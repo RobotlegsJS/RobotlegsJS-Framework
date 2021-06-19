@@ -1,32 +1,34 @@
-import { Texts } from "./../utils/Texts";
-import { AtlasKeys } from "./../utils/AtlasKeys";
-import { PixiFactory } from "./../utils/PixiFactory";
-import { MagicValues } from "./../utils/MagicValues";
+import { Texts } from "../utils/Texts";
+import { AtlasKeys } from "../utils/AtlasKeys";
+import { PixiFactory } from "../utils/PixiFactory";
+import { MagicValues } from "../utils/MagicValues";
 
 import { Container, Text, TextStyle, TilingSprite, Sprite } from "pixi.js";
 
 export class IntroView extends Container {
-    constructor() {
+    public constructor() {
         super();
 
-        this.createBackground();
-        this.createImages();
-        this.createText();
+        this._createBackground();
+        this._createImages();
+        this._createText();
     }
 
-    private createBackground(): void {
+    private _createBackground(): void {
         this.addChild(PixiFactory.getColorBackground(0x204d63));
     }
 
-    private createImages(): void {
+    private _createImages(): void {
         let logoImg: Sprite = TilingSprite.from(AtlasKeys.LOGO_TYPESCRIPT);
+
         logoImg.anchor.x = 0.5;
         logoImg.x = MagicValues.HALF_WIDTH;
         logoImg.y = MagicValues.MAX_HEIGHT - 64;
+
         this.addChild(logoImg);
     }
 
-    private createText(): void {
+    private _createText(): void {
         let style = new TextStyle({
             align: "center",
             fill: 0xb5d6e6,
@@ -34,10 +36,13 @@ export class IntroView extends Container {
             fontSize: 28,
             fontWeight: "bold"
         });
+
         let titleText: Text = new Text(Texts.DEVELOPER, style);
+
         titleText.anchor.set(0.5);
         titleText.x = MagicValues.HALF_WIDTH;
         titleText.y = MagicValues.HALF_HEIGHT;
+
         this.addChild(titleText);
     }
 }

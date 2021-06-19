@@ -1,15 +1,16 @@
 import { Tile } from "./Tile";
 import { Ship } from "./Ship";
 import { Grid } from "./Grid";
+
 export class BattleField {
     public grid: Grid;
     public ships: Ship[];
-    public listTile: Map<{ col; row }, any>;
+    public listTile: Map<{ col: number; row: number }, any>;
 
-    constructor() {
+    public constructor() {
         this.grid = new Grid();
         this.ships = new Array<Ship>();
-        this.listTile = new Map<{ col; row }, any>();
+        this.listTile = new Map<{ col: number; row: number }, any>();
     }
 
     public addShip(ship: Ship): void {

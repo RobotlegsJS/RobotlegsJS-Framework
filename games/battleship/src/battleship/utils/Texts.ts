@@ -1,14 +1,14 @@
 export class Texts {
-    public static DEVELOPER = "RONALDO SANTIAGO";
+    public static DEVELOPER: string = "RONALDO SANTIAGO";
     /* Displays */
-    public static ENEMY = "Enemy";
-    public static HERO = "Hero";
+    public static ENEMY: string = "Enemy";
+    public static HERO: string = "Hero";
     /* Texts */
-    public static MAX_COLS = "Cols:";
-    public static MAX_ROWS = "Rows:";
+    public static MAX_COLS: string = "Cols:";
+    public static MAX_ROWS: string = "Rows:";
 
-    public static GAME_OVER = "Game Over";
-    public static PAUSED = "Paused";
-    public static YOU_WIN = "You Win !!";
-    public static WIN_MSG = "Congratulations\non Winning\nthis battle!";
+    public static GAME_OVER: string = "Game Over";
+    public static PAUSED: string = "Paused";
+    public static YOU_WIN: string = "You Win !!";
+    public static WIN_MSG: string = "Congratulations\non Winning\nthis battle!";
 }

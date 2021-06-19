@@ -1,16 +1,17 @@
 import { Tile } from "../../game/models/Tile";
-import { AtlasKeys } from "./../../utils/AtlasKeys";
-import { Colors } from "./../../utils/Colors";
-import { MagicValues } from "./../../utils/MagicValues";
-import { PixiFactory } from "./../../utils/PixiFactory";
+import { Colors } from "../../utils/Colors";
+import { MagicValues } from "../../utils/MagicValues";
+
 import { Graphics, Container } from "pixi.js";
+
 export class TileDisplay extends Container {
     public tileId: number;
     public tile: Tile;
+
     protected _background: Graphics;
     protected _ship: Graphics;
 
-    constructor(tileId: number, col: number, row: number) {
+    public constructor(tileId: number, col: number, row: number) {
         super();
 
         this.tileId = tileId;

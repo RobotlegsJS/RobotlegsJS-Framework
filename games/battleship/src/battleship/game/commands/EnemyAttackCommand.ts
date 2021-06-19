@@ -1,10 +1,10 @@
-import { AttackEvent } from "./../events/AttackEvent";
-import { Tile } from "./../models/Tile";
-import { GameManager } from "./../managers/GameManager";
-import { BattleFieldUtils } from "./../utils/BattleFieldUtils";
-import { LevelModel } from "./../models/LevelModel";
-import { GameService } from "./../../services/GameService";
-import { FlowService } from "./../../services/FlowService";
+import { AttackEvent } from "../events/AttackEvent";
+import { Tile } from "../models/Tile";
+import { GameManager } from "../managers/GameManager";
+import { BattleFieldUtils } from "../utils/BattleFieldUtils";
+import { LevelModel } from "../models/LevelModel";
+import { GameService } from "../../services/GameService";
+import { FlowService } from "../../services/FlowService";
 
 import { injectable, inject, ICommand } from "@robotlegsjs/core";
 
@@ -23,11 +23,11 @@ export class EnemyAttackCommand implements ICommand {
     public gameManager: GameManager;
 
     public execute(): void {
-        setTimeout(this.enemyAttackWithDelay.bind(this), 400, this);
+        setTimeout(this._enemyAttackWithDelay.bind(this), 400, this);
     }
 
-    private enemyAttackWithDelay(): void {
-        let tile: Tile = this.getRandomTile();
+    private _enemyAttackWithDelay(): void {
+        let tile: Tile = this._getRandomTile();
         let result = this.gameManager.attack(this.levelModel.hero, tile.col, tile.row);
 
         this.gameService.updateBattleField();
@@ -41,7 +41,7 @@ export class EnemyAttackCommand implements ICommand {
         }
     }
 
-    private getRandomTile(): Tile {
+    private _getRandomTile(): Tile {
         let tiles: Tile[] = BattleFieldUtils.getValidTileList(this.levelModel.hero);
         let rnd = Math.floor(Math.random() * tiles.length);
         return tiles[rnd];

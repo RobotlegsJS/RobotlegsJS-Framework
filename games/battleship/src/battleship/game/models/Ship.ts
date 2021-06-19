@@ -1,6 +1,8 @@
 import { Tile } from "./Tile";
+
 export class Ship {
     public id: number;
+
     private _hp: number;
     private _size: number;
     private _tiles: Tile[];
@@ -17,7 +19,7 @@ export class Ship {
         return this._tiles;
     }
 
-    constructor(size: number) {
+    public constructor(size: number) {
         this._hp = size;
         this._size = size;
         this._tiles = new Array<Tile>();

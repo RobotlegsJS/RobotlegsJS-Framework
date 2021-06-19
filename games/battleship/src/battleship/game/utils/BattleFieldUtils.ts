@@ -1,6 +1,7 @@
-import { Ship } from "./../models/Ship";
-import { Tile } from "./../models/Tile";
-import { BattleField } from "./../models/BattleField";
+import { Ship } from "../models/Ship";
+import { Tile } from "../models/Tile";
+import { BattleField } from "../models/BattleField";
+
 export class BattleFieldUtils {
     public static generateBattleField(): BattleField {
         const battleField: BattleField = new BattleField();
@@ -47,7 +48,7 @@ export class BattleFieldUtils {
         battleField.addShip(ship);
     }
 
-    public static isTileEmpty(battleField: BattleField, col, row): boolean {
+    public static isTileEmpty(battleField: BattleField, col: number, row: number): boolean {
         return battleField.grid.getTileId(col, row) === Tile.BLANKED;
     }
 

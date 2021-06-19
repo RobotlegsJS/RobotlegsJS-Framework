@@ -1,14 +1,12 @@
 import { Player } from "../../game/models/Player";
 import { ShipsGridDisplay } from "./ShipsGridDisplay";
 import { GridDisplay } from "./GridDisplay";
-import { Texts } from "./../../utils/Texts";
-import { ShipDisplay } from "./ShipDisplay";
-import { IsoUtils } from "./../../utils/IsoUtils";
-import { Ship } from "../../game/models/Ship";
+import { Texts } from "../../utils/Texts";
 import { Colors } from "../../utils/Colors";
-import { MagicValues } from "./../../utils/MagicValues";
-import { PixiFactory } from "./../../utils/PixiFactory";
-import { Container, Graphics, Sprite } from "pixi.js";
+import { PixiFactory } from "../../utils/PixiFactory";
+
+import { Container } from "pixi.js";
+
 export class EnemyComponent extends Container {
     private _ships: ShipsGridDisplay;
     private _grid: GridDisplay;
@@ -21,10 +19,10 @@ export class EnemyComponent extends Container {
         return this._ships;
     }
 
-    constructor() {
+    public constructor() {
         super();
-        this.setupComponents();
-        this.setupText();
+        this._setupComponents();
+        this._setupText();
     }
 
     public destroy(): void {
@@ -32,7 +30,7 @@ export class EnemyComponent extends Container {
         this.removeChildren();
     }
 
-    private setupComponents(): void {
+    private _setupComponents(): void {
         this._grid = new GridDisplay(Player.ENEMY);
         this._grid.x = 200;
         this._grid.y = 50;
@@ -46,7 +44,7 @@ export class EnemyComponent extends Container {
         this.addChild(this._ships);
     }
 
-    private setupText(): void {
+    private _setupText(): void {
         let title = PixiFactory.getText(Texts.ENEMY, Colors.HUD);
         title.x = 10;
         title.y = 10;

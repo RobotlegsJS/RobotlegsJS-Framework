@@ -1,14 +1,13 @@
 import { Colors } from "./Colors";
-import { Texts } from "./Texts";
-import { CustomButton } from "./../views/components/CustomButton";
+import { CustomButton } from "../views/components/CustomButton";
 import { MagicValues } from "./MagicValues";
 import { AtlasKeys } from "./AtlasKeys";
 
-import { BitmapText, Graphics, Text, Container, Sprite, Texture } from "pixi.js";
+import { BitmapText, Graphics, Container, Sprite, Texture } from "pixi.js";
 
 export class PixiFactory {
     /* TEXTFIELDS */
-    public static getText(text: string, color = Colors.TEXT): Container {
+    public static getText(text: string, color: number = Colors.TEXT): Container {
         let style = {
             align: "center",
             font: { name: MagicValues.FONT_FAMILY, size: MagicValues.FONT_SIZE_DEFAULT }
@@ -76,31 +75,35 @@ export class PixiFactory {
     }
 
     /* BACKGROUNDS */
-    public static getColorBackground(color = Colors.BACKGROUND_DARK): Graphics {
+    public static getColorBackground(color: number = Colors.BACKGROUND_DARK): Graphics {
         return this.getColorBox(MagicValues.MAX_WIDTH, MagicValues.MAX_HEIGHT, color);
     }
 
-    public static getColorBox(width: number, heigth: number, color = 0x00000): Graphics {
+    public static getColorBox(width: number, heigth: number, color: number = 0x00000): Graphics {
         let background: Graphics = new Graphics();
         background.beginFill(color);
         background.drawRect(0, 0, width, heigth);
         return background;
     }
 
-    public static getColorBoxRounded(width: number, heigth: number, color = 0x00000): Graphics {
+    public static getColorBoxRounded(
+        width: number,
+        heigth: number,
+        color: number = 0x00000
+    ): Graphics {
         let background: Graphics = new Graphics();
         background.beginFill(color);
         background.drawRoundedRect(0, 0, width, heigth, 5);
         return background;
     }
 
-    public static getShadowBackground(alpha = 0.6): Graphics {
+    public static getShadowBackground(alpha: number = 0.6): Graphics {
         let bg: Graphics = PixiFactory.getColorBackground(0x000000);
         bg.alpha = alpha;
         return bg;
     }
 
-    public static getShadowHeader(alpha = 0.8): Graphics {
+    public static getShadowHeader(alpha: number = 0.8): Graphics {
         let bg: Graphics = PixiFactory.getColorBox(MagicValues.MAX_WIDTH, 100);
         bg.alpha = alpha;
         return bg;

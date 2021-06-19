@@ -1,13 +1,14 @@
-import { GameService } from "./../services/GameService";
-import { HomeView } from "./../views/HomeView";
+import { GameService } from "../services/GameService";
+import { HomeView } from "../views/HomeView";
 
-import { injectable, inject, EventDispatcher } from "@robotlegsjs/core";
+import { injectable, inject } from "@robotlegsjs/core";
+
 import { Mediator } from "@robotlegsjs/pixi";
 
 @injectable()
 export class HomeViewMediator extends Mediator<HomeView> {
     @inject(GameService)
-    private gameService: GameService;
+    private _gameService: GameService;
 
     public initialize(): void {
         this.view.interactive = true;
@@ -21,10 +22,10 @@ export class HomeViewMediator extends Mediator<HomeView> {
     }
 
     private playButton_onClick(e: any): void {
-        this.view.animationOut(this.animationComplete.bind(this));
+        this.view.animationOut(this._animationComplete.bind(this));
     }
 
-    private animationComplete() {
-        this.gameService.createLevelCommand();
+    private _animationComplete(): void {
+        this._gameService.createLevelCommand();
     }
 }

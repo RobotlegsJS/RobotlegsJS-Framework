@@ -1,7 +1,7 @@
-import { BattleFieldUtils } from "./../utils/BattleFieldUtils";
-import { LevelModel } from "./../models/LevelModel";
-import { GameService } from "./../../services/GameService";
-import { FlowService } from "./../../services/FlowService";
+import { BattleFieldUtils } from "../utils/BattleFieldUtils";
+import { LevelModel } from "../models/LevelModel";
+import { GameService } from "../../services/GameService";
+import { FlowService } from "../../services/FlowService";
 
 import { injectable, inject, ICommand } from "@robotlegsjs/core";
 

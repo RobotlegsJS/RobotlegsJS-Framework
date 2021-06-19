@@ -1,10 +1,10 @@
 import { Event } from "@robotlegsjs/core";
 
 export class AttackEvent extends Event {
-    public static SUCCESS = "success";
-    public static FAIL = "fail";
+    public static SUCCESS: string = "success";
+    public static FAIL: string = "fail";
 
-    constructor(type: string) {
+    public constructor(type: string) {
         super(type);
     }
 }

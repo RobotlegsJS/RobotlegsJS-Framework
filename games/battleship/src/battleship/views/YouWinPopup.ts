@@ -1,11 +1,11 @@
 import { CustomButton } from "./components/CustomButton";
 
-import { AtlasKeys } from "./../utils/AtlasKeys";
-import { MagicValues } from "./../utils/MagicValues";
-import { PixiFactory } from "./../utils/PixiFactory";
-import { Texts } from "./../utils/Texts";
+import { AtlasKeys } from "../utils/AtlasKeys";
+import { MagicValues } from "../utils/MagicValues";
+import { PixiFactory } from "../utils/PixiFactory";
+import { Texts } from "../utils/Texts";
 
-import { Container, Text } from "pixi.js";
+import { Container } from "pixi.js";
 import { TweenLite } from "gsap";
 
 export class YouWinPopup extends Container {
@@ -22,30 +22,38 @@ export class YouWinPopup extends Container {
         return this._retryButton;
     }
 
-    constructor() {
+    public constructor() {
         super();
 
         this.interactive = true;
 
-        this.createBackgrounds();
-        this.createButtons();
-        this.createText();
+        this._createBackgrounds();
+        this._createButtons();
+        this._createText();
     }
 
     public animationIn(): void {
         let posY = MagicValues.MAX_HEIGHT * 0.8;
+
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
         let tweenTitle = new TweenLite(this._titleText, 0.3, { alpha: 1 });
+
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
         let tweenText1 = new TweenLite(this._msgText, 0.3, { alpha: 1 });
+
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
         let tweenButton1 = new TweenLite(this._retryButton, 0.1, { y: posY });
+
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
         let tweenButton2 = new TweenLite(this._homeButton, 0.1, { y: posY, delay: 0.1 });
     }
 
-    private createBackgrounds(): void {
+    private _createBackgrounds(): void {
         this.addChild(PixiFactory.getShadowBackground(0.8));
         this.addChild(PixiFactory.getShadowHeader());
     }
 
-    private createButtons(): void {
+    private _createButtons(): void {
         this._homeButton = PixiFactory.getIconButton(AtlasKeys.ICON_HOME);
         this._homeButton.x = MagicValues.HALF_WIDTH + this._homeButton.width * 0.5 + 4;
         this._homeButton.y = MagicValues.MAX_HEIGHT + 100;
@@ -57,7 +65,7 @@ export class YouWinPopup extends Container {
         this.addChild(this._retryButton);
     }
 
-    private createText(): void {
+    private _createText(): void {
         this._titleText = PixiFactory.getTitle(Texts.YOU_WIN);
         this._titleText.alpha = 0;
         this.addChild(this._titleText);

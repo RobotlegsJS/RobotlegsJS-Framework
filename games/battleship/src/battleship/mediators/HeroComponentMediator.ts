@@ -1,14 +1,13 @@
-import { IsoUtils } from "../utils/IsoUtils";
-import { Tile } from "../game/models/Tile";
 import { Ship } from "../game/models/Ship";
-import { GameEvent } from "./../events/GameEvent";
-import { MagicValues } from "./../utils/MagicValues";
-import { Grid } from "./../game/models/Grid";
-import { BattleField } from "./../game/models/BattleField";
+import { GameEvent } from "../events/GameEvent";
+import { BattleField } from "../game/models/BattleField";
 import { LevelModel } from "../game/models/LevelModel";
-import { HeroComponent } from "./../views/components/HeroComponent";
+import { HeroComponent } from "../views/components/HeroComponent";
+
 import { injectable, inject } from "@robotlegsjs/core";
+
 import { Mediator } from "@robotlegsjs/pixi";
+
 @injectable()
 export class HeroComponentMediator extends Mediator<HeroComponent> {
     @inject(LevelModel)
@@ -18,25 +17,25 @@ export class HeroComponentMediator extends Mediator<HeroComponent> {
         this.eventMap.mapListener(
             this.eventDispatcher,
             GameEvent.DRAW_BATTLEFIELD,
-            this.onDrawBattleField,
+            this._onDrawBattleField,
             this
         );
         this.eventMap.mapListener(
             this.eventDispatcher,
             GameEvent.UPDATE_BATTLEFIELD,
-            this.onUpdatewBattleField,
+            this._onUpdatewBattleField,
             this
         );
         this.eventMap.mapListener(
             this.eventDispatcher,
             GameEvent.ENEMY_PHASE,
-            this.onEnemyPhase,
+            this._onEnemyPhase,
             this
         );
         this.eventMap.mapListener(
             this.eventDispatcher,
             GameEvent.HERO_PHASE,
-            this.onHeroPhase,
+            this._onHeroPhase,
             this
         );
     }
@@ -45,28 +44,28 @@ export class HeroComponentMediator extends Mediator<HeroComponent> {
         this.view.destroy();
     }
 
-    private onEnemyPhase(e: any): void {
+    private _onEnemyPhase(e: any): void {
         this.view.grid.focus = true;
     }
 
-    private onHeroPhase(e: any): void {
+    private _onHeroPhase(e: any): void {
         this.view.grid.focus = false;
     }
 
-    private onUpdatewBattleField(e: any): void {
+    private _onUpdatewBattleField(e: any): void {
         let battlefield: BattleField = this.levelModel.hero;
         this.view.grid.updateGrid(battlefield.grid);
-        this.updateHPs(battlefield.ships);
+        this._updateHPs(battlefield.ships);
     }
 
-    private onDrawBattleField(e: any): void {
+    private _onDrawBattleField(e: any): void {
         let battlefield: BattleField = this.levelModel.hero;
         this.view.grid.drawGrid(battlefield.grid);
         this.view.ships.addShips(battlefield.ships);
         this.view.hps.addShipHPs(battlefield.ships);
     }
 
-    private updateHPs(ships: Ship[]): void {
+    private _updateHPs(ships: Ship[]): void {
         this.view.ships.updateHPs(ships);
         this.view.hps.updateHPs(ships);
     }

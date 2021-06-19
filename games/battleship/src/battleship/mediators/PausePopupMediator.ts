@@ -1,8 +1,9 @@
-import { FlowService } from "./../services/FlowService";
-import { GameService } from "./../services/GameService";
-import { PausePopup } from "./../views/PausePopup";
+import { FlowService } from "../services/FlowService";
+import { GameService } from "../services/GameService";
+import { PausePopup } from "../views/PausePopup";
 
 import { injectable, inject } from "@robotlegsjs/core";
+
 import { Mediator } from "@robotlegsjs/pixi";
 
 @injectable()
@@ -15,25 +16,25 @@ export class PausePopupMediator extends Mediator<PausePopup> {
 
     public initialize(): void {
         this.view.animationIn();
-        this.eventMap.mapListener(this.view.homeButton, "click", this.homeButton_onClick, this);
-        this.eventMap.mapListener(this.view.resumeButton, "click", this.resumeButton_onClick, this);
-        this.eventMap.mapListener(this.view.retryButton, "click", this.retryButton_onClick, this);
+        this.eventMap.mapListener(this.view.homeButton, "click", this._onClickHomeButton, this);
+        this.eventMap.mapListener(this.view.resumeButton, "click", this._onClickResumeButton, this);
+        this.eventMap.mapListener(this.view.retryButton, "click", this._onClickRetryButton, this);
     }
 
     public destroy(): void {
         this.eventMap.unmapListeners();
     }
 
-    private homeButton_onClick(e: any): void {
+    private _onClickHomeButton(e: any): void {
         this.flowService.setHomeView();
         this.flowService.closePopup();
     }
 
-    private resumeButton_onClick(e: any): void {
+    private _onClickResumeButton(e: any): void {
         this.flowService.closePopup();
     }
 
-    private retryButton_onClick(e: any): void {
+    private _onClickRetryButton(e: any): void {
         this.flowService.closePopup();
         this.gameService.retryCommand();
     }

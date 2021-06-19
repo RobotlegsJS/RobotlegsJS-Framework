@@ -1,12 +1,14 @@
 import { EnemyTileDisplay } from "./EnemyTileDisplay";
-import { Player } from "./../../game/models/Player";
+import { Player } from "../../game/models/Player";
 import { MagicValues } from "../../utils/MagicValues";
-import { Tile } from "./../../game/models/Tile";
+import { Tile } from "../../game/models/Tile";
 import { IsoUtils } from "../../utils/IsoUtils";
-import { PixiFactory } from "./../../utils/PixiFactory";
+import { PixiFactory } from "../../utils/PixiFactory";
 import { Grid } from "../../game/models/Grid";
 import { TileDisplay } from "./TileDisplay";
+
 import { Container } from "pixi.js";
+
 export class GridDisplay extends Container {
     private _displays: Map<string, TileDisplay>;
     private _type: string;
@@ -16,7 +18,11 @@ export class GridDisplay extends Container {
         this._background.visible = value;
     }
 
-    constructor(type: string = Player.HERO) {
+    public get focus(): boolean {
+        return this._background.visible;
+    }
+
+    public constructor(type: string = Player.HERO) {
         super();
 
         this._displays = new Map<string, TileDisplay>();
@@ -28,10 +34,10 @@ export class GridDisplay extends Container {
         this.removeChildren();
     }
 
-    public updateGrid(grid): void {
+    public updateGrid(grid: Grid): void {
         for (let row = 0; row < grid.maxRows; row++) {
             for (let col = 0; col < grid.maxCols; col++) {
-                let display: TileDisplay = this._displays.get(this.getKey(col, row));
+                let display: TileDisplay = this._displays.get(this._getKey(col, row));
                 if (grid.getTileId(col, row) === Tile.HITTED) {
                     display.attack();
                 }
@@ -41,7 +47,7 @@ export class GridDisplay extends Container {
 
     public drawGrid(grid: Grid): void {
         this.clear();
-        this.createBackground(grid.maxCols, grid.maxRows);
+        this._createBackground(grid.maxCols, grid.maxRows);
 
         for (let row = 0; row < grid.maxRows; row++) {
             for (let col = 0; col < grid.maxCols; col++) {
@@ -56,21 +62,21 @@ export class GridDisplay extends Container {
                 display.x = positions.x;
                 display.y = positions.y;
                 this.addChild(display);
-                this._displays.set(this.getKey(col, row), display);
+                this._displays.set(this._getKey(col, row), display);
             }
         }
     }
 
     public getDisplay(col: number, row: number): TileDisplay {
-        const key = this.getKey(col, row);
+        const key = this._getKey(col, row);
         return this._displays.get(key);
     }
 
-    private getKey(col: number, row: number): string {
+    private _getKey(col: number, row: number): string {
         return `${col}_${row}`;
     }
 
-    private createBackground(maxCols: number, maxRows: number): void {
+    private _createBackground(maxCols: number, maxRows: number): void {
         let length = MagicValues.TILE_WIDTH * maxCols + 2;
         this._background = PixiFactory.getIsometricBackground(length, 0x00aa00);
         this._background.y = 3;

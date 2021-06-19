@@ -1,12 +1,13 @@
 import { Colors } from "../utils/Colors";
-import { AtlasKeys } from "./../utils/AtlasKeys";
+import { AtlasKeys } from "../utils/AtlasKeys";
+
 import { TweenLite } from "gsap";
+
 import { CustomButton } from "./components/CustomButton";
 import { EnemyComponent } from "./components/EnemyComponent";
-import { Player } from "./../game/models/Player";
 import { MagicValues } from "../utils/MagicValues";
 import { HeroComponent } from "./components/HeroComponent";
-import { PixiFactory } from "./../utils/PixiFactory";
+import { PixiFactory } from "../utils/PixiFactory";
 
 import { Container } from "pixi.js";
 
@@ -20,10 +21,10 @@ export class GameView extends Container {
         return this._pauseButton;
     }
 
-    constructor() {
+    public constructor() {
         super();
-        this.createBackground();
-        this.createButtons();
+        this._createBackground();
+        this._createButtons();
     }
 
     public destroy(): void {
@@ -44,14 +45,15 @@ export class GameView extends Container {
     }
 
     public animationIn(): void {
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
         let tweenButton = new TweenLite(this.pauseButton, 0.1, { y: 50, delay: 0.2 });
     }
 
-    private createBackground(): void {
+    private _createBackground(): void {
         this.addChild(PixiFactory.getColorBackground(Colors.GAME_BACKGROUND));
     }
 
-    private createButtons(): void {
+    private _createButtons(): void {
         this._pauseButton = PixiFactory.getIconButton(AtlasKeys.ICON_PAUSE);
         this._pauseButton.x = MagicValues.MAX_WIDTH - 50;
         this._pauseButton.y = -100;

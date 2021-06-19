@@ -1,9 +1,11 @@
-import { AtlasKeys } from "./../../utils/AtlasKeys";
-import { IsoUtils } from "./../../utils/IsoUtils";
-import { Ship } from "./../../game/models/Ship";
+import { AtlasKeys } from "../../utils/AtlasKeys";
+import { IsoUtils } from "../../utils/IsoUtils";
+import { Ship } from "../../game/models/Ship";
+
 import { Sprite } from "pixi.js";
+
 export class ShipDisplay extends Sprite {
-    constructor(ship: Ship) {
+    public constructor(ship: Ship) {
         super(AtlasKeys.getShipTextureById(ship.id));
 
         this.anchor.set(0.5);

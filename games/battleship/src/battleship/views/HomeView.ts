@@ -1,7 +1,6 @@
-import { CustomButton } from "./components/CustomButton";
-import { AtlasKeys } from "./../utils/AtlasKeys";
-import { MagicValues } from "./../utils/MagicValues";
-import { PixiFactory } from "./../utils/PixiFactory";
+import { AtlasKeys } from "../utils/AtlasKeys";
+import { MagicValues } from "../utils/MagicValues";
+import { PixiFactory } from "../utils/PixiFactory";
 
 import { TweenLite } from "gsap";
 import { Container, Sprite } from "pixi.js";
@@ -10,21 +9,27 @@ export class HomeView extends Container {
     private _msgText: any;
     private _logoImg: any;
 
-    constructor() {
+    public constructor() {
         super();
 
-        this.createBackground();
-        this.createImages();
-        this.createText();
+        this._createBackground();
+        this._createImages();
+        this._createText();
     }
 
     public animationIn(): void {
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
         let tweenLogo = new TweenLite(this._logoImg, 0.4, { alpha: 1 });
+
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
         let tweenMsg = new TweenLite(this._msgText, 0.4, { alpha: 1, delay: 0.2 });
     }
 
     public animationOut(complete: Function): void {
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
         let tweenText = new TweenLite(this._msgText, 0.2, { alpha: 0 });
+
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
         let tweenMsg = new TweenLite(this._logoImg, 0.2, {
             alpha: 0,
             delay: 0.1,
@@ -32,11 +37,11 @@ export class HomeView extends Container {
         });
     }
 
-    private createBackground(): void {
+    private _createBackground(): void {
         this.addChild(PixiFactory.getColorBackground());
     }
 
-    private createImages(): void {
+    private _createImages(): void {
         this._logoImg = PixiFactory.getImage(AtlasKeys.LOGO_BATTLESHIP);
         this._logoImg.x = MagicValues.HALF_WIDTH;
         this._logoImg.y = MagicValues.MAX_HEIGHT * 0.3;
@@ -50,7 +55,7 @@ export class HomeView extends Container {
         this.addChild(logoSetzerImg);
     }
 
-    private createText(): void {
+    private _createText(): void {
         this._msgText = PixiFactory.getText("click to start");
         this._msgText.pivot.x = this._msgText.width * 0.5;
         this._msgText.x = MagicValues.HALF_WIDTH;

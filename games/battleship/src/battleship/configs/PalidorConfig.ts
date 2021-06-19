@@ -1,12 +1,14 @@
 import { PausePopup } from "../views/PausePopup";
-import { YouWinPopup } from "./../views/YouWinPopup";
+import { YouWinPopup } from "../views/YouWinPopup";
 import { GameOverPopup } from "../views/GameOverPopup";
-import { GameView } from "./../views/GameView";
+import { GameView } from "../views/GameView";
 import { HomeView } from "../views/HomeView";
 import { IntroView } from "../views/IntroView";
-import { FlowService } from "./../services/FlowService";
-import { FlowEvent } from "./../events/FlowEvent";
+import { FlowService } from "../services/FlowService";
+import { FlowEvent } from "../events/FlowEvent";
+
 import { injectable, IConfig, inject, IContext, IEventDispatcher } from "@robotlegsjs/core";
+
 import { IFlowManager } from "@robotlegsjs/pixi-palidor";
 
 @injectable()
@@ -21,12 +23,12 @@ export class PalidorConfig implements IConfig {
     public dispatcher: IEventDispatcher;
 
     public configure(): void {
-        this.mapPalidor();
+        this._mapPalidor();
 
         this.dispatcher.dispatchEvent(new FlowEvent(FlowEvent.SHOW_INTRO_VIEW));
     }
 
-    private mapPalidor(): void {
+    private _mapPalidor(): void {
         this.context.injector.bind(FlowService).to(FlowService).inSingletonScope();
 
         this.flowManager.map(FlowEvent.SHOW_GAME_VIEW).toView(GameView);

@@ -1,4 +1,5 @@
 import { Tile } from "./Tile";
+
 export class Grid {
     private _maxCols: number;
     private _maxRows: number;
@@ -13,11 +14,11 @@ export class Grid {
         return this._maxCols;
     }
 
-    constructor(maxCols = 9, maxRows = 9) {
+    public constructor(maxCols: number = 9, maxRows: number = 9) {
         this._grid = new Array<number[]>();
         this._maxCols = maxCols;
         this._maxRows = maxRows;
-        this.generateEmptyGrid();
+        this._generateEmptyGrid();
     }
 
     public getTileId(col: number, row: number): number {
@@ -31,7 +32,7 @@ export class Grid {
         this._grid[row][col] = tileId;
     }
 
-    private generateEmptyGrid(): void {
+    private _generateEmptyGrid(): void {
         let line: number[];
         for (let row = 0; row < this._maxRows; row++) {
             line = new Array<number>();

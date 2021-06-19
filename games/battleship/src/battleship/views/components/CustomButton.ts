@@ -1,6 +1,6 @@
-import { AtlasKeys } from "./../../utils/AtlasKeys";
-import { Colors } from "./../../utils/Colors";
-import { PixiFactory } from "./../../utils/PixiFactory";
+import { AtlasKeys } from "../../utils/AtlasKeys";
+import { Colors } from "../../utils/Colors";
+import { PixiFactory } from "../../utils/PixiFactory";
 
 import { Sprite, Texture, Container } from "pixi.js";
 
@@ -20,7 +20,7 @@ export class CustomButton extends Sprite {
         return this._textValue;
     }
 
-    constructor() {
+    public constructor() {
         super(AtlasKeys.getTexture(AtlasKeys.BUTTON));
 
         let downStateTexture: Texture = AtlasKeys.getTexture(AtlasKeys.BUTTON);
@@ -30,8 +30,8 @@ export class CustomButton extends Sprite {
         this._overState = downStateTexture;
         this._upState = upStateTexture;
 
-        this.setInitialValues();
-        this.createInteractions();
+        this._setInitialValues();
+        this._createInteractions();
     }
 
     public setIco(name: string): void {
@@ -55,38 +55,38 @@ export class CustomButton extends Sprite {
         this.addChild(this._labelText);
     }
 
-    private setInitialValues(): void {
+    private _setInitialValues(): void {
         this.anchor.set(0.5);
         this.interactive = true;
         this.buttonMode = true;
     }
 
-    private createInteractions(): void {
-        this.on("pointerup", this.onButtonUp);
-        this.on("pointerupoutside", this.onButtonUp);
-        this.on("pointerdown", this.onButtonDown);
-        this.on("pointerover", this.onButtonOver);
-        this.on("pointerout", this.onButtonOut);
+    private _createInteractions(): void {
+        this.on("pointerup", this._onButtonUp);
+        this.on("pointerupoutside", this._onButtonUp);
+        this.on("pointerdown", this._onButtonDown);
+        this.on("pointerover", this._onButtonOver);
+        this.on("pointerout", this._onButtonOut);
     }
 
-    private onButtonDown(): void {
+    private _onButtonDown(): void {
         this._isDown = true;
         this.texture = this._downState;
         this.scale.set(0.95, 0.95);
     }
 
-    private onButtonOut(): void {
+    private _onButtonOut(): void {
         this._isOver = false;
         this.texture = this._upState;
         this.scale.set(1, 1);
     }
 
-    private onButtonOver(): void {
+    private _onButtonOver(): void {
         this._isOver = true;
         this.texture = this._overState;
     }
 
-    private onButtonUp(): void {
+    private _onButtonUp(): void {
         this._isDown = false;
         this.scale.set(1, 1);
 

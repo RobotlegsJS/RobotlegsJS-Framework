@@ -1,11 +1,9 @@
-import { FlowService } from "./../../services/FlowService";
-import { AttackEvent } from "./../events/AttackEvent";
+import { FlowService } from "../../services/FlowService";
+import { AttackEvent } from "../events/AttackEvent";
 import { GameService } from "../../services/GameService";
-import { LevelModel } from "./../models/LevelModel";
-import { BattleField } from "./../models/BattleField";
-import { Tile } from "./../models/Tile";
-import { Player } from "../models/Player";
-import { BattleFieldUtils } from "../utils/BattleFieldUtils";
+import { LevelModel } from "../models/LevelModel";
+import { BattleField } from "../models/BattleField";
+
 import { injectable, inject, IEventDispatcher } from "@robotlegsjs/core";
 
 @injectable()

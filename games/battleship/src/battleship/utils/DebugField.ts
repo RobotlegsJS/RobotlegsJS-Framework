@@ -1,4 +1,4 @@
-import { BattleField } from "./../game/models/BattleField";
+import { BattleField } from "../game/models/BattleField";
 
 export class DebugUtils {
     public static printBattleField(battleField: BattleField): void {
