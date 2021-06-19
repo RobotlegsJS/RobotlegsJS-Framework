@@ -22,7 +22,7 @@ module.exports = {
   extends: ["@rushstack/eslint-config/profile/web-app"],
   parserOptions: {
     tsconfigRootDir: __dirname,
-    project: "tsconfig.json",
+    project: "tsconfig.eslint.json",
     ecmaVersion: 2015
   },
   plugins: [
