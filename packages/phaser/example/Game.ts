@@ -6,15 +6,11 @@
 // ------------------------------------------------------------------------------
 
 import { Context, IContext, MVCSBundle } from "@robotlegsjs/core";
-
-import { ContextSceneManager } from "../src/robotlegs/bender/extensions/contextSceneManager/impl/ContextSceneManager";
 import { PhaserBundle } from "../src/robotlegs/bender/bundles/phaser/PhaserBundle";
-
+import { ContextSceneManager } from "../src/robotlegs/bender/extensions/contextSceneManager/impl/ContextSceneManager";
 import { GameConfig } from "./config/GameConfig";
 import { SceneMediatorConfig } from "./config/SceneMediatorConfig";
-
 import { SceneKey } from "./constants/SceneKey";
-
 import { Boot } from "./scenes/Boot";
 import { Main } from "./scenes/Main";
 import { Preload } from "./scenes/Preload";

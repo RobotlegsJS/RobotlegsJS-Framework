@@ -5,7 +5,7 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import { injectable, Event, ICommand } from "@robotlegsjs/core";
+import { Event, ICommand, injectable } from "@robotlegsjs/core";
 
 @injectable()
 export class MainCommand implements ICommand {

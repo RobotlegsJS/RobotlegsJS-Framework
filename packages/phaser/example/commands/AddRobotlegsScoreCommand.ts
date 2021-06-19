@@ -5,9 +5,9 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import { injectable, Event, ICommand, inject, IEventDispatcher } from "@robotlegsjs/core";
-import { GameModel } from "../models/GameModel";
+import { Event, ICommand, IEventDispatcher, inject, injectable } from "@robotlegsjs/core";
 import { MainEvent } from "../events/MainEvent";
+import { GameModel } from "../models/GameModel";
 
 @injectable()
 export class AddRobotlegsScoreCommand implements ICommand {

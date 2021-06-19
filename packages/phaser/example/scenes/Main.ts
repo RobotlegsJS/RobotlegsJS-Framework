@@ -6,9 +6,8 @@
 // ------------------------------------------------------------------------------
 
 import { SceneKey } from "../constants/SceneKey";
-
-import { BaseScene } from "./BaseScene";
 import { ScoreView } from "../views/ScoreView";
+import { BaseScene } from "./BaseScene";
 
 export class Main extends BaseScene {
     private _scoreView: ScoreView;

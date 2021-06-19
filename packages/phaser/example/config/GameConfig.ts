@@ -5,10 +5,9 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import { injectable, inject, IConfig, IContext, IEventCommandMap } from "@robotlegsjs/core";
-
-import { MainCommand } from "../commands/MainCommand";
+import { IConfig, IContext, IEventCommandMap, inject, injectable } from "@robotlegsjs/core";
 import { AddRobotlegsScoreCommand } from "../commands/AddRobotlegsScoreCommand";
+import { MainCommand } from "../commands/MainCommand";
 import { MainEvent } from "../events/MainEvent";
 import { GameModel } from "../models/GameModel";
 

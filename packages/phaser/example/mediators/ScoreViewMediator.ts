@@ -5,12 +5,11 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import { injectable, inject } from "@robotlegsjs/core";
-
-import { GameModel } from "../models/GameModel";
+import { inject, injectable } from "@robotlegsjs/core";
 import { ViewMediator } from "../../src/robotlegs/bender/extensions/mediatorMap/impl/ViewMediator";
-import { ScoreView } from "../views/ScoreView";
 import { MainEvent } from "../events/MainEvent";
+import { GameModel } from "../models/GameModel";
+import { ScoreView } from "../views/ScoreView";
 
 @injectable()
 export class ScoreViewMediator extends ViewMediator<ScoreView> {

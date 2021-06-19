@@ -8,7 +8,6 @@
 /// <reference path="../node_modules/phaser/types/phaser.d.ts" />
 
 import "reflect-metadata";
-
 import { Game } from "./Game";
 
 (<any>window).initGame = function () {
