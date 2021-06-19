@@ -6,10 +6,8 @@
 // ------------------------------------------------------------------------------
 
 import { Event } from "@robotlegsjs/core";
-
-import { IViewHandler } from "../api/IViewHandler";
-
 import DisplayObjectContainer from "openfl/display/DisplayObjectContainer";
+import { IViewHandler } from "../api/IViewHandler";
 
 /**
  * Container existence event

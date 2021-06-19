@@ -6,20 +6,17 @@
 // ------------------------------------------------------------------------------
 
 import {
-    injectable,
-    inject,
+    Event,
     IClass,
     IEvent,
-    IEventMap,
     IEventDispatcher,
-    Event
+    IEventMap,
+    inject,
+    injectable
 } from "@robotlegsjs/core";
-
-import { IMediator } from "../api/IMediator";
-
-import { ConvertToEventDispatcher } from "./ConvertToEventDispatcher";
-
 import EventDispatcher from "openfl/events/EventDispatcher";
+import { IMediator } from "../api/IMediator";
+import { ConvertToEventDispatcher } from "./ConvertToEventDispatcher";
 
 /**
  * Classic Robotlegs mediator implementation

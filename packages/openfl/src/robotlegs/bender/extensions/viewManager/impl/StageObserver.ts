@@ -6,13 +6,11 @@
 // ------------------------------------------------------------------------------
 
 import { IClass } from "@robotlegsjs/core";
-
+import DisplayObjectContainer from "openfl/display/DisplayObjectContainer";
+import Event from "openfl/events/Event";
 import { ContainerBinding } from "./ContainerBinding";
 import { ContainerRegistry } from "./ContainerRegistry";
 import { ContainerRegistryEvent } from "./ContainerRegistryEvent";
-
-import DisplayObjectContainer from "openfl/display/DisplayObjectContainer";
-import Event from "openfl/events/Event";
 
 /**
  * @private

@@ -6,15 +6,12 @@
 // ------------------------------------------------------------------------------
 
 import { IContext, IExtension, IInjector, ILogger } from "@robotlegsjs/core";
-
+import DisplayObjectContainer from "openfl/display/DisplayObjectContainer";
 import { IContextView } from "../contextView/api/IContextView";
-
 import { IViewManager } from "./api/IViewManager";
 import { ContainerBinding } from "./impl/ContainerBinding";
 import { ContainerRegistry } from "./impl/ContainerRegistry";
 import { StageCrawler } from "./impl/StageCrawler";
-
-import DisplayObjectContainer from "openfl/display/DisplayObjectContainer";
 
 /**
  * View Handlers (like the MediatorMap) handle views as they land on stage.

@@ -6,12 +6,10 @@
 // ------------------------------------------------------------------------------
 
 import { EventDispatcher } from "@robotlegsjs/core";
-
+import DisplayObjectContainer from "openfl/display/DisplayObjectContainer";
 import { ContainerBinding } from "./ContainerBinding";
 import { ContainerBindingEvent } from "./ContainerBindingEvent";
 import { ContainerRegistryEvent } from "./ContainerRegistryEvent";
-
-import DisplayObjectContainer from "openfl/display/DisplayObjectContainer";
 
 // [Event(name="containerAdd", type="robotlegs.bender.extensions.viewManager.impl.ContainerRegistryEvent")]
 // [Event(name="containerRemove", type="robotlegs.bender.extensions.viewManager.impl.ContainerRegistryEvent")]

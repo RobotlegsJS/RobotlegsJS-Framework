@@ -5,11 +5,10 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import { IMediatorMapping } from "../api/IMediatorMapping";
-import { MediatorFactory } from "./MediatorFactory";
-
 import DisplayObject from "openfl/display/DisplayObject";
 import Event from "openfl/events/Event";
+import { IMediatorMapping } from "../api/IMediatorMapping";
+import { MediatorFactory } from "./MediatorFactory";
 
 /**
  * @private

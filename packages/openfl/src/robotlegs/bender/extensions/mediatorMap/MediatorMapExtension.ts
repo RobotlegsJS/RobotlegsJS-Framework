@@ -6,11 +6,9 @@
 // ------------------------------------------------------------------------------
 
 import { IContext, IExtension, IInjector } from "@robotlegsjs/core";
-
+import { IViewManager } from "../viewManager/api/IViewManager";
 import { IMediatorMap } from "./api/IMediatorMap";
 import { MediatorMap } from "./impl/MediatorMap";
-
-import { IViewManager } from "../viewManager/api/IViewManager";
 
 /**
  * This extension installs a shared IMediatorMap into the context
