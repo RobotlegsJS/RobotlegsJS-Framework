@@ -5,9 +5,11 @@ import { injectable, inject, IEventDispatcher, EventDispatcher } from "@robotleg
 
 @injectable()
 export class FlowService {
-    @inject(IEventDispatcher) public eventDispatcher: IEventDispatcher;
+    @inject(IEventDispatcher)
+    public eventDispatcher: IEventDispatcher;
 
     // Views
+
     public setHomeView(): void {
         this.dispatchEventWith(FlowEvent.SHOW_HOME_VIEW);
     }
@@ -17,6 +19,7 @@ export class FlowService {
     }
 
     // Floating Views
+
     public showGameOverPopup(): void {
         this.dispatchEventWith(FlowEvent.SHOW_GAME_OVER_POPUP);
     }
@@ -30,6 +33,7 @@ export class FlowService {
     }
 
     // extras
+
     public closePopup(): void {
         this.dispatchEventWith(PalidorEvent.REMOVE_LAST_FLOATING_VIEW_ADDED);
     }

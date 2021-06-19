@@ -11,21 +11,23 @@ import { IFlowManager } from "@robotlegsjs/pixi-palidor";
 
 @injectable()
 export class PalidorConfig implements IConfig {
-    @inject(IContext) public context: IContext;
+    @inject(IContext)
+    public context: IContext;
 
-    @inject(IFlowManager) public flowManager: IFlowManager;
+    @inject(IFlowManager)
+    public flowManager: IFlowManager;
 
-    @inject(IEventDispatcher) public dispatcher: IEventDispatcher;
+    @inject(IEventDispatcher)
+    public dispatcher: IEventDispatcher;
+
     public configure(): void {
         this.mapPalidor();
 
         this.dispatcher.dispatchEvent(new FlowEvent(FlowEvent.SHOW_INTRO_VIEW));
     }
+
     private mapPalidor(): void {
-        this.context.injector
-            .bind(FlowService)
-            .to(FlowService)
-            .inSingletonScope();
+        this.context.injector.bind(FlowService).to(FlowService).inSingletonScope();
 
         this.flowManager.map(FlowEvent.SHOW_GAME_VIEW).toView(GameView);
         this.flowManager.map(FlowEvent.SHOW_HOME_VIEW).toView(HomeView);

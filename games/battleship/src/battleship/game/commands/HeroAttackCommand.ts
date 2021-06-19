@@ -11,17 +11,27 @@ import { injectable, inject, ICommand } from "@robotlegsjs/core";
 
 @injectable()
 export class HeroAttackCommand implements ICommand {
-    @inject(LevelModel) public levelModel: LevelModel;
+    @inject(LevelModel)
+    public levelModel: LevelModel;
 
-    @inject(GameService) public gameService: GameService;
+    @inject(GameService)
+    public gameService: GameService;
 
-    @inject(FlowService) public flowService: FlowService;
+    @inject(FlowService)
+    public flowService: FlowService;
 
-    @inject(GameManager) public gameManager: GameManager;
-    @inject(GameEvent) public gameEvent: GameEvent;
+    @inject(GameManager)
+    public gameManager: GameManager;
+
+    @inject(GameEvent)
+    public gameEvent: GameEvent;
 
     public execute(): void {
-        let result = this.gameManager.attack(this.levelModel.enemy, this.gameEvent.extra.col, this.gameEvent.extra.row);
+        let result = this.gameManager.attack(
+            this.levelModel.enemy,
+            this.gameEvent.extra.col,
+            this.gameEvent.extra.row
+        );
 
         this.gameService.updateBattleField();
 

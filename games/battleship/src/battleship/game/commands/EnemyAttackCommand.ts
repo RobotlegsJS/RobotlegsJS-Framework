@@ -10,13 +10,17 @@ import { injectable, inject, ICommand } from "@robotlegsjs/core";
 
 @injectable()
 export class EnemyAttackCommand implements ICommand {
-    @inject(LevelModel) public levelModel: LevelModel;
+    @inject(LevelModel)
+    public levelModel: LevelModel;
 
-    @inject(GameService) public gameService: GameService;
+    @inject(GameService)
+    public gameService: GameService;
 
-    @inject(FlowService) public flowService: FlowService;
+    @inject(FlowService)
+    public flowService: FlowService;
 
-    @inject(GameManager) public gameManager: GameManager;
+    @inject(GameManager)
+    public gameManager: GameManager;
 
     public execute(): void {
         setTimeout(this.enemyAttackWithDelay.bind(this), 400, this);

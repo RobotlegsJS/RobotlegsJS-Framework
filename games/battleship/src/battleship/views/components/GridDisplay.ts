@@ -11,19 +11,23 @@ export class GridDisplay extends Container {
     private _displays: Map<string, TileDisplay>;
     private _type: string;
     private _background: Container;
+
     public set focus(value: boolean) {
         this._background.visible = value;
     }
+
     constructor(type: string = Player.HERO) {
         super();
 
         this._displays = new Map<string, TileDisplay>();
         this._type = type;
     }
+
     public clear(): void {
         this._displays.clear();
         this.removeChildren();
     }
+
     public updateGrid(grid): void {
         for (let row = 0; row < grid.maxRows; row++) {
             for (let col = 0; col < grid.maxCols; col++) {
@@ -34,6 +38,7 @@ export class GridDisplay extends Container {
             }
         }
     }
+
     public drawGrid(grid: Grid): void {
         this.clear();
         this.createBackground(grid.maxCols, grid.maxRows);
@@ -55,13 +60,16 @@ export class GridDisplay extends Container {
             }
         }
     }
+
     public getDisplay(col: number, row: number): TileDisplay {
         const key = this.getKey(col, row);
         return this._displays.get(key);
     }
+
     private getKey(col: number, row: number): string {
         return `${col}_${row}`;
     }
+
     private createBackground(maxCols: number, maxRows: number): void {
         let length = MagicValues.TILE_WIDTH * maxCols + 2;
         this._background = PixiFactory.getIsometricBackground(length, 0x00aa00);

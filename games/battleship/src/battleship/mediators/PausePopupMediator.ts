@@ -7,9 +7,11 @@ import { Mediator } from "@robotlegsjs/pixi";
 
 @injectable()
 export class PausePopupMediator extends Mediator<PausePopup> {
-    @inject(FlowService) public flowService: FlowService;
+    @inject(FlowService)
+    public flowService: FlowService;
 
-    @inject(GameService) public gameService: GameService;
+    @inject(GameService)
+    public gameService: GameService;
 
     public initialize(): void {
         this.view.animationIn();

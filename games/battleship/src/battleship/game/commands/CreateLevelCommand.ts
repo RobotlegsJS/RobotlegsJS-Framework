@@ -7,11 +7,14 @@ import { injectable, inject, ICommand } from "@robotlegsjs/core";
 
 @injectable()
 export class CreateLevelCommand implements ICommand {
-    @inject(LevelModel) public levelModel: LevelModel;
+    @inject(LevelModel)
+    public levelModel: LevelModel;
 
-    @inject(GameService) public gameService: GameService;
+    @inject(GameService)
+    public gameService: GameService;
 
-    @inject(FlowService) public flowService: FlowService;
+    @inject(FlowService)
+    public flowService: FlowService;
 
     public execute(): void {
         this.flowService.setGameView();

@@ -10,10 +10,17 @@ import { injectable, inject, IEventDispatcher } from "@robotlegsjs/core";
 
 @injectable()
 export class GameManager {
-    @inject(IEventDispatcher) public eventDispatcher: IEventDispatcher;
-    @inject(LevelModel) public levelModel: LevelModel;
-    @inject(GameService) public gameService: GameService;
-    @inject(FlowService) public flowService: FlowService;
+    @inject(IEventDispatcher)
+    public eventDispatcher: IEventDispatcher;
+
+    @inject(LevelModel)
+    public levelModel: LevelModel;
+
+    @inject(GameService)
+    public gameService: GameService;
+
+    @inject(FlowService)
+    public flowService: FlowService;
 
     public attack(battleField: BattleField, col: number, row: number): string {
         let tileId = battleField.attackTile(col, row);

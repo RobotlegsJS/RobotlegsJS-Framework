@@ -12,6 +12,7 @@ import { assert } from "chai";
 describe("GameManager", () => {
     let gameManager: GameManager;
     let battleField: BattleField;
+
     beforeEach(() => {
         gameManager = new GameManager();
         gameManager.eventDispatcher = new EventDispatcher();
@@ -31,7 +32,10 @@ describe("GameManager", () => {
 
         it("should return SUCCESS when the tile hit is not a ship", () => {
             let ship: Ship = battleField.ships[0];
-            assert.equal(gameManager.attack(battleField, ship.tiles[0].col, ship.tiles[0].row), AttackEvent.SUCCESS);
+            assert.equal(
+                gameManager.attack(battleField, ship.tiles[0].col, ship.tiles[0].row),
+                AttackEvent.SUCCESS
+            );
         });
         it("should return gameOver when the last ship is hit", () => {
             let result;

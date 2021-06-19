@@ -8,11 +8,14 @@ import { Mediator } from "@robotlegsjs/pixi";
 
 @injectable()
 export class YouWinPopupMediator extends Mediator<YouWinPopup> {
-    @inject(FlowService) public flowService: FlowService;
+    @inject(FlowService)
+    public flowService: FlowService;
 
-    @inject(GameService) public gameService: GameService;
+    @inject(GameService)
+    public gameService: GameService;
 
-    @inject(LevelModel) public levelModel: LevelModel;
+    @inject(LevelModel)
+    public levelModel: LevelModel;
 
     public initialize(): void {
         this.view.animationIn();

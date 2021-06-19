@@ -11,6 +11,7 @@ export class DebugUtils {
         }
         console.log(field);
     }
+
     public static printShipHP(battleField: BattleField): void {
         let hps: string = "";
         for (let ship of battleField.ships) {

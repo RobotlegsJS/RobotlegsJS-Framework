@@ -15,9 +15,11 @@ export class GameView extends Container {
     private _enemy: EnemyComponent;
 
     private _pauseButton: CustomButton;
+
     public get pauseButton(): CustomButton {
         return this._pauseButton;
     }
+
     constructor() {
         super();
         this.createBackground();
@@ -44,9 +46,11 @@ export class GameView extends Container {
     public animationIn(): void {
         let tweenButton = new TweenLite(this.pauseButton, 0.1, { y: 50, delay: 0.2 });
     }
+
     private createBackground(): void {
         this.addChild(PixiFactory.getColorBackground(Colors.GAME_BACKGROUND));
     }
+
     private createButtons(): void {
         this._pauseButton = PixiFactory.getIconButton(AtlasKeys.ICON_PAUSE);
         this._pauseButton.x = MagicValues.MAX_WIDTH - 50;

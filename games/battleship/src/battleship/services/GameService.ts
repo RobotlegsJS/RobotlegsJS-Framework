@@ -4,9 +4,11 @@ import { injectable, inject, IEventDispatcher, EventDispatcher } from "@robotleg
 
 @injectable()
 export class GameService {
-    @inject(IEventDispatcher) public eventDispatcher: IEventDispatcher;
+    @inject(IEventDispatcher)
+    public eventDispatcher: IEventDispatcher;
 
     // Commands
+
     public createLevelCommand(): void {
         this.dispatchEventWith(GameEvent.CREATE_LEVEL_COMMAND);
     }
@@ -26,6 +28,7 @@ export class GameService {
     }
 
     // phase
+
     public enemyPhase(): void {
         this.dispatchEventWith(GameEvent.ENEMY_PHASE);
     }
@@ -35,6 +38,7 @@ export class GameService {
     }
 
     // Battlefild
+
     public clearBattleField(): void {
         this.dispatchEventWith(GameEvent.CLEAR_BATTLEFIELD);
     }

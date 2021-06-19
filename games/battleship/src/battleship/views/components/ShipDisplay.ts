@@ -9,6 +9,7 @@ export class ShipDisplay extends Sprite {
         this.anchor.set(0.5);
         this.setupPosition(ship);
     }
+
     public setupPosition(ship: Ship): void {
         let firstTile = ship.tiles[0];
         let lastTile = ship.tiles[ship.tiles.length - 1];

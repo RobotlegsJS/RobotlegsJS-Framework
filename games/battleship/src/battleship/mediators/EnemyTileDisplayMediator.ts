@@ -7,8 +7,11 @@ import { Mediator } from "@robotlegsjs/pixi";
 
 @injectable()
 export class EnemyTileDisplayMediator extends Mediator<EnemyTileDisplay> {
-    @inject(GameManager) public gameManager: GameManager;
-    @inject(GameService) public gameService: GameService;
+    @inject(GameManager)
+    public gameManager: GameManager;
+
+    @inject(GameService)
+    public gameService: GameService;
 
     public initialize(): void {
         this.eventMap.mapListener(this.view, "pointerup", this.onButtonUp, this);
@@ -21,10 +24,12 @@ export class EnemyTileDisplayMediator extends Mediator<EnemyTileDisplay> {
             this.disable();
         }
     }
+
     public disable(): void {
         this.view.enabled = false;
         this.eventMap.unmapListeners();
     }
+
     public destroy(): void {
         this.eventMap.unmapListeners();
         this.view.destroy();

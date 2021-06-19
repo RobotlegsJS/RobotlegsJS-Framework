@@ -16,6 +16,7 @@ describe("GameService", () => {
     afterEach(() => {
         gameService = undefined;
     });
+
     context("commands", () => {
         it("should dispatch the event CREATE_LEVEL_COMMAND when the method creatLevelCommand is invoked", () => {
             let dispatcherSpy = sinon.spy(gameService.eventDispatcher, "dispatchEventWith");
@@ -49,6 +50,7 @@ describe("GameService", () => {
             assert.equal(event.extra.row, 2, "row");
         });
     });
+
     context("phase", () => {
         it("should dispatch the event ENEMY_PHASE when the method enemyPhase is invoked", () => {
             let dispatcherSpy = sinon.spy(gameService.eventDispatcher, "dispatchEventWith");
@@ -65,6 +67,7 @@ describe("GameService", () => {
             assert.equal(event, GameEvent.HERO_PHASE);
         });
     });
+
     context("battlefield", () => {
         it("should dispatch the event CLEAR_BATTLEFIELD when the method enemyPhase is invoked", () => {
             let dispatcherSpy = sinon.spy(gameService.eventDispatcher, "dispatchEventWith");
@@ -88,6 +91,7 @@ describe("GameService", () => {
             assert.equal(event, GameEvent.UPDATE_BATTLEFIELD);
         });
     });
+
     it("DispatchEventWith", () => {
         let dispatcherSpy = sinon.spy(gameService.eventDispatcher, "dispatchEventWith");
         let type = "TestDispatchEventWith";

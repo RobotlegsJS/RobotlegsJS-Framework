@@ -25,7 +25,11 @@ export class HomeView extends Container {
 
     public animationOut(complete: Function): void {
         let tweenText = new TweenLite(this._msgText, 0.2, { alpha: 0 });
-        let tweenMsg = new TweenLite(this._logoImg, 0.2, { alpha: 0, delay: 0.1, onComplete: complete });
+        let tweenMsg = new TweenLite(this._logoImg, 0.2, {
+            alpha: 0,
+            delay: 0.1,
+            onComplete: complete
+        });
     }
 
     private createBackground(): void {

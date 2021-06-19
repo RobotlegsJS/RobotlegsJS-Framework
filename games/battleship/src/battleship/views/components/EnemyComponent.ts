@@ -12,21 +12,26 @@ import { Container, Graphics, Sprite } from "pixi.js";
 export class EnemyComponent extends Container {
     private _ships: ShipsGridDisplay;
     private _grid: GridDisplay;
+
     public get grid(): GridDisplay {
         return this._grid;
     }
+
     public get ships(): ShipsGridDisplay {
         return this._ships;
     }
+
     constructor() {
         super();
         this.setupComponents();
         this.setupText();
     }
+
     public destroy(): void {
         this._ships.clear();
         this.removeChildren();
     }
+
     private setupComponents(): void {
         this._grid = new GridDisplay(Player.ENEMY);
         this._grid.x = 200;
@@ -40,6 +45,7 @@ export class EnemyComponent extends Container {
         this._ships.scale.set(1.4);
         this.addChild(this._ships);
     }
+
     private setupText(): void {
         let title = PixiFactory.getText(Texts.ENEMY, Colors.HUD);
         title.x = 10;

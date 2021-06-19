@@ -68,6 +68,7 @@ export class PixiFactory {
         button.setText(icon);
         return button;
     }
+
     /* IMAGES */
     public static getImage(atlasKey: string): Sprite {
         let texture: Texture = AtlasKeys.getTexture(atlasKey);

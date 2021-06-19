@@ -19,6 +19,7 @@ export class BattleField {
             this.grid.setTileId(ship.id, tile.col, tile.row);
         }
     }
+
     public attackTile(col: number, row: number): number {
         let tileId = this.grid.getTileId(col, row);
         this.grid.setTileId(Tile.HITTED, col, row);

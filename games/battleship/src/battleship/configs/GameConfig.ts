@@ -9,9 +9,11 @@ import { IConfig, injectable, inject, IEventCommandMap, IContext } from "@robotl
 
 @injectable()
 export class GameConfig implements IConfig {
-    @inject(IContext) public context: IContext;
+    @inject(IContext)
+    public context: IContext;
 
-    @inject(IEventCommandMap) public commandMap: IEventCommandMap;
+    @inject(IEventCommandMap)
+    public commandMap: IEventCommandMap;
 
     public configure(): void {
         this.mapModels();
@@ -21,23 +23,14 @@ export class GameConfig implements IConfig {
     }
 
     private mapManagers(): void {
-        this.context.injector
-            .bind(GameManager)
-            .to(GameManager)
-            .inSingletonScope();
+        this.context.injector.bind(GameManager).to(GameManager).inSingletonScope();
     }
 
     private mapModels(): void {
-        this.context.injector
-            .bind(LevelModel)
-            .to(LevelModel)
-            .inSingletonScope();
+        this.context.injector.bind(LevelModel).to(LevelModel).inSingletonScope();
     }
     private mapServices(): void {
-        this.context.injector
-            .bind(GameService)
-            .to(GameService)
-            .inSingletonScope();
+        this.context.injector.bind(GameService).to(GameService).inSingletonScope();
     }
 
     private mapCommands(): void {

@@ -18,6 +18,7 @@ describe("flowService", () => {
     afterEach(() => {
         flowService = undefined;
     });
+
     context("views", () => {
         it("should dispatch the event SHOW_HOME_VIEW when the method setHomeView is invoked", () => {
             let dispatcherSpy = sinon.spy(flowService.eventDispatcher, "dispatchEventWith");
@@ -34,6 +35,7 @@ describe("flowService", () => {
             assert.equal(event, FlowEvent.SHOW_GAME_VIEW);
         });
     });
+
     context("floating views", () => {
         it("should dispatch the event SHOW_GAME_OVER_POPUP when the method showGameOverPopup is invoked", () => {
             let dispatcherSpy = sinon.spy(flowService.eventDispatcher, "dispatchEventWith");
@@ -57,6 +59,7 @@ describe("flowService", () => {
             assert.equal(event, FlowEvent.SHOW_PAUSE_POPUP);
         });
     });
+
     context("extras", () => {
         it("should dispatch the event REMOVE_LAST_FLOATING_VIEW_ADDED when the method closePopup is invoked", () => {
             let dispatcherSpy = sinon.spy(flowService.eventDispatcher, "dispatchEventWith");

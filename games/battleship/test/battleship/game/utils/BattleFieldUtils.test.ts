@@ -40,6 +40,7 @@ describe("BattleFieldUtils", () => {
             assert.notEqual(battleField.grid.getTileId(0, 1), Tile.BLANKED);
         });
     });
+
     context("getValidTileList", () => {
         it("should return an array with all tiles of the grid", () => {
             let list = BattleFieldUtils.getValidTileList(battleField);
@@ -56,6 +57,7 @@ describe("BattleFieldUtils", () => {
             assert.equal(list.length, gridSize - 4);
         });
     });
+
     it("should set the tiles into a new Ship and add the ship to the battlefield", () => {
         let tiles: Tile[] = new Array<Tile>();
         tiles.push(new Tile(0, 0));

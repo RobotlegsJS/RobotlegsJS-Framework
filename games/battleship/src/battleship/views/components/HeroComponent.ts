@@ -13,25 +13,31 @@ export class HeroComponent extends Container {
     private _ships: ShipsGridDisplay;
     private _hps: HPsComponent;
     private _grid: GridDisplay;
+
     public get grid(): GridDisplay {
         return this._grid;
     }
+
     public get ships(): ShipsGridDisplay {
         return this._ships;
     }
+
     public get hps(): HPsComponent {
         return this._hps;
     }
+
     constructor() {
         super();
         this.setupComponents();
         this.setupText();
     }
+
     public destroy(): void {
         this._ships.clear();
         this._hps.clear();
         this.removeChildren();
     }
+
     private setupComponents(): void {
         this._grid = new GridDisplay();
         this._grid.x = 250;
@@ -48,6 +54,7 @@ export class HeroComponent extends Container {
         this._hps.y = 115;
         this.addChild(this._hps);
     }
+
     private setupText(): void {
         let title = PixiFactory.getText(Texts.HERO, Colors.HUD);
         title.x = 10;

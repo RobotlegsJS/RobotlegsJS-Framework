@@ -21,7 +21,9 @@ import { IMediatorMap } from "@robotlegsjs/pixi";
 
 @injectable()
 export class ViewsConfig implements IConfig {
-    @inject(IMediatorMap) public mediatorMap: IMediatorMap;
+    @inject(IMediatorMap)
+    public mediatorMap: IMediatorMap;
+
     public configure(): void {
         this.mapMediators();
     }

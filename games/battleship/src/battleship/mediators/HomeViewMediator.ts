@@ -6,7 +6,8 @@ import { Mediator } from "@robotlegsjs/pixi";
 
 @injectable()
 export class HomeViewMediator extends Mediator<HomeView> {
-    @inject(GameService) private gameService: GameService;
+    @inject(GameService)
+    private gameService: GameService;
 
     public initialize(): void {
         this.view.interactive = true;
