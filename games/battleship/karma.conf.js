@@ -1,61 +1,57 @@
-process.env.TEST = true;
-process.env.NODE_ENV = 'test';
+const puppeteer = require("puppeteer");
 
-const webpack = require("webpack");
-const path = require("path");
-const webpackConfig = require('./webpack.config.js')({ isTest: true });
+process.env.TEST = true;
+process.env.NODE_ENV = "test";
+process.env.CHROME_BIN = puppeteer.executablePath();
+
+const webpackConfig = require("./webpack.config.js")({ production: false, karma: true });
 
 delete webpackConfig.entry;
+delete webpackConfig.output.filename;
 
-let frameworks = [
-  "mocha",
-  "chai",
-  "sinon",
-  "es6-shim"
-];
-
-let plugins = [
-  "karma-webpack",
-  "karma-sourcemap-writer",
-  "karma-sourcemap-loader",
-  "karma-mocha-reporter",
-  "karma-mocha",
-  "karma-chai",
-  "karma-sinon",
-  "karma-es6-shim",
-  "karma-remap-istanbul",
-  "karma-coverage-istanbul-reporter"
-];
-
-module.exports = function(config) {
+module.exports = (config) => {
+  "use strict";
 
   var configuration = {
+    client: {
+      mocha: {
+        timeout: 5000
+      }
+    },
     basePath: "",
-    frameworks: frameworks,
+    frameworks: ["webpack", "mocha", "sinon-chai", "es6-shim"],
     files: [
       { pattern: "node_modules/reflect-metadata/Reflect.js", include: true },
       { pattern: "node_modules/bluebird/js/browser/bluebird.js", include: true },
-      { pattern: "./test/**/**/**.test.ts", include: true },
-      { pattern: '**/*.map', served: true, included: false, watched: true }
+      { pattern: "./test/index.ts", include: true },
+      { pattern: "**/*.map", served: true, included: false, watched: true }
     ],
     preprocessors: {
-      "./**/**/**/**.ts": ["sourcemap"],
-      "./test/**/**/**.test.ts": ["webpack"]
+      "./test/index.ts": ["webpack"],
+      "./**/**/**/**.ts": ["sourcemap"]
     },
     webpack: webpackConfig,
     webpackMiddleware: {
       noInfo: true
     },
-    plugins: plugins,
-    reporters: (
-      config.singleRun ?
-        ["mocha", "coverage-istanbul"] :
-        ["mocha"]
-    ),
+    plugins: [
+      "karma-webpack",
+      "karma-sourcemap-writer",
+      "karma-sourcemap-loader",
+      "karma-mocha-reporter",
+      "karma-mocha",
+      "karma-sinon-chai",
+      "karma-es6-shim",
+      "karma-coverage-istanbul-reporter"
+    ],
+    mime: {
+      "text/x-typescript": ["ts", "tsx"]
+    },
+    reporters: config.singleRun ? ["dots", "mocha", "coverage-istanbul"] : ["dots", "mocha"],
     coverageIstanbulReporter: {
-      reports: ["html", "lcov", "lcovonly", "text-summary"],
-      dir: "coverage",
-      fixWebpackSourcePaths: true,
+      "reports": ["html", "lcov", "lcovonly", "text-summary"],
+      "dir": "coverage",
+      "fixWebpackSourcePaths": true,
       "report-config": {
         html: {
           subdir: "html-report"
@@ -66,15 +62,17 @@ module.exports = function(config) {
     colors: true,
     logLevel: config.LOG_INFO,
     autoWatch: true,
-    browsers: []
+    concurrency: Infinity,
+    browsers: [],
+    browserNoActivityTimeout: 50000
   };
 
   if (process.env.TRAVIS) {
-    configuration.browsers = ['PhantomJS'];
-    configuration.plugins.push("karma-phantomjs-launcher");
+    configuration.browsers.push("ChromeHeadless");
+    configuration.plugins.push("karma-chrome-launcher");
   } else {
-    configuration.browsers = ['PhantomJS'];
-    configuration.plugins.push("karma-phantomjs-launcher");
+    configuration.browsers.push("ChromeHeadless");
+    configuration.plugins.push("karma-chrome-launcher");
   }
 
   config.set(configuration);

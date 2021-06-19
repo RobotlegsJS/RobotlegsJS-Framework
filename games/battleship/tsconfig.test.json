@@ -1,15 +1,7 @@
 {
+  "extends": "./tsconfig.json",
   "compilerOptions": {
-    "target": "es5",
-    "lib": ["es6", "dom"],
-    "types": ["reflect-metadata", "mocha"],
-    "module": "commonjs",
-    "moduleResolution": "node",
-    "declaration": true,
-    "noImplicitAny": false,
-    "sourceMap": true,
-    "experimentalDecorators": true,
-    "emitDecoratorMetadata": true
+    "outDir": "lib-test"
   },
-  "include": ["./src/**/*.ts", "./test/**/*.ts"]
+  "include": ["./src/**/*.ts", "./test/**/*.ts", "./example/**/*.ts"]
 }

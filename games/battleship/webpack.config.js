@@ -1,45 +1,66 @@
 const webpack = require("webpack");
 const path = require("path");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
+const TerserPlugin = require("terser-webpack-plugin");
 
-module.exports = function(options) {
-  if (!options) options = { isTest: false };
+module.exports = (env) => {
+  if (!env) env = { production: false, karma: false };
 
-  var tsconfig = options.isTest ? "tsconfig.test.json" : "tsconfig.json";
+  let mode = env.production ? "production" : "development";
+  let tsconfig = !env.karma ? "tsconfig.json" : "tsconfig.test.json";
+  let output = env.production ? "dist" : "dist-test";
+  let filename = "[name].[hash].js";
 
   return {
+    mode: mode,
+
     entry: {
       main: path.join(__dirname, "src/index.ts")
     },
 
     output: {
-      path: path.join(__dirname, "dist"),
-      filename: "bundle.js"
+      path: path.join(__dirname, output),
+      filename: filename
     },
 
-    devtool: "inline-source-map",
+    devtool: env.production ? undefined : "inline-source-map",
 
     module: {
       rules: [
-        { test: /\.ts$/, loader: "ts-loader?configFile=" + tsconfig },
         {
-          test: /^(.(?!\.test))*\.ts$/,
+          test: /\.ts$/,
+          use: [{ loader: "ts-loader", options: { configFile: tsconfig } }]
+        },
+        {
+          test: env.production /* disable this loader for production builds */
+            ? /^$/
+            : /^.*(src).*\.ts$/,
           loader: "istanbul-instrumenter-loader",
-          query: {
-            embedSource: true
-          },
           enforce: "post"
         }
       ]
     },
 
-    plugins: [new HtmlWebpackPlugin(), new webpack.SourceMapDevToolPlugin({ test: /\.ts$/i })],
+    plugins: env.production ? [] : [new webpack.SourceMapDevToolPlugin({ test: /\.ts$/i })],
 
+    optimization: env.production
+      ? {
+          concatenateModules: true,
+          minimize: true,
+          minimizer: [
+            new TerserPlugin({
+              parallel: 4,
+              extractComments: false,
+              terserOptions: {
+                format: {
+                  comments: false
+                }
+              }
+            })
+          ]
+        }
+      : {},
     resolve: {
-      extensions: [".ts", ".js", ".json"],
-      alias: {
-        // sinon: 'sinon/pkg/sinon'
-      }
+      extensions: [".ts", ".js", ".json"]
     }
   };
 };
