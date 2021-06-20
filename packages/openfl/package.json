@@ -67,7 +67,7 @@
   "devDependencies": {
     "@rushstack/eslint-config": "^2.3.4",
     "@types/bluebird": "^3.5.35",
-    "@types/chai": "^4.2.18",
+    "@types/chai": "^4.2.19",
     "@types/core-js": "^2.5.4",
     "@types/mocha": "^8.2.2",
     "@types/sinon": "^10.0.2",
@@ -89,7 +89,7 @@
     "html-webpack-plugin": "^5.3.1",
     "imports-loader": "^3.0.0",
     "istanbul-instrumenter-loader": "^3.0.1",
-    "karma": "^6.3.3",
+    "karma": "^6.3.4",
     "karma-chrome-launcher": "^3.1.0",
     "karma-coverage-istanbul-reporter": "^3.0.3",
     "karma-es6-shim": "^1.0.0",
@@ -99,7 +99,7 @@
     "karma-sourcemap-loader": "^0.3.8",
     "karma-sourcemap-writer": "^0.1.2",
     "karma-webpack": "^5.0.0",
-    "mocha": "^9.0.0",
+    "mocha": "^9.0.1",
     "openfl": "^8.9.6",
     "prettier": "^2.3.1",
     "puppeteer": "^10.0.0",
@@ -111,7 +111,7 @@
     "ts-loader": "^9.2.3",
     "ts-node": "^10.0.0",
     "typescript": "~4.2.4",
-    "webpack": "^5.38.1",
+    "webpack": "^5.39.1",
     "webpack-cli": "^4.7.2",
     "webpack-dev-server": "^3.11.2"
   }
