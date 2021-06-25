@@ -105,7 +105,6 @@
     "imports-loader": "^3.0.0",
     "istanbul-instrumenter-loader": "^3.0.1",
     "karma": "^6.3.4",
-    "karma-chai-sinon": "^0.1.5",
     "karma-chrome-launcher": "^3.1.0",
     "karma-coverage-istanbul-reporter": "^3.0.3",
     "karma-es6-shim": "^1.0.0",

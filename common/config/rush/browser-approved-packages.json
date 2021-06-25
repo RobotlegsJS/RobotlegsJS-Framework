@@ -135,10 +135,6 @@
       "allowedCategories": [ "games", "production", "tests" ]
     },
     {
-      "name": "karma-chai-sinon",
-      "allowedCategories": [ "production", "tests" ]
-    },
-    {
       "name": "karma-chrome-launcher",
       "allowedCategories": [ "games", "production", "tests" ]
     },
@@ -228,7 +224,7 @@
     },
     {
       "name": "sinon-chai",
-      "allowedCategories": [ "production", "tests" ]
+      "allowedCategories": [ "games", "production", "tests" ]
     },
     {
       "name": "source-map-support",
