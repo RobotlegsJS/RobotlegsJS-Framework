@@ -111,10 +111,6 @@
       "allowedCategories": [ "games", "production" ]
     },
     {
-      "name": "imports-loader",
-      "allowedCategories": [ "games", "production", "tests" ]
-    },
-    {
       "name": "inversify",
       "allowedCategories": [ "production" ]
     },
