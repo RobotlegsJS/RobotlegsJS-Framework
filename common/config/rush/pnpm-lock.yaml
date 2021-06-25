@@ -43,7 +43,7 @@ specifiers:
   es6-symbol: ^3.1.3
   eslint: ^7.29.0
   eslint-plugin-import: ^2.23.4
-  eslint-plugin-jsdoc: ^35.3.2
+  eslint-plugin-jsdoc: ^35.4.0
   eslint-plugin-prefer-arrow: ^1.2.3
   eslint-plugin-react: ^7.24.0
   eslint-plugin-unicorn: ^33.0.1
@@ -133,7 +133,7 @@ dependencies:
   es6-symbol: 3.1.3
   eslint: 7.29.0
   eslint-plugin-import: 2.23.4_eslint@7.29.0
-  eslint-plugin-jsdoc: 35.3.2_eslint@7.29.0
+  eslint-plugin-jsdoc: 35.4.0_eslint@7.29.0
   eslint-plugin-prefer-arrow: 1.2.3_eslint@7.29.0
   eslint-plugin-react: 7.24.0_eslint@7.29.0
   eslint-plugin-unicorn: 33.0.1_eslint@7.29.0
@@ -3095,8 +3095,8 @@ packages:
       tsconfig-paths: 3.9.0
     dev: false
 
-  /eslint-plugin-jsdoc/35.3.2_eslint@7.29.0:
-    resolution: {integrity: sha512-r3qfbByMZ4O5Y8O6aHxo1AdgdpwTQSD72anIZuhjNI6ZkMtjhpSkkPN3cY/tsZtmWeMH+1pB/nblWIAr3F0lxA==}
+  /eslint-plugin-jsdoc/35.4.0_eslint@7.29.0:
+    resolution: {integrity: sha512-0cr+NkPTxpTiMCtYOd8W5fd2IyC/CmaTHKb+0bzkpP9p8HfmJ3B2/M6FWj97rQJOLwLMkx+g2MIEZsrttpbFmQ==}
     engines: {node: '>=12'}
     peerDependencies:
       eslint: ^6.0.0 || ^7.0.0
@@ -8479,7 +8479,7 @@ packages:
     dev: false
 
   file:projects/core.tgz:
-    resolution: {integrity: sha512-ZRuGmyFCU2fYomhILk/PwjVPd5+PNrf4ZVYyu7byAeiN+EaIEvrPwOV0NvkcpIP29RMmdu8EBpgAlTN13J0fww==, tarball: file:projects/core.tgz}
+    resolution: {integrity: sha512-rkf7QOJEwxTJ+zQiS6I0iUEtjAvCuDpwiNOBoqJB0MBYk6MRMiSb118cnW0PBT1sbnCV4WFXR37/RjqasVbQSw==, tarball: file:projects/core.tgz}
     name: '@rush-temp/core'
     version: 0.0.0
     dependencies:
@@ -8497,7 +8497,7 @@ packages:
       es6-symbol: 3.1.3
       eslint: 7.29.0
       eslint-plugin-import: 2.23.4_eslint@7.29.0
-      eslint-plugin-jsdoc: 35.3.2_eslint@7.29.0
+      eslint-plugin-jsdoc: 35.4.0_eslint@7.29.0
       eslint-plugin-prefer-arrow: 1.2.3_eslint@7.29.0
       eslint-plugin-react: 7.24.0_eslint@7.29.0
       eslint-plugin-unicorn: 33.0.1_eslint@7.29.0
@@ -8550,7 +8550,7 @@ packages:
     dev: false
 
   file:projects/createjs.tgz:
-    resolution: {integrity: sha512-Nd64dhtGrFVISFwUtfLhr2w5lyZR4P0omD4GrKTptJwkF7lSZEAc9DhtGQGDPHTm/CaE3uPeWFMSNOYMAwzIhw==, tarball: file:projects/createjs.tgz}
+    resolution: {integrity: sha512-rNM5Z2l/jcRLHyhDJW8MS2T3T9E8DA2AIHMgUp2y6xlz3n/fd9+LLkFgftfc4DYhxAqJi9yDv5xIcC/0pMyH+A==, tarball: file:projects/createjs.tgz}
     name: '@rush-temp/createjs'
     version: 0.0.0
     dependencies:
@@ -8574,7 +8574,7 @@ packages:
       es6-symbol: 3.1.3
       eslint: 7.29.0
       eslint-plugin-import: 2.23.4_eslint@7.29.0
-      eslint-plugin-jsdoc: 35.3.2_eslint@7.29.0
+      eslint-plugin-jsdoc: 35.4.0_eslint@7.29.0
       eslint-plugin-prefer-arrow: 1.2.3_eslint@7.29.0
       eslint-plugin-react: 7.24.0_eslint@7.29.0
       eslint-plugin-unicorn: 33.0.1_eslint@7.29.0
@@ -8623,7 +8623,7 @@ packages:
     dev: false
 
   file:projects/eventemitter3.tgz:
-    resolution: {integrity: sha512-G/jvdzcDR9JLA60YKU641Qml7mnQFJN1O9BgvJB9Uh7dPfoWACWxZgmqjFCF9Ypa6u5Iv7WCiCd9UVVA4xQ+Ww==, tarball: file:projects/eventemitter3.tgz}
+    resolution: {integrity: sha512-laqEDMAxi6FrpUqUjKn9uodIZZwrPfaQi37p4Se8Tp2f1Kph8XXxZrWLJZz70WI58pzbA5b6KeCyriIPKeW1eA==, tarball: file:projects/eventemitter3.tgz}
     name: '@rush-temp/eventemitter3'
     version: 0.0.0
     dependencies:
@@ -8641,7 +8641,7 @@ packages:
       es6-symbol: 3.1.3
       eslint: 7.29.0
       eslint-plugin-import: 2.23.4_eslint@7.29.0
-      eslint-plugin-jsdoc: 35.3.2_eslint@7.29.0
+      eslint-plugin-jsdoc: 35.4.0_eslint@7.29.0
       eslint-plugin-prefer-arrow: 1.2.3_eslint@7.29.0
       eslint-plugin-react: 7.24.0_eslint@7.29.0
       eslint-plugin-unicorn: 33.0.1_eslint@7.29.0
@@ -8693,7 +8693,7 @@ packages:
     dev: false
 
   file:projects/game-battleship.tgz_sinon-chai@3.7.0:
-    resolution: {integrity: sha512-AOhvnPNyh8vTQfxswnXNKww9i14aXCNObMXBmPY0gZkU2V1QZKWlEnXiAH7ZGBwBk2e5v6ge3DRh5Oi0jycytw==, tarball: file:projects/game-battleship.tgz}
+    resolution: {integrity: sha512-R0uMJRP42ZFXHBSitCkVEb/n6QkIRszOtLTeEAoOsekGqK7OVFez1xUkQrUFO62dKp8H+UmytmvpWS6E/sW+HQ==, tarball: file:projects/game-battleship.tgz}
     id: file:projects/game-battleship.tgz
     name: '@rush-temp/game-battleship'
     version: 0.0.0
@@ -8710,7 +8710,7 @@ packages:
       es6-symbol: 3.1.3
       eslint: 7.29.0
       eslint-plugin-import: 2.23.4_eslint@7.29.0
-      eslint-plugin-jsdoc: 35.3.2_eslint@7.29.0
+      eslint-plugin-jsdoc: 35.4.0_eslint@7.29.0
       eslint-plugin-prefer-arrow: 1.2.3_eslint@7.29.0
       eslint-plugin-react: 7.24.0_eslint@7.29.0
       eslint-plugin-unicorn: 33.0.1_eslint@7.29.0
@@ -8757,7 +8757,7 @@ packages:
     dev: false
 
   file:projects/game-match3.tgz_sinon-chai@3.7.0:
-    resolution: {integrity: sha512-Wv0wJZuTf7XBsqaZfZ8BHEyCy9hNnOaMR+xS9iaJUXN9+tYz6t/5PaG+tIPTfFJ4MYmOGHIQpqrBEFIFg+Nvxg==, tarball: file:projects/game-match3.tgz}
+    resolution: {integrity: sha512-mkCwLQxIbP0nZYIxq1VUa1t6JEvMYWW9ybZKX28Cp9YKgKc53xMmdzQ59hRkiNuv/uhZOK0usy8cSrJMUMYdAg==, tarball: file:projects/game-match3.tgz}
     id: file:projects/game-match3.tgz
     name: '@rush-temp/game-match3'
     version: 0.0.0
@@ -8774,7 +8774,7 @@ packages:
       es6-symbol: 3.1.3
       eslint: 7.29.0
       eslint-plugin-import: 2.23.4_eslint@7.29.0
-      eslint-plugin-jsdoc: 35.3.2_eslint@7.29.0
+      eslint-plugin-jsdoc: 35.4.0_eslint@7.29.0
       eslint-plugin-prefer-arrow: 1.2.3_eslint@7.29.0
       eslint-plugin-react: 7.24.0_eslint@7.29.0
       eslint-plugin-unicorn: 33.0.1_eslint@7.29.0
@@ -8821,7 +8821,7 @@ packages:
     dev: false
 
   file:projects/game-minesweeper.tgz_sinon-chai@3.7.0:
-    resolution: {integrity: sha512-SsPFnLzTgJ8hXRjc+aBFDFepukmGwmdJf1XDOrvWwn+zdfyfLq02tDNjWHALJKrLXQMSIwDW9lBTtYVx04fbEQ==, tarball: file:projects/game-minesweeper.tgz}
+    resolution: {integrity: sha512-uQNnTtO2v/M9mzj7mUblzH1aTSAGbU0pfeKIeXq27qhRRbgWHdenRg20teYR2FYLPY5Cg930kXQRRZ07SRRIKw==, tarball: file:projects/game-minesweeper.tgz}
     id: file:projects/game-minesweeper.tgz
     name: '@rush-temp/game-minesweeper'
     version: 0.0.0
@@ -8838,7 +8838,7 @@ packages:
       es6-symbol: 3.1.3
       eslint: 7.29.0
       eslint-plugin-import: 2.23.4_eslint@7.29.0
-      eslint-plugin-jsdoc: 35.3.2_eslint@7.29.0
+      eslint-plugin-jsdoc: 35.4.0_eslint@7.29.0
       eslint-plugin-prefer-arrow: 1.2.3_eslint@7.29.0
       eslint-plugin-react: 7.24.0_eslint@7.29.0
       eslint-plugin-unicorn: 33.0.1_eslint@7.29.0
@@ -8885,14 +8885,14 @@ packages:
     dev: false
 
   file:projects/game-scratchcard.tgz:
-    resolution: {integrity: sha512-D8DNBWDwM52biI7Mjnh0/PcMlSR1tWvkimj/LLLofDGpj5lPlfBm0FAPUl8EdSMiL3vjVu5SDj9Uxzdzg1KklQ==, tarball: file:projects/game-scratchcard.tgz}
+    resolution: {integrity: sha512-asw+VASXc84fz5nzM2vU0JCKQbnODB8maXAH3X6cFzDRNgcI/UliTttKdg1su0uJxouHmzE69JlVrvSvOO4vww==, tarball: file:projects/game-scratchcard.tgz}
     name: '@rush-temp/game-scratchcard'
     version: 0.0.0
     dependencies:
       '@rushstack/eslint-config': 2.3.4_eslint@7.29.0+typescript@4.2.4
       eslint: 7.29.0
       eslint-plugin-import: 2.23.4_eslint@7.29.0
-      eslint-plugin-jsdoc: 35.3.2_eslint@7.29.0
+      eslint-plugin-jsdoc: 35.4.0_eslint@7.29.0
       eslint-plugin-prefer-arrow: 1.2.3_eslint@7.29.0
       eslint-plugin-react: 7.24.0_eslint@7.29.0
       eslint-plugin-unicorn: 33.0.1_eslint@7.29.0
@@ -8921,14 +8921,14 @@ packages:
     dev: false
 
   file:projects/game-spaceinvaders.tgz:
-    resolution: {integrity: sha512-RokAzspCPJ12cC8y00VKEIh81av+YdQ6yR076OmytvkhfzHA4JSfo351VSEd1k+8n6l1zeRA8oUe5mOfmr6P0Q==, tarball: file:projects/game-spaceinvaders.tgz}
+    resolution: {integrity: sha512-x7MFwh1uazUDu3B1Xk1UWU2u6E/Ryn1QGp1YWI/riIBcWN/lqYycffxi+IfV006Pdtid3MaJBXaaRV73vMCiTA==, tarball: file:projects/game-spaceinvaders.tgz}
     name: '@rush-temp/game-spaceinvaders'
     version: 0.0.0
     dependencies:
       '@rushstack/eslint-config': 2.3.4_eslint@7.29.0+typescript@4.2.4
       eslint: 7.29.0
       eslint-plugin-import: 2.23.4_eslint@7.29.0
-      eslint-plugin-jsdoc: 35.3.2_eslint@7.29.0
+      eslint-plugin-jsdoc: 35.4.0_eslint@7.29.0
       eslint-plugin-prefer-arrow: 1.2.3_eslint@7.29.0
       eslint-plugin-react: 7.24.0_eslint@7.29.0
       eslint-plugin-unicorn: 33.0.1_eslint@7.29.0
@@ -8957,7 +8957,7 @@ packages:
     dev: false
 
   file:projects/game-tetris.tgz:
-    resolution: {integrity: sha512-eSYGabMSTXNlrzqXstEFovsZ6OobttlnRnd8eAABlV8FJVI0m0cql319F7cjPQoWlu057NfbMswwxR2V3kwA/A==, tarball: file:projects/game-tetris.tgz}
+    resolution: {integrity: sha512-Z5UCD/FKeH4r0JJmQCcLaRB0wkAIrqM2WHV7s5TqsS3fMbwhbPHmpfwE7t4E2FW4Hi9X1LcvqRvk3t6x8+/Vyg==, tarball: file:projects/game-tetris.tgz}
     name: '@rush-temp/game-tetris'
     version: 0.0.0
     dependencies:
@@ -8969,7 +8969,7 @@ packages:
       chai: 4.3.4
       eslint: 7.29.0
       eslint-plugin-import: 2.23.4_eslint@7.29.0
-      eslint-plugin-jsdoc: 35.3.2_eslint@7.29.0
+      eslint-plugin-jsdoc: 35.4.0_eslint@7.29.0
       eslint-plugin-prefer-arrow: 1.2.3_eslint@7.29.0
       eslint-plugin-react: 7.24.0_eslint@7.29.0
       eslint-plugin-unicorn: 33.0.1_eslint@7.29.0
@@ -9000,7 +9000,7 @@ packages:
     dev: false
 
   file:projects/integration-macrobot-signalcommandmap.tgz:
-    resolution: {integrity: sha512-DlI4PTDqCNwIzC1ggvY9uZfynZaNxsWPgNg5hGCEmec4b1agso89BA0rrzyPSRwkYAg9CVMkxzQWCJnoZzLZhQ==, tarball: file:projects/integration-macrobot-signalcommandmap.tgz}
+    resolution: {integrity: sha512-ZdWO5luPTtBHhbEnOQBdW6EfNXnLuDMrXQYiGC+ErcD+wBwdlNWo7T6UQeCgG712gZTL5foVEtfomwHfbyKV1w==, tarball: file:projects/integration-macrobot-signalcommandmap.tgz}
     name: '@rush-temp/integration-macrobot-signalcommandmap'
     version: 0.0.0
     dependencies:
@@ -9018,7 +9018,7 @@ packages:
       es6-symbol: 3.1.3
       eslint: 7.29.0
       eslint-plugin-import: 2.23.4_eslint@7.29.0
-      eslint-plugin-jsdoc: 35.3.2_eslint@7.29.0
+      eslint-plugin-jsdoc: 35.4.0_eslint@7.29.0
       eslint-plugin-prefer-arrow: 1.2.3_eslint@7.29.0
       eslint-plugin-react: 7.24.0_eslint@7.29.0
       eslint-plugin-unicorn: 33.0.1_eslint@7.29.0
@@ -9067,7 +9067,7 @@ packages:
     dev: false
 
   file:projects/macrobot.tgz:
-    resolution: {integrity: sha512-TiKdBToEcI1gJauyYcuImLliWOytfFbSIZT023Bj9ofeFRIGMN8YLWyzsvAPNqptJ9K21og+thxgn+IgYo9W9g==, tarball: file:projects/macrobot.tgz}
+    resolution: {integrity: sha512-TPthr22zlJruyzXAE5ghShmNG+tSYcswoo0kcMBFXkrly06HeS0TZPsxARziF5awUZpoP5ECONXhvovcR1MjPw==, tarball: file:projects/macrobot.tgz}
     name: '@rush-temp/macrobot'
     version: 0.0.0
     dependencies:
@@ -9085,7 +9085,7 @@ packages:
       es6-symbol: 3.1.3
       eslint: 7.29.0
       eslint-plugin-import: 2.23.4_eslint@7.29.0
-      eslint-plugin-jsdoc: 35.3.2_eslint@7.29.0
+      eslint-plugin-jsdoc: 35.4.0_eslint@7.29.0
       eslint-plugin-prefer-arrow: 1.2.3_eslint@7.29.0
       eslint-plugin-react: 7.24.0_eslint@7.29.0
       eslint-plugin-unicorn: 33.0.1_eslint@7.29.0
@@ -9134,7 +9134,7 @@ packages:
     dev: false
 
   file:projects/openfl.tgz:
-    resolution: {integrity: sha512-jv4OWFwFOxJqY/9T6gapCP+2cL6bzoC3Ri05z/3a4QWzRbGfdJIuyA/FkzGXyRJ5HG80DTCs+08VXTCRvuzn+w==, tarball: file:projects/openfl.tgz}
+    resolution: {integrity: sha512-Uohsq+gcB17LFFQLq8hXI4Gy1KnAsyzXWh7TUs8cOib9PA8bWYNBIe0I7iVUVjzwyd8L6njcMVNCtzXgXK5s1w==, tarball: file:projects/openfl.tgz}
     name: '@rush-temp/openfl'
     version: 0.0.0
     dependencies:
@@ -9154,7 +9154,7 @@ packages:
       es6-symbol: 3.1.3
       eslint: 7.29.0
       eslint-plugin-import: 2.23.4_eslint@7.29.0
-      eslint-plugin-jsdoc: 35.3.2_eslint@7.29.0
+      eslint-plugin-jsdoc: 35.4.0_eslint@7.29.0
       eslint-plugin-prefer-arrow: 1.2.3_eslint@7.29.0
       eslint-plugin-react: 7.24.0_eslint@7.29.0
       eslint-plugin-unicorn: 33.0.1_eslint@7.29.0
@@ -9202,7 +9202,7 @@ packages:
     dev: false
 
   file:projects/phaser-ce-signalcommandmap.tgz:
-    resolution: {integrity: sha512-nC8vWksEtNqnxzBBgFgOjee51+SKAsAOpIxmfB2k+68f+iGWV72NFIJbokiCyPdxn7u0KIHkiugLR9XhO2O3hw==, tarball: file:projects/phaser-ce-signalcommandmap.tgz}
+    resolution: {integrity: sha512-oqwakuWoWeVEoev3ikvm5WUjXS7eHKLxfMLXBPWzqU0aRFJWwlIDQPQ26wia8yT45H1QLneeGXK114jRyBBc6Q==, tarball: file:projects/phaser-ce-signalcommandmap.tgz}
     name: '@rush-temp/phaser-ce-signalcommandmap'
     version: 0.0.0
     dependencies:
@@ -9219,7 +9219,7 @@ packages:
       es6-symbol: 3.1.3
       eslint: 7.29.0
       eslint-plugin-import: 2.23.4_eslint@7.29.0
-      eslint-plugin-jsdoc: 35.3.2_eslint@7.29.0
+      eslint-plugin-jsdoc: 35.4.0_eslint@7.29.0
       eslint-plugin-prefer-arrow: 1.2.3_eslint@7.29.0
       eslint-plugin-react: 7.24.0_eslint@7.29.0
       eslint-plugin-unicorn: 33.0.1_eslint@7.29.0
@@ -9266,7 +9266,7 @@ packages:
     dev: false
 
   file:projects/phaser-ce.tgz:
-    resolution: {integrity: sha512-2ZZcJjVa4u8XES+iLTdvXRecnoYLWCxfGPu8lDEaWvI0SBjKVLjO0Plwhed8Mh/Sdk2auSd64bvUy9+nAaHaVw==, tarball: file:projects/phaser-ce.tgz}
+    resolution: {integrity: sha512-45d0zs0DxJbuRyJboXCbe+hGAslSnAEbB4KNUuaNU8N+q/OlFOfWP9zrzNu/d0BmoWVJz98aseT/yqtrVbcUew==, tarball: file:projects/phaser-ce.tgz}
     name: '@rush-temp/phaser-ce'
     version: 0.0.0
     dependencies:
@@ -9285,7 +9285,7 @@ packages:
       es6-symbol: 3.1.3
       eslint: 7.29.0
       eslint-plugin-import: 2.23.4_eslint@7.29.0
-      eslint-plugin-jsdoc: 35.3.2_eslint@7.29.0
+      eslint-plugin-jsdoc: 35.4.0_eslint@7.29.0
       eslint-plugin-prefer-arrow: 1.2.3_eslint@7.29.0
       eslint-plugin-react: 7.24.0_eslint@7.29.0
       eslint-plugin-unicorn: 33.0.1_eslint@7.29.0
@@ -9334,7 +9334,7 @@ packages:
     dev: false
 
   file:projects/phaser.tgz:
-    resolution: {integrity: sha512-UV/ekt1O3Of3qPvq9S46bABYj/RCjWNCmxD+g9F/qDMWPUj8oWP2ePkkvKTHF8YAGMk+ZwwEI326LjtEVS4qqQ==, tarball: file:projects/phaser.tgz}
+    resolution: {integrity: sha512-/YG5Ik/jEdiRcZc9xeHmbZlAWTUEmaTeReHrNa+e4Mi/wH5/cu7tQ5klvsjlkki8e+d19bzRE32ZqbvZjOf+Dw==, tarball: file:projects/phaser.tgz}
     name: '@rush-temp/phaser'
     version: 0.0.0
     dependencies:
@@ -9354,7 +9354,7 @@ packages:
       es6-symbol: 3.1.3
       eslint: 7.29.0
       eslint-plugin-import: 2.23.4_eslint@7.29.0
-      eslint-plugin-jsdoc: 35.3.2_eslint@7.29.0
+      eslint-plugin-jsdoc: 35.4.0_eslint@7.29.0
       eslint-plugin-prefer-arrow: 1.2.3_eslint@7.29.0
       eslint-plugin-react: 7.24.0_eslint@7.29.0
       eslint-plugin-unicorn: 33.0.1_eslint@7.29.0
@@ -9403,7 +9403,7 @@ packages:
     dev: false
 
   file:projects/pixi-palidor.tgz:
-    resolution: {integrity: sha512-ovZCW2lv4Y8EiaobZeFzD/gB8Dd0WRKmfuhHI/LTApYP7y8T0aAoPwVB2OKZbN+61O7lCtpziAIRkQWH9XH+XQ==, tarball: file:projects/pixi-palidor.tgz}
+    resolution: {integrity: sha512-niPr/hNUGXZGb8e51/KAk4fRExBd5G7/alFCdw3axFlKof8S/rWwhpniGD4gOEMgf8xe/WQ+89mFWG5fE1W6cw==, tarball: file:projects/pixi-palidor.tgz}
     name: '@rush-temp/pixi-palidor'
     version: 0.0.0
     dependencies:
@@ -9422,7 +9422,7 @@ packages:
       es6-symbol: 3.1.3
       eslint: 7.29.0
       eslint-plugin-import: 2.23.4_eslint@7.29.0
-      eslint-plugin-jsdoc: 35.3.2_eslint@7.29.0
+      eslint-plugin-jsdoc: 35.4.0_eslint@7.29.0
       eslint-plugin-prefer-arrow: 1.2.3_eslint@7.29.0
       eslint-plugin-react: 7.24.0_eslint@7.29.0
       eslint-plugin-unicorn: 33.0.1_eslint@7.29.0
@@ -9471,7 +9471,7 @@ packages:
     dev: false
 
   file:projects/pixi-signalmediator.tgz:
-    resolution: {integrity: sha512-zUvUOQjHrnU5wrRu6baMGmEbFOWm11sTUswmUKlyCOZiXsAHPmQK09/Oo1PzYWhqGQd4AlsndGZNoBdVT/QrKA==, tarball: file:projects/pixi-signalmediator.tgz}
+    resolution: {integrity: sha512-mNc0SIHwYhrNlX85aYV8r48G8wbt/iyEM/wVIGEszNljZ8dHTtdAsKvAf1NQ5uAt5tFeXpzX7qDdQa1xmLGFUg==, tarball: file:projects/pixi-signalmediator.tgz}
     name: '@rush-temp/pixi-signalmediator'
     version: 0.0.0
     dependencies:
@@ -9489,7 +9489,7 @@ packages:
       es6-symbol: 3.1.3
       eslint: 7.29.0
       eslint-plugin-import: 2.23.4_eslint@7.29.0
-      eslint-plugin-jsdoc: 35.3.2_eslint@7.29.0
+      eslint-plugin-jsdoc: 35.4.0_eslint@7.29.0
       eslint-plugin-prefer-arrow: 1.2.3_eslint@7.29.0
       eslint-plugin-react: 7.24.0_eslint@7.29.0
       eslint-plugin-unicorn: 33.0.1_eslint@7.29.0
@@ -9540,7 +9540,7 @@ packages:
     dev: false
 
   file:projects/pixi.tgz:
-    resolution: {integrity: sha512-EOdcOrvctM+5zpxnMLjjTfzLhEeqbJshNTxxUo7SmK274svKJAPcejSuRjHXHm5MDa+mpYBMM/QtnUErM1zBGA==, tarball: file:projects/pixi.tgz}
+    resolution: {integrity: sha512-BDYp/rhLd2NIgJRogzJOM/ffebJhZn6YSH4bpDuejQ/f+fgzYwtelgUmG/bj9LBJsENGOo7miCXy335Ux4gfpQ==, tarball: file:projects/pixi.tgz}
     name: '@rush-temp/pixi'
     version: 0.0.0
     dependencies:
@@ -9559,7 +9559,7 @@ packages:
       es6-symbol: 3.1.3
       eslint: 7.29.0
       eslint-plugin-import: 2.23.4_eslint@7.29.0
-      eslint-plugin-jsdoc: 35.3.2_eslint@7.29.0
+      eslint-plugin-jsdoc: 35.4.0_eslint@7.29.0
       eslint-plugin-prefer-arrow: 1.2.3_eslint@7.29.0
       eslint-plugin-react: 7.24.0_eslint@7.29.0
       eslint-plugin-unicorn: 33.0.1_eslint@7.29.0
@@ -9607,7 +9607,7 @@ packages:
     dev: false
 
   file:projects/signalcommandmap.tgz:
-    resolution: {integrity: sha512-XSLYGoi6E0oU9V9GGExcD+eX/F3kmNFvLl6O6Pcr+D9rbT6SZl6AF81AU+kz3W7hibqWOfAi17B6KOuzaIk0cw==, tarball: file:projects/signalcommandmap.tgz}
+    resolution: {integrity: sha512-TODuFoyCHiclEBF9+UFY/zM12JrReeimq/OPanI4qnhYQdQtczlZYkyNmsU/1zTlQy0/yc4HFG13+WseIO333g==, tarball: file:projects/signalcommandmap.tgz}
     name: '@rush-temp/signalcommandmap'
     version: 0.0.0
     dependencies:
@@ -9625,7 +9625,7 @@ packages:
       es6-symbol: 3.1.3
       eslint: 7.29.0
       eslint-plugin-import: 2.23.4_eslint@7.29.0
-      eslint-plugin-jsdoc: 35.3.2_eslint@7.29.0
+      eslint-plugin-jsdoc: 35.4.0_eslint@7.29.0
       eslint-plugin-prefer-arrow: 1.2.3_eslint@7.29.0
       eslint-plugin-react: 7.24.0_eslint@7.29.0
       eslint-plugin-unicorn: 33.0.1_eslint@7.29.0
@@ -9673,7 +9673,7 @@ packages:
     dev: false
 
   file:projects/signals.tgz:
-    resolution: {integrity: sha512-lbFKTm0LYE44aOh4x2aYt6mnVHKqrxCvl772sHcD3YUjC4xvqazsuGNWCBzJYmMRpXtxY0gZ9SCz+a/QFp97kA==, tarball: file:projects/signals.tgz}
+    resolution: {integrity: sha512-o8DUpcxDBjlVijG6jqzBrAhyRv+X64YtCUy/k8UQhzbsrbKuwL8RqM35NZcjZ4LeTxN7bIxzDJvga3YGkmqURQ==, tarball: file:projects/signals.tgz}
     name: '@rush-temp/signals'
     version: 0.0.0
     dependencies:
@@ -9691,7 +9691,7 @@ packages:
       es6-symbol: 3.1.3
       eslint: 7.29.0
       eslint-plugin-import: 2.23.4_eslint@7.29.0
-      eslint-plugin-jsdoc: 35.3.2_eslint@7.29.0
+      eslint-plugin-jsdoc: 35.4.0_eslint@7.29.0
       eslint-plugin-prefer-arrow: 1.2.3_eslint@7.29.0
       eslint-plugin-react: 7.24.0_eslint@7.29.0
       eslint-plugin-unicorn: 33.0.1_eslint@7.29.0
