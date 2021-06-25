@@ -58,7 +58,6 @@ specifiers:
   karma: ^6.3.4
   karma-chrome-launcher: ^3.1.0
   karma-coverage-istanbul-reporter: ^3.0.3
-  karma-es6-shim: ^1.0.0
   karma-mocha: ^2.0.1
   karma-mocha-reporter: ^2.2.5
   karma-sinon-chai: ^2.0.2
@@ -145,7 +144,6 @@ dependencies:
   karma: 6.3.4
   karma-chrome-launcher: 3.1.0
   karma-coverage-istanbul-reporter: 3.0.3
-  karma-es6-shim: 1.0.0
   karma-mocha: 2.0.1
   karma-mocha-reporter: 2.2.5_karma@6.3.4
   karma-sinon-chai: 2.0.2_603bade0eb2595e5f78e5d6c505e52bd
@@ -2947,11 +2945,6 @@ packages:
       next-tick: 1.0.0
     dev: false
 
-  /es5-shim/4.5.15:
-    resolution: {integrity: sha512-FYpuxEjMeDvU4rulKqFdukQyZSTpzhg4ScQHrAosrlVpR6GFyaw14f74yn2+4BugniIS0Frpg7TvwZocU4ZMTw==}
-    engines: {node: '>=0.4.0'}
-    dev: false
-
   /es6-error/4.1.1:
     resolution: {integrity: sha512-Um/+FxMr9CISWh0bi5Zv0iOD+4cFh5qLeks1qhAopKVAJw3drgKbKySikp7wGhDL0HPeaja0P5ULZrxLkniUVg==}
     dev: false
@@ -2987,10 +2980,6 @@ packages:
       es6-iterator: 2.0.3
       es6-symbol: 3.1.1
       event-emitter: 0.3.5
-    dev: false
-
-  /es6-shim/0.35.6:
-    resolution: {integrity: sha512-EmTr31wppcaIAgblChZiuN/l9Y7DPyw8Xtbg7fIVngn6zMW+IEBJDJngeKC3x6wr0V/vcA2wqeFnaw1bFJbDdA==}
     dev: false
 
   /es6-symbol/3.1.1:
@@ -5155,13 +5144,6 @@ packages:
       minimatch: 3.0.4
     transitivePeerDependencies:
       - supports-color
-    dev: false
-
-  /karma-es6-shim/1.0.0:
-    resolution: {integrity: sha1-qutTCGK895NA69WI9PnlfehCtHk=}
-    dependencies:
-      es5-shim: 4.5.15
-      es6-shim: 0.35.6
     dev: false
 
   /karma-mocha-reporter/2.2.5_karma@6.3.4:
@@ -8499,7 +8481,6 @@ packages:
       karma: 6.3.4
       karma-chrome-launcher: 3.1.0
       karma-coverage-istanbul-reporter: 3.0.3
-      karma-es6-shim: 1.0.0
       karma-mocha: 2.0.1
       karma-mocha-reporter: 2.2.5_karma@6.3.4
       karma-sinon-chai: 2.0.2_603bade0eb2595e5f78e5d6c505e52bd
@@ -8573,7 +8554,6 @@ packages:
       karma: 6.3.4
       karma-chrome-launcher: 3.1.0
       karma-coverage-istanbul-reporter: 3.0.3
-      karma-es6-shim: 1.0.0
       karma-mocha: 2.0.1
       karma-mocha-reporter: 2.2.5_karma@6.3.4
       karma-sinon-chai: 2.0.2_603bade0eb2595e5f78e5d6c505e52bd
@@ -8642,7 +8622,6 @@ packages:
       karma: 6.3.4
       karma-chrome-launcher: 3.1.0
       karma-coverage-istanbul-reporter: 3.0.3
-      karma-es6-shim: 1.0.0
       karma-mocha: 2.0.1
       karma-mocha-reporter: 2.2.5_karma@6.3.4
       karma-sinon-chai: 2.0.2_603bade0eb2595e5f78e5d6c505e52bd
@@ -8707,7 +8686,6 @@ packages:
       karma: 6.3.4
       karma-chrome-launcher: 3.1.0
       karma-coverage-istanbul-reporter: 3.0.3
-      karma-es6-shim: 1.0.0
       karma-mocha: 2.0.1
       karma-mocha-reporter: 2.2.5_karma@6.3.4
       karma-sinon-chai: 2.0.2_603bade0eb2595e5f78e5d6c505e52bd
@@ -8770,7 +8748,6 @@ packages:
       karma: 6.3.4
       karma-chrome-launcher: 3.1.0
       karma-coverage-istanbul-reporter: 3.0.3
-      karma-es6-shim: 1.0.0
       karma-mocha: 2.0.1
       karma-mocha-reporter: 2.2.5_karma@6.3.4
       karma-sinon-chai: 2.0.2_603bade0eb2595e5f78e5d6c505e52bd
@@ -8833,7 +8810,6 @@ packages:
       karma: 6.3.4
       karma-chrome-launcher: 3.1.0
       karma-coverage-istanbul-reporter: 3.0.3
-      karma-es6-shim: 1.0.0
       karma-mocha: 2.0.1
       karma-mocha-reporter: 2.2.5_karma@6.3.4
       karma-sinon-chai: 2.0.2_603bade0eb2595e5f78e5d6c505e52bd
@@ -9013,7 +8989,6 @@ packages:
       karma: 6.3.4
       karma-chrome-launcher: 3.1.0
       karma-coverage-istanbul-reporter: 3.0.3
-      karma-es6-shim: 1.0.0
       karma-mocha: 2.0.1
       karma-mocha-reporter: 2.2.5_karma@6.3.4
       karma-sinon-chai: 2.0.2_603bade0eb2595e5f78e5d6c505e52bd
@@ -9079,7 +9054,6 @@ packages:
       karma: 6.3.4
       karma-chrome-launcher: 3.1.0
       karma-coverage-istanbul-reporter: 3.0.3
-      karma-es6-shim: 1.0.0
       karma-mocha: 2.0.1
       karma-mocha-reporter: 2.2.5_karma@6.3.4
       karma-sinon-chai: 2.0.2_603bade0eb2595e5f78e5d6c505e52bd
@@ -9148,7 +9122,6 @@ packages:
       karma: 6.3.4
       karma-chrome-launcher: 3.1.0
       karma-coverage-istanbul-reporter: 3.0.3
-      karma-es6-shim: 1.0.0
       karma-mocha: 2.0.1
       karma-mocha-reporter: 2.2.5_karma@6.3.4
       karma-sinon-chai: 2.0.2_603bade0eb2595e5f78e5d6c505e52bd
@@ -9212,7 +9185,6 @@ packages:
       karma: 6.3.4
       karma-chrome-launcher: 3.1.0
       karma-coverage-istanbul-reporter: 3.0.3
-      karma-es6-shim: 1.0.0
       karma-mocha: 2.0.1
       karma-mocha-reporter: 2.2.5_karma@6.3.4
       karma-sinon-chai: 2.0.2_603bade0eb2595e5f78e5d6c505e52bd
@@ -9279,7 +9251,6 @@ packages:
       karma: 6.3.4
       karma-chrome-launcher: 3.1.0
       karma-coverage-istanbul-reporter: 3.0.3
-      karma-es6-shim: 1.0.0
       karma-mocha: 2.0.1
       karma-mocha-reporter: 2.2.5_karma@6.3.4
       karma-sinon-chai: 2.0.2_603bade0eb2595e5f78e5d6c505e52bd
@@ -9348,7 +9319,6 @@ packages:
       karma: 6.3.4
       karma-chrome-launcher: 3.1.0
       karma-coverage-istanbul-reporter: 3.0.3
-      karma-es6-shim: 1.0.0
       karma-mocha: 2.0.1
       karma-mocha-reporter: 2.2.5_karma@6.3.4
       karma-sinon-chai: 2.0.2_603bade0eb2595e5f78e5d6c505e52bd
@@ -9416,7 +9386,6 @@ packages:
       karma: 6.3.4
       karma-chrome-launcher: 3.1.0
       karma-coverage-istanbul-reporter: 3.0.3
-      karma-es6-shim: 1.0.0
       karma-mocha: 2.0.1
       karma-mocha-reporter: 2.2.5_karma@6.3.4
       karma-sinon-chai: 2.0.2_603bade0eb2595e5f78e5d6c505e52bd
@@ -9482,7 +9451,6 @@ packages:
       karma: 6.3.4
       karma-chrome-launcher: 3.1.0
       karma-coverage-istanbul-reporter: 3.0.3
-      karma-es6-shim: 1.0.0
       karma-mocha: 2.0.1
       karma-mocha-reporter: 2.2.5_karma@6.3.4
       karma-sinon-chai: 2.0.2_603bade0eb2595e5f78e5d6c505e52bd
@@ -9552,7 +9520,6 @@ packages:
       karma: 6.3.4
       karma-chrome-launcher: 3.1.0
       karma-coverage-istanbul-reporter: 3.0.3
-      karma-es6-shim: 1.0.0
       karma-mocha: 2.0.1
       karma-mocha-reporter: 2.2.5_karma@6.3.4
       karma-sinon-chai: 2.0.2_603bade0eb2595e5f78e5d6c505e52bd
@@ -9617,7 +9584,6 @@ packages:
       karma: 6.3.4
       karma-chrome-launcher: 3.1.0
       karma-coverage-istanbul-reporter: 3.0.3
-      karma-es6-shim: 1.0.0
       karma-mocha: 2.0.1
       karma-mocha-reporter: 2.2.5_karma@6.3.4
       karma-sinon-chai: 2.0.2_603bade0eb2595e5f78e5d6c505e52bd
@@ -9683,7 +9649,6 @@ packages:
       karma: 6.3.4
       karma-chrome-launcher: 3.1.0
       karma-coverage-istanbul-reporter: 3.0.3
-      karma-es6-shim: 1.0.0
       karma-mocha: 2.0.1
       karma-mocha-reporter: 2.2.5_karma@6.3.4
       karma-sinon-chai: 2.0.2_603bade0eb2595e5f78e5d6c505e52bd

@@ -143,10 +143,6 @@
       "allowedCategories": [ "games", "production", "tests" ]
     },
     {
-      "name": "karma-es6-shim",
-      "allowedCategories": [ "games", "production", "tests" ]
-    },
-    {
       "name": "karma-mocha",
       "allowedCategories": [ "games", "production", "tests" ]
     },
