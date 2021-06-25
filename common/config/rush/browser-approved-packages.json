@@ -203,10 +203,6 @@
       "allowedCategories": [ "games", "production", "tests" ]
     },
     {
-      "name": "remap-istanbul",
-      "allowedCategories": [ "production" ]
-    },
-    {
       "name": "rimraf",
       "allowedCategories": [ "games", "production", "tests" ]
     },
