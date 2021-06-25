@@ -43,10 +43,6 @@
       "allowedCategories": [ "games", "production", "tests" ]
     },
     {
-      "name": "browserify-versionify",
-      "allowedCategories": [ "production", "tests" ]
-    },
-    {
       "name": "chai",
       "allowedCategories": [ "games", "production", "tests" ]
     },
