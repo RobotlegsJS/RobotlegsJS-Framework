@@ -56,7 +56,6 @@ specifiers:
   jsdom: ^16.6.0
   jsdom-global: ^3.0.2
   karma: ^6.3.4
-  karma-chai-sinon: ^0.1.5
   karma-chrome-launcher: ^3.1.0
   karma-commonjs: ^1.0.0
   karma-coverage-istanbul-reporter: ^3.0.3
@@ -95,9 +94,9 @@ dependencies:
   '@rush-temp/core': file:projects/core.tgz
   '@rush-temp/createjs': file:projects/createjs.tgz
   '@rush-temp/eventemitter3': file:projects/eventemitter3.tgz
-  '@rush-temp/game-battleship': file:projects/game-battleship.tgz_sinon-chai@3.7.0
-  '@rush-temp/game-match3': file:projects/game-match3.tgz_sinon-chai@3.7.0
-  '@rush-temp/game-minesweeper': file:projects/game-minesweeper.tgz_sinon-chai@3.7.0
+  '@rush-temp/game-battleship': file:projects/game-battleship.tgz
+  '@rush-temp/game-match3': file:projects/game-match3.tgz
+  '@rush-temp/game-minesweeper': file:projects/game-minesweeper.tgz
   '@rush-temp/game-scratchcard': file:projects/game-scratchcard.tgz
   '@rush-temp/game-spaceinvaders': file:projects/game-spaceinvaders.tgz
   '@rush-temp/game-tetris': file:projects/game-tetris.tgz
@@ -145,7 +144,6 @@ dependencies:
   jsdom: 16.6.0
   jsdom-global: 3.0.2_jsdom@16.6.0
   karma: 6.3.4
-  karma-chai-sinon: 0.1.5_5bbab5b1a0990b92afecb710388f2ab5
   karma-chrome-launcher: 3.1.0
   karma-commonjs: 1.0.0_karma@6.3.4
   karma-coverage-istanbul-reporter: 3.0.3
@@ -5143,21 +5141,6 @@ packages:
     resolution: {integrity: sha512-g3UB796vUFIY90VIv/WX3L2c8CS2MdWUww3CNrYmqza1Fg0DURc2K/O4YrnklBdQarSJ/y8JnJYDGc+1iumQjg==}
     dev: false
 
-  /karma-chai-sinon/0.1.5_5bbab5b1a0990b92afecb710388f2ab5:
-    resolution: {integrity: sha1-XDksqVJHgYlR1rV5AvAsNugDdTo=}
-    engines: {node: '>=0.8'}
-    peerDependencies:
-      chai: '*'
-      karma: '>=0.6'
-      sinon: '*'
-      sinon-chai: '*'
-    dependencies:
-      chai: 4.3.4
-      karma: 6.3.4
-      sinon: 11.1.1
-      sinon-chai: 3.7.0_chai@4.3.4+sinon@11.1.1
-    dev: false
-
   /karma-chrome-launcher/3.1.0:
     resolution: {integrity: sha512-3dPs/n7vgz1rxxtynpzZTvb9y/GIaW8xjAwcIGttLbycqoFtI7yo1NGnQi6oFTherRE+GIhCAHZC4vEqWGhNvg==}
     dependencies:
@@ -8495,7 +8478,7 @@ packages:
     dev: false
 
   file:projects/core.tgz:
-    resolution: {integrity: sha512-Pze/6vBtMgmMoJDGb6adMZqqepPAxZ+iVS0szsdR0GnRIWBNI2ePJd0HZvlNAve4V+rmbHY6s/AtuAKvP+rndA==, tarball: file:projects/core.tgz}
+    resolution: {integrity: sha512-V6rbFbzKi4KKIlHa1zNe09oY3UHgFT08a/XD1ktCrm1zkYrx/IRaRmMlk2jRr4B/v9Y9+EQeAxOfBryDjSPyqA==, tarball: file:projects/core.tgz}
     name: '@rush-temp/core'
     version: 0.0.0
     dependencies:
@@ -8566,7 +8549,7 @@ packages:
     dev: false
 
   file:projects/createjs.tgz:
-    resolution: {integrity: sha512-ey0wfftnRpWclKRdq+qI5phtMxdhUE+zjLkZJUZkxb/LaySZug4hMm/+EqAX4VoGQy7ib/7P/cQduhiN8f298g==, tarball: file:projects/createjs.tgz}
+    resolution: {integrity: sha512-94AUCsBIl+hrSaLvI1ozvEH8HlnLefC/VlN2QHDmRw6LrhzYY08NrEhJpdxLh5KqTQmYg8xvXH1zKGyIonGKow==, tarball: file:projects/createjs.tgz}
     name: '@rush-temp/createjs'
     version: 0.0.0
     dependencies:
@@ -8639,7 +8622,7 @@ packages:
     dev: false
 
   file:projects/eventemitter3.tgz:
-    resolution: {integrity: sha512-qU7eMB0HH+1DYUmgUYNaDNS+dI5DAEWwR5MZDRIf+O+eQrZdV8rcoz6GKP36HWhLDjrr2g+AbkT6MgKmvbYiGw==, tarball: file:projects/eventemitter3.tgz}
+    resolution: {integrity: sha512-OOn4M7qzx8ApYk67y7cqQbgnG8W9Ov66zMvZXYAxc0falK2Ts+L/Rp2TNq1OO3iEX1eXOJknmp8Cb2XQClko2w==, tarball: file:projects/eventemitter3.tgz}
     name: '@rush-temp/eventemitter3'
     version: 0.0.0
     dependencies:
@@ -8708,9 +8691,8 @@ packages:
       - webpack-bundle-analyzer
     dev: false
 
-  file:projects/game-battleship.tgz_sinon-chai@3.7.0:
-    resolution: {integrity: sha512-vwU+V8va+4N0SURiPmMvELqfYJBfM9C6LrMcL2C30yHUpNtAbH3GKsBuIqH5EyRsAY6gxDhVja2INX1c9Tztbg==, tarball: file:projects/game-battleship.tgz}
-    id: file:projects/game-battleship.tgz
+  file:projects/game-battleship.tgz:
+    resolution: {integrity: sha512-j5opPbc3hS2a5jemAjnDvlF5yCWasvHsJaiTOklDtb0QYpIa1zHRBDNO1XNuHRW8vK4X2xvQk8xZRrVfBbnWMg==, tarball: file:projects/game-battleship.tgz}
     name: '@rush-temp/game-battleship'
     version: 0.0.0
     dependencies:
@@ -8750,6 +8732,7 @@ packages:
       reflect-metadata: 0.1.13
       rimraf: 3.0.2
       sinon: 11.1.1
+      sinon-chai: 3.7.0_chai@4.3.4+sinon@11.1.1
       terser-webpack-plugin: 5.1.4_webpack@5.40.0
       ts-loader: 9.2.3_typescript@4.2.4+webpack@5.40.0
       ts-node: 10.0.0_typescript@4.2.4
@@ -8766,15 +8749,13 @@ packages:
       - '@webpack-cli/migrate'
       - bufferutil
       - debug
-      - sinon-chai
       - supports-color
       - utf-8-validate
       - webpack-bundle-analyzer
     dev: false
 
-  file:projects/game-match3.tgz_sinon-chai@3.7.0:
-    resolution: {integrity: sha512-GV9I0S6YarQzCrtTooP8Eit6W8YpolJzctRY4B9mxvkRDBM/9QatmiQvSxuMmP++WE8S9cb/hXzt7kg36kS96g==, tarball: file:projects/game-match3.tgz}
-    id: file:projects/game-match3.tgz
+  file:projects/game-match3.tgz:
+    resolution: {integrity: sha512-101JQguz4wCYP9IJVzlbZ55bsTIULyvYD01f84dXbYk/xXtIkFUUX7OLiSkFb1a8m08t9Agync1saqSsR3zfiQ==, tarball: file:projects/game-match3.tgz}
     name: '@rush-temp/game-match3'
     version: 0.0.0
     dependencies:
@@ -8814,6 +8795,7 @@ packages:
       reflect-metadata: 0.1.13
       rimraf: 3.0.2
       sinon: 11.1.1
+      sinon-chai: 3.7.0_chai@4.3.4+sinon@11.1.1
       terser-webpack-plugin: 5.1.4_webpack@5.40.0
       ts-loader: 9.2.3_typescript@4.2.4+webpack@5.40.0
       ts-node: 10.0.0_typescript@4.2.4
@@ -8830,15 +8812,13 @@ packages:
       - '@webpack-cli/migrate'
       - bufferutil
       - debug
-      - sinon-chai
       - supports-color
       - utf-8-validate
       - webpack-bundle-analyzer
     dev: false
 
-  file:projects/game-minesweeper.tgz_sinon-chai@3.7.0:
-    resolution: {integrity: sha512-WD7v3ekd9qiAcqu1UMYImU47KGjygcw3P0FJmmWHvIZZ981VCJj2UaFVWfc62ka4QO9uYDFyuAIJCK6wMLRA8A==, tarball: file:projects/game-minesweeper.tgz}
-    id: file:projects/game-minesweeper.tgz
+  file:projects/game-minesweeper.tgz:
+    resolution: {integrity: sha512-AWjJyi+KGRh0tmL5dZp1Wn02eM9ARBekXpTG8yHOviAwbsarpEa6wxaBUTFp5TzCswR2+2I/oJr+skN8HVmOFw==, tarball: file:projects/game-minesweeper.tgz}
     name: '@rush-temp/game-minesweeper'
     version: 0.0.0
     dependencies:
@@ -8878,6 +8858,7 @@ packages:
       reflect-metadata: 0.1.13
       rimraf: 3.0.2
       sinon: 11.1.1
+      sinon-chai: 3.7.0_chai@4.3.4+sinon@11.1.1
       terser-webpack-plugin: 5.1.4_webpack@5.40.0
       ts-loader: 9.2.3_typescript@4.2.4+webpack@5.40.0
       ts-node: 10.0.0_typescript@4.2.4
@@ -8894,14 +8875,13 @@ packages:
       - '@webpack-cli/migrate'
       - bufferutil
       - debug
-      - sinon-chai
       - supports-color
       - utf-8-validate
       - webpack-bundle-analyzer
     dev: false
 
   file:projects/game-scratchcard.tgz:
-    resolution: {integrity: sha512-fJChcv9N+ScgzhvQf5h3m7aE9qO9ahbdNsL1m7HN/FOaeYwryrTP5LiT1S9aaxC7rukmojaakbNBpza5LVNUyQ==, tarball: file:projects/game-scratchcard.tgz}
+    resolution: {integrity: sha512-mJGemaZby3KxAk+nstcG0Po8u2U00A9ePWPC9EvfmbNRxsHLfAVNzcGNXId6fsa4KCNlBsC3558gUjojaQ4v/w==, tarball: file:projects/game-scratchcard.tgz}
     name: '@rush-temp/game-scratchcard'
     version: 0.0.0
     dependencies:
@@ -8937,7 +8917,7 @@ packages:
     dev: false
 
   file:projects/game-spaceinvaders.tgz:
-    resolution: {integrity: sha512-W1TYPiEhxyMqRXDV7K2Zv3JHSYYj16CJ7Vdq+rXy5VJQtfJlidIQFFlVQvnFFJsraVmslA1UG7tHwiyFzB5mkA==, tarball: file:projects/game-spaceinvaders.tgz}
+    resolution: {integrity: sha512-cfo0XqwpGEfoHup02EbEx7AO6bZz53BdT4t6bkB0QKEV1FcerrqTd7hGSQevYjDCicIDhwZA5st2Fy+xE98nPQ==, tarball: file:projects/game-spaceinvaders.tgz}
     name: '@rush-temp/game-spaceinvaders'
     version: 0.0.0
     dependencies:
@@ -8973,7 +8953,7 @@ packages:
     dev: false
 
   file:projects/game-tetris.tgz:
-    resolution: {integrity: sha512-hTRjH1+eGlORo6w140VBQWtvB01DHDBAmo6Ax+jm1xyJlGhery/qee5G73HspAIeGtqbFvJcyY9FaTC5YdRTIg==, tarball: file:projects/game-tetris.tgz}
+    resolution: {integrity: sha512-yNGZ94mEb5oWLqoIiMLrYyXiOUxgk5JoMVsSOgKkHBhQ+vNNPSKEJ1K6jvmtL0KSY9e6/B5a50fx+TvAW1mPFw==, tarball: file:projects/game-tetris.tgz}
     name: '@rush-temp/game-tetris'
     version: 0.0.0
     dependencies:
@@ -9016,7 +8996,7 @@ packages:
     dev: false
 
   file:projects/integration-macrobot-signalcommandmap.tgz:
-    resolution: {integrity: sha512-AI/JGe4geDjj8Kn2+8TWmTCLb3Cx1euuk7T1KjwsfC8a47fNRWnpcTqMy6A2OnYqlT1QYGBeIQFjXiDLQv8jzA==, tarball: file:projects/integration-macrobot-signalcommandmap.tgz}
+    resolution: {integrity: sha512-sykwH4Qd47/rSbp+qWB/CnrHVRO1F3ku3Y5HXC8EH1MqJvCMMDfplh7dImdkixOeEGKJudawlSgjKDrE1Jz+Uw==, tarball: file:projects/integration-macrobot-signalcommandmap.tgz}
     name: '@rush-temp/integration-macrobot-signalcommandmap'
     version: 0.0.0
     dependencies:
@@ -9042,7 +9022,6 @@ packages:
       imports-loader: 3.0.0_webpack@5.40.0
       istanbul-instrumenter-loader: 3.0.1_webpack@5.40.0
       karma: 6.3.4
-      karma-chai-sinon: 0.1.5_5bbab5b1a0990b92afecb710388f2ab5
       karma-chrome-launcher: 3.1.0
       karma-coverage-istanbul-reporter: 3.0.3
       karma-es6-shim: 1.0.0
@@ -9083,7 +9062,7 @@ packages:
     dev: false
 
   file:projects/macrobot.tgz:
-    resolution: {integrity: sha512-yiGAwfaHTzXqelELy+7V+BG/XULuh7FLfbxd6+Y9l4C/wlo78t6UCbjzKP3/ZuHWKplJJqhPMcXsH28331If1g==, tarball: file:projects/macrobot.tgz}
+    resolution: {integrity: sha512-bmwq5Mg+BwCG4bW/2ze8CqXfM0TR+/t3bMrYLGWOzemmQLTFiLWxUC8uzhwWL7WRwtJTF/ghe+ah+ZMMlzwd8w==, tarball: file:projects/macrobot.tgz}
     name: '@rush-temp/macrobot'
     version: 0.0.0
     dependencies:
@@ -9109,7 +9088,6 @@ packages:
       imports-loader: 3.0.0_webpack@5.40.0
       istanbul-instrumenter-loader: 3.0.1_webpack@5.40.0
       karma: 6.3.4
-      karma-chai-sinon: 0.1.5_5bbab5b1a0990b92afecb710388f2ab5
       karma-chrome-launcher: 3.1.0
       karma-coverage-istanbul-reporter: 3.0.3
       karma-es6-shim: 1.0.0
@@ -9150,7 +9128,7 @@ packages:
     dev: false
 
   file:projects/openfl.tgz:
-    resolution: {integrity: sha512-EEOor3jl9gLylnEk1sxuZNHt42SA0sfy5+puPPiCR1rsVXPrYufuPm+B+dXUBG4z2tXIix0UucQl6sEe54B1aQ==, tarball: file:projects/openfl.tgz}
+    resolution: {integrity: sha512-WhUwa7+uzuatUoMiDStxUuJLXkqsa/c3koVrFNzg6BrOTS/a6B8p74uiskkv7C86k7AXZ5zafg8N4kCQSBGTMw==, tarball: file:projects/openfl.tgz}
     name: '@rush-temp/openfl'
     version: 0.0.0
     dependencies:
@@ -9218,7 +9196,7 @@ packages:
     dev: false
 
   file:projects/phaser-ce-signalcommandmap.tgz:
-    resolution: {integrity: sha512-DtPDxvmeBhAj34Ast3LbmSi8zZR0EqZE/Na3VtUaCSTtaHc+edL4MWkTPyhZ9X36/CrYGaX3wNcyhBopVfxCKg==, tarball: file:projects/phaser-ce-signalcommandmap.tgz}
+    resolution: {integrity: sha512-rI7V0U1BBY3mCfrtoHzqg2DSNjnpt2AhrrT/oMM62BBvTGixCSn3eN0QcGbQ8VhRWTa12f3/9gOh3LehprCYcg==, tarball: file:projects/phaser-ce-signalcommandmap.tgz}
     name: '@rush-temp/phaser-ce-signalcommandmap'
     version: 0.0.0
     dependencies:
@@ -9282,7 +9260,7 @@ packages:
     dev: false
 
   file:projects/phaser-ce.tgz:
-    resolution: {integrity: sha512-LIPSALLWN3CrHv/Btf3/nJkc3QGORzRTQBr5NlHxdys9idMbZaZAvd3CoybvXhI+hJvWGYOdj54AHj0MMILaIw==, tarball: file:projects/phaser-ce.tgz}
+    resolution: {integrity: sha512-VpjOjXDEgwX4M9bw0OiZBD/IKJYLIjZURvNqyvkmlak8ImygN9yRhaTzqc6S/oKEaiPSuSQwnHu54ARfbqEl5w==, tarball: file:projects/phaser-ce.tgz}
     name: '@rush-temp/phaser-ce'
     version: 0.0.0
     dependencies:
@@ -9350,7 +9328,7 @@ packages:
     dev: false
 
   file:projects/phaser.tgz:
-    resolution: {integrity: sha512-DiYJRXDpQrNiJpW52r5O+l9IHbggDKnXiqcmNSCTiC2VKAzIcZSgw+nKriPQciV4+pCmJN6iVJLYMDYcMy9WsQ==, tarball: file:projects/phaser.tgz}
+    resolution: {integrity: sha512-nEU6sscq0aUH9zutkfcs5Ni7VM4bsFHBy3SabnKRuWwPDYgmouHqvykUrVXd8jtUaz0n7LKFybuTRG4sHaoyjg==, tarball: file:projects/phaser.tgz}
     name: '@rush-temp/phaser'
     version: 0.0.0
     dependencies:
@@ -9419,7 +9397,7 @@ packages:
     dev: false
 
   file:projects/pixi-palidor.tgz:
-    resolution: {integrity: sha512-Otosnbv+IhvifXVhvNdPUNXUEYr5gvnG2AgzuPtNiAtm93aAFSgjbN19ECceOIPUFRHC1/SIZEmfKiho0YJwig==, tarball: file:projects/pixi-palidor.tgz}
+    resolution: {integrity: sha512-w+0KMQMV54bJAVtFVCQNpvhThUJ4l+2cEnYVikmqXAqyWYRoFYy8zwlYqNBo7QZDxYyH1bdkCsOORVlaka8FQA==, tarball: file:projects/pixi-palidor.tgz}
     name: '@rush-temp/pixi-palidor'
     version: 0.0.0
     dependencies:
@@ -9487,7 +9465,7 @@ packages:
     dev: false
 
   file:projects/pixi-signalmediator.tgz:
-    resolution: {integrity: sha512-MK4vayikuTt82DOFEIHsJp7SV4bXXoO07p19GD7m+hQw1hEYErt7OEnvpLb6jfcJ1cR3rbh+G2DiCom3aR9MhQ==, tarball: file:projects/pixi-signalmediator.tgz}
+    resolution: {integrity: sha512-eQQj9I2h85UEkDw2ZeE+Sd9HGCl+HdkBsZ8dR1BFaeouxdz2VKz3rNOwoZvCdA9nS9LTO2WM37xszx7QNiT4ow==, tarball: file:projects/pixi-signalmediator.tgz}
     name: '@rush-temp/pixi-signalmediator'
     version: 0.0.0
     dependencies:
@@ -9555,7 +9533,7 @@ packages:
     dev: false
 
   file:projects/pixi.tgz:
-    resolution: {integrity: sha512-V/CZx+kTMdlqcNsz20zSWfW6Nbr51ITRrB24JIe2bsUPw/x6GMaSaRC7hzCF+KmQ5dHlhrHAUH7B2OapCwXZRA==, tarball: file:projects/pixi.tgz}
+    resolution: {integrity: sha512-E8A81/AH6QOKDebi5TGBVdYHlgBZblesZQaQenC6o2lRDQ2mclIann1y3goCahva1YaBVCWvS9XKXWxJUXd0HQ==, tarball: file:projects/pixi.tgz}
     name: '@rush-temp/pixi'
     version: 0.0.0
     dependencies:
@@ -9622,7 +9600,7 @@ packages:
     dev: false
 
   file:projects/signalcommandmap.tgz:
-    resolution: {integrity: sha512-qFrIPUSDY2iQkog7IU/fnIAY9rFvjBvtGlhoJ0u7x/HJ7+st9WXm3q/WtEUWesumGBdH4eEi78cHWLGepz1vrQ==, tarball: file:projects/signalcommandmap.tgz}
+    resolution: {integrity: sha512-tuDYSgTJwEbmo3UFYIlMF9wH95+l8Xtv3P8/h6SaN26oPMvhFR9KJC4LEd6lSc/RE1s56mqEjDi2kwJY1IL/DQ==, tarball: file:projects/signalcommandmap.tgz}
     name: '@rush-temp/signalcommandmap'
     version: 0.0.0
     dependencies:
@@ -9688,7 +9666,7 @@ packages:
     dev: false
 
   file:projects/signals.tgz:
-    resolution: {integrity: sha512-53AQVS539xAi+sEtEJMocpcZO49VG9nP4bRYQfjYuNiVfrHXaTpaE4k5WBySGfOY8DeAB4fNd7mm544GrT3MEw==, tarball: file:projects/signals.tgz}
+    resolution: {integrity: sha512-pv4lI6QqEX3vOsQtruGtLEGkT7LxvnySDCvqkdlyDMrN2QXPDcteU+xyAxcNKn8e6cP6rUBetKfdRKXYmmnqig==, tarball: file:projects/signals.tgz}
     name: '@rush-temp/signals'
     version: 0.0.0
     dependencies:
@@ -9714,7 +9692,6 @@ packages:
       imports-loader: 3.0.0_webpack@5.40.0
       istanbul-instrumenter-loader: 3.0.1_webpack@5.40.0
       karma: 6.3.4
-      karma-chai-sinon: 0.1.5_5bbab5b1a0990b92afecb710388f2ab5
       karma-chrome-launcher: 3.1.0
       karma-coverage-istanbul-reporter: 3.0.3
       karma-es6-shim: 1.0.0
