@@ -34,7 +34,6 @@ specifiers:
   '@types/tweenjs': ^1.0.3
   '@types/webpack-env': ^1.16.0
   bluebird: ^3.7.2
-  browserify-versionify: ^1.0.6
   chai: ^4.3.4
   clean-webpack-plugin: ^3.0.0
   copy-webpack-plugin: ^9.0.1
@@ -117,7 +116,6 @@ dependencies:
   '@types/tweenjs': 1.0.3
   '@types/webpack-env': 1.16.0
   bluebird: 3.7.2
-  browserify-versionify: 1.0.6
   chai: 4.3.4
   clean-webpack-plugin: 3.0.0_webpack@5.40.0
   copy-webpack-plugin: 9.0.1_webpack@5.40.0
@@ -1873,13 +1871,6 @@ packages:
     resolution: {integrity: sha512-qhAVI1+Av2X7qelOfAIYwXONood6XlZE/fXaBSmW/T5SzLAmCgzi+eiWE7fUvbHaeNBQH13UftjpXxsfLkMpgw==}
     dev: false
 
-  /browserify-versionify/1.0.6:
-    resolution: {integrity: sha1-qy3GHWoRnmJ77Eh1mNGYO3/bJ14=}
-    dependencies:
-      find-root: 0.1.2
-      through2: 0.6.3
-    dev: false
-
   /browserslist/4.16.6:
     resolution: {integrity: sha512-Wspk/PqO+4W9qp5iUTJsa1B/QrYn1keNCcEP5OvP7WBwT4KaDly0uONYmC6Xa3Z5IqnUgS0KcgLYu1l74x0ZXQ==}
     engines: {node: ^6 || ^7 || ^8 || ^9 || ^10 || ^11 || ^12 || >=13.7}
@@ -3535,10 +3526,6 @@ packages:
       commondir: 1.0.1
       make-dir: 3.1.0
       pkg-dir: 4.2.0
-    dev: false
-
-  /find-root/0.1.2:
-    resolution: {integrity: sha1-mNImfP8ZFsyvJ0OzoO6oHXnX3NE=}
     dev: false
 
   /find-up/2.1.0:
@@ -6211,15 +6198,6 @@ packages:
       type-fest: 0.6.0
     dev: false
 
-  /readable-stream/1.0.34:
-    resolution: {integrity: sha1-Elgg40vIQtLyqq+v5MKRbuMsFXw=}
-    dependencies:
-      core-util-is: 1.0.2
-      inherits: 2.0.4
-      isarray: 0.0.1
-      string_decoder: 0.10.31
-    dev: false
-
   /readable-stream/2.3.7:
     resolution: {integrity: sha512-Ebho8K4jIbHAxnuxi7o42OrZgF/ZTNcsZj6nRKyUmkhLFq8CHItp/fy6hQZuZmP/n3yZ9VBUbp4zz/mX8hmYPw==}
     dependencies:
@@ -6995,10 +6973,6 @@ packages:
       define-properties: 1.1.3
     dev: false
 
-  /string_decoder/0.10.31:
-    resolution: {integrity: sha1-YuIDvEF2bGwoyfyEMB2rHFMQ+pQ=}
-    dev: false
-
   /string_decoder/1.1.1:
     resolution: {integrity: sha512-n/ShnvDi6FHbbVfviro+WojiFzv+s8MPMHBczVePfUpDJLwoLT0ht1l4YwBCbi8pJAveEEdnkHyPyTP/mzRfwg==}
     dependencies:
@@ -7188,13 +7162,6 @@ packages:
 
   /through/2.3.8:
     resolution: {integrity: sha1-DdTJ/6q8NXlgsbckEV1+Doai4fU=}
-    dev: false
-
-  /through2/0.6.3:
-    resolution: {integrity: sha1-eVKS/enyVMKjaLOPnMXRvUZjr7Y=}
-    dependencies:
-      readable-stream: 1.0.34
-      xtend: 4.0.2
     dev: false
 
   /thunky/1.1.0:
@@ -7905,11 +7872,6 @@ packages:
     resolution: {integrity: sha512-JZnDKK8B0RCDw84FNdDAIpZK+JuJw+s7Lz8nksI7SIuU3UXJJslUthsi+uWBUYOwPFwW7W7PRLRfUKpxjtjFCw==}
     dev: false
 
-  /xtend/4.0.2:
-    resolution: {integrity: sha512-LKYU1iAXJXUgAXn9URjiu+MWhyUXHsvfp7mcuYm9dSUKK0/CjtrUwFAxD82/mCWbtLsGjFIad0wIsod4zrTAEQ==}
-    engines: {node: '>=0.4'}
-    dev: false
-
   /y18n/4.0.3:
     resolution: {integrity: sha512-JKhqTOwSrqNA1NY5lSztJ1GrBiUodLMmIZuLiDaMRJ+itFd+ABVE8XBjOvIWL+rSqNDC74LCSFmlb/U4UZ4hJQ==}
     dev: false
@@ -8021,7 +7983,7 @@ packages:
     dev: false
 
   file:projects/core.tgz:
-    resolution: {integrity: sha512-OmiXCZ9NHmHWDvpzJsY7H2okTAwjGJ+9xo/3BhwIF9ibZsbQK1k34QhBvX4XCXmVd9/QPimTCw8J9Qq2bMBuIg==, tarball: file:projects/core.tgz}
+    resolution: {integrity: sha512-jBj4/4umG2zqhan+uSZXQG3hL1QxZnODErjiU2Vv7j8hDCcDapGVTmOmCFylk+y6J4Vs1T+n1HLXkUxoWq+TLA==, tarball: file:projects/core.tgz}
     name: '@rush-temp/core'
     version: 0.0.0
     dependencies:
@@ -8033,7 +7995,6 @@ packages:
       '@types/sinon': 10.0.2
       '@types/webpack-env': 1.16.0
       bluebird: 3.7.2
-      browserify-versionify: 1.0.6
       chai: 4.3.4
       es6-map: 0.1.5
       es6-symbol: 3.1.3
@@ -8088,7 +8049,7 @@ packages:
     dev: false
 
   file:projects/createjs.tgz:
-    resolution: {integrity: sha512-n+PUh1YOKYistJ7gaGyKXajhlLjDx082GXUzolF+IGfPIfJSlKTfVFTDZubPprCE1lpBZsVvQG6be9Ym+dLEJA==, tarball: file:projects/createjs.tgz}
+    resolution: {integrity: sha512-aY0R6aNXnmMDiPWspbR3HZcZVpYCwY0o5SPUGquSbSn3l/0FF+b4dYDOiCN+16nlYSAJPHFlw3itM1yIVwQp2g==, tarball: file:projects/createjs.tgz}
     name: '@rush-temp/createjs'
     version: 0.0.0
     dependencies:
@@ -8103,7 +8064,6 @@ packages:
       '@types/tweenjs': 1.0.3
       '@types/webpack-env': 1.16.0
       bluebird: 3.7.2
-      browserify-versionify: 1.0.6
       chai: 4.3.4
       clean-webpack-plugin: 3.0.0_webpack@5.40.0
       copy-webpack-plugin: 9.0.1_webpack@5.40.0
@@ -8157,7 +8117,7 @@ packages:
     dev: false
 
   file:projects/eventemitter3.tgz:
-    resolution: {integrity: sha512-OjItDQCOsTGsKw3Hk2ta/i/0faq/c/IXfcKkj/+1VyJhZ81vZUS/freOYbaTNCKfDSqWsJdbMA0CItoMTWi42A==, tarball: file:projects/eventemitter3.tgz}
+    resolution: {integrity: sha512-MQIlAbPDp68IX8vGW3oaYxhv5Q+wvLY74o7GhoJFUdPdGqxQ3L3afG/P6higW6nD6OadewNGR/jQx+GiVjc4yg==, tarball: file:projects/eventemitter3.tgz}
     name: '@rush-temp/eventemitter3'
     version: 0.0.0
     dependencies:
@@ -8169,7 +8129,6 @@ packages:
       '@types/sinon': 10.0.2
       '@types/webpack-env': 1.16.0
       bluebird: 3.7.2
-      browserify-versionify: 1.0.6
       chai: 4.3.4
       es6-map: 0.1.5
       es6-symbol: 3.1.3
@@ -8523,7 +8482,7 @@ packages:
     dev: false
 
   file:projects/integration-macrobot-signalcommandmap.tgz:
-    resolution: {integrity: sha512-L0qCEVu3MXNQ+joMqhgFSULBWqA4sCoATaeJVtoMXHa9+DCNA2Z/1cbq7PGV9OmvathPXhuAPl6yIkXdFEv1+A==, tarball: file:projects/integration-macrobot-signalcommandmap.tgz}
+    resolution: {integrity: sha512-jzDb+m6clETpatYpzhl6I0MVLjJatpHOkVSDgB/hx79PY369mjK9u+KTQJRGhrcQegLvUVSEw/w8BL8T1y6TMg==, tarball: file:projects/integration-macrobot-signalcommandmap.tgz}
     name: '@rush-temp/integration-macrobot-signalcommandmap'
     version: 0.0.0
     dependencies:
@@ -8535,7 +8494,6 @@ packages:
       '@types/sinon': 10.0.2
       '@types/webpack-env': 1.16.0
       bluebird: 3.7.2
-      browserify-versionify: 1.0.6
       chai: 4.3.4
       es6-map: 0.1.5
       es6-symbol: 3.1.3
@@ -8586,7 +8544,7 @@ packages:
     dev: false
 
   file:projects/macrobot.tgz:
-    resolution: {integrity: sha512-VsRb2q5fLK32A5kMAwk+uyjOJfuh/gpUGto8Rep4cjX+jYGJr/LKYb9yDcSNWwf912Fzn2ePuJsBHJ9pQvPcJQ==, tarball: file:projects/macrobot.tgz}
+    resolution: {integrity: sha512-e6QjuWDkImWBhRAudsyWgewPGPNSbdcT7n9sa8CRlAWbTFblKFPPgEK4aVNxQgdUEcoPklZEWWsD8Bed0g/jIA==, tarball: file:projects/macrobot.tgz}
     name: '@rush-temp/macrobot'
     version: 0.0.0
     dependencies:
@@ -8598,7 +8556,6 @@ packages:
       '@types/sinon': 10.0.2
       '@types/webpack-env': 1.16.0
       bluebird: 3.7.2
-      browserify-versionify: 1.0.6
       chai: 4.3.4
       es6-map: 0.1.5
       es6-symbol: 3.1.3
@@ -8649,7 +8606,7 @@ packages:
     dev: false
 
   file:projects/openfl.tgz:
-    resolution: {integrity: sha512-6l2JjGKZMvZ0ETVPWUq9EMY0zEEKZuXtJgxKuRuipVZJHK8u4qwb7KbKBZMsY5Ajy/gjb7NusIZcpGmwj4R+jw==, tarball: file:projects/openfl.tgz}
+    resolution: {integrity: sha512-XR/NPZo14aaR75pWmN7Uby+gDA0MVlyYjk0asuQVNtVnrUGsBQLqKgSlqp9zX0nw3+5APW6cUrCQgnetDbdUNw==, tarball: file:projects/openfl.tgz}
     name: '@rush-temp/openfl'
     version: 0.0.0
     dependencies:
@@ -8661,7 +8618,6 @@ packages:
       '@types/sinon': 10.0.2
       '@types/webpack-env': 1.16.0
       bluebird: 3.7.2
-      browserify-versionify: 1.0.6
       chai: 4.3.4
       clean-webpack-plugin: 3.0.0_webpack@5.40.0
       copy-webpack-plugin: 9.0.1_webpack@5.40.0
@@ -8714,7 +8670,7 @@ packages:
     dev: false
 
   file:projects/phaser-ce-signalcommandmap.tgz:
-    resolution: {integrity: sha512-KwriZYzsomAvVGQisun0peft0wH3+b8KsRUIi9+ii9z/ktItJXefWP91Dcd9tj2UuXaJN63UZiErsBqBsP087w==, tarball: file:projects/phaser-ce-signalcommandmap.tgz}
+    resolution: {integrity: sha512-rVucOipnidj8fuqehOtYaXexf1dvmTizL/ts6IJ/5dwZ3zb2kf+tP3p3rMZ8hBzGXB298phOliAmMMs3QtcmxA==, tarball: file:projects/phaser-ce-signalcommandmap.tgz}
     name: '@rush-temp/phaser-ce-signalcommandmap'
     version: 0.0.0
     dependencies:
@@ -8725,7 +8681,6 @@ packages:
       '@types/sinon': 10.0.2
       '@types/webpack-env': 1.16.0
       bluebird: 3.7.2
-      browserify-versionify: 1.0.6
       chai: 4.3.4
       es6-map: 0.1.5
       es6-symbol: 3.1.3
@@ -8775,7 +8730,7 @@ packages:
     dev: false
 
   file:projects/phaser-ce.tgz:
-    resolution: {integrity: sha512-BgAIFaNP/I21ugrJMuRI4eSRF/QyCAjGgnfdXNLlkLeuIFRMWCmG4RR4PWC+JQX3HMtmikCQbkUhDUwNTBRy7w==, tarball: file:projects/phaser-ce.tgz}
+    resolution: {integrity: sha512-XOju3+K2hWxVPxf+c9slyBEELhf2QZwwQQP0bKLgBRTgeLKWrD99PXMNQRcKr1hdmELZzOkgcTSk73lEXe4nNw==, tarball: file:projects/phaser-ce.tgz}
     name: '@rush-temp/phaser-ce'
     version: 0.0.0
     dependencies:
@@ -8787,7 +8742,6 @@ packages:
       '@types/sinon': 10.0.2
       '@types/webpack-env': 1.16.0
       bluebird: 3.7.2
-      browserify-versionify: 1.0.6
       chai: 4.3.4
       clean-webpack-plugin: 3.0.0_webpack@5.40.0
       es6-map: 0.1.5
@@ -8840,7 +8794,7 @@ packages:
     dev: false
 
   file:projects/phaser.tgz:
-    resolution: {integrity: sha512-ibpIw8ZmPcuoWOZJH9e+ee+GM1FWNlMgetR+Y1q9oPRN3HJwrTNl0zK4TZag6ykCBaQP5iUZGMhjNLjozVaxEA==, tarball: file:projects/phaser.tgz}
+    resolution: {integrity: sha512-9rGu24ufbpW6p4/FFg7cQvvtgYOgmsZFkxJh1BOOQZtbgqQ5EvbWgFeZjSRpgjM+n943EOUSzVKwmih2KJN5Gg==, tarball: file:projects/phaser.tgz}
     name: '@rush-temp/phaser'
     version: 0.0.0
     dependencies:
@@ -8852,7 +8806,6 @@ packages:
       '@types/sinon': 10.0.2
       '@types/webpack-env': 1.16.0
       bluebird: 3.7.2
-      browserify-versionify: 1.0.6
       chai: 4.3.4
       clean-webpack-plugin: 3.0.0_webpack@5.40.0
       copy-webpack-plugin: 9.0.1_webpack@5.40.0
@@ -8906,7 +8859,7 @@ packages:
     dev: false
 
   file:projects/pixi-palidor.tgz:
-    resolution: {integrity: sha512-e3d2/tsFqxxjN8alPB0yTDis+sU4ru79FNrf44gowKgWHUmjK6eSlKorJ5FtI9UuQmf4EI/9/5khY1vnlAFYNA==, tarball: file:projects/pixi-palidor.tgz}
+    resolution: {integrity: sha512-Cg4ct3H1c1D5V4UisqhxGK/IhltDM4WdTNsXcEVuYm4ZSsR7FbpPjYflvsqR8XIZCbLADiJhW3Z14CM4pqBMdA==, tarball: file:projects/pixi-palidor.tgz}
     name: '@rush-temp/pixi-palidor'
     version: 0.0.0
     dependencies:
@@ -8917,7 +8870,6 @@ packages:
       '@types/sinon': 10.0.2
       '@types/webpack-env': 1.16.0
       bluebird: 3.7.2
-      browserify-versionify: 1.0.6
       chai: 4.3.4
       clean-webpack-plugin: 3.0.0_webpack@5.40.0
       copy-webpack-plugin: 9.0.1_webpack@5.40.0
@@ -8970,7 +8922,7 @@ packages:
     dev: false
 
   file:projects/pixi-signalmediator.tgz:
-    resolution: {integrity: sha512-5ErglEmmpeTLv3RJhZaOsD8Md9g7m8AS4oifMUpm1nzBhvqZyD3T5VsTkZ7PGmEOtpD+QQOqpQXsRf7MPXaCCA==, tarball: file:projects/pixi-signalmediator.tgz}
+    resolution: {integrity: sha512-gjyj3punm88bbf92xJ/olrUXfcedQySeWqeW1m5fvopPI4ojzWtbFnqaFkN/A2mt5tI4hG0teUOrWeIYOc63cQ==, tarball: file:projects/pixi-signalmediator.tgz}
     name: '@rush-temp/pixi-signalmediator'
     version: 0.0.0
     dependencies:
@@ -8982,7 +8934,6 @@ packages:
       '@types/sinon': 10.0.2
       '@types/webpack-env': 1.16.0
       bluebird: 3.7.2
-      browserify-versionify: 1.0.6
       chai: 4.3.4
       es6-map: 0.1.5
       es6-symbol: 3.1.3
@@ -9034,7 +8985,7 @@ packages:
     dev: false
 
   file:projects/pixi.tgz:
-    resolution: {integrity: sha512-FpN9KV4CRH8f63GK+Fqo3atIBy23WX56co39fKCP03HfzkYZX/IwHCnPmJOGvaTBec7GtKZ0KMJRXhhd4Ab/sQ==, tarball: file:projects/pixi.tgz}
+    resolution: {integrity: sha512-/pJnZH89faSFJPOma7CstCB68eBAyAFVGfxgdbuWauSIpMGYefvpbkeUruha50d7+Cn38D6rcY5v3zk8dp8YFg==, tarball: file:projects/pixi.tgz}
     name: '@rush-temp/pixi'
     version: 0.0.0
     dependencies:
@@ -9045,7 +8996,6 @@ packages:
       '@types/sinon': 10.0.2
       '@types/webpack-env': 1.16.0
       bluebird: 3.7.2
-      browserify-versionify: 1.0.6
       chai: 4.3.4
       clean-webpack-plugin: 3.0.0_webpack@5.40.0
       copy-webpack-plugin: 9.0.1_webpack@5.40.0
@@ -9098,7 +9048,7 @@ packages:
     dev: false
 
   file:projects/signalcommandmap.tgz:
-    resolution: {integrity: sha512-+I0bXpY6wSHorJW3W+4MMQFasEMeNWFBmDeELzUsUXEnADjDE/tedNSBNen2u0ZznL12oZL6Z17KCjozppkuLw==, tarball: file:projects/signalcommandmap.tgz}
+    resolution: {integrity: sha512-BRpbQxhmw8goIROAHv5DQVaofIfYD3qhjRo3Yh+VDe2jg4n+aRE3Z0CxCtv+htes9UbacNuWCrMY9q5kW+OaXg==, tarball: file:projects/signalcommandmap.tgz}
     name: '@rush-temp/signalcommandmap'
     version: 0.0.0
     dependencies:
@@ -9110,7 +9060,6 @@ packages:
       '@types/sinon': 10.0.2
       '@types/webpack-env': 1.16.0
       bluebird: 3.7.2
-      browserify-versionify: 1.0.6
       chai: 4.3.4
       es6-map: 0.1.5
       es6-symbol: 3.1.3
@@ -9161,7 +9110,7 @@ packages:
     dev: false
 
   file:projects/signals.tgz:
-    resolution: {integrity: sha512-FhiVDtFlBZngHQFZdHR2HczcKqcFqccQUS/qblkBIhtb0ZpGOSl9j02AEIMd09i92K0N5dcZLAN1mUuw19xEvA==, tarball: file:projects/signals.tgz}
+    resolution: {integrity: sha512-y4O05musOI0jln5xw/mZbLTkAZiSNuaDF7/x/QhSFhK/iXksHfTzNx3Ju9K8k9eM9ehcDQnPKuOk+EOfXFR6tA==, tarball: file:projects/signals.tgz}
     name: '@rush-temp/signals'
     version: 0.0.0
     dependencies:
@@ -9173,7 +9122,6 @@ packages:
       '@types/sinon': 10.0.2
       '@types/webpack-env': 1.16.0
       bluebird: 3.7.2
-      browserify-versionify: 1.0.6
       chai: 4.3.4
       es6-map: 0.1.5
       es6-symbol: 3.1.3
