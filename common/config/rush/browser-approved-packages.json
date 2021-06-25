@@ -99,10 +99,6 @@
       "allowedCategories": [ "production" ]
     },
     {
-      "name": "glslify",
-      "allowedCategories": [ "production", "tests" ]
-    },
-    {
       "name": "gsap",
       "allowedCategories": [ "games" ]
     },

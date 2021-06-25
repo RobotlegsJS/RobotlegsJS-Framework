@@ -101,7 +101,6 @@
     "eslint-plugin-react": "^7.24.0",
     "eslint-plugin-unicorn": "^33.0.1",
     "eventemitter3": "^4.0.0",
-    "glslify": "^7.1.1",
     "istanbul-instrumenter-loader": "^3.0.1",
     "jsdom": "^16.6.0",
     "jsdom-global": "^3.0.2",
