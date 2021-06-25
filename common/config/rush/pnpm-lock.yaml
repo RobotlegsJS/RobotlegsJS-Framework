@@ -1362,10 +1362,6 @@ packages:
     resolution: {integrity: sha512-9IK9EadsbHo6jLWIpxpR6pL0sazTXV6+SQv25ZB+F7Bj9mJNaOc4nCRabwd5M/JwmUa8idz6Eci6eKfJryPs6Q==}
     dev: false
 
-  /abbrev/1.0.9:
-    resolution: {integrity: sha1-kbR5JYinc4wl813W9jdSovh3YTU=}
-    dev: false
-
   /accepts/1.3.7:
     resolution: {integrity: sha512-Il80Qs2WjYlJIBNzNkK6KYqlVMTbZLXgHx2oT0pU/fjRHyEp+PEfEPY0R3WCwAGVOtauxh1hOxNgIf5bv7dQpA==}
     engines: {node: '>= 0.6'}
@@ -1466,19 +1462,6 @@ packages:
       uri-js: 4.4.1
     dev: false
 
-  /amdefine/1.0.1:
-    resolution: {integrity: sha1-SlKCrBZHKek2Gbz9OtFR+BfOkfU=}
-    engines: {node: '>=0.4.2'}
-    dev: false
-    optional: true
-
-  /ansi-colors/1.1.0:
-    resolution: {integrity: sha512-SFKX67auSNoVR38N3L+nvsPjOE0bybKTYbkf5tRvushrAPQ9V75huw0ZxBkKVeRU9kqH3d6HA4xTckbwZ4ixmA==}
-    engines: {node: '>=0.10.0'}
-    dependencies:
-      ansi-wrap: 0.1.0
-    dev: false
-
   /ansi-colors/3.2.4:
     resolution: {integrity: sha512-hHUXGagefjN2iRrID63xckIvotOXOojhQKWIPUZ4mNUZ9nLZW+7FMNoE1lOkEhNWYsx/7ysGIuJYCiMAA9FnrA==}
     engines: {node: '>=6'}
@@ -1532,11 +1515,6 @@ packages:
     engines: {node: '>=8'}
     dependencies:
       color-convert: 2.0.1
-    dev: false
-
-  /ansi-wrap/0.1.0:
-    resolution: {integrity: sha1-qCJQ3bABXponyoLoLqYDu/pF768=}
-    engines: {node: '>=0.10.0'}
     dev: false
 
   /anymatch/2.0.0:
@@ -1679,10 +1657,6 @@ packages:
 
   /async-limiter/1.0.1:
     resolution: {integrity: sha512-csOlWGAcRFJaI6m+F2WKdnMKr4HhdhFVBk0H/QbJFMCr+uO2kwohwXQPxw/9OCxp05r5ghVBFSyioixx3gfkNQ==}
-    dev: false
-
-  /async/1.5.2:
-    resolution: {integrity: sha1-7GphrlZIDAw8skHJVhjiCJL5Zyo=}
     dev: false
 
   /async/2.6.3:
@@ -1931,7 +1905,7 @@ packages:
     dependencies:
       caniuse-lite: 1.0.30001239
       colorette: 1.2.2
-      electron-to-chromium: 1.3.758
+      electron-to-chromium: 1.3.759
       escalade: 3.1.1
       node-releases: 1.1.73
     dev: false
@@ -2479,7 +2453,7 @@ packages:
     dependencies:
       abab: 2.0.5
       whatwg-mimetype: 2.3.0
-      whatwg-url: 8.6.0
+      whatwg-url: 8.7.0
     dev: false
 
   /date-format/2.1.0:
@@ -2806,8 +2780,8 @@ packages:
     resolution: {integrity: sha1-WQxhFWsK4vTwJVcyoViyZrxWsh0=}
     dev: false
 
-  /electron-to-chromium/1.3.758:
-    resolution: {integrity: sha512-StYtiDbgZdjcck3OLwsVVVif7QDuD5m5v2gF+XpETp5lHa7X0y3129YBlYaHRPyj1fep1oAaC6i//gAdp+rhbw==}
+  /electron-to-chromium/1.3.759:
+    resolution: {integrity: sha512-nM76xH0t2FBH5iMEZDVc3S/qbdKjGH7TThezxC8k1Q7w7WHvIAyJh8lAe2UamGfdRqBTjHfPDn82LJ0ksCiB9g==}
     dev: false
 
   /emoji-regex/7.0.3:
@@ -3024,19 +2998,6 @@ packages:
       optionator: 0.8.3
     optionalDependencies:
       source-map: 0.6.1
-    dev: false
-
-  /escodegen/1.8.1:
-    resolution: {integrity: sha1-WltTr0aTEQvrsIZ6o0MN07cKEBg=}
-    engines: {node: '>=0.12.0'}
-    hasBin: true
-    dependencies:
-      esprima: 2.7.3
-      estraverse: 1.9.3
-      esutils: 2.0.3
-      optionator: 0.8.3
-    optionalDependencies:
-      source-map: 0.2.0
     dev: false
 
   /escodegen/2.0.0:
@@ -3303,12 +3264,6 @@ packages:
       eslint-visitor-keys: 1.3.0
     dev: false
 
-  /esprima/2.7.3:
-    resolution: {integrity: sha1-luO3DVd59q1JzQMmc9HDEnZ7pYE=}
-    engines: {node: '>=0.10.0'}
-    hasBin: true
-    dev: false
-
   /esprima/4.0.1:
     resolution: {integrity: sha512-eGuFFw7Upda+g4p+QHvnW0RyTX/SVeJBDM/gCtMARO0cLuT2HcEKnTPvhjV6aGeqrCB/sbNop0Kszm0jsaWU4A==}
     engines: {node: '>=4'}
@@ -3327,11 +3282,6 @@ packages:
     engines: {node: '>=4.0'}
     dependencies:
       estraverse: 5.2.0
-    dev: false
-
-  /estraverse/1.9.3:
-    resolution: {integrity: sha1-r2fy3JIlgkFZUJJgkaQAXSnJu0Q=}
-    engines: {node: '>=0.10.0'}
     dev: false
 
   /estraverse/4.3.0:
@@ -3902,16 +3852,6 @@ packages:
     resolution: {integrity: sha512-lkX1HJXwyMcprw/5YUZc2s7DrpAiHB21/V+E1rHUrVNokkvB6bqMzT0VfV6/86ZNabt1k14YOIaT7nDvOX3Iiw==}
     dev: false
 
-  /glob/5.0.15:
-    resolution: {integrity: sha1-G8k2ueAvSmA/zCIuz3Yz0wuLk7E=}
-    dependencies:
-      inflight: 1.0.6
-      inherits: 2.0.4
-      minimatch: 3.0.4
-      once: 1.4.0
-      path-is-absolute: 1.0.1
-    dev: false
-
   /glob/7.1.7:
     resolution: {integrity: sha512-OvD9ENzPLbegENnYP5UUfJIirTg4+XwMWGaQfQTY0JenxNvvIKP3U3/tAQSPIu/lHxXYSZmpXlUHeqAIdKzBLQ==}
     dependencies:
@@ -4106,19 +4046,6 @@ packages:
     resolution: {integrity: sha512-9Qn4yBxelxoh2Ow62nP+Ka/kMnOXRi8BXnRaUwezLNhqelnN49xKz4F/dPP8OYLxLxq6JDtZb2i9XznUQbNPTg==}
     dev: false
 
-  /handlebars/4.7.7:
-    resolution: {integrity: sha512-aAcXm5OAfE/8IXkcZvCepKU3VzW1/39Fb5ZuqMtgI/hT8X2YgoMvBY5dLhq/cpOvw7Lk1nK/UF71aLG/ZnVYRA==}
-    engines: {node: '>=0.4.7'}
-    hasBin: true
-    dependencies:
-      minimist: 1.2.5
-      neo-async: 2.6.2
-      source-map: 0.6.1
-      wordwrap: 1.0.0
-    optionalDependencies:
-      uglify-js: 3.13.9
-    dev: false
-
   /has-ansi/2.0.0:
     resolution: {integrity: sha1-NPUEnOHs3ysGSa8+8k5F7TVBbZE=}
     engines: {node: '>=0.10.0'}
@@ -4128,11 +4055,6 @@ packages:
 
   /has-bigints/1.0.1:
     resolution: {integrity: sha512-LSBS2LjbNBTf6287JEbEzvJgftkF5qFkmCo9hDRpAzKhUOlJ+hx8dd4USs00SgsUNwc4617J9ki5YtEClM2ffA==}
-    dev: false
-
-  /has-flag/1.0.0:
-    resolution: {integrity: sha1-nZ55MWXOAXoA8AQYxD+UKnsdEfo=}
-    engines: {node: '>=0.10.0'}
     dev: false
 
   /has-flag/3.0.0:
@@ -5013,7 +4935,7 @@ packages:
       webidl-conversions: 6.1.0
       whatwg-encoding: 1.0.5
       whatwg-mimetype: 2.3.0
-      whatwg-url: 8.6.0
+      whatwg-url: 8.7.0
       ws: 7.5.0
       xml-name-validator: 3.0.0
     transitivePeerDependencies:
@@ -5698,13 +5620,6 @@ packages:
     resolution: {integrity: sha512-uW7fodD6pyW2FZNZnp/Z3hvWKeEW1Y8R1+1CnErE8cXFXzl5blBOoVB41CvMer6P6Q0S5FXDwcHgFd1Wj0U9zg==}
     dev: false
 
-  /nopt/3.0.6:
-    resolution: {integrity: sha1-xkZdvwirzU2zWTF/eaxopkayj/k=}
-    hasBin: true
-    dependencies:
-      abbrev: 1.0.9
-    dev: false
-
   /normalize-package-data/2.5.0:
     resolution: {integrity: sha512-/5CMN3T0R4XTj4DcGaexo+roZSdSFW/0AOOTROrjxzCG1wrWXEsGbRKevjlIL+ZDE4sZlJr5ED4YW0yqmkK+eA==}
     dependencies:
@@ -6292,16 +6207,6 @@ packages:
       find-up: 2.1.0
     dev: false
 
-  /plugin-error/1.0.1:
-    resolution: {integrity: sha512-L1zP0dk7vGweZME2i+EeakvUNqSrdiI3F91TwEoYiGrAfUXmVv6fJIq4g82PAXxNsWOp0J7ZqQy/3Szz0ajTxA==}
-    engines: {node: '>= 0.10'}
-    dependencies:
-      ansi-colors: 1.1.0
-      arr-diff: 4.0.0
-      arr-union: 3.1.0
-      extend-shallow: 3.0.2
-    dev: false
-
   /pluralize/8.0.0:
     resolution: {integrity: sha512-Nc3IT5yHzflTfbjgqWcCPpo7DaKy4FnpB0l/zCAW0Tc7jxAiuqSxHasntB3D7887LSrA93kDJ9IXovxJYxyLCA==}
     engines: {node: '>=4'}
@@ -6721,10 +6626,6 @@ packages:
 
   /resolve/0.6.3:
     resolution: {integrity: sha1-3ZV5gufnNt699TtYpN2RdUV13UY=}
-    dev: false
-
-  /resolve/1.1.7:
-    resolution: {integrity: sha1-IDEU2CrSxe2ejgQRs5ModeiJ6Xs=}
     dev: false
 
   /resolve/1.19.0:
@@ -7149,14 +7050,6 @@ packages:
     resolution: {integrity: sha512-cPiFOTLUKvJFIg4SKVScy4ilPPW6rFgMgfuZJPNoDuMs3nC1HbMUycBoJw77xFIp6z1UJQJOfx6C9GMH80DiTw==}
     dev: false
 
-  /source-map/0.2.0:
-    resolution: {integrity: sha1-2rc/vPwrqBm03gO9b26qSBZLP50=}
-    engines: {node: '>=0.8.0'}
-    dependencies:
-      amdefine: 1.0.1
-    dev: false
-    optional: true
-
   /source-map/0.5.0:
     resolution: {integrity: sha1-D+llA6yGpa213mP05BKuSHLNvoY=}
     engines: {node: '>=0.10.0'}
@@ -7418,13 +7311,6 @@ packages:
     engines: {node: '>=0.8.0'}
     dev: false
 
-  /supports-color/3.2.3:
-    resolution: {integrity: sha1-ZawFBLOVQXHYpklGsq48u4pfVPY=}
-    engines: {node: '>=0.8.0'}
-    dependencies:
-      has-flag: 1.0.0
-    dev: false
-
   /supports-color/5.5.0:
     resolution: {integrity: sha512-QjVjwdXIt408MIiAqCX4oUKsgU2EqAGzs2Ppkm4aQYbjm+ZEWEcW4SfFNTr4uMNZma0ey4f5lgLrkB0aX0QMow==}
     engines: {node: '>=4'}
@@ -7564,13 +7450,6 @@ packages:
     resolution: {integrity: sha512-/mrRod8xqpA+IHSLyGCQ2s8SPHiCDEeQJSep1jqLYeEUClOFG2Qsh+4FU6G9VeqpZnGW/Su8LQGc4YKni5rYSQ==}
     dependencies:
       readable-stream: 2.3.7
-      xtend: 4.0.2
-    dev: false
-
-  /through2/3.0.0:
-    resolution: {integrity: sha512-8B+sevlqP4OiCjonI1Zw03Sf8PuV1eRsYQgLad5eonILOdyeRsY27A/2Ze8IlvlMvq31OH+3fz/styI7Ya62yQ==}
-    dependencies:
-      readable-stream: 3.6.0
       xtend: 4.0.2
     dev: false
 
@@ -7792,13 +7671,6 @@ packages:
   /ua-parser-js/0.7.28:
     resolution: {integrity: sha512-6Gurc1n//gjp9eQNXjD9O3M/sMwVtN5S8Lv9bvOYBfKfDNiIIhqiyi01vMBO45u4zkDE420w/e0se7Vs+sIg+g==}
     dev: false
-
-  /uglify-js/3.13.9:
-    resolution: {integrity: sha512-wZbyTQ1w6Y7fHdt8sJnHfSIuWeDgk6B5rCb4E/AM6QNNPbOMIZph21PW5dRB3h7Df0GszN+t7RuUH6sWK5bF0g==}
-    engines: {node: '>=0.8.0'}
-    hasBin: true
-    dev: false
-    optional: true
 
   /unbox-primitive/1.0.1:
     resolution: {integrity: sha512-tZU/3NqK3dA5gpE1KtyiJUrEB0lxnGkMFHptJ7q6ewdZ8s12QrODwNbhIJStmJkd1QDXa1NRA8aF2A1zk/Ypyw==}
@@ -8156,8 +8028,8 @@ packages:
     resolution: {integrity: sha512-M4yMwr6mAnQz76TbJm914+gPpB/nCwvZbJU28cUD6dR004SAxDLOOSUaB1JDRqLtaOV/vi0IC5lEAGFgrjGv/g==}
     dev: false
 
-  /whatwg-url/8.6.0:
-    resolution: {integrity: sha512-os0KkeeqUOl7ccdDT1qqUcS4KH4tcBTSKK5Nl5WKb2lyxInIZ/CpjkqKa1Ss12mjfdcRX9mHmPPs7/SxG1Hbdw==}
+  /whatwg-url/8.7.0:
+    resolution: {integrity: sha512-gAojqb/m9Q8a5IV96E3fHJM70AzCkgt4uXYX2O7EmuyOnLrViCQlsEBmF9UQIu3/aeAIp2U17rtbpZWNntQqdg==}
     engines: {node: '>=10'}
     dependencies:
       lodash: 4.17.21
@@ -8207,10 +8079,6 @@ packages:
   /word-wrap/1.2.3:
     resolution: {integrity: sha512-Hz/mrNwitNRh/HUAtM/VT/5VH+ygD6DV7mYKZAtHOrbs8U7lvPS6xf7EJKMF0uW1KJCl0H701g3ZGus+muE5vQ==}
     engines: {node: '>=0.10.0'}
-    dev: false
-
-  /wordwrap/1.0.0:
-    resolution: {integrity: sha1-J1hIEIkUVqQXHI0CJkQa3pDLyus=}
     dev: false
 
   /workerpool/6.1.4:
@@ -8340,6 +8208,11 @@ packages:
     engines: {node: '>=10'}
     dev: false
 
+  /yargs-parser/20.2.9:
+    resolution: {integrity: sha512-y11nGElTIV+CT3Zv9t7VKl+Q3hTQoT9a1Qzezhhl6Rp21gJ/IVTW7Z3y9EWXhuUBC2Shnf+DX0antecpAwSP8w==}
+    engines: {node: '>=10'}
+    dev: false
+
   /yargs-unparser/2.0.0:
     resolution: {integrity: sha512-7pRTIA9Qc1caZ0bZ6RYRGbHJthJWuakf+WmHK0rVeLkNrrGhfoabBNdue6kdINI6r4if7ocq9aD/n7xwKOdzOA==}
     engines: {node: '>=10'}
@@ -8392,7 +8265,7 @@ packages:
       require-directory: 2.1.1
       string-width: 4.2.2
       y18n: 5.0.8
-      yargs-parser: 20.2.4
+      yargs-parser: 20.2.9
     dev: false
 
   /yauzl/2.10.0:
@@ -8413,7 +8286,7 @@ packages:
     dev: false
 
   file:projects/core.tgz:
-    resolution: {integrity: sha512-V6rbFbzKi4KKIlHa1zNe09oY3UHgFT08a/XD1ktCrm1zkYrx/IRaRmMlk2jRr4B/v9Y9+EQeAxOfBryDjSPyqA==, tarball: file:projects/core.tgz}
+    resolution: {integrity: sha512-VT/UT2f5GUZ7p9ogk+pMQ4jQeUR7d8wEPdM/2tTcbmPgwwReIHGe5YS+gazLBhc9Mig/ohlkWMxDQ/ALwAncaA==, tarball: file:projects/core.tgz}
     name: '@rush-temp/core'
     version: 0.0.0
     dependencies:
@@ -8482,7 +8355,7 @@ packages:
     dev: false
 
   file:projects/createjs.tgz:
-    resolution: {integrity: sha512-94AUCsBIl+hrSaLvI1ozvEH8HlnLefC/VlN2QHDmRw6LrhzYY08NrEhJpdxLh5KqTQmYg8xvXH1zKGyIonGKow==, tarball: file:projects/createjs.tgz}
+    resolution: {integrity: sha512-12YUxLpMV0UefEQfW3DzQVQsP05EEhrCUEqhtg8AnsVFMxM5wqT5i3KUv3gWhYK19mK9Lp9fUu/GPLh7ZLcpSA==, tarball: file:projects/createjs.tgz}
     name: '@rush-temp/createjs'
     version: 0.0.0
     dependencies:
@@ -8553,7 +8426,7 @@ packages:
     dev: false
 
   file:projects/eventemitter3.tgz:
-    resolution: {integrity: sha512-OOn4M7qzx8ApYk67y7cqQbgnG8W9Ov66zMvZXYAxc0falK2Ts+L/Rp2TNq1OO3iEX1eXOJknmp8Cb2XQClko2w==, tarball: file:projects/eventemitter3.tgz}
+    resolution: {integrity: sha512-8lvuo8BvWls72tnw6K4mMkL6VarqutKNy9LT+2Bz/oRrq9nSSrpIgUd00eWfuPjEqEcXvt3zT9bTbSCuXSfddA==, tarball: file:projects/eventemitter3.tgz}
     name: '@rush-temp/eventemitter3'
     version: 0.0.0
     dependencies:
@@ -8622,7 +8495,7 @@ packages:
     dev: false
 
   file:projects/game-battleship.tgz:
-    resolution: {integrity: sha512-j5opPbc3hS2a5jemAjnDvlF5yCWasvHsJaiTOklDtb0QYpIa1zHRBDNO1XNuHRW8vK4X2xvQk8xZRrVfBbnWMg==, tarball: file:projects/game-battleship.tgz}
+    resolution: {integrity: sha512-8Y+HHOBZTKDOgg27ahdTUnlBGxGoL7rR61O9+DiNmB9D4XPhrpEC+UtRveJ5Ii7qKi1UGiE41+n2cDKWNIrlkA==, tarball: file:projects/game-battleship.tgz}
     name: '@rush-temp/game-battleship'
     version: 0.0.0
     dependencies:
@@ -8684,7 +8557,7 @@ packages:
     dev: false
 
   file:projects/game-match3.tgz:
-    resolution: {integrity: sha512-101JQguz4wCYP9IJVzlbZ55bsTIULyvYD01f84dXbYk/xXtIkFUUX7OLiSkFb1a8m08t9Agync1saqSsR3zfiQ==, tarball: file:projects/game-match3.tgz}
+    resolution: {integrity: sha512-USgfVMA1TJYAxXpecmZ9im5bqiKbeZZl2oyN9cI6zfoECEzLPECS/Ee4f/7xpZ3z7ElqSWq0g2mKjsXUAAKm2w==, tarball: file:projects/game-match3.tgz}
     name: '@rush-temp/game-match3'
     version: 0.0.0
     dependencies:
@@ -8746,7 +8619,7 @@ packages:
     dev: false
 
   file:projects/game-minesweeper.tgz:
-    resolution: {integrity: sha512-AWjJyi+KGRh0tmL5dZp1Wn02eM9ARBekXpTG8yHOviAwbsarpEa6wxaBUTFp5TzCswR2+2I/oJr+skN8HVmOFw==, tarball: file:projects/game-minesweeper.tgz}
+    resolution: {integrity: sha512-M8zSQZzu8yExuSohjW8TyiZ0pMiFK3aqJuzXRjDTDSL0JSeL9AIIhmLM8Sht9d8Vs9fOSzlPSbzwZY52Fuq35g==, tarball: file:projects/game-minesweeper.tgz}
     name: '@rush-temp/game-minesweeper'
     version: 0.0.0
     dependencies:
@@ -8808,7 +8681,7 @@ packages:
     dev: false
 
   file:projects/game-scratchcard.tgz:
-    resolution: {integrity: sha512-mJGemaZby3KxAk+nstcG0Po8u2U00A9ePWPC9EvfmbNRxsHLfAVNzcGNXId6fsa4KCNlBsC3558gUjojaQ4v/w==, tarball: file:projects/game-scratchcard.tgz}
+    resolution: {integrity: sha512-fJChcv9N+ScgzhvQf5h3m7aE9qO9ahbdNsL1m7HN/FOaeYwryrTP5LiT1S9aaxC7rukmojaakbNBpza5LVNUyQ==, tarball: file:projects/game-scratchcard.tgz}
     name: '@rush-temp/game-scratchcard'
     version: 0.0.0
     dependencies:
@@ -8844,7 +8717,7 @@ packages:
     dev: false
 
   file:projects/game-spaceinvaders.tgz:
-    resolution: {integrity: sha512-cfo0XqwpGEfoHup02EbEx7AO6bZz53BdT4t6bkB0QKEV1FcerrqTd7hGSQevYjDCicIDhwZA5st2Fy+xE98nPQ==, tarball: file:projects/game-spaceinvaders.tgz}
+    resolution: {integrity: sha512-W1TYPiEhxyMqRXDV7K2Zv3JHSYYj16CJ7Vdq+rXy5VJQtfJlidIQFFlVQvnFFJsraVmslA1UG7tHwiyFzB5mkA==, tarball: file:projects/game-spaceinvaders.tgz}
     name: '@rush-temp/game-spaceinvaders'
     version: 0.0.0
     dependencies:
@@ -8880,7 +8753,7 @@ packages:
     dev: false
 
   file:projects/game-tetris.tgz:
-    resolution: {integrity: sha512-yNGZ94mEb5oWLqoIiMLrYyXiOUxgk5JoMVsSOgKkHBhQ+vNNPSKEJ1K6jvmtL0KSY9e6/B5a50fx+TvAW1mPFw==, tarball: file:projects/game-tetris.tgz}
+    resolution: {integrity: sha512-hTRjH1+eGlORo6w140VBQWtvB01DHDBAmo6Ax+jm1xyJlGhery/qee5G73HspAIeGtqbFvJcyY9FaTC5YdRTIg==, tarball: file:projects/game-tetris.tgz}
     name: '@rush-temp/game-tetris'
     version: 0.0.0
     dependencies:
@@ -8923,7 +8796,7 @@ packages:
     dev: false
 
   file:projects/integration-macrobot-signalcommandmap.tgz:
-    resolution: {integrity: sha512-sykwH4Qd47/rSbp+qWB/CnrHVRO1F3ku3Y5HXC8EH1MqJvCMMDfplh7dImdkixOeEGKJudawlSgjKDrE1Jz+Uw==, tarball: file:projects/integration-macrobot-signalcommandmap.tgz}
+    resolution: {integrity: sha512-wymIAm2/injLCYaqrQpwp3KE2ht/XGSKl65qkv7on54cmTmC6QEuwTkLdZdGoAbcH8pqdOVcViCP8YGl55YDyQ==, tarball: file:projects/integration-macrobot-signalcommandmap.tgz}
     name: '@rush-temp/integration-macrobot-signalcommandmap'
     version: 0.0.0
     dependencies:
@@ -8988,7 +8861,7 @@ packages:
     dev: false
 
   file:projects/macrobot.tgz:
-    resolution: {integrity: sha512-bmwq5Mg+BwCG4bW/2ze8CqXfM0TR+/t3bMrYLGWOzemmQLTFiLWxUC8uzhwWL7WRwtJTF/ghe+ah+ZMMlzwd8w==, tarball: file:projects/macrobot.tgz}
+    resolution: {integrity: sha512-kZB/VI/JoF2UwR1Hza1c/AU6iggF3s8S79+2r2wFI/7e9iWH5vMQzOWaPB1RdxQU7BAv6fFHH5UEEa1O+lgmig==, tarball: file:projects/macrobot.tgz}
     name: '@rush-temp/macrobot'
     version: 0.0.0
     dependencies:
@@ -9053,7 +8926,7 @@ packages:
     dev: false
 
   file:projects/openfl.tgz:
-    resolution: {integrity: sha512-WhUwa7+uzuatUoMiDStxUuJLXkqsa/c3koVrFNzg6BrOTS/a6B8p74uiskkv7C86k7AXZ5zafg8N4kCQSBGTMw==, tarball: file:projects/openfl.tgz}
+    resolution: {integrity: sha512-ZFRCPvV72bjL1O6bdNKThBKF9p6t8HoJ+gnfI0XySNS8Vi1VLEfXiZbccfrcQ2kCmZsQZu7JVFw6T47sDgVXsA==, tarball: file:projects/openfl.tgz}
     name: '@rush-temp/openfl'
     version: 0.0.0
     dependencies:
@@ -9120,7 +8993,7 @@ packages:
     dev: false
 
   file:projects/phaser-ce-signalcommandmap.tgz:
-    resolution: {integrity: sha512-rI7V0U1BBY3mCfrtoHzqg2DSNjnpt2AhrrT/oMM62BBvTGixCSn3eN0QcGbQ8VhRWTa12f3/9gOh3LehprCYcg==, tarball: file:projects/phaser-ce-signalcommandmap.tgz}
+    resolution: {integrity: sha512-NK1q/y8LG8oPq+WRueXnBN4BvKpGnxQhikwBxWHE9a+sI0yFl7zjxwHU8E8h26kBT0wpuDYZMR6SIMIG6e8XAg==, tarball: file:projects/phaser-ce-signalcommandmap.tgz}
     name: '@rush-temp/phaser-ce-signalcommandmap'
     version: 0.0.0
     dependencies:
@@ -9183,7 +9056,7 @@ packages:
     dev: false
 
   file:projects/phaser-ce.tgz:
-    resolution: {integrity: sha512-VpjOjXDEgwX4M9bw0OiZBD/IKJYLIjZURvNqyvkmlak8ImygN9yRhaTzqc6S/oKEaiPSuSQwnHu54ARfbqEl5w==, tarball: file:projects/phaser-ce.tgz}
+    resolution: {integrity: sha512-wqOwg8ZoskqkUbYlpXRYo2/qfHWMKWfUhLB1X+du+9pKmnujKJSwIUHefmybUdwAWp9FjyEP8M6kKm6oh4X4Rg==, tarball: file:projects/phaser-ce.tgz}
     name: '@rush-temp/phaser-ce'
     version: 0.0.0
     dependencies:
@@ -9250,7 +9123,7 @@ packages:
     dev: false
 
   file:projects/phaser.tgz:
-    resolution: {integrity: sha512-nEU6sscq0aUH9zutkfcs5Ni7VM4bsFHBy3SabnKRuWwPDYgmouHqvykUrVXd8jtUaz0n7LKFybuTRG4sHaoyjg==, tarball: file:projects/phaser.tgz}
+    resolution: {integrity: sha512-rH9W2+RJA0ElDxIismVtbf2pFNOwkoBJtCUrLRWrcHrd++QFECQ96kR+unZL5+alVWDYJbAHE/Z3LTRqN+Cclw==, tarball: file:projects/phaser.tgz}
     name: '@rush-temp/phaser'
     version: 0.0.0
     dependencies:
@@ -9318,7 +9191,7 @@ packages:
     dev: false
 
   file:projects/pixi-palidor.tgz:
-    resolution: {integrity: sha512-w+0KMQMV54bJAVtFVCQNpvhThUJ4l+2cEnYVikmqXAqyWYRoFYy8zwlYqNBo7QZDxYyH1bdkCsOORVlaka8FQA==, tarball: file:projects/pixi-palidor.tgz}
+    resolution: {integrity: sha512-ltI5O3MIi8pnN3EzVl/QPWEW4PwFyAYTwtxDv/VsXe4cLsNvO5tQPz5GooBGCJkCi7vpzDxEefbGQ28wcXEcjA==, tarball: file:projects/pixi-palidor.tgz}
     name: '@rush-temp/pixi-palidor'
     version: 0.0.0
     dependencies:
@@ -9384,7 +9257,7 @@ packages:
     dev: false
 
   file:projects/pixi-signalmediator.tgz:
-    resolution: {integrity: sha512-eQQj9I2h85UEkDw2ZeE+Sd9HGCl+HdkBsZ8dR1BFaeouxdz2VKz3rNOwoZvCdA9nS9LTO2WM37xszx7QNiT4ow==, tarball: file:projects/pixi-signalmediator.tgz}
+    resolution: {integrity: sha512-8l2O+nLIXJRLhuBYcDMIqx5nRiXX9gDH//hpkWXZVUbFkQmCqd3yEGzE4faATot11D9FaopLYHnF1dE06qW1Uw==, tarball: file:projects/pixi-signalmediator.tgz}
     name: '@rush-temp/pixi-signalmediator'
     version: 0.0.0
     dependencies:
@@ -9450,7 +9323,7 @@ packages:
     dev: false
 
   file:projects/pixi.tgz:
-    resolution: {integrity: sha512-E8A81/AH6QOKDebi5TGBVdYHlgBZblesZQaQenC6o2lRDQ2mclIann1y3goCahva1YaBVCWvS9XKXWxJUXd0HQ==, tarball: file:projects/pixi.tgz}
+    resolution: {integrity: sha512-dEtTnFvqtE6+GhN3TcUvUnVHO3KNV3MhN2Gt7ezmhAyzal7niamxxqgB1/QxHbywFxpvUeMPno5rpaZO7AsJ5A==, tarball: file:projects/pixi.tgz}
     name: '@rush-temp/pixi'
     version: 0.0.0
     dependencies:
@@ -9516,7 +9389,7 @@ packages:
     dev: false
 
   file:projects/signalcommandmap.tgz:
-    resolution: {integrity: sha512-tuDYSgTJwEbmo3UFYIlMF9wH95+l8Xtv3P8/h6SaN26oPMvhFR9KJC4LEd6lSc/RE1s56mqEjDi2kwJY1IL/DQ==, tarball: file:projects/signalcommandmap.tgz}
+    resolution: {integrity: sha512-EJW4vuoyGNpzMPTqb+OwhbWrxGezUcBGMSvyAXF/IzQmnLKPCDw7pH2Pdflgpnz+t6hjuzLs/d+47i5BWG4S/Q==, tarball: file:projects/signalcommandmap.tgz}
     name: '@rush-temp/signalcommandmap'
     version: 0.0.0
     dependencies:
@@ -9581,7 +9454,7 @@ packages:
     dev: false
 
   file:projects/signals.tgz:
-    resolution: {integrity: sha512-pv4lI6QqEX3vOsQtruGtLEGkT7LxvnySDCvqkdlyDMrN2QXPDcteU+xyAxcNKn8e6cP6rUBetKfdRKXYmmnqig==, tarball: file:projects/signals.tgz}
+    resolution: {integrity: sha512-pfzZa+CKQ6X/Hl6Trep7hvQ8E5cTPN7Dkj+YWe8bN5UHr1pnwPhUTULOacWD7HsdcJa998h+5bkPsmD/mydxpg==, tarball: file:projects/signals.tgz}
     name: '@rush-temp/signals'
     version: 0.0.0
     dependencies:
