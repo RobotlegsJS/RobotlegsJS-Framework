@@ -89,7 +89,7 @@
     "eslint-plugin-react": "^7.24.0",
     "eslint-plugin-unicorn": "^33.0.1",
     "glslify": "^7.1.1",
-    "html-webpack-plugin": "^5.3.1",
+    "html-webpack-plugin": "^5.3.2",
     "imports-loader": "^3.0.0",
     "istanbul-instrumenter-loader": "^3.0.1",
     "karma": "^6.3.4",
