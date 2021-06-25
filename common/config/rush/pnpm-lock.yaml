@@ -57,7 +57,6 @@ specifiers:
   jsdom-global: ^3.0.2
   karma: ^6.3.4
   karma-chrome-launcher: ^3.1.0
-  karma-commonjs: ^1.0.0
   karma-coverage-istanbul-reporter: ^3.0.3
   karma-es6-shim: ^1.0.0
   karma-mocha: ^2.0.1
@@ -145,7 +144,6 @@ dependencies:
   jsdom-global: 3.0.2_jsdom@16.6.0
   karma: 6.3.4
   karma-chrome-launcher: 3.1.0
-  karma-commonjs: 1.0.0_karma@6.3.4
   karma-coverage-istanbul-reporter: 3.0.3
   karma-es6-shim: 1.0.0
   karma-mocha: 2.0.1
@@ -5147,14 +5145,6 @@ packages:
       which: 1.3.1
     dev: false
 
-  /karma-commonjs/1.0.0_karma@6.3.4:
-    resolution: {integrity: sha1-hoHV19YGYoxfAKNuau88+UPGsKk=}
-    peerDependencies:
-      karma: '>=0.9'
-    dependencies:
-      karma: 6.3.4
-    dev: false
-
   /karma-coverage-istanbul-reporter/3.0.3:
     resolution: {integrity: sha512-wE4VFhG/QZv2Y4CdAYWDbMmcAHeS926ZIji4z+FkB2aF/EposRb6DP6G5ncT/wXhqUfAb/d7kZrNKPonbvsATw==}
     dependencies:
@@ -8508,7 +8498,6 @@ packages:
       jsdom-global: 3.0.2_jsdom@16.6.0
       karma: 6.3.4
       karma-chrome-launcher: 3.1.0
-      karma-commonjs: 1.0.0_karma@6.3.4
       karma-coverage-istanbul-reporter: 3.0.3
       karma-es6-shim: 1.0.0
       karma-mocha: 2.0.1

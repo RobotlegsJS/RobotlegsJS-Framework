@@ -139,10 +139,6 @@
       "allowedCategories": [ "games", "production", "tests" ]
     },
     {
-      "name": "karma-commonjs",
-      "allowedCategories": [ "production" ]
-    },
-    {
       "name": "karma-coverage-istanbul-reporter",
       "allowedCategories": [ "games", "production", "tests" ]
     },
