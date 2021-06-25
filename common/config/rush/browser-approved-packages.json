@@ -147,10 +147,6 @@
       "allowedCategories": [ "production" ]
     },
     {
-      "name": "karma-coverage",
-      "allowedCategories": [ "production" ]
-    },
-    {
       "name": "karma-coverage-istanbul-reporter",
       "allowedCategories": [ "games", "production", "tests" ]
     },
