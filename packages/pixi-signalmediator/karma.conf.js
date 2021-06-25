@@ -51,7 +51,9 @@ module.exports = (config) => {
     coverageIstanbulReporter: {
       "reports": ["html", "lcov", "lcovonly", "text-summary"],
       "dir": "coverage",
+      "combineBrowserReports": true,
       "fixWebpackSourcePaths": true,
+      "skipFilesWithNoCoverage": true,
       "report-config": {
         html: {
           subdir: "html-report"
