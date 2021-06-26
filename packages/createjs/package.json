@@ -17,9 +17,9 @@
     "lint:example": "eslint -c .eslintrc.js --ext .ts ./example",
     "lint": "npm run lint:src && npm run lint:test && npm run lint:example",
     "cleanup": "rimraf .nyc_output && rimraf coverage && rimraf lib && rimraf lib-test && rimraf lib-example && rimraf dist && rimraf dist-test",
-    "compile:src": "tsc -d --importHelpers",
-    "compile:test": "tsc -p tsconfig.test.json -d --importHelpers",
-    "compile:example": "tsc -p tsconfig.example.json -d --importHelpers",
+    "compile:src": "tsc",
+    "compile:test": "tsc -p tsconfig.test.json",
+    "compile:example": "tsc -p tsconfig.example.json",
     "dist:dev": "webpack",
     "dist:production": "webpack --env production",
     "build:example": "webpack --config ./webpack.example.config.js --env.production",
@@ -57,7 +57,7 @@
   },
   "dependencies": {
     "@robotlegsjs/core": "^3.0.0",
-    "tslib": "^2.2.0"
+    "tslib": "^2.3.0"
   },
   "peerDependencies": {
     "easeljs": "^1.0.2",

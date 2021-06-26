@@ -34,9 +34,8 @@ export { IEventDispatcher } from "./robotlegs/bender/events/api/IEventDispatcher
 export { Event } from "./robotlegs/bender/events/impl/Event";
 export { EventDispatcher } from "./robotlegs/bender/events/impl/EventDispatcher";
 /**
- * Extensions
+ * Command Center Extension
  */
-// CommandCenter
 export { CommandPayload } from "./robotlegs/bender/extensions/commandCenter/api/CommandPayload";
 export { ICommand } from "./robotlegs/bender/extensions/commandCenter/api/ICommand";
 export { ICommandExecutor } from "./robotlegs/bender/extensions/commandCenter/api/ICommandExecutor";
@@ -53,36 +52,47 @@ export { CommandMapping } from "./robotlegs/bender/extensions/commandCenter/impl
 export { CommandMappingList } from "./robotlegs/bender/extensions/commandCenter/impl/CommandMappingList";
 export { CommandTriggerMap } from "./robotlegs/bender/extensions/commandCenter/impl/CommandTriggerMap";
 export { NullCommandTrigger } from "./robotlegs/bender/extensions/commandCenter/impl/NullCommandTrigger";
-// DirectCommandMap
+/**
+ * Direct Command Map Extension
+ */
 export { IDirectCommandMap } from "./robotlegs/bender/extensions/directCommandMap/api/IDirectCommandMap";
 export { IDirectCommandMapper } from "./robotlegs/bender/extensions/directCommandMap/api/IDirectCommandMapper";
 export { DirectCommandMapExtension } from "./robotlegs/bender/extensions/directCommandMap/DirectCommandMapExtension";
 export { IDirectCommandConfigurator } from "./robotlegs/bender/extensions/directCommandMap/dsl/IDirectCommandConfigurator";
 export { DirectCommandMap } from "./robotlegs/bender/extensions/directCommandMap/impl/DirectCommandMap";
 export { DirectCommandMapper } from "./robotlegs/bender/extensions/directCommandMap/impl/DirectCommandMapper";
-// EnhancedLogging
+/**
+ * Enhanced Logging Extension
+ */
 export { ConsoleLoggingExtension } from "./robotlegs/bender/extensions/enhancedLogging/ConsoleLoggingExtension";
 export { ConsoleLogTarget } from "./robotlegs/bender/extensions/enhancedLogging/impl/ConsoleLogTarget";
 export { LogMessageParser } from "./robotlegs/bender/extensions/enhancedLogging/impl/LogMessageParser";
 export { InjectableLoggerExtension } from "./robotlegs/bender/extensions/enhancedLogging/InjectableLoggerExtension";
-// EventCommandMap
+/**
+ * Event Command Map Extension
+ */
 export { IEventCommandMap } from "./robotlegs/bender/extensions/eventCommandMap/api/IEventCommandMap";
 export { EventCommandMapExtension } from "./robotlegs/bender/extensions/eventCommandMap/EventCommandMapExtension";
 export { EventCommandMap } from "./robotlegs/bender/extensions/eventCommandMap/impl/EventCommandMap";
 export { EventCommandTrigger } from "./robotlegs/bender/extensions/eventCommandMap/impl/EventCommandTrigger";
-// EventDispatcher
+/**
+ * Event Dispatcher Extension
+ */
 export { EventDispatcherExtension } from "./robotlegs/bender/extensions/eventDispatcher/EventDispatcherExtension";
 export { EventRelay } from "./robotlegs/bender/extensions/eventDispatcher/impl/EventRelay";
 export { LifecycleEventRelay } from "./robotlegs/bender/extensions/eventDispatcher/impl/LifecycleEventRelay";
-// LocalEventMap
+/**
+ * Local EventMap Extension
+ */
 export { IEventMap } from "./robotlegs/bender/extensions/localEventMap/api/IEventMap";
 export { DomEventMapConfig } from "./robotlegs/bender/extensions/localEventMap/impl/DomEventMapConfig";
 export { EventMap } from "./robotlegs/bender/extensions/localEventMap/impl/EventMap";
 export { EventMapConfig } from "./robotlegs/bender/extensions/localEventMap/impl/EventMapConfig";
 export { LocalEventMapExtension } from "./robotlegs/bender/extensions/localEventMap/LocalEventMapExtension";
-// Matching
+/**
+ * Matching
+ */
 export { IClass } from "./robotlegs/bender/extensions/matching/IClass";
-// Matching helpers
 export { instanceOfType } from "./robotlegs/bender/extensions/matching/instanceOfType";
 export { isInstanceOfType } from "./robotlegs/bender/extensions/matching/isInstanceOfType";
 export { IType } from "./robotlegs/bender/extensions/matching/IType";
@@ -112,12 +122,9 @@ export { LifecycleState } from "./robotlegs/bender/framework/api/LifecycleState"
 export { LogLevel } from "./robotlegs/bender/framework/api/LogLevel";
 export { PinEvent } from "./robotlegs/bender/framework/api/PinEvent";
 /**
- * Framework Functions
- */
-export { applyHooks } from "./robotlegs/bender/framework/impl/applyHooks";
-/**
  * Framework Implementation
  */
+export { applyHooks } from "./robotlegs/bender/framework/impl/applyHooks";
 export { ConfigManager } from "./robotlegs/bender/framework/impl/ConfigManager";
 export { Context } from "./robotlegs/bender/framework/impl/Context";
 export { ExtensionInstaller } from "./robotlegs/bender/framework/impl/ExtensionInstaller";

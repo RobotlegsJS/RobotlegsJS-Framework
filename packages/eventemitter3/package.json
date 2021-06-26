@@ -15,8 +15,8 @@
     "lint:test": "eslint -c .eslintrc.js --ext .ts ./test",
     "lint": "npm run lint:src && npm run lint:test",
     "cleanup": "rimraf .nyc_output && rimraf coverage && rimraf lib && rimraf lib-test && rimraf dist-test",
-    "compile:src": "tsc -d --importHelpers",
-    "compile:test": "tsc -p tsconfig.test.json -d --importHelpers",
+    "compile:src": "tsc",
+    "compile:test": "tsc -p tsconfig.test.json",
     "dist:dev": "webpack",
     "dist:production": "webpack --env production",
     "build": "npm run cleanup && npm run compile:src",
@@ -75,7 +75,7 @@
   },
   "dependencies": {
     "@robotlegsjs/core": "^3.0.0",
-    "tslib": "^2.2.0"
+    "tslib": "^2.3.0"
   },
   "peerDependencies": {
     "eventemitter3": "*",

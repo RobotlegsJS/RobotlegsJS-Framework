@@ -15,8 +15,8 @@
     "lint": "npm run lint:src && npm run lint:test",
     "autoformat": "prettier --config ../../.prettierrc --ignore-path ../../.prettierignore --write --list-different .",
     "cleanup": "rimraf .nyc_output && rimraf coverage && rimraf lib && rimraf lib-test && rimraf dist-test",
-    "compile:src": "tsc -d --importHelpers",
-    "compile:test": "tsc -p tsconfig.test.json -d --importHelpers",
+    "compile:src": "tsc",
+    "compile:test": "tsc -p tsconfig.test.json",
     "dist:dev": "webpack",
     "dist:production": "webpack --env production",
     "build": "npm run cleanup && npm run compile:src",
@@ -73,7 +73,7 @@
     "lib": "./lib"
   },
   "dependencies": {
-    "tslib": "^2.2.0"
+    "tslib": "^2.3.0"
   },
   "devDependencies": {
     "@istanbuljs/nyc-config-typescript": "^1.0.1",
