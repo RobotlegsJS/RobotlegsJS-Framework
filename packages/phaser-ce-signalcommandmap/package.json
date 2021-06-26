@@ -6,7 +6,6 @@
   "typings": "lib/index.d.ts",
   "scripts": {
     "test": "karma start --single-run",
-    "mocha": "mocha test/**/*.test.ts --require ts-node/register",
     "autoformat": "prettier --config ../../.prettierrc --ignore-path ../../.prettierignore --write --list-different .",
     "lint-fix:src": "eslint -c .eslintrc.js --ext .ts ./src --fix",
     "lint-fix:test": "eslint -c .eslintrc.js --ext .ts ./test --fix",

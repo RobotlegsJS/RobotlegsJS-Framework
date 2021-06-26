@@ -6,7 +6,6 @@
   "typings": "lib/index.d.ts",
   "scripts": {
     "test": "karma start --single-run",
-    "mocha": "nyc mocha",
     "autoformat": "prettier --config ../../.prettierrc --ignore-path ../../.prettierignore --write --list-different .",
     "lint-fix:src": "eslint -c .eslintrc.js --ext .ts ./src --fix",
     "lint-fix:test": "eslint -c .eslintrc.js --ext .ts ./test --fix",
@@ -22,29 +21,6 @@
     "build": "npm run cleanup && npm run compile:src",
     "prepare": "npm run build",
     "prepublishOnly": "npm run build"
-  },
-  "nyc": {
-    "extends": "@istanbuljs/nyc-config-typescript",
-    "include": [
-      "src/**/*.ts"
-    ],
-    "exclude": [
-      "test"
-    ],
-    "extension": [
-      ".ts"
-    ],
-    "require": [
-      "ts-node/register",
-      "source-map-support/register"
-    ],
-    "reporter": [
-      "text-summary",
-      "lcov"
-    ],
-    "check-coverage": true,
-    "sourceMap": true,
-    "instrument": true
   },
   "repository": {
     "url": "https://github.com/RobotlegsJS/RobotlegsJS-Framework/tree/master/packages/pixi-signalmediator"
@@ -86,7 +62,6 @@
     "reflect-metadata": "^0.1.13"
   },
   "devDependencies": {
-    "@istanbuljs/nyc-config-typescript": "^1.0.1",
     "@rushstack/eslint-config": "^2.3.4",
     "@types/bluebird": "^3.5.35",
     "@types/chai": "^4.2.19",
@@ -114,7 +89,6 @@
     "karma-sourcemap-writer": "^0.1.2",
     "karma-webpack": "^5.0.0",
     "mocha": "^9.0.1",
-    "nyc": "^15.1.0",
     "pixi.js": "^5.2.1",
     "prettier": "^2.3.1",
     "puppeteer": "^10.0.0",

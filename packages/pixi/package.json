@@ -7,7 +7,6 @@
   "scripts": {
     "start": "webpack serve --config ./webpack.example.config.js",
     "test": "node --max-old-space-size=2048 ./node_modules/karma/bin/karma start --single-run",
-    "mocha": "mocha test/**/*.test.ts --require ts-node/register",
     "autoformat": "prettier --config ../../.prettierrc --ignore-path ../../.prettierignore --write --list-different .",
     "lint-fix:src": "eslint -c .eslintrc.js --ext .ts ./src --fix",
     "lint-fix:test": "eslint -c .eslintrc.js --ext .ts ./test --fix",
