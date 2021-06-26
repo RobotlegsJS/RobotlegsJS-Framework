@@ -43,10 +43,6 @@
       "allowedCategories": [ "games", "production", "tests" ]
     },
     {
-      "name": "browserify-versionify",
-      "allowedCategories": [ "production", "tests" ]
-    },
-    {
       "name": "chai",
       "allowedCategories": [ "games", "production", "tests" ]
     },
@@ -99,20 +95,12 @@
       "allowedCategories": [ "production" ]
     },
     {
-      "name": "glslify",
-      "allowedCategories": [ "production", "tests" ]
-    },
-    {
       "name": "gsap",
       "allowedCategories": [ "games" ]
     },
     {
       "name": "html-webpack-plugin",
       "allowedCategories": [ "games", "production" ]
-    },
-    {
-      "name": "imports-loader",
-      "allowedCategories": [ "games", "production", "tests" ]
     },
     {
       "name": "inversify",
@@ -135,27 +123,11 @@
       "allowedCategories": [ "games", "production", "tests" ]
     },
     {
-      "name": "karma-chai-sinon",
-      "allowedCategories": [ "production", "tests" ]
-    },
-    {
       "name": "karma-chrome-launcher",
       "allowedCategories": [ "games", "production", "tests" ]
     },
     {
-      "name": "karma-commonjs",
-      "allowedCategories": [ "production" ]
-    },
-    {
-      "name": "karma-coverage",
-      "allowedCategories": [ "production" ]
-    },
-    {
       "name": "karma-coverage-istanbul-reporter",
-      "allowedCategories": [ "games", "production", "tests" ]
-    },
-    {
-      "name": "karma-es6-shim",
       "allowedCategories": [ "games", "production", "tests" ]
     },
     {
@@ -219,10 +191,6 @@
       "allowedCategories": [ "games", "production", "tests" ]
     },
     {
-      "name": "remap-istanbul",
-      "allowedCategories": [ "production" ]
-    },
-    {
       "name": "rimraf",
       "allowedCategories": [ "games", "production", "tests" ]
     },
@@ -232,7 +200,7 @@
     },
     {
       "name": "sinon-chai",
-      "allowedCategories": [ "production", "tests" ]
+      "allowedCategories": [ "games", "production", "tests" ]
     },
     {
       "name": "source-map-support",

@@ -19,7 +19,7 @@ module.exports = (config) => {
       }
     },
     basePath: "",
-    frameworks: ["webpack", "mocha", "sinon-chai", "es6-shim"],
+    frameworks: ["webpack", "mocha", "sinon-chai"],
     files: [
       { pattern: "node_modules/reflect-metadata/Reflect.js", include: true },
       { pattern: "node_modules/bluebird/js/browser/bluebird.js", include: true },
@@ -41,7 +41,6 @@ module.exports = (config) => {
       "karma-mocha-reporter",
       "karma-mocha",
       "karma-sinon-chai",
-      "karma-es6-shim",
       "karma-coverage-istanbul-reporter"
     ],
     mime: {
@@ -51,7 +50,9 @@ module.exports = (config) => {
     coverageIstanbulReporter: {
       "reports": ["html", "lcov", "lcovonly", "text-summary"],
       "dir": "coverage",
+      "combineBrowserReports": true,
       "fixWebpackSourcePaths": true,
+      "skipFilesWithNoCoverage": true,
       "report-config": {
         html: {
           subdir: "html-report"

@@ -1,7 +1,0 @@
-{
-  "recursive": true,
-  "full-trace": true,
-  "bail": true,
-  "spec": "./test/**/*.test.ts",
-  "require": "reflect-metadata"
-}
