@@ -13,7 +13,7 @@
     /* Basic Config Options */
     "allowJs": false /* Allow javascript files to be compiled. */,
     "checkJs": false /* Report errors in .js files. */,
-    "declaration": false /* Generates corresponding '.d.ts' file. */,
+    "declaration": true /* Generates corresponding '.d.ts' file. */,
     "declarationMap": false /* Generates a sourcemap for each corresponding '.d.ts' file. */,
     "removeComments": false /* Emit comments to output. */,
     "importHelpers": true /* Import emit helpers from 'tslib'. */,
