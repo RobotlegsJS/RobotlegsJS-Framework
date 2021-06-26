@@ -1,0 +1,11 @@
+{
+  "changes": [
+    {
+      "packageName": "@robotlegsjs/phaser-ce",
+      "comment": "Update [prettier](https://www.npmjs.com/package/prettier) to version **2.3.2** (see [25](https://github.com/RobotlegsJS/RobotlegsJS-Framework/pull/25))",
+      "type": "patch"
+    }
+  ],
+  "packageName": "@robotlegsjs/phaser-ce",
+  "email": "tiago.schenkel@gmail.com"
+}
