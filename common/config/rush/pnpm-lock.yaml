@@ -26,7 +26,6 @@ specifiers:
   '@rushstack/eslint-config': ^2.3.4
   '@types/bluebird': ^3.5.35
   '@types/chai': ^4.2.19
-  '@types/core-js': ^2.5.4
   '@types/createjs-lib': ^0.0.29
   '@types/easeljs': ^1.0.0
   '@types/mocha': ^8.2.2
@@ -108,7 +107,6 @@ dependencies:
   '@rushstack/eslint-config': 2.3.4_eslint@7.29.0+typescript@4.2.4
   '@types/bluebird': 3.5.35
   '@types/chai': 4.2.19
-  '@types/core-js': 2.5.4
   '@types/createjs-lib': 0.0.29
   '@types/easeljs': 1.0.0
   '@types/mocha': 8.2.2
@@ -929,10 +927,6 @@ packages:
 
   /@types/cookie/0.4.0:
     resolution: {integrity: sha512-y7mImlc/rNkvCRmg8gC3/lj87S7pTUIJ6QGjwHR9WQJcFs+ZMTOaoPrkdFA/YdbuqVEmEbb5RdhVxMkAcgOnpg==}
-    dev: false
-
-  /@types/core-js/2.5.4:
-    resolution: {integrity: sha512-Xwy8o12ak+iYgFr/KCVaVK5Sy+jFMiiPAID3+ObvMlBzy26XQJw5xu+a6rlHsrJENXj/AwJOGsJpVohUjAzSKQ==}
     dev: false
 
   /@types/cors/2.8.10:
@@ -8606,14 +8600,13 @@ packages:
     dev: false
 
   file:projects/openfl.tgz:
-    resolution: {integrity: sha512-XR/NPZo14aaR75pWmN7Uby+gDA0MVlyYjk0asuQVNtVnrUGsBQLqKgSlqp9zX0nw3+5APW6cUrCQgnetDbdUNw==, tarball: file:projects/openfl.tgz}
+    resolution: {integrity: sha512-QPAViFWaGzjfzAOXPzKIcT85X7LKA60iIxWqs06SKopcffAT4PnldSe4jqySBEhjttnKjoOtkM0qYKfzVR3Kfw==, tarball: file:projects/openfl.tgz}
     name: '@rush-temp/openfl'
     version: 0.0.0
     dependencies:
       '@rushstack/eslint-config': 2.3.4_eslint@7.29.0+typescript@4.2.4
       '@types/bluebird': 3.5.35
       '@types/chai': 4.2.19
-      '@types/core-js': 2.5.4
       '@types/mocha': 8.2.2
       '@types/sinon': 10.0.2
       '@types/webpack-env': 1.16.0
