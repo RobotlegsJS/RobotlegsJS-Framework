@@ -1,0 +1,11 @@
+{
+  "changes": [
+    {
+      "packageName": "@robotlegsjs/createjs",
+      "comment": "Update [tslib](https://www.npmjs.com/package/tslib) to version **2.3.0**, adopts ES2017, and standardizes the tsconfig files (see [26](https://github.com/RobotlegsJS/RobotlegsJS-Framework/pull/26))",
+      "type": "minor"
+    }
+  ],
+  "packageName": "@robotlegsjs/createjs",
+  "email": "tiago.schenkel@gmail.com"
+}
