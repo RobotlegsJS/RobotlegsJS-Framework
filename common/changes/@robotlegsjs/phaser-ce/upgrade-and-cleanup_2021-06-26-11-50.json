@@ -1,0 +1,11 @@
+{
+  "changes": [
+    {
+      "packageName": "@robotlegsjs/phaser-ce",
+      "comment": "Use the same karma configuration properties and remove outdated scripts and dependencies (see [24](https://github.com/RobotlegsJS/RobotlegsJS-Framework/pull/24))",
+      "type": "patch"
+    }
+  ],
+  "packageName": "@robotlegsjs/phaser-ce",
+  "email": "tiago.schenkel@gmail.com"
+}
