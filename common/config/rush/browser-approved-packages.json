@@ -7,6 +7,10 @@
       "allowedCategories": [ "games", "production", "tests" ]
     },
     {
+      "name": "@jsdevtools/coverage-istanbul-loader",
+      "allowedCategories": [ "games", "production", "tests" ]
+    },
+    {
       "name": "@mcler/webpack-concat-plugin",
       "allowedCategories": [ "production" ]
     },
@@ -105,10 +109,6 @@
     {
       "name": "inversify",
       "allowedCategories": [ "production" ]
-    },
-    {
-      "name": "istanbul-instrumenter-loader",
-      "allowedCategories": [ "games", "production", "tests" ]
     },
     {
       "name": "jsdom",
