@@ -23,7 +23,7 @@
     "@robotlegsjs/signals": "^2.0.0",
     "pixi.js": "^5.2.1",
     "reflect-metadata": "^0.1.13",
-    "tslib": "^2.2.0"
+    "tslib": "^2.3.0"
   },
   "devDependencies": {
     "@rushstack/eslint-config": "^2.3.4",

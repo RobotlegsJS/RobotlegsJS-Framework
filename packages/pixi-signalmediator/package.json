@@ -55,7 +55,7 @@
     "@robotlegsjs/core": "^3.0.0",
     "@robotlegsjs/pixi": "^3.0.0",
     "@robotlegsjs/signals": "^2.0.0",
-    "tslib": "^2.2.0"
+    "tslib": "^2.3.0"
   },
   "peerDependencies": {
     "pixi.js": "^5.0.0",
