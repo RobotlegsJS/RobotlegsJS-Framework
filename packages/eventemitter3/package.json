@@ -83,6 +83,7 @@
   },
   "devDependencies": {
     "@istanbuljs/nyc-config-typescript": "^1.0.1",
+    "@jsdevtools/coverage-istanbul-loader": "^3.0.5",
     "@rushstack/eslint-config": "^2.3.4",
     "@types/bluebird": "^3.5.35",
     "@types/chai": "^4.2.19",
@@ -100,7 +101,6 @@
     "eslint-plugin-react": "^7.24.0",
     "eslint-plugin-unicorn": "^33.0.1",
     "eventemitter3": "^4.0.0",
-    "istanbul-instrumenter-loader": "^3.0.1",
     "jsdom": "^16.6.0",
     "jsdom-global": "^3.0.2",
     "karma": "^6.3.4",

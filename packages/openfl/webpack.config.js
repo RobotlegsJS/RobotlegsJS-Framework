@@ -41,7 +41,9 @@ module.exports = (env) => {
           test: env.production /* disable this loader for production builds */
             ? /^$/
             : /^.*(src).*\.ts$/,
-          loader: "istanbul-instrumenter-loader",
+          use: [
+            { loader: "@jsdevtools/coverage-istanbul-loader", options: { configFile: tsconfig } }
+          ],
           enforce: "post"
         }
       ]
