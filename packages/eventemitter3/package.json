@@ -86,7 +86,7 @@
     "@jsdevtools/coverage-istanbul-loader": "^3.0.5",
     "@rushstack/eslint-config": "^2.3.4",
     "@types/bluebird": "^3.5.35",
-    "@types/chai": "^4.2.19",
+    "@types/chai": "^4.2.21",
     "@types/mocha": "^8.2.3",
     "@types/sinon": "^10.0.2",
     "@types/webpack-env": "^1.16.2",
