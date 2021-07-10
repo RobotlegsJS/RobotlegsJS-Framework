@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@robotlegsjs/createjs",
+      "comment": "Update [eslint](https://www.npmjs.com/package/eslint) to version **7.30.0**, [eslint-plugin-jsdoc](https://www.npmjs.com/package/eslint-plugin-jsdoc) to version **35.4.3**, and [eslint-plugin-unicorn](https://www.npmjs.com/package/eslint-plugin-unicorn) to version **34.0.1** (see [30](https://github.com/RobotlegsJS/RobotlegsJS-Framework/pull/30))",
+      "type": "patch"
+    }
+  ],
+  "packageName": "@robotlegsjs/createjs"
+}
