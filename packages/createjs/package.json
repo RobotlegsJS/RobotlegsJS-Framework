@@ -70,7 +70,7 @@
     "@types/bluebird": "^3.5.36",
     "@types/chai": "^4.2.21",
     "@types/createjs-lib": "^0.0.29",
-    "@types/easeljs": "^1.0.0",
+    "@types/easeljs": "^1.0.1",
     "@types/mocha": "^8.2.3",
     "@types/sinon": "^10.0.2",
     "@types/tweenjs": "^1.0.3",
