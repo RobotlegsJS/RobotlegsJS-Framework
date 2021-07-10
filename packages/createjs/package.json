@@ -73,7 +73,7 @@
     "@types/easeljs": "^1.0.1",
     "@types/mocha": "^8.2.3",
     "@types/sinon": "^10.0.2",
-    "@types/tweenjs": "^1.0.3",
+    "@types/tweenjs": "^1.0.4",
     "@types/webpack-env": "^1.16.2",
     "bluebird": "^3.7.2",
     "chai": "^4.3.4",
