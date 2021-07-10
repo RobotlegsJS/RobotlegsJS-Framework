@@ -25,11 +25,11 @@ specifiers:
   '@rush-temp/signalcommandmap': file:./projects/signalcommandmap.tgz
   '@rush-temp/signals': file:./projects/signals.tgz
   '@rushstack/eslint-config': ^2.3.4
-  '@types/bluebird': ^3.5.35
-  '@types/chai': ^4.2.19
+  '@types/bluebird': ^3.5.36
+  '@types/chai': ^4.2.21
   '@types/createjs-lib': ^0.0.29
   '@types/easeljs': ^1.0.0
-  '@types/mocha': ^8.2.2
+  '@types/mocha': ^8.2.3
   '@types/sinon': ^10.0.2
   '@types/tweenjs': ^1.0.3
   '@types/webpack-env': ^1.16.2
@@ -60,13 +60,13 @@ specifiers:
   karma-sourcemap-loader: ^0.3.8
   karma-sourcemap-writer: ^0.1.2
   karma-webpack: ^5.0.0
-  mocha: ^9.0.1
+  mocha: ^9.0.2
   nyc: ^15.1.0
   phaser: ^3.22.0
   phaser-ce: ^2.15.0
   pixi.js: ^5.2.1
   prettier: ^2.3.2
-  puppeteer: ^10.0.0
+  puppeteer: ^10.1.0
   reflect-metadata: ^0.1.13
   rimraf: ^3.0.2
   sinon: ^11.1.1
@@ -74,7 +74,7 @@ specifiers:
   source-map-support: ^0.5.19
   terser-webpack-plugin: ^5.1.4
   ts-loader: ^9.2.3
-  ts-node: ^10.0.0
+  ts-node: ^10.1.0
   tslib: ^2.3.0
   typescript: ~4.2.4
   webpack: ^5.44.0
@@ -82,7 +82,7 @@ specifiers:
   webpack-dev-server: ^3.11.2
 
 dependencies:
-  '@istanbuljs/nyc-config-typescript': 1.0.1_40f74ebf3b42f8d97356b2262606f547
+  '@istanbuljs/nyc-config-typescript': 1.0.1_34d69bb14d54c3c15df9aea89b43ee7d
   '@jsdevtools/coverage-istanbul-loader': 3.0.5
   '@mcler/webpack-concat-plugin': 4.1.3_ab50f0d0285cee5400f4bebc826901d4
   '@rush-temp/core': file:projects/core.tgz
@@ -106,11 +106,11 @@ dependencies:
   '@rush-temp/signalcommandmap': file:projects/signalcommandmap.tgz
   '@rush-temp/signals': file:projects/signals.tgz
   '@rushstack/eslint-config': 2.3.4_eslint@7.30.0+typescript@4.2.4
-  '@types/bluebird': 3.5.35
-  '@types/chai': 4.2.19
+  '@types/bluebird': 3.5.36
+  '@types/chai': 4.2.21
   '@types/createjs-lib': 0.0.29
   '@types/easeljs': 1.0.0
-  '@types/mocha': 8.2.2
+  '@types/mocha': 8.2.3
   '@types/sinon': 10.0.2
   '@types/tweenjs': 1.0.3
   '@types/webpack-env': 1.16.2
@@ -141,13 +141,13 @@ dependencies:
   karma-sourcemap-loader: 0.3.8
   karma-sourcemap-writer: 0.1.2
   karma-webpack: 5.0.0_webpack@5.44.0
-  mocha: 9.0.1
+  mocha: 9.0.2
   nyc: 15.1.0
   phaser: 3.22.0
   phaser-ce: 2.15.0
   pixi.js: 5.2.1
   prettier: 2.3.2
-  puppeteer: 10.0.0
+  puppeteer: 10.1.0
   reflect-metadata: 0.1.13
   rimraf: 3.0.2
   sinon: 11.1.1
@@ -155,7 +155,7 @@ dependencies:
   source-map-support: 0.5.19
   terser-webpack-plugin: 5.1.4_webpack@5.44.0
   ts-loader: 9.2.3_typescript@4.2.4+webpack@5.44.0
-  ts-node: 10.0.0_typescript@4.2.4
+  ts-node: 10.1.0_typescript@4.2.4
   tslib: 2.3.0
   typescript: 4.2.4
   webpack: 5.44.0_webpack-cli@4.7.2
@@ -454,7 +454,7 @@ packages:
       resolve-from: 5.0.0
     dev: false
 
-  /@istanbuljs/nyc-config-typescript/1.0.1_40f74ebf3b42f8d97356b2262606f547:
+  /@istanbuljs/nyc-config-typescript/1.0.1_34d69bb14d54c3c15df9aea89b43ee7d:
     resolution: {integrity: sha512-/gz6LgVpky205LuoOfwEZmnUtaSmdk0QIMcNFj9OvxhiMhPpKftMgZmGN7jNj7jR+lr8IB1Yks3QSSSNSxfoaQ==}
     engines: {node: '>=8'}
     peerDependencies:
@@ -465,7 +465,7 @@ packages:
       '@istanbuljs/schema': 0.1.3
       nyc: 15.1.0
       source-map-support: 0.5.19
-      ts-node: 10.0.0_typescript@4.2.4
+      ts-node: 10.1.0_typescript@4.2.4
     dev: false
 
   /@istanbuljs/schema/0.1.3:
@@ -940,12 +940,12 @@ packages:
     resolution: {integrity: sha512-FTgBI767POY/lKNDNbIzgAX6miIDBs6NTCbdlDb8TrWovHsSvaVIZDlTqym29C6UqhzwcJx4CYr+AlrMywA0cA==}
     dev: false
 
-  /@types/bluebird/3.5.35:
-    resolution: {integrity: sha512-2WeeXK7BuQo7yPI4WGOBum90SzF/f8rqlvpaXx4rjeTmNssGRDHWf7fgDUH90xMB3sUOu716fUK5d+OVx0+ncQ==}
+  /@types/bluebird/3.5.36:
+    resolution: {integrity: sha512-HBNx4lhkxN7bx6P0++W8E289foSu8kO8GCk2unhuVggO+cE7rh9DhZUyPhUxNRG9m+5B5BTKxZQ5ZP92x/mx9Q==}
     dev: false
 
-  /@types/chai/4.2.19:
-    resolution: {integrity: sha512-jRJgpRBuY+7izT7/WNXP/LsMO9YonsstuL+xuvycDyESpoDoIAsMd7suwpB4h9oEWB+ZlPTqJJ8EHomzNhwTPQ==}
+  /@types/chai/4.2.21:
+    resolution: {integrity: sha512-yd+9qKmJxm496BOV9CMNaey8TWsikaZOwMRwPHQIjcOJM9oV+fi9ZMNw3JsVnbEEbo2gRTDnGEBv8pjyn67hNg==}
     dev: false
 
   /@types/component-emitter/1.2.10:
@@ -1016,8 +1016,8 @@ packages:
     resolution: {integrity: sha512-1z8k4wzFnNjVK/tlxvrWuK5WMt6mydWWP7+zvH5eFep4oj+UkrfiJTRtjCeBXNpwaA/FYqqtb4/QS4ianFpIRA==}
     dev: false
 
-  /@types/mocha/8.2.2:
-    resolution: {integrity: sha512-Lwh0lzzqT5Pqh6z61P3c3P5nm6fzQK/MMHl9UKeneAeInVflBSz1O2EkX6gM6xfJd7FBXBY5purtLx7fUiZ7Hw==}
+  /@types/mocha/8.2.3:
+    resolution: {integrity: sha512-ekGvFhFgrc2zYQoX4JeZPmVzZxw6Dtllga7iGHzfbYIYkAMUx/sAFP2GdFpLff+vdHXu5fl7WX9AT+TtqYcsyw==}
     dev: false
 
   /@types/node/15.12.4:
@@ -1964,21 +1964,6 @@ packages:
       upath: 1.2.0
     optionalDependencies:
       fsevents: 1.2.13
-    dev: false
-
-  /chokidar/3.5.1:
-    resolution: {integrity: sha512-9+s+Od+W0VJJzawDma/gvBNQqkTiqYTWLuZoyAsivsI4AaWTCzHG06/TMjsf1cYe9Cb97UCEhjz7HvnPk2p/tw==}
-    engines: {node: '>= 8.10.0'}
-    dependencies:
-      anymatch: 3.1.2
-      braces: 3.0.2
-      glob-parent: 5.1.2
-      is-binary-path: 2.1.0
-      is-glob: 4.0.1
-      normalize-path: 3.0.0
-      readdirp: 3.5.0
-    optionalDependencies:
-      fsevents: 2.3.2
     dev: false
 
   /chokidar/3.5.2:
@@ -3319,7 +3304,7 @@ packages:
     engines: {node: '>= 10.17.0'}
     hasBin: true
     dependencies:
-      debug: 4.3.1
+      debug: 4.3.2
       get-stream: 5.2.0
       yauzl: 2.10.0
     optionalDependencies:
@@ -5106,15 +5091,15 @@ packages:
       minimist: 1.2.5
     dev: false
 
-  /mocha/9.0.1:
-    resolution: {integrity: sha512-9zwsavlRO+5csZu6iRtl3GHImAbhERoDsZwdRkdJ/bE+eVplmoxNKE901ZJ9LdSchYBjSCPbjKc5XvcAri2ylw==}
+  /mocha/9.0.2:
+    resolution: {integrity: sha512-FpspiWU+UT9Sixx/wKimvnpkeW0mh6ROAKkIaPokj3xZgxeRhcna/k5X57jJghEr8X+Cgu/Vegf8zCX5ugSuTA==}
     engines: {node: '>= 12.0.0'}
     hasBin: true
     dependencies:
       '@ungap/promise-all-settled': 1.1.2
       ansi-colors: 4.1.1
       browser-stdout: 1.3.1
-      chokidar: 3.5.1
+      chokidar: 3.5.2
       debug: 4.3.1_supports-color@8.1.1
       diff: 5.0.0
       escape-string-regexp: 4.0.0
@@ -5127,12 +5112,12 @@ packages:
       minimatch: 3.0.4
       ms: 2.1.3
       nanoid: 3.1.23
-      serialize-javascript: 5.0.1
+      serialize-javascript: 6.0.0
       strip-json-comments: 3.1.1
       supports-color: 8.1.1
       which: 2.0.2
       wide-align: 1.1.3
-      workerpool: 6.1.4
+      workerpool: 6.1.5
       yargs: 16.2.0
       yargs-parser: 20.2.4
       yargs-unparser: 2.0.0
@@ -5950,8 +5935,8 @@ packages:
     engines: {node: '>=6'}
     dev: false
 
-  /puppeteer/10.0.0:
-    resolution: {integrity: sha512-AxHvCb9IWmmP3gMW+epxdj92Gglii+6Z4sb+W+zc2hTTu10HF0yg6hGXot5O74uYkVqG3lfDRLfnRpi6WOwi5A==}
+  /puppeteer/10.1.0:
+    resolution: {integrity: sha512-bsyDHbFBvbofZ63xqF7hMhuKBX1h4WsqFIAoh1GuHr/Y9cewh+EFNAOdqWSkQRHLiBU/MY6M+8PUnXXjAPtuSg==}
     engines: {node: '>=10.18.1'}
     requiresBuild: true
     dependencies:
@@ -6085,13 +6070,6 @@ packages:
       graceful-fs: 4.2.6
       micromatch: 3.1.10
       readable-stream: 2.3.7
-    dev: false
-
-  /readdirp/3.5.0:
-    resolution: {integrity: sha512-cMhu7c/8rdhkHXWsY+osBhfSy0JikwpHK/5+imo+LpeasTF8ouErHrlYkwT0++njiyuDvc7OFY5T3ukvZ8qmFQ==}
-    engines: {node: '>=8.10.0'}
-    dependencies:
-      picomatch: 2.3.0
     dev: false
 
   /readdirp/3.6.0:
@@ -6405,12 +6383,6 @@ packages:
       on-finished: 2.3.0
       range-parser: 1.2.1
       statuses: 1.5.0
-    dev: false
-
-  /serialize-javascript/5.0.1:
-    resolution: {integrity: sha512-SaaNal9imEO737H2c05Og0/8LUXG7EnsZyMa8MzkmuHoELfT6txuj0cMqRj6zfPKnmQ1yasR4PCJc8x+M4JSPA==}
-    dependencies:
-      randombytes: 2.1.0
     dev: false
 
   /serialize-javascript/6.0.0:
@@ -7093,13 +7065,13 @@ packages:
       webpack: 5.44.0_webpack-cli@4.7.2
     dev: false
 
-  /ts-node/10.0.0_typescript@4.2.4:
-    resolution: {integrity: sha512-ROWeOIUvfFbPZkoDis0L/55Fk+6gFQNZwwKPLinacRl6tsxstTF1DbAcLKkovwnpKMVvOMHP1TIbnwXwtLg1gg==}
+  /ts-node/10.1.0_typescript@4.2.4:
+    resolution: {integrity: sha512-6szn3+J9WyG2hE+5W8e0ruZrzyk1uFLYye6IGMBadnOzDh8aP7t8CbFpsfCiEx2+wMixAhjFt7lOZC4+l+WbEA==}
     engines: {node: '>=12.0.0'}
     hasBin: true
     peerDependencies:
-      '@swc/core': '>=1.2.45'
-      '@swc/wasm': '>=1.2.45'
+      '@swc/core': '>=1.2.50'
+      '@swc/wasm': '>=1.2.50'
       '@types/node': '*'
       typescript: '>=2.7'
     peerDependenciesMeta:
@@ -7623,8 +7595,8 @@ packages:
     engines: {node: '>=0.10.0'}
     dev: false
 
-  /workerpool/6.1.4:
-    resolution: {integrity: sha512-jGWPzsUqzkow8HoAvqaPWTUPCrlPJaJ5tY8Iz7n1uCz3tTp6s3CDG0FF1NsX42WNlkRSW6Mr+CDZGnNoSsKa7g==}
+  /workerpool/6.1.5:
+    resolution: {integrity: sha512-XdKkCK0Zqc6w3iTxLckiuJ81tiD/o5rBE/m+nXpRCB+/Sq4DqkfXZ/x0jW02DG1tGsfUGXbTJyZDP+eu67haSw==}
     dev: false
 
   /wrap-ansi/5.1.0:
@@ -7813,16 +7785,16 @@ packages:
     dev: false
 
   file:projects/core.tgz:
-    resolution: {integrity: sha512-LD4sCGqC5CnNxZJMJz2PN8UhNBg6BFSdZRfN/ndwOvMHdkK9gI4WbDsptvg0ptDmxl11IGcDDn97pITVQQAUtQ==, tarball: file:projects/core.tgz}
+    resolution: {integrity: sha512-PVydC7pNEgBjaSZElAwnoIICKcTKRCkiWOIoKTl4MJEvRVYZ30DY/CF9T1py1DftUkf4KaL/CPc7WcL9P7NJmg==, tarball: file:projects/core.tgz}
     name: '@rush-temp/core'
     version: 0.0.0
     dependencies:
-      '@istanbuljs/nyc-config-typescript': 1.0.1_40f74ebf3b42f8d97356b2262606f547
+      '@istanbuljs/nyc-config-typescript': 1.0.1_34d69bb14d54c3c15df9aea89b43ee7d
       '@jsdevtools/coverage-istanbul-loader': 3.0.5
       '@rushstack/eslint-config': 2.3.4_eslint@7.30.0+typescript@4.2.4
-      '@types/bluebird': 3.5.35
-      '@types/chai': 4.2.19
-      '@types/mocha': 8.2.2
+      '@types/bluebird': 3.5.36
+      '@types/chai': 4.2.21
+      '@types/mocha': 8.2.3
       '@types/sinon': 10.0.2
       '@types/webpack-env': 1.16.2
       bluebird: 3.7.2
@@ -7847,10 +7819,10 @@ packages:
       karma-sourcemap-loader: 0.3.8
       karma-sourcemap-writer: 0.1.2
       karma-webpack: 5.0.0_webpack@5.44.0
-      mocha: 9.0.1
+      mocha: 9.0.2
       nyc: 15.1.0
       prettier: 2.3.2
-      puppeteer: 10.0.0
+      puppeteer: 10.1.0
       reflect-metadata: 0.1.13
       rimraf: 3.0.2
       sinon: 11.1.1
@@ -7858,7 +7830,7 @@ packages:
       source-map-support: 0.5.19
       terser-webpack-plugin: 5.1.4_webpack@5.44.0
       ts-loader: 9.2.3_typescript@4.2.4+webpack@5.44.0
-      ts-node: 10.0.0_typescript@4.2.4
+      ts-node: 10.1.0_typescript@4.2.4
       tslib: 2.3.0
       typescript: 4.2.4
       webpack: 5.44.0_webpack-cli@4.7.2
@@ -7879,18 +7851,18 @@ packages:
     dev: false
 
   file:projects/createjs.tgz:
-    resolution: {integrity: sha512-06X341+ZrMAB6Qyk2e2JRT8iCMrtHpO/8dkHXRj5XoCPqO77vLhDQKtVtL5YM8U2JRn/spXExHJshJ0gYf9G9g==, tarball: file:projects/createjs.tgz}
+    resolution: {integrity: sha512-3li9F979VANdPgXMdP5T5hSx5bafk59GprPxbb5ujZWrOMUbdR3xirVRhyzjLNIL7UUtotVFOdO0+TZMDZwvDg==, tarball: file:projects/createjs.tgz}
     name: '@rush-temp/createjs'
     version: 0.0.0
     dependencies:
       '@jsdevtools/coverage-istanbul-loader': 3.0.5
       '@mcler/webpack-concat-plugin': 4.1.3_ab50f0d0285cee5400f4bebc826901d4
       '@rushstack/eslint-config': 2.3.4_eslint@7.30.0+typescript@4.2.4
-      '@types/bluebird': 3.5.35
-      '@types/chai': 4.2.19
+      '@types/bluebird': 3.5.36
+      '@types/chai': 4.2.21
       '@types/createjs-lib': 0.0.29
       '@types/easeljs': 1.0.0
-      '@types/mocha': 8.2.2
+      '@types/mocha': 8.2.3
       '@types/sinon': 10.0.2
       '@types/tweenjs': 1.0.3
       '@types/webpack-env': 1.16.2
@@ -7917,16 +7889,16 @@ packages:
       karma-sourcemap-loader: 0.3.8
       karma-sourcemap-writer: 0.1.2
       karma-webpack: 5.0.0_webpack@5.44.0
-      mocha: 9.0.1
+      mocha: 9.0.2
       prettier: 2.3.2
-      puppeteer: 10.0.0
+      puppeteer: 10.1.0
       reflect-metadata: 0.1.13
       rimraf: 3.0.2
       sinon: 11.1.1
       sinon-chai: 3.7.0_chai@4.3.4+sinon@11.1.1
       terser-webpack-plugin: 5.1.4_webpack@5.44.0
       ts-loader: 9.2.3_typescript@4.2.4+webpack@5.44.0
-      ts-node: 10.0.0_typescript@4.2.4
+      ts-node: 10.1.0_typescript@4.2.4
       tslib: 2.3.0
       typescript: 4.2.4
       webpack: 5.44.0_webpack-cli@4.7.2
@@ -7947,16 +7919,16 @@ packages:
     dev: false
 
   file:projects/eventemitter3.tgz:
-    resolution: {integrity: sha512-1yktbg+/jRIW8SBxzDTJtk6Cv4YoivoUp9YedHAypCUdbOnqdEn72JPVl3hnlDkJP7ct0P65gVNI8/YMZvbKrA==, tarball: file:projects/eventemitter3.tgz}
+    resolution: {integrity: sha512-3Yj8GF6FqMWoudjgIKecjH/to+l04Wk3etuwS1gyA+/+XS0pFeBwNxt4UJffXT0saltSJlN3IYGHkPY+y0BDug==, tarball: file:projects/eventemitter3.tgz}
     name: '@rush-temp/eventemitter3'
     version: 0.0.0
     dependencies:
-      '@istanbuljs/nyc-config-typescript': 1.0.1_40f74ebf3b42f8d97356b2262606f547
+      '@istanbuljs/nyc-config-typescript': 1.0.1_34d69bb14d54c3c15df9aea89b43ee7d
       '@jsdevtools/coverage-istanbul-loader': 3.0.5
       '@rushstack/eslint-config': 2.3.4_eslint@7.30.0+typescript@4.2.4
-      '@types/bluebird': 3.5.35
-      '@types/chai': 4.2.19
-      '@types/mocha': 8.2.2
+      '@types/bluebird': 3.5.36
+      '@types/chai': 4.2.21
+      '@types/mocha': 8.2.3
       '@types/sinon': 10.0.2
       '@types/webpack-env': 1.16.2
       bluebird: 3.7.2
@@ -7981,10 +7953,10 @@ packages:
       karma-sourcemap-loader: 0.3.8
       karma-sourcemap-writer: 0.1.2
       karma-webpack: 5.0.0_webpack@5.44.0
-      mocha: 9.0.1
+      mocha: 9.0.2
       nyc: 15.1.0
       prettier: 2.3.2
-      puppeteer: 10.0.0
+      puppeteer: 10.1.0
       reflect-metadata: 0.1.13
       rimraf: 3.0.2
       sinon: 11.1.1
@@ -7992,7 +7964,7 @@ packages:
       source-map-support: 0.5.19
       terser-webpack-plugin: 5.1.4_webpack@5.44.0
       ts-loader: 9.2.3_typescript@4.2.4+webpack@5.44.0
-      ts-node: 10.0.0_typescript@4.2.4
+      ts-node: 10.1.0_typescript@4.2.4
       tslib: 2.3.0
       typescript: 4.2.4
       webpack: 5.44.0_webpack-cli@4.7.2
@@ -8013,15 +7985,15 @@ packages:
     dev: false
 
   file:projects/game-battleship.tgz:
-    resolution: {integrity: sha512-t8HI3Xv9bs5ZjtwrF0MVTybJID12zaW/mbT1qM6iidrE/v6l4JzhCG1+8+UTuAAXmUBt1id3gkLzCO4mr5YOEg==, tarball: file:projects/game-battleship.tgz}
+    resolution: {integrity: sha512-DpTrZnpeL79+Hii92DBDhQ3ZTs+SF1S7Qq6dbo6rQxaEIJ+b+IS28u7s+h5xWV6AujeCrJLC+Zo0LigHhMowwg==, tarball: file:projects/game-battleship.tgz}
     name: '@rush-temp/game-battleship'
     version: 0.0.0
     dependencies:
       '@jsdevtools/coverage-istanbul-loader': 3.0.5
       '@rushstack/eslint-config': 2.3.4_eslint@7.30.0+typescript@4.2.4
-      '@types/bluebird': 3.5.35
-      '@types/chai': 4.2.19
-      '@types/mocha': 8.2.2
+      '@types/bluebird': 3.5.36
+      '@types/chai': 4.2.21
+      '@types/mocha': 8.2.3
       '@types/sinon': 10.0.2
       '@types/webpack-env': 1.16.2
       bluebird: 3.7.2
@@ -8045,17 +8017,17 @@ packages:
       karma-sourcemap-loader: 0.3.8
       karma-sourcemap-writer: 0.1.2
       karma-webpack: 5.0.0_webpack@5.44.0
-      mocha: 9.0.1
+      mocha: 9.0.2
       pixi.js: 5.2.1
       prettier: 2.3.2
-      puppeteer: 10.0.0
+      puppeteer: 10.1.0
       reflect-metadata: 0.1.13
       rimraf: 3.0.2
       sinon: 11.1.1
       sinon-chai: 3.7.0_chai@4.3.4+sinon@11.1.1
       terser-webpack-plugin: 5.1.4_webpack@5.44.0
       ts-loader: 9.2.3_typescript@4.2.4+webpack@5.44.0
-      ts-node: 10.0.0_typescript@4.2.4
+      ts-node: 10.1.0_typescript@4.2.4
       tslib: 2.3.0
       typescript: 4.2.4
       webpack: 5.44.0_webpack-cli@4.7.2
@@ -8075,15 +8047,15 @@ packages:
     dev: false
 
   file:projects/game-match3.tgz:
-    resolution: {integrity: sha512-wswf+csR2yFMR0lRzc9uXKSRqY87MnH4lJIebZF+OG+O35ZDbqqo8O3BXXtqVreJdSRwcPKVojSjZt5eJEzRsg==, tarball: file:projects/game-match3.tgz}
+    resolution: {integrity: sha512-mdSnpOCLcQWzyaLgjNkbiI3Ga5MeOVUmQinv1Egl1JNrvpBxEUVyUCqW0EWSj4CGtGVl0WVXZ9fw0S4Cz+whyg==, tarball: file:projects/game-match3.tgz}
     name: '@rush-temp/game-match3'
     version: 0.0.0
     dependencies:
       '@jsdevtools/coverage-istanbul-loader': 3.0.5
       '@rushstack/eslint-config': 2.3.4_eslint@7.30.0+typescript@4.2.4
-      '@types/bluebird': 3.5.35
-      '@types/chai': 4.2.19
-      '@types/mocha': 8.2.2
+      '@types/bluebird': 3.5.36
+      '@types/chai': 4.2.21
+      '@types/mocha': 8.2.3
       '@types/sinon': 10.0.2
       '@types/webpack-env': 1.16.2
       bluebird: 3.7.2
@@ -8107,17 +8079,17 @@ packages:
       karma-sourcemap-loader: 0.3.8
       karma-sourcemap-writer: 0.1.2
       karma-webpack: 5.0.0_webpack@5.44.0
-      mocha: 9.0.1
+      mocha: 9.0.2
       pixi.js: 5.2.1
       prettier: 2.3.2
-      puppeteer: 10.0.0
+      puppeteer: 10.1.0
       reflect-metadata: 0.1.13
       rimraf: 3.0.2
       sinon: 11.1.1
       sinon-chai: 3.7.0_chai@4.3.4+sinon@11.1.1
       terser-webpack-plugin: 5.1.4_webpack@5.44.0
       ts-loader: 9.2.3_typescript@4.2.4+webpack@5.44.0
-      ts-node: 10.0.0_typescript@4.2.4
+      ts-node: 10.1.0_typescript@4.2.4
       tslib: 2.3.0
       typescript: 4.2.4
       webpack: 5.44.0_webpack-cli@4.7.2
@@ -8137,15 +8109,15 @@ packages:
     dev: false
 
   file:projects/game-minesweeper.tgz:
-    resolution: {integrity: sha512-JJ9kWtgDH2aRdOY/Yn+YgGak9kxGSuXrsI2socs10SZoOJDZVzxVeLFBnG2YSJbyCvSPDsRTpR+5a3WMBQ3zLQ==, tarball: file:projects/game-minesweeper.tgz}
+    resolution: {integrity: sha512-onkP416hhaDNH/+xlj+J+7ObwU/vnLJ0z3TFW26uh1ZV8IN+xk/lLQl0rzWIhX1b3kGbGVwjMSgt3R7kS8NQEQ==, tarball: file:projects/game-minesweeper.tgz}
     name: '@rush-temp/game-minesweeper'
     version: 0.0.0
     dependencies:
       '@jsdevtools/coverage-istanbul-loader': 3.0.5
       '@rushstack/eslint-config': 2.3.4_eslint@7.30.0+typescript@4.2.4
-      '@types/bluebird': 3.5.35
-      '@types/chai': 4.2.19
-      '@types/mocha': 8.2.2
+      '@types/bluebird': 3.5.36
+      '@types/chai': 4.2.21
+      '@types/mocha': 8.2.3
       '@types/sinon': 10.0.2
       '@types/webpack-env': 1.16.2
       bluebird: 3.7.2
@@ -8169,17 +8141,17 @@ packages:
       karma-sourcemap-loader: 0.3.8
       karma-sourcemap-writer: 0.1.2
       karma-webpack: 5.0.0_webpack@5.44.0
-      mocha: 9.0.1
+      mocha: 9.0.2
       pixi.js: 5.2.1
       prettier: 2.3.2
-      puppeteer: 10.0.0
+      puppeteer: 10.1.0
       reflect-metadata: 0.1.13
       rimraf: 3.0.2
       sinon: 11.1.1
       sinon-chai: 3.7.0_chai@4.3.4+sinon@11.1.1
       terser-webpack-plugin: 5.1.4_webpack@5.44.0
       ts-loader: 9.2.3_typescript@4.2.4+webpack@5.44.0
-      ts-node: 10.0.0_typescript@4.2.4
+      ts-node: 10.1.0_typescript@4.2.4
       tslib: 2.3.0
       typescript: 4.2.4
       webpack: 5.44.0_webpack-cli@4.7.2
@@ -8199,7 +8171,7 @@ packages:
     dev: false
 
   file:projects/game-scratchcard.tgz:
-    resolution: {integrity: sha512-iRnxnPf+c0WDzWBQFpV0OOQdixnFKIsJAcVyPSZ2TWxTk/jrZX/iMdCBLZ+JKPwkl2eB6EOLfjNnUu9d4zNweQ==, tarball: file:projects/game-scratchcard.tgz}
+    resolution: {integrity: sha512-bPxjPpQPRgv9OeieK2/k88wOlYwkRtZfGI86UFOND5hb42rVosR4+ht2pkuyNp9hpMT3H+9oVNCtjZ6LpxQDSA==, tarball: file:projects/game-scratchcard.tgz}
     name: '@rush-temp/game-scratchcard'
     version: 0.0.0
     dependencies:
@@ -8217,7 +8189,7 @@ packages:
       rimraf: 3.0.2
       terser-webpack-plugin: 5.1.4_webpack@5.44.0
       ts-loader: 9.2.3_typescript@4.2.4+webpack@5.44.0
-      ts-node: 10.0.0_typescript@4.2.4
+      ts-node: 10.1.0_typescript@4.2.4
       tslib: 2.3.0
       typescript: 4.2.4
       webpack: 5.44.0_webpack-cli@4.7.2
@@ -8234,7 +8206,7 @@ packages:
     dev: false
 
   file:projects/game-spaceinvaders.tgz:
-    resolution: {integrity: sha512-eDHVSCkvSjqlXf6zF+OyyeDPDMLiJL3axq7PLMCWnBQ6bWSWfU3swGLb/H4kutuxrutsPN33VVjCPXDr5sfm7w==, tarball: file:projects/game-spaceinvaders.tgz}
+    resolution: {integrity: sha512-CM2nZBJIqcsNytIlPIJ95jHzWST0Cq+pRijfBX8njfRQdoFIYyLGDBjnAyVQ5YgUzMKOzIhXjc9jH8u5lUKQJw==, tarball: file:projects/game-spaceinvaders.tgz}
     name: '@rush-temp/game-spaceinvaders'
     version: 0.0.0
     dependencies:
@@ -8252,7 +8224,7 @@ packages:
       rimraf: 3.0.2
       terser-webpack-plugin: 5.1.4_webpack@5.44.0
       ts-loader: 9.2.3_typescript@4.2.4+webpack@5.44.0
-      ts-node: 10.0.0_typescript@4.2.4
+      ts-node: 10.1.0_typescript@4.2.4
       tslib: 2.3.0
       typescript: 4.2.4
       webpack: 5.44.0_webpack-cli@4.7.2
@@ -8269,14 +8241,14 @@ packages:
     dev: false
 
   file:projects/game-tetris.tgz:
-    resolution: {integrity: sha512-1mq63SFZ7VHIfySuvSFHbcGeOvLPKAB2onQjA2y9rr2v6XO9n8eQN9Q6MvPMnDZpWBqSHrE+K6nBLI2DowTNxg==, tarball: file:projects/game-tetris.tgz}
+    resolution: {integrity: sha512-YcTH+moONM9aHEmBk2LmekNx8Fsw95JdOZXOKa6Grn3PHlGlxgnuBeg09BggpGNCqxO0PTzwUID0fHVI2P2+RQ==, tarball: file:projects/game-tetris.tgz}
     name: '@rush-temp/game-tetris'
     version: 0.0.0
     dependencies:
-      '@istanbuljs/nyc-config-typescript': 1.0.1_40f74ebf3b42f8d97356b2262606f547
+      '@istanbuljs/nyc-config-typescript': 1.0.1_34d69bb14d54c3c15df9aea89b43ee7d
       '@rushstack/eslint-config': 2.3.4_eslint@7.30.0+typescript@4.2.4
-      '@types/chai': 4.2.19
-      '@types/mocha': 8.2.2
+      '@types/chai': 4.2.21
+      '@types/mocha': 8.2.3
       '@types/webpack-env': 1.16.2
       chai: 4.3.4
       eslint: 7.30.0
@@ -8286,7 +8258,7 @@ packages:
       eslint-plugin-react: 7.24.0_eslint@7.30.0
       eslint-plugin-unicorn: 34.0.1_eslint@7.30.0
       html-webpack-plugin: 5.3.2_webpack@5.44.0
-      mocha: 9.0.1
+      mocha: 9.0.2
       nyc: 15.1.0
       pixi.js: 5.2.1
       prettier: 2.3.2
@@ -8295,7 +8267,7 @@ packages:
       source-map-support: 0.5.19
       terser-webpack-plugin: 5.1.4_webpack@5.44.0
       ts-loader: 9.2.3_typescript@4.2.4+webpack@5.44.0
-      ts-node: 10.0.0_typescript@4.2.4
+      ts-node: 10.1.0_typescript@4.2.4
       tslib: 2.3.0
       typescript: 4.2.4
       webpack: 5.44.0_webpack-cli@4.7.2
@@ -8312,16 +8284,16 @@ packages:
     dev: false
 
   file:projects/integration-macrobot-signalcommandmap.tgz:
-    resolution: {integrity: sha512-ew/4iHUht5kR0b5lDXT8Ylmt1LZkgcdFoWNvjK0RpBfep3sN9z1h9WYCvZpQS8Foxkyov7UkvKF6icuW9VZ4GQ==, tarball: file:projects/integration-macrobot-signalcommandmap.tgz}
+    resolution: {integrity: sha512-rBakUTTAM8l05MkLbaV7kB42lPO3H55TOkrb6OQg5TyrdJfvNiP8kAM/KDRaaCVat1J/lNccshQw6WLJF9Fqig==, tarball: file:projects/integration-macrobot-signalcommandmap.tgz}
     name: '@rush-temp/integration-macrobot-signalcommandmap'
     version: 0.0.0
     dependencies:
-      '@istanbuljs/nyc-config-typescript': 1.0.1_40f74ebf3b42f8d97356b2262606f547
+      '@istanbuljs/nyc-config-typescript': 1.0.1_34d69bb14d54c3c15df9aea89b43ee7d
       '@jsdevtools/coverage-istanbul-loader': 3.0.5
       '@rushstack/eslint-config': 2.3.4_eslint@7.30.0+typescript@4.2.4
-      '@types/bluebird': 3.5.35
-      '@types/chai': 4.2.19
-      '@types/mocha': 8.2.2
+      '@types/bluebird': 3.5.36
+      '@types/chai': 4.2.21
+      '@types/mocha': 8.2.3
       '@types/sinon': 10.0.2
       '@types/webpack-env': 1.16.2
       bluebird: 3.7.2
@@ -8343,10 +8315,10 @@ packages:
       karma-sourcemap-loader: 0.3.8
       karma-sourcemap-writer: 0.1.2
       karma-webpack: 5.0.0_webpack@5.44.0
-      mocha: 9.0.1
+      mocha: 9.0.2
       nyc: 15.1.0
       prettier: 2.3.2
-      puppeteer: 10.0.0
+      puppeteer: 10.1.0
       reflect-metadata: 0.1.13
       rimraf: 3.0.2
       sinon: 11.1.1
@@ -8354,7 +8326,7 @@ packages:
       source-map-support: 0.5.19
       terser-webpack-plugin: 5.1.4_webpack@5.44.0
       ts-loader: 9.2.3_typescript@4.2.4+webpack@5.44.0
-      ts-node: 10.0.0_typescript@4.2.4
+      ts-node: 10.1.0_typescript@4.2.4
       tslib: 2.3.0
       typescript: 4.2.4
       webpack: 5.44.0_webpack-cli@4.7.2
@@ -8374,16 +8346,16 @@ packages:
     dev: false
 
   file:projects/macrobot.tgz:
-    resolution: {integrity: sha512-BA+uqe14Ahsf/gb3f1+Y1jlPK+SRRP5EDoLL50+Ga/T5kuBSFgY0laDbIK3m/flbtQ/GYARlst1d/2WabnTzeQ==, tarball: file:projects/macrobot.tgz}
+    resolution: {integrity: sha512-GnHOFGA25ukUmYkyyGawf1u56WRo/GfaYxycVRpcryLnUYeHB++M2JNhGgnFYh9UUb74PqYolMHuGNRAqjxoTg==, tarball: file:projects/macrobot.tgz}
     name: '@rush-temp/macrobot'
     version: 0.0.0
     dependencies:
-      '@istanbuljs/nyc-config-typescript': 1.0.1_40f74ebf3b42f8d97356b2262606f547
+      '@istanbuljs/nyc-config-typescript': 1.0.1_34d69bb14d54c3c15df9aea89b43ee7d
       '@jsdevtools/coverage-istanbul-loader': 3.0.5
       '@rushstack/eslint-config': 2.3.4_eslint@7.30.0+typescript@4.2.4
-      '@types/bluebird': 3.5.35
-      '@types/chai': 4.2.19
-      '@types/mocha': 8.2.2
+      '@types/bluebird': 3.5.36
+      '@types/chai': 4.2.21
+      '@types/mocha': 8.2.3
       '@types/sinon': 10.0.2
       '@types/webpack-env': 1.16.2
       bluebird: 3.7.2
@@ -8405,10 +8377,10 @@ packages:
       karma-sourcemap-loader: 0.3.8
       karma-sourcemap-writer: 0.1.2
       karma-webpack: 5.0.0_webpack@5.44.0
-      mocha: 9.0.1
+      mocha: 9.0.2
       nyc: 15.1.0
       prettier: 2.3.2
-      puppeteer: 10.0.0
+      puppeteer: 10.1.0
       reflect-metadata: 0.1.13
       rimraf: 3.0.2
       sinon: 11.1.1
@@ -8416,7 +8388,7 @@ packages:
       source-map-support: 0.5.19
       terser-webpack-plugin: 5.1.4_webpack@5.44.0
       ts-loader: 9.2.3_typescript@4.2.4+webpack@5.44.0
-      ts-node: 10.0.0_typescript@4.2.4
+      ts-node: 10.1.0_typescript@4.2.4
       tslib: 2.3.0
       typescript: 4.2.4
       webpack: 5.44.0_webpack-cli@4.7.2
@@ -8436,15 +8408,15 @@ packages:
     dev: false
 
   file:projects/openfl.tgz:
-    resolution: {integrity: sha512-Uam9sft8Y4gLRJ6R+5S8OCwJj4VZ+2byf76TxBI02dTil1MRzU8L1ZQ6cXbDhDPuiqc/QJj0awzqdn8w2INdpA==, tarball: file:projects/openfl.tgz}
+    resolution: {integrity: sha512-OChebZqriMbOS+Tzy/Cdvm/jRpN7cMgGv7oM8DFAa84VD4k1+ZR8mB0zu24aiwTtZWSQ3eQ/qi9x5CBdDoNegw==, tarball: file:projects/openfl.tgz}
     name: '@rush-temp/openfl'
     version: 0.0.0
     dependencies:
       '@jsdevtools/coverage-istanbul-loader': 3.0.5
       '@rushstack/eslint-config': 2.3.4_eslint@7.30.0+typescript@4.2.4
-      '@types/bluebird': 3.5.35
-      '@types/chai': 4.2.19
-      '@types/mocha': 8.2.2
+      '@types/bluebird': 3.5.36
+      '@types/chai': 4.2.21
+      '@types/mocha': 8.2.3
       '@types/sinon': 10.0.2
       '@types/webpack-env': 1.16.2
       bluebird: 3.7.2
@@ -8469,17 +8441,17 @@ packages:
       karma-sourcemap-loader: 0.3.8
       karma-sourcemap-writer: 0.1.2
       karma-webpack: 5.0.0_webpack@5.44.0
-      mocha: 9.0.1
+      mocha: 9.0.2
       openfl: 8.9.6
       prettier: 2.3.2
-      puppeteer: 10.0.0
+      puppeteer: 10.1.0
       reflect-metadata: 0.1.13
       rimraf: 3.0.2
       sinon: 11.1.1
       sinon-chai: 3.7.0_chai@4.3.4+sinon@11.1.1
       terser-webpack-plugin: 5.1.4_webpack@5.44.0
       ts-loader: 9.2.3_typescript@4.2.4+webpack@5.44.0
-      ts-node: 10.0.0_typescript@4.2.4
+      ts-node: 10.1.0_typescript@4.2.4
       tslib: 2.3.0
       typescript: 4.2.4
       webpack: 5.44.0_webpack-cli@4.7.2
@@ -8499,15 +8471,15 @@ packages:
     dev: false
 
   file:projects/phaser-ce-signalcommandmap.tgz:
-    resolution: {integrity: sha512-JEUYAWR+eMYNuw3YA8qWig7GvG7GdPK637SX/wyenrNi5Gs3jyiVIioz1TYn4lhm2/xW+0ES3ZT1nrs745Vxog==, tarball: file:projects/phaser-ce-signalcommandmap.tgz}
+    resolution: {integrity: sha512-0EyoBEOk3LFOkGej33A3btejnw2L+o+sQeotlpeZAEKnx6Ae5NMi7cv69P77/LenC/gCB3NpGF5E6iycjYYOoQ==, tarball: file:projects/phaser-ce-signalcommandmap.tgz}
     name: '@rush-temp/phaser-ce-signalcommandmap'
     version: 0.0.0
     dependencies:
       '@jsdevtools/coverage-istanbul-loader': 3.0.5
       '@rushstack/eslint-config': 2.3.4_eslint@7.30.0+typescript@4.2.4
-      '@types/bluebird': 3.5.35
-      '@types/chai': 4.2.19
-      '@types/mocha': 8.2.2
+      '@types/bluebird': 3.5.36
+      '@types/chai': 4.2.21
+      '@types/mocha': 8.2.3
       '@types/sinon': 10.0.2
       '@types/webpack-env': 1.16.2
       bluebird: 3.7.2
@@ -8529,17 +8501,17 @@ packages:
       karma-sourcemap-loader: 0.3.8
       karma-sourcemap-writer: 0.1.2
       karma-webpack: 5.0.0_webpack@5.44.0
-      mocha: 9.0.1
+      mocha: 9.0.2
       phaser-ce: 2.15.0
       prettier: 2.3.2
-      puppeteer: 10.0.0
+      puppeteer: 10.1.0
       reflect-metadata: 0.1.13
       rimraf: 3.0.2
       sinon: 11.1.1
       sinon-chai: 3.7.0_chai@4.3.4+sinon@11.1.1
       terser-webpack-plugin: 5.1.4_webpack@5.44.0
       ts-loader: 9.2.3_typescript@4.2.4+webpack@5.44.0
-      ts-node: 10.0.0_typescript@4.2.4
+      ts-node: 10.1.0_typescript@4.2.4
       tslib: 2.3.0
       typescript: 4.2.4
       webpack: 5.44.0_webpack-cli@4.7.2
@@ -8559,16 +8531,16 @@ packages:
     dev: false
 
   file:projects/phaser-ce.tgz:
-    resolution: {integrity: sha512-RlFgrxbfpXiMR1r3gmpq+us26fH8WjrfoUnrvX4zoOGyfCRwJHX4tKGuQH2LGriADQ4zliOR3bKi2t52Xl1VUA==, tarball: file:projects/phaser-ce.tgz}
+    resolution: {integrity: sha512-YCasRiBrrn00w3UUGoqbEuqF3mzXvFaxhqiE1/rPryu+rZF9OM670PoqURw/j3JnwkSu/RIVYY3V6qTj9a07GA==, tarball: file:projects/phaser-ce.tgz}
     name: '@rush-temp/phaser-ce'
     version: 0.0.0
     dependencies:
       '@jsdevtools/coverage-istanbul-loader': 3.0.5
       '@mcler/webpack-concat-plugin': 4.1.3_ab50f0d0285cee5400f4bebc826901d4
       '@rushstack/eslint-config': 2.3.4_eslint@7.30.0+typescript@4.2.4
-      '@types/bluebird': 3.5.35
-      '@types/chai': 4.2.19
-      '@types/mocha': 8.2.2
+      '@types/bluebird': 3.5.36
+      '@types/chai': 4.2.21
+      '@types/mocha': 8.2.3
       '@types/sinon': 10.0.2
       '@types/webpack-env': 1.16.2
       bluebird: 3.7.2
@@ -8592,17 +8564,17 @@ packages:
       karma-sourcemap-loader: 0.3.8
       karma-sourcemap-writer: 0.1.2
       karma-webpack: 5.0.0_webpack@5.44.0
-      mocha: 9.0.1
+      mocha: 9.0.2
       phaser-ce: 2.15.0
       prettier: 2.3.2
-      puppeteer: 10.0.0
+      puppeteer: 10.1.0
       reflect-metadata: 0.1.13
       rimraf: 3.0.2
       sinon: 11.1.1
       sinon-chai: 3.7.0_chai@4.3.4+sinon@11.1.1
       terser-webpack-plugin: 5.1.4_webpack@5.44.0
       ts-loader: 9.2.3_typescript@4.2.4+webpack@5.44.0
-      ts-node: 10.0.0_typescript@4.2.4
+      ts-node: 10.1.0_typescript@4.2.4
       tslib: 2.3.0
       typescript: 4.2.4
       webpack: 5.44.0_webpack-cli@4.7.2
@@ -8623,16 +8595,16 @@ packages:
     dev: false
 
   file:projects/phaser.tgz:
-    resolution: {integrity: sha512-k4J7Id9prTTyA7RKvMbL2+OWPliOcshKU1XSizSoegThYB/o1RcdbzBHRyuv+H7I79Crwz5No8d/mG6Af5d/2g==, tarball: file:projects/phaser.tgz}
+    resolution: {integrity: sha512-BtyF0H5F5PnhTv7LaUrPgFPb617hEwnAk5L1HIpYfMsjn3lI/4J16AEmKGcHBU5MRORAYoaqKmAd/9STiSw34g==, tarball: file:projects/phaser.tgz}
     name: '@rush-temp/phaser'
     version: 0.0.0
     dependencies:
       '@jsdevtools/coverage-istanbul-loader': 3.0.5
       '@mcler/webpack-concat-plugin': 4.1.3_ab50f0d0285cee5400f4bebc826901d4
       '@rushstack/eslint-config': 2.3.4_eslint@7.30.0+typescript@4.2.4
-      '@types/bluebird': 3.5.35
-      '@types/chai': 4.2.19
-      '@types/mocha': 8.2.2
+      '@types/bluebird': 3.5.36
+      '@types/chai': 4.2.21
+      '@types/mocha': 8.2.3
       '@types/sinon': 10.0.2
       '@types/webpack-env': 1.16.2
       bluebird: 3.7.2
@@ -8657,17 +8629,17 @@ packages:
       karma-sourcemap-loader: 0.3.8
       karma-sourcemap-writer: 0.1.2
       karma-webpack: 5.0.0_webpack@5.44.0
-      mocha: 9.0.1
+      mocha: 9.0.2
       phaser: 3.22.0
       prettier: 2.3.2
-      puppeteer: 10.0.0
+      puppeteer: 10.1.0
       reflect-metadata: 0.1.13
       rimraf: 3.0.2
       sinon: 11.1.1
       sinon-chai: 3.7.0_chai@4.3.4+sinon@11.1.1
       terser-webpack-plugin: 5.1.4_webpack@5.44.0
       ts-loader: 9.2.3_typescript@4.2.4+webpack@5.44.0
-      ts-node: 10.0.0_typescript@4.2.4
+      ts-node: 10.1.0_typescript@4.2.4
       tslib: 2.3.0
       typescript: 4.2.4
       webpack: 5.44.0_webpack-cli@4.7.2
@@ -8688,15 +8660,15 @@ packages:
     dev: false
 
   file:projects/pixi-palidor.tgz:
-    resolution: {integrity: sha512-eUMFt/vqs9QoaDZ2dyERJ3okB6emQrErMgYnhEweFeh2iFtn9hRhkIM361z3z2OIBM8d/wqm/5nUvFiMGaLnJA==, tarball: file:projects/pixi-palidor.tgz}
+    resolution: {integrity: sha512-iPM0u4nLZDIfv/pmH0MgMnVSr8PzhVPAWSR3lMNdDEgTVwGje/nK6G1Ab+Fc3tnOMbQXE7pfnCpEAc3+lqufpQ==, tarball: file:projects/pixi-palidor.tgz}
     name: '@rush-temp/pixi-palidor'
     version: 0.0.0
     dependencies:
       '@jsdevtools/coverage-istanbul-loader': 3.0.5
       '@rushstack/eslint-config': 2.3.4_eslint@7.30.0+typescript@4.2.4
-      '@types/bluebird': 3.5.35
-      '@types/chai': 4.2.19
-      '@types/mocha': 8.2.2
+      '@types/bluebird': 3.5.36
+      '@types/chai': 4.2.21
+      '@types/mocha': 8.2.3
       '@types/sinon': 10.0.2
       '@types/webpack-env': 1.16.2
       bluebird: 3.7.2
@@ -8721,17 +8693,17 @@ packages:
       karma-sourcemap-loader: 0.3.8
       karma-sourcemap-writer: 0.1.2
       karma-webpack: 5.0.0_webpack@5.44.0
-      mocha: 9.0.1
+      mocha: 9.0.2
       pixi.js: 5.2.1
       prettier: 2.3.2
-      puppeteer: 10.0.0
+      puppeteer: 10.1.0
       reflect-metadata: 0.1.13
       rimraf: 3.0.2
       sinon: 11.1.1
       sinon-chai: 3.7.0_chai@4.3.4+sinon@11.1.1
       terser-webpack-plugin: 5.1.4_webpack@5.44.0
       ts-loader: 9.2.3_typescript@4.2.4+webpack@5.44.0
-      ts-node: 10.0.0_typescript@4.2.4
+      ts-node: 10.1.0_typescript@4.2.4
       tslib: 2.3.0
       typescript: 4.2.4
       webpack: 5.44.0_webpack-cli@4.7.2
@@ -8751,15 +8723,15 @@ packages:
     dev: false
 
   file:projects/pixi-signalmediator.tgz:
-    resolution: {integrity: sha512-J40Y5DJfBx9AM3n/zNAeEhNe1inlKoDlQAqAQJ/Rzakr1blck3jHb3mIu2e0pF90V5CuIBvMCdDJDmyyY0qfXA==, tarball: file:projects/pixi-signalmediator.tgz}
+    resolution: {integrity: sha512-K9ena56Sxvq/rNmgzDGYpiqZvGFBkOrbNXJ1/S7v/Az50VWt+6StGm/bOYIlwjZrHM0AXAXfRuyNdJpUNEFpmw==, tarball: file:projects/pixi-signalmediator.tgz}
     name: '@rush-temp/pixi-signalmediator'
     version: 0.0.0
     dependencies:
       '@jsdevtools/coverage-istanbul-loader': 3.0.5
       '@rushstack/eslint-config': 2.3.4_eslint@7.30.0+typescript@4.2.4
-      '@types/bluebird': 3.5.35
-      '@types/chai': 4.2.19
-      '@types/mocha': 8.2.2
+      '@types/bluebird': 3.5.36
+      '@types/chai': 4.2.21
+      '@types/mocha': 8.2.3
       '@types/sinon': 10.0.2
       '@types/webpack-env': 1.16.2
       bluebird: 3.7.2
@@ -8781,10 +8753,10 @@ packages:
       karma-sourcemap-loader: 0.3.8
       karma-sourcemap-writer: 0.1.2
       karma-webpack: 5.0.0_webpack@5.44.0
-      mocha: 9.0.1
+      mocha: 9.0.2
       pixi.js: 5.2.1
       prettier: 2.3.2
-      puppeteer: 10.0.0
+      puppeteer: 10.1.0
       reflect-metadata: 0.1.13
       rimraf: 3.0.2
       sinon: 11.1.1
@@ -8792,7 +8764,7 @@ packages:
       source-map-support: 0.5.19
       terser-webpack-plugin: 5.1.4_webpack@5.44.0
       ts-loader: 9.2.3_typescript@4.2.4+webpack@5.44.0
-      ts-node: 10.0.0_typescript@4.2.4
+      ts-node: 10.1.0_typescript@4.2.4
       tslib: 2.3.0
       typescript: 4.2.4
       webpack: 5.44.0_webpack-cli@4.7.2
@@ -8812,15 +8784,15 @@ packages:
     dev: false
 
   file:projects/pixi.tgz:
-    resolution: {integrity: sha512-N9wWXOX63ALgjkIzAcggrSbl4Eo1uKQds3Ww/oXK0VzDeH19jOc5JUD9xzHpdDAmpohBOXNoV8LzRJjLfDO3mQ==, tarball: file:projects/pixi.tgz}
+    resolution: {integrity: sha512-n0YIWL2Lx6ZD9qKyrMlo8aW6tsJMhZayCb+t4tsXYwxyx4zao5th4IrcGfa3M4nwuTAC1wDTYwmBLtUeXwZ4FQ==, tarball: file:projects/pixi.tgz}
     name: '@rush-temp/pixi'
     version: 0.0.0
     dependencies:
       '@jsdevtools/coverage-istanbul-loader': 3.0.5
       '@rushstack/eslint-config': 2.3.4_eslint@7.30.0+typescript@4.2.4
-      '@types/bluebird': 3.5.35
-      '@types/chai': 4.2.19
-      '@types/mocha': 8.2.2
+      '@types/bluebird': 3.5.36
+      '@types/chai': 4.2.21
+      '@types/mocha': 8.2.3
       '@types/sinon': 10.0.2
       '@types/webpack-env': 1.16.2
       bluebird: 3.7.2
@@ -8845,17 +8817,17 @@ packages:
       karma-sourcemap-loader: 0.3.8
       karma-sourcemap-writer: 0.1.2
       karma-webpack: 5.0.0_webpack@5.44.0
-      mocha: 9.0.1
+      mocha: 9.0.2
       pixi.js: 5.2.1
       prettier: 2.3.2
-      puppeteer: 10.0.0
+      puppeteer: 10.1.0
       reflect-metadata: 0.1.13
       rimraf: 3.0.2
       sinon: 11.1.1
       sinon-chai: 3.7.0_chai@4.3.4+sinon@11.1.1
       terser-webpack-plugin: 5.1.4_webpack@5.44.0
       ts-loader: 9.2.3_typescript@4.2.4+webpack@5.44.0
-      ts-node: 10.0.0_typescript@4.2.4
+      ts-node: 10.1.0_typescript@4.2.4
       tslib: 2.3.0
       typescript: 4.2.4
       webpack: 5.44.0_webpack-cli@4.7.2
@@ -8875,16 +8847,16 @@ packages:
     dev: false
 
   file:projects/signalcommandmap.tgz:
-    resolution: {integrity: sha512-9UtZdf+QgVp5oB0/lo6cLKgijY+0QETsDnD+w4FMX/xIMqtMkidJLCofA+VcVjXW0lQaZndFuiuXJJKzMU6PQA==, tarball: file:projects/signalcommandmap.tgz}
+    resolution: {integrity: sha512-98G97qASi7Jn0wfYK6iTbE9/K9yi+E/OSHOrvr80IRAO8U2ZJ4GugMZEUqSWYaaBE2Dr0u0obsobGoq8fzxaxw==, tarball: file:projects/signalcommandmap.tgz}
     name: '@rush-temp/signalcommandmap'
     version: 0.0.0
     dependencies:
-      '@istanbuljs/nyc-config-typescript': 1.0.1_40f74ebf3b42f8d97356b2262606f547
+      '@istanbuljs/nyc-config-typescript': 1.0.1_34d69bb14d54c3c15df9aea89b43ee7d
       '@jsdevtools/coverage-istanbul-loader': 3.0.5
       '@rushstack/eslint-config': 2.3.4_eslint@7.30.0+typescript@4.2.4
-      '@types/bluebird': 3.5.35
-      '@types/chai': 4.2.19
-      '@types/mocha': 8.2.2
+      '@types/bluebird': 3.5.36
+      '@types/chai': 4.2.21
+      '@types/mocha': 8.2.3
       '@types/sinon': 10.0.2
       '@types/webpack-env': 1.16.2
       bluebird: 3.7.2
@@ -8906,10 +8878,10 @@ packages:
       karma-sourcemap-loader: 0.3.8
       karma-sourcemap-writer: 0.1.2
       karma-webpack: 5.0.0_webpack@5.44.0
-      mocha: 9.0.1
+      mocha: 9.0.2
       nyc: 15.1.0
       prettier: 2.3.2
-      puppeteer: 10.0.0
+      puppeteer: 10.1.0
       reflect-metadata: 0.1.13
       rimraf: 3.0.2
       sinon: 11.1.1
@@ -8917,7 +8889,7 @@ packages:
       source-map-support: 0.5.19
       terser-webpack-plugin: 5.1.4_webpack@5.44.0
       ts-loader: 9.2.3_typescript@4.2.4+webpack@5.44.0
-      ts-node: 10.0.0_typescript@4.2.4
+      ts-node: 10.1.0_typescript@4.2.4
       tslib: 2.3.0
       typescript: 4.2.4
       webpack: 5.44.0_webpack-cli@4.7.2
@@ -8937,16 +8909,16 @@ packages:
     dev: false
 
   file:projects/signals.tgz:
-    resolution: {integrity: sha512-QYBkQpQBJlrWBXas3AIQqd0JcmESHUB0EMt+AfWmrYBUTSK27FNQFUQz0K/+dDSqL+CtWVMe2mFJ1bKx43lg8w==, tarball: file:projects/signals.tgz}
+    resolution: {integrity: sha512-umP55p1FpWhPrc+baKnDn/OPgTmqso8+cTdWQN8JSCKk2bahqlo/gZrWwfOrccijf+t0EGwXsvpSI9FKBfxoUw==, tarball: file:projects/signals.tgz}
     name: '@rush-temp/signals'
     version: 0.0.0
     dependencies:
-      '@istanbuljs/nyc-config-typescript': 1.0.1_40f74ebf3b42f8d97356b2262606f547
+      '@istanbuljs/nyc-config-typescript': 1.0.1_34d69bb14d54c3c15df9aea89b43ee7d
       '@jsdevtools/coverage-istanbul-loader': 3.0.5
       '@rushstack/eslint-config': 2.3.4_eslint@7.30.0+typescript@4.2.4
-      '@types/bluebird': 3.5.35
-      '@types/chai': 4.2.19
-      '@types/mocha': 8.2.2
+      '@types/bluebird': 3.5.36
+      '@types/chai': 4.2.21
+      '@types/mocha': 8.2.3
       '@types/sinon': 10.0.2
       '@types/webpack-env': 1.16.2
       bluebird: 3.7.2
@@ -8968,10 +8940,10 @@ packages:
       karma-sourcemap-loader: 0.3.8
       karma-sourcemap-writer: 0.1.2
       karma-webpack: 5.0.0_webpack@5.44.0
-      mocha: 9.0.1
+      mocha: 9.0.2
       nyc: 15.1.0
       prettier: 2.3.2
-      puppeteer: 10.0.0
+      puppeteer: 10.1.0
       reflect-metadata: 0.1.13
       rimraf: 3.0.2
       sinon: 11.1.1
@@ -8979,7 +8951,7 @@ packages:
       source-map-support: 0.5.19
       terser-webpack-plugin: 5.1.4_webpack@5.44.0
       ts-loader: 9.2.3_typescript@4.2.4+webpack@5.44.0
-      ts-node: 10.0.0_typescript@4.2.4
+      ts-node: 10.1.0_typescript@4.2.4
       tslib: 2.3.0
       typescript: 4.2.4
       webpack: 5.44.0_webpack-cli@4.7.2
