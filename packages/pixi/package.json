@@ -74,7 +74,7 @@
     "@types/chai": "^4.2.19",
     "@types/mocha": "^8.2.2",
     "@types/sinon": "^10.0.2",
-    "@types/webpack-env": "^1.16.0",
+    "@types/webpack-env": "^1.16.2",
     "bluebird": "^3.7.2",
     "chai": "^4.3.4",
     "clean-webpack-plugin": "^3.0.0",
