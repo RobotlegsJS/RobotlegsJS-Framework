@@ -87,7 +87,7 @@
     "@rushstack/eslint-config": "^2.3.4",
     "@types/bluebird": "^3.5.35",
     "@types/chai": "^4.2.19",
-    "@types/mocha": "^8.2.2",
+    "@types/mocha": "^8.2.3",
     "@types/sinon": "^10.0.2",
     "@types/webpack-env": "^1.16.2",
     "bluebird": "^3.7.2",

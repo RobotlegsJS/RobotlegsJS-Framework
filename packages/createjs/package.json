@@ -71,7 +71,7 @@
     "@types/chai": "^4.2.19",
     "@types/createjs-lib": "^0.0.29",
     "@types/easeljs": "^1.0.0",
-    "@types/mocha": "^8.2.2",
+    "@types/mocha": "^8.2.3",
     "@types/sinon": "^10.0.2",
     "@types/tweenjs": "^1.0.3",
     "@types/webpack-env": "^1.16.2",
