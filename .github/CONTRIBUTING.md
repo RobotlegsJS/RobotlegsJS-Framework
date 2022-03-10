@@ -44,12 +44,6 @@ rush rebuild
 
 Subsequent calls of `rush rebuild` might be faster, since the project is using the [build cache](https://rushjs.io/pages/maintainer/build_cache) configuration.
 
-When you would like to force the rebuild of all packages, you can use the following command:
-```bash
-rush rebuild --disable-build-cache
-```
-
-
 5. If you want to build just one project:
 ```bash
 cd RobotlegsJS-Framework\packages\core
