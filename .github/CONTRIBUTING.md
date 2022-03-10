@@ -37,20 +37,25 @@ cd RobotlegsJS-Framework
 rush install
 ```
 
-4. Rebuild all the projects in the repo:
+4. Build all the projects in the repo:
+```bash
+rush build
+```
+
+5. Rebuild all the projects in the repo:
 ```bash
 rush rebuild
 ```
 
-Subsequent calls of `rush rebuild` might be faster, since the project is using the [build cache](https://rushjs.io/pages/maintainer/build_cache) configuration.
+Subsequent calls of `rush build` might be faster, since the project is using the [build cache](https://rushjs.io/pages/maintainer/build_cache) configuration.
 
-5. If you want to build just one project:
+6. If you want to build just one project:
 ```bash
 cd RobotlegsJS-Framework\packages\core
 rushx build
 ```
 
-6. After implementing your changes, please run the following commands and have sure that they are still passing:
+7. After implementing your changes, please run the following commands and have sure that they are still passing:
 ```bash
 rush autoformat --verbose
 rush rebuild --verbose
