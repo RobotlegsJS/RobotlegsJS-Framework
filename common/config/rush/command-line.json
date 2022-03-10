@@ -200,7 +200,8 @@
       "summary": "Used to run eslint on all packages.",
       "description": "This command will run `npm run lint` on all packages",
       "safeForSimultaneousRushProcesses": false,
-      "enableParallelism": true
+      "enableParallelism": true,
+      "allowWarningsInSuccessfulBuild": true
     },
     {
       "name": "lint-fix",
