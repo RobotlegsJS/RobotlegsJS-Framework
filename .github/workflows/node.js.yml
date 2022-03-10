@@ -26,7 +26,7 @@ jobs:
 
       - run: node common/scripts/install-run-rush.js install
 
-      - run: node common/scripts/install-run-rush.js rebuild --verbose
+      - run: node common/scripts/install-run-rush.js build --verbose
 
       - run: node common/scripts/install-run-rush.js lint --verbose
 
