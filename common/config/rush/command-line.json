@@ -192,7 +192,8 @@
       "description": "This command will run `npm test` on all packages",
       "safeForSimultaneousRushProcesses": false,
       "enableParallelism": true,
-      "ignoreMissingScript": true
+      "ignoreMissingScript": true,
+      "allowWarningsInSuccessfulBuild": true
     },
     {
       "name": "lint",
