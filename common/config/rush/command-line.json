@@ -123,7 +123,7 @@
     //    * (EXPERIMENTAL) Disable cache for this action. This may be useful if this command affects state outside of
     //    * projects' own folders.
     //    */
-    //   "disableBuildCache ": false
+    //   "disableBuildCacheForProject": false
     // },
     //
     // {
@@ -192,7 +192,8 @@
       "description": "This command will run `npm test` on all packages",
       "safeForSimultaneousRushProcesses": false,
       "enableParallelism": true,
-      "ignoreMissingScript": true
+      "ignoreMissingScript": true,
+      "allowWarningsInSuccessfulBuild": true
     },
     {
       "name": "lint",
@@ -200,7 +201,8 @@
       "summary": "Used to run eslint on all packages.",
       "description": "This command will run `npm run lint` on all packages",
       "safeForSimultaneousRushProcesses": false,
-      "enableParallelism": true
+      "enableParallelism": true,
+      "allowWarningsInSuccessfulBuild": true
     },
     {
       "name": "lint-fix",

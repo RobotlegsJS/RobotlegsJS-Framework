@@ -6,7 +6,7 @@ The RobotlegsJS projects are all developed in the **RobotlegsJS-Framework** mono
 
 ## Setting up your machine
 
-- **Node.js 14**: We recommend you to use [nvm](https://github.com/creationix/nvm) (for Mac/Linux) or [nvm-windows](https://github.com/coreybutler/nvm-windows) (for Windows) so that you can easily switch between different [Node.js](https://nodejs.org/en/) engine versions.
+- **Node.js**: We recommend the latest LTS version, because non-stable NodeJS releases frequently have bugs. We recommend you to use [nvm](https://github.com/creationix/nvm) (for Mac/Linux) or [nvm-windows](https://github.com/coreybutler/nvm-windows) (for Windows) so that you can easily switch between different [Node.js](https://nodejs.org/en/) engine versions.
 
 - **PNPM**: We use [PNPM](https://pnpm.io) as the package manager. But you don't need to install it globally, rush installs its own local copy of the package manager to ensure that your build process is fully isolated from whatever tools are present in your local environment.
 
@@ -37,26 +37,25 @@ cd RobotlegsJS-Framework
 rush install
 ```
 
-4. Rebuild all the projects in the repo:
+4. Build all the projects in the repo:
+```bash
+rush build
+```
+
+Subsequent calls of `rush build` might be faster, since the project is using the [build cache](https://rushjs.io/pages/maintainer/build_cache) configuration.
+
+5. Rebuild all the projects in the repo:
 ```bash
 rush rebuild
 ```
 
-Subsequent calls of `rush rebuild` might be faster, since the project is using the [build cache](https://rushjs.io/pages/maintainer/build_cache) configuration.
-
-When you would like to force the rebuild of all packages, you can use the following command:
-```bash
-rush rebuild --disable-build-cache
-```
-
-
-5. If you want to build just one project:
+6. If you want to build just one project:
 ```bash
 cd RobotlegsJS-Framework\packages\core
 rushx build
 ```
 
-6. After implementing your changes, please run the following commands and have sure that they are still passing:
+7. After implementing your changes, please run the following commands and have sure that they are still passing:
 ```bash
 rush autoformat --verbose
 rush rebuild --verbose
