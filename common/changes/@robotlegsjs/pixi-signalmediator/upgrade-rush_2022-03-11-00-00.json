@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@robotlegsjs/pixi-signalmediator",
+      "comment": "",
+      "type": "none"
+    }
+  ],
+  "packageName": "@robotlegsjs/pixi-signalmediator"
+}

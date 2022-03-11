@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@robotlegsjs/core",
+      "comment": "",
+      "type": "none"
+    }
+  ],
+  "packageName": "@robotlegsjs/core"
+}
