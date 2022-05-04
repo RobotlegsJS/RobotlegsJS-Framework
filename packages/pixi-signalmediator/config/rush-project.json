@@ -18,7 +18,7 @@
    * for example by writing files outside the project folder. Where possible, a better solution is to improve
    * the build scripts to be compatible with caching.
    */
-  // "disableBuildCacheForProject": true,
+  // "disableBuildCache": true,
 
   /**
    * Configuration for the build cache feature.
