@@ -3,7 +3,7 @@
     {
       "packageName": "@robotlegsjs/phaser",
       "comment": "Update [webpack](https://www.npmjs.com/package/webpack) to version **5.44.0**, and [@types/webpack-env](https://www.npmjs.com/package/@types/webpack-env) to version **1.16.2** (see [31](https://github.com/RobotlegsJS/RobotlegsJS-Framework/pull/31))",
-      "type": "patch"
+      "type": "none"
     }
   ],
   "packageName": "@robotlegsjs/phaser"

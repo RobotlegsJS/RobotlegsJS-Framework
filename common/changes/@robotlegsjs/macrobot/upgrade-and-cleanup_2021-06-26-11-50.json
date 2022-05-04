@@ -3,7 +3,7 @@
     {
       "packageName": "@robotlegsjs/macrobot",
       "comment": "Use the same karma configuration properties and remove outdated scripts and dependencies (see [24](https://github.com/RobotlegsJS/RobotlegsJS-Framework/pull/24))",
-      "type": "patch"
+      "type": "none"
     }
   ],
   "packageName": "@robotlegsjs/macrobot",
