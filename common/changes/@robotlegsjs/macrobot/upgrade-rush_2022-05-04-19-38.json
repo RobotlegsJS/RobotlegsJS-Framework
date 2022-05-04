@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@robotlegsjs/macrobot",
+      "comment": "",
+      "type": "none"
+    }
+  ],
+  "packageName": "@robotlegsjs/macrobot"
+}

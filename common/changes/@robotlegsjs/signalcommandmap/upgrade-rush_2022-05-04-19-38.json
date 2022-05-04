@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@robotlegsjs/signalcommandmap",
+      "comment": "",
+      "type": "none"
+    }
+  ],
+  "packageName": "@robotlegsjs/signalcommandmap"
+}

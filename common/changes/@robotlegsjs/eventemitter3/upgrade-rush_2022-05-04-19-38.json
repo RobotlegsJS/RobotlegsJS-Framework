@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@robotlegsjs/eventemitter3",
+      "comment": "",
+      "type": "none"
+    }
+  ],
+  "packageName": "@robotlegsjs/eventemitter3"
+}
