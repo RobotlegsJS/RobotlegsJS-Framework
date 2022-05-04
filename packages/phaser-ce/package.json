@@ -94,7 +94,7 @@
     "karma-webpack": "^5.0.0",
     "mocha": "^9.0.2",
     "phaser-ce": "^2.15.0",
-    "prettier": "^2.5.1",
+    "prettier": "^2.6.2",
     "puppeteer": "^10.1.0",
     "reflect-metadata": "^0.1.13",
     "rimraf": "^3.0.2",
