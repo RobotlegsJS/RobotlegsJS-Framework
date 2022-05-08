@@ -7,7 +7,7 @@
 
 import { IClass } from "@robotlegsjs/core";
 import { assert } from "chai";
-import { Container, DisplayObject } from "pixi.js";
+import { Container, DisplayObject, Sprite } from "pixi.js";
 import { applyPixiPatch } from "../../../../../../src/robotlegs/bender/extensions/contextView/pixiPatch/pixi-patch";
 import { ContainerRegistry } from "../../../../../../src/robotlegs/bender/extensions/viewManager/impl/ContainerRegistry";
 import { StageCrawler } from "../../../../../../src/robotlegs/bender/extensions/viewManager/impl/StageCrawler";
@@ -77,9 +77,9 @@ describe("StageCrawler", () => {
     });
 
     it("scan_finds_all_direct_children_that_are_display_object", () => {
-        const child1: DisplayObject = new DisplayObject();
-        const child2: DisplayObject = new DisplayObject();
-        const child3: DisplayObject = new DisplayObject();
+        const child1: DisplayObject = new Sprite();
+        const child2: DisplayObject = new Sprite();
+        const child3: DisplayObject = new Sprite();
         const expected: DisplayObject[] = [container, child1, child2, child3];
         let actual: Container[] = [];
         registry.addContainer(container).addHandler(

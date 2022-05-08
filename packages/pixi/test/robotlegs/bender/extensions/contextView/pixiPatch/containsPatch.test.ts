@@ -6,8 +6,8 @@
 // ------------------------------------------------------------------------------
 
 import { assert } from "chai";
-import { Container, DisplayObject } from "pixi.js";
-import "../../../../../../src/robotlegs/bender/extensions/contextView/pixiPatch/pixi-patch";
+import { Container, DisplayObject, Sprite } from "pixi.js";
+import { contains } from "../../../../../../src/robotlegs/bender/extensions/viewManager/support/contains";
 import "../../../../../entry";
 
 describe("ContainsPatch", () => {
@@ -22,47 +22,42 @@ describe("ContainsPatch", () => {
         container = null;
     });
 
-    it("Container_have_contains_method", () => {
-        assert.isNotNull(container.contains);
-        assert.isFunction(container.contains);
-    });
-
     it("Container_contains_itself", () => {
-        assert.isTrue(container.contains(container));
+        assert.isTrue(contains(container, container));
     });
 
     it("Container_contains_direct_child", () => {
-        let child: DisplayObject = new DisplayObject();
+        let child: DisplayObject = new Sprite();
 
         container.addChild(child);
 
-        assert.isTrue(container.contains(child));
+        assert.isTrue(contains(container, child));
     });
 
     it("Container_contains_direct_children", () => {
-        let child1: DisplayObject = new DisplayObject();
-        let child2: DisplayObject = new DisplayObject();
-        let child3: DisplayObject = new DisplayObject();
+        let child1: DisplayObject = new Sprite();
+        let child2: DisplayObject = new Sprite();
+        let child3: DisplayObject = new Sprite();
 
         container.addChild(child1);
         container.addChild(child2);
         container.addChild(child3);
 
-        assert.isTrue(container.contains(child1));
-        assert.isTrue(container.contains(child2));
-        assert.isTrue(container.contains(child3));
+        assert.isTrue(contains(container, child1));
+        assert.isTrue(contains(container, child2));
+        assert.isTrue(contains(container, child3));
     });
 
     it("Container_contains_nested_children", () => {
         let child1: Container = new Container();
-        let child2: DisplayObject = new DisplayObject();
-        let child3: DisplayObject = new DisplayObject();
+        let child2: DisplayObject = new Sprite();
+        let child3: DisplayObject = new Sprite();
         let grandChild1: Container = new Container();
-        let grandChild2: DisplayObject = new DisplayObject();
-        let grandChild3: DisplayObject = new DisplayObject();
-        let greatGrandChild1: DisplayObject = new DisplayObject();
-        let greatGrandChild2: DisplayObject = new DisplayObject();
-        let greatGrandChild3: DisplayObject = new DisplayObject();
+        let grandChild2: DisplayObject = new Sprite();
+        let grandChild3: DisplayObject = new Sprite();
+        let greatGrandChild1: DisplayObject = new Sprite();
+        let greatGrandChild2: DisplayObject = new Sprite();
+        let greatGrandChild3: DisplayObject = new Sprite();
 
         container.addChild(child1);
         container.addChild(child2);
@@ -76,17 +71,17 @@ describe("ContainsPatch", () => {
         grandChild1.addChild(greatGrandChild2);
         grandChild1.addChild(greatGrandChild3);
 
-        assert.isTrue(container.contains(child1));
-        assert.isTrue(container.contains(child2));
-        assert.isTrue(container.contains(child3));
+        assert.isTrue(contains(container, child1));
+        assert.isTrue(contains(container, child2));
+        assert.isTrue(contains(container, child3));
 
-        assert.isTrue(container.contains(grandChild1));
-        assert.isTrue(container.contains(grandChild2));
-        assert.isTrue(container.contains(grandChild3));
+        assert.isTrue(contains(container, grandChild1));
+        assert.isTrue(contains(container, grandChild2));
+        assert.isTrue(contains(container, grandChild3));
 
-        assert.isTrue(container.contains(greatGrandChild1));
-        assert.isTrue(container.contains(greatGrandChild2));
-        assert.isTrue(container.contains(greatGrandChild3));
+        assert.isTrue(contains(container, greatGrandChild1));
+        assert.isTrue(contains(container, greatGrandChild2));
+        assert.isTrue(contains(container, greatGrandChild3));
     });
 
     it("Container_does_not_contains_ancestors", () => {
@@ -98,9 +93,9 @@ describe("ContainsPatch", () => {
         grandParent.addChild(parent);
         greatGrandParent.addChild(grandParent);
 
-        assert.isFalse(container.contains(parent));
-        assert.isFalse(container.contains(grandParent));
-        assert.isFalse(container.contains(greatGrandParent));
+        assert.isFalse(contains(container, parent));
+        assert.isFalse(contains(container, grandParent));
+        assert.isFalse(contains(container, greatGrandParent));
     });
 
     it("Container_does_not_contains_same_level_container", () => {
@@ -112,8 +107,8 @@ describe("ContainsPatch", () => {
         parent.addChild(brother);
         parent.addChild(sister);
 
-        assert.isFalse(container.contains(parent));
-        assert.isFalse(container.contains(brother));
-        assert.isFalse(container.contains(sister));
+        assert.isFalse(contains(container, parent));
+        assert.isFalse(contains(container, brother));
+        assert.isFalse(contains(container, sister));
     });
 });

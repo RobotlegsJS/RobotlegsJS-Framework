@@ -6,7 +6,7 @@
 // ------------------------------------------------------------------------------
 
 import { inject, injectable } from "@robotlegsjs/core";
-import { DisplayObject } from "pixi.js";
+import { Sprite } from "pixi.js";
 import { MediatorWatcher } from "./MediatorWatcher";
 
 @injectable()
@@ -14,8 +14,8 @@ export class ExampleDisplayObjectMediator {
     @inject(MediatorWatcher)
     public mediatorWatcher: MediatorWatcher;
 
-    @inject(DisplayObject)
-    public view: DisplayObject;
+    @inject(Sprite)
+    public view: Sprite;
 
     public initialize(): void {
         this.mediatorWatcher.notify("ExampleDisplayObjectMediator");
