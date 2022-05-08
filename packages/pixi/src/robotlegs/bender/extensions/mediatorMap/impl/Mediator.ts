@@ -14,7 +14,9 @@ import {
     inject,
     injectable
 } from "@robotlegsjs/core";
+import { DisplayObject } from "pixi.js";
 import { IMediator } from "../api/IMediator";
+import { ConvertToEventDispatcher } from "./ConvertToEventDispatcher";
 
 /**
  * Classic Robotlegs mediator implementation
@@ -22,7 +24,13 @@ import { IMediator } from "../api/IMediator";
  * <p>Override initialize and destroy to hook into the mediator lifecycle.</p>
  */
 @injectable()
-export abstract class Mediator<T extends IEventDispatcher> implements IMediator {
+export abstract class Mediator<T extends DisplayObject> implements IMediator {
+    /*============================================================================*/
+    /* Private Properties                                                         */
+    /*============================================================================*/
+
+    private _viewConverted: ConvertToEventDispatcher;
+
     /*============================================================================*/
     /* Protected Properties                                                       */
     /*============================================================================*/
@@ -41,6 +49,7 @@ export abstract class Mediator<T extends IEventDispatcher> implements IMediator 
 
     public set view(view: T) {
         this._viewComponent = view;
+        this._viewConverted = new ConvertToEventDispatcher(this._viewComponent);
     }
 
     public get view(): T {
@@ -82,7 +91,7 @@ export abstract class Mediator<T extends IEventDispatcher> implements IMediator 
         priority?: number
     ): void {
         this.eventMap.mapListener(
-            this._viewComponent,
+            this._viewConverted,
             eventString,
             listener,
             thisObject,
@@ -128,7 +137,7 @@ export abstract class Mediator<T extends IEventDispatcher> implements IMediator 
         useCapture?: boolean
     ): void {
         this.eventMap.unmapListener(
-            this._viewComponent,
+            this._viewConverted,
             eventString,
             listener,
             thisObject,

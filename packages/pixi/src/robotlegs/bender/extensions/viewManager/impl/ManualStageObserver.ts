@@ -89,15 +89,11 @@ export class ManualStageObserver {
     private _addContainerListener(container: Container): void {
         // We're interested in ALL container bindings
         // but just for normal, bubbling events
-        container.addEventListener(ConfigureViewEvent.CONFIGURE_VIEW, this._onConfigureView, this);
+        container.on(ConfigureViewEvent.CONFIGURE_VIEW, this._onConfigureView, this);
     }
 
     private _removeContainerListener(container: Container): void {
-        container.removeEventListener(
-            ConfigureViewEvent.CONFIGURE_VIEW,
-            this._onConfigureView,
-            this
-        );
+        container.off(ConfigureViewEvent.CONFIGURE_VIEW, this._onConfigureView, this);
     }
 
     private _onConfigureView(event: ConfigureViewEvent): void {

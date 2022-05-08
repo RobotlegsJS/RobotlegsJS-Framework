@@ -7,6 +7,7 @@
 
 import { EventDispatcher, inject, injectable } from "@robotlegsjs/core";
 import { Container } from "pixi.js";
+import { contains } from "../../contextView/pixiPatch/contains-patch";
 import { IViewHandler } from "../api/IViewHandler";
 import { IViewManager } from "../api/IViewManager";
 import { ContainerBinding } from "../impl/ContainerBinding";
@@ -155,8 +156,8 @@ export class ViewManager extends EventDispatcher implements IViewManager {
         if (isValid) {
             this._containers.forEach((registeredContainer) => {
                 if (
-                    registeredContainer.contains(container) ||
-                    container.contains(registeredContainer)
+                    contains(registeredContainer, container) ||
+                    contains(container, registeredContainer)
                 ) {
                     throw new Error("Containers can not be nested");
                 }

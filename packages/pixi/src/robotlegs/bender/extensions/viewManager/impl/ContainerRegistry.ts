@@ -7,6 +7,7 @@
 
 import { EventDispatcher } from "@robotlegsjs/core";
 import { Container } from "pixi.js";
+import { contains } from "../../contextView/pixiPatch/contains-patch";
 import { ContainerBinding } from "./ContainerBinding";
 import { ContainerBindingEvent } from "./ContainerBindingEvent";
 import { ContainerRegistryEvent } from "./ContainerRegistryEvent";
@@ -128,11 +129,11 @@ export class ContainerRegistry extends EventDispatcher {
         // A. Don't have a parent, OR
         // B. Have a parent that is not contained within the new binding
         this._bindingByContainer.forEach((childBinding) => {
-            if (container.contains(childBinding.container)) {
+            if (contains(container, childBinding.container)) {
                 if (!childBinding.parent) {
                     this._removeRootBinding(childBinding);
                     childBinding.parent = binding;
-                } else if (!container.contains(childBinding.parent.container)) {
+                } else if (!contains(container, childBinding.parent.container)) {
                     childBinding.parent = binding;
                 }
             }

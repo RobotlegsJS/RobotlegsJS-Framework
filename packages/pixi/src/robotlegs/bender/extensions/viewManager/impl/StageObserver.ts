@@ -86,11 +86,11 @@ export class StageObserver {
     }
 
     private _addRootListener(container: Container): void {
-        container.addEventListener("added", this._onViewAddedToStage, this);
+        container.on("added", this._onViewAddedToStage, this);
     }
 
     private _removeRootListener(container: Container): void {
-        container.removeEventListener("added", this._onViewAddedToStage, this);
+        container.off("added", this._onViewAddedToStage, this);
     }
 
     private _onViewAddedToStage(event: IEvent): void {
