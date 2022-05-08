@@ -10,7 +10,7 @@ import { Container, DisplayObject, Sprite } from "pixi.js";
 import { contains } from "../../../../../../src/robotlegs/bender/extensions/viewManager/support/contains";
 import "../../../../../entry";
 
-describe("ContainsPatch", () => {
+describe("Contains", () => {
     let container: Container;
 
     beforeEach(() => {
