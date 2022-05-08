@@ -7,11 +7,11 @@
 
 import { EventDispatcher, inject, injectable } from "@robotlegsjs/core";
 import { Container } from "pixi.js";
-import { contains } from "../../contextView/pixiPatch/contains-patch";
 import { IViewHandler } from "../api/IViewHandler";
 import { IViewManager } from "../api/IViewManager";
 import { ContainerBinding } from "../impl/ContainerBinding";
 import { ContainerRegistry } from "../impl/ContainerRegistry";
+import { contains } from "../support/contains";
 import { ViewManagerEvent } from "./ViewManagerEvent";
 
 // [Event(name="containerAdd", type="robotlegs.bender.extensions.viewManager.impl.ViewManagerEvent")]

@@ -7,7 +7,7 @@
 
 import { EventDispatcher } from "@robotlegsjs/core";
 import { Container } from "pixi.js";
-import { contains } from "../../contextView/pixiPatch/contains-patch";
+import { contains } from "../support/contains";
 import { ContainerBinding } from "./ContainerBinding";
 import { ContainerBindingEvent } from "./ContainerBindingEvent";
 import { ContainerRegistryEvent } from "./ContainerRegistryEvent";
