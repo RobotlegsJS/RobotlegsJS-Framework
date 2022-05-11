@@ -5,18 +5,10 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import {
-    Event,
-    IClass,
-    IEvent,
-    IEventDispatcher,
-    IEventMap,
-    inject,
-    injectable
-} from "@robotlegsjs/core";
-import { DisplayObject } from "pixi.js";
+import { Event, IClass, IEvent, IEventDispatcher, inject, injectable } from "@robotlegsjs/core";
+import { IEventEmitterMap } from "@robotlegsjs/eventemitter3";
+import { DisplayObject, utils } from "pixi.js";
 import { IMediator } from "../api/IMediator";
-import { ConvertToEventDispatcher } from "./ConvertToEventDispatcher";
 
 /**
  * Classic Robotlegs mediator implementation
@@ -26,17 +18,11 @@ import { ConvertToEventDispatcher } from "./ConvertToEventDispatcher";
 @injectable()
 export abstract class Mediator<T extends DisplayObject> implements IMediator {
     /*============================================================================*/
-    /* Private Properties                                                         */
-    /*============================================================================*/
-
-    private _viewConverted: ConvertToEventDispatcher;
-
-    /*============================================================================*/
     /* Protected Properties                                                       */
     /*============================================================================*/
 
-    @inject(IEventMap)
-    protected eventMap: IEventMap;
+    @inject(IEventEmitterMap)
+    protected eventMap: IEventEmitterMap;
 
     @inject(IEventDispatcher)
     protected eventDispatcher: IEventDispatcher;
@@ -49,7 +35,6 @@ export abstract class Mediator<T extends DisplayObject> implements IMediator {
 
     public set view(view: T) {
         this._viewComponent = view;
-        this._viewConverted = new ConvertToEventDispatcher(this._viewComponent);
     }
 
     public get view(): T {
@@ -84,21 +69,10 @@ export abstract class Mediator<T extends DisplayObject> implements IMediator {
 
     protected addViewListener(
         eventString: string,
-        listener: Function,
-        thisObject?: any,
-        eventClass?: IClass<IEvent>,
-        useCapture?: boolean,
-        priority?: number
+        listener: utils.EventEmitter.ListenerFn,
+        thisObject?: any
     ): void {
-        this.eventMap.mapListener(
-            this._viewConverted,
-            eventString,
-            listener,
-            thisObject,
-            eventClass,
-            useCapture,
-            priority
-        );
+        this.eventMap.on(this._viewComponent, eventString, listener, thisObject);
     }
 
     protected addContextListener(
@@ -131,19 +105,10 @@ export abstract class Mediator<T extends DisplayObject> implements IMediator {
 
     protected removeViewListener(
         eventString: string,
-        listener: Function,
-        thisObject?: any,
-        eventClass?: IClass<IEvent>,
-        useCapture?: boolean
+        listener: utils.EventEmitter.ListenerFn,
+        thisObject?: any
     ): void {
-        this.eventMap.unmapListener(
-            this._viewConverted,
-            eventString,
-            listener,
-            thisObject,
-            eventClass,
-            useCapture
-        );
+        this.eventMap.off(this._viewComponent, eventString, listener, thisObject);
     }
 
     protected removeContextListener(
