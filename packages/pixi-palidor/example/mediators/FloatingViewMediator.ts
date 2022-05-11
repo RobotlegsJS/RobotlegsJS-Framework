@@ -15,9 +15,9 @@ export class FloatingViewMediator extends Mediator<FloatingView> {
     public initialize(): void {
         this.view.interactive = true;
         this.view.setTitle(this.view.parent.children.length);
-        this.eventMap.mapListener(this.view.addViewButton, "click", this._onAddView, this);
-        this.eventMap.mapListener(this.view.closeAllButton, "click", this._onCloseAll, this);
-        this.eventMap.mapListener(this.view.closeButton, "click", this._onClose, this);
+        this.eventMap.on(this.view.addViewButton, "click", this._onAddView, this);
+        this.eventMap.on(this.view.closeAllButton, "click", this._onCloseAll, this);
+        this.eventMap.on(this.view.closeButton, "click", this._onClose, this);
     }
 
     public destroy(): void {

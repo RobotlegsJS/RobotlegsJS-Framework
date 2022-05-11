@@ -12,8 +12,8 @@ import { RobotlegsView } from "../views/RobotlegsView";
 @injectable()
 export class RobotlegsViewMediator extends Mediator<RobotlegsView> {
     public initialize(): void {
-        this.eventMap.mapListener(this.view.setViewButton, "click", this._onSetView, this);
-        this.eventMap.mapListener(this.view.addViewButton, "click", this._onAddView, this);
+        this.eventMap.on(this.view.setViewButton, "click", this._onSetView, this);
+        this.eventMap.on(this.view.addViewButton, "click", this._onAddView, this);
     }
 
     public destroy(): void {
