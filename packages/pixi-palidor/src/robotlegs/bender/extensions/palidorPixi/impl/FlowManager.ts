@@ -5,7 +5,8 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import { Event, IClass, IEventDispatcher, IEventMap, inject, injectable } from "@robotlegsjs/core";
+import { Event, IClass, IEventDispatcher, inject, injectable } from "@robotlegsjs/core";
+import { IEventEmitterMap } from "@robotlegsjs/eventemitter3";
 import { Container } from "pixi.js";
 import { IContainerController } from "../api/IContainerController";
 import { IFlowManager } from "../api/IFlowManager";
@@ -15,7 +16,7 @@ import { FlowViewMapping } from "./FlowViewMapping";
 
 @injectable()
 export class FlowManager implements IFlowManager {
-    private _eventMap: IEventMap;
+    private _eventMap: IEventEmitterMap;
     private _controller: IContainerController;
     public get controller(): IContainerController {
         return this._controller;
@@ -32,7 +33,7 @@ export class FlowManager implements IFlowManager {
     }
 
     public constructor(
-        @inject(IEventMap) eventMap: IEventMap,
+        @inject(IEventEmitterMap) eventMap: IEventEmitterMap,
         @inject(IContainerController) controller: IContainerController,
         @inject(IEventDispatcher) eventDispatcher: IEventDispatcher
     ) {
