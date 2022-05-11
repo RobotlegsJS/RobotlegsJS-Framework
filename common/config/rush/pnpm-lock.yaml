@@ -4,6 +4,14 @@ specifiers:
   '@istanbuljs/nyc-config-typescript': ^1.0.1
   '@jsdevtools/coverage-istanbul-loader': ^3.0.5
   '@mcler/webpack-concat-plugin': ^4.1.3
+  '@pixi/constants': ^6.3.2
+  '@pixi/core': ^6.3.2
+  '@pixi/display': ^6.3.2
+  '@pixi/math': ^6.3.2
+  '@pixi/runner': ^6.3.2
+  '@pixi/settings': ^6.3.2
+  '@pixi/ticker': ^6.3.2
+  '@pixi/utils': ^6.3.2
   '@rush-temp/core': file:./projects/core.tgz
   '@rush-temp/createjs': file:./projects/createjs.tgz
   '@rush-temp/eventemitter3': file:./projects/eventemitter3.tgz
@@ -87,6 +95,14 @@ dependencies:
   '@istanbuljs/nyc-config-typescript': 1.0.1_34d69bb14d54c3c15df9aea89b43ee7d
   '@jsdevtools/coverage-istanbul-loader': 3.0.5
   '@mcler/webpack-concat-plugin': 4.1.3_ab50f0d0285cee5400f4bebc826901d4
+  '@pixi/constants': 6.3.2
+  '@pixi/core': 6.3.2_4257bfb9773fb237c7e267d891c82adf
+  '@pixi/display': 6.3.2_e7c4c8a08e39c75fae6fa3e48b20e93d
+  '@pixi/math': 6.3.2
+  '@pixi/runner': 6.3.2
+  '@pixi/settings': 6.3.2
+  '@pixi/ticker': 6.3.2_@pixi+settings@6.3.2
+  '@pixi/utils': 6.3.2_cb3fd473ba582823f2dfd3d53c57a4ca
   '@rush-temp/core': file:projects/core.tgz
   '@rush-temp/createjs': file:projects/createjs.tgz
   '@rush-temp/eventemitter3': file:projects/eventemitter3.tgz
@@ -6454,7 +6470,7 @@ packages:
   /querystring/0.2.0:
     resolution: {integrity: sha1-sgmEkgO7Jd+CDadW50cAWHhSFiA=}
     engines: {node: '>=0.4.x'}
-    deprecated: The
+    deprecated: The querystring API is considered Legacy. new code should use the URLSearchParams API instead.
     dev: false
 
   /querystringify/2.2.0:
@@ -9143,7 +9159,7 @@ packages:
     dev: false
 
   file:projects/pixi-palidor.tgz:
-    resolution: {integrity: sha512-SQXMcCW7F/707X/K/cXAT9YWEZJogX1lydndVge2dQRkWw2cfdaeRxwrbciQKR+F2l6t6By+S2nqbvHmhxBHxg==, tarball: file:projects/pixi-palidor.tgz}
+    resolution: {integrity: sha512-xsRv1sDjcaH4W59vQDoNeRdMpCG7g8HfkD/TAfmIPa8kV6n1H/jhAdhNOj1rLHu5NNnnui9gGr7oK4clvDD0Ww==, tarball: file:projects/pixi-palidor.tgz}
     name: '@rush-temp/pixi-palidor'
     version: 0.0.0
     dependencies:
@@ -9177,7 +9193,7 @@ packages:
       karma-sourcemap-writer: 0.1.2
       karma-webpack: 5.0.0_webpack@5.44.0
       mocha: 9.0.2
-      pixi.js: 5.2.1
+      pixi.js: 6.3.2
       prettier: 2.6.2
       puppeteer: 10.1.0
       reflect-metadata: 0.1.13
@@ -9267,11 +9283,19 @@ packages:
     dev: false
 
   file:projects/pixi.tgz:
-    resolution: {integrity: sha512-qaYe5Hmep4p0NxP2Rpvzg8hma3SbKgmCQiSrJm7ziy2weBighjaEhXq/7nPvqOiz/WPFwAVRE4NaWKDSGNFvUw==, tarball: file:projects/pixi.tgz}
+    resolution: {integrity: sha512-Lx3+ZKVXC9lgrLG0Ef1EbXZT0a3T+ssYlTvkmTclKUpn21dIchbrMujXLe0lQyomqO23udHKa5mSGp2+6wmB/Q==, tarball: file:projects/pixi.tgz}
     name: '@rush-temp/pixi'
     version: 0.0.0
     dependencies:
       '@jsdevtools/coverage-istanbul-loader': 3.0.5
+      '@pixi/constants': 6.3.2
+      '@pixi/core': 6.3.2_4257bfb9773fb237c7e267d891c82adf
+      '@pixi/display': 6.3.2_e7c4c8a08e39c75fae6fa3e48b20e93d
+      '@pixi/math': 6.3.2
+      '@pixi/runner': 6.3.2
+      '@pixi/settings': 6.3.2
+      '@pixi/ticker': 6.3.2_@pixi+settings@6.3.2
+      '@pixi/utils': 6.3.2_cb3fd473ba582823f2dfd3d53c57a4ca
       '@rushstack/eslint-config': 2.3.4_eslint@7.30.0+typescript@4.2.4
       '@types/bluebird': 3.5.36
       '@types/chai': 4.2.21
