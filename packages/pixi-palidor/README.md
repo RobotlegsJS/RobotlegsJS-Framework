@@ -83,7 +83,7 @@ Then follow the [installation instructions](https://github.com/RobotlegsJS/Robot
 **Dependencies**
 
 + [RobotlegsJS](https://github.com/RobotlegsJS/RobotlegsJS-Framework/tree/master/packages/core)
-+ [RobotlegsJS EventEmitter3](https://github.com/RobotlegsJS/RobotlegsJS-Framework/tree/master/packages/eventemitter3)
++ [RobotlegsJS-EventEmitter3](https://github.com/RobotlegsJS/RobotlegsJS-Framework/tree/master/packages/eventemitter3)
 + [RobotlegsJS-Pixi](https://github.com/RobotlegsJS/RobotlegsJS-Framework/tree/master/packages/pixi)
 + [tslib](https://github.com/Microsoft/tslib)
 
