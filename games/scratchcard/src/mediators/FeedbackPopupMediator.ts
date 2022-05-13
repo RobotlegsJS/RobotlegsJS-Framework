@@ -13,7 +13,7 @@ export class FeedbackPopupMediator extends Mediator<FeedbackPopup> {
         this.view.interactive = true;
         this.view.buttonMode = true;
         this.view.createMSG(this._model.feedback);
-        this.eventMap.mapListener(this.view, "click", this._onClick, this);
+        this.eventMap.on(this.view, "click", this._onClick, this);
     }
 
     public destroy(): void {
