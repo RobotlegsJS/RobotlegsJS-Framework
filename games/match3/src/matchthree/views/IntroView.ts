@@ -18,7 +18,10 @@ export class IntroView extends Container {
     }
 
     private _setupImages(): void {
-        const logo: Sprite = TilingSprite.from(AtlasKeys.LOGO_TYPESCRIPT);
+        const logo: Sprite = TilingSprite.from(AtlasKeys.LOGO_TYPESCRIPT, {
+            width: 340,
+            height: 64
+        });
         logo.anchor.x = 0.5;
         logo.x = ViewPortSize.HALF_WIDTH;
         logo.y = ViewPortSize.MAX_HEIGHT - 64;

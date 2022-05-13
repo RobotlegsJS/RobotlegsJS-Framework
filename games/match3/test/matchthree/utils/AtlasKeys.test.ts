@@ -6,7 +6,7 @@ import "../../entry";
 describe("AtlasKeys", () => {
     it("GetTexture", () => {
         const key = "./assets/atlas/game/piece_normal_3.png";
-        const sprite: Sprite = TilingSprite.from(key);
+        const sprite: Sprite = TilingSprite.from(key, { width: 36, height: 36 });
         const textureCache: any = { "./assets/atlas/game/piece_normal_3.png": sprite.texture };
         AtlasKeys.update(textureCache);
         assert.equal(sprite.texture, AtlasKeys.getTexture(key));

@@ -1,4 +1,4 @@
-import { BitmapText, Container, Graphics, Sprite, Texture } from "pixi.js";
+import { BitmapText, Container, Graphics, Sprite, TextStyleAlign, Texture } from "pixi.js";
 import { IconButton } from "../views/components/IconButton";
 import { LevelSelectButton } from "../views/components/LevelSelectButton";
 import { AtlasKeys } from "./AtlasKeys";
@@ -8,8 +8,9 @@ import { ViewPortSize } from "./ViewPortSize";
 export class PixiFactory {
     public static getText(text: string, fontSize: number = MagicValues.SIZE_DEFAULT): BitmapText {
         const style = {
-            align: "center",
-            font: { name: MagicValues.FONT_FAMILY, size: fontSize }
+            align: "center" as TextStyleAlign,
+            fontName: MagicValues.FONT_FAMILY,
+            fontSize
         };
 
         return new BitmapText(text, style);
@@ -17,8 +18,9 @@ export class PixiFactory {
 
     public static getTitle(label: string): Container {
         const style = {
-            align: "center",
-            font: { name: MagicValues.FONT_FAMILY, size: MagicValues.SIZE_TITLE }
+            align: "center" as TextStyleAlign,
+            fontName: MagicValues.FONT_FAMILY,
+            fontSize: MagicValues.SIZE_TITLE
         };
 
         const title = new BitmapText(label, style);

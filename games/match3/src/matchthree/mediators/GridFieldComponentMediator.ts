@@ -46,8 +46,8 @@ export class GridFieldComponentMediator extends Mediator<GridFieldComponent> {
             this
         );
 
-        this.eventMap.mapListener(this.view, "mousedown", this._onSelectPiecesHandlerView, this);
-        this.eventMap.mapListener(this.view, "mouseup", this._onSelectPiecesHandlerView, this);
+        this.eventMap.on(this.view, "mousedown", this._onSelectPiecesHandlerView, this);
+        this.eventMap.on(this.view, "mouseup", this._onSelectPiecesHandlerView, this);
 
         this._gameManager.nextStep();
     }

@@ -23,13 +23,8 @@ export class YouWinPopupMediator extends Mediator<YouWinPopup> {
             String(this._levelModel.levelInfo.hiScore)
         );
 
-        this.eventMap.mapListener(
-            this.view.retryButton,
-            "click",
-            this._onTriggeredHandlerRetryButton,
-            this
-        );
-        this.eventMap.mapListener(
+        this.eventMap.on(this.view.retryButton, "click", this._onTriggeredHandlerRetryButton, this);
+        this.eventMap.on(
             this.view.levelSelectButton,
             "click",
             this._onTriggeredHandlerLevelSelectButton,

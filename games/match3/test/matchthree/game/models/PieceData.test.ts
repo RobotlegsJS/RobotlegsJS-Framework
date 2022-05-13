@@ -67,7 +67,10 @@ describe("PieceData", () => {
 
     it("UpdateDisplayPosition: Any", () => {
         piece = new PieceData(5, 6, PieceType.NORMAL, PieceIds.ORANGE);
-        piece.display = TilingSprite.from("./assets/atlas/game/piece_normal_3.png");
+        piece.display = TilingSprite.from("./assets/atlas/game/piece_normal_3.png", {
+            width: 36,
+            height: 36
+        });
         piece.updateDisplayPosition();
         assert.equal(piece.display.x, Tile.TILE_WIDTH * piece.col);
         assert.equal(piece.display.y, Tile.TILE_WIDTH * piece.row);
@@ -75,7 +78,10 @@ describe("PieceData", () => {
 
     it("UpdateDisplayPosition: Any in the first row", () => {
         piece = new PieceData(5, 0, PieceType.NORMAL, PieceIds.ORANGE);
-        piece.display = TilingSprite.from("./assets/atlas/game/piece_normal_3.png");
+        piece.display = TilingSprite.from("./assets/atlas/game/piece_normal_3.png", {
+            width: 36,
+            height: 36
+        });
         piece.updateDisplayPosition();
         assert.equal(piece.display.x, Tile.TILE_WIDTH * piece.col);
         assert.equal(piece.display.y, -Tile.TILE_HEIGHT);
