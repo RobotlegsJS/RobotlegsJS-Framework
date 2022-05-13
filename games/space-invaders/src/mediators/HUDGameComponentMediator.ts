@@ -18,7 +18,7 @@ export class HUDGameComponentMediator extends Mediator<HUDGameComponent> {
     private _flowService: FlowService;
 
     public initialize(): void {
-        this.eventMap.mapListener(this.view.pauseButton, "click", this.pauseButton_onClick, this);
+        this.eventMap.on(this.view.pauseButton, "click", this.pauseButton_onClick, this);
         this.eventMap.mapListener(
             this.eventDispatcher,
             GameEvent.UPDATE_HUD_DATA,

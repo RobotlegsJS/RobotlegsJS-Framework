@@ -9,7 +9,7 @@ export class InfoPopupMediator extends Mediator<InfoPopup> {
     private _service: FlowService;
 
     public initialize(): void {
-        this.eventMap.mapListener(this.view.closeButton, "click", this._onClickCloseButton, this);
+        this.eventMap.on(this.view.closeButton, "click", this._onClickCloseButton, this);
     }
 
     public destroy(): void {

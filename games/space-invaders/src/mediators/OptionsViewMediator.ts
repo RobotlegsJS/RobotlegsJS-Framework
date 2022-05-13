@@ -9,8 +9,8 @@ export class OptionsViewMediator extends Mediator<OptionsView> {
     private _flowService: FlowService;
 
     public initialize(): void {
-        this.eventMap.mapListener(this.view.homeButton, "click", this._onClickHomeButton, this);
-        this.eventMap.mapListener(this.view.resetButton, "click", this._onClickResetButton, this);
+        this.eventMap.on(this.view.homeButton, "click", this._onClickHomeButton, this);
+        this.eventMap.on(this.view.resetButton, "click", this._onClickResetButton, this);
     }
 
     public destroy(): void {
