@@ -19,25 +19,15 @@ export class LevelSelectViewMediator extends Mediator<LevelSelectView> {
     public initialize(): void {
         this.view.updateHighscore(this.highScoreManager.getAllHighScore());
         this.view.animationIn();
-        this.eventMap.mapListener(
-            this.view.easyButton,
-            "click",
-            this._onTriggeredHandlerLevelButton,
-            this
-        );
-        this.eventMap.mapListener(
+        this.eventMap.on(this.view.easyButton, "click", this._onTriggeredHandlerLevelButton, this);
+        this.eventMap.on(
             this.view.normalButton,
             "click",
             this._onTriggeredHandlerLevelButton,
             this
         );
-        this.eventMap.mapListener(
-            this.view.hardButton,
-            "click",
-            this._onTriggeredHandlerLevelButton,
-            this
-        );
-        this.eventMap.mapListener(
+        this.eventMap.on(this.view.hardButton, "click", this._onTriggeredHandlerLevelButton, this);
+        this.eventMap.on(
             this.view.customButton,
             "click",
             this._onTriggeredHandlerLevelCustomButton,

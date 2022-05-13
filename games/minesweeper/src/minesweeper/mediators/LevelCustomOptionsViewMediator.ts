@@ -19,8 +19,8 @@ export class LevelCustomOptionsViewMediator extends Mediator<LevelCustomOptionsV
 
     public initialize(): void {
         this.view.animationIn();
-        this.eventMap.mapListener(this.view.backButton, "click", this._onBackClick, this);
-        this.eventMap.mapListener(this.view.playButton, "click", this._onPlayClick, this);
+        this.eventMap.on(this.view.backButton, "click", this._onBackClick, this);
+        this.eventMap.on(this.view.playButton, "click", this._onPlayClick, this);
     }
 
     public destroy(): void {

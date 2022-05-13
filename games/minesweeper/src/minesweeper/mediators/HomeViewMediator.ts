@@ -12,7 +12,7 @@ export class HomeViewMediator extends Mediator<HomeView> {
         this.view.interactive = true;
         this.view.buttonMode = true;
         this.view.animationIn();
-        this.eventMap.mapListener(this.view, "click", this._onClickPlayButton, this);
+        this.eventMap.on(this.view, "click", this._onClickPlayButton, this);
     }
 
     public destroy(): void {
