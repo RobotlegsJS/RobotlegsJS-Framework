@@ -29,18 +29,18 @@ allowing the final user to choose the desired version of the `pixi.js` library o
 
 #### For `pixi.js` version 6
 
-The `@robotlegsjs/pixi` package version `^5.0.0` is compatible with versions `>=6.0.0 <7` version range of `pixi.js` library.
+The `@robotlegsjs/pixi` package version `^4.0.0` is compatible with versions `>=6.0.0 <7` version range of `pixi.js` library.
 
 You can setup your project for version 6 of `pixi.js` using:
 
 ```bash
-npm install @robotlegsjs/pixi@^5.0.0 pixi.js@^6.0.0 --save
+npm install @robotlegsjs/pixi@^4.0.0 pixi.js@^6.0.0 --save
 ```
 
 or
 
 ```bash
-yarn add @robotlegsjs/pixi@^5.0.0 pixi.js@^6.0.0
+yarn add @robotlegsjs/pixi@^4.0.0 pixi.js@^6.0.0
 ```
 
 #### For `pixi.js` version 5
