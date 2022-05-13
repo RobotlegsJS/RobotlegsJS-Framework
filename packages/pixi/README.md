@@ -52,13 +52,13 @@ Since version `5.0.0` of `pixi.js`, the `eventemitter3` library was removed and 
 You can setup your project for version 5 of `pixi.js` using:
 
 ```bash
-npm install @robotlegsjs/pixi@^2.0.0 pixi.js@^5.0.0 --save
+npm install @robotlegsjs/pixi@^3.0.0 pixi.js@^5.0.0 --save
 ```
 
 or
 
 ```bash
-yarn add @robotlegsjs/pixi@^2.0.0 pixi.js@^5.0.0
+yarn add @robotlegsjs/pixi@^3.0.0 pixi.js@^5.0.0
 ```
 
 #### For `pixi.js` version 4
@@ -96,7 +96,7 @@ Then follow the [installation instructions](https://github.com/RobotlegsJS/Robot
 **Dependencies**
 
 + [RobotlegsJS](https://github.com/RobotlegsJS/RobotlegsJS-Framework/tree/master/packages/core)
-+ [RobotlegsJS EventEmitter3](https://github.com/RobotlegsJS/RobotlegsJS-Framework/tree/master/packages/eventemitter3)
++ [RobotlegsJS-EventEmitter3](https://github.com/RobotlegsJS/RobotlegsJS-Framework/tree/master/packages/eventemitter3)
 + [tslib](https://github.com/Microsoft/tslib)
 
 **Peer Dependencies**
