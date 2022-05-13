@@ -11,12 +11,7 @@ export class GameViewMediator extends Mediator<GameView> {
     public initialize(): void {
         this.view.createComponents();
         this.view.animationIn();
-        this.eventMap.mapListener(
-            this.view.pauseButton,
-            "click",
-            this.pauseButton_onTriggeredHandler,
-            this
-        );
+        this.eventMap.on(this.view.pauseButton, "click", this.pauseButton_onTriggeredHandler, this);
     }
 
     public destroy(): void {

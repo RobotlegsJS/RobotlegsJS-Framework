@@ -1,23 +1,20 @@
-/// <reference path="../node_modules/@robotlegsjs/pixi/definitions/pixi.d.ts" />
-
 import { Context } from "@robotlegsjs/core";
 import { ContextView } from "@robotlegsjs/pixi";
 import { PalidorBundle } from "@robotlegsjs/pixi-palidor";
+import { AbstractRenderer, autoDetectRenderer, Container, Loader, utils } from "pixi.js";
 import { GameConfig } from "./battleship/configs/GameConfig";
 import { PalidorConfig } from "./battleship/configs/PalidorConfig";
 import { ViewsConfig } from "./battleship/configs/ViewsConfig";
 import { AtlasKeys } from "./battleship/utils/AtlasKeys";
 
-import PIXI = require("pixi.js");
-
 export class Game {
-    private _stage: PIXI.Container;
-    private _renderer: PIXI.Renderer;
+    private _stage: Container;
+    private _renderer: AbstractRenderer;
     private _context: Context;
 
     public constructor() {
-        this._renderer = PIXI.autoDetectRenderer({ width: 400, height: 600 });
-        this._stage = new PIXI.Container();
+        this._renderer = autoDetectRenderer({ width: 400, height: 600 });
+        this._stage = new Container();
         this._context = new Context();
         this._context
             .install(PalidorBundle)
@@ -25,7 +22,7 @@ export class Game {
             .configure(GameConfig, ViewsConfig, PalidorConfig)
             .initialize();
 
-        PIXI.Loader.shared
+        Loader.shared
             .add(AtlasKeys.ATLAS_PNG)
             .add(AtlasKeys.ATLAS_XML)
             .add(AtlasKeys.FONT_FNT)
@@ -35,7 +32,7 @@ export class Game {
     }
 
     public onLoad(): void {
-        AtlasKeys.update(PIXI.utils.TextureCache);
+        AtlasKeys.update(utils.TextureCache);
     }
 
     public render = (): void => {

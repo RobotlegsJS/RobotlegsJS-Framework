@@ -1,4 +1,4 @@
-import { BitmapText, Container, Graphics, Sprite, Texture } from "pixi.js";
+import { BitmapText, Container, Graphics, Sprite, TextStyleAlign, Texture } from "pixi.js";
 import { CustomButton } from "../views/components/CustomButton";
 import { AtlasKeys } from "./AtlasKeys";
 import { Colors } from "./Colors";
@@ -8,8 +8,9 @@ export class PixiFactory {
     /* TEXTFIELDS */
     public static getText(text: string, color: number = Colors.TEXT): Container {
         let style = {
-            align: "center",
-            font: { name: MagicValues.FONT_FAMILY, size: MagicValues.FONT_SIZE_DEFAULT }
+            align: "center" as TextStyleAlign,
+            fontName: MagicValues.FONT_FAMILY,
+            fontSize: MagicValues.FONT_SIZE_DEFAULT
         };
         let label = new BitmapText(text, style);
         label.tint = color;
@@ -18,8 +19,9 @@ export class PixiFactory {
 
     public static getTextHUDSmall(text: string): Container {
         let style = {
-            align: "center",
-            font: { name: MagicValues.FONT_FAMILY, size: MagicValues.FONT_SIZE_HUD_SMALL }
+            align: "center" as TextStyleAlign,
+            fontName: MagicValues.FONT_FAMILY,
+            fontSize: MagicValues.FONT_SIZE_HUD_SMALL
         };
         let label = new BitmapText(text, style);
         label.tint = Colors.TEXT;
@@ -28,8 +30,9 @@ export class PixiFactory {
 
     public static getTitle(label: string): Container {
         let style = {
-            align: "center",
-            font: { name: MagicValues.FONT_FAMILY, size: MagicValues.FONT_SIZE_TITLE }
+            align: "center" as TextStyleAlign,
+            fontName: MagicValues.FONT_FAMILY,
+            fontSize: MagicValues.FONT_SIZE_TITLE
         };
 
         let title = new BitmapText(label, style);
@@ -43,8 +46,9 @@ export class PixiFactory {
 
     public static getButtonLabel(label: string): Container {
         let style = {
-            align: "center",
-            font: { name: MagicValues.FONT_FAMILY, size: MagicValues.FONT_SIZE_BUTTON }
+            align: "center" as TextStyleAlign,
+            fontName: MagicValues.FONT_FAMILY,
+            fontSize: MagicValues.FONT_SIZE_BUTTON
         };
 
         let title = new BitmapText(label, style);
@@ -120,8 +124,9 @@ export class PixiFactory {
     /* GAME */
     public static getTileLabel(text: string, color: number): Container {
         let style = {
-            align: "center",
-            font: { name: MagicValues.FONT_FAMILY, size: MagicValues.FONT_SIZE_BUTTON }
+            align: "center" as TextStyleAlign,
+            fontName: MagicValues.FONT_FAMILY,
+            fontSize: MagicValues.FONT_SIZE_BUTTON
         };
         let bmpText = new BitmapText(text, style);
         bmpText.tint = color;

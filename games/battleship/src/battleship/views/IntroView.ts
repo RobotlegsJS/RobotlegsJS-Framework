@@ -18,7 +18,10 @@ export class IntroView extends Container {
     }
 
     private _createImages(): void {
-        let logoImg: Sprite = TilingSprite.from(AtlasKeys.LOGO_TYPESCRIPT);
+        let logoImg: Sprite = TilingSprite.from(AtlasKeys.LOGO_TYPESCRIPT, {
+            width: 340,
+            height: 64
+        });
 
         logoImg.anchor.x = 0.5;
         logoImg.x = MagicValues.HALF_WIDTH;
