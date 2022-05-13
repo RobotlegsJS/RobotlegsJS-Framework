@@ -27,9 +27,25 @@ yarn add @robotlegsjs/pixi
 From version `0.2.0` of this package, the [PixiJS](https://github.com/pixijs/pixi.js) dependencies were moved to **peerDependencies**,
 allowing the final user to choose the desired version of the `pixi.js` library on each project.
 
+#### For `pixi.js` version 6
+
+The `@robotlegsjs/pixi` package version `^5.0.0` is compatible with versions `>=6.0.0 <7` version range of `pixi.js` library.
+
+You can setup your project for version 6 of `pixi.js` using:
+
+```bash
+npm install @robotlegsjs/pixi@^5.0.0 pixi.js@^6.0.0 --save
+```
+
+or
+
+```bash
+yarn add @robotlegsjs/pixi@^5.0.0 pixi.js@^6.0.0
+```
+
 #### For `pixi.js` version 5
 
-The `@robotlegsjs/pixi` package version `^2.0.0` is compatible with versions `>=5.0.0 <6` version range of `pixi.js` library.
+The `@robotlegsjs/pixi` package versions `^2.0.0` and `^3.0.0` are compatible with versions `>=5.0.0 <6` version range of `pixi.js` library.
 
 Since version `5.0.0` of `pixi.js`, the `eventemitter3` library was removed and is not necessary anymore.
 
@@ -80,12 +96,12 @@ Then follow the [installation instructions](https://github.com/RobotlegsJS/Robot
 **Dependencies**
 
 + [RobotlegsJS](https://github.com/RobotlegsJS/RobotlegsJS-Framework/tree/master/packages/core)
++ [RobotlegsJS EventEmitter3](https://github.com/RobotlegsJS/RobotlegsJS-Framework/tree/master/packages/eventemitter3)
 + [tslib](https://github.com/Microsoft/tslib)
 
 **Peer Dependencies**
 
 + [PixiJS](https://github.com/pixijs/pixi.js)
-+ [eventemitter3](https://github.com/primus/eventemitter3)
 + [reflect-metadata](https://github.com/rbuckton/reflect-metadata)
 
 ## Usage
@@ -93,49 +109,47 @@ Then follow the [installation instructions](https://github.com/RobotlegsJS/Robot
 ```typescript
 import "reflect-metadata";
 
-import * as PIXI from 'pixi.js';
-
 import { Context, MVCSBundle } from "@robotlegsjs/core";
-import { ContextView, PixiBundle } from "@robotlegsjs/pixi";
-
+import { AbstractRenderer, autoDetectRenderer, Container } from "pixi.js";
+import { PixiBundle } from "../src/robotlegs/bender/bundles/pixi/PixiBundle";
+import { ContextView } from "../src/robotlegs/bender/extensions/contextView/impl/ContextView";
 import { MyConfig } from "./config/MyConfig";
 import { RobotlegsView } from "./view/RobotlegsView";
 
 export class Game {
+    private _canvas: HTMLCanvasElement;
+    private _stage: Container;
+    private _renderer: AbstractRenderer;
+    private _context: Context;
 
-    private canvas: HTMLCanvasElement;
-    private stage: PIXI.Container;
-    private renderer: PIXI.Renderer;
-    private context: Context;
-
-    constructor () {
-        this.canvas = <HTMLCanvasElement>(document.getElementById("canvas"));
-        this.renderer = PIXI.autoDetectRenderer({
+    public constructor() {
+        this._canvas = <HTMLCanvasElement>document.getElementById("canvas");
+        this._renderer = autoDetectRenderer({
             width: 960,
             height: 400,
-            view: this.canvas,
+            view: this._canvas,
             backgroundColor: 0xffffff
         });
-        this.stage = new PIXI.Container();
+        this._stage = new Container();
 
-        this.context = new Context();
-        this.context.install(MVCSBundle, PixiBundle).
-            configure(new ContextView(this.stage)).
-            configure(MyConfig).
-            initialize();
+        this._context = new Context();
+        this._context
+            .install(MVCSBundle, PixiBundle)
+            .configure(new ContextView(this._stage))
+            .configure(MyConfig)
+            .initialize();
 
-        this.stage.addChild(new RobotlegsView());
+        this._stage.addChild(new RobotlegsView());
 
-        document.body.appendChild(this.renderer.view);
+        document.body.appendChild(this._renderer.view);
 
         this.render();
     }
 
-    public render = () => {
-        this.renderer.render(this.stage);
+    public render = (): void => {
+        this._renderer.render(this._stage);
         window.requestAnimationFrame(this.render);
-    }
-
+    };
 }
 
 let game: Game = new Game();
@@ -149,14 +163,12 @@ let game: Game = new Game();
 Run the following commands to run the example:
 
 ```bash
-npm install
 npm start
 ```
 
 or:
 
 ```bash
-yarn install
 yarn start
 ```
 
