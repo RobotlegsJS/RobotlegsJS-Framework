@@ -26,22 +26,38 @@ yarn add @robotlegsjs/pixi-palidor
 From version `0.2.0` of this package, the [PixiJS](https://github.com/pixijs/pixi.js) dependencies were moved to **peerDependencies**,
 allowing the final user to choose the desired version of the `pixi.js` library on each project.
 
+#### For `pixi.js` version 6
+
+The `@robotlegsjs/pixi-palidor` package version `^4.0.0` is compatible with versions `>=6.0.0 <7` version range of `pixi.js` library.
+
+You can setup your project for version 6 of `pixi.js` using:
+
+```bash
+npm install @robotlegsjs/pixi-palidor@^4.0.0 pixi.js@^6.0.0 --save
+```
+
+or
+
+```bash
+yarn add @robotlegsjs/pixi-palidor@^4.0.0 pixi.js@^6.0.0
+```
+
 #### For `pixi.js` version 5
 
-The `@robotlegsjs/pixi-palidor` package version `^2.0.0` is compatible with versions between the `>=5.0.0 <6` version range of `pixi.js` library.
+The `@robotlegsjs/pixi-palidor` package versions `^2.0.0` and `^3.0.0` are compatible with versions between the `>=5.0.0 <6` version range of `pixi.js` library.
 
 Since version `5.0.0` of `pixi.js`, the `eventemitter3` library was removed and is not necessary anymore.
 
 You can setup your project for version 5 of `pixi.js` using:
 
 ```bash
-npm install pixi.js@^5.0.0 reflect-metadata --save
+npm install @robotlegsjs/pixi-palidor@^3.0.0 pixi.js@^5.0.0 reflect-metadata --save
 ```
 
 or
 
 ```bash
-yarn add pixi.js@^5.0.0 reflect-metadata
+yarn add @robotlegsjs/pixi-palidor@^3.0.0 pixi.js@^5.0.0 reflect-metadata
 ```
 
 #### For `pixi.js` version 4
@@ -53,13 +69,13 @@ Since each version of `pixi.js` library defines which version of `eventemitter3`
 As example, when you would like to use the version `4.2.1` of `pixi.js` library, you can run:
 
 ```bash
-npm install pixi.js@4.2.1 eventemitter3@^2.0.0 reflect-metadata --save
+npm install @robotlegsjs/pixi-palidor@^1.0.0 pixi.js@4.2.1 eventemitter3@^2.0.0 reflect-metadata --save
 ```
 
 or
 
 ```bash
-yarn add pixi.js@4.2.1 eventemitter3@^2.0.0 reflect-metadata
+yarn add @robotlegsjs/pixi-palidor@^1.0.0 pixi.js@4.2.1 eventemitter3@^2.0.0 reflect-metadata
 ```
 
 Then follow the [installation instructions](https://github.com/RobotlegsJS/RobotlegsJS-Framework/tree/master/packages/core#installation) of **RobotlegsJS** library to complete the setup of your project.
@@ -67,6 +83,7 @@ Then follow the [installation instructions](https://github.com/RobotlegsJS/Robot
 **Dependencies**
 
 + [RobotlegsJS](https://github.com/RobotlegsJS/RobotlegsJS-Framework/tree/master/packages/core)
++ [RobotlegsJS EventEmitter3](https://github.com/RobotlegsJS/RobotlegsJS-Framework/tree/master/packages/eventemitter3)
 + [RobotlegsJS-Pixi](https://github.com/RobotlegsJS/RobotlegsJS-Framework/tree/master/packages/pixi)
 + [tslib](https://github.com/Microsoft/tslib)
 
@@ -84,7 +101,7 @@ Palidor was designed to be simple and, practical. You just need to follow three 
 Firstly, you need to instantiate your RobotlegsJS's context, and then install and configure the PalidorPixiExtension:
 
 ```typescript
-let stage = new PIXI.Container();
+let stage = new Container();
 let context = new Context()
     .install(MVCSBundle)
     .install(PixiBundle)
@@ -150,14 +167,12 @@ There are some predefined events on the  Palidor to help to remove a view or flo
 Run the following commands to run the example:
 
 ```bash
-npm install
 npm start
 ```
 
 or:
 
 ```bash
-yarn install
 yarn start
 ```
 
