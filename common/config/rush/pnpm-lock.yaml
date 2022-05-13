@@ -9222,7 +9222,7 @@ packages:
     dev: false
 
   file:projects/pixi-signalmediator.tgz:
-    resolution: {integrity: sha512-72aMT+37XN78uLNxNY2eIHuAcIjC1UgxH+Ldj9bccc2a0/C3iW6vi242XpIODxLit7YcNhNuR604soIpZRzSRg==, tarball: file:projects/pixi-signalmediator.tgz}
+    resolution: {integrity: sha512-EzQalYrLQ2w88xGzel8door2CoSmxD0MFjwhWwp8WenJZCvDYA78Qic08VIYHIVytoZG4JnwUdKaSL39eVAbLA==, tarball: file:projects/pixi-signalmediator.tgz}
     name: '@rush-temp/pixi-signalmediator'
     version: 0.0.0
     dependencies:
@@ -9253,7 +9253,7 @@ packages:
       karma-sourcemap-writer: 0.1.2
       karma-webpack: 5.0.0_webpack@5.44.0
       mocha: 9.0.2
-      pixi.js: 5.2.1
+      pixi.js: 6.3.2
       prettier: 2.6.2
       puppeteer: 10.1.0
       reflect-metadata: 0.1.13
