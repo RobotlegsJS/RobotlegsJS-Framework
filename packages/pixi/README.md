@@ -110,9 +110,8 @@ Then follow the [installation instructions](https://github.com/RobotlegsJS/Robot
 import "reflect-metadata";
 
 import { Context, MVCSBundle } from "@robotlegsjs/core";
+import { ContextView, PixiBundle } from "@robotlegsjs/pixi";
 import { AbstractRenderer, autoDetectRenderer, Container } from "pixi.js";
-import { PixiBundle } from "../src/robotlegs/bender/bundles/pixi/PixiBundle";
-import { ContextView } from "../src/robotlegs/bender/extensions/contextView/impl/ContextView";
 import { MyConfig } from "./config/MyConfig";
 import { RobotlegsView } from "./view/RobotlegsView";
 
