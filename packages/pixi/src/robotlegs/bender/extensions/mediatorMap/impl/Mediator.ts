@@ -5,15 +5,9 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import {
-    Event,
-    IClass,
-    IEvent,
-    IEventDispatcher,
-    IEventMap,
-    inject,
-    injectable
-} from "@robotlegsjs/core";
+import { Event, IClass, IEvent, IEventDispatcher, inject, injectable } from "@robotlegsjs/core";
+import { IEventEmitterMap } from "@robotlegsjs/eventemitter3";
+import { DisplayObject, utils } from "pixi.js";
 import { IMediator } from "../api/IMediator";
 
 /**
@@ -22,13 +16,13 @@ import { IMediator } from "../api/IMediator";
  * <p>Override initialize and destroy to hook into the mediator lifecycle.</p>
  */
 @injectable()
-export abstract class Mediator<T extends IEventDispatcher> implements IMediator {
+export abstract class Mediator<T extends DisplayObject> implements IMediator {
     /*============================================================================*/
     /* Protected Properties                                                       */
     /*============================================================================*/
 
-    @inject(IEventMap)
-    protected eventMap: IEventMap;
+    @inject(IEventEmitterMap)
+    protected eventMap: IEventEmitterMap;
 
     @inject(IEventDispatcher)
     protected eventDispatcher: IEventDispatcher;
@@ -75,21 +69,10 @@ export abstract class Mediator<T extends IEventDispatcher> implements IMediator 
 
     protected addViewListener(
         eventString: string,
-        listener: Function,
-        thisObject?: any,
-        eventClass?: IClass<IEvent>,
-        useCapture?: boolean,
-        priority?: number
+        listener: utils.EventEmitter.ListenerFn,
+        thisObject?: any
     ): void {
-        this.eventMap.mapListener(
-            this._viewComponent,
-            eventString,
-            listener,
-            thisObject,
-            eventClass,
-            useCapture,
-            priority
-        );
+        this.eventMap.on(this._viewComponent, eventString, listener, thisObject);
     }
 
     protected addContextListener(
@@ -122,19 +105,10 @@ export abstract class Mediator<T extends IEventDispatcher> implements IMediator 
 
     protected removeViewListener(
         eventString: string,
-        listener: Function,
-        thisObject?: any,
-        eventClass?: IClass<IEvent>,
-        useCapture?: boolean
+        listener: utils.EventEmitter.ListenerFn,
+        thisObject?: any
     ): void {
-        this.eventMap.unmapListener(
-            this._viewComponent,
-            eventString,
-            listener,
-            thisObject,
-            eventClass,
-            useCapture
-        );
+        this.eventMap.off(this._viewComponent, eventString, listener, thisObject);
     }
 
     protected removeContextListener(

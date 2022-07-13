@@ -6,6 +6,7 @@
 // ------------------------------------------------------------------------------
 
 import { IBundle, IContext, ILogger, instanceOfType } from "@robotlegsjs/core";
+import { LocalEventEmitterMapExtension } from "@robotlegsjs/eventemitter3";
 import { IContextView } from "../../extensions/contextView/api/IContextView";
 import { ContextViewExtension } from "../../extensions/contextView/ContextViewExtension";
 import { ContextView } from "../../extensions/contextView/impl/ContextView";
@@ -41,6 +42,7 @@ export class PixiBundle implements IBundle {
         this._logger = context.getLogger(this);
 
         this._context.install(
+            LocalEventEmitterMapExtension,
             ContextViewExtension,
             ViewManagerExtension,
             StageObserverExtension,

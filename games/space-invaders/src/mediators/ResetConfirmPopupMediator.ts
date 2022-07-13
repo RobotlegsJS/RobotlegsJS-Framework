@@ -9,13 +9,8 @@ export class ResetConfirmPopupMediator extends Mediator<ResetConfirmPopup> {
     private _flowService: FlowService;
 
     public initialize(): void {
-        this.eventMap.mapListener(
-            this.view.confirmButton,
-            "click",
-            this._onClickConfirmButton,
-            this
-        );
-        this.eventMap.mapListener(this.view.cancelButton, "click", this._onClickCancelButton, this);
+        this.eventMap.on(this.view.confirmButton, "click", this._onClickConfirmButton, this);
+        this.eventMap.on(this.view.cancelButton, "click", this._onClickCancelButton, this);
     }
 
     public destroy(): void {

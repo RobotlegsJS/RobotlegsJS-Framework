@@ -13,13 +13,8 @@ export class GameOverPopupMediator extends Mediator<GameOverPopup> {
     private _gameService: GameService;
 
     public initialize(): void {
-        this.eventMap.mapListener(
-            this.view.retryButton,
-            "click",
-            this._onTriggeredHandlerRetryButton,
-            this
-        );
-        this.eventMap.mapListener(
+        this.eventMap.on(this.view.retryButton, "click", this._onTriggeredHandlerRetryButton, this);
+        this.eventMap.on(
             this.view.levelSelectButton,
             "click",
             this._onTriggeredHandlerLevelSelectButton,

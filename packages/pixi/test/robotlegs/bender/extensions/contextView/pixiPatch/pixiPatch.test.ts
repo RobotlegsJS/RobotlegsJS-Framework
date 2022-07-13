@@ -6,7 +6,7 @@
 // ------------------------------------------------------------------------------
 
 import { assert } from "chai";
-import { Container, DisplayObject } from "pixi.js";
+import { Container, DisplayObject, Sprite } from "pixi.js";
 import { applyPixiPatch } from "../../../../../../src/robotlegs/bender/extensions/contextView/pixiPatch/pixi-patch";
 import "../../../../../entry";
 
@@ -152,10 +152,10 @@ describe("PixiPatch", () => {
         let containerL: Container = new Container();
         let containerR: Container = new Container();
 
-        let childL1: DisplayObject = new DisplayObject();
-        let childL2: DisplayObject = new DisplayObject();
-        let childR1: DisplayObject = new DisplayObject();
-        let childR2: DisplayObject = new DisplayObject();
+        let childL1: DisplayObject = new Sprite();
+        let childL2: DisplayObject = new Sprite();
+        let childR1: DisplayObject = new Sprite();
+        let childR2: DisplayObject = new Sprite();
 
         let count: number = 0;
 
@@ -472,9 +472,9 @@ describe("PixiPatch", () => {
 
         let container1: Container = new Container();
         let container2: Container = new Container();
-        let child1: DisplayObject = new DisplayObject();
-        let child2: DisplayObject = new DisplayObject();
-        let child3: DisplayObject = new DisplayObject();
+        let child1: DisplayObject = new Sprite();
+        let child2: DisplayObject = new Sprite();
+        let child3: DisplayObject = new Sprite();
 
         let stageX: Container = new Container();
 
@@ -482,9 +482,9 @@ describe("PixiPatch", () => {
 
         let containerX1: Container = new Container();
         let containerX2: Container = new Container();
-        let childX1: DisplayObject = new DisplayObject();
-        let childX2: DisplayObject = new DisplayObject();
-        let childX3: DisplayObject = new DisplayObject();
+        let childX1: DisplayObject = new Sprite();
+        let childX2: DisplayObject = new Sprite();
+        let childX3: DisplayObject = new Sprite();
 
         let countAdded: number = 0;
         let countRemoved: number = 0;

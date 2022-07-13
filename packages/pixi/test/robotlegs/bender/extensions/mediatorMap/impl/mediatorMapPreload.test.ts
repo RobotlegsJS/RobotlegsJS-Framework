@@ -7,13 +7,13 @@
 
 import { Context, IContext, IInjector, TypeMatcher } from "@robotlegsjs/core";
 import { assert } from "chai";
-import { Container, DisplayObject, Sprite } from "pixi.js";
+import { Container, Sprite, Text } from "pixi.js";
 import { MediatorMap } from "../../../../../../src/robotlegs/bender/extensions/mediatorMap/impl/MediatorMap";
 import "../../../../../entry";
 import { Alpha50PercentHook } from "../support/Alpha50PercentHook";
-import { ExampleDisplayObjectMediator } from "../support/ExampleDisplayObjectMediator";
 import { ExampleMediator } from "../support/ExampleMediator";
 import { ExampleMediator2 } from "../support/ExampleMediator2";
+import { ExampleSpriteMediator } from "../support/ExampleSpriteMediator";
 import { HappyGuard } from "../support/HappyGuard";
 import { HookWithMediatorAndViewInjectionReportFunction } from "../support/HookWithMediatorAndViewInjectionReportFunction";
 import { MediatorWatcher } from "../support/MediatorWatcher";
@@ -107,22 +107,20 @@ describe("MediatorMap", () => {
 
     it("handler_creates_mediator_for_view_mapped_by_matcher", () => {
         mediatorMap
-            .mapMatcher(new TypeMatcher().allOf(DisplayObject))
-            .toMediator(ExampleDisplayObjectMediator);
+            .mapMatcher(new TypeMatcher().allOf(Container))
+            .toMediator(ExampleSpriteMediator);
 
         mediatorMap.handleView(new Sprite(), Sprite);
 
-        const expectedNotifications: string[] = ["ExampleDisplayObjectMediator"];
+        const expectedNotifications: string[] = ["ExampleSpriteMediator"];
 
         assert.deepEqual(expectedNotifications, mediatorWatcher.notifications);
     });
 
     it("handler_doesnt_create_mediator_for_wrong_view_mapped_by_matcher", () => {
-        mediatorMap
-            .mapMatcher(new TypeMatcher().allOf(Container))
-            .toMediator(ExampleDisplayObjectMediator);
+        mediatorMap.mapMatcher(new TypeMatcher().allOf(Text)).toMediator(ExampleSpriteMediator);
 
-        mediatorMap.handleView(new DisplayObject(), null);
+        mediatorMap.handleView(new Sprite(), Sprite);
 
         const expectedNotifications: string[] = [];
 

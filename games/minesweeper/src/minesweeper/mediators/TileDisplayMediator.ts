@@ -10,7 +10,7 @@ export class TileDisplayMediator extends Mediator<TileDisplay> {
     public gameManager: GameManager;
 
     public initialize(): void {
-        this.eventMap.mapListener(this.view, "pointerup", this.onButtonUp, this);
+        this.eventMap.on(this.view, "pointerup", this.onButtonUp, this);
     }
 
     public onButtonUp(e: any): void {

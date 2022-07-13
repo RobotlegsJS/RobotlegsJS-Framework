@@ -11,8 +11,8 @@ import { SmileyView } from "../view/SmileyView";
 
 export class RobotlegsMediator extends Mediator<RobotlegsView> {
     public initialize(): void {
-        console.log("CircleMediator initialized!");
-        this.view.interactive = true;
+        console.log("RobotlegsMediator initialized!");
+
         this.addViewListener("click", this.onClick, this);
     }
 
@@ -22,6 +22,6 @@ export class RobotlegsMediator extends Mediator<RobotlegsView> {
     }
 
     public destroy(): void {
-        console.log("CircleMediator destroyed!");
+        console.log("RobotlegsMediator destroyed!");
     }
 }

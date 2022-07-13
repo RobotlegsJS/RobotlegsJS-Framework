@@ -7,7 +7,6 @@
 
 import { assert } from "chai";
 import { Sprite } from "pixi.js";
-import "../../../../../../src/robotlegs/bender/extensions/contextView/pixiPatch/contains-patch";
 import { IViewHandler } from "../../../../../../src/robotlegs/bender/extensions/viewManager/api/IViewHandler";
 import { ContainerBinding } from "../../../../../../src/robotlegs/bender/extensions/viewManager/impl/ContainerBinding";
 import { ContainerRegistry } from "../../../../../../src/robotlegs/bender/extensions/viewManager/impl/ContainerRegistry";

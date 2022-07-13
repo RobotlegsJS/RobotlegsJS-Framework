@@ -26,22 +26,38 @@ yarn add @robotlegsjs/pixi-signalmediator
 From version `0.2.0` of this package, the [PixiJS](https://github.com/pixijs/pixi.js) dependencies were moved to **peerDependencies**,
 allowing the final user to choose the desired version of the `pixi.js` library on each project.
 
+#### For `pixi.js` version 6
+
+The `@robotlegsjs/pixi-signalmediator` package version `^4.0.0` is compatible with versions `>=6.0.0 <7` version range of `pixi.js` library.
+
+You can setup your project for version 6 of `pixi.js` using:
+
+```bash
+npm install @robotlegsjs/pixi-signalmediator@^4.0.0 pixi.js@^6.0.0 --save
+```
+
+or
+
+```bash
+yarn add @robotlegsjs/pixi-signalmediator@^4.0.0 pixi.js@^6.0.0
+```
+
 #### For `pixi.js` version 5
 
-The `@robotlegsjs/pixi-signalmediator` package version `^2.0.0` is compatible with versions between the `>=5.0.0 <6` version range of `pixi.js` library.
+The `@robotlegsjs/pixi-signalmediator` package versions `^2.0.0` and `^3.0.0` are compatible with versions `>=5.0.0 <6` version range of `pixi.js` library.
 
 Since version `5.0.0` of `pixi.js`, the `eventemitter3` library was removed and is not necessary anymore.
 
 You can setup your project for version 5 of `pixi.js` using:
 
 ```bash
-npm install pixi.js@^5.0.0 reflect-metadata --save
+npm install @robotlegsjs/pixi-signalmediator@^3.0.0 pixi.js@^5.0.0 reflect-metadata --save
 ```
 
 or
 
 ```bash
-yarn add pixi.js@^5.0.0 reflect-metadata
+yarn add @robotlegsjs/pixi-signalmediator@^3.0.0 pixi.js@^5.0.0 reflect-metadata
 ```
 
 #### For `pixi.js` version 4
@@ -53,13 +69,13 @@ Since each version of `pixi.js` library defines which version of `eventemitter3`
 As example, when you would like to use the version `4.2.1` of `pixi.js` library, you can run:
 
 ```bash
-npm install pixi.js@4.2.1 eventemitter3@^2.0.0 reflect-metadata --save
+npm install @robotlegsjs/pixi-signalmediator@^1.0.0 pixi.js@4.2.1 eventemitter3@^2.0.0 reflect-metadata --save
 ```
 
 or
 
 ```bash
-yarn add pixi.js@4.2.1 eventemitter3@^2.0.0 reflect-metadata
+yarn add @robotlegsjs/pixi-signalmediator@^1.0.0 pixi.js@4.2.1 eventemitter3@^2.0.0 reflect-metadata
 ```
 
 Then follow the [installation instructions](https://github.com/RobotlegsJS/RobotlegsJS-Framework/tree/master/packages/core#installation) of **RobotlegsJS** library to complete the setup of your project.

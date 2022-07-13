@@ -13,9 +13,9 @@ export class PausePopupMediator extends Mediator<PausePopup> {
     private _gameService: GameService;
 
     public initialize(): void {
-        this.eventMap.mapListener(this.view.homeButton, "click", this._onClickHomeButton, this);
-        this.eventMap.mapListener(this.view.resumeButton, "click", this._onClickResumeButton, this);
-        this.eventMap.mapListener(this.view.retryButton, "click", this._onClickRetryButton, this);
+        this.eventMap.on(this.view.homeButton, "click", this._onClickHomeButton, this);
+        this.eventMap.on(this.view.resumeButton, "click", this._onClickResumeButton, this);
+        this.eventMap.on(this.view.retryButton, "click", this._onClickRetryButton, this);
     }
 
     public destroy(): void {

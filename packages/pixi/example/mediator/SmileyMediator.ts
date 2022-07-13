@@ -10,8 +10,8 @@ import { SmileyView } from "../view/SmileyView";
 
 export class SmileyMediator extends Mediator<SmileyView> {
     public initialize(): void {
-        console.log("ChildMediator initialized!");
-        this.view.interactive = true;
+        console.log("SmileyMediator initialized!");
+
         this.addViewListener("click", this.onClick, this);
     }
 
@@ -20,6 +20,6 @@ export class SmileyMediator extends Mediator<SmileyView> {
     }
 
     public destroy(): void {
-        console.log("ChildMediator destroyed!");
+        console.log("SmileyMediator destroyed!");
     }
 }

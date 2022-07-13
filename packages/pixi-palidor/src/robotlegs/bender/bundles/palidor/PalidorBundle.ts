@@ -12,9 +12,9 @@ import {
     EventDispatcherExtension,
     IBundle,
     IContext,
-    InjectableLoggerExtension,
-    LocalEventMapExtension
+    InjectableLoggerExtension
 } from "@robotlegsjs/core";
+import { LocalEventEmitterMapExtension } from "@robotlegsjs/eventemitter3";
 import {
     ContextViewExtension,
     ContextViewListenerConfig,
@@ -38,7 +38,7 @@ export class PalidorBundle implements IBundle {
             EventDispatcherExtension,
             DirectCommandMapExtension,
             EventCommandMapExtension,
-            LocalEventMapExtension,
+            LocalEventEmitterMapExtension,
             ContextViewExtension,
             ViewManagerExtension,
             StageObserverExtension,

@@ -5,9 +5,8 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import PIXI = require("pixi.js");
-
 import { Context, MVCSBundle } from "@robotlegsjs/core";
+import { AbstractRenderer, autoDetectRenderer, Container } from "pixi.js";
 import { PixiBundle } from "../src/robotlegs/bender/bundles/pixi/PixiBundle";
 import { ContextView } from "../src/robotlegs/bender/extensions/contextView/impl/ContextView";
 import { MyConfig } from "./config/MyConfig";
@@ -15,19 +14,19 @@ import { RobotlegsView } from "./view/RobotlegsView";
 
 export class Game {
     private _canvas: HTMLCanvasElement;
-    private _stage: PIXI.Container;
-    private _renderer: PIXI.Renderer;
+    private _stage: Container;
+    private _renderer: AbstractRenderer;
     private _context: Context;
 
     public constructor() {
         this._canvas = <HTMLCanvasElement>document.getElementById("canvas");
-        this._renderer = PIXI.autoDetectRenderer({
+        this._renderer = autoDetectRenderer({
             width: 960,
             height: 400,
             view: this._canvas,
             backgroundColor: 0xffffff
         });
-        this._stage = new PIXI.Container();
+        this._stage = new Container();
 
         this._context = new Context();
         this._context

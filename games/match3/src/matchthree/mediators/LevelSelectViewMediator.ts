@@ -24,12 +24,7 @@ export class LevelSelectViewMediator extends Mediator<LevelSelectView> {
 
     public initialize(): void {
         this._createMapButtons();
-        this.eventMap.mapListener(
-            this.view.backButton,
-            "click",
-            this._onTriggeredHandlerBackButton,
-            this
-        );
+        this.eventMap.on(this.view.backButton, "click", this._onTriggeredHandlerBackButton, this);
     }
 
     public destroy(): void {
@@ -53,12 +48,7 @@ export class LevelSelectViewMediator extends Mediator<LevelSelectView> {
             levelButton.setStars(ScoreUtils.getNumStars(levelInfo.hiScore, levelInfo.scoreStarts));
             levelButton.anchor.set(0.5);
             this._levelsIds.set(levelButton, levels[i].levelId);
-            this.eventMap.mapListener(
-                levelButton,
-                "click",
-                this._onTriggeredHandlerLevelButton,
-                this
-            );
+            this.eventMap.on(levelButton, "click", this._onTriggeredHandlerLevelButton, this);
         }
     }
 

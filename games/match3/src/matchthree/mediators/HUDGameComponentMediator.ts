@@ -25,12 +25,7 @@ export class HUDGameComponentMediator extends Mediator<HUDGameComponent> {
     private _paused: boolean;
 
     public initialize(): void {
-        this.eventMap.mapListener(
-            this.view.pauseButton,
-            "click",
-            this._onTriggeredHandlerPauseButton,
-            this
-        );
+        this.eventMap.on(this.view.pauseButton, "click", this._onTriggeredHandlerPauseButton, this);
         this.eventMap.mapListener(
             this.eventDispatcher,
             GameEvent.UPDATE_HUD_DATA,

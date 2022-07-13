@@ -5,8 +5,6 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-/// <reference path="../node_modules/@robotlegsjs/pixi/definitions/pixi.d.ts" />
-
 import "reflect-metadata";
 import { Game } from "./Game";
 

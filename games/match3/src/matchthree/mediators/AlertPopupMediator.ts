@@ -5,13 +5,13 @@ import { AlertPopup } from "../views/AlertPopup";
 @injectable()
 export class AlertPopupMediator extends Mediator<AlertPopup> {
     public initialize(): void {
-        this.eventMap.mapListener(
+        this.eventMap.on(
             this.view.confirmButton,
             "click",
             this._onTriggeredHandlerConfirmButton,
             this
         );
-        this.eventMap.mapListener(
+        this.eventMap.on(
             this.view.cancelButton,
             "click",
             this._onTriggeredHandlerCancelButton,

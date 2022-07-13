@@ -5,7 +5,6 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-/// <reference path="../definitions/pixi.d.ts" />
 /// <reference types="mocha" />
 
 /* eslint-disable import/no-internal-modules */

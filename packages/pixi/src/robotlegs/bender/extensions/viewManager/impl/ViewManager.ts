@@ -11,6 +11,7 @@ import { IViewHandler } from "../api/IViewHandler";
 import { IViewManager } from "../api/IViewManager";
 import { ContainerBinding } from "../impl/ContainerBinding";
 import { ContainerRegistry } from "../impl/ContainerRegistry";
+import { contains } from "../support/contains";
 import { ViewManagerEvent } from "./ViewManagerEvent";
 
 // [Event(name="containerAdd", type="robotlegs.bender.extensions.viewManager.impl.ViewManagerEvent")]
@@ -155,8 +156,8 @@ export class ViewManager extends EventDispatcher implements IViewManager {
         if (isValid) {
             this._containers.forEach((registeredContainer) => {
                 if (
-                    registeredContainer.contains(container) ||
-                    container.contains(registeredContainer)
+                    contains(registeredContainer, container) ||
+                    contains(container, registeredContainer)
                 ) {
                     throw new Error("Containers can not be nested");
                 }

@@ -6,15 +6,16 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import { EventDispatcher, EventMap } from "@robotlegsjs/core";
+import { EventEmitterMap } from "@robotlegsjs/eventemitter3";
 import { ISignal } from "@robotlegsjs/signals";
+import { DisplayObject } from "pixi.js";
 import { SignalMediator } from "../../../../../../src/robotlegs/bender/extensions/signalMediator/impl/SignalMediator";
 
-export class TestMediator extends SignalMediator<EventDispatcher> {
+export class TestMediator extends SignalMediator<DisplayObject> {
     public constructor() {
         super();
 
-        this.eventMap = new EventMap();
+        this.eventMap = new EventEmitterMap();
     }
 
     public addToSignalRouter(signal: ISignal, handler: Function): void {

@@ -29,7 +29,6 @@ export { MediatorMapExtension } from "./robotlegs/bender/extensions/mediatorMap/
  */
 export { IViewHandler } from "./robotlegs/bender/extensions/viewManager/api/IViewHandler";
 export { IViewManager } from "./robotlegs/bender/extensions/viewManager/api/IViewManager";
-export { ManualStageObserverExtension } from "./robotlegs/bender/extensions/viewManager/ManualStageObserverExtension";
 export { StageCrawlerExtension } from "./robotlegs/bender/extensions/viewManager/StageCrawlerExtension";
 export { StageObserverExtension } from "./robotlegs/bender/extensions/viewManager/StageObserverExtension";
 export { ViewManagerExtension } from "./robotlegs/bender/extensions/viewManager/ViewManagerExtension";

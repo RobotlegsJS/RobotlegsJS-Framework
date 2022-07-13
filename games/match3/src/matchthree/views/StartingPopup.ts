@@ -28,7 +28,7 @@ export class StartingPopup extends Container {
 
     private _setupTexts(): void {
         this._decreasingNumber = PixiFactory.getText("3", MagicValues.SIZE_DEFAULT + 6);
-        this._decreasingNumber.anchor = 0.5;
+        this._decreasingNumber.anchor.set(0.5, 0.5);
         this._decreasingNumber.scale.set(1.2);
         this._decreasingNumber.x = ViewPortSize.HALF_WIDTH;
         this._decreasingNumber.y = ViewPortSize.HALF_HEIGHT;

@@ -14,11 +14,11 @@ export class PausePopupMediator extends Mediator<PausePopup> {
 
     public initialize(): void {
         this.view.animationIn();
-        this.eventMap.mapListener(this.view.levelButton, "click", this.levelButton_onClick, this);
-        this.eventMap.mapListener(this.view.homeButton, "click", this.homeButton_onClick, this);
-        this.eventMap.mapListener(this.view.resumeButton, "click", this.resumeButton_onClick, this);
-        this.eventMap.mapListener(this.view.retryButton, "click", this.retryButton_onClick, this);
-        this.eventMap.mapListener(this.view.exportButton, "click", this.exportButton_onClick, this);
+        this.eventMap.on(this.view.levelButton, "click", this.levelButton_onClick, this);
+        this.eventMap.on(this.view.homeButton, "click", this.homeButton_onClick, this);
+        this.eventMap.on(this.view.resumeButton, "click", this.resumeButton_onClick, this);
+        this.eventMap.on(this.view.retryButton, "click", this.retryButton_onClick, this);
+        this.eventMap.on(this.view.exportButton, "click", this.exportButton_onClick, this);
     }
 
     public destroy(): void {

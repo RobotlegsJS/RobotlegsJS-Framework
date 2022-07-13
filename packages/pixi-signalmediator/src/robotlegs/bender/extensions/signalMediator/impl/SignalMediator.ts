@@ -6,9 +6,10 @@
 //  in accordance with the terms of the license agreement accompanying it.
 // ------------------------------------------------------------------------------
 
-import { IEventDispatcher, injectable } from "@robotlegsjs/core";
+import { injectable } from "@robotlegsjs/core";
 import { Mediator } from "@robotlegsjs/pixi";
 import { ISignal } from "@robotlegsjs/signals";
+import { DisplayObject } from "pixi.js";
 import { ISignalMap } from "../api/ISignalMap";
 import { SignalMap } from "./SignalMap";
 
@@ -18,7 +19,7 @@ import { SignalMap } from "./SignalMap";
  * <p>Override initialize and destroy to hook into the mediator lifecycle.</p>
  */
 @injectable()
-export abstract class SignalMediator<T extends IEventDispatcher> extends Mediator<T> {
+export abstract class SignalMediator<T extends DisplayObject> extends Mediator<T> {
     /*============================================================================*/
     /* Protected Properties                                                       */
     /*============================================================================*/

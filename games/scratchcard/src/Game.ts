@@ -1,25 +1,22 @@
-/// <reference path="../node_modules/@robotlegsjs/pixi/definitions/pixi.d.ts" />
-
 import { Context } from "@robotlegsjs/core";
 import { ContextView } from "@robotlegsjs/pixi";
 import { PalidorBundle } from "@robotlegsjs/pixi-palidor";
+import { AbstractRenderer, autoDetectRenderer, Container, Loader, utils } from "pixi.js";
 import { ScratchConfig } from "./configs/ScratchConfig";
 import { AssetKeys } from "./utils/AssetKeys";
 import { MagicValues } from "./utils/MagicValues";
 
-import PIXI = require("pixi.js");
-
 export class Game {
-    private _stage: PIXI.Container;
-    private _renderer: PIXI.Renderer;
+    private _stage: Container;
+    private _renderer: AbstractRenderer;
     private _context: Context;
 
     public constructor() {
-        this._renderer = PIXI.autoDetectRenderer({
+        this._renderer = autoDetectRenderer({
             width: MagicValues.MAX_WIDTH,
             height: MagicValues.MAX_HEIGHT
         });
-        this._stage = new PIXI.Container();
+        this._stage = new Container();
         this._context = new Context();
         this._context
             .install(PalidorBundle)
@@ -27,13 +24,13 @@ export class Game {
             .configure(ScratchConfig)
             .initialize();
 
-        PIXI.Loader.shared.add(AssetKeys.ATLAS_PNG).add(AssetKeys.ATLAS_XML).load(this.onLoad);
+        Loader.shared.add(AssetKeys.ATLAS_PNG).add(AssetKeys.ATLAS_XML).load(this.onLoad);
 
         document.body.appendChild(this._renderer.view);
     }
 
     public onLoad(): void {
-        AssetKeys.update(PIXI.utils.TextureCache);
+        AssetKeys.update(utils.TextureCache);
     }
 
     public render = (): void => {

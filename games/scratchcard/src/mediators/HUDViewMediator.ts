@@ -21,8 +21,8 @@ export class HUDViewMediator extends Mediator<HUDView> {
         this.view.updateRemaining(this._model.attempts);
         this.eventMap.mapListener(this.eventDispatcher, GameEvent.START, this._onStart, this);
         this.eventMap.mapListener(this.eventDispatcher, GameEvent.END, this._onEnd, this);
-        this.eventMap.mapListener(this.view.playButton, "click", this._onPlayButton, this);
-        this.eventMap.mapListener(this.view.endButton, "click", this._onEndButton, this);
+        this.eventMap.on(this.view.playButton, "click", this._onPlayButton, this);
+        this.eventMap.on(this.view.endButton, "click", this._onEndButton, this);
     }
 
     public destroy(): void {
@@ -33,9 +33,9 @@ export class HUDViewMediator extends Mediator<HUDView> {
         this.view.updateRemaining(this._model.attempts);
         this.view.scratchArea.buttonMode = true;
         this.view.scratchArea.interactive = true;
-        this.eventMap.mapListener(this.view.scratchArea, "mousedown", this._onMouseDown, this);
-        this.eventMap.mapListener(this.view.scratchArea, "mouseup", this._onMouseUp, this);
-        this.eventMap.mapListener(this.view.scratchArea, "mousemove", this._onMouseMove, this);
+        this.eventMap.on(this.view.scratchArea, "mousedown", this._onMouseDown, this);
+        this.eventMap.on(this.view.scratchArea, "mouseup", this._onMouseUp, this);
+        this.eventMap.on(this.view.scratchArea, "mousemove", this._onMouseMove, this);
     }
 
     private _onEnd(e: any): void {
@@ -44,9 +44,9 @@ export class HUDViewMediator extends Mediator<HUDView> {
         this.view.scratchArea.interactive = false;
         this.view.playButton.visible = true;
         this.view.endButton.visible = false;
-        this.eventMap.unmapListener(this.view.scratchArea, "mousedown", this._onMouseDown, this);
-        this.eventMap.unmapListener(this.view.scratchArea, "mouseup", this._onMouseUp, this);
-        this.eventMap.unmapListener(this.view.scratchArea, "mousemove", this._onMouseMove, this);
+        this.eventMap.off(this.view.scratchArea, "mousedown", this._onMouseDown, this);
+        this.eventMap.off(this.view.scratchArea, "mouseup", this._onMouseUp, this);
+        this.eventMap.off(this.view.scratchArea, "mousemove", this._onMouseMove, this);
         this._tickManager.stop();
     }
 

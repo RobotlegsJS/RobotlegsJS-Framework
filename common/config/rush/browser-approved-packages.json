@@ -15,8 +15,44 @@
       "allowedCategories": [ "production" ]
     },
     {
+      "name": "@pixi/constants",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "@pixi/core",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "@pixi/display",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "@pixi/math",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "@pixi/runner",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "@pixi/settings",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "@pixi/ticker",
+      "allowedCategories": [ "production" ]
+    },
+    {
+      "name": "@pixi/utils",
+      "allowedCategories": [ "production" ]
+    },
+    {
       "name": "@robotlegsjs/core",
       "allowedCategories": [ "games", "production", "tests" ]
+    },
+    {
+      "name": "@robotlegsjs/eventemitter3",
+      "allowedCategories": [ "production" ]
     },
     {
       "name": "@robotlegsjs/macrobot",
