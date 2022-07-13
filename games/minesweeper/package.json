@@ -30,9 +30,9 @@
   "author": "Ronaldo Santiago",
   "license": "MIT",
   "dependencies": {
-    "@robotlegsjs/core": "^3.0.0",
-    "@robotlegsjs/pixi": "^3.0.0",
-    "@robotlegsjs/pixi-palidor": "^3.0.0",
+    "@robotlegsjs/core": "^3.1.0",
+    "@robotlegsjs/pixi": "^4.0.0",
+    "@robotlegsjs/pixi-palidor": "^4.0.0",
     "gsap": "^1.20.6",
     "pixi.js": "^6.3.2",
     "reflect-metadata": "^0.1.13",

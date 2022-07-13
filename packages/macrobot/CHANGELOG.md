@@ -1,6 +1,17 @@
 # Change Log - @robotlegsjs/macrobot
 
-This log was last generated on Thu, 10 Jun 2021 23:06:09 GMT and should not be manually modified.
+This log was last generated on Wed, 13 Jul 2022 20:05:34 GMT and should not be manually modified.
+
+## 3.1.0
+Wed, 13 Jul 2022 20:05:34 GMT
+
+### Minor changes
+
+- Update [tslib](https://www.npmjs.com/package/tslib) to version **2.3.0**, adopts ES2017, and standardizes the tsconfig files (see [26](https://github.com/RobotlegsJS/RobotlegsJS-Framework/pull/26))
+
+### Patches
+
+- Add integration test package for Macrobot, Signals, and Signal Command Map (see [17](https://github.com/RobotlegsJS/RobotlegsJS-Framework/pull/17))
 
 ## 3.0.1
 Thu, 10 Jun 2021 23:06:09 GMT

@@ -59,10 +59,10 @@
     "lib"
   ],
   "dependencies": {
-    "@robotlegsjs/signals": "^2.0.0",
-    "@robotlegsjs/core": "^3.0.0",
-    "@robotlegsjs/signalcommandmap": "^3.0.0",
-    "@robotlegsjs/macrobot": "^3.0.1",
+    "@robotlegsjs/signals": "^2.1.0",
+    "@robotlegsjs/core": "^3.1.0",
+    "@robotlegsjs/signalcommandmap": "^3.1.0",
+    "@robotlegsjs/macrobot": "^3.1.0",
     "tslib": "^2.3.0"
   },
   "devDependencies": {

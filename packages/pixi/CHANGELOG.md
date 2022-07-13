@@ -1,6 +1,17 @@
 # Change Log - @robotlegsjs/pixi
 
-This log was last generated on Thu, 10 Jun 2021 22:11:54 GMT and should not be manually modified.
+This log was last generated on Wed, 13 Jul 2022 20:05:34 GMT and should not be manually modified.
+
+## 4.0.0
+Wed, 13 Jul 2022 20:05:34 GMT
+
+### Breaking changes
+
+- Update [pixi.js](https://www.npmjs.com/package/pixi.js) to version **6.3.2** (see [41](https://github.com/RobotlegsJS/RobotlegsJS-Framework/pull/41))
+
+### Minor changes
+
+- Update [tslib](https://www.npmjs.com/package/tslib) to version **2.3.0**, adopts ES2017, and standardizes the tsconfig files (see [26](https://github.com/RobotlegsJS/RobotlegsJS-Framework/pull/26))
 
 ## 3.0.0
 Thu, 10 Jun 2021 22:11:54 GMT

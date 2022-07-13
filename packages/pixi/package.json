@@ -1,6 +1,6 @@
 {
   "name": "@robotlegsjs/pixi",
-  "version": "3.0.0",
+  "version": "4.0.0",
   "description": "PIXI View Integration with RobotlegsJS",
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
@@ -60,8 +60,8 @@
     "lib": "./lib"
   },
   "dependencies": {
-    "@robotlegsjs/core": "^3.0.0",
-    "@robotlegsjs/eventemitter3": "^3.0.0",
+    "@robotlegsjs/core": "^3.1.0",
+    "@robotlegsjs/eventemitter3": "^3.1.0",
     "tslib": "^2.3.0"
   },
   "peerDependencies": {

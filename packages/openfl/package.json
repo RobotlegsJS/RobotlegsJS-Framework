@@ -1,6 +1,6 @@
 {
   "name": "@robotlegsjs/openfl",
-  "version": "3.0.0",
+  "version": "3.1.0",
   "description": "OpenFL View Integration with RobotlegsJS",
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
@@ -56,7 +56,7 @@
     "lib": "./lib"
   },
   "dependencies": {
-    "@robotlegsjs/core": "^3.0.0",
+    "@robotlegsjs/core": "^3.1.0",
     "tslib": "^2.3.0"
   },
   "peerDependencies": {

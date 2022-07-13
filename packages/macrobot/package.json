@@ -1,6 +1,6 @@
 {
   "name": "@robotlegsjs/macrobot",
-  "version": "3.0.1",
+  "version": "3.1.0",
   "description": "TypeScript port of Robotlegs Utilities Macrobot",
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
@@ -79,7 +79,7 @@
     "lib": "./lib"
   },
   "dependencies": {
-    "@robotlegsjs/core": "^3.0.0",
+    "@robotlegsjs/core": "^3.1.0",
     "tslib": "^2.3.0"
   },
   "devDependencies": {

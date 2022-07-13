@@ -1,6 +1,6 @@
 {
   "name": "@robotlegsjs/pixi-signalmediator",
-  "version": "3.0.0",
+  "version": "4.0.0",
   "description": "TypeScript port of Robotlegs Extension SignalMediator",
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
@@ -52,9 +52,9 @@
     "lib": "./lib"
   },
   "dependencies": {
-    "@robotlegsjs/core": "^3.0.0",
-    "@robotlegsjs/pixi": "^3.0.0",
-    "@robotlegsjs/signals": "^2.0.0",
+    "@robotlegsjs/core": "^3.1.0",
+    "@robotlegsjs/pixi": "^4.0.0",
+    "@robotlegsjs/signals": "^2.1.0",
     "tslib": "^2.3.0"
   },
   "peerDependencies": {
@@ -63,7 +63,7 @@
   },
   "devDependencies": {
     "@jsdevtools/coverage-istanbul-loader": "^3.0.5",
-    "@robotlegsjs/eventemitter3": "^3.0.0",
+    "@robotlegsjs/eventemitter3": "^3.1.0",
     "@rushstack/eslint-config": "^2.3.4",
     "@types/bluebird": "^3.5.36",
     "@types/chai": "^4.2.21",

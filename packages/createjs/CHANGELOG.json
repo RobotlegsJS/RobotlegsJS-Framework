@@ -2,6 +2,58 @@
   "name": "@robotlegsjs/createjs",
   "entries": [
     {
+      "version": "3.1.0",
+      "tag": "@robotlegsjs/createjs_v3.1.0",
+      "date": "Wed, 13 Jul 2022 20:05:34 GMT",
+      "comments": {
+        "none": [
+          {
+            "comment": "Use [@jsdevtools/coverage-istanbul-loader](https://www.npmjs.com/package/@jsdevtools/coverage-istanbul-loader) version **3.0.5** instead of deprecated [istanbul-instrumenter-loader](https://www.npmjs.com/package/istanbul-instrumenter-loader) (see [28](https://github.com/RobotlegsJS/RobotlegsJS-Framework/pull/28))"
+          },
+          {
+            "comment": "Enable VS Code Organize Imports source code action (see [20](https://github.com/RobotlegsJS/RobotlegsJS-Framework/pull/20))"
+          },
+          {
+            "comment": "Use the same karma configuration properties and remove outdated scripts and dependencies (see [24](https://github.com/RobotlegsJS/RobotlegsJS-Framework/pull/24))"
+          },
+          {
+            "comment": "Update [karma](https://www.npmjs.com/package/karma) to version **6.3.4**, [webpack](https://www.npmjs.com/package/webpack) to version **5.39.1** and [mocha](https://www.npmjs.com/package/mocha) for version **9.0.1** (see [23](https://github.com/RobotlegsJS/RobotlegsJS-Framework/pull/23))"
+          },
+          {
+            "comment": "Update [eslint](https://www.npmjs.com/package/eslint) to version **7.29.0** and [eslint-plugin-jsdoc](https://www.npmjs.com/package/eslint-plugin-jsdoc) to version **35.3.2** (see [22](https://github.com/RobotlegsJS/RobotlegsJS-Framework/pull/22))"
+          },
+          {
+            "comment": "Update [eslint](https://www.npmjs.com/package/eslint) to version **7.30.0**, [eslint-plugin-jsdoc](https://www.npmjs.com/package/eslint-plugin-jsdoc) to version **35.4.3**, and [eslint-plugin-unicorn](https://www.npmjs.com/package/eslint-plugin-unicorn) to version **34.0.1** (see [30](https://github.com/RobotlegsJS/RobotlegsJS-Framework/pull/30))"
+          },
+          {
+            "comment": "Update [mocha](https://www.npmjs.com/package/mocha) to version **9.0.2**, [puppeteer](https://www.npmjs.com/package/puppeteer) to version **10.1.0**, and [ts-node](https://www.npmjs.com/package/ts-node) to version **10.1.0** (see [32](https://github.com/RobotlegsJS/RobotlegsJS-Framework/pull/32))"
+          },
+          {
+            "comment": "Update [prettier](https://www.npmjs.com/package/prettier) to version **2.3.2** (see [25](https://github.com/RobotlegsJS/RobotlegsJS-Framework/pull/25))"
+          },
+          {
+            "comment": "Update [prettier](https://www.npmjs.com/package/prettier) to version **2.5.1** (see [35](https://github.com/RobotlegsJS/RobotlegsJS-Framework/pull/35))"
+          },
+          {
+            "comment": "Update [prettier](https://www.npmjs.com/package/prettier) to version **2.6.2** (see [39](https://github.com/RobotlegsJS/RobotlegsJS-Framework/pull/39))"
+          },
+          {
+            "comment": "Update [webpack](https://www.npmjs.com/package/webpack) to version **5.44.0**, and [@types/webpack-env](https://www.npmjs.com/package/@types/webpack-env) to version **1.16.2** (see [31](https://github.com/RobotlegsJS/RobotlegsJS-Framework/pull/31))"
+          }
+        ],
+        "minor": [
+          {
+            "comment": "Update [tslib](https://www.npmjs.com/package/tslib) to version **2.3.0**, adopts ES2017, and standardizes the tsconfig files (see [26](https://github.com/RobotlegsJS/RobotlegsJS-Framework/pull/26))"
+          }
+        ],
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@robotlegsjs/core\" from `^3.0.0` to `^3.1.0`"
+          }
+        ]
+      }
+    },
+    {
       "version": "3.0.0",
       "tag": "@robotlegsjs/createjs_v3.0.0",
       "date": "Thu, 10 Jun 2021 20:53:33 GMT",
