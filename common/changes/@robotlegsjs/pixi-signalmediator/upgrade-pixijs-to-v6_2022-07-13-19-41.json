@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@robotlegsjs/pixi-signalmediator",
+      "comment": "Upgrade [pixi.js](https://www.npmjs.com/package/pixi.js) to version **6.3.2** (see [41](https://github.com/RobotlegsJS/RobotlegsJS-Framework/pull/41))",
+      "type": "major"
+    }
+  ],
+  "packageName": "@robotlegsjs/pixi-signalmediator"
+}
